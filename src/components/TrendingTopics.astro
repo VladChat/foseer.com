@@ -1,0 +1,63 @@
+---
+// File: src/components/TrendingTopics.astro
+// Purpose: Display the top trending topics from the Foseer taxonomy.
+
+import { getTrendingTopics } from "~/utils/foseer-taxonomy";
+
+const topics = getTrendingTopics(6);
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <header class="mb-8 flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wide text-sky-500">
+          Trending now
+        </p>
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-3xl">
+          Hot topics on Foseer
+        </h2>
+      </div>
+      <p class="max-w-xl text-sm text-slate-600 dark:text-slate-400">
+        These topics combine external trend signals and on-site engagement. Use them as quick entry points into what matters right now.
+      </p>
+    </header>
+
+    {topics.length === 0 ? (
+      <p class="text-sm text-slate-500 dark:text-slate-400">
+        No topics are available yet. Add taxonomy data to start surfacing trends.
+      </p>
+    ) : (
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {topics.map((topic) => (
+          <a
+            href={`/sections/${topic.sectionSlug}/${topic.slug}/`}
+            class="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-700 dark:bg-slate-900"
+          >
+            <div class="mb-2 text-xs font-semibold uppercase tracking-wide text-sky-500">
+              {topic.sectionTitle}
+            </div>
+            <h3 class="mb-2 text-lg font-semibold text-slate-900 group-hover:text-sky-600 dark:text-slate-50 dark:group-hover:text-sky-400">
+              {topic.title}
+            </h3>
+            {topic.description && (
+              <p class="mb-4 flex-1 text-sm text-slate-600 dark:text-slate-400">
+                {topic.description}
+              </p>
+            )}
+            <div class="mt-auto flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+              <span class="inline-flex items-center gap-1 rounded-full bg-sky-50 px-2 py-1 text-[11px] font-medium text-sky-700 dark:bg-sky-900/40 dark:text-sky-300">
+                <span class="h-1.5 w-1.5 rounded-full bg-sky-500" />
+                <span>Trending topic</span>
+              </span>
+              <span class="inline-flex items-center gap-1">
+                <span>Explore</span>
+                <span aria-hidden="true">→</span>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</section>
