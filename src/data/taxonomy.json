@@ -1,133 +1,191 @@
 {
   "sections": [
     {
-      "id": "ai-tools",
-      "slug": "ai-tools",
-      "title": "AI Tools",
-      "description": "Practical ways to use LLMs, ChatGPT, and AI assistants to save time and make more money.",
-      "trend": {
-        "score": 0.9,
-        "last_seen": "2025-12-07"
-      },
+      "id": "news",
+      "label": "News",
+      "kind": "core",
+      "description": "World, U.S., politics, society, and economy — the main news feed that tracks what’s happening right now.",
       "topics": [
-        {
-          "id": "ai-tools__chatgpt-workflows",
-          "slug": "chatgpt-workflows",
-          "title": "ChatGPT Workflows",
-          "description": "Real-world workflows where ChatGPT and LLMs automate manual tasks and daily routines.",
-          "trend": {
-            "score": 0.95,
-            "last_seen": "2025-12-07"
-          }
-        },
-        {
-          "id": "ai-tools__llm-apps",
-          "slug": "llm-apps",
-          "title": "LLM-Powered Apps",
-          "description": "How to build assistants, bots, and web tools on top of large language models.",
-          "trend": {
-            "score": 0.85,
-            "last_seen": "2025-12-07"
-          }
-        }
+        "us-politics",
+        "global-conflicts",
+        "economy-markets",
+        "climate-extreme-weather"
       ]
     },
     {
-      "id": "online-business",
-      "slug": "online-business",
-      "title": "Online Business",
-      "description": "Content sites, affiliate projects, and digital products that can be built and sold online.",
-      "trend": {
-        "score": 0.8,
-        "last_seen": "2025-12-07"
-      },
+      "id": "technology",
+      "label": "Technology",
+      "kind": "core",
+      "description": "AI, platforms, gadgets, and the consumer tech that shapes how we live and work.",
       "topics": [
-        {
-          "id": "online-business__content-sites",
-          "slug": "content-sites",
-          "title": "Content Sites",
-          "description": "How to build, grow, and monetize content websites with search and social traffic.",
-          "trend": {
-            "score": 0.82,
-            "last_seen": "2025-12-07"
-          }
-        },
-        {
-          "id": "online-business__affiliate-marketing",
-          "slug": "affiliate-marketing",
-          "title": "Affiliate Marketing",
-          "description": "Practical affiliate setups, offers, and traffic strategies that actually convert.",
-          "trend": {
-            "score": 0.78,
-            "last_seen": "2025-12-07"
-          }
-        }
+        "ai-big-tech",
+        "tech-gadgets",
+        "social-media-trends",
+        "transportation-evs",
+        "cybersecurity"
       ]
     },
     {
-      "id": "automation",
-      "slug": "automation",
-      "title": "Automation & No-Code",
-      "description": "n8n, Make, Zapier, GitHub Actions, and other tools to automate operations without heavy coding.",
-      "trend": {
-        "score": 0.75,
-        "last_seen": "2025-12-07"
-      },
+      "id": "business-markets",
+      "label": "Business & Markets",
+      "kind": "core",
+      "description": "Markets, companies, startups, crypto, housing, and personal finance explained in plain language.",
       "topics": [
-        {
-          "id": "automation__social-automation",
-          "slug": "social-automation",
-          "title": "Social Automation",
-          "description": "Automated posting and content pipelines for Pinterest, X, Facebook, Instagram, and more.",
-          "trend": {
-            "score": 0.8,
-            "last_seen": "2025-12-07"
-          }
-        },
-        {
-          "id": "automation__ops-automation",
-          "slug": "ops-automation",
-          "title": "Ops Automation",
-          "description": "Scripts and workflows that remove repetitive operational work: reports, exports, alerts.",
-          "trend": {
-            "score": 0.7,
-            "last_seen": "2025-12-07"
-          }
-        }
+        "economy-markets",
+        "stock-market-economy",
+        "crypto-bitcoin",
+        "housing-real-estate",
+        "consumer-money-personal-finance"
       ]
     },
     {
-      "id": "trends",
-      "slug": "trends",
-      "title": "News & Trends",
-      "description": "Where the markets and platforms are moving, explained in a practical way.",
-      "trend": {
-        "score": 0.7,
-        "last_seen": "2025-12-07"
-      },
+      "id": "science-innovation",
+      "label": "Science & Innovation",
+      "kind": "core",
+      "description": "Space, health, climate, and scientific breakthroughs that move the world forward.",
       "topics": [
-        {
-          "id": "trends__tech-trends",
-          "slug": "tech-trends",
-          "title": "Tech Trends",
-          "description": "AI, infrastructure, dev tools, and new platforms that change how we work online.",
-          "trend": {
-            "score": 0.74,
-            "last_seen": "2025-12-07"
-          }
-        },
-        {
-          "id": "trends__market-trends",
-          "slug": "market-trends",
-          "title": "Market Trends",
-          "description": "How macro trends and platform changes affect online business and monetization.",
-          "trend": {
-            "score": 0.66,
-            "last_seen": "2025-12-07"
-          }
-        }
+        "space-astronomy",
+        "health-science",
+        "climate-extreme-weather"
+      ]
+    },
+    {
+      "id": "culture-media",
+      "label": "Culture & Media",
+      "kind": "core",
+      "description": "Entertainment, celebrities, streaming, internet culture, and viral stories.",
+      "topics": [
+        "celebrities-entertainment",
+        "social-media-trends"
+      ]
+    },
+    {
+      "id": "explainers",
+      "label": "Explainers",
+      "kind": "special",
+      "description": "Short guides that explain what’s happening and why it matters, in the style of Vox or Axios.",
+      "topics": [
+        "big-issues-explained"
+      ]
+    },
+    {
+      "id": "editorial-picks",
+      "label": "Editorial Picks",
+      "kind": "special",
+      "description": "Curated perspectives, timelines, and editor’s-choice pieces that add context to the news cycle.",
+      "topics": [
+        "editorial-perspectives"
       ]
     }
   ],
-  "updated_at": "2025-12-07"
+  "topics": [
+    {
+      "id": "ai-big-tech",
+      "label": "AI & Big Tech",
+      "description": "OpenAI, Nvidia, Google, Meta, Amazon, and the AI platforms reshaping the economy.",
+      "section": "technology"
+    },
+    {
+      "id": "stock-market-economy",
+      "label": "Stock Market & Economy",
+      "description": "Major market moves, interest rates, inflation, jobs data, and what they mean for everyday decisions.",
+      "section": "business-markets"
+    },
+    {
+      "id": "us-politics",
+      "label": "U.S. Politics",
+      "description": "Elections, Congress, the White House, and policy fights that shape life in the U.S.",
+      "section": "news"
+    },
+    {
+      "id": "global-conflicts",
+      "label": "Global Conflicts",
+      "description": "Wars, regional tensions, and diplomacy — how conflicts affect security, energy, and trade.",
+      "section": "news"
+    },
+    {
+      "id": "climate-extreme-weather",
+      "label": "Climate & Extreme Weather",
+      "description": "Heatwaves, storms, wildfires, and the climate science behind a warming world.",
+      "section": "science-innovation"
+    },
+    {
+      "id": "space-astronomy",
+      "label": "Space & Astronomy",
+      "description": "Launches, missions, telescopes, and discoveries about our solar system and beyond.",
+      "section": "science-innovation"
+    },
+    {
+      "id": "tech-gadgets",
+      "label": "Tech & Gadgets",
+      "description": "Phones, laptops, devices, and consumer tech trends that hit the mainstream.",
+      "section": "technology"
+    },
+    {
+      "id": "crypto-bitcoin",
+      "label": "Crypto & Bitcoin",
+      "description": "Bitcoin, Ethereum, and the broader crypto market — booms, busts, and regulation.",
+      "section": "business-markets"
+    },
+    {
+      "id": "health-science",
+      "label": "Health & Science",
+      "description": "Medical research, public health, biotech, and the science that underpins daily life.",
+      "section": "science-innovation"
+    },
+    {
+      "id": "celebrities-entertainment",
+      "label": "Celebrities & Entertainment",
+      "description": "Movies, TV, music, and the people and platforms driving the entertainment world.",
+      "section": "culture-media"
+    },
+    {
+      "id": "social-media-trends",
+      "label": "Social Media Trends",
+      "description": "TikTok, Instagram, X, YouTube, and the viral stories that spread across feeds.",
+      "section": "culture-media"
+    },
+    {
+      "id": "transportation-evs",
+      "label": "Transportation & EVs",
+      "description": "Electric cars, charging networks, airlines, shipping, and how we move people and goods.",
+      "section": "technology"
+    },
+    {
+      "id": "cybersecurity",
+      "label": "Cybersecurity",
+      "description": "Breaches, hacks, ransomware, and how companies and people protect their data.",
+      "section": "technology"
+    },
+    {
+      "id": "housing-real-estate",
+      "label": "Housing & Real Estate",
+      "description": "Home prices, rents, mortgages, and the forces pushing housing markets up or down.",
+      "section": "business-markets"
+    },
+    {
+      "id": "consumer-money-personal-finance",
+      "label": "Consumer Money & Personal Finance",
+      "description": "Savings, debt, side income, and practical ways people manage their money.",
+      "section": "business-markets"
+    },
+    {
+      "id": "economy-markets",
+      "label": "Economy & Markets",
+      "description": "Big-picture economic trends and cross-market moves that tie the global story together.",
+      "section": "business-markets"
+    },
+    {
+      "id": "big-issues-explained",
+      "label": "Big Issues, Explained",
+      "description": "Short explainers that answer: what’s going on, why it matters, and what might happen next.",
+      "section": "explainers"
+    },
+    {
+      "id": "editorial-perspectives",
+      "label": "Editorial Perspectives",
+      "description": "Soft commentary and editorial picks that connect dots and offer a clear point of view.",
+      "section": "editorial-picks"
+    }
+  ]
 }

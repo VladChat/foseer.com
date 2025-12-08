@@ -1,0 +1,32 @@
+---
+// File: src/pages/news/world.astro
+// Purpose: World news hub for Foseer.
+
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'World news — Foseer',
+  description:
+    'Major global stories, conflicts, and diplomatic moves — with simple explanations of what changed and why it matters.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-4xl space-y-6">
+      <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
+        World news
+      </h1>
+
+      <p class="text-base text-muted-foreground sm:text-lg">
+        A home for international stories: conflicts, elections, alliances, and decisions that shape
+        life far beyond one country.
+      </p>
+
+      <p class="text-sm text-muted-foreground sm:text-base">
+        Draft layout only for now — the goal is to mix short updates with deeper explainers, so you
+        can quickly see what happened and also understand the bigger picture.
+      </p>
+    </div>
+  </section>
+</Layout>

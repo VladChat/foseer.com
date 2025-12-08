@@ -1,0 +1,10 @@
+// File: src/components/ui/Section.astro
+// Purpose: Reusable layout section wrapper with consistent spacing for Foseer.
+
+---
+const { class: className = '', ...rest } = Astro.props;
+---
+
+<section class={`py-16 sm:py-20 ${className}`} {...rest}>
+  <slot />
+</section>

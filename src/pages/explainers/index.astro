@@ -1,0 +1,32 @@
+---
+// File: src/pages/explainers/index.astro
+// Purpose: Explainers hub for Foseer.
+
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Explainers — Foseer',
+  description:
+    'Short guides that unpack complex stories: what is happening, how we got here, and what might come next.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-4xl space-y-6">
+      <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
+        Explainers
+      </h1>
+
+      <p class="text-base text-muted-foreground sm:text-lg">
+        A growing library of simple, focused explainers. Each one aims to answer three questions:
+        what&apos;s happening, why it matters, and what to watch next.
+      </p>
+
+      <p class="text-sm text-muted-foreground sm:text-base">
+        As the site develops, this page will group explainers by topic — from AI and markets to
+        politics, climate, and culture.
+      </p>
+    </div>
+  </section>
+</Layout>

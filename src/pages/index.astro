@@ -1,6 +1,6 @@
 ---
- // File: src/pages/index.astro
- // Purpose: Home page for Foseer, presenting highlights, key sections, and recent long reads.
+// File: src/pages/index.astro
+// Purpose: Home page for Foseer — hero, trending topics, key sections, and latest long reads.
 
 import Layout from '~/layouts/PageLayout.astro';
 
@@ -12,9 +12,9 @@ import TrendingTopics from '~/components/TrendingTopics.astro';
 import TopSections from '~/components/TopSections.astro';
 
 const metadata = {
-  title: 'Foseer — Look Ahead',
+  title: 'Foseer — Where Insight Becomes Opportunity',
   description:
-    'Foseer is a news and analysis site that follows the stories people care about most — across markets, technology, politics, and everyday life.',
+    'Smart news, trends, tools, and ideas translated into action — helping you see what matters and what comes next.',
   ignoreTitleTemplate: true,
 };
 ---
@@ -33,15 +33,19 @@ const metadata = {
         href: '#how-it-works',
       },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Foseer front page overview' }}
+    image={{
+      src: '~/assets/images/hero-image.png',
+      alt: 'Overview of Foseer news and analysis',
+    }}
   >
     <Fragment slot="title">
-      Foseer — <span class="text-accent dark:text-white">Look Ahead</span>
+      Foseer — <span class="text-accent dark:text-white">Look ahead</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        A news and analysis site that looks slightly ahead of the cycle: key stories, context, and what they might mean for the days and weeks to come.
+        Smart news, trends, tools, and ideas translated into action — so you can see what is forming
+        now and decide what to do next.
       </span>
       <span class="block sm:hidden">
         Headlines, context, and what comes next — in one place.
@@ -82,16 +86,17 @@ const metadata = {
       }}
     >
       <Fragment slot="content">
-        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">
           A newsroom that looks a step ahead
         </h3>
-        We try to stay slightly ahead of the curve: not just repeating what happened, but explaining why it matters and what might come next.
+        We try to stay slightly ahead of the curve: not just repeating what happened, but explaining
+        why it matters and what might come next.
       </Fragment>
     </Content>
   </div>
 
   <BlogLatestPosts
     title="Latest analysis and long reads"
-    information={`Long-form explainers, timelines, and deeper context behind the headlines — for when a short news update is not enough.`}
+    information="Long-form explainers, timelines, and deeper context behind the headlines — for when a short news update is not enough."
   />
 </Layout>

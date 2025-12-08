@@ -1,0 +1,32 @@
+---
+// File: src/pages/news/index.astro
+// Purpose: Section landing page for Foseer news coverage.
+
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'News — Foseer',
+  description:
+    'World, U.S. politics, and society stories with enough background to understand why they matter now.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-4xl space-y-6">
+      <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
+        News
+      </h1>
+
+      <p class="text-base text-muted-foreground sm:text-lg">
+        Big stories across world affairs, U.S. politics, and society — with clear context, timelines,
+        and what to watch next.
+      </p>
+
+      <p class="text-sm text-muted-foreground sm:text-base">
+        This is a starting point. As Foseer grows, this page will collect the latest coverage and
+        explainers from the news cycle.
+      </p>
+    </div>
+  </section>
+</Layout>

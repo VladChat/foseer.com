@@ -1,0 +1,55 @@
+---
+// File: src/components/common/Header.astro
+// Purpose: Safe header adjustments for compact Foseer navigation.
+
+import MenuToggle from '~/components/common/MenuToggle.astro';
+import { headerData } from '~/navigation';
+---
+
+<header class="relative z-40 w-full border-b border-gray-200 bg-white/70 backdrop-blur dark:border-gray-800 dark:bg-gray-900/70">
+  <div class="mx-auto flex max-w-screen-xl items-center justify-between px-4 py-3">
+    <a href="/" class="flex items-center gap-2 text-xl font-bold">
+      <img src="/favicon.svg" alt="" class="h-6 w-6" />
+      Foseer
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-6">
+      {headerData.links.map((item) => (
+        <div class="relative group">
+          <a
+            href={item.href || '#'}
+            class="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-accent"
+          >
+            {item.text}
+          </a>
+
+          {item.links && (
+            <div
+              class="absolute left-0 top-full hidden w-48 flex-col gap-1 rounded-md border border-gray-200 bg-white py-2 shadow-md group-hover:flex dark:border-gray-700 dark:bg-gray-800"
+            >
+              {item.links.map((sub) => (
+                <a
+                  href={sub.href}
+                  class="px-4 py-1 text-sm text-gray-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700"
+                >
+                  {sub.text}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </nav>
+
+    <div class="hidden lg:block">
+      <a
+        href={headerData.actions[0].href}
+        class="rounded-full border border-gray-300 px-4 py-2 text-sm font-medium hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-gray-700"
+      >
+        {headerData.actions[0].text}
+      </a>
+    </div>
+
+    <MenuToggle />
+  </div>
+</header>

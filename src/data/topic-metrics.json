@@ -1,42 +1,106 @@
 {
-  "ai-tools__chatgpt-workflows": {
-    "views_7d": 0,
-    "views_30d": 0,
-    "engagement_score": 0.0
+  "topics": {
+    "ai-big-tech": {
+      "trendScore": 0.96,
+      "onsiteEngagementScore": 0.9
+    },
+    "stock-market-economy": {
+      "trendScore": 0.94,
+      "onsiteEngagementScore": 0.88
+    },
+    "us-politics": {
+      "trendScore": 0.9,
+      "onsiteEngagementScore": 0.85
+    },
+    "global-conflicts": {
+      "trendScore": 0.9,
+      "onsiteEngagementScore": 0.83
+    },
+    "climate-extreme-weather": {
+      "trendScore": 0.88,
+      "onsiteEngagementScore": 0.8
+    },
+    "space-astronomy": {
+      "trendScore": 0.82,
+      "onsiteEngagementScore": 0.75
+    },
+    "tech-gadgets": {
+      "trendScore": 0.86,
+      "onsiteEngagementScore": 0.8
+    },
+    "crypto-bitcoin": {
+      "trendScore": 0.84,
+      "onsiteEngagementScore": 0.78
+    },
+    "health-science": {
+      "trendScore": 0.83,
+      "onsiteEngagementScore": 0.76
+    },
+    "celebrities-entertainment": {
+      "trendScore": 0.85,
+      "onsiteEngagementScore": 0.82
+    },
+    "social-media-trends": {
+      "trendScore": 0.87,
+      "onsiteEngagementScore": 0.84
+    },
+    "transportation-evs": {
+      "trendScore": 0.8,
+      "onsiteEngagementScore": 0.72
+    },
+    "cybersecurity": {
+      "trendScore": 0.83,
+      "onsiteEngagementScore": 0.78
+    },
+    "housing-real-estate": {
+      "trendScore": 0.82,
+      "onsiteEngagementScore": 0.77
+    },
+    "consumer-money-personal-finance": {
+      "trendScore": 0.88,
+      "onsiteEngagementScore": 0.86
+    },
+    "economy-markets": {
+      "trendScore": 0.9,
+      "onsiteEngagementScore": 0.82
+    },
+    "big-issues-explained": {
+      "trendScore": 0.89,
+      "onsiteEngagementScore": 0.9
+    },
+    "editorial-perspectives": {
+      "trendScore": 0.8,
+      "onsiteEngagementScore": 0.83
+    }
   },
-  "ai-tools__llm-apps": {
-    "views_7d": 0,
-    "views_30d": 0,
-    "engagement_score": 0.0
-  },
-  "online-business__content-sites": {
-    "views_7d": 0,
-    "views_30d": 0,
-    "engagement_score": 0.0
-  },
-  "online-business__affiliate-marketing": {
-    "views_7d": 0,
-    "views_30d": 0,
-    "engagement_score": 0.0
-  },
-  "automation__social-automation": {
-    "views_7d": 0,
-    "views_30d": 0,
-    "engagement_score": 0.0
-  },
-  "automation__ops-automation": {
-    "views_7d": 0,
-    "views_30d": 0,
-    "engagement_score": 0.0
-  },
-  "trends__tech-trends": {
-    "views_7d": 0,
-    "views_30d": 0,
-    "engagement_score": 0.0
-  },
-  "trends__market-trends": {
-    "views_7d": 0,
-    "views_30d": 0,
-    "engagement_score": 0.0
+  "sections": {
+    "news": {
+      "trendScore": 0.9,
+      "onsiteEngagementScore": 0.84
+    },
+    "technology": {
+      "trendScore": 0.92,
+      "onsiteEngagementScore": 0.86
+    },
+    "business-markets": {
+      "trendScore": 0.89,
+      "onsiteEngagementScore": 0.85
+    },
+    "science-innovation": {
+      "trendScore": 0.85,
+      "onsiteEngagementScore": 0.8
+    },
+    "culture-media": {
+      "trendScore": 0.86,
+      "onsiteEngagementScore": 0.83
+    },
+    "explainers": {
+      "trendScore": 0.9,
+      "onsiteEngagementScore": 0.9
+    },
+    "editorial-picks": {
+      "trendScore": 0.82,
+      "onsiteEngagementScore": 0.84
+    }
   }
 }
