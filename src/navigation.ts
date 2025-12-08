@@ -1,7 +1,7 @@
 // File: src/navigation.ts
 // Purpose: Clean 5-section header for Foseer with dropdown categories.
 
-import { getPermalink, getBlogPermalink } from './utils/permalinks';
+import { getPermalink, getBlogPermalink, getHomePermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -61,4 +61,34 @@ export const headerData = {
       href: getBlogPermalink(),
     },
   ],
+};
+
+export const footerData = {
+  links: [
+    {
+      title: 'Sections',
+      links: [
+        { text: 'News', href: getPermalink('/news') },
+        { text: 'Business', href: getPermalink('/business') },
+        { text: 'Technology', href: getPermalink('/technology') },
+        { text: 'Science', href: getPermalink('/science') },
+      ],
+    },
+    {
+      title: 'Explore',
+      links: [
+        { text: 'Trending', href: getPermalink('/trending/today') },
+        { text: 'Explainers', href: getPermalink('/explainers') },
+        { text: 'All stories', href: getBlogPermalink() },
+      ],
+    },
+  ],
+
+  secondaryLinks: [
+    { text: 'Foseer Home', href: getHomePermalink() },
+  ],
+
+  socialLinks: [],
+
+  footNote: '© Foseer. All rights reserved.',
 };
