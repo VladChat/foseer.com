@@ -37,17 +37,6 @@ export type Taxonomy = {
   updated_at: string;
 };
 
-/**
- * NOTE:
- * The current src/data/topic-metrics.json stores scores like:
- * {
- *   "topics": { "<topicId>": { "trendScore": 0.96, "onsiteEngagementScore": 0.9 }, ... },
- *   "sections": { "<sectionId>": { "trendScore": 0.9, "onsiteEngagementScore": 0.84 }, ... }
- * }
- *
- * Internally, we keep the existing API that expects a flat map keyed by topicId.
- * We map onsiteEngagementScore -> engagement_score, and keep views_* as 0 for now.
- */
 export type TopicMetrics = {
   views_7d: number;
   views_30d: number;
@@ -125,8 +114,7 @@ export function getRawMetrics(): RawMetrics {
 }
 
 /**
- * Normalizes src/data/taxonomy.json (current schema) into the runtime Taxonomy model
- * expected by the rest of the app (sections -> topics[] as full objects).
+ * Normalize src/data/taxonomy.json into runtime Taxonomy model
  */
 export function getTaxonomy(): Taxonomy {
   if (cachedTaxonomy) return cachedTaxonomy;
@@ -141,7 +129,6 @@ export function getTaxonomy(): Taxonomy {
 
   const rawMetrics = getRawMetrics();
 
-  // Map topics by id for quick lookup
   const rawTopicsById = new Map<string, RawTaxonomy["topics"][number]>();
   for (const t of rawTaxonomy.topics ?? []) rawTopicsById.set(t.id, t);
 
@@ -153,15 +140,13 @@ export function getTaxonomy(): Taxonomy {
     const topics: Topic[] = [];
     for (const topicId of s.topics ?? []) {
       const rt = rawTopicsById.get(topicId);
-
-      // If taxonomy references an unknown topic id, skip safely.
       if (!rt) continue;
 
       const topicTrendScore = safeNumber(rawMetrics.topics?.[topicId]?.trendScore, 0);
 
       topics.push({
         id: rt.id,
-        slug: rt.id, // stable slug; matches routes/links built elsewhere
+        slug: rt.id,
         title: rt.label,
         description: rt.description,
         trend: makeTrend(topicTrendScore),
@@ -170,7 +155,7 @@ export function getTaxonomy(): Taxonomy {
 
     sections.push({
       id: s.id,
-      slug: s.id, // stable slug
+      slug: s.id,
       title: s.label,
       description: s.description,
       trend: makeTrend(sectionTrendScore),
@@ -178,24 +163,20 @@ export function getTaxonomy(): Taxonomy {
     });
   }
 
-  const taxonomy: Taxonomy = {
+  cachedTaxonomy = {
     sections,
-    // taxonomy.json currently doesn't provide updated_at, so keep empty string for compatibility
     updated_at: "",
   };
 
-  cachedTaxonomy = taxonomy;
-  return taxonomy;
+  return cachedTaxonomy;
 }
 
 export function getMetrics(): MetricsMap {
   if (cachedMetrics) return cachedMetrics;
 
   const raw = getRawMetrics();
-
   const m: MetricsMap = {};
 
-  // Convert topic metrics -> legacy map keyed by topicId
   for (const [topicId, v] of Object.entries(raw.topics ?? {})) {
     m[topicId] = {
       views_7d: 0,
@@ -210,17 +191,13 @@ export function getMetrics(): MetricsMap {
 
 export function getTopicMetrics(topicId: string): TopicMetrics {
   const metrics = getMetrics();
-  const base = metrics[topicId] ?? {
-    views_7d: 0,
-    views_30d: 0,
-    engagement_score: 0,
-  };
-
-  return {
-    views_7d: base.views_7d ?? 0,
-    views_30d: base.views_30d ?? 0,
-    engagement_score: base.engagement_score ?? 0,
-  };
+  return (
+    metrics[topicId] ?? {
+      views_7d: 0,
+      views_30d: 0,
+      engagement_score: 0,
+    }
+  );
 }
 
 export function getSections(): Section[] {
@@ -233,7 +210,6 @@ export function getSectionBySlug(slug: string): Section | undefined {
 
 export function getTopicsFlat(): TopicWithSection[] {
   const taxonomy = getTaxonomy();
-
   const topics: TopicWithSection[] = [];
 
   for (const section of taxonomy.sections) {
@@ -250,22 +226,13 @@ export function getTopicsFlat(): TopicWithSection[] {
   return topics;
 }
 
-/**
- * Combined popularity score for a topic:
- *  - 0.7 * trend score (topic-metrics.json -> topics[topicId].trendScore)
- *  - 0.3 * engagement score (topic-metrics.json -> topics[topicId].onsiteEngagementScore)
- */
 export function getCombinedScore(topic: TopicWithSection): number {
   const metrics = getTopicMetrics(topic.id);
   const trendScore = topic.trend?.score ?? 0;
   const engagementScore = metrics.engagement_score ?? 0;
-
   return 0.7 * trendScore + 0.3 * engagementScore;
 }
 
-/**
- * Top sections by max combined score of topics inside each section.
- */
 export function getTopSections(limit = 6): Section[] {
   const sections = getSections();
   const topics = getTopicsFlat();
@@ -293,20 +260,25 @@ export function getTopSections(limit = 6): Section[] {
     .slice(0, limit);
 }
 
-/**
- * Top topics by combined score across all sections.
- */
 export function getTrendingTopics(limit = 8): TopicWithSection[] {
-  const topics = getTopicsFlat();
-
-  return [...topics]
+  return [...getTopicsFlat()]
     .sort((a, b) => getCombinedScore(b) - getCombinedScore(a))
     .slice(0, limit);
 }
 
-/**
- * Topics that belong to a single section.
- */
 export function getTopicsBySection(sectionId: string): TopicWithSection[] {
   return getTopicsFlat().filter((t) => t.sectionId === sectionId);
+}
+
+/**
+ * Added for section/topic pages compatibility
+ */
+export function getTopicBySlugs(
+  sectionSlug: string,
+  topicSlug: string
+): Topic | undefined {
+  const section = getSectionBySlug(sectionSlug);
+  if (!section) return undefined;
+
+  return section.topics.find((topic) => topic.slug === topicSlug);
 }
