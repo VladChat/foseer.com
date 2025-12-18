@@ -1,11 +1,23 @@
 ---
 /*
  File: src/pages/sections/[section]/index.astro
- Purpose: Section landing page (lists topics inside a section)
+ Purpose: Section landing page (static generation; lists topics inside a section)
 */
 
-import { getSectionBySlug } from '~/utils/foseer-taxonomy';
 import Layout from '~/layouts/PageLayout.astro';
+import { getSections, getSectionBySlug } from '~/utils/foseer-taxonomy';
+
+/**
+ * REQUIRED for static builds
+ * Generates all /sections/{section}/ pages
+ */
+export async function getStaticPaths() {
+  const sections = getSections();
+
+  return sections.map((s) => ({
+    params: { section: s.slug },
+  }));
+}
 
 const { section } = Astro.params;
 
