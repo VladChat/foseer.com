@@ -1,12 +1,35 @@
 ---
 /*
  File: src/pages/sections/[section]/[topic]/index.astro
- Purpose: Topic explainer page with related posts
+ Purpose: Topic explainer page with related posts (static generation)
 */
 
-import { getTopicBySlugs } from '~/utils/foseer-taxonomy';
-import { getPostsByTopicSlug } from '~/utils/topic-posts';
 import Layout from '~/layouts/PageLayout.astro';
+import { getSections, getTopicBySlugs } from '~/utils/foseer-taxonomy';
+import { getPostsByTopicSlug } from '~/utils/topic-posts';
+
+/**
+ * REQUIRED for static builds
+ * Generates all /sections/{section}/{topic} pages
+ */
+export async function getStaticPaths() {
+  const sections = getSections();
+
+  const paths = [];
+
+  for (const section of sections) {
+    for (const topic of section.topics) {
+      paths.push({
+        params: {
+          section: section.slug,
+          topic: topic.slug,
+        },
+      });
+    }
+  }
+
+  return paths;
+}
 
 const { section, topic } = Astro.params;
 
@@ -21,19 +44,41 @@ const posts = await getPostsByTopicSlug(topicData.slug);
 <Layout title={topicData.title}>
   <section class="max-w-3xl mx-auto py-12">
     <header class="mb-10">
-      <h1 class="text-3xl font-bold mb-4">{topicData.title}</h1>
+      <h1 class="text-3xl font-bold mb-4">
+        {topicData.title}
+      </h1>
+
       {topicData.description && (
-        <p class="text-gray-600 text-lg">{topicData.description}</p>
+        <p class="text-gray-600 text-lg">
+          {topicData.description}
+        </p>
       )}
     </header>
 
+    <section class="bg-gray-50 rounded-lg p-6 mb-12">
+      <h2 class="font-semibold mb-2">
+        Why this topic matters right now
+      </h2>
+
+      <p class="text-gray-700">
+        This topic is gaining attention due to recent developments, public
+        interest, and its broader impact across related areas.
+      </p>
+    </section>
+
     {posts.length > 0 && (
-      <section class="mt-12">
-        <h2 class="text-xl font-semibold mb-4">Latest coverage</h2>
+      <section>
+        <h2 class="text-xl font-semibold mb-4">
+          Latest coverage
+        </h2>
+
         <ul class="space-y-3">
           {posts.map((post) => (
             <li>
-              <a href={post.slug} class="text-blue-600 hover:underline">
+              <a
+                href={post.slug}
+                class="text-blue-600 hover:underline"
+              >
                 {post.data.title}
               </a>
             </li>
