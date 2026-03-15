@@ -5,7 +5,6 @@ import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
-// import PostTags from "~/components/blog/Tags.astro";
 
 import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
 
@@ -20,11 +19,8 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
 
-// const allCategories = await findCategories();
-// const allTags = await findTags();
-
 const metadata = {
-  title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `Latest coverage${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,
@@ -36,17 +32,27 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline
-      subtitle="A statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind"
-    >
-      The Blog
-    </Headline>
-    <BlogList posts={page.data} />
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
-    <!--
-      <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
-      <PostTags tags={allTags}  title="Search by Tags:" />
-    -->
+  <section class="px-4 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-12 text-center max-w-3xl mx-auto">
+      <div class="mb-4 flex items-center justify-center gap-2 text-sm text-muted dark:text-slate-400">
+        <span class="text-primary dark:text-blue-400 font-semibold uppercase tracking-wide text-xs">Editorial Coverage</span>
+        <span class="text-gray-300 dark:text-slate-600">•</span>
+        <time datetime={new Date().toISOString()} class="text-sm font-medium text-gray-600 dark:text-slate-300">
+          Updated {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 dark:text-white font-heading">
+        Latest coverage
+      </h1>
+      <p class="text-lg text-muted dark:text-slate-300 leading-relaxed font-light max-w-2xl mx-auto">
+        Reporting, explainers, and long reads from across the current news cycle. Stay informed with our comprehensive analysis and editorial perspective.
+      </p>
+    </header>
+    <div class="grid gap-8 md:gap-12">
+      <BlogList posts={page.data} />
+    </div>
+    <div class="mt-12 flex justify-center">
+      <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+    </div>
   </section>
 </Layout>

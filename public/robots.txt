@@ -1,2 +1,40 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# Allow all major search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Disallow crawling of admin and system paths
+User-agent: *
+Disallow: /admin/
+Disallow: /_admin/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /src/
+Disallow: /vendor/
+
+# Disallow crawling of development and staging paths
+User-agent: *
+Disallow: /staging/
+Disallow: /dev/
+Disallow: /test/
+
+# Allow RSS feed and sitemap
+Sitemap: https://foseer.com/sitemap-index.xml

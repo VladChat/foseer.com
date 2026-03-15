@@ -28,8 +28,8 @@ const {
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
 
-    <div class="py-8 md:py-12">
-      <div class="text-center pb-6 md:pb-8 max-w-5xl mx-auto">
+    <div class="py-10 md:py-14 lg:py-16">
+      <div class="text-center pb-8 md:pb-10 max-w-4xl mx-auto">
         {
           tagline && (
             <p
@@ -42,17 +42,17 @@ const {
         {
           title && (
             <h1
-              class="text-6xl md:text-7xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+              class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-5 font-heading dark:text-gray-200 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
               set:html={title}
             />
           )
         }
 
-        <div class="max-w-3xl mx-auto">
+        <div class="max-w-2xl mx-auto">
           {
             subtitle && (
               <p
-                class="text-xl text-muted mb-6 dark:text-slate-300 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+                class="text-lg md:text-xl leading-8 text-muted mb-7 dark:text-slate-300 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
                 set:html={subtitle}
               />
             )
@@ -60,7 +60,7 @@ const {
 
           {
             actions && (
-              <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+              <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
                 {Array.isArray(actions) ? (
                   actions.map((action) => (
                     <div class="flex w-full sm:w-auto">

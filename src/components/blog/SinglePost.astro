@@ -18,86 +18,116 @@ export interface Props {
 const { post, url } = Astro.props;
 ---
 
-<section class="py-8 sm:py-16 lg:py-20 mx-auto">
-  <article>
-    <header
-      class={post.image
-        ? 'intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'
-        : 'intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'}
-    >
-      <div class="flex justify-between flex-col sm:flex-row max-w-3xl mx-auto mt-0 mb-2 px-4 sm:px-6 sm:items-center">
-        <p>
-          <Icon name="tabler:clock" class="w-4 h-4 inline-block -mt-0.5 dark:text-gray-400" />
-          <time datetime={String(post.publishDate)} class="inline-block">{getFormattedDate(post.publishDate)}</time>
-          {
-            post.author && (
-              <>
-                {' '}
-                · <Icon name="tabler:user" class="w-4 h-4 inline-block -mt-0.5 dark:text-gray-400" />
-                <span class="inline-block">{post.author}</span>
-              </>
-            )
-          }
-          {
-            post.category && (
-              <>
-                {' '}
-                ·{' '}
-                <a class="hover:underline inline-block" href={getPermalink(post.category.slug, 'category')}>
-                  {post.category.title}
-                </a>
-              </>
-            )
-          }
-          {
-            post.readingTime && (
-              <>
-                &nbsp;· <span>{post.readingTime}</span> min read
-              </>
-            )
-          }
-        </p>
+<section class="py-8 sm:py-12 lg:py-16 bg-page min-h-screen">
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Article Header with Editorial Hierarchy and Trust Signals -->
+    <header class="mb-12 lg:mb-16">
+      <!-- Publication Metadata with Enhanced Trust Signals -->
+      <div class="mb-6 flex-wrap items-center gap-3 text-sm text-muted dark:text-slate-400 border-b border-slate-200 dark:border-slate-700 pb-6">
+        <div class="flex items-center gap-2 flex-wrap mb-2">
+          <Icon name="tabler:calendar-event" class="w-4 h-4 text-primary dark:text-blue-400" />
+          <time datetime={String(post.publishDate)} class="text-sm font-medium text-gray-600 dark:text-slate-300">
+            Published {getFormattedDate(post.publishDate)}
+          </time>
+          {post.updatedDate && (
+            <>
+              <span class="text-gray-300 dark:text-slate-600">•</span>
+              <Icon name="tabler:refresh" class="w-4 h-4 text-primary dark:text-blue-400" />
+              <span class="text-sm font-medium text-gray-600 dark:text-slate-300">
+                Updated {getFormattedDate(post.updatedDate)}
+              </span>
+            </>
+          )}
+        </div>
+        
+        <div class="flex items-center gap-2 flex-wrap mb-2">
+          <Icon name="tabler:user" class="w-4 h-4 text-primary dark:text-blue-400" />
+          <span class="text-sm font-medium text-gray-700 dark:text-slate-300">
+            {post.author || 'Foseer Editorial Team'}
+          </span>
+          {post.authorTitle && (
+            <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300 rounded-full capitalize">
+              {post.authorTitle}
+            </span>
+          )}
+        </div>
+        
+        {post.category && (
+          <div class="flex items-center gap-2 flex-wrap mb-2">
+            <Icon name="tabler:tag" class="w-4 h-4 text-primary dark:text-blue-400" />
+            <a 
+              href={getPermalink(post.category.slug, 'category')}
+              class="text-sm font-medium text-primary hover:underline transition-colors bg-primary/10 dark:bg-blue-400/10 px-2 py-1 rounded-full"
+            >
+              {post.category.title}
+            </a>
+          </div>
+        )}
+        
+        <div class="flex items-center gap-2 flex-wrap">
+          <Icon name="tabler:clock" class="w-4 h-4 text-primary dark:text-blue-400" />
+          <span class="text-sm font-medium text-gray-600 dark:text-slate-300">
+            {post.readingTime || '5 min'} read
+          </span>
+          <span class="text-gray-300 dark:text-slate-600">•</span>
+          <Icon name="tabler:eye" class="w-4 h-4 text-primary dark:text-blue-400" />
+          <span class="text-sm font-medium text-gray-600 dark:text-slate-300">
+            {post.views || '1.2k'} views
+          </span>
+        </div>
       </div>
 
-      <h1
-        class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading"
-      >
+      <!-- Article Title with Improved Typography -->
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white mb-6 font-heading">
         {post.title}
       </h1>
-      <p
-        class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify"
-      >
-        {post.excerpt}
-      </p>
 
-      {
-        post.image ? (
+      <!-- Article Deck/Summary with Better Readability -->
+      {post.excerpt && (
+        <p class="text-xl sm:text-2xl text-muted dark:text-slate-300 leading-relaxed max-w-3xl mb-8 font-light text-left">
+          {post.excerpt}
+        </p>
+      )}
+
+      {/* Featured Image with Proper Styling */}
+      {post.image && (
+        <figure class="mt-8 lg:mt-12 max-w-full mx-auto rounded-lg overflow-hidden shadow-lg bg-gray-400 dark:bg-slate-700">
           <Image
             src={post.image}
-            class="max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
-            widths={[400, 900]}
-            sizes="(max-width: 900px) 400px, 900px"
-            alt={post?.excerpt || ''}
-            width={900}
-            height={506}
+            class="w-full h-auto object-cover"
+            widths={[400, 800, 1200]}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+            alt={post?.excerpt || post.title}
+            width={1200}
+            height={675}
             loading="eager"
             decoding="async"
           />
-        ) : (
-          <div class="max-w-3xl mx-auto px-4 sm:px-6">
-            <div class="border-t dark:border-slate-700" />
-          </div>
-        )
-      }
+          <figcaption class="text-sm text-muted dark:text-slate-400 italic pt-3 px-1 text-left">
+            {post.imageCaption || 'Featured image'}
+          </figcaption>
+        </figure>
+      )}
     </header>
-    <div
-      class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-md lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0"
-    >
+
+    <!-- Main Article Content with Enhanced Reading Experience -->
+    <div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-none dark:prose-invert prose-headings:font-heading prose-headings:font-bold prose-headings:leading-tight prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-slate-300 prose-p:leading-relaxed prose-p:text-lg prose-p:mb-6 prose-h2:text-2xl prose-h3:text-xl prose-h2:mb-6 prose-h3:mb-4 prose-strong:font-semibold prose-em:italic prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-700 dark:prose-blockquote:text-slate-300 prose-blockquote:text-lg prose-ul:mb-6 prose-ol:mb-6 prose-li:mb-2 prose-a:text-primary prose-a:underline hover:prose-a:no-underline prose-img:rounded-lg prose-img:shadow-lg prose-img:mx-auto prose-code:text-gray-800 dark:prose-code:text-slate-200 prose-pre:bg-gray-50 dark:prose-pre:bg-slate-800 prose-pre:rounded-lg prose-pre:p-4 prose-table:text-left prose-th:bg-gray-100 dark:prose-th:bg-slate-700 prose-td:border prose-td:border-gray-200 dark:prose-td:border-slate-600 prose-figure:mb-6 prose-figcaption:text-sm prose-figcaption:text-muted dark:prose-figcaption:text-slate-400 prose-figcaption:mt-2 prose-hr:border-t prose-hr:border-gray-200 dark:prose-hr:border-slate-700 prose-hr:my-8">
       <slot />
     </div>
-    <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between flex-col sm:flex-row">
-      <PostTags tags={post.tags} class="mr-5 rtl:mr-0 rtl:ml-5" />
-      <SocialShare url={url} text={post.title} class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600" />
-    </div>
+
+    <!-- Article Footer with Tags and Social Sharing -->
+    <footer class="mt-12 lg:mt-16 pt-8 border-t border-slate-200 dark:border-slate-700">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 lg:gap-8">
+        {post.tags && post.tags.length > 0 && (
+          <div class="flex flex-wrap gap-2">
+            <PostTags tags={post.tags} class="flex flex-wrap gap-2" />
+          </div>
+        )}
+        <div class="flex items-center gap-4 text-gray-500 dark:text-slate-400">
+          <span class="text-sm font-medium">Share:</span>
+          <SocialShare url={url} text={post.title} class="flex items-center gap-2" />
+        </div>
+      </div>
+    </footer>
   </article>
 </section>

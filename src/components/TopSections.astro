@@ -11,15 +11,16 @@ const sections = getTopSections(4);
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
     <header class="mb-8 flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
       <div>
-        <p class="text-sm font-semibold uppercase tracking-wide text-sky-500">
-          Key areas
+        <p class="text-sm font-semibold uppercase tracking-[0.08em] text-accent">
+          Coverage areas
         </p>
         <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-3xl">
-          Main sections of the site
+          Main desks across the site
         </h2>
       </div>
       <p class="max-w-xl text-sm text-slate-600 dark:text-slate-400">
-        Each section groups together related topics, workflows, and case studies. Start from a section if you have a broad goal in mind.
+        Each section groups together ongoing coverage, explainers, and recurring themes so readers
+        can follow a subject with more continuity.
       </p>
     </header>
 
@@ -39,8 +40,8 @@ const sections = getTopSections(4);
                 <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50">
                   {section.title}
                 </h3>
-                <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700 dark:bg-sky-900/40 dark:text-sky-300">
-                  Core section
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                  Editorial desk
                 </span>
               </div>
 
@@ -71,7 +72,7 @@ const sections = getTopSections(4);
                   href={`/sections/${section.slug}/`}
                   class="inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300"
                 >
-                  <span>Open section overview</span>
+                  <span>View section</span>
                   <span aria-hidden="true">→</span>
                 </a>
               </div>

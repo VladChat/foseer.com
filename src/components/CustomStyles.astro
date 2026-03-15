@@ -22,42 +22,278 @@ import '@fontsource-variable/inter';
 <style is:inline>
   :root {
     --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    --aw-font-serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, 'Times New Roman', serif;
+    --aw-font-heading: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, 'Times New Roman', serif;
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    --aw-color-primary: rgb(20 55 92);
+    --aw-color-secondary: rgb(34 77 122);
+    --aw-color-accent: rgb(147 82 55);
 
-    --aw-color-text-heading: rgb(0 0 0);
-    --aw-color-text-default: rgb(16 16 16);
-    --aw-color-text-muted: rgb(16 16 16 / 66%);
-    --aw-color-bg-page: rgb(255 255 255);
+    --aw-color-text-heading: rgb(17 24 39);
+    --aw-color-text-default: rgb(31 41 55);
+    --aw-color-text-muted: rgb(71 85 105 / 88%);
+    --aw-color-bg-page: rgb(250 250 249);
 
-    --aw-color-bg-page-dark: rgb(3 6 32);
+    --aw-color-bg-page-dark: rgb(15 23 42);
 
     ::selection {
-      background-color: lavender;
+      background-color: rgb(219 234 254);
     }
   }
 
   .dark {
     --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    --aw-font-serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, 'Times New Roman', serif;
+    --aw-font-heading: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, 'Times New Roman', serif;
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    --aw-color-primary: rgb(125 168 214);
+    --aw-color-secondary: rgb(155 188 225);
+    --aw-color-accent: rgb(205 157 130);
 
-    --aw-color-text-heading: rgb(247, 248, 248);
-    --aw-color-text-default: rgb(229 236 246);
-    --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(3 6 32);
+    --aw-color-text-heading: rgb(241 245 249);
+    --aw-color-text-default: rgb(226 232 240);
+    --aw-color-text-muted: rgb(203 213 225 / 78%);
+    --aw-color-bg-page: rgb(15 23 42);
 
     ::selection {
-      background-color: black;
-      color: snow;
+      background-color: rgb(30 41 59);
+      color: rgb(248 250 252);
+    }
+  }
+
+  /* Enhanced Editorial Typography and Reading Experience */
+  .prose {
+    /* Improved line height for better readability */
+    --tw-prose-body: theme('colors.gray.700');
+    --tw-prose-headings: theme('colors.gray.900');
+    --tw-prose-lead: theme('colors.gray.600');
+    --tw-prose-links: theme('colors.primary.DEFAULT');
+    --tw-prose-bold: theme('colors.gray.900');
+    --tw-prose-counters: theme('colors.gray.500');
+    --tw-prose-bullets: theme('colors.gray.300');
+    --tw-prose-hr: theme('colors.gray.200');
+    --tw-prose-quotes: theme('colors.gray.900');
+    --tw-prose-quote-borders: theme('colors.gray.200');
+    --tw-prose-captions: theme('colors.gray.500');
+    --tw-prose-code: theme('colors.gray.900');
+    --tw-prose-pre-code: theme('colors.gray.100');
+    --tw-prose-pre-bg: theme('colors.gray.900');
+    --tw-prose-th-borders: theme('colors.gray.300');
+    --tw-prose-td-borders: theme('colors.gray.200');
+  }
+
+  .dark .prose {
+    --tw-prose-body: theme('colors.slate.300');
+    --tw-prose-headings: theme('colors.white');
+    --tw-prose-lead: theme('colors.slate.400');
+    --tw-prose-links: theme('colors.blue.400');
+    --tw-prose-bold: theme('colors.white');
+    --tw-prose-counters: theme('colors.slate.400');
+    --tw-prose-bullets: theme('colors.slate.600');
+    --tw-prose-hr: theme('colors.slate.700');
+    --tw-prose-quotes: theme('colors.slate.100');
+    --tw-prose-quote-borders: theme('colors.slate.700');
+    --tw-prose-captions: theme('colors.slate.400');
+    --tw-prose-code: theme('colors.white');
+    --tw-prose-pre-code: theme('colors.slate.100');
+    --tw-prose-pre-bg: theme('colors.slate.800');
+    --tw-prose-th-borders: theme('colors.slate.600');
+    --tw-prose-td-borders: theme('colors.slate.700');
+  }
+
+  /* Enhanced typography for editorial content */
+  .prose .article-content {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75; /* 1.75 ratio for readability */
+    letter-spacing: -0.005em;
+  }
+
+  .prose .article-content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+
+  .prose .article-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.875rem; /* 30px */
+    line-height: 1.3;
+  }
+
+  .prose .article-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.4;
+  }
+
+  .prose .article-content blockquote {
+    border-left-width: 4px;
+    border-color: theme('colors.primary.DEFAULT');
+    background-color: theme('colors.gray.50');
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    margin: 2rem 0;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .dark .prose .article-content blockquote {
+    background-color: theme('colors.slate.800');
+  }
+
+  .prose .article-content blockquote p {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .prose .article-content blockquote footer {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    color: theme('colors.gray.600');
+  }
+
+  .dark .prose .article-content blockquote footer {
+    color: theme('colors.slate.400');
+  }
+
+  .prose .article-content figure {
+    margin: 2rem 0;
+  }
+
+  .prose .article-content figcaption {
+    font-size: 0.875rem;
+    color: theme('colors.gray.500');
+    text-align: center;
+    margin-top: 0.75rem;
+  }
+
+  .dark .prose .article-content figcaption {
+    color: theme('colors.slate.400');
+  }
+
+  .prose .article-content ul,
+  .prose .article-content ol {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose .article-content li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.25rem;
+  }
+
+  .prose .article-content li::marker {
+    color: theme('colors.primary.DEFAULT');
+  }
+
+  .prose .article-content pre {
+    border-radius: 0.5rem;
+    overflow-x: auto;
+ }
+
+  .prose .article-content code {
+    border-radius: 0.25rem;
+    padding: 0.125rem 0.25rem;
+  }
+
+  /* Enhanced reading width and margins */
+  .article-container {
+    max-width: 75ch; /* Optimal reading width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Trust and editorial signals */
+  .publication-meta {
+    border-bottom: 1px solid theme('colors.gray.200');
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .dark .publication-meta {
+    border-bottom-color: theme('colors.slate.70');
+  }
+
+  .category-label {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: theme('colors.primary.100');
+    color: theme('colors.primary.700');
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+  }
+
+  .dark .category-label {
+    background-color: theme('colors.blue.900/20');
+    color: theme('colors.blue.400');
+  }
+
+  /* Improved social sharing */
+  .social-share-buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .social-share-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: theme('colors.gray.100');
+    color: theme('colors.gray.600');
+    transition: all 0.2s ease-in-out;
+  }
+
+  .dark .social-share-button {
+    background-color: theme('colors.slate.700');
+    color: theme('colors.slate.300');
+  }
+
+  .social-share-button:hover {
+    background-color: theme('colors.primary.100');
+    color: theme('colors.primary.700');
+    transform: translateY(-1px);
+  }
+
+  .dark .social-share-button:hover {
+    background-color: theme('colors.blue.900/30');
+    color: theme('colors.blue.400');
+  }
+
+  /* Responsive adjustments for reading experience */
+  @media (max-width: 768px) {
+    .prose .article-content {
+      font-size: 1rem; /* 16px on mobile */
+      line-height: 1.7;
+    }
+    
+    .prose .article-content h2 {
+      font-size: 1.5rem; /* 24px on mobile */
+      margin-top: 2rem;
+    }
+    
+    .prose .article-content h3 {
+      font-size: 1.25rem; /* 20px on mobile */
+    }
+    
+    .prose .article-content blockquote {
+      padding: 1rem;
+      margin: 1.5rem 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .prose .article-content {
+      font-size: 1.25rem; /* 20px on desktop */
     }
   }
 </style>

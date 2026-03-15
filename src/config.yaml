@@ -21,11 +21,14 @@ metadata:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
+        alt: 'Foseer - News and insights site'
     type: website
+    locale: 'en_US'
   twitter:
     handle: '' # TODO: set your X/Twitter handle, e.g. '@foseer'
     site: ''   # TODO: usually same as handle
     cardType: summary_large_image
+    creator: '' # TODO: set your X/Twitter handle for the content creator
 
 i18n:
   language: en

@@ -57,7 +57,7 @@ export const headerData = {
 
   actions: [
     {
-      text: 'Latest stories',
+      text: 'Latest coverage',
       href: getBlogPermalink(),
     },
   ],
@@ -66,7 +66,7 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Sections',
+      title: 'Coverage',
       links: [
         { text: 'News', href: getPermalink('/news') },
         { text: 'Business', href: getPermalink('/business') },
@@ -75,20 +75,20 @@ export const footerData = {
       ],
     },
     {
-      title: 'Explore',
+      title: 'Browse',
       links: [
         { text: 'Trending', href: getPermalink('/trending/today') },
         { text: 'Explainers', href: getPermalink('/explainers') },
-        { text: 'All stories', href: getBlogPermalink() },
+        { text: 'Latest coverage', href: getBlogPermalink() },
       ],
     },
   ],
 
   secondaryLinks: [
-    { text: 'Foseer Home', href: getHomePermalink() },
+    { text: 'Home', href: getHomePermalink() },
   ],
 
   socialLinks: [],
 
-  footNote: '© Foseer. All rights reserved.',
+  footNote: '© Foseer. Reporting, context, and analysis.',
 };
