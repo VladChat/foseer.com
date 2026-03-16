@@ -1,0 +1,55 @@
+---
+// File: src/pages/latest/index.astro
+// Purpose: Latest coverage page - lists all articles chronologically.
+
+import type { GetStaticPaths } from 'astro';
+
+import Layout from '~/layouts/PageLayout.astro';
+import EditorialStoryCard from '~/components/EditorialStoryCard.astro';
+import { fetchPosts } from '~/utils/blog';
+
+export const prerender = true;
+
+export const getStaticPaths = (async () => {
+  return [{ params: {} }];
+}) satisfies GetStaticPaths;
+
+const posts = await fetchPosts();
+
+const metadata = {
+  title: 'Latest — Foseer',
+  description: 'The latest news and analysis from Foseer.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <header class="mb-12 border-b border-slate-200 dark:border-slate-700 pb-8">
+        <div class="mb-4 flex items-center gap-3 text-sm text-muted dark:text-slate-400">
+          <span class="text-primary dark:text-blue-400 font-semibold uppercase tracking-wide text-xs">Latest Coverage</span>
+          <span class="text-gray-300 dark:text-slate-600">•</span>
+          <time datetime={new Date().toISOString()} class="text-sm font-medium text-gray-600 dark:text-slate-300">
+            Updated {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white font-heading mb-4">
+          Latest
+        </h1>
+        <p class="text-lg text-muted dark:text-slate-300 max-w-3xl leading-relaxed font-light">
+          All recent stories and analysis from Foseer, updated regularly with the latest developments across news, business, technology, and science.
+        </p>
+      </header>
+
+      {posts.length === 0 ? (
+        <p class="text-gray-600 dark:text-slate-400">No articles yet.</p>
+      ) : (
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post) => (
+            <EditorialStoryCard post={post} variant="compact" />
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>

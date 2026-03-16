@@ -1,79 +1,55 @@
 ---
+// File: src/pages/contact.astro
+// Purpose: Contact Foseer page.
+
 import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contact Foseer',
+  description: 'Get in touch with the Foseer editorial team.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+  <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <header class="mb-12 border-b border-slate-200 dark:border-slate-700 pb-8">
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white font-heading mb-4">
+          Contact
+        </h1>
+      </header>
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+      <div class="prose prose-lg dark:prose-invert">
+        <p class="text-lg text-gray-700 dark:text-slate-300 leading-relaxed">
+          Have a question, tip, or feedback? We'd love to hear from you.
+        </p>
 
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
-  />
+        <h2>Editorial Tips</h2>
+        <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
+          Send news tips, story ideas, and press releases to our editorial team. We review all submissions and reach out when we're pursuing a story.
+        </p>
 
-  <!-- Features2 Widget ************** -->
+        <h2>Feedback</h2>
+        <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
+          Found an error? Have a suggestion? Let us know so we can improve our coverage.
+        </p>
 
-  <Features2
-    title="We are here to help!"
-    items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
-      },
-    ]}
-  />
+        <div class="mt-8 space-y-4">
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-primary mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <div>
+              <h3 class="font-semibold text-gray-900 dark:text-white">Email</h3>
+              <p class="text-gray-700 dark:text-slate-300">editorial@foseer.com</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-8 text-sm text-gray-600 dark:text-slate-400">
+          Note: We receive many messages and cannot respond to all of them individually. For the fastest response, please be clear and concise in your message.
+        </p>
+      </div>
+    </div>
+  </section>
 </Layout>

@@ -6,58 +6,45 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from './utils/permal
 export const headerData = {
   links: [
     {
-      text: 'Trending',
-      links: [
-        { text: "Today's Signals", href: getPermalink('/trending/today') },
-        { text: 'This Week', href: getPermalink('/trending/week') },
-        { text: 'Growing Topics', href: getPermalink('/trending/growing') },
-        { text: 'Breaking Stories', href: getPermalink('/trending/breaking') },
-      ],
-    },
-    {
       text: 'News',
+      href: getPermalink('/sections/news'),
       links: [
-        { text: 'World', href: getPermalink('/news/world') },
-        { text: 'U.S. Politics', href: getPermalink('/news/us-politics') },
-        { text: 'Economy', href: getPermalink('/news/economy') },
-        { text: 'Society', href: getPermalink('/news/society') },
-        { text: 'Global Conflicts', href: getPermalink('/news/conflicts') },
+        { text: 'U.S. Politics', href: getPermalink('/sections/news/us-politics') },
+        { text: 'Global Conflicts', href: getPermalink('/sections/news/global-conflicts') },
       ],
     },
     {
       text: 'Technology',
+      href: getPermalink('/sections/technology'),
       links: [
-        { text: 'AI & Big Tech', href: getPermalink('/technology/ai-big-tech') },
-        { text: 'Cybersecurity', href: getPermalink('/technology/cybersecurity') },
-        { text: 'Tech & Gadgets', href: getPermalink('/technology/gadgets') },
-        { text: 'Platforms', href: getPermalink('/technology/platforms') },
-        { text: 'Social Media Trends', href: getPermalink('/technology/social-media') },
+        { text: 'AI & Big Tech', href: getPermalink('/sections/technology/ai-big-tech') },
+        { text: 'Cybersecurity', href: getPermalink('/sections/technology/cybersecurity') },
+        { text: 'Tech & Gadgets', href: getPermalink('/sections/technology/tech-gadgets') },
       ],
     },
     {
       text: 'Business',
+      href: getPermalink('/sections/business-markets'),
       links: [
-        { text: 'Stock Market & Economy', href: getPermalink('/business/markets') },
-        { text: 'Companies', href: getPermalink('/business/companies') },
-        { text: 'Startups', href: getPermalink('/business/startups') },
-        { text: 'Personal Finance', href: getPermalink('/business/personal-finance') },
-        { text: 'Crypto & Bitcoin', href: getPermalink('/business/crypto') },
+        { text: 'Stock Market & Economy', href: getPermalink('/sections/business-markets/stock-market-economy') },
+        { text: 'Crypto & Bitcoin', href: getPermalink('/sections/business-markets/crypto-bitcoin') },
+        { text: 'Personal Finance', href: getPermalink('/sections/business-markets/consumer-money-personal-finance') },
       ],
     },
     {
       text: 'Science',
+      href: getPermalink('/sections/science-innovation'),
       links: [
-        { text: 'Climate & Weather', href: getPermalink('/science/climate') },
-        { text: 'Space & Astronomy', href: getPermalink('/science/space') },
-        { text: 'Health & Medicine', href: getPermalink('/science/health') },
-        { text: 'Research & Innovation', href: getPermalink('/science/research') },
+        { text: 'Climate & Weather', href: getPermalink('/sections/science-innovation/climate-extreme-weather') },
+        { text: 'Space & Astronomy', href: getPermalink('/sections/science-innovation/space-astronomy') },
+        { text: 'Health & Medicine', href: getPermalink('/sections/science-innovation/health-science') },
       ],
     },
   ],
 
   actions: [
     {
-      text: 'Latest coverage',
+      text: 'Latest',
       href: getBlogPermalink(),
     },
   ],
@@ -68,18 +55,17 @@ export const footerData = {
     {
       title: 'Coverage',
       links: [
-        { text: 'News', href: getPermalink('/news') },
-        { text: 'Business', href: getPermalink('/business') },
-        { text: 'Technology', href: getPermalink('/technology') },
-        { text: 'Science', href: getPermalink('/science') },
+        { text: 'News', href: getPermalink('/sections/news') },
+        { text: 'Business', href: getPermalink('/sections/business-markets') },
+        { text: 'Technology', href: getPermalink('/sections/technology') },
+        { text: 'Science', href: getPermalink('/sections/science-innovation') },
       ],
     },
     {
       title: 'Browse',
       links: [
-        { text: 'Trending', href: getPermalink('/trending/today') },
-        { text: 'Explainers', href: getPermalink('/explainers') },
-        { text: 'Latest coverage', href: getBlogPermalink() },
+        { text: 'Latest', href: getBlogPermalink() },
+        { text: 'Explainers', href: getPermalink('/sections/explainers') },
       ],
     },
   ],

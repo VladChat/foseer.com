@@ -129,7 +129,7 @@ export function getTaxonomy(): Taxonomy {
 
   const rawMetrics = getRawMetrics();
 
-  const rawTopicsById = new Map<string, RawTaxonomy["topics"][number]>();
+  const rawTopicsById = new Map<string, { id: string; label: string; description?: string; section?: string; keywords?: string[] }>();
   for (const t of rawTaxonomy.topics ?? []) rawTopicsById.set(t.id, t);
 
   const sections: Section[] = [];

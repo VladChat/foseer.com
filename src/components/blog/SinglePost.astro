@@ -29,50 +29,40 @@ const { post, url } = Astro.props;
           <time datetime={String(post.publishDate)} class="text-sm font-medium text-gray-600 dark:text-slate-300">
             Published {getFormattedDate(post.publishDate)}
           </time>
-          {post.updatedDate && (
+          {post.updateDate && (
             <>
               <span class="text-gray-300 dark:text-slate-600">•</span>
               <Icon name="tabler:refresh" class="w-4 h-4 text-primary dark:text-blue-400" />
               <span class="text-sm font-medium text-gray-600 dark:text-slate-300">
-                Updated {getFormattedDate(post.updatedDate)}
+                Updated {getFormattedDate(post.updateDate)}
               </span>
             </>
           )}
         </div>
-        
+
         <div class="flex items-center gap-2 flex-wrap mb-2">
           <Icon name="tabler:user" class="w-4 h-4 text-primary dark:text-blue-400" />
           <span class="text-sm font-medium text-gray-700 dark:text-slate-300">
             {post.author || 'Foseer Editorial Team'}
           </span>
-          {post.authorTitle && (
-            <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300 rounded-full capitalize">
-              {post.authorTitle}
-            </span>
-          )}
         </div>
-        
+
         {post.category && (
           <div class="flex items-center gap-2 flex-wrap mb-2">
             <Icon name="tabler:tag" class="w-4 h-4 text-primary dark:text-blue-400" />
-            <a 
-              href={getPermalink(post.category.slug, 'category')}
+            <a
+              href={getPermalink(post.category.slug, 'tag')}
               class="text-sm font-medium text-primary hover:underline transition-colors bg-primary/10 dark:bg-blue-400/10 px-2 py-1 rounded-full"
             >
               {post.category.title}
             </a>
           </div>
         )}
-        
+
         <div class="flex items-center gap-2 flex-wrap">
           <Icon name="tabler:clock" class="w-4 h-4 text-primary dark:text-blue-400" />
           <span class="text-sm font-medium text-gray-600 dark:text-slate-300">
-            {post.readingTime || '5 min'} read
-          </span>
-          <span class="text-gray-300 dark:text-slate-600">•</span>
-          <Icon name="tabler:eye" class="w-4 h-4 text-primary dark:text-blue-400" />
-          <span class="text-sm font-medium text-gray-600 dark:text-slate-300">
-            {post.views || '1.2k'} views
+            {post.readingTime ? `${Math.round(post.readingTime)} min` : '5 min'} read
           </span>
         </div>
       </div>
@@ -97,15 +87,17 @@ const { post, url } = Astro.props;
             class="w-full h-auto object-cover"
             widths={[400, 800, 1200]}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
-            alt={post?.excerpt || post.title}
+            alt={post.excerpt || post.title}
             width={1200}
             height={675}
             loading="eager"
             decoding="async"
           />
-          <figcaption class="text-sm text-muted dark:text-slate-400 italic pt-3 px-1 text-left">
-            {post.imageCaption || 'Featured image'}
-          </figcaption>
+          {post.imageCaption && (
+            <figcaption class="text-sm text-muted dark:text-slate-400 italic pt-3 px-1 text-left">
+              {post.imageCaption}
+            </figcaption>
+          )}
         </figure>
       )}
     </header>

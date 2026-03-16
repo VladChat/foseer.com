@@ -4,14 +4,14 @@ site:
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: '' # TODO: add your own Google verification ID when you verify the domain
+  googleSiteVerificationId: ''
 
 # Default SEO metadata
 metadata:
   title:
     default: Foseer
     template: '%s — Foseer'
-  description: "Foseer is a news and insights site highlighting what matters now in business, technology, politics, society, and culture."
+  description: 'Foseer is a news and insights site highlighting what matters now in business, technology, politics, society, and culture.'
   robots:
     index: true
     follow: true
@@ -25,10 +25,10 @@ metadata:
     type: website
     locale: 'en_US'
   twitter:
-    handle: '' # TODO: set your X/Twitter handle, e.g. '@foseer'
-    site: ''   # TODO: usually same as handle
+    handle: ''
+    site: ''
     cardType: summary_large_image
-    creator: '' # TODO: set your X/Twitter handle for the content creator
+    creator: ''
 
 i18n:
   language: en
@@ -41,25 +41,25 @@ apps:
 
     post:
       isEnabled: true
-      permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      permalink: '/article/%slug%'
       robots:
         index: true
 
     list:
       isEnabled: true
-      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
+      pathname: 'latest'
       robots:
         index: true
 
     category:
-      isEnabled: true
-      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      isEnabled: false
+      pathname: 'category'
       robots:
         index: true
 
     tag:
-      isEnabled: true
-      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+      isEnabled: false
+      pathname: 'tag'
       robots:
         index: false
 
@@ -69,7 +69,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
+      id: null
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'system'
