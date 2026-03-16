@@ -67,6 +67,40 @@ function Write-Success {
     Write-Host "OK: $SuccessMessage" -ForegroundColor Green
 }
 
+function Invoke-GitCommand {
+    param(
+        [string]$RepoRoot,
+        [string[]]$Arguments
+    )
+    # Run git command with suppressed warnings, return output and exit code
+    $OriginalErrorAction = $ErrorActionPreference
+    $OriginalWarningPreference = $WarningPreference
+    $ErrorActionPreference = 'SilentlyContinue'
+    $WarningPreference = 'SilentlyContinue'
+    
+    $Output = & {
+        $ErrorActionPreference = 'SilentlyContinue'
+        $WarningPreference = 'SilentlyContinue'
+        git -C $RepoRoot @Arguments 2>&1
+    }
+    $ExitCode = $LASTEXITCODE
+    
+    $ErrorActionPreference = $OriginalErrorAction
+    $WarningPreference = $OriginalWarningPreference
+    
+    # Filter out line-ending warnings and convert to string array
+    $CleanOutput = @()
+    foreach ($line in $Output) {
+        $lineStr = [string]$line
+        if ($lineStr -notmatch 'LF will be replaced by CRLF' -and 
+            $lineStr -notmatch 'CRLF will be replaced by LF') {
+            $CleanOutput += $lineStr
+        }
+    }
+    
+    return @{ Output = $CleanOutput; ExitCode = $ExitCode }
+}
+
 # =============================================================================
 # VALIDATION PHASE
 # =============================================================================
@@ -89,89 +123,64 @@ if (-not (Test-Path $GitDir)) {
 Write-Success ".git directory exists"
 
 # 3. Validate actual git repo root matches expected
-try {
-    $ActualRepoRoot = git -C $ExpectedRepoRoot rev-parse --show-toplevel 2>&1
-    if ($LASTEXITCODE -ne 0) {
-        Write-ErrorAndExit "Git command failed. Repository may be corrupted."
-    }
-    # Normalize paths for comparison
-    $ActualRepoRoot = $ActualRepoRoot.Replace("/", "\").TrimEnd("\")
-    $ExpectedRepoRootNormalized = $ExpectedRepoRoot.Replace("/", "\").TrimEnd("\")
-    if ($ActualRepoRoot -ne $ExpectedRepoRootNormalized) {
-        Write-ErrorAndExit "Git repo root '$ActualRepoRoot' does not match expected '$ExpectedRepoRootNormalized'. Possible parent-directory leakage."
-    }
-} catch {
-    Write-ErrorAndExit "Failed to verify git repo root: $_"
+$RepoRootResult = Invoke-GitCommand -RepoRoot $ExpectedRepoRoot -Arguments @("rev-parse", "--show-toplevel")
+if ($RepoRootResult.ExitCode -ne 0) {
+    Write-ErrorAndExit "Git command failed. Repository may be corrupted."
+}
+$ActualRepoRoot = $RepoRootResult.Output[0].Replace("/", "\").TrimEnd("\")
+$ExpectedRepoRootNormalized = $ExpectedRepoRoot.Replace("/", "\").TrimEnd("\")
+if ($ActualRepoRoot -ne $ExpectedRepoRootNormalized) {
+    Write-ErrorAndExit "Git repo root '$ActualRepoRoot' does not match expected '$ExpectedRepoRootNormalized'. Possible parent-directory leakage."
 }
 Write-Success "Git repo root matches expected path"
 
 # 4. Validate remote origin
-try {
-    $RemoteOutput = git -C $ExpectedRepoRoot remote get-url origin 2>&1
-    if ($LASTEXITCODE -ne 0) {
-        Write-ErrorAndExit "Remote 'origin' not configured."
-    }
-    $RemoteOutput = $RemoteOutput.Trim()
-    if ($RemoteOutput -ne $ExpectedRemoteUrl) {
-        Write-ErrorAndExit "Remote origin '$RemoteOutput' does not match expected '$ExpectedRemoteUrl'."
-    }
-} catch {
-    Write-ErrorAndExit "Failed to verify remote origin: $_"
+$RemoteResult = Invoke-GitCommand -RepoRoot $ExpectedRepoRoot -Arguments @("remote", "get-url", "origin")
+if ($RemoteResult.ExitCode -ne 0) {
+    Write-ErrorAndExit "Remote 'origin' not configured."
+}
+$RemoteOutput = $RemoteResult.Output[0].Trim()
+if ($RemoteOutput -ne $ExpectedRemoteUrl) {
+    Write-ErrorAndExit "Remote origin '$RemoteOutput' does not match expected '$ExpectedRemoteUrl'."
 }
 Write-Success "Remote origin matches expected URL"
 
 # 5. Validate current branch
-try {
-    $CurrentBranch = git -C $ExpectedRepoRoot branch --show-current 2>&1
-    if ($LASTEXITCODE -ne 0) {
-        Write-ErrorAndExit "Failed to determine current branch."
-    }
-    $CurrentBranch = $CurrentBranch.Trim()
-    if ($CurrentBranch -ne $ExpectedBranch) {
-        Write-ErrorAndExit "Current branch '$CurrentBranch' is not '$ExpectedBranch'. Switch to main before publishing."
-    }
-} catch {
-    Write-ErrorAndExit "Failed to verify branch: $_"
+$BranchResult = Invoke-GitCommand -RepoRoot $ExpectedRepoRoot -Arguments @("branch", "--show-current")
+if ($BranchResult.ExitCode -ne 0) {
+    Write-ErrorAndExit "Failed to determine current branch."
+}
+$CurrentBranch = $BranchResult.Output[0].Trim()
+if ($CurrentBranch -ne $ExpectedBranch) {
+    Write-ErrorAndExit "Current branch '$CurrentBranch' is not '$ExpectedBranch'. Switch to main before publishing."
 }
 Write-Success "Current branch is '$ExpectedBranch'"
 
 # 6. Check for parent-directory leakage via git status
-# This check catches: ..\, ../, any path starting with .., and paths resolving outside repo root
-try {
-    $StatusOutput = git -C $ExpectedRepoRoot status --porcelain 2>&1
-    if ($LASTEXITCODE -ne 0) {
-        Write-ErrorAndExit "Git status command failed."
+$StatusResult = Invoke-GitCommand -RepoRoot $ExpectedRepoRoot -Arguments @("status", "--porcelain")
+if ($StatusResult.ExitCode -ne 0) {
+    Write-ErrorAndExit "Git status command failed."
+}
+
+foreach ($line in $StatusResult.Output) {
+    if ([string]::IsNullOrWhiteSpace($line)) { continue }
+    
+    # Extract file path from status line (format: "XY path")
+    $filePath = $line.Substring(3).Trim()
+    
+    # Check for parent directory references (Windows and Unix style)
+    if ($filePath.StartsWith("..")) {
+        Write-ErrorAndExit "Parent-directory leakage detected: '$filePath'. Git operations must not include files outside repo root."
     }
-    # Check if any tracked files are outside the expected repo root
-    $StatusLines = $StatusOutput -split "`n"
-    foreach ($line in $StatusLines) {
-        if ([string]::IsNullOrWhiteSpace($line)) { continue }
-        # Extract file path from status line (format: "XY path")
-        $filePath = $line.Substring(3).Trim()
-        
-        # Check for parent directory references (Windows and Unix style)
-        if ($filePath.StartsWith("..\")) {
-            Write-ErrorAndExit "Parent-directory leakage detected: '$filePath'. Git operations must not include files outside repo root."
-        }
-        if ($filePath.StartsWith("../")) {
-            Write-ErrorAndExit "Parent-directory leakage detected: '$filePath'. Git operations must not include files outside repo root."
-        }
-        if ($filePath.StartsWith("..")) {
-            Write-ErrorAndExit "Parent-directory leakage detected: '$filePath'. Git operations must not include files outside repo root."
-        }
-        
-        # Resolve the full path and verify it is within repo root
-        $FullPath = Resolve-Path -Path (Join-Path $ExpectedRepoRoot $filePath) -ErrorAction SilentlyContinue
-        if ($null -ne $FullPath) {
-            $FullPathStr = $FullPath.Path.Replace("/", "\").TrimEnd("\")
-            $ExpectedRepoRootNormalized = $ExpectedRepoRoot.Replace("/", "\").TrimEnd("\")
-            if (-not $FullPathStr.StartsWith($ExpectedRepoRootNormalized)) {
-                Write-ErrorAndExit "Parent-directory leakage detected: '$filePath' resolves to '$FullPathStr' which is outside repo root '$ExpectedRepoRootNormalized'."
-            }
+    
+    # Resolve the full path and verify it is within repo root
+    $FullPath = Resolve-Path -Path (Join-Path $ExpectedRepoRoot $filePath) -ErrorAction SilentlyContinue
+    if ($null -ne $FullPath) {
+        $FullPathStr = $FullPath.Path.Replace("/", "\").TrimEnd("\")
+        if (-not $FullPathStr.StartsWith($ExpectedRepoRootNormalized)) {
+            Write-ErrorAndExit "Parent-directory leakage detected: '$filePath' resolves to '$FullPathStr' which is outside repo root '$ExpectedRepoRootNormalized'."
         }
     }
-} catch {
-    Write-ErrorAndExit "Failed to check git status: $_"
 }
 Write-Success "No parent-directory leakage detected"
 
@@ -183,7 +192,7 @@ Write-Step "Running npm run build..."
 
 Set-Location $ExpectedRepoRoot
 
-# Capture build output and exit code without throwing exception
+# Capture build output and exit code
 $BuildOutput = & {
     $ErrorActionPreference = 'Continue'
     npm run build 2>&1
@@ -210,41 +219,24 @@ Write-Success "Build completed successfully"
 
 Write-Step "Inspecting git status before staging..."
 
-try {
-    $StatusBefore = git -C $ExpectedRepoRoot status 2>&1
-    Write-Host $StatusBefore
-} catch {
-    Write-ErrorAndExit "Failed to get git status: $_"
+$StatusBeforeResult = Invoke-GitCommand -RepoRoot $ExpectedRepoRoot -Arguments @("status")
+if ($StatusBeforeResult.ExitCode -ne 0 -and $StatusBeforeResult.ExitCode -ne 1) {
+    Write-ErrorAndExit "Failed to get git status."
 }
+Write-Host ($StatusBeforeResult.Output -join "`n")
 
 Write-Step "Inspecting git diff --stat before staging..."
 
-# Temporarily disable error action preference for git commands
-$OriginalErrorAction = $ErrorActionPreference
-$ErrorActionPreference = 'SilentlyContinue'
-
-# Run git diff with stderr redirected to null for warnings
-$DiffStat = & {
-    $WarningPreference = 'SilentlyContinue'
-    $ErrorActionPreference = 'SilentlyContinue'
-    git -C $ExpectedRepoRoot diff --stat 2>&1
-}
-$DiffExitCode = $LASTEXITCODE
-
-# Restore original error action preference
-$ErrorActionPreference = $OriginalErrorAction
-
-# Exit code 0 = no changes, exit code 1 = changes exist, >1 = error
-if ($DiffExitCode -eq 0 -or $DiffExitCode -eq 1) {
-    # Filter out line-ending warnings from output
-    $DiffClean = $DiffStat | Where-Object { $_ -notmatch 'LF will be replaced by CRLF' -and $_ -notmatch 'CRLF will be replaced by LF' }
-    if ($DiffClean) {
-        Write-Host ($DiffClean -join "`n")
+$DiffResult = Invoke-GitCommand -RepoRoot $ExpectedRepoRoot -Arguments @("diff", "--stat")
+# Exit code 0 = no changes, exit code 1 = changes exist
+if ($DiffResult.ExitCode -eq 0 -or $DiffResult.ExitCode -eq 1) {
+    if ($DiffResult.Output -and $DiffResult.Output.Count -gt 0) {
+        Write-Host ($DiffResult.Output -join "`n")
     } else {
         Write-Host "(No unstaged changes)"
     }
 } else {
-    Write-ErrorAndExit "Git diff failed with exit code $DiffExitCode."
+    Write-ErrorAndExit "Git diff failed with exit code $($DiffResult.ExitCode)."
 }
 
 # =============================================================================
@@ -253,32 +245,10 @@ if ($DiffExitCode -eq 0 -or $DiffExitCode -eq 1) {
 
 Write-Step "Staging all changes..."
 
-# Temporarily disable error action preference for git commands
-$OriginalErrorAction = $ErrorActionPreference
-$ErrorActionPreference = 'SilentlyContinue'
-
-# Run git add with stderr redirected
-$GitAddOutput = & {
-    $WarningPreference = 'SilentlyContinue'
-    $ErrorActionPreference = 'SilentlyContinue'
-    git -C $ExpectedRepoRoot add . 2>&1
-}
-$GitAddExitCode = $LASTEXITCODE
-
-# Restore original error action preference
-$ErrorActionPreference = $OriginalErrorAction
-
-# Output any non-warning output
-if ($GitAddOutput) {
-    $GitAddClean = $GitAddOutput | Where-Object { $_ -notmatch 'LF will be replaced by CRLF' -and $_ -notmatch 'CRLF will be replaced by LF' }
-    if ($GitAddClean) {
-        Write-Host ($GitAddClean -join "`n")
-    }
-}
-
-# Only fail on actual errors (exit code > 1), not warnings
-if ($GitAddExitCode -gt 1) {
-    Write-ErrorAndExit "Git add failed with exit code $GitAddExitCode."
+$AddResult = Invoke-GitCommand -RepoRoot $ExpectedRepoRoot -Arguments @("add", ".")
+# Exit code 0 = success, exit code 1 = warnings only
+if ($AddResult.ExitCode -gt 1) {
+    Write-ErrorAndExit "Git add failed with exit code $($AddResult.ExitCode)."
 }
 
 # =============================================================================
@@ -287,29 +257,24 @@ if ($GitAddExitCode -gt 1) {
 
 Write-Step "Validating staged content..."
 
-try {
-    $StagedStatus = git -C $ExpectedRepoRoot status --porcelain 2>&1
-    if ($LASTEXITCODE -ne 0) {
-        Write-ErrorAndExit "Failed to check staged status."
-    }
+$StagedStatusResult = Invoke-GitCommand -RepoRoot $ExpectedRepoRoot -Arguments @("status", "--porcelain")
+if ($StagedStatusResult.ExitCode -ne 0) {
+    Write-ErrorAndExit "Failed to check staged status."
+}
 
-    # Check if anything is staged
-    $HasStaged = $false
-    $StatusLines = $StagedStatus -split "`n"
-    foreach ($line in $StatusLines) {
-        if ([string]::IsNullOrWhiteSpace($line)) { continue }
-        $indexStatus = $line.Substring(0, 1)
-        if ($indexStatus -eq "A" -or $indexStatus -eq "M" -or $indexStatus -eq "D" -or $indexStatus -eq "R" -or $indexStatus -eq "C") {
-            $HasStaged = $true
-            break
-        }
+# Check if anything is staged (index status is first character: A/M/D/R/C)
+$HasStaged = $false
+foreach ($line in $StagedStatusResult.Output) {
+    if ([string]::IsNullOrWhiteSpace($line)) { continue }
+    $indexStatus = $line.Substring(0, 1)
+    if ($indexStatus -match '^[AMRDC]$') {
+        $HasStaged = $true
+        break
     }
+}
 
-    if (-not $HasStaged) {
-        Write-ErrorAndExit "Nothing to commit. No changes were staged. Aborting publish."
-    }
-} catch {
-    Write-ErrorAndExit "Failed to validate staged content: $_"
+if (-not $HasStaged) {
+    Write-ErrorAndExit "Nothing to commit. No changes were staged. Aborting publish."
 }
 
 Write-Success "Changes staged successfully"
@@ -320,15 +285,11 @@ Write-Success "Changes staged successfully"
 
 Write-Step "Creating commit with message: '$Message'..."
 
-try {
-    $CommitOutput = git -C $ExpectedRepoRoot commit -m $Message 2>&1
-    if ($LASTEXITCODE -ne 0) {
-        Write-ErrorAndExit "Git commit failed with exit code $LASTEXITCODE. Output: $CommitOutput"
-    }
-    Write-Host $CommitOutput
-} catch {
-    Write-ErrorAndExit "Git commit failed: $_"
+$CommitResult = Invoke-GitCommand -RepoRoot $ExpectedRepoRoot -Arguments @("commit", "-m", $Message)
+if ($CommitResult.ExitCode -ne 0) {
+    Write-ErrorAndExit "Git commit failed with exit code $($CommitResult.ExitCode)."
 }
+Write-Host ($CommitResult.Output -join "`n")
 
 Write-Success "Commit created successfully"
 
@@ -338,17 +299,23 @@ Write-Success "Commit created successfully"
 
 Write-Step "Pushing to origin $ExpectedBranch..."
 
-try {
-    $PushOutput = git -C $ExpectedRepoRoot push origin $ExpectedBranch 2>&1
-    if ($LASTEXITCODE -ne 0) {
-        Write-ErrorAndExit "Git push failed with exit code $LASTEXITCODE. Output: $PushOutput"
-    }
-    Write-Host $PushOutput
-} catch {
-    Write-ErrorAndExit "Git push failed: $_"
+$PushResult = Invoke-GitCommand -RepoRoot $ExpectedRepoRoot -Arguments @("push", "origin", $ExpectedBranch)
+
+# Check for "Everything up-to-date" which is success
+$PushText = $PushResult.Output -join " "
+if ($PushResult.ExitCode -ne 0 -and $PushText -notmatch 'Everything up-to-date') {
+    Write-ErrorAndExit "Git push failed with exit code $($PushResult.ExitCode)."
 }
 
-Write-Success "Push completed successfully"
+if ($PushResult.Output -and $PushResult.Output.Count -gt 0) {
+    Write-Host ($PushResult.Output -join "`n")
+}
+
+if ($PushText -match 'Everything up-to-date') {
+    Write-Success "Repository already up to date"
+} else {
+    Write-Success "Push completed successfully"
+}
 
 # =============================================================================
 # FINAL VERIFICATION
@@ -356,18 +323,15 @@ Write-Success "Push completed successfully"
 
 Write-Step "Final verification..."
 
-try {
-    $CommitHash = git -C $ExpectedRepoRoot rev-parse HEAD 2>&1
-    if ($LASTEXITCODE -ne 0) {
-        Write-ErrorAndExit "Failed to get commit hash."
-    }
+$HashResult = Invoke-GitCommand -RepoRoot $ExpectedRepoRoot -Arguments @("rev-parse", "HEAD")
+if ($HashResult.ExitCode -ne 0) {
+    Write-ErrorAndExit "Failed to get commit hash."
+}
+$CommitHash = $HashResult.Output[0].Trim()
 
-    $FinalStatus = git -C $ExpectedRepoRoot status 2>&1
-    if ($LASTEXITCODE -ne 0) {
-        Write-ErrorAndExit "Failed to get final git status."
-    }
-} catch {
-    Write-ErrorAndExit "Final verification failed: $_"
+$FinalStatusResult = Invoke-GitCommand -RepoRoot $ExpectedRepoRoot -Arguments @("status")
+if ($FinalStatusResult.ExitCode -ne 0 -and $FinalStatusResult.ExitCode -ne 1) {
+    Write-ErrorAndExit "Failed to get final git status."
 }
 
 Write-Host ""
@@ -379,5 +343,5 @@ Write-Host "Remote: $ExpectedRemoteUrl" -ForegroundColor Green
 Write-Host "Branch: $ExpectedBranch" -ForegroundColor Green
 Write-Host ""
 Write-Host "Final git status:" -ForegroundColor Cyan
-Write-Host $FinalStatus
+Write-Host ($FinalStatusResult.Output -join "`n")
 Write-Host ""
