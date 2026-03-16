@@ -32,7 +32,7 @@
 
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory = $false)]
     [string]$Message
 )
 
@@ -278,6 +278,64 @@ if (-not $HasStaged) {
 }
 
 Write-Success "Changes staged successfully"
+
+# =============================================================================
+# AUTO-GENERATE COMMIT MESSAGE IF NOT PROVIDED
+# =============================================================================
+
+if ([string]::IsNullOrWhiteSpace($Message)) {
+    Write-Step "Auto-generating commit message from changes..."
+    
+    # Get list of changed files
+    $ChangedFilesResult = Invoke-GitCommand -RepoRoot $ExpectedRepoRoot -Arguments @("diff", "--cached", "--name-only")
+    
+    if ($ChangedFilesResult.ExitCode -ne 0 -or -not $ChangedFilesResult.Output -or $ChangedFilesResult.Output.Count -eq 0) {
+        Write-ErrorAndExit "Nothing to commit. No changes were staged. Aborting publish."
+    }
+    
+    # Analyze changes to determine commit type
+    $hasDocs = $false
+    $hasSrc = $false
+    $hasConfig = $false
+    $hasOther = $false
+    $fileCount = 0
+    $sampleFile = ""
+    
+    foreach ($file in $ChangedFilesResult.Output) {
+        $fileStr = [string]$file
+        if ([string]::IsNullOrWhiteSpace($fileStr)) { continue }
+        $fileCount++
+        if ($fileCount -eq 1) { $sampleFile = $fileStr }
+        
+        if ($fileStr -match '\.(md|txt|rst)$') { $hasDocs = $true }
+        elseif ($fileStr -match '^src/') { $hasSrc = $true }
+        elseif ($fileStr -match '\.(json|yaml|yml|toml|config)$') { $hasConfig = $true }
+        else { $hasOther = $true }
+    }
+    
+    # Determine commit type prefix
+    $prefix = "chore"
+    if ($hasSrc -and -not $hasDocs) { $prefix = "feat" }
+    elseif ($hasDocs -and -not $hasSrc) { $prefix = "docs" }
+    elseif ($hasConfig) { $prefix = "config" }
+    
+    # Generate short description from file path
+    $description = "update"
+    if ($sampleFile -match '([^/\\]+)$') {
+        $fileName = $matches[1] -replace '\.[^.]+$', ''  # Remove extension
+        if ($fileName) {
+            $description = "update $fileName"
+        }
+    }
+    
+    # Add file count if multiple files
+    if ($fileCount -gt 1) {
+        $description = "$description (+$fileCount files)"
+    }
+    
+    $Message = "$prefix`: $description"
+    Write-Host "Generated message: '$Message'" -ForegroundColor Gray
+}
 
 # =============================================================================
 # COMMIT PHASE
