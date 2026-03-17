@@ -5,6 +5,7 @@ import Image from '~/components/common/Image.astro';
 import PostTags from '~/components/blog/Tags.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
 
+import { resolvePostImage, generateImageAlt } from '~/utils/post-image';
 import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
@@ -16,6 +17,7 @@ export interface Props {
 }
 
 const { post, url } = Astro.props;
+const coverImage = await resolvePostImage(post.image, post.slug);
 ---
 
 <section class="py-8 sm:py-12 lg:py-16 bg-page min-h-screen">
@@ -80,14 +82,14 @@ const { post, url } = Astro.props;
       )}
 
       {/* Featured Image with Proper Styling */}
-      {post.image && (
+      {coverImage && (
         <figure class="mt-8 lg:mt-12 max-w-full mx-auto rounded-lg overflow-hidden shadow-lg bg-gray-400 dark:bg-slate-700">
           <Image
-            src={post.image}
+            src={coverImage}
             class="w-full h-auto object-cover"
             widths={[400, 800, 1200]}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
-            alt={post.excerpt || post.title}
+            alt={generateImageAlt(post.title, post.excerpt)}
             width={1200}
             height={675}
             loading="eager"

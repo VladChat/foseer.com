@@ -12,7 +12,7 @@ import RelatedPosts from '~/components/blog/RelatedPosts.astro';
 
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import { fetchPosts, blogPostRobots } from '~/utils/blog';
-import { findImage } from '~/utils/images';
+import { resolvePostImage } from '~/utils/post-image';
 import type { MetaData } from '~/types';
 
 export const prerender = true;
@@ -32,7 +32,21 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { post } = Astro.props as Props;
 
 const url = getCanonical(getPermalink(post.permalink, 'post'));
-const image = (await findImage(post.image)) as ImageMetadata | string | undefined;
+const coverImage = await resolvePostImage(post.image, post.slug);
+
+// Resolve image for metadata/OG/Twitter
+let ogImage: { url: string | ImageMetadata; width?: number; height?: number } | undefined = undefined;
+if (coverImage) {
+  if (typeof coverImage === 'string') {
+    ogImage = { url: coverImage };
+  } else {
+    ogImage = {
+      url: coverImage,
+      width: (coverImage as ImageMetadata).width,
+      height: (coverImage as ImageMetadata).height,
+    };
+  }
+}
 
 const metadata = merge(
   {
@@ -44,9 +58,7 @@ const metadata = merge(
     },
     openGraph: {
       type: 'article',
-      ...(image
-        ? { images: [{ url: image, width: (image as ImageMetadata)?.width, height: (image as ImageMetadata)?.height }] }
-        : {}),
+      ...(ogImage ? { images: [ogImage] } : {}),
     },
   },
   { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || url } : {}) }
@@ -54,7 +66,7 @@ const metadata = merge(
 ---
 
 <Layout metadata={metadata}>
-  <SinglePost post={{ ...post, image: image }} url={url}>
+  <SinglePost post={{ ...post, image: coverImage }} url={url}>
     {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
   </SinglePost>
   <RelatedPosts post={post} />
