@@ -1,10 +1,12 @@
 ---
 // File: src/components/EditorialStoryCard.astro
-// Purpose: Render text-first editorial story cards for homepage front-page layouts.
+// Purpose: Render editorial story cards with image previews for homepage front-page layouts.
 
 import type { Post } from '~/types';
 import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
+import { resolvePostImage, generateImageAlt } from '~/utils/post-image';
+import { Image } from 'astro:assets';
 
 export interface Props {
   post: Post;
@@ -19,6 +21,13 @@ const categoryHref = post.category ? getPermalink(post.category.slug, 'category'
 
 const isLead = variant === 'lead';
 const isCompact = variant === 'compact';
+
+// Resolve the cover image (uses article image or fallback)
+const coverImage = await resolvePostImage(post.image, post.slug);
+const imageAlt = generateImageAlt(post.title, post.excerpt);
+
+// Loading strategy: eager for lead, lazy for others
+const imageLoading = isLead ? 'eager' : 'lazy';
 ---
 
 <article
@@ -30,48 +39,75 @@ const isCompact = variant === 'compact';
     },
   ]}
 >
-  <div class="mb-4 flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-slate-500 dark:text-slate-400">
-    {post.category && categoryHref ? (
-      <a class="text-accent hover:text-primary transition" href={categoryHref}>{post.category.title}</a>
-    ) : (
-      <span>Coverage</span>
-    )}
-    <span aria-hidden="true">•</span>
-    <time datetime={String(post.publishDate)}>{getFormattedDate(post.publishDate)}</time>
-  </div>
-
-  <h2
-    class:list={[
-      'font-heading font-bold tracking-tight text-slate-900 dark:text-slate-100',
+  {coverImage && (
+    <div class:list={[
+      'relative w-full overflow-hidden rounded-t-2xl bg-slate-100 dark:bg-slate-900',
       {
-        'text-3xl md:text-4xl leading-tight': isLead,
-        'text-2xl leading-snug': !isLead,
-        'text-xl leading-snug': isCompact,
-      },
-    ]}
-  >
-    <a class="hover:text-primary transition" href={postHref}>{post.title}</a>
-  </h2>
-
-  {showExcerpt && post.excerpt && (
-    <p class:list={[
-      'mt-4 text-slate-600 dark:text-slate-300',
-      {
-        'text-lg leading-8 max-w-2xl': isLead,
-        'text-base leading-7': !isLead,
+        'aspect-video': true,
       },
     ]}>
-      {post.excerpt}
-    </p>
+      <Image
+        src={coverImage}
+        alt={imageAlt}
+        loading={imageLoading}
+        fetchpriority={isLead ? 'high' : 'auto'}
+        class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+        style="aspect-ratio: 16/9;"
+      />
+    </div>
   )}
 
-  <div class="mt-auto pt-5">
-    <a
-      class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.06em] text-primary hover:text-secondary transition"
-      href={postHref}
+  <div class:list={[
+    'flex flex-col flex-grow',
+    {
+      'p-6 md:p-8': isLead && !coverImage,
+      'p-5': !isLead && !coverImage,
+      'pt-5': coverImage,
+    },
+  ]}>
+    <div class="mb-4 flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-slate-500 dark:text-slate-400">
+      {post.category && categoryHref ? (
+        <a class="text-accent hover:text-primary transition" href={categoryHref}>{post.category.title}</a>
+      ) : (
+        <span>Coverage</span>
+      )}
+      <span aria-hidden="true">•</span>
+      <time datetime={String(post.publishDate)}>{getFormattedDate(post.publishDate)}</time>
+    </div>
+
+    <h2
+      class:list={[
+        'font-heading font-bold tracking-tight text-slate-900 dark:text-slate-100',
+        {
+          'text-3xl md:text-4xl leading-tight': isLead,
+          'text-2xl leading-snug': !isLead,
+          'text-xl leading-snug': isCompact,
+        },
+      ]}
     >
-      <span>Read story</span>
-      <span aria-hidden="true">→</span>
-    </a>
+      <a class="hover:text-primary transition" href={postHref}>{post.title}</a>
+    </h2>
+
+    {showExcerpt && post.excerpt && (
+      <p class:list={[
+        'mt-4 text-slate-600 dark:text-slate-300',
+        {
+          'text-lg leading-8 max-w-2xl': isLead,
+          'text-base leading-7': !isLead,
+        },
+      ]}>
+        {post.excerpt}
+      </p>
+    )}
+
+    <div class="mt-auto pt-5">
+      <a
+        class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.06em] text-primary hover:text-secondary transition"
+        href={postHref}
+      >
+        <span>Read story</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </div>
 </article>
