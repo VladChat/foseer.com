@@ -29,6 +29,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run content pipeline (fetch Pexels images)
+        run: node scripts/run-content-pipeline.js --all
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        continue-on-error: true
+
       - name: Build
         run: npm run build
 
