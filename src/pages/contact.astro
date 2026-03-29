@@ -3,6 +3,7 @@
 // Purpose: Contact Foseer page.
 
 import Layout from '~/layouts/PageLayout.astro';
+import { SITE_LEGAL } from '~/config/site-legal';
 
 const metadata = {
   title: 'Contact Foseer',
@@ -21,33 +22,47 @@ const metadata = {
 
       <div class="prose prose-lg dark:prose-invert">
         <p class="text-lg text-gray-700 dark:text-slate-300 leading-relaxed">
-          Have a question, tip, or feedback? We'd love to hear from you.
+          Have a question, tip, correction, or business inquiry? We'd love to hear from you.
         </p>
 
         <h2>Editorial Tips</h2>
         <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
-          Send news tips, story ideas, and press releases to our editorial team. We review all submissions and reach out when we're pursuing a story.
+          Send news tips, story ideas, correction requests, and press inquiries to our main contact address. We review messages and follow up when needed.
         </p>
 
-        <h2>Feedback</h2>
+        <h2>General Inquiries</h2>
         <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
-          Found an error? Have a suggestion? Let us know so we can improve our coverage.
+          For privacy, copyright, terms, partnerships, or general site questions, use the contact details below.
         </p>
 
-        <div class="mt-8 space-y-4">
+        <div class="mt-8 space-y-6">
           <div class="flex items-start gap-3">
             <svg class="w-6 h-6 text-primary mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
             </svg>
             <div>
               <h3 class="font-semibold text-gray-900 dark:text-white">Email</h3>
-              <p class="text-gray-700 dark:text-slate-300">editorial@foseer.com</p>
+              <p class="text-gray-700 dark:text-slate-300">
+                <a href={`mailto:${SITE_LEGAL.contactEmail}`}>{SITE_LEGAL.contactEmail}</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-primary mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a2 2 0 011.9 1.37l1.18 3.54a2 2 0 01-.45 2.11l-1.62 1.62a16 16 0 006.24 6.24l1.62-1.62a2 2 0 012.11-.45l3.54 1.18A2 2 0 0121 15.72V19a2 2 0 01-2 2h-1C9.16 21 3 14.84 3 7V5z"></path>
+            </svg>
+            <div>
+              <h3 class="font-semibold text-gray-900 dark:text-white">Phone</h3>
+              <p class="text-gray-700 dark:text-slate-300">
+                <a href={SITE_LEGAL.contactPhoneHref}>{SITE_LEGAL.contactPhoneDisplay}</a>
+              </p>
             </div>
           </div>
         </div>
 
         <p class="mt-8 text-sm text-gray-600 dark:text-slate-400">
-          Note: We receive many messages and cannot respond to all of them individually. For the fastest response, please be clear and concise in your message.
+          Please keep messages clear and concise so we can route them quickly.
         </p>
       </div>
     </div>

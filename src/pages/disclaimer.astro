@@ -1,0 +1,47 @@
+---
+// File: src/pages/disclaimer.astro
+// Purpose: Foseer general editorial disclaimer page.
+
+import LegalLayout from '~/layouts/LegalLayout.astro';
+import { SITE_LEGAL } from '~/config/site-legal';
+
+const title = 'Disclaimer';
+const description = 'Editorial and liability disclaimer for Foseer content.';
+---
+
+<LegalLayout title={title} description={description} lastUpdated={SITE_LEGAL.lastUpdated}>
+  <p>
+    {SITE_LEGAL.siteName} publishes editorial content for general informational purposes. While we aim for clear and responsible coverage, our articles, explainers, and updates are not professional advice.
+  </p>
+
+  <h2>No Professional Advice</h2>
+  <p>
+    Content on this site is not legal, medical, financial, tax, investment, or other regulated professional advice, and it should not be used as a substitute for qualified professional guidance.
+  </p>
+
+  <h2>No Guarantee of Completeness or Timeliness</h2>
+  <p>
+    News and analysis can change quickly. We do not guarantee that every article, summary, timeline, or source reference will always remain complete, current, or error-free.
+  </p>
+
+  <h2>Editorial Judgment</h2>
+  <p>
+    Coverage decisions, framing, source selection, and editorial updates reflect our judgment at the time of publication or revision. Reasonable people may interpret fast-moving events differently.
+  </p>
+
+  <h2>External Sources and Links</h2>
+  <p>
+    Our content may discuss or link to third-party people, organizations, products, studies, or websites. References do not automatically imply endorsement, partnership, or approval.
+  </p>
+
+  <h2>Use at Your Own Risk</h2>
+  <p>
+    Your use of this site and reliance on any content is at your own risk. You remain responsible for evaluating information and seeking qualified advice where needed.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions about this disclaimer can be sent to <a href={`mailto:${SITE_LEGAL.contactEmail}`}>{SITE_LEGAL.contactEmail}</a> or
+    <a href={SITE_LEGAL.contactPhoneHref}>{SITE_LEGAL.contactPhoneDisplay}</a>.
+  </p>
+</LegalLayout>

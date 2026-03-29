@@ -1,0 +1,52 @@
+---
+// File: src/pages/copyright.astro
+// Purpose: Foseer copyright and takedown policy page.
+
+import LegalLayout from '~/layouts/LegalLayout.astro';
+import { SITE_LEGAL } from '~/config/site-legal';
+
+const title = 'Copyright & Takedown Policy';
+const description = 'How Foseer handles copyright notices, permissions, and takedown requests.';
+---
+
+<LegalLayout title={title} description={description} lastUpdated={SITE_LEGAL.lastUpdated}>
+  <p>
+    {SITE_LEGAL.siteName} respects intellectual property rights and expects others to do the same.
+  </p>
+
+  <h2>Our Content</h2>
+  <p>
+    Unless otherwise stated, original Foseer branding, editorial copy, layouts, graphics, and site materials are owned by or licensed to {SITE_LEGAL.siteName}. Reuse beyond ordinary linking,
+    brief quotation, or other legally permitted use requires permission.
+  </p>
+
+  <h2>Reporting a Claim</h2>
+  <p>
+    If you believe content on this site infringes your copyright or other intellectual property rights, send a detailed notice to
+    <a href={`mailto:${SITE_LEGAL.contactEmail}`}>{SITE_LEGAL.contactEmail}</a>.
+  </p>
+  <p>Please include:</p>
+  <ul>
+    <li>Your full name and contact information.</li>
+    <li>A description of the work you claim has been infringed.</li>
+    <li>The exact URL or enough information for us to locate the material.</li>
+    <li>A statement explaining the basis of your claim.</li>
+    <li>A statement that the information you provide is accurate to the best of your knowledge.</li>
+  </ul>
+
+  <h2>Our Response</h2>
+  <p>
+    We may review the request, ask for additional information, remove or restrict access to material when appropriate, and keep a record of the request for legal and operational purposes.
+  </p>
+
+  <h2>Repeat or Bad-Faith Claims</h2>
+  <p>
+    Knowingly false, abusive, or bad-faith notices may be rejected. We also reserve the right to preserve evidence and correspondence related to any notice or dispute.
+  </p>
+
+  <h2>Permissions</h2>
+  <p>
+    Permission requests, licensing inquiries, and republication questions can be sent to <a href={`mailto:${SITE_LEGAL.contactEmail}`}>{SITE_LEGAL.contactEmail}</a> or
+    <a href={SITE_LEGAL.contactPhoneHref}>{SITE_LEGAL.contactPhoneDisplay}</a>.
+  </p>
+</LegalLayout>

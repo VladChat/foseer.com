@@ -6,10 +6,18 @@ import { getBlogPermalink, getHomePermalink } from './utils/permalinks.js';
 
 const headerNav = buildHeaderNavigation();
 const footerNav = buildFooterNavigation();
+const legalFooterLinks = [
+  { text: 'Privacy Policy', href: '/privacy' },
+  { text: 'Terms of Use', href: '/terms' },
+  { text: 'Cookies', href: '/cookies' },
+  { text: 'Disclaimer', href: '/disclaimer' },
+  { text: 'Copyright', href: '/copyright' },
+];
 
 console.log('[navigation] Header sections:', headerNav.map((entry) => entry.text).join(', '));
 console.log('[navigation] Footer coverage:', footerNav.coverageGroup.links.length, 'links');
 console.log('[navigation] Footer browse:', footerNav.browseGroup.links.length, 'links');
+console.log('[navigation] Footer legal:', legalFooterLinks.length, 'links');
 
 export const headerData = {
   links: headerNav.map((item) => ({
@@ -41,9 +49,16 @@ export const footerData = {
         href: link.href,
       })),
     },
+    {
+      title: 'Legal',
+      links: legalFooterLinks,
+    },
   ],
-  secondaryLinks: [{ text: 'Home', href: getHomePermalink() }],
-  socialNodes: [],
+  secondaryLinks: [
+    { text: 'Home', href: getHomePermalink() },
+    { text: 'Contact', href: '/contact' },
+  ],
+  socialLinks: [],
   footNote: '© Foseer. Reporting, context, and analysis.',
 };
 

@@ -1,0 +1,53 @@
+---
+// File: src/pages/cookies.astro
+// Purpose: Foseer cookie and local storage notice.
+
+import LegalLayout from '~/layouts/LegalLayout.astro';
+import { SITE_LEGAL } from '~/config/site-legal';
+
+const title = 'Cookies & Local Storage Notice';
+const description = 'How Foseer uses local browser storage, technical logs, and similar technologies.';
+---
+
+<LegalLayout title={title} description={description} lastUpdated={SITE_LEGAL.lastUpdated}>
+  <p>
+    This notice explains how {SITE_LEGAL.siteName} uses cookies, local storage, and similar technologies on <a href={SITE_LEGAL.siteUrl}>{SITE_LEGAL.siteUrl}</a>.
+  </p>
+
+  <h2>What We Use Right Now</h2>
+  <ul>
+    <li><strong>Theme preference storage:</strong> the site uses local browser storage to remember whether you chose dark mode or light mode.</li>
+    <li><strong>Basic technical logs:</strong> our hosting and infrastructure may log technical request details needed for security, uptime, and troubleshooting.</li>
+  </ul>
+
+  <h2>What We Do Not Currently Use</h2>
+  <ul>
+    <li>No configured third-party analytics identifier is currently enabled on the live site.</li>
+    <li>No advertising or remarketing network is currently configured on the live site.</li>
+    <li>No on-site user account cookies are currently used because the site does not currently offer public user accounts.</li>
+  </ul>
+
+  <h2>Why We Use These Technologies</h2>
+  <ul>
+    <li>To keep your visual theme preference between visits.</li>
+    <li>To help secure, maintain, and troubleshoot the website.</li>
+  </ul>
+
+  <h2>Your Controls</h2>
+  <ul>
+    <li>You can clear site storage through your browser settings.</li>
+    <li>You can use browser privacy controls or extensions to manage local storage and similar technologies.</li>
+    <li>Clearing storage may reset your saved theme preference.</li>
+  </ul>
+
+  <h2>Future Changes</h2>
+  <p>
+    If {SITE_LEGAL.siteName} later enables analytics, advertising, testing tools, embedded third-party services, or additional preference storage, we will update this notice and related privacy disclosures.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions about this notice can be sent to <a href={`mailto:${SITE_LEGAL.contactEmail}`}>{SITE_LEGAL.contactEmail}</a> or
+    <a href={SITE_LEGAL.contactPhoneHref}>{SITE_LEGAL.contactPhoneDisplay}</a>.
+  </p>
+</LegalLayout>
