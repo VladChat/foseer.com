@@ -22,6 +22,11 @@ const LEAKY_ENTITY_TERMS = new Set([
   'cybersecurity', 'technology', 'tech', 'sports', 'culture', 'news', 'business', 'world', 'geopolitics',
 ]);
 
+const BROAD_SINGLE_TOKEN_ENTITIES = new Set([
+  'ai', 'athlete', 'athletes', 'business', 'court', 'courts', 'culture', 'government',
+  'health', 'legal', 'news', 'politics', 'policy', 'sports', 'tech', 'technology',
+]);
+
 
 const QUESTION_LEAD_TERMS = new Set(['has', 'have', 'what', 'why', 'how', 'is', 'are', 'was', 'were', 'can', 'will', 'did', 'does', 'do', 'should', 'could']);
 
@@ -55,6 +60,11 @@ const SECTION_FALLBACK_QUERIES = {
 };
 
 const CONTEXT_QUERY_RULES = [
+  { keywords: ['data center', 'data centers', 'server farm', 'hyperscale'], phrase: 'data center' },
+  { keywords: ['electricity', 'power demand', 'power use', 'power consumption', 'grid'], phrase: 'electricity' },
+  { keywords: ['energy demand', 'energy use', 'energy consumption', 'cooling load'], phrase: 'energy demand' },
+  { keywords: ['emissions', 'carbon', 'co2', 'greenhouse'], phrase: 'emissions' },
+  { keywords: ['climate', 'climate goals', 'climate pledge', 'sustainability'], phrase: 'climate' },
   { keywords: ['mortgage', 'mortgages', 'housing', 'loan', 'homebuyer', 'fannie mae', 'freddie mac'], phrase: 'mortgage' },
   { keywords: ['crypto', 'bitcoin', 'stablecoin', 'token', 'tether'], phrase: 'crypto' },
   { keywords: ['audit', 'auditor', 'kpmg', 'accounting'], phrase: 'audit' },
@@ -332,14 +342,19 @@ function pushQuery(list, value) {
 function buildEntityLedQueries(primaryEntities = [], contextPhrases = [], geoHints = [], evidenceText = '') {
   const queries = [];
   const firstContext = contextPhrases[0] || null;
+  const secondContext = contextPhrases[1] || null;
 
   primaryEntities.slice(0, 2).forEach((entity, index) => {
     const entityKey = normalizeKey(entity);
+    const entityTokens = tokenize(entity);
     const expansion = ENTITY_EXPANSIONS[entityKey]?.[0] || null;
     const preferredContext = expansion || firstContext;
-    pushQuery(queries, `${entity} photo`);
-    if (looksPersonLike(entity, evidenceText)) pushQuery(queries, `${entity} portrait`);
+    const contextRequired = entityTokens.length === 1 && BROAD_SINGLE_TOKEN_ENTITIES.has(entityTokens[0]);
+
     if (preferredContext) pushQuery(queries, `${entity} ${preferredContext} photo`);
+    if (secondContext && preferredContext !== secondContext) pushQuery(queries, `${entity} ${secondContext} photo`);
+    if (!contextRequired || !preferredContext) pushQuery(queries, `${entity} photo`);
+    if (looksPersonLike(entity, evidenceText)) pushQuery(queries, `${entity} portrait`);
     if (firstContext && expansion && expansion !== firstContext && index === 0) pushQuery(queries, `${entity} ${firstContext} photo`);
     if (geoHints[0]) pushQuery(queries, `${geoHints[0]} ${entity} photo`);
   });
@@ -376,7 +391,7 @@ export function buildImageQueryPlan({
 
   const validatedEntities = sanitizeEntityHints(entityHints, evidence, geoHints);
   const validatedGeoHints = sanitizeGeoHints(geoHints, normalizeKey(fullEvidenceText));
-  const contextSeedText = [title, sourceEvidence.sourceTitlesText, topicRecord?.label].filter(Boolean).join(' | ');
+  const contextSeedText = [title, excerpt, sourceEvidence.sourceTitlesText, sourceEvidence.sourceBodiesText, topicRecord?.label].filter(Boolean).join(' | ');
   const contextPhrases = deriveContextPhrases(contextSeedText || fullEvidenceText);
   let titleSubject = buildTitleSubjectPhrase(title, validatedEntities);
   const titleSubjectKey = normalizeKey(titleSubject);

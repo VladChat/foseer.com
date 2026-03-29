@@ -11,6 +11,13 @@ const TOKEN_STOPWORDS = new Set([
   'about', 'after', 'against', 'analysis', 'article', 'background', 'breaking', 'briefing', 'business', 'city', 'collage', 'conference', 'cover', 'current', 'daily', 'document', 'editorial', 'event', 'events', 'feature', 'file', 'for', 'from', 'general', 'government', 'headline', 'image', 'images', 'illustration', 'latest', 'media', 'modern', 'near', 'news', 'office', 'people', 'person', 'photo', 'photos', 'picture', 'press', 'public', 'report', 'screen', 'social', 'source', 'story', 'technology', 'today', 'update', 'updates', 'video', 'visual', 'with', 'world', 'www',
 ]);
 
+const BROAD_CONTEXT_TOKENS = new Set([
+  'ai', 'athlete', 'athletes', 'business', 'company', 'companies', 'court', 'courts',
+  'culture', 'economy', 'firms', 'goals', 'government', 'health', 'legal', 'major',
+  'market', 'markets', 'news', 'office', 'photo', 'policy', 'politics', 'pressure',
+  'promises', 'sports', 'story', 'surging', 'tech', 'technology', 'under', 'world',
+]);
+
 const GEO_PATTERNS = [
   ['united states', /\bunited states\b|\bu\.s\.a?\b|\busa\b/],
   ['washington', /\bwashington\b|\bwashington dc\b/],
@@ -96,11 +103,11 @@ function getLegacySlugText(asset) {
   return candidates.filter(Boolean).join(' ');
 }
 
-export function buildAssetSearchText(asset = {}) {
+export function buildAssetSearchText(asset = {}, { includeQueryHistory = true } = {}) {
   return [
     asset.altText,
     ...(asset.sectionHints || []),
-    ...(asset.queryHistory || []),
+    ...(includeQueryHistory ? (asset.queryHistory || []) : []),
     ...(asset.tags || []),
     ...(asset.topicHints || []),
     ...(asset.entityHints || []),
@@ -206,7 +213,9 @@ function computeBaseEditorialFitScore(asset = {}, hints = {}) {
 
 export function enrichAssetMetadata(asset = {}, options = {}) {
   const section = options.section || asset.sectionHint || asset.section || asset.sectionHints?.[0] || null;
-  const searchText = buildAssetSearchText(asset);
+  const searchTextWithoutQuery = buildAssetSearchText(asset, { includeQueryHistory: false });
+  const searchTextWithQuery = buildAssetSearchText(asset, { includeQueryHistory: true });
+  const searchText = searchTextWithoutQuery.trim().length >= 24 ? searchTextWithoutQuery : searchTextWithQuery;
   const geoHints = normalizeHintArray(asset.geoHints?.length ? asset.geoHints : inferGeoHintsFromText(searchText));
   const entityHints = normalizeHintArray(asset.entityHints?.length ? asset.entityHints : inferEntityHintsFromText(searchText, geoHints));
   const sceneType = asset.sceneType || inferSceneTypeFromText(searchText, section);
@@ -246,6 +255,14 @@ export function buildArticleSearchProfile({ title, excerpt, queries = [], sectio
   const excerptTokens = normalizeHintArray(tokenizeSearchText(excerpt).filter((token) => !TOKEN_STOPWORDS.has(token) && token.length >= 3)).slice(0, 10);
   const sourceTokens = normalizeHintArray((sourceHints || []).flatMap((value) => tokenizeSearchText(value)).filter((token) => !TOKEN_STOPWORDS.has(token) && token.length >= 3)).slice(0, 10);
   const primaryEntityHints = normalizeHintArray([...(entityHints || []), ...extractedEntities]).slice(0, 6);
+  const primaryEntityTokens = new Set(primaryEntityHints.flatMap((value) => tokenizeSearchText(value)).filter(Boolean));
+  const contextSupportTokens = normalizeHintArray(
+    [...sourceTokens, ...excerptTokens]
+      .filter((token) => token.length >= 4)
+      .filter((token) => !BROAD_CONTEXT_TOKENS.has(token))
+      .filter((token) => !primaryEntityTokens.has(token))
+  ).slice(0, 12);
+
   return {
     section,
     topicId,
@@ -258,20 +275,24 @@ export function buildArticleSearchProfile({ title, excerpt, queries = [], sectio
     sourceHints: normalizeHintArray(sourceHints).slice(0, 8),
     entityHints: normalizeHintArray([...(entityHints || []), ...extractedEntities]).slice(0, 10),
     primaryEntityHints,
+    contextSupportTokens,
   };
 }
 
 export function computeContextualEditorialFit(asset = {}, articleProfile = {}) {
   const enriched = applyEnrichmentToAsset(asset);
-  const assetTokens = new Set(tokenizeSearchText(buildAssetSearchText(enriched)).filter((token) => !TOKEN_STOPWORDS.has(token)));
+  const assetTokens = new Set(tokenizeSearchText(buildAssetSearchText(enriched, { includeQueryHistory: false })).filter((token) => !TOKEN_STOPWORDS.has(token)));
   const queryTokens = new Set((articleProfile.tokens || []).map((token) => String(token).toLowerCase()));
   const titleTokens = new Set((articleProfile.titleTokens || []).map((token) => String(token).toLowerCase()));
   const excerptTokens = new Set((articleProfile.excerptTokens || []).map((token) => String(token).toLowerCase()));
   const sourceTokens = new Set((articleProfile.sourceTokens || []).map((token) => String(token).toLowerCase()));
+  const contextSupportTokens = new Set((articleProfile.contextSupportTokens || []).map((token) => String(token).toLowerCase()));
   const overlap = Array.from(queryTokens).filter((token) => assetTokens.has(token)).length;
   const titleOverlap = Array.from(titleTokens).filter((token) => assetTokens.has(token)).length;
   const excerptOverlap = Array.from(excerptTokens).filter((token) => assetTokens.has(token)).length;
   const sourceOverlap = Array.from(sourceTokens).filter((token) => assetTokens.has(token)).length;
+  const contextOverlap = Array.from(contextSupportTokens).filter((token) => assetTokens.has(token)).length;
+  const contextRequired = contextSupportTokens.size >= 2;
 
   const assetEntities = new Set((enriched.entityHints || []).map((value) => String(value).toLowerCase()));
   const articleEntities = new Set((articleProfile.entityHints || []).map((value) => String(value).toLowerCase()));
@@ -293,6 +314,8 @@ export function computeContextualEditorialFit(asset = {}, articleProfile = {}) {
   const abstractPenalty = enriched.sceneType === 'abstract' ? 1 : 0;
   const genericPenalty = titleOverlap === 0 && primaryEntityOverlap === 0 && geoOverlap === 0 ? 1 : 0;
   const weakConfirmationPenalty = (titleOverlap + primaryEntityOverlap + geoOverlap + sourceOverlap) === 0 ? 1 : 0;
+  const contextMissPenalty = contextRequired && contextOverlap === 0 ? 1 : 0;
+  const weakContextPenalty = contextRequired && contextOverlap === 1 ? 1 : 0;
 
   const confirmationScore = clamp(
     Math.round(
@@ -301,6 +324,8 @@ export function computeContextualEditorialFit(asset = {}, articleProfile = {}) {
       + geoOverlap * 14
       + sourceOverlap * 10
       + excerptOverlap * 6
+      + contextOverlap * 12
+      - contextMissPenalty * 16
     ),
     0,
     100,
@@ -315,6 +340,7 @@ export function computeContextualEditorialFit(asset = {}, articleProfile = {}) {
       + geoOverlap * 12
       + sourceOverlap * 10
       + excerptOverlap * 5
+      + contextOverlap * 12
       + sectionMatch * 8
       + topicMatch * 10
       + sceneBonus * 5
@@ -323,6 +349,8 @@ export function computeContextualEditorialFit(asset = {}, articleProfile = {}) {
       - abstractPenalty * 10
       - genericPenalty * 16
       - weakConfirmationPenalty * 8
+      - contextMissPenalty * 24
+      - weakContextPenalty * 10
     ),
     0,
     100,
@@ -348,7 +376,8 @@ export function computeContextualEditorialFit(asset = {}, articleProfile = {}) {
   const confirmedStrong = finalScore >= 80
     && articleRelevanceScore >= 64
     && confirmationScore >= 38
-    && (titleOverlap >= 2 || primaryEntityOverlap >= 1 || geoOverlap >= 1 || sourceOverlap >= 2);
+    && (titleOverlap >= 2 || primaryEntityOverlap >= 1 || geoOverlap >= 1 || sourceOverlap >= 2 || contextOverlap >= 2)
+    && (!contextRequired || contextOverlap >= 1);
 
   const tier = confirmedStrong
     ? 'strong'
@@ -367,6 +396,8 @@ export function computeContextualEditorialFit(asset = {}, articleProfile = {}) {
     titleOverlap,
     excerptOverlap,
     sourceOverlap,
+    contextOverlap,
+    contextRequired,
     entityOverlap,
     primaryEntityOverlap,
     geoOverlap,

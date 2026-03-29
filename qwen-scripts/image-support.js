@@ -134,8 +134,8 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
     });
 
     bestOnlineDecision = chooseBetterDecision(bestOnlineDecision, decision);
-    if (bestOnlineDecision?.fit?.tier === 'strong') {
-      console.log(`[image] Early stop with strong online match query="${query}" provider=${bestOnlineDecision.candidate.provider} score=${bestOnlineDecision.fit.finalScore}`);
+    if (shouldEarlyStopOnlineSelection(bestOnlineDecision, imageQueryPlan)) {
+      console.log(`[image] Early stop with context-confirmed strong match query="${query}" provider=${bestOnlineDecision.candidate.provider} score=${bestOnlineDecision.fit.finalScore}`);
       break;
     }
   }
@@ -473,6 +473,7 @@ function selectProviderCandidate(candidates, registry, { query, section, topicId
     if (!scored || scored.score < 0) continue;
     if (!hasSemanticImageConfirmation(scored.fit) && scored.fit.tier !== 'strong') continue;
     if (scored.fit.tier === 'weak' && scored.fit.articleRelevanceScore < 18) continue;
+    if (scored.fit.contextRequired && Number(scored.fit.contextOverlap || 0) === 0 && Number(scored.fit.sourceOverlap || 0) < 2) continue;
 
     ranked.push({
       type: 'download_new',
@@ -492,8 +493,17 @@ function hasSemanticImageConfirmation(fit = {}) {
   return (fit.confirmationScore || 0) >= 20
     || (fit.titleOverlap || 0) >= 2
     || (fit.primaryEntityOverlap || 0) >= 1
+    || (fit.contextOverlap || 0) >= 1
     || (fit.sourceOverlap || 0) >= 2
     || (fit.geoOverlap || 0) >= 1;
+}
+
+function shouldEarlyStopOnlineSelection(decision, imageQueryPlan = null) {
+  if (!decision?.fit || decision.fit.tier !== 'strong') return false;
+  const contextPhrases = Array.isArray(imageQueryPlan?.contextPhrases) ? imageQueryPlan.contextPhrases : [];
+  const contextRequired = Boolean(decision.fit.contextRequired) || contextPhrases.length > 0;
+  if (!contextRequired) return true;
+  return Number(decision.fit.contextOverlap || 0) >= 1 || Number(decision.fit.sourceOverlap || 0) >= 2;
 }
 
 function downgradeUnconfirmedFit(fit = {}) {
