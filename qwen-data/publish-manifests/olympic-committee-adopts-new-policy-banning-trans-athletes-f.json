@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-29T22:02:47.254Z",
+  "event_id": "evt-2026-03-28-sports-general-global",
+  "cluster_id": "evt-2026-03-28-sports-general-global",
+  "article_type": "report",
+  "title": "Olympic Committee Adopts New Policy Banning Trans Athletes from Women’s Events",
+  "slug": "olympic-committee-adopts-new-policy-banning-trans-athletes-f",
+  "canonical_slug": "2026-03-29-olympic-committee-adopts-new-policy-banning-trans-athletes-f",
+  "expected_url": "/article/2026-03-29-olympic-committee-adopts-new-policy-banning-trans-athletes-f",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-29-olympic-committee-adopts-new-policy-banning-trans-athletes-f.mdx",
+  "published_at": "2026-03-29T22:02:47.252Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "events-tournaments",
+  "topic_label": "Events & Tournaments",
+  "subsection": "Events & Tournaments",
+  "topics": [
+    "Events & Tournaments"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/36442459/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/36442459/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/five-young-men-in-suits-posing-outdoors-36442459/",
+    "asset_key": "pexels:36442459",
+    "alt_text": "Illustration for Olympic Committee Adopts New Policy Banning Trans Athletes from Women’s Events",
+    "selection_mode": "provider_download_new:pexels:strong",
+    "query_used": "Trans Athletes photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Events & Tournaments",
+    "Olympics"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Alert: Olympic Committee Steps up to Protect Women, Bans Trans Athletes from Female Events",
+        "url": "https://www.thegatewaypundit.com/2026/03/alert-olympic-committee-steps-protect-women-bans-trans/",
+        "domain": "thegatewaypundit.com"
+      },
+      {
+        "title": "International Olympics Committee Bans Trans Athletes from Women's Events",
+        "url": "https://www.breitbart.com/sports/2026/03/26/international-olympics-committee-bans-trans-athletes-from-womens-events/",
+        "domain": "breitbart.com"
+      },
+      {
+        "title": "Olympic committee bans trans athletes from women's events",
+        "url": "https://www.npr.org/2026/03/26/nx-s1-5762579/ioc-bans-trans-women-events-genetic-testing",
+        "domain": "npr.org"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "events-tournaments",
+          "label": "Events & Tournaments",
+          "type": "topic"
+        },
+        {
+          "slug": "olympics",
+          "label": "Olympics",
+          "type": "theme"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "events-tournaments",
+        "topic_label": "Events & Tournaments",
+        "supported": true,
+        "matched_aliases": [
+          "events",
+          "olympic",
+          "olympics",
+          "ioc"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Trans Athletes photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "trans",
+        "athletes"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

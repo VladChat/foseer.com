@@ -1,49 +1,6 @@
 {
-  "updatedAt": "2026-03-29T03:53:34.767Z",
+  "updatedAt": "2026-03-29T22:02:23.306Z",
   "items": [
-    {
-      "identityKey": "event:tech:lawsuit accuses sportsbooks of using addictive technology espn",
-      "item": {
-        "id": "brave-sec-1774644830662-2",
-        "title": "Lawsuit accuses sportsbooks of using addictive technology - ESPN",
-        "summary": "A lawsuit against DraftKings and FanDuel accuses the sportsbooks of using addictive technology and features to keep customers betting.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "18 hours ago",
-        "sourceUrls": [
-          "https://espn.com/espn/betting/story/_/id/48312490/lawsuit-accuses-sportsbooks-using-addictive-technology"
-        ],
-        "freshness": 7,
-        "urgency": 6,
-        "discoveredAt": "2026-03-27T20:53:50.663Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:sports",
-        "sectionCandidates": [
-          "tech",
-          "sports"
-        ],
-        "topicCandidates": [
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "legal",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "lawsuit accuses sportsbooks of using addictive technology espn",
-        "canonicalUrl": "https://espn.com/espn/betting/story/_/id/48312490/lawsuit-accuses-sportsbooks-using-addictive-technology",
-        "discoveryScore": 16.4,
-        "eventKey": "tech:lawsuit accuses sportsbooks of using addictive technology espn"
-      },
-      "discoveredAt": "2026-03-27T20:53:50.663Z",
-      "lastSeenAt": "2026-03-27T20:54:01.388Z",
-      "expiresAt": "2026-03-29T20:54:01.387Z"
-    },
     {
       "identityKey": "event:sports:has mlb overtaken the nba as america s no 2 league the athletic",
       "item": {
@@ -408,52 +365,6 @@
       "expiresAt": "2026-03-30T01:30:31.315Z"
     },
     {
-      "identityKey": "event:world-geopolitics:global market headlines breaking stock market news reuters",
-      "item": {
-        "id": "google-sec-1774639856527-3",
-        "title": "Global Market Headlines | Breaking Stock Market News | Reuters",
-        "summary": "3 hours ago ... Reuters provides business, financial, national and international news to professionals via desktop terminals, the world's media organizations, industry events ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.reuters.com/markets/"
-        ],
-        "freshness": 4,
-        "urgency": 6,
-        "discoveredAt": "2026-03-27T19:30:56.527Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:business",
-        "sectionCandidates": [
-          "news",
-          "business",
-          "sports"
-        ],
-        "topicCandidates": [
-          "world-geopolitics",
-          "economy-markets",
-          "events-tournaments"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": "world-geopolitics",
-        "region": "europe",
-        "angle": "markets",
-        "genericPage": false,
-        "page_kind": "roundup",
-        "genericity_score": 6,
-        "article_likelihood": 0,
-        "normalizedTitle": "global market headlines breaking stock market news reuters",
-        "canonicalUrl": "https://www.reuters.com/markets/",
-        "discoveryScore": 13,
-        "eventKey": "world-geopolitics:global market headlines breaking stock market news reuters"
-      },
-      "discoveredAt": "2026-03-27T19:30:56.527Z",
-      "lastSeenAt": "2026-03-27T19:31:17.928Z",
-      "expiresAt": "2026-03-29T19:31:17.927Z"
-    },
-    {
       "identityKey": "event:news:sustainable business news latest eco headlines reuters",
       "item": {
         "id": "google-sec-1774756414740-1",
@@ -679,56 +590,6 @@
       "expiresAt": "2026-03-30T02:19:25.367Z"
     },
     {
-      "identityKey": "event:us-politics:robot joins melania trump at white house event to tout ai teachers",
-      "item": {
-        "id": "google-sec-1774644746863-2",
-        "title": "Robot joins Melania Trump at White House event to tout AI teachers",
-        "summary": "2 days ago ... ... Room to welcome dozens of first spouses from around the world to the technology-focused \"Fostering the Future Together\" summit. The Reuters Iran Briefing ...",
-        "whyItMatters": "",
-        "involvedParties": [
-          "white house",
-          "iran"
-        ],
-        "entities": [
-          "white house",
-          "iran"
-        ],
-        "when": "2026-03-25T19:33:02.308Z",
-        "sourceUrls": [
-          "https://www.reuters.com/world/us/robot-joins-melania-trump-white-house-event-tout-ai-teachers-2026-03-25/"
-        ],
-        "freshness": 3,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:52:26.863Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:tech",
-        "sectionCandidates": [
-          "tech",
-          "news"
-        ],
-        "topicCandidates": [
-          "us-politics",
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": "us-politics",
-        "region": "us",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "robot joins melania trump at white house event to tout ai teachers",
-        "canonicalUrl": "https://www.reuters.com/world/us/robot-joins-melania-trump-white-house-event-tout-ai-teachers-2026-03-25/",
-        "discoveryScore": 13.4,
-        "eventKey": "us-politics:robot joins melania trump at white house event to tout ai teachers"
-      },
-      "discoveredAt": "2026-03-27T20:52:26.863Z",
-      "lastSeenAt": "2026-03-27T20:52:50.819Z",
-      "expiresAt": "2026-03-29T20:52:50.818Z"
-    },
-    {
       "identityKey": "event:health:crinetics pharmaceuticals announces submission of marketing",
       "item": {
         "id": "google-sec-1774651071198-2",
@@ -821,55 +682,6 @@
       "expiresAt": "2026-03-29T22:38:17.824Z"
     },
     {
-      "identityKey": "event:creators-platforms:meta and youtube found liable on all charges in landmark social",
-      "item": {
-        "id": "google-sec-1774639664941-2",
-        "title": "Meta and YouTube found liable on all charges in landmark social ...",
-        "summary": "2 days ago ... Identified in court filings by her initials \"KGM,\" she alleged that using YouTube and Instagram from a young age led to addictive use of the platforms and ...",
-        "whyItMatters": "",
-        "involvedParties": [
-          "meta"
-        ],
-        "entities": [
-          "meta"
-        ],
-        "when": "",
-        "sourceUrls": [
-          "https://www.cbsnews.com/news/meta-youtube-social-media-addiction-lawsuit-verdict/"
-        ],
-        "freshness": 4,
-        "urgency": 6,
-        "discoveredAt": "2026-03-27T19:27:44.941Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "culture",
-          "news",
-          "tech"
-        ],
-        "topicCandidates": [
-          "creators-platforms",
-          "enterprise-platforms"
-        ],
-        "detectedSectionId": "culture",
-        "detectedTopicId": "creators-platforms",
-        "region": "global",
-        "angle": "legal",
-        "genericPage": false,
-        "page_kind": "official_release",
-        "genericity_score": 1,
-        "article_likelihood": 7,
-        "normalizedTitle": "meta and youtube found liable on all charges in landmark social",
-        "canonicalUrl": "https://www.cbsnews.com/news/meta-youtube-social-media-addiction-lawsuit-verdict/",
-        "discoveryScore": 15.8,
-        "eventKey": "creators-platforms:meta and youtube found liable on all charges in landmark social"
-      },
-      "discoveredAt": "2026-03-27T19:27:44.941Z",
-      "lastSeenAt": "2026-03-27T19:28:06.291Z",
-      "expiresAt": "2026-03-29T19:28:06.290Z"
-    },
-    {
       "identityKey": "event:health:imdx submits graftassuredx for fda review and reports q4 2025",
       "item": {
         "id": "google-sec-1774651071202-6",
@@ -920,99 +732,6 @@
       "expiresAt": "2026-03-29T22:38:17.824Z"
     },
     {
-      "identityKey": "event:ai-big-tech:transcript reuters",
-      "item": {
-        "id": "google-sec-1774644746864-6",
-        "title": "Transcript - Reuters",
-        "summary": "2 days ago ... Every few months for the past couple of years, leading artificial intelligence labs, OpenAI and Anthropic, have reliably announced some new funding ground or ...",
-        "whyItMatters": "",
-        "involvedParties": [
-          "openai"
-        ],
-        "entities": [
-          "openai"
-        ],
-        "when": "",
-        "sourceUrls": [
-          "https://www.reuters.com/info-pages/transcript/5625058c-234b-11f1-a365-47e83529535a/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:52:26.864Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": "ai-big-tech",
-        "region": "europe",
-        "angle": "announcement",
-        "genericPage": false,
-        "page_kind": "official_release",
-        "genericity_score": 1,
-        "article_likelihood": 7,
-        "normalizedTitle": "transcript reuters",
-        "canonicalUrl": "https://www.reuters.com/info-pages/transcript/5625058c-234b-11f1-a365-47e83529535a/",
-        "discoveryScore": 13.8,
-        "eventKey": "ai-big-tech:transcript reuters"
-      },
-      "discoveredAt": "2026-03-27T20:52:26.864Z",
-      "lastSeenAt": "2026-03-27T20:52:50.819Z",
-      "expiresAt": "2026-03-29T20:52:50.818Z"
-    },
-    {
-      "identityKey": "event:mental-health:adhd medication may reduce later risk of psychosis study finds",
-      "item": {
-        "id": "google-sec-1774639664941-1",
-        "title": "ADHD medication may reduce later risk of psychosis, study finds",
-        "summary": "2 days ago ... Prior research had suggested a possible link between stimulants prescribed for ADHD and psychotic disorders such as bipolar. 0 seconds of 0 seconds.",
-        "whyItMatters": "",
-        "involvedParties": [
-          "sec"
-        ],
-        "entities": [
-          "sec"
-        ],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nbcnews.com/health/mental-health/adhd-methylphenidate-ritalin-children-reduces-risk-psychosis-study-rcna264987"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T19:27:44.941Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "health",
-          "news"
-        ],
-        "topicCandidates": [
-          "mental-health"
-        ],
-        "detectedSectionId": "health",
-        "detectedTopicId": "mental-health",
-        "region": "global",
-        "angle": "research",
-        "genericPage": false,
-        "page_kind": "official_release",
-        "genericity_score": 1,
-        "article_likelihood": 7,
-        "normalizedTitle": "adhd medication may reduce later risk of psychosis study finds",
-        "canonicalUrl": "https://www.nbcnews.com/health/mental-health/adhd-methylphenidate-ritalin-children-reduces-risk-psychosis-study-rcna264987",
-        "discoveryScore": 13.8,
-        "eventKey": "mental-health:adhd medication may reduce later risk of psychosis study finds"
-      },
-      "discoveredAt": "2026-03-27T19:27:44.941Z",
-      "lastSeenAt": "2026-03-27T19:28:06.291Z",
-      "expiresAt": "2026-03-29T19:28:06.290Z"
-    },
-    {
       "identityKey": "event:news:protestors rally against hochul s proposed changes to climate law",
       "item": {
         "id": "brave-sec-1774670080517-3",
@@ -1057,58 +776,9 @@
       "expiresAt": "2026-03-30T03:55:06.417Z"
     },
     {
-      "identityKey": "event:news:lifeward successfully closes on strategic partnership with oramed",
-      "item": {
-        "id": "google-sec-1774639664942-4",
-        "title": "Lifeward Successfully Closes on Strategic Partnership with Oramed",
-        "summary": "2 days ago ... and YOKNEAM ILLIT, Israel, March 25, 2026 (GLOBE NEWSWIRE) -- Lifeward Ltd. (Nasdaq: LFWD) (“Lifeward” or the “Company”), a global leader in innovative medical ...",
-        "whyItMatters": "",
-        "involvedParties": [
-          "israel"
-        ],
-        "entities": [
-          "israel"
-        ],
-        "when": "",
-        "sourceUrls": [
-          "https://www.theglobeandmail.com/investing/markets/stocks/ORMP-Q/pressreleases/36561811/lifeward-successfully-closes-on-strategic-partnership-with-oramed/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T19:27:44.942Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "news",
-          "business",
-          "tech"
-        ],
-        "topicCandidates": [
-          "economy-markets",
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "israel",
-        "angle": "conflict",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "lifeward successfully closes on strategic partnership with oramed",
-        "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/ormp-q/pressreleases/36561811/lifeward-successfully-closes-on-strategic-partnership-with-oramed/",
-        "discoveryScore": 13.4,
-        "eventKey": "news:lifeward successfully closes on strategic partnership with oramed"
-      },
-      "discoveredAt": "2026-03-27T19:27:44.942Z",
-      "lastSeenAt": "2026-03-27T19:28:06.292Z",
-      "expiresAt": "2026-03-29T19:28:06.290Z"
-    },
-    {
       "identityKey": "event:business:economy wsj com",
       "item": {
-        "id": "google-sec-1774739301003-6",
+        "id": "google-sec-1774821743294-6",
         "title": "Economy - WSJ.com",
         "summary": "2 days ago ... The latest news on the economy, jobs market, U.S. trade and housing, including the latest news and analysis on the Federal Reserve and Central Banking.",
         "whyItMatters": "",
@@ -1120,7 +790,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-28T23:08:21.007Z",
+        "discoveredAt": "2026-03-29T22:02:23.296Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:tech",
@@ -1146,181 +816,9 @@
         "discoveryScore": 12.8,
         "eventKey": "business:economy wsj com"
       },
-      "discoveredAt": "2026-03-28T23:08:21.007Z",
-      "lastSeenAt": "2026-03-28T23:09:41.265Z",
-      "expiresAt": "2026-03-30T23:09:41.264Z"
-    },
-    {
-      "identityKey": "event:news:tech news today s latest technology news reuters",
-      "item": {
-        "id": "google-sec-1774644746861-0",
-        "title": "Tech News | Today's Latest Technology News - Reuters",
-        "summary": "7 hours ago ... Find latest technology news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.reuters.com/technology/"
-        ],
-        "freshness": 4,
-        "urgency": 7,
-        "discoveredAt": "2026-03-27T20:52:26.862Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:tech",
-        "sectionCandidates": [
-          "news",
-          "tech"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "europe",
-        "angle": "general",
-        "genericPage": true,
-        "page_kind": "section",
-        "genericity_score": 9,
-        "article_likelihood": 0,
-        "normalizedTitle": "tech news today s latest technology news reuters",
-        "canonicalUrl": "https://www.reuters.com/technology/",
-        "discoveryScore": 10,
-        "eventKey": "news:tech news today s latest technology news reuters"
-      },
-      "discoveredAt": "2026-03-27T20:52:26.862Z",
-      "lastSeenAt": "2026-03-27T20:52:50.820Z",
-      "expiresAt": "2026-03-29T20:52:50.818Z"
-    },
-    {
-      "identityKey": "event:pharma-fda:us fda approves denali s genetic disorder therapy for children",
-      "item": {
-        "id": "google-sec-1774644830677-1",
-        "title": "US FDA approves Denali's genetic disorder therapy for children",
-        "summary": "2 days ago ... The U.S. Food and ​Drug Administration has approved Denali Therapeutics' therapy to treat children with ‌a rare genetic disorder, marking the first ...",
-        "whyItMatters": "",
-        "involvedParties": [
-          "fda"
-        ],
-        "entities": [
-          "fda"
-        ],
-        "when": "2026-03-25T15:42:34.945Z",
-        "sourceUrls": [
-          "https://www.reuters.com/business/healthcare-pharmaceuticals/us-fda-approves-denalis-genetic-disorder-therapy-2026-03-25/"
-        ],
-        "freshness": 3,
-        "urgency": 6,
-        "discoveredAt": "2026-03-27T20:53:50.677Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "health",
-          "business"
-        ],
-        "topicCandidates": [
-          "pharma-fda"
-        ],
-        "detectedSectionId": "health",
-        "detectedTopicId": "pharma-fda",
-        "region": "us",
-        "angle": "regulation",
-        "genericPage": false,
-        "page_kind": "official_release",
-        "genericity_score": 1,
-        "article_likelihood": 7,
-        "normalizedTitle": "us fda approves denali s genetic disorder therapy for children",
-        "canonicalUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-fda-approves-denalis-genetic-disorder-therapy-2026-03-25/",
-        "discoveryScore": 14.8,
-        "eventKey": "pharma-fda:us fda approves denali s genetic disorder therapy for children"
-      },
-      "discoveredAt": "2026-03-27T20:53:50.677Z",
-      "lastSeenAt": "2026-03-27T20:54:01.389Z",
-      "expiresAt": "2026-03-29T20:54:01.387Z"
-    },
-    {
-      "identityKey": "event:business:pro rata premium first look axios",
-      "item": {
-        "id": "google-sec-1774644830679-6",
-        "title": "Pro Rata Premium: First Look - Axios",
-        "summary": "2 days ago ... Illustration of Benjamin Franklin in a car's rear view mirror, with a dollar-symbol. Illustration: Shoshana Gordon/Axios. Exit Content Preview. Venture Capital.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "2026-03-25T18:54:21Z",
-        "sourceUrls": [
-          "https://www.axios.com/pro/all-deals/2026/03/25/pro-rata-premium-first-look"
-        ],
-        "freshness": 3,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:53:50.679Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "business",
-          "health"
-        ],
-        "topicCandidates": [
-          "companies-deals"
-        ],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "pro rata premium first look axios",
-        "canonicalUrl": "https://www.axios.com/pro/all-deals/2026/03/25/pro-rata-premium-first-look",
-        "discoveryScore": 13.6,
-        "eventKey": "business:pro rata premium first look axios"
-      },
-      "discoveredAt": "2026-03-27T20:53:50.679Z",
-      "lastSeenAt": "2026-03-27T20:54:01.389Z",
-      "expiresAt": "2026-03-29T20:54:01.387Z"
-    },
-    {
-      "identityKey": "event:news:northwestern hires former uconn star carla berube as women s",
-      "item": {
-        "id": "google-sec-1774639856531-0",
-        "title": "Northwestern hires former UConn star Carla Berube as women's ...",
-        "summary": "2 days ago ... Berube, who helped UConn win its first NCAA championship in 1995 under Hall of Fame coach Geno Auriemma, led Princeton to a 147-29 record and five NCAA ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.cbsnews.com/chicago/news/northwestern-carla-berube/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T19:30:56.531Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:sports",
-        "sectionCandidates": [
-          "news",
-          "sports"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "northwestern hires former uconn star carla berube as women s",
-        "canonicalUrl": "https://www.cbsnews.com/chicago/news/northwestern-carla-berube/",
-        "discoveryScore": 13.4,
-        "eventKey": "news:northwestern hires former uconn star carla berube as women s"
-      },
-      "discoveredAt": "2026-03-27T19:30:56.531Z",
-      "lastSeenAt": "2026-03-27T19:31:17.928Z",
-      "expiresAt": "2026-03-29T19:31:17.927Z"
+      "discoveredAt": "2026-03-29T22:02:23.296Z",
+      "lastSeenAt": "2026-03-29T22:02:23.306Z",
+      "expiresAt": "2026-03-31T22:02:23.305Z"
     },
     {
       "identityKey": "event:business:company announcement ft com markets data financial times",
@@ -1410,46 +908,6 @@
       "discoveredAt": "2026-03-28T01:30:08.839Z",
       "lastSeenAt": "2026-03-28T01:30:31.316Z",
       "expiresAt": "2026-03-30T01:30:31.315Z"
-    },
-    {
-      "identityKey": "event:sports:usatf granted extra world championship spots after half",
-      "item": {
-        "id": "google-sec-1774644948450-0",
-        "title": "USATF granted extra world championship spots after half ...",
-        "summary": "2 days ago ... ... Championships, World Athletics announced Wednesday. The “one-off” exception comes after three women were led off course at the U.S. Half Marathon ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nytimes.com/athletic/7146780/2026/03/25/usa-half-marathon-runners-led-astray-world-championships-eligibility/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:55:48.451Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:sports",
-        "sectionCandidates": [
-          "sports"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "sports",
-        "detectedTopicId": null,
-        "region": "us",
-        "angle": "announcement",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "usatf granted extra world championship spots after half",
-        "canonicalUrl": "https://www.nytimes.com/athletic/7146780/2026/03/25/usa-half-marathon-runners-led-astray-world-championships-eligibility/",
-        "discoveryScore": 13.6,
-        "eventKey": "sports:usatf granted extra world championship spots after half"
-      },
-      "discoveredAt": "2026-03-27T20:55:48.451Z",
-      "lastSeenAt": "2026-03-27T20:56:09.836Z",
-      "expiresAt": "2026-03-29T20:56:09.835Z"
     },
     {
       "identityKey": "event:culture:the internet has seen me at my best and my worst meet jojo",
@@ -1582,51 +1040,6 @@
       "discoveredAt": "2026-03-29T01:02:38.333Z",
       "lastSeenAt": "2026-03-29T01:03:14.690Z",
       "expiresAt": "2026-03-31T01:03:14.689Z"
-    },
-    {
-      "identityKey": "event:business:eldorado gold enters into project alliance with g mining services",
-      "item": {
-        "id": "google-sec-1774644746869-5",
-        "title": "Eldorado Gold Enters into Project Alliance with G Mining Services",
-        "summary": "2 days ago ... Eldorado's common shares trade on the Toronto Stock Exchange (TSX: ELD) and the New York Stock Exchange (NYSE: EGO). Contact. Investor Relations Lynette Gould, ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.theglobeandmail.com/investing/markets/stocks/EGO-N/pressreleases/36562103/eldorado-gold-enters-into-project-alliance-with-g-mining-services/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:52:26.869Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:news",
-        "sectionCandidates": [
-          "business",
-          "tech",
-          "news"
-        ],
-        "topicCandidates": [
-          "economy-markets",
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "eldorado gold enters into project alliance with g mining services",
-        "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/ego-n/pressreleases/36562103/eldorado-gold-enters-into-project-alliance-with-g-mining-services/",
-        "discoveryScore": 13.4,
-        "eventKey": "business:eldorado gold enters into project alliance with g mining services"
-      },
-      "discoveredAt": "2026-03-27T20:52:26.869Z",
-      "lastSeenAt": "2026-03-27T20:52:50.819Z",
-      "expiresAt": "2026-03-29T20:52:50.818Z"
     },
     {
       "identityKey": "event:business:2026 donald j trump executive orders federal register",
@@ -1908,148 +1321,6 @@
       "expiresAt": "2026-03-30T03:55:06.417Z"
     },
     {
-      "identityKey": "event:crypto-bitcoin:breaking news fannie mae to accept crypto backed mortgages",
-      "item": {
-        "id": "brave-sec-1774644948442-4",
-        "title": "BREAKING News: Fannie Mae to Accept Crypto-Backed Mortgages",
-        "summary": "Fannie Mae moves into digital assets. Homebuyers can now use Bitcoin as collateral for mortgages through a landmark partnership with Better and Coinbase.",
-        "whyItMatters": "",
-        "involvedParties": [
-          "nba"
-        ],
-        "entities": [
-          "nba"
-        ],
-        "when": "1 day ago",
-        "sourceUrls": [
-          "https://cryptoticker.io/en/fannie-mae-crypto-backed-mortgages-bitcoin-collateral"
-        ],
-        "freshness": 6,
-        "urgency": 6,
-        "discoveredAt": "2026-03-27T20:55:48.442Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:business",
-        "sectionCandidates": [
-          "business",
-          "news"
-        ],
-        "topicCandidates": [
-          "crypto-bitcoin"
-        ],
-        "detectedSectionId": "business",
-        "detectedTopicId": "crypto-bitcoin",
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 2,
-        "article_likelihood": 8,
-        "normalizedTitle": "breaking news fannie mae to accept crypto backed mortgages",
-        "canonicalUrl": "https://cryptoticker.io/en/fannie-mae-crypto-backed-mortgages-bitcoin-collateral",
-        "discoveryScore": 16.4,
-        "eventKey": "crypto-bitcoin:breaking news fannie mae to accept crypto backed mortgages"
-      },
-      "discoveredAt": "2026-03-27T20:55:48.442Z",
-      "lastSeenAt": "2026-03-27T20:56:09.836Z",
-      "expiresAt": "2026-03-29T20:56:09.835Z"
-    },
-    {
-      "identityKey": "event:tech:supreme court sides with cox communications rules against record labels in 1 bil",
-      "item": {
-        "id": "brave-sec-1774644948434-2",
-        "title": "Supreme Court Sides With Cox Communications, Rules Against Record Labels In $1 Billion Piracy Case",
-        "summary": "Supreme Court unanimously sides with Cox Communications in $1 billion piracy case that was brought by major record labels.",
-        "whyItMatters": "",
-        "involvedParties": [
-          "supreme court"
-        ],
-        "entities": [
-          "supreme court"
-        ],
-        "when": "18 hours ago",
-        "sourceUrls": [
-          "https://hiphopwired.com/3049574/cox-communications-supreme-court-victory-details"
-        ],
-        "freshness": 7,
-        "urgency": 6,
-        "discoveredAt": "2026-03-27T20:55:48.434Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:culture",
-        "sectionCandidates": [
-          "tech",
-          "culture"
-        ],
-        "topicCandidates": [
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "legal",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "supreme court sides with cox communications rules against record labels in 1 billion piracy case",
-        "canonicalUrl": "https://hiphopwired.com/3049574/cox-communications-supreme-court-victory-details",
-        "discoveryScore": 16.4,
-        "eventKey": "tech:supreme court sides with cox communications rules against record labels in 1 bil"
-      },
-      "discoveredAt": "2026-03-27T20:55:48.434Z",
-      "lastSeenAt": "2026-03-27T20:56:09.835Z",
-      "expiresAt": "2026-03-29T20:56:09.835Z"
-    },
-    {
-      "identityKey": "event:us-politics:the supreme court showed it is scared its going to break the internet in cox v s",
-      "item": {
-        "id": "brave-sec-1774644948434-3",
-        "title": "The Supreme Court showed it is scared its going to break the internet in Cox v. Sony",
-        "summary": "When news breaks, you need to understand what actually matters — and what to do about it. At Vox, our mission to help you make sense of the world has never been more vital. But we can’t do it on our own · We rely on readers like you to fund our journalism.",
-        "whyItMatters": "",
-        "involvedParties": [
-          "supreme court"
-        ],
-        "entities": [
-          "supreme court"
-        ],
-        "when": "1 day ago",
-        "sourceUrls": [
-          "https://vox.com/politics/483934/supreme-court-cox-sony-scared-break-internet"
-        ],
-        "freshness": 6,
-        "urgency": 6,
-        "discoveredAt": "2026-03-27T20:55:48.435Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:culture",
-        "sectionCandidates": [
-          "news",
-          "culture"
-        ],
-        "topicCandidates": [
-          "us-politics",
-          "world-geopolitics"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": "us-politics",
-        "region": "global",
-        "angle": "legal",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "the supreme court showed it is scared its going to break the internet in cox v sony",
-        "canonicalUrl": "https://vox.com/politics/483934/supreme-court-cox-sony-scared-break-internet",
-        "discoveryScore": 16.4,
-        "eventKey": "us-politics:the supreme court showed it is scared its going to break the internet in cox v s"
-      },
-      "discoveredAt": "2026-03-27T20:55:48.435Z",
-      "lastSeenAt": "2026-03-27T20:56:09.836Z",
-      "expiresAt": "2026-03-29T20:56:09.835Z"
-    },
-    {
       "identityKey": "event:tech:tether hires kpmg as auditor ahead of us expansion",
       "item": {
         "id": "google-sec-1774661403164-8",
@@ -2095,55 +1366,6 @@
       "discoveredAt": "2026-03-28T01:30:03.165Z",
       "lastSeenAt": "2026-03-28T01:30:31.316Z",
       "expiresAt": "2026-03-30T01:30:31.315Z"
-    },
-    {
-      "identityKey": "event:news:supreme court backs cox in fight over pirated music",
-      "item": {
-        "id": "brave-sec-1774644948429-0",
-        "title": "Supreme Court Backs Cox in Fight Over Pirated Music",
-        "summary": "The U.S. Supreme Court ruled on Wednesday Cox Communications cannot be held liable for piracy by its internet service subscribers of songs owned by Sony",
-        "whyItMatters": "",
-        "involvedParties": [
-          "supreme court"
-        ],
-        "entities": [
-          "supreme court"
-        ],
-        "when": "1 day ago",
-        "sourceUrls": [
-          "https://claimsjournal.com/news/national/2026/03/26/336501.htm"
-        ],
-        "freshness": 6,
-        "urgency": 6,
-        "discoveredAt": "2026-03-27T20:55:48.432Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:culture",
-        "sectionCandidates": [
-          "news",
-          "tech",
-          "culture"
-        ],
-        "topicCandidates": [
-          "ai-big-tech",
-          "music-celebrities"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "us",
-        "angle": "legal",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 9,
-        "normalizedTitle": "supreme court backs cox in fight over pirated music",
-        "canonicalUrl": "https://claimsjournal.com/news/national/2026/03/26/336501.htm",
-        "discoveryScore": 16,
-        "eventKey": "news:supreme court backs cox in fight over pirated music"
-      },
-      "discoveredAt": "2026-03-27T20:55:48.432Z",
-      "lastSeenAt": "2026-03-27T20:56:09.836Z",
-      "expiresAt": "2026-03-29T20:56:09.835Z"
     },
     {
       "identityKey": "event:transfers-business:federal judge dismisses lawsuit claiming fanatics pro sports leagues monopolized",
@@ -2337,54 +1559,6 @@
       "expiresAt": "2026-03-30T03:55:06.417Z"
     },
     {
-      "identityKey": "event:news:supreme court sides with cox communications in a copyright fight with record lab",
-      "item": {
-        "id": "brave-sec-1774644948435-4",
-        "title": "Supreme Court sides with Cox Communications in a copyright fight with record labels over downloads | National News | jou",
-        "summary": "The Supreme Court has sided with internet service provider Cox Communications in its copyright fight with record labels over illegal music downloads by Cox customers.",
-        "whyItMatters": "",
-        "involvedParties": [
-          "supreme court"
-        ],
-        "entities": [
-          "supreme court"
-        ],
-        "when": "2 days ago",
-        "sourceUrls": [
-          "https://journalgazette.net/news/national/supreme-court-sides-with-cox-communications-in-a-copyright-fight-with-record-labels-over-downloads/article_96d05d1a-c1a7-5f52-b4c1-a4e7f3e9f294.html"
-        ],
-        "freshness": 5,
-        "urgency": 6,
-        "discoveredAt": "2026-03-27T20:55:48.436Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:culture",
-        "sectionCandidates": [
-          "news",
-          "culture"
-        ],
-        "topicCandidates": [
-          "law-crime",
-          "music-celebrities"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "legal",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "supreme court sides with cox communications in a copyright fight with record labels over downloads national news jou",
-        "canonicalUrl": "https://journalgazette.net/news/national/supreme-court-sides-with-cox-communications-in-a-copyright-fight-with-record-labels-over-downloads/article_96d05d1a-c1a7-5f52-b4c1-a4e7f3e9f294.html",
-        "discoveryScore": 14.4,
-        "eventKey": "news:supreme court sides with cox communications in a copyright fight with record lab"
-      },
-      "discoveredAt": "2026-03-27T20:55:48.436Z",
-      "lastSeenAt": "2026-03-27T20:56:09.836Z",
-      "expiresAt": "2026-03-29T20:56:09.835Z"
-    },
-    {
       "identityKey": "event:news:ukhotviews latest tech news views",
       "item": {
         "id": "brave-sec-1774756414664-1",
@@ -2517,88 +1691,6 @@
       "discoveredAt": "2026-03-28T03:54:40.527Z",
       "lastSeenAt": "2026-03-28T03:55:06.419Z",
       "expiresAt": "2026-03-30T03:55:06.417Z"
-    },
-    {
-      "identityKey": "event:health:notable updates in medication therapy management in 2025 pharmacy times",
-      "item": {
-        "id": "brave-sec-1774644948447-4",
-        "title": "Notable Updates in Medication Therapy Management in 2025 | Pharmacy Times",
-        "summary": "Pharmacists can educate patients about FluMist for at-home administration and opioid labeling changes.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "1 day ago",
-        "sourceUrls": [
-          "https://pharmacytimes.com/view/notable-updates-in-medication-therapy-management-in-2025"
-        ],
-        "freshness": 6,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:55:48.448Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:health",
-        "sectionCandidates": [
-          "health"
-        ],
-        "topicCandidates": [
-          "pharma-fda"
-        ],
-        "detectedSectionId": "health",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "notable updates in medication therapy management in 2025 pharmacy times",
-        "canonicalUrl": "https://pharmacytimes.com/view/notable-updates-in-medication-therapy-management-in-2025",
-        "discoveryScore": 13.4,
-        "eventKey": "health:notable updates in medication therapy management in 2025 pharmacy times"
-      },
-      "discoveredAt": "2026-03-27T20:55:48.448Z",
-      "lastSeenAt": "2026-03-27T20:56:09.836Z",
-      "expiresAt": "2026-03-29T20:56:09.835Z"
-    },
-    {
-      "identityKey": "event:sports:what s next for teams eliminated from sweet 16 recruits transfer portal more esp",
-      "item": {
-        "id": "brave-sec-1774644830663-4",
-        "title": "What's next for teams eliminated from Sweet 16: Recruits, transfer portal, more - ESPN",
-        "summary": "Their NCAA tournament runs ended early and now it's all about next season. Here's how it's taking shape.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "9 hours ago",
-        "sourceUrls": [
-          "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026"
-        ],
-        "freshness": 7,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:53:50.663Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:sports",
-        "sectionCandidates": [
-          "sports"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "sports",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "transfers",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "what s next for teams eliminated from sweet 16 recruits transfer portal more espn",
-        "canonicalUrl": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
-        "discoveryScore": 13.4,
-        "eventKey": "sports:what s next for teams eliminated from sweet 16 recruits transfer portal more esp"
-      },
-      "discoveredAt": "2026-03-27T20:53:50.663Z",
-      "lastSeenAt": "2026-03-27T20:54:01.389Z",
-      "expiresAt": "2026-03-29T20:54:01.387Z"
     },
     {
       "identityKey": "event:tech:reality tv is now a cultural powerhouse there s no stopping it los angeles times",
@@ -2735,49 +1827,6 @@
       "expiresAt": "2026-03-30T01:30:31.315Z"
     },
     {
-      "identityKey": "event:tech:why data infrastructure will decide which ai strategies succeed in 2026",
-      "item": {
-        "id": "brave-sec-1774644948445-4",
-        "title": "Why data infrastructure will decide which AI strategies succeed in 2026",
-        "summary": "Data quality, resilience and sovereignty are emerging as the make-or-break factors for enterprises hoping to turn AI ambition into lasting advantage.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "2 days ago",
-        "sourceUrls": [
-          "https://itbrief.com.au/story/why-data-infrastructure-will-decide-which-ai-strategies-succeed-in-2026"
-        ],
-        "freshness": 5,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:55:48.445Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [
-          "ai-big-tech",
-          "enterprise-platforms"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "why data infrastructure will decide which ai strategies succeed in 2026",
-        "canonicalUrl": "https://itbrief.com.au/story/why-data-infrastructure-will-decide-which-ai-strategies-succeed-in-2026",
-        "discoveryScore": 12.4,
-        "eventKey": "tech:why data infrastructure will decide which ai strategies succeed in 2026"
-      },
-      "discoveredAt": "2026-03-27T20:55:48.445Z",
-      "lastSeenAt": "2026-03-27T20:56:09.836Z",
-      "expiresAt": "2026-03-29T20:56:09.835Z"
-    },
-    {
       "identityKey": "event:us-politics:bloomberg green",
       "item": {
         "id": "google-sec-1774661403163-5",
@@ -2871,7 +1920,7 @@
     {
       "identityKey": "event:tech:5 things to know before the market opens friday cnbc",
       "item": {
-        "id": "google-sec-1774739300998-4",
+        "id": "google-sec-1774821743289-4",
         "title": "5 things to know before the market opens Friday - CNBC",
         "summary": "1 day ago ... While the Dow Jones Industrial Average is on track to break a weekly losing streak, the S&P 500 is set to record its longest weekly negative run since 2022.",
         "whyItMatters": "",
@@ -2881,9 +1930,9 @@
         "sourceUrls": [
           "https://www.cnbc.com/2026/03/27/5-things-to-know-before-the-market-opens.html"
         ],
-        "freshness": 5,
+        "freshness": 3,
         "urgency": 4,
-        "discoveredAt": "2026-03-28T23:08:21.001Z",
+        "discoveredAt": "2026-03-29T22:02:23.292Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:tech",
@@ -2901,58 +1950,12 @@
         "article_likelihood": 10,
         "normalizedTitle": "5 things to know before the market opens friday cnbc",
         "canonicalUrl": "https://www.cnbc.com/2026/03/27/5-things-to-know-before-the-market-opens.html",
-        "discoveryScore": 14.6,
+        "discoveryScore": 12.6,
         "eventKey": "tech:5 things to know before the market opens friday cnbc"
       },
-      "discoveredAt": "2026-03-28T23:08:21.001Z",
-      "lastSeenAt": "2026-03-28T23:09:41.265Z",
-      "expiresAt": "2026-03-30T23:09:41.264Z"
-    },
-    {
-      "identityKey": "event:ai-big-tech:china boycotts top ai conference after ban on papers from reuters",
-      "item": {
-        "id": "google-sec-1774644746862-1",
-        "title": "China boycotts top AI conference after ban on papers from ... - Reuters",
-        "summary": "7 hours ago ... China's largest federation for science and technology professionals on Friday announced a boycott of a top artificial intelligence conference after the ...",
-        "whyItMatters": "",
-        "involvedParties": [
-          "china"
-        ],
-        "entities": [
-          "china"
-        ],
-        "when": "2026-03-27T06:58:36.09Z",
-        "sourceUrls": [
-          "https://www.reuters.com/world/china/china-boycotts-top-ai-conference-after-ban-papers-us-sanctioned-entities-2026-03-27/"
-        ],
-        "freshness": 7,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:52:26.863Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": "ai-big-tech",
-        "region": "europe",
-        "angle": "announcement",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "china boycotts top ai conference after ban on papers from reuters",
-        "canonicalUrl": "https://www.reuters.com/world/china/china-boycotts-top-ai-conference-after-ban-papers-us-sanctioned-entities-2026-03-27/",
-        "discoveryScore": 17.4,
-        "eventKey": "ai-big-tech:china boycotts top ai conference after ban on papers from reuters"
-      },
-      "discoveredAt": "2026-03-27T20:52:26.863Z",
-      "lastSeenAt": "2026-03-27T20:52:50.819Z",
-      "expiresAt": "2026-03-29T20:52:50.818Z"
+      "discoveredAt": "2026-03-29T22:02:23.292Z",
+      "lastSeenAt": "2026-03-29T22:02:23.306Z",
+      "expiresAt": "2026-03-31T22:02:23.305Z"
     },
     {
       "identityKey": "event:business:xortx announces change of effective date of share consolidation",
@@ -3049,7 +2052,7 @@
     {
       "identityKey": "event:news:ofcom to investigate complaints of climate change denial watts up with that",
       "item": {
-        "id": "brave-sec-1774756414724-0",
+        "id": "brave-sec-1774821743233-0",
         "title": "Ofcom to investigate complaints of climate change denial – Watts Up With That?",
         "summary": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
         "whyItMatters": "",
@@ -3061,7 +2064,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-29T03:53:34.727Z",
+        "discoveredAt": "2026-03-29T22:02:23.254Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -3084,9 +2087,9 @@
         "discoveryScore": 13,
         "eventKey": "news:ofcom to investigate complaints of climate change denial watts up with that"
       },
-      "discoveredAt": "2026-03-29T03:53:34.727Z",
-      "lastSeenAt": "2026-03-29T03:53:34.767Z",
-      "expiresAt": "2026-03-31T03:53:34.766Z"
+      "discoveredAt": "2026-03-29T22:02:23.254Z",
+      "lastSeenAt": "2026-03-29T22:02:23.306Z",
+      "expiresAt": "2026-03-31T22:02:23.305Z"
     },
     {
       "identityKey": "event:news:no associated press this southwest heatwave was not virtually impossible without",
@@ -3131,48 +2134,6 @@
       "discoveredAt": "2026-03-28T03:54:40.521Z",
       "lastSeenAt": "2026-03-28T03:55:06.418Z",
       "expiresAt": "2026-03-30T03:55:06.417Z"
-    },
-    {
-      "identityKey": "event:ai-big-tech:artificial intelligence the new york times",
-      "item": {
-        "id": "google-sec-1774644746863-3",
-        "title": "Artificial Intelligence - The New York Times",
-        "summary": "17 hours ago ... Axiom Math's founder and chief executive, Carina Hong, right, and the chief technology. CreditCayce Clifford for The New York Times. Tech Fix. A.I. Chatbots ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nytimes.com/spotlight/artificial-intelligence"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:52:26.863Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": "ai-big-tech",
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "artificial intelligence the new york times",
-        "canonicalUrl": "https://www.nytimes.com/spotlight/artificial-intelligence",
-        "discoveryScore": 14.4,
-        "eventKey": "ai-big-tech:artificial intelligence the new york times"
-      },
-      "discoveredAt": "2026-03-27T20:52:26.863Z",
-      "lastSeenAt": "2026-03-27T20:52:50.819Z",
-      "expiresAt": "2026-03-29T20:52:50.818Z"
     },
     {
       "identityKey": "event:medical-research:quantum biopharma s 2025 audited year end financial results",
@@ -3309,87 +2270,6 @@
       "expiresAt": "2026-03-30T02:54:57.356Z"
     },
     {
-      "identityKey": "event:news:weight loss drugs trending news latest updates analysis",
-      "item": {
-        "id": "google-sec-1774644830679-7",
-        "title": "Weight-Loss Drugs: Trending News, Latest Updates, Analysis",
-        "summary": "9 hours ago ... See the latest on Weight-Loss Drugs. From breaking news to in-depth reporting, Bloomberg tracks the full story in real time.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://bloomberg.com/latest/weight-loss-drugs"
-        ],
-        "freshness": 4,
-        "urgency": 6,
-        "discoveredAt": "2026-03-27T20:53:50.679Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "news",
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "live",
-        "genericity_score": 6,
-        "article_likelihood": 0,
-        "normalizedTitle": "weight loss drugs trending news latest updates analysis",
-        "canonicalUrl": "https://bloomberg.com/latest/weight-loss-drugs",
-        "discoveryScore": 12,
-        "eventKey": "news:weight loss drugs trending news latest updates analysis"
-      },
-      "discoveredAt": "2026-03-27T20:53:50.679Z",
-      "lastSeenAt": "2026-03-27T20:54:01.389Z",
-      "expiresAt": "2026-03-29T20:54:01.387Z"
-    },
-    {
-      "identityKey": "event:health:the 3 best tampons of 2026 reviews by wirecutter",
-      "item": {
-        "id": "google-sec-1774644830678-4",
-        "title": "The 3 Best Tampons of 2026 | Reviews by Wirecutter",
-        "summary": "2 days ago ... Like all menstrual products, tampons are HSA/FSA-eligible expenses, which means you can use funds from a health savings account or flexible spending account to ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nytimes.com/wirecutter/reviews/best-tampons/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:53:50.678Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "health",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "unknown",
-        "genericity_score": 0,
-        "article_likelihood": 1,
-        "normalizedTitle": "the 3 best tampons of 2026 reviews by wirecutter",
-        "canonicalUrl": "https://www.nytimes.com/wirecutter/reviews/best-tampons/",
-        "discoveryScore": 11,
-        "eventKey": "health:the 3 best tampons of 2026 reviews by wirecutter"
-      },
-      "discoveredAt": "2026-03-27T20:53:50.678Z",
-      "lastSeenAt": "2026-03-27T20:54:01.389Z",
-      "expiresAt": "2026-03-29T20:54:01.387Z"
-    },
-    {
       "identityKey": "event:mental-health:health the new york times",
       "item": {
         "id": "google-sec-1774666475193-0",
@@ -3435,51 +2315,6 @@
       "expiresAt": "2026-03-30T02:54:57.356Z"
     },
     {
-      "identityKey": "event:mental-health:health page 2 the new york times",
-      "item": {
-        "id": "google-sec-1774644830677-2",
-        "title": "Health - Page 2 - The New York Times",
-        "summary": "1 day ago ... The latest news on health and medicine, covid, vaccines, global health, mental health, Obamacare, health insurance, Medicare, Medicaid, opioids, cancer, ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nytimes.com/section/health?page=2"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:53:50.678Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "health",
-          "news",
-          "tech"
-        ],
-        "topicCandidates": [
-          "mental-health",
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "health",
-        "detectedTopicId": "mental-health",
-        "region": "global",
-        "angle": "general",
-        "genericPage": true,
-        "page_kind": "section",
-        "genericity_score": 9,
-        "article_likelihood": 0,
-        "normalizedTitle": "health page 2 the new york times",
-        "canonicalUrl": "https://www.nytimes.com/section/health",
-        "discoveryScore": 8,
-        "eventKey": "mental-health:health page 2 the new york times"
-      },
-      "discoveredAt": "2026-03-27T20:53:50.678Z",
-      "lastSeenAt": "2026-03-27T20:54:01.389Z",
-      "expiresAt": "2026-03-29T20:54:01.387Z"
-    },
-    {
       "identityKey": "event:health:health wsj",
       "item": {
         "id": "google-sec-1774741005746-6",
@@ -3521,51 +2356,6 @@
       "discoveredAt": "2026-03-28T23:36:45.748Z",
       "lastSeenAt": "2026-03-28T23:37:12.483Z",
       "expiresAt": "2026-03-30T23:37:12.481Z"
-    },
-    {
-      "identityKey": "event:sports:ioc says women s olympic events to be limited to biological females",
-      "item": {
-        "id": "google-sec-1774644948451-3",
-        "title": "IOC says women's Olympic events to be limited to 'biological females'",
-        "summary": "21 hours ago ... Athletes will have to undergo a one-time screening for the SRY gene, found on the Y chromosome, the IOC said Thursday.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nytimes.com/athletic/7148904/2026/03/26/olympics-transgender-ban-women/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:55:48.452Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:sports",
-        "sectionCandidates": [
-          "sports",
-          "tech"
-        ],
-        "topicCandidates": [
-          "ai-big-tech",
-          "events-tournaments",
-          "athletes-culture"
-        ],
-        "detectedSectionId": "sports",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "ioc says women s olympic events to be limited to biological females",
-        "canonicalUrl": "https://www.nytimes.com/athletic/7148904/2026/03/26/olympics-transgender-ban-women/",
-        "discoveryScore": 14.6,
-        "eventKey": "sports:ioc says women s olympic events to be limited to biological females"
-      },
-      "discoveredAt": "2026-03-27T20:55:48.452Z",
-      "lastSeenAt": "2026-03-27T20:56:09.836Z",
-      "expiresAt": "2026-03-29T20:56:09.835Z"
     },
     {
       "identityKey": "event:sports:nwsl extends media reach with wsn partnership through 2027",
@@ -3737,46 +2527,6 @@
       "expiresAt": "2026-03-30T03:12:18.231Z"
     },
     {
-      "identityKey": "event:sports:manchester city s rodri says he could not turn down potential real",
-      "item": {
-        "id": "google-sec-1774644948451-1",
-        "title": "Manchester City's Rodri says he 'could not turn down' potential Real ...",
-        "summary": "1 day ago ... The 29-year-old central midfielder also confirmed that his contract at City would expire in 2027.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nytimes.com/athletic/7148545/2026/03/26/rodri-transfer-real-madrid-manchester-city/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:55:48.451Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:sports",
-        "sectionCandidates": [
-          "sports"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "sports",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "manchester city s rodri says he could not turn down potential real",
-        "canonicalUrl": "https://www.nytimes.com/athletic/7148545/2026/03/26/rodri-transfer-real-madrid-manchester-city/",
-        "discoveryScore": 13.6,
-        "eventKey": "sports:manchester city s rodri says he could not turn down potential real"
-      },
-      "discoveredAt": "2026-03-27T20:55:48.451Z",
-      "lastSeenAt": "2026-03-27T20:56:09.836Z",
-      "expiresAt": "2026-03-29T20:56:09.835Z"
-    },
-    {
       "identityKey": "event:sports:casemiro not thinking about reversing manchester united decision",
       "item": {
         "id": "google-sec-1774744382128-3",
@@ -3857,88 +2607,6 @@
       "expiresAt": "2026-03-30T03:12:18.231Z"
     },
     {
-      "identityKey": "event:sports:kevin mcgonigle s major league moment is here plus more on the",
-      "item": {
-        "id": "google-sec-1774644948453-9",
-        "title": "Kevin McGonigle's major-league moment is here, plus more on the ...",
-        "summary": "2 days ago ... Before the meeting, McGonigle and some of his teammates had breakfast. He was too nervous to eat. Then he finally sat down with Harris and Hinch. Hinch launched ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nytimes.com/athletic/7147801/2026/03/25/detroit-tigers-roster-kevin-mcgonigle/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:55:48.453Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:sports",
-        "sectionCandidates": [
-          "sports"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "sports",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "product",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "kevin mcgonigle s major league moment is here plus more on the",
-        "canonicalUrl": "https://www.nytimes.com/athletic/7147801/2026/03/25/detroit-tigers-roster-kevin-mcgonigle/",
-        "discoveryScore": 13.6,
-        "eventKey": "sports:kevin mcgonigle s major league moment is here plus more on the"
-      },
-      "discoveredAt": "2026-03-27T20:55:48.453Z",
-      "lastSeenAt": "2026-03-27T20:56:09.836Z",
-      "expiresAt": "2026-03-29T20:56:09.835Z"
-    },
-    {
-      "identityKey": "event:world-geopolitics:live updates ousted venezuelan leader nicol s maduro in court",
-      "item": {
-        "id": "google-sec-1774644746870-9",
-        "title": "Live updates: Ousted Venezuelan leader Nicolás Maduro in court",
-        "summary": "21 hours ago ... People gather at a government-organized event in Caracas, Venezuela, on Thursday as former Venezuelan President Nicolas Maduro and first lady Cilia Flores ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "2026-03-26T13:02:39.779Z",
-        "sourceUrls": [
-          "https://www.cnn.com/2026/03/26/world/live-news/nicolas-maduro-new-york-court"
-        ],
-        "freshness": 5,
-        "urgency": 6,
-        "discoveredAt": "2026-03-27T20:52:26.870Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:news",
-        "sectionCandidates": [
-          "news"
-        ],
-        "topicCandidates": [
-          "world-geopolitics"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": "world-geopolitics",
-        "region": "global",
-        "angle": "legal",
-        "genericPage": false,
-        "page_kind": "live",
-        "genericity_score": 6,
-        "article_likelihood": 2,
-        "normalizedTitle": "live updates ousted venezuelan leader nicol s maduro in court",
-        "canonicalUrl": "https://www.cnn.com/2026/03/26/world/live-news/nicolas-maduro-new-york-court",
-        "discoveryScore": 14,
-        "eventKey": "world-geopolitics:live updates ousted venezuelan leader nicol s maduro in court"
-      },
-      "discoveredAt": "2026-03-27T20:52:26.870Z",
-      "lastSeenAt": "2026-03-27T20:52:50.819Z",
-      "expiresAt": "2026-03-29T20:52:50.818Z"
-    },
-    {
       "identityKey": "event:us-politics:march 26 2026 trump administration news cnn politics",
       "item": {
         "id": "google-sec-1774667511623-2",
@@ -3979,56 +2647,6 @@
       "discoveredAt": "2026-03-28T03:11:51.624Z",
       "lastSeenAt": "2026-03-28T03:12:18.232Z",
       "expiresAt": "2026-03-30T03:12:18.231Z"
-    },
-    {
-      "identityKey": "event:us-politics:live updates trump administration news senate deal to fund dhs",
-      "item": {
-        "id": "google-sec-1774644746869-6",
-        "title": "Live updates: Trump administration news, Senate deal to fund DHS ...",
-        "summary": "2 hours ago ... While the Senate reached an agreement to fund most of the Department of Homeland Security, the House still needs to act on the measure.",
-        "whyItMatters": "",
-        "involvedParties": [
-          "sec",
-          "senate"
-        ],
-        "entities": [
-          "sec",
-          "senate"
-        ],
-        "when": "2026-03-27T10:06:35.799Z",
-        "sourceUrls": [
-          "https://www.cnn.com/2026/03/27/politics/live-news/trump-administration-news"
-        ],
-        "freshness": 7,
-        "urgency": 4,
-        "discoveredAt": "2026-03-27T20:52:26.869Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:news",
-        "sectionCandidates": [
-          "news",
-          "tech"
-        ],
-        "topicCandidates": [
-          "us-politics",
-          "cybersecurity"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": "us-politics",
-        "region": "us",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "live",
-        "genericity_score": 6,
-        "article_likelihood": 2,
-        "normalizedTitle": "live updates trump administration news senate deal to fund dhs",
-        "canonicalUrl": "https://www.cnn.com/2026/03/27/politics/live-news/trump-administration-news",
-        "discoveryScore": 14,
-        "eventKey": "us-politics:live updates trump administration news senate deal to fund dhs"
-      },
-      "discoveredAt": "2026-03-27T20:52:26.869Z",
-      "lastSeenAt": "2026-03-27T20:52:50.819Z",
-      "expiresAt": "2026-03-29T20:52:50.818Z"
     },
     {
       "identityKey": "event:business:bloomberg businessweek",
@@ -8648,7 +7266,7 @@
     {
       "identityKey": "event:ai-big-tech:tech company climate goals under pressure due to ai energy demand ap news",
       "item": {
-        "id": "brave-sec-1774756414727-1",
+        "id": "brave-sec-1774821743254-1",
         "title": "Tech company climate goals under pressure due to AI energy demand | AP News",
         "summary": "Tech companies set ambitious climate goals at the start of the decade, promising to slash emissoins that contribute to global warming.",
         "whyItMatters": "",
@@ -8660,7 +7278,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-29T03:53:34.729Z",
+        "discoveredAt": "2026-03-29T22:02:23.263Z",
         "provider": "brave",
         "trustedSource": true,
         "discoveryLane": "section:news",
@@ -8687,9 +7305,9 @@
         "discoveryScore": 16.4,
         "eventKey": "ai-big-tech:tech company climate goals under pressure due to ai energy demand ap news"
       },
-      "discoveredAt": "2026-03-29T03:53:34.729Z",
-      "lastSeenAt": "2026-03-29T03:53:34.767Z",
-      "expiresAt": "2026-03-31T03:53:34.766Z"
+      "discoveredAt": "2026-03-29T22:02:23.263Z",
+      "lastSeenAt": "2026-03-29T22:02:23.306Z",
+      "expiresAt": "2026-03-31T22:02:23.305Z"
     },
     {
       "identityKey": "event:business:iran war wipes out 100 billion from luxury stocks cnbc",
@@ -8905,7 +7523,7 @@
     {
       "identityKey": "event:news:in the age of misinformation climate literacy matters more than ever honolulu ci",
       "item": {
-        "id": "brave-sec-1774756414731-3",
+        "id": "brave-sec-1774821743267-3",
         "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever - Honolulu Civil Beat",
         "summary": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
         "whyItMatters": "",
@@ -8917,7 +7535,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-29T03:53:34.734Z",
+        "discoveredAt": "2026-03-29T22:02:23.270Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -8940,9 +7558,9 @@
         "discoveryScore": 12.4,
         "eventKey": "news:in the age of misinformation climate literacy matters more than ever honolulu ci"
       },
-      "discoveredAt": "2026-03-29T03:53:34.734Z",
-      "lastSeenAt": "2026-03-29T03:53:34.767Z",
-      "expiresAt": "2026-03-31T03:53:34.766Z"
+      "discoveredAt": "2026-03-29T22:02:23.270Z",
+      "lastSeenAt": "2026-03-29T22:02:23.306Z",
+      "expiresAt": "2026-03-31T22:02:23.305Z"
     },
     {
       "identityKey": "event:news:march 26 2026 trump administration news cnn politics",
@@ -9077,7 +7695,7 @@
     {
       "identityKey": "event:tech:chinese universities with military links bought super micro servers",
       "item": {
-        "id": "google-sec-1774739300985-1",
+        "id": "google-sec-1774821743278-1",
         "title": "Chinese universities with military links bought Super Micro servers ...",
         "summary": "2 days ago ... Four Chinese ​universities, including two linked to the People's Liberation Army, bought Super Micro Computer servers with restricted AI chips over the past ...",
         "whyItMatters": "",
@@ -9087,9 +7705,9 @@
         "sourceUrls": [
           "https://www.reuters.com/world/china/chinese-universities-with-military-links-bought-super-micro-servers-with-2026-03-27/"
         ],
-        "freshness": 5,
+        "freshness": 3,
         "urgency": 4,
-        "discoveredAt": "2026-03-28T23:08:20.991Z",
+        "discoveredAt": "2026-03-29T22:02:23.284Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:tech",
@@ -9109,17 +7727,17 @@
         "article_likelihood": 8,
         "normalizedTitle": "chinese universities with military links bought super micro servers",
         "canonicalUrl": "https://www.reuters.com/world/china/chinese-universities-with-military-links-bought-super-micro-servers-with-2026-03-27/",
-        "discoveryScore": 14.4,
+        "discoveryScore": 12.4,
         "eventKey": "tech:chinese universities with military links bought super micro servers"
       },
-      "discoveredAt": "2026-03-28T23:08:20.991Z",
-      "lastSeenAt": "2026-03-28T23:09:41.265Z",
-      "expiresAt": "2026-03-30T23:09:41.264Z"
+      "discoveredAt": "2026-03-29T22:02:23.284Z",
+      "lastSeenAt": "2026-03-29T22:02:23.306Z",
+      "expiresAt": "2026-03-31T22:02:23.305Z"
     },
     {
       "identityKey": "event:tech:trump signs order to pay tsa workers wsj",
       "item": {
-        "id": "google-sec-1774739301009-8",
+        "id": "google-sec-1774821743298-8",
         "title": "Trump Signs Order to Pay TSA Workers - WSJ",
         "summary": "17 hours ago ... Many unpaid TSA employees have been calling in sick while others have quit, causing delays at airports across the country as travelers head out on spring break.",
         "whyItMatters": "",
@@ -9135,7 +7753,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-28T23:08:21.013Z",
+        "discoveredAt": "2026-03-29T22:02:23.301Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:tech",
@@ -9156,9 +7774,9 @@
         "discoveryScore": 14.4,
         "eventKey": "tech:trump signs order to pay tsa workers wsj"
       },
-      "discoveredAt": "2026-03-28T23:08:21.013Z",
-      "lastSeenAt": "2026-03-28T23:09:41.265Z",
-      "expiresAt": "2026-03-30T23:09:41.264Z"
+      "discoveredAt": "2026-03-29T22:02:23.301Z",
+      "lastSeenAt": "2026-03-29T22:02:23.306Z",
+      "expiresAt": "2026-03-31T22:02:23.305Z"
     },
     {
       "identityKey": "event:public-health:nbc news author aria bendix",
@@ -9253,7 +7871,7 @@
     {
       "identityKey": "event:news:openai news today s latest stories reuters",
       "item": {
-        "id": "google-sec-1774739300991-2",
+        "id": "google-sec-1774821743284-2",
         "title": "OpenAI News | Today's Latest Stories - Reuters",
         "summary": "2 days ago ... Latest Stories ; 13 hours ago. SoftBank secures $40 billion loan to boost OpenAI investments · Event to pitch AI for businesses in Tokyo ; March 26, 2026. OpenAI's ...",
         "whyItMatters": "",
@@ -9269,7 +7887,7 @@
         ],
         "freshness": 4,
         "urgency": 5,
-        "discoveredAt": "2026-03-28T23:08:20.994Z",
+        "discoveredAt": "2026-03-29T22:02:23.287Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:tech",
@@ -9293,14 +7911,14 @@
         "discoveryScore": 12,
         "eventKey": "news:openai news today s latest stories reuters"
       },
-      "discoveredAt": "2026-03-28T23:08:20.994Z",
-      "lastSeenAt": "2026-03-28T23:09:41.266Z",
-      "expiresAt": "2026-03-30T23:09:41.264Z"
+      "discoveredAt": "2026-03-29T22:02:23.287Z",
+      "lastSeenAt": "2026-03-29T22:02:23.306Z",
+      "expiresAt": "2026-03-31T22:02:23.305Z"
     },
     {
       "identityKey": "event:news:emerging markets headlines breaking stock market news reuters",
       "item": {
-        "id": "google-sec-1774739301007-7",
+        "id": "google-sec-1774821743296-7",
         "title": "Emerging Markets Headlines | Breaking Stock Market News - Reuters",
         "summary": "3 hours ago ... Lisa Bernhard reports. Up next. CIO likes tech, defense stocks despite recent volatility.",
         "whyItMatters": "",
@@ -9312,7 +7930,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-28T23:08:21.009Z",
+        "discoveredAt": "2026-03-29T22:02:23.298Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:tech",
@@ -9337,9 +7955,9 @@
         "discoveryScore": 12,
         "eventKey": "news:emerging markets headlines breaking stock market news reuters"
       },
-      "discoveredAt": "2026-03-28T23:08:21.009Z",
-      "lastSeenAt": "2026-03-28T23:09:41.266Z",
-      "expiresAt": "2026-03-30T23:09:41.264Z"
+      "discoveredAt": "2026-03-29T22:02:23.298Z",
+      "lastSeenAt": "2026-03-29T22:02:23.306Z",
+      "expiresAt": "2026-03-31T22:02:23.305Z"
     },
     {
       "identityKey": "event:health:s 1 sec gov",
@@ -9432,7 +8050,7 @@
     {
       "identityKey": "event:ai-big-tech:tech news today s latest technology news reuters",
       "item": {
-        "id": "google-sec-1774739300980-0",
+        "id": "google-sec-1774821743275-0",
         "title": "Tech News | Today's Latest Technology News | Reuters",
         "summary": "1 hour ago ... Researchers at Northwestern University have developed modular robots designed with the help of artificial intelligence (AI) that can keep moving outdoors even ...",
         "whyItMatters": "",
@@ -9444,7 +8062,7 @@
         ],
         "freshness": 4,
         "urgency": 5,
-        "discoveredAt": "2026-03-28T23:08:20.985Z",
+        "discoveredAt": "2026-03-29T22:02:23.278Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:tech",
@@ -9468,9 +8086,9 @@
         "discoveryScore": 9,
         "eventKey": "ai-big-tech:tech news today s latest technology news reuters"
       },
-      "discoveredAt": "2026-03-28T23:08:20.985Z",
-      "lastSeenAt": "2026-03-28T23:09:41.266Z",
-      "expiresAt": "2026-03-30T23:09:41.264Z"
+      "discoveredAt": "2026-03-29T22:02:23.278Z",
+      "lastSeenAt": "2026-03-29T22:02:23.306Z",
+      "expiresAt": "2026-03-31T22:02:23.305Z"
     },
     {
       "identityKey": "event:business:maha fans want action trump hasn t delivered politico",

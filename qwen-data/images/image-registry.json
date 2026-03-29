@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-03-29T03:54:17.015Z",
+  "updatedAt": "2026-03-29T22:03:15.401Z",
   "assets": [
     {
       "assetKey": "legacy:7-social-media-trends-you-need-to-know-in-2026",
@@ -6811,16 +6811,143 @@
       "sceneType": "portrait",
       "geoHints": [],
       "visualType": "photo",
-      "editorialFitScore": 100,
+      "editorialFitScore": 98,
       "firstSeenAt": "2026-03-29T03:54:17.015Z",
       "lastFetchedAt": "2026-03-29T03:54:17.015Z",
       "lastUsedAt": "2026-03-29T03:54:17.015Z",
       "useCount": 1,
       "status": "ready",
       "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pexels:36442459",
+      "provider": "pexels",
+      "providerAssetId": "36442459",
+      "sourcePageUrl": "https://www.pexels.com/photo/five-young-men-in-suits-posing-outdoors-36442459/",
+      "sourceDownloadUrl": "https://images.pexels.com/photos/36442459/pexels-photo-36442459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "authorName": "Hoàng Tiến Anh",
+      "authorUrl": "https://www.pexels.com/@hoang-ti-n-anh-2149671659",
+      "license": "Pexels License",
+      "altText": "A group of five young men in formal suits posing outdoors, exuding confidence.",
+      "width": 7952,
+      "height": 5304,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pexels/36442459/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pexels/36442459/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pexels/36442459/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "Sports"
+      ],
+      "queryHistory": [
+        "Trans Athletes photo"
+      ],
+      "tags": [
+        "events-tournaments",
+        "Unspecified",
+        "A group of five young men in formal suits posing outdoors",
+        "exuding confidence."
+      ],
+      "topicHints": [
+        "events-tournaments"
+      ],
+      "entityHints": [
+        "group",
+        "five",
+        "young",
+        "formal",
+        "suits",
+        "posing",
+        "outdoors",
+        "exuding"
+      ],
+      "sceneType": "stadium",
+      "geoHints": [],
+      "visualType": "photo",
+      "editorialFitScore": 98,
+      "firstSeenAt": "2026-03-29T22:02:47.234Z",
+      "lastFetchedAt": "2026-03-29T22:02:47.234Z",
+      "lastUsedAt": "2026-03-29T22:02:47.234Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pexels:16461434",
+      "provider": "pexels",
+      "providerAssetId": "16461434",
+      "sourcePageUrl": "https://www.pexels.com/photo/close-up-of-a-person-holding-a-smartphone-displaying-chatgpt-16461434/",
+      "sourceDownloadUrl": "https://images.pexels.com/photos/16461434/pexels-photo-16461434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "authorName": "Sanket  Mishra",
+      "authorUrl": "https://www.pexels.com/@sanketgraphy",
+      "license": "Pexels License",
+      "altText": "Close-up of a smartphone displaying ChatGPT app held over AI textbook.",
+      "width": 6960,
+      "height": 4640,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pexels/16461434/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pexels/16461434/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pexels/16461434/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "Tech"
+      ],
+      "queryHistory": [
+        "AI photo"
+      ],
+      "tags": [
+        "ai-big-tech",
+        "tsa",
+        "Close-up of a smartphone displaying ChatGPT app held over AI textbook."
+      ],
+      "topicHints": [
+        "ai-big-tech"
+      ],
+      "entityHints": [
+        "close-up",
+        "smartphone",
+        "displaying",
+        "chatgpt",
+        "held",
+        "over",
+        "ai",
+        "textbook"
+      ],
+      "sceneType": "portrait",
+      "geoHints": [],
+      "visualType": "photo",
+      "editorialFitScore": 100,
+      "firstSeenAt": "2026-03-29T22:03:15.401Z",
+      "lastFetchedAt": "2026-03-29T22:03:15.401Z",
+      "lastUsedAt": "2026-03-29T22:03:15.401Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
     }
   ],
   "usage": [
+    {
+      "assetKey": "pexels:16461434",
+      "articleSlug": "ai-s-soaring-power-use-puts-tech-climate-pledges-under-strai",
+      "articleTitle": "AI’s Soaring Power Use Puts Tech Climate Pledges Under Strain",
+      "section": "Tech",
+      "topicId": "ai-big-tech",
+      "query": "AI photo",
+      "usedAt": "2026-03-29T22:03:15.401Z",
+      "selectionMode": "provider_download_new:pexels:strong"
+    },
+    {
+      "assetKey": "pexels:36442459",
+      "articleSlug": "olympic-committee-adopts-new-policy-banning-trans-athletes-f",
+      "articleTitle": "Olympic Committee Adopts New Policy Banning Trans Athletes from Women’s Events",
+      "section": "Sports",
+      "topicId": "events-tournaments",
+      "query": "Trans Athletes photo",
+      "usedAt": "2026-03-29T22:02:47.234Z",
+      "selectionMode": "provider_download_new:pexels:strong"
+    },
     {
       "assetKey": "pixabay:7666143",
       "articleSlug": "how-every-cure-s-drug-search-aims-to-rewrite-rare-disease-tr",
@@ -7465,6 +7592,6 @@
   "maintenance": {
     "lastLegacyImportAt": "2026-03-26T18:24:48.254Z",
     "lastCooldownBackfillAt": null,
-    "lastMetadataEnrichmentAt": "2026-03-29T03:54:16.058Z"
+    "lastMetadataEnrichmentAt": "2026-03-29T22:03:14.873Z"
   }
 }

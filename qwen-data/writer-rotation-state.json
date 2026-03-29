@@ -1,20 +1,20 @@
 {
-  "totalArticles": 79,
+  "totalArticles": 81,
   "lastReset": null,
   "byWriter": {
     "reporter": {
-      "count": 28,
-      "lastAssigned": 1774754265669,
+      "count": 29,
+      "lastAssigned": 1774821743858,
       "streak": 0,
-      "authorCursor": 2,
-      "lastAuthorId": "emma_carter"
+      "authorCursor": 3,
+      "lastAuthorId": "daniel_reed"
     },
     "explainer": {
-      "count": 11,
-      "lastAssigned": 1774754287173,
-      "streak": 0,
-      "authorCursor": 1,
-      "lastAuthorId": "olivia_brooks"
+      "count": 12,
+      "lastAssigned": 1774821770418,
+      "streak": 1,
+      "authorCursor": 2,
+      "lastAuthorId": "ethan_hall"
     },
     "analyst": {
       "count": 13,
@@ -26,28 +26,12 @@
     "features": {
       "count": 27,
       "lastAssigned": 1774756437803,
-      "streak": 2,
+      "streak": 0,
       "authorCursor": 2,
       "lastAuthorId": "grace_holloway"
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "reporter",
-      "timestamp": 1774568239907,
-      "articleType": "report",
-      "beat": "politics",
-      "section": "Tech",
-      "topic_id": "us-politics"
-    },
-    {
-      "writerId": "features",
-      "timestamp": 1774569539972,
-      "articleType": "report",
-      "beat": "health",
-      "section": "Health",
-      "topic_id": "mental-health"
-    },
     {
       "writerId": "reporter",
       "timestamp": 1774570305294,
@@ -431,6 +415,22 @@
       "beat": "health",
       "section": "Health",
       "topic_id": "pharma-fda"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774821743858,
+      "articleType": "report",
+      "beat": "sports",
+      "section": "Sports",
+      "topic_id": "events-tournaments"
+    },
+    {
+      "writerId": "explainer",
+      "timestamp": 1774821770418,
+      "articleType": "report",
+      "beat": "technology",
+      "section": "Tech",
+      "topic_id": "ai-big-tech"
     }
   ]
 }
