@@ -5,9 +5,11 @@ import Image from '~/components/common/Image.astro';
 import PostTags from '~/components/blog/Tags.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
 
+import { APP_BLOG } from 'astrowind:config';
 import { resolvePostImage, generateImageAlt } from '~/utils/post-image';
 import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
+import { getResolvedArticlePlacement, getArticleTypeLabel } from '~/utils/article-meta';
 
 import type { Post } from '~/types';
 
@@ -18,13 +20,39 @@ export interface Props {
 
 const { post, url } = Astro.props;
 const coverImage = await resolvePostImage(post.image, post.slug);
+const visibleTags = APP_BLOG?.tag?.isEnabled ? (post.tags || []).slice(0, 3) : [];
+const visibleSources = (post.sources || []).slice(0, 4);
+
+const { sectionLabel, subsectionLabel } = getResolvedArticlePlacement(post);
+const articleTypeLabel = getArticleTypeLabel(post.article_type);
+
+const normalizeDeskLabel = (value?: string) => {
+  const label = String(value || '').trim();
+  if (!label) return '';
+
+  const deskMap: Record<string, string> = {
+    'Staff Reporter': 'News Desk',
+    'Explainer Editor': 'Explainers Desk',
+    'Senior Analyst': 'Analysis Desk',
+    'Features Writer': 'Features Desk',
+  };
+
+  return deskMap[label] || label;
+};
+
+const deskLabel = normalizeDeskLabel(post.authorTitle);
+const displayAuthor = post.author
+  ? (deskLabel && deskLabel !== post.author ? `By ${post.author} | ${deskLabel}` : `By ${post.author}`)
+  : 'By Foseer Editorial Team';
 ---
 
 <section class="py-8 sm:py-12 lg:py-16 bg-page min-h-screen">
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Article Header with Editorial Hierarchy and Trust Signals -->
-    <header class="mb-12 lg:mb-16">
-      <!-- Publication Metadata with Enhanced Trust Signals -->
+    <!-- Article Card with subtle border and shadow -->
+    <div class="bg-white/5 dark:bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-xl overflow-hidden">
+      
+      <div class="p-6 sm:p-8 lg:p-12">
+        <header class="mb-12 lg:mb-16">
       <div class="mb-6 flex-wrap items-center gap-3 text-sm text-muted dark:text-slate-400 border-b border-slate-200 dark:border-slate-700 pb-6">
         <div class="flex items-center gap-2 flex-wrap mb-2">
           <Icon name="tabler:calendar-event" class="w-4 h-4 text-primary dark:text-blue-400" />
@@ -45,15 +73,39 @@ const coverImage = await resolvePostImage(post.image, post.slug);
         <div class="flex items-center gap-2 flex-wrap mb-2">
           <Icon name="tabler:user" class="w-4 h-4 text-primary dark:text-blue-400" />
           <span class="text-sm font-medium text-gray-700 dark:text-slate-300">
-            {post.author || 'Foseer Editorial Team'}
+            {displayAuthor}
           </span>
         </div>
+
+        {sectionLabel && (
+          <div class="flex items-center gap-2 flex-wrap mb-2">
+            <Icon name="tabler:folder" class="w-4 h-4 text-primary dark:text-blue-400" />
+            <span class="text-sm text-gray-600 dark:text-slate-400">Section:</span>
+            <span class="text-sm font-medium text-gray-700 dark:text-slate-300">
+              {sectionLabel}
+              {subsectionLabel && (
+                <span class="text-gray-400 dark:text-slate-500 mx-1">→</span>
+              )}
+              {subsectionLabel}
+            </span>
+          </div>
+        )}
+
+        {articleTypeLabel && (
+          <div class="flex items-center gap-2 flex-wrap mb-2">
+            <Icon name="tabler:file-text" class="w-4 h-4 text-primary dark:text-blue-400" />
+            <span class="text-sm text-gray-600 dark:text-slate-400">Article Type:</span>
+            <span class="text-sm font-medium text-gray-700 dark:text-slate-300">
+              {articleTypeLabel}
+            </span>
+          </div>
+        )}
 
         {post.category && (
           <div class="flex items-center gap-2 flex-wrap mb-2">
             <Icon name="tabler:tag" class="w-4 h-4 text-primary dark:text-blue-400" />
             <a
-              href={getPermalink(post.category.slug, 'tag')}
+              href={getPermalink(post.category.slug, 'category')}
               class="text-sm font-medium text-primary hover:underline transition-colors bg-primary/10 dark:bg-blue-400/10 px-2 py-1 rounded-full"
             >
               {post.category.title}
@@ -69,19 +121,16 @@ const coverImage = await resolvePostImage(post.image, post.slug);
         </div>
       </div>
 
-      <!-- Article Title with Improved Typography -->
       <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white mb-6 font-heading">
         {post.title}
       </h1>
 
-      <!-- Article Deck/Summary with Better Readability -->
       {post.excerpt && (
         <p class="text-xl sm:text-2xl text-muted dark:text-slate-300 leading-relaxed max-w-3xl mb-8 font-light text-left">
           {post.excerpt}
         </p>
       )}
 
-      {/* Featured Image with Proper Styling */}
       {coverImage && (
         <figure class="mt-8 lg:mt-12 max-w-full mx-auto rounded-lg overflow-hidden shadow-lg bg-gray-400 dark:bg-slate-700">
           <Image
@@ -104,24 +153,40 @@ const coverImage = await resolvePostImage(post.image, post.slug);
       )}
     </header>
 
-    <!-- Main Article Content with Enhanced Reading Experience -->
-    <div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-none dark:prose-invert prose-headings:font-heading prose-headings:font-bold prose-headings:leading-tight prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-slate-300 prose-p:leading-relaxed prose-p:text-lg prose-p:mb-6 prose-h2:text-2xl prose-h3:text-xl prose-h2:mb-6 prose-h3:mb-4 prose-strong:font-semibold prose-em:italic prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-700 dark:prose-blockquote:text-slate-300 prose-blockquote:text-lg prose-ul:mb-6 prose-ol:mb-6 prose-li:mb-2 prose-a:text-primary prose-a:underline hover:prose-a:no-underline prose-img:rounded-lg prose-img:shadow-lg prose-img:mx-auto prose-code:text-gray-800 dark:prose-code:text-slate-200 prose-pre:bg-gray-50 dark:prose-pre:bg-slate-800 prose-pre:rounded-lg prose-pre:p-4 prose-table:text-left prose-th:bg-gray-100 dark:prose-th:bg-slate-700 prose-td:border prose-td:border-gray-200 dark:prose-td:border-slate-600 prose-figure:mb-6 prose-figcaption:text-sm prose-figcaption:text-muted dark:prose-figcaption:text-slate-400 prose-figcaption:mt-2 prose-hr:border-t prose-hr:border-gray-200 dark:prose-hr:border-slate-700 prose-hr:my-8">
+    <div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-none dark:prose-invert prose-headings:font-heading prose-headings:font-bold prose-headings:leading-tight prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-slate-300 prose-p:leading-[1.8] prose-p:text-lg prose-p:mb-6 prose-p:text-justify prose-h2:text-3xl sm:text-4xl prose-h2:font-bold prose-h2:mt-14 prose-h2:mb-8 prose-h2:pt-8 prose-h2:border-t prose-h2:border-slate-200 dark:prose-h2:border-slate-700 prose-h3:text-2xl sm:text-3xl prose-h3:font-semibold prose-h3:mt-10 prose-h3:mb-5 prose-h3:text-blue-600 dark:prose-h3:text-blue-400 prose-h4:text-xl prose-h4:font-semibold prose-h4:mt-7 prose-h4:mb-3 prose-strong:font-semibold prose-em:italic prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:pr-4 prose-blockquote:py-3 prose-blockquote:italic prose-blockquote:text-gray-700 dark:prose-blockquote:text-slate-300 prose-blockquote:text-lg prose-blockquote:my-8 prose-blockquote:rounded-r-lg prose-blockquote:bg-slate-50 dark:prose-blockquote:bg-slate-800/50 prose-blockquote:shadow-sm prose-ul:mb-6 prose-ol:mb-6 prose-li:mb-3 prose-a:text-primary prose-a:underline hover:prose-a:no-underline prose-img:rounded-lg prose-img:shadow-lg prose-img:mx-auto prose-code:text-gray-800 dark:prose-code:text-slate-200 prose-pre:bg-gray-50 dark:prose-pre:bg-slate-800 prose-pre:rounded-lg prose-pre:p-4 prose-table:text-left prose-th:bg-gray-100 dark:prose-th:bg-slate-700 prose-td:border prose-td:border-gray-200 dark:prose-td:border-slate-600 prose-figure:mb-6 prose-figcaption:text-sm prose-figcaption:text-muted dark:prose-figcaption:text-slate-400 prose-figcaption:mt-2 prose-hr:border-t prose-hr:border-gray-200 dark:prose-hr:border-slate-700 prose-hr:my-10 prose-hr:opacity-50">
       <slot />
     </div>
-
-    <!-- Article Footer with Tags and Social Sharing -->
-    <footer class="mt-12 lg:mt-16 pt-8 border-t border-slate-200 dark:border-slate-700">
-      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 lg:gap-8">
-        {post.tags && post.tags.length > 0 && (
-          <div class="flex flex-wrap gap-2">
-            <PostTags tags={post.tags} class="flex flex-wrap gap-2" />
+      </div>
+      
+      <!-- Footer with border top -->
+      <footer class="mt-12 lg:mt-16 pt-8 border-t border-slate-200 dark:border-slate-700 px-6 sm:px-8 lg:px-12 space-y-6">
+      {visibleSources.length > 0 && (
+        <section aria-label="Sources" class="text-sm text-slate-500 dark:text-slate-400">
+          <div class="mb-2 uppercase tracking-[0.18em] text-[11px] font-semibold text-slate-400 dark:text-slate-500">
+            Sources
           </div>
-        )}
+          <div class="flex flex-wrap gap-x-4 gap-y-2 leading-6">
+            {visibleSources.map((source) => (
+              <a href={source.url} rel="nofollow noopener noreferrer" target="_blank" class="hover:text-primary transition-colors">
+                {source.title}
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 lg:gap-8">
+        {visibleTags.length > 0 ? (
+          <div class="flex flex-wrap gap-2">
+            <PostTags tags={visibleTags} class="flex flex-wrap gap-2" />
+          </div>
+        ) : <div />}
         <div class="flex items-center gap-4 text-gray-500 dark:text-slate-400">
           <span class="text-sm font-medium">Share:</span>
           <SocialShare url={url} text={post.title} class="flex items-center gap-2" />
         </div>
       </div>
     </footer>
+    </div>
   </article>
 </section>

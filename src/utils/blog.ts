@@ -40,6 +40,32 @@ const generatePermalink = async ({
     .join('/');
 };
 
+const ARTICLE_TYPE_TAGS = new Set(['explainer', 'analysis', 'report']);
+
+const sanitizePostTags = (rawTags: unknown, articleType?: string) => {
+  if (!Array.isArray(rawTags)) return [];
+
+  const blocked = new Set(ARTICLE_TYPE_TAGS);
+  const normalizedArticleType = cleanSlug(String(articleType || ''));
+  if (normalizedArticleType) {
+    blocked.add(normalizedArticleType);
+  }
+
+  const seen = new Set<string>();
+
+  return rawTags.reduce<{ slug: string; title: string }[]>((acc, tag) => {
+    const title = String(tag || '').trim();
+    if (!title) return acc;
+
+    const slug = cleanSlug(title);
+    if (!slug || blocked.has(slug) || seen.has(slug)) return acc;
+
+    seen.add(slug);
+    acc.push({ slug, title });
+    return acc;
+  }, []);
+};
+
 const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> => {
   const { id, data } = post;
   const { Content, remarkPluginFrontmatter } = await render(post);
@@ -50,11 +76,19 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     title,
     excerpt,
     image,
+    imagePublicUrl,
     tags: rawTags = [],
     category: rawCategory,
     author,
+    authorTitle,
+    sources = [],
     draft = false,
     metadata = {},
+    section,
+    subsection,
+    section_id,
+    topic_id,
+    article_type,
   } = data;
 
   const slug = cleanSlug(id); // cleanSlug(rawSlug.split('/').pop());
@@ -68,10 +102,7 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
       }
     : undefined;
 
-  const tags = rawTags.map((tag: string) => ({
-    slug: cleanSlug(tag),
-    title: tag,
-  }));
+  const tags = sanitizePostTags(rawTags, article_type);
 
   return {
     id: id,
@@ -84,10 +115,13 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     title: title,
     excerpt: excerpt,
     image: image,
+    imagePublicUrl: imagePublicUrl,
 
     category: category,
     tags: tags,
     author: author,
+    authorTitle: authorTitle,
+    sources: sources,
 
     draft: draft,
 
@@ -97,6 +131,12 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     // or 'content' in case you consume from API
 
     readingTime: remarkPluginFrontmatter?.readingTime,
+
+    section,
+    subsection,
+    section_id,
+    topic_id,
+    article_type,
   };
 };
 

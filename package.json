@@ -7,22 +7,28 @@
     "node": "^18.17.1 || ^20.3.0 || >= 21.0.0"
   },
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
+    "dev": "node qwen-scripts/repair-content-posts.js && astro dev",
+    "start": "node qwen-scripts/repair-content-posts.js && astro dev",
+    "build": "node qwen-scripts/repair-content-posts.js && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "article:auto": "node qwen-scripts/pipeline.js",
+    "qwen:repair-posts": "node qwen-scripts/repair-content-posts.js",
     "check": "npm run check:astro && npm run check:eslint && npm run check:prettier",
     "check:astro": "astro check",
     "check:eslint": "eslint .",
     "check:prettier": "prettier --check .",
     "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
-    "fix:prettier": "prettier -w ."
+    "fix:prettier": "prettier -w .",
+    "qwen:backfill-taxonomy": "node qwen-scripts/backfill-article-taxonomy.js",
+    "qwen:replace-duplicate-images": "node qwen-scripts/replace-duplicate-images.js",
+    "qwen:backfill-image-metadata": "node qwen-scripts/backfill-image-metadata.js",
+    "qwen:build-seed-cache": "node qwen-scripts/build-seed-cache.js"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.12",
-    "@astrojs/sitemap": "^3.4.2",
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.2",
     "@astrolib/analytics": "^0.6.1",
     "@astrolib/seo": "^1.0.0-beta.8",
     "@fontsource-variable/inter": "^5.2.6",
@@ -60,6 +66,7 @@
     "sharp": "0.34.3",
     "tailwind-merge": "^2.6.0",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.8.1",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.39.0",
     "unist-util-visit": "^5.0.0"

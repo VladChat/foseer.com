@@ -1,0 +1,110 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-29T03:18:02.642Z",
+  "event_id": "evt-2026-03-28-tech-signing-global-sec",
+  "cluster_id": "evt-2026-03-28-tech-signing-global-sec",
+  "article_type": "report",
+  "title": "Tiger Woods Arrested on DUI Charge After Rollover Crash in Florida",
+  "slug": "tiger-woods-arrested-on-dui-charge-after-rollover-crash-in-f",
+  "canonical_slug": "2026-03-29-tiger-woods-arrested-on-dui-charge-after-rollover-crash-in-f",
+  "expected_url": "/article/2026-03-29-tiger-woods-arrested-on-dui-charge-after-rollover-crash-in-f",
+  "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-29-tiger-woods-arrested-on-dui-charge-after-rollover-crash-in-f.mdx",
+  "published_at": "2026-03-29T03:18:02.523Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "law-crime",
+  "topic_label": "Law & Crime",
+  "subsection": "World & Geopolitics",
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/31853749/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/31853749/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/street-view-of-polish-building-with-stone-facade-31853749/",
+    "asset_key": "pexels:31853749",
+    "alt_text": "Illustration for Tiger Woods Arrested on DUI Charge After Rollover Crash in Florida",
+    "selection_mode": "provider_download_new:pexels:strong",
+    "query_used": "Tiger Woods Arrested photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Law & Crime"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Tiger Woods arrested, charged with DUI after rollover crash in Florida",
+        "url": "https://www.nytimes.com/athletic/7152418/2026/03/27/tiger-woods-car-crash-florida/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Tiger Woods arrested on suspicion of DUI after rollover crash , sheriff says",
+        "url": "https://www.springfieldnewssun.com/news/nation-world/tiger-woods-arrested-on-suspicion-of-dui-after-rollover-crash-sheriff-says/77zsikt7xjo6bisqzdputbvkdi/",
+        "domain": "springfieldnewssun.com"
+      },
+      {
+        "title": "Tiger Woods' history of car crashes and injuries: What to know after ...",
+        "url": "https://www.nytimes.com/athletic/7152847/2026/03/27/tiger-woods-dui-arrest-jupiter-island-accident-timeline/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "law-crime",
+          "label": "Law & Crime",
+          "type": "topic"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "law-crime",
+        "topic_label": "Law & Crime",
+        "supported": true,
+        "matched_aliases": [
+          "legal"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Tiger Woods Arrested photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "tiger",
+        "woods",
+        "arrested"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

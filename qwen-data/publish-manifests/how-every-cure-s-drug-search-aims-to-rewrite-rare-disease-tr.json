@@ -1,0 +1,113 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-29T03:54:17.048Z",
+  "event_id": "evt-2026-03-28-tech-launch-global-nba-meta",
+  "cluster_id": "evt-2026-03-28-tech-launch-global-nba-meta",
+  "article_type": "report",
+  "title": "How Every Cure’s Drug Search Aims to Rewrite Rare Disease Treatment",
+  "slug": "how-every-cure-s-drug-search-aims-to-rewrite-rare-disease-tr",
+  "canonical_slug": "2026-03-29-how-every-cure-s-drug-search-aims-to-rewrite-rare-disease-tr",
+  "expected_url": "/article/2026-03-29-how-every-cure-s-drug-search-aims-to-rewrite-rare-disease-tr",
+  "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-29-how-every-cure-s-drug-search-aims-to-rewrite-rare-disease-tr.mdx",
+  "published_at": "2026-03-29T03:54:17.045Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Pharma & FDA",
+  "topics": [
+    "Pharma & FDA"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/7666143/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/7666143/cover.jpg",
+    "source_url": "https://pixabay.com/photos/photos-nostalgia-retro-photography-7666143/",
+    "asset_key": "pixabay:7666143",
+    "alt_text": "Illustration for How Every Cure’s Drug Search Aims to Rewrite Rare Disease Treatment",
+    "selection_mode": "provider_download_new:pixabay:strong",
+    "query_used": "Every photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Rare Disease"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Every Cure's drug repurposing could change rare disease treatment",
+        "url": "https://www.cnbc.com/2026/03/27/every-cure-drug-repurposing-rare-disease-treatment.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "Pharmalittle: We're reading about an FDA OK for a rare disease drug, a grilling of the PTO chief, and more",
+        "url": "https://statnews.com/pharmalot/2026/03/26/fda-rare-disease-pto-novo-nordisk-340b-abortion-hiv",
+        "domain": "statnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "rare-disease",
+          "label": "Rare Disease",
+          "type": "theme"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda",
+          "drug approvals"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Every photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "every"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

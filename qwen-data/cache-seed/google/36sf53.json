@@ -1,0 +1,581 @@
+{
+  "timestamp": 1774746158296,
+  "ttl_hours": 8,
+  "provider": "google",
+  "query_hash": "36sf53",
+  "data": {
+    "kind": "customsearch#search",
+    "url": {
+      "type": "application/json",
+      "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    },
+    "queries": {
+      "request": [
+        {
+          "title": "Google Custom Search - (site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking culture film tv music celebrities internet creators platforms)",
+          "totalResults": "273",
+          "searchTerms": "(site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking culture film tv music celebrities internet creators platforms)",
+          "count": 10,
+          "startIndex": 1,
+          "inputEncoding": "utf8",
+          "outputEncoding": "utf8",
+          "safe": "off",
+          "cx": "f508d19f8630d4015",
+          "dateRestrict": "d2"
+        }
+      ],
+      "nextPage": [
+        {
+          "title": "Google Custom Search - (site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking culture film tv music celebrities internet creators platforms)",
+          "totalResults": "273",
+          "searchTerms": "(site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking culture film tv music celebrities internet creators platforms)",
+          "count": 10,
+          "startIndex": 11,
+          "inputEncoding": "utf8",
+          "outputEncoding": "utf8",
+          "safe": "off",
+          "cx": "f508d19f8630d4015",
+          "dateRestrict": "d2"
+        }
+      ]
+    },
+    "context": {
+      "title": "blog.equalle.com Web Search"
+    },
+    "searchInformation": {
+      "searchTime": 0.314763,
+      "formattedSearchTime": "0.31",
+      "totalResults": "273",
+      "formattedTotalResults": "273"
+    },
+    "items": [
+      {
+        "kind": "customsearch#result",
+        "title": "'The internet has seen me at my best and my worst': meet Jojo ...",
+        "htmlTitle": "&#39;The <b>internet</b> has seen me at my best and my worst&#39;: meet Jojo ...",
+        "link": "https://www.theguardian.com/tv-and-radio/2026/mar/26/jonah-singer-jojo-asmr-youtube-australia",
+        "displayLink": "www.theguardian.com",
+        "snippet": "2 days ago ... It would be crass for Jonah Singer to reveal what he makes from being a YouTube content creator, but he will show Guardian Australia his new $100,000 mic. The ...",
+        "htmlSnippet": "2 days ago <b>...</b> It would be crass for Jonah Singer to reveal what he makes from being a YouTube content <b>creator</b>, but he will show Guardian Australia his new $100,000 mic. The&nbsp;...",
+        "formattedUrl": "https://www.theguardian.com/tv.../jonah-singer-jojo-asmr-youtube-australia",
+        "htmlFormattedUrl": "https://www.theguardian.com/<b>tv</b>.../jonah-singer-jojo-asmr-youtube-australia",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUWvRcWnslYasWJCxtyEwg76KG2M8j_rb_QLUb2eD12iUTIXWCkHeHwKen&s",
+              "width": "310",
+              "height": "163"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://i.guim.co.uk/img/media/a344415334b3d7f5ffbe69fdf223c8ad7943dd2c/316_0_2461_1970/master/2461.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=578d93d32846e0c13fb6e103668be735",
+              "twitter:app:id:googleplay": "com.guardian",
+              "twitter:app:url:iphone": "gnmguardian://tv-and-radio/2026/mar/26/jonah-singer-jojo-asmr-youtube-australia?contenttype=Article&source=twitter",
+              "theme-color": "#052962",
+              "og:image:width": "1200",
+              "article:published_time": "2026-03-26T14:00:38.000Z",
+              "twitter:card": "summary_large_image",
+              "og:site_name": "the Guardian",
+              "twitter:app:url:ipad": "gnmguardian://tv-and-radio/2026/mar/26/jonah-singer-jojo-asmr-youtube-australia?contenttype=Article&source=twitter",
+              "twitter:app:name:googleplay": "The Guardian",
+              "al:ios:url": "gnmguardian://tv-and-radio/2026/mar/26/jonah-singer-jojo-asmr-youtube-australia?contenttype=Article&source=applinks",
+              "twitter:app:id:iphone": "409128287",
+              "og:description": "With 5.17 million YouTube subscribers, the 27-year-old might be the most successful ‘ASMRtist’ in the world",
+              "article:publisher": "https://www.facebook.com/theguardian",
+              "al:ios:app_store_id": "409128287",
+              "twitter:dnt": "on",
+              "twitter:image": "https://i.guim.co.uk/img/media/a344415334b3d7f5ffbe69fdf223c8ad7943dd2c/316_0_2461_1970/master/2461.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&s=97d1e19c09b98d3309895be30cb44eb1",
+              "twitter:site": "@guardian",
+              "article:modified_time": "2026-03-27T11:07:55.000Z",
+              "og:type": "article",
+              "article:section": "Television & radio",
+              "al:ios:app_name": "The Guardian",
+              "og:title": "‘The internet has seen me at my best and my worst’: meet Jojo, Australia’s ASMR superstar",
+              "og:image:height": "961",
+              "twitter:app:id:ipad": "409128287",
+              "article:author": "https://www.theguardian.com/profile/jenny-valentish",
+              "article:tag": "Podcasts,YouTube,Technology,Television & radio,Culture,Social media",
+              "fb:app_id": "180444840287",
+              "twitter:app:url:googleplay": "guardian://www.theguardian.com/tv-and-radio/2026/mar/26/jonah-singer-jojo-asmr-youtube-australia",
+              "twitter:app:name:ipad": "The Guardian",
+              "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+              "og:url": "https://www.theguardian.com/tv-and-radio/2026/mar/26/jonah-singer-jojo-asmr-youtube-australia",
+              "twitter:app:name:iphone": "The Guardian"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://i.guim.co.uk/img/media/a344415334b3d7f5ffbe69fdf223c8ad7943dd2c/316_0_2461_1970/master/2461.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=578d93d32846e0c13fb6e103668be735"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Alexander Kluge, 94, Revolutionary Filmmaker in Postwar Germany ...",
+        "htmlTitle": "Alexander Kluge, 94, Revolutionary Filmmaker in Postwar Germany ...",
+        "link": "https://www.nytimes.com/2026/03/27/movies/alexander-kluge-dead.html",
+        "displayLink": "www.nytimes.com",
+        "snippet": "1 day ago ... As a director, theorist and prolific author, he was one of his country's towering artists and public intellectuals.",
+        "htmlSnippet": "1 day ago <b>...</b> As a director, theorist and prolific author, he was one of his country&#39;s towering <b>artists</b> and public intellectuals.",
+        "formattedUrl": "https://www.nytimes.com/2026/03/27/movies/alexander-kluge-dead.html",
+        "htmlFormattedUrl": "https://www.nytimes.com/2026/03/27/movies/alexander-kluge-dead.html",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlkEyC9VXuPvU9IYwohao4xr-Kv1wgbqg4hvf6BIrmo3AEEIGwb_Tr3J0&s",
+              "width": "310",
+              "height": "162"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://static01.nyt.com/images/2026/03/29/multimedia/27Kluge-gzjh-print1/27Kluge-gzjh-facebookJumbo.jpg",
+              "nyt_uri": "nyt://article/028f18ea-3b6a-54b4-945f-bd65dce5d574",
+              "twitter:app:id:googleplay": "com.nytimes.android",
+              "apple-itunes-app": "affiliate-data=ct=WEB_BANNER_CAMPAIGN, app-id=284862083, app-argument=nytimes://www.nytimes.com/2026/03/27/movies/alexander-kluge-dead.html",
+              "twitter:card": "summary_large_image",
+              "article:published_time": "2026-03-27T17:57:03.000Z",
+              "pt": "article",
+              "twitter:url": "https://www.nytimes.com/2026/03/27/movies/alexander-kluge-dead.html",
+              "pdate": "20260327",
+              "articleid": "100000009960349",
+              "al:android:package": "com.nytimes.android",
+              "al:ipad:app_store_id": "357066198",
+              "twitter:app:name:googleplay": "NYTimes",
+              "og:description": "As a director, theorist and prolific author, he was one of his country’s towering artists and public intellectuals.",
+              "twitter:image": "https://static01.nyt.com/images/2026/03/29/multimedia/27Kluge-gzjh-print1/27Kluge-gzjh-videoSixteenByNineJumbo1600.jpg",
+              "pst": "Obituary (Obit)",
+              "twitter:image:alt": "Alexander Kluge directing his sister, Alexandra Kluge, in the 1966 film “Yesterday Girl.” It won the top directing prize at the Venice Film Festival.",
+              "al:iphone:app_name": "NYTimes",
+              "article:modified_time": "2026-03-28T05:56:21.000Z",
+              "news_keywords": "Alexander Kluge,Obituary,Movies,Documentaries,Books,Germany",
+              "article:content_tier": "metered",
+              "msapplication-starturl": "https://www.nytimes.com",
+              "image": "https://static01.nyt.com/images/2026/03/29/multimedia/27Kluge-gzjh-print1/27Kluge-gzjh-facebookJumbo.jpg",
+              "twitter:title": "Alexander Kluge, 94, Revolutionary Filmmaker in Postwar Germany, Dies",
+              "og:type": "article",
+              "og:image:alt": "Alexander Kluge directing his sister, Alexandra Kluge, in the 1966 film “Yesterday Girl.” It won the top directing prize at the Venice Film Festival.",
+              "article:section": "Movies",
+              "cg": "movies",
+              "pubp_event_id": "pubp://event/23ab2c8ccb2c4df3be614d509b65bde6",
+              "og:title": "Alexander Kluge, 94, Revolutionary Filmmaker in Postwar Germany, Dies",
+              "article:author": "https://www.nytimes.com/by/a-j-goldmann",
+              "url": "https://www.nytimes.com/2026/03/27/movies/alexander-kluge-dead.html",
+              "article:tag": "Kluge, Alexander",
+              "al:iphone:url": "nytimes://www.nytimes.com/2026/03/27/movies/alexander-kluge-dead.html",
+              "al:android:url": "nyt://article/028f18ea-3b6a-54b4-945f-bd65dce5d574",
+              "twitter:app:url:googleplay": "nyt://article/028f18ea-3b6a-54b4-945f-bd65dce5d574",
+              "al:ipad:url": "nytimes://www.nytimes.com/2026/03/27/movies/alexander-kluge-dead.html",
+              "byl": "By A.J. Goldmann",
+              "viewport": "width=device-width, initial-scale=1",
+              "twitter:description": "As a director, theorist and prolific author, he was one of his country’s towering artists and public intellectuals.",
+              "al:iphone:app_store_id": "284862083",
+              "al:ipad:app_name": "NYTimes",
+              "og:url": "https://www.nytimes.com/2026/03/27/movies/alexander-kluge-dead.html",
+              "al:android:app_name": "NYTimes",
+              "article:opinion": "false"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/images/2026/03/29/multimedia/27Kluge-gzjh-print1/27Kluge-gzjh-facebookJumbo.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Amazon Prime Video - Page 4 - The New York Times",
+        "htmlTitle": "Amazon Prime Video - Page 4 - The New York Times",
+        "link": "https://www.nytimes.com/spotlight/amazon-prime?page=4",
+        "displayLink": "www.nytimes.com",
+        "snippet": "1 day ago ... New films, and classics, just keep coming, but you don't have to drill down to find the finest selections to stream. We'll do the heavy lifting. You press play.",
+        "htmlSnippet": "1 day ago <b>...</b> New <b>films</b>, and classics, just keep coming, but you don&#39;t have to drill down to find the finest selections to stream. We&#39;ll do the heavy lifting. You press play.",
+        "formattedUrl": "https://www.nytimes.com/spotlight/amazon-prime?page=4",
+        "htmlFormattedUrl": "https://www.nytimes.com/spotlight/amazon-prime?page=4",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrEFd9dMV6ZEdLynnRAHAETMJuqcmVYo2BhO9L1d7zeE92oK6AIO_Lb8Q&s",
+              "width": "310",
+              "height": "163"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png",
+              "collection:language": "en",
+              "twitter:card": "summary_large_image",
+              "pt": "collection",
+              "twitter:url": "https://www.nytimes.com/spotlight/amazon-prime",
+              "nyt-collection:identifier": "amazon-prime",
+              "pdate": "20210310",
+              "asset_id": "100000007647312",
+              "og:description": "Arts",
+              "twitter:image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png",
+              "nyt-collection:display-name": "Arts",
+              "twitter:site": "@nytimes",
+              "news_keywords": "Arts",
+              "ptime": "20210310181508",
+              "slug": "amazon-prime",
+              "collection:section": "Arts",
+              "nyt-collection:type": "spotlightcollection",
+              "og:type": "article",
+              "twitter:title": "Amazon Prime Video",
+              "utime": "20260125144103",
+              "og:title": "Amazon Prime Video",
+              "slack-app-id": "A0121HXPPTQ",
+              "cn": "amazon-prime",
+              "color-scheme": "light",
+              "applicationname": "collection",
+              "ct": "spotlight",
+              "fb:app_id": "9869919170",
+              "collection:parentsection": "Arts",
+              "nyt-collection:uri": "/spotlight/amazon-prime",
+              "viewport": "width=device-width, initial-scale=1",
+              "nyt-collection:url": "https://www.nytimes.com/spotlight/amazon-prime",
+              "og:url": "https://www.nytimes.com/spotlight/amazon-prime"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Bloomberg Businessweek",
+        "htmlTitle": "Bloomberg Businessweek",
+        "link": "https://www.bloomberg.com/businessweek",
+        "displayLink": "www.bloomberg.com",
+        "snippet": "17 hours ago ... Bloomberg Businessweek helps global leaders stay ahead with insights and in-depth analysis on the people, companies, events, and trends shaping today's ...",
+        "htmlSnippet": "17 hours ago <b>...</b> Bloomberg Businessweek helps global leaders stay ahead with insights and in-depth analysis on the people, companies, events, and trends shaping today&#39;s&nbsp;...",
+        "formattedUrl": "https://www.bloomberg.com/businessweek",
+        "htmlFormattedUrl": "https://www.bloomberg.com/businessweek",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSst6iAUMhxKkcBAPHnuurjXTmUBX_QuL89nMFo-v4OpaB_eSqHxZJiXLU&s",
+              "width": "275",
+              "height": "183"
+            }
+          ],
+          "metatags": [
+            {
+              "apple-itunes-app": "app-id=281941097",
+              "next-head-count": "2",
+              "parsely-type": "sectionpage",
+              "og:type": "website",
+              "og:site_name": "Bloomberg.com",
+              "viewport": "width=device-width",
+              "parsely-link": "https://www.bloomberg.com/businessweek",
+              "og:title": "Bloomberg Businessweek - Bloomberg",
+              "og:url": "https://www.bloomberg.com/businessweek",
+              "parsely-title": "Bloomberg Businessweek - Bloomberg",
+              "og:description": "Bloomberg Businessweek helps global leaders stay ahead with insights and in-depth analysis on the people, companies, events, and trends shaping today's complex, global economy",
+              "format-detection": "telephone=no"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iq1I7.WssG30/v0/715x477.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Trump fires Homeland Security Secretary Noem after mounting ...",
+        "htmlTitle": "Trump fires Homeland Security Secretary Noem after mounting ...",
+        "link": "https://apnews.com/video/trump-fires-homeland-security-secretary-noem-after-mounting-criticism-1123c070b3c94c4594c4d960e6f44e25",
+        "displayLink": "apnews.com",
+        "snippet": "1 day ago ... At least two dozen U.S. Immigration and Customs Enforcement employees and contractors have been charged with crimes since 2020 and their wrongdoing includes ...",
+        "htmlSnippet": "1 day ago <b>...</b> At least two dozen U.S. Immigration and Customs Enforcement employees and contractors have been <b>charged</b> with crimes since 2020 and their wrongdoing includes&nbsp;...",
+        "formattedUrl": "https://apnews.com/.../trump-fires-homeland-security-secretary-noem-after-...",
+        "htmlFormattedUrl": "https://apnews.com/.../trump-fires-homeland-security-secretary-noem-after-...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtwKBrentm-esXdcY0fFnNjUaiLGHO_RitqmJq50hyDgus72kfWfBv2bA&s",
+              "width": "275",
+              "height": "183"
+            }
+          ],
+          "thumbnail": [
+            {
+              "src": "https://dims.apnews.com/dims4/default/0591c79/2147483647/strip/true/crop/1080x720+0+600/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fed%2Fda90a99e7d3e6a3b09824090f9c8%2F1829619645.jpg"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://dims.apnews.com/dims4/default/0591c79/2147483647/strip/true/crop/1080x720+0+600/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fed%2Fda90a99e7d3e6a3b09824090f9c8%2F1829619645.jpg",
+              "apple-itunes-app": "app-id=364677107, app-argument=https://apnews.com/video/trump-fires-homeland-security-secretary-noem-after-mounting-criticism-1123c070b3c94c4594c4d960e6f44e25",
+              "og:image:width": "980",
+              "twitter:card": "summary_large_image",
+              "og:site_name": "AP News",
+              "og:image:type": "image/jpeg",
+              "og:description": "President Donald Trump on Thursday fired his embattled Homeland Security Secretary Kristi Noem, after mounting criticism over her leadership of the department, including the handling of the administration’s immigration crackdown and disaster response.",
+              "twitter:image": "https://dims.apnews.com/dims4/default/0591c79/2147483647/strip/true/crop/1080x720+0+600/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fed%2Fda90a99e7d3e6a3b09824090f9c8%2F1829619645.jpg",
+              "twitter:site": "@AP",
+              "brightspot.contentid": "5cac81cb-1cb3-33fb-a008-73b1a6a6493a",
+              "og:video:type": "application/x-mpegURL",
+              "thumbnail": "https://dims.apnews.com/dims4/default/0591c79/2147483647/strip/true/crop/1080x720+0+600/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fed%2Fda90a99e7d3e6a3b09824090f9c8%2F1829619645.jpg",
+              "og:type": "video.other",
+              "twitter:title": "Trump fires Homeland Security Secretary Noem after mounting criticism",
+              "og:image:url": "https://dims.apnews.com/dims4/default/0591c79/2147483647/strip/true/crop/1080x720+0+600/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fed%2Fda90a99e7d3e6a3b09824090f9c8%2F1829619645.jpg",
+              "og:title": "Trump fires Homeland Security Secretary Noem after mounting criticism",
+              "og:image:height": "653",
+              "permutive-datalayer": "{\n  \"category\" : \"Video\",\n  \"dfp_kv\" : {\n    \"page_type\" : \"Video\"\n  },\n  \"tags\" : [ \"Media API video\", \"Vertical video\", \"Donald Trump\", \"Donald Trump\", \"National\", \"Immigration\", \"Kristi Noem\" ],\n  \"page_type\" : \"Video\",\n  \"publication_date\" : \"2026-03-05T16:01:31.000Z\",\n  \"item_id\" : \"1123c070b3c94c4594c4d960e6f44e25\",\n  \"headline\" : null,\n  \"authors\" : [ ],\n  \"proximic_video_segments\" : [ \"300003\", \"pa_d23\", \"pa_d33\", \"pa_ev14\", \"pa_ev15\", \"pa_ev2\", \"pa_ev4\", \"pa_eye100\", \"pa_eye101\", \"pa_eye103\", \"pa_eye104\", \"pa_eye105\", \"pa_eye106\", \"pa_eye107\", \"pa_eye108\", \"pa_eye109\", \"pa_eye110\", \"pa_eye111\", \"pa_eye112\", \"pa_eye113\", \"pa_eye114\", \"pa_eye115\", \"pa_eye116\", \"pa_eye118\", \"pa_eye125\", \"pa_eye126\", \"pa_eye127\", \"pa_eye128\", \"pa_eye129\", \"pa_eye130\", \"pa_eye131\", \"pa_eye132\", \"pa_eye133\", \"pa_eye137\", \"pa_eye138\", \"pa_eye139\", \"pa_eye140\", \"pa_eye141\", \"pa_eye142\", \"pa_eye144\", \"pa_eye145\", \"pa_eye146\", \"pa_eye147\", \"pa_eye148\", \"pa_eye149\", \"pa_eye151\", \"pa_eye152\", \"pa_eye153\", \"pa_eye154\", \"pa_eye155",
+              "fb:app_id": "870613919693099",
+              "og:video": "https://content.jwplatform.com/manifests/ot3x5tpp.m3u8",
+              "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1.0 user-scalable=yes",
+              "twitter:description": "President Donald Trump on Thursday fired his embattled Homeland Security Secretary Kristi Noem, after mounting criticism over her leadership of the department, including the handling of the administration’s immigration crackdown and disaster response.",
+              "vf:container_id": "1123c070b3c94c4594c4d960e6f44e25",
+              "og:url": "https://apnews.com/video/trump-fires-homeland-security-secretary-noem-after-mounting-criticism-1123c070b3c94c4594c4d960e6f44e25",
+              "gtm-datalayer": "{\n  \"tag_array\" : \"Media API video,Vertical video,Donald Trump,Donald Trump,National,Immigration,Kristi Noem,Politics\",\n  \"page_type\" : \"Video\",\n  \"is_breaking_news_banner_present\" : \"No\",\n  \"proximic_video_segments\" : [ \"300003\", \"pa_d23\", \"pa_d33\", \"pa_ev14\", \"pa_ev15\", \"pa_ev2\", \"pa_ev4\", \"pa_eye100\", \"pa_eye101\", \"pa_eye103\", \"pa_eye104\", \"pa_eye105\", \"pa_eye106\", \"pa_eye107\", \"pa_eye108\", \"pa_eye109\", \"pa_eye110\", \"pa_eye111\", \"pa_eye112\", \"pa_eye113\", \"pa_eye114\", \"pa_eye115\", \"pa_eye116\", \"pa_eye118\", \"pa_eye125\", \"pa_eye126\", \"pa_eye127\", \"pa_eye128\", \"pa_eye129\", \"pa_eye130\", \"pa_eye131\", \"pa_eye132\", \"pa_eye133\", \"pa_eye137\", \"pa_eye138\", \"pa_eye139\", \"pa_eye140\", \"pa_eye141\", \"pa_eye142\", \"pa_eye144\", \"pa_eye145\", \"pa_eye146\", \"pa_eye147\", \"pa_eye148\", \"pa_eye149\", \"pa_eye151\", \"pa_eye152\", \"pa_eye153\", \"pa_eye154\", \"pa_eye155\", \"pa_eye156\", \"pa_eye157\", \"pa_eye158\", \"pa_eye159\", \"pa_eye160\", \"pa_eye161\", \"pa_eye162\", \"pa_eye163\", \"pa_eye164\", \"pa_eye165\", \"pa_eye166\", \"pa_eye167\", \"pa_eye168\", \"pa"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://dims.apnews.com/dims4/default/0591c79/2147483647/strip/true/crop/1080x720+0+600/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fed%2Fda90a99e7d3e6a3b09824090f9c8%2F1829619645.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "AI (artificial intelligence) | The Guardian",
+        "htmlTitle": "AI (artificial intelligence) | The Guardian",
+        "link": "https://www.theguardian.com/technology/artificialintelligenceai",
+        "displayLink": "www.theguardian.com",
+        "snippet": "3 hours ago ... At last, David has landed a double punch on the tech Goliaths. Now to hit them even harder · Wikipedia bans AI-generated content in its online encyclopedia.",
+        "htmlSnippet": "3 hours ago <b>...</b> At last, David has landed a double punch on the tech Goliaths. Now to hit them even harder &middot; Wikipedia bans AI-generated content in its <b>online</b> encyclopedia.",
+        "formattedUrl": "https://www.theguardian.com/technology/artificialintelligenceai",
+        "htmlFormattedUrl": "https://www.theguardian.com/technology/artificialintelligenceai",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQJP-v1kZwA9Md-Xc2h3cNYDeewwUUmSdBDXVaKmN_g8kEmtltz_Nhpbg&s",
+              "width": "251",
+              "height": "201"
+            }
+          ],
+          "metatags": [
+            {
+              "theme-color": "#052962",
+              "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+              "twitter:dnt": "on"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://i.guim.co.uk/img/media/05d485a9ecfc61ef80d79798d616ab5fe4b2073c/647_0_6140_4912/master/6140.jpg?width=465&dpr=1&s=none&crop=5%3A4"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Don Lemon - The New York Times",
+        "htmlTitle": "Don Lemon - The New York Times",
+        "link": "https://www.nytimes.com/topic/don-lemon",
+        "displayLink": "www.nytimes.com",
+        "snippet": "2 days ago ... The former CNN anchor released a wide-ranging interview with the billionaire about business, politics, online hate speech and more.",
+        "htmlSnippet": "2 days ago <b>...</b> The former CNN anchor released a wide-ranging interview with the billionaire about business, politics, <b>online</b> hate speech and more.",
+        "formattedUrl": "https://www.nytimes.com/topic/don-lemon",
+        "htmlFormattedUrl": "https://www.nytimes.com/topic/don-lemon",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrEFd9dMV6ZEdLynnRAHAETMJuqcmVYo2BhO9L1d7zeE92oK6AIO_Lb8Q&s",
+              "width": "310",
+              "height": "163"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png",
+              "collection:language": "en",
+              "twitter:card": "summary_large_image",
+              "pt": "collection",
+              "twitter:url": "https://www.nytimes.com/topic/don-lemon",
+              "nyt-collection:identifier": "topic-don-lemon",
+              "pdate": "20240819",
+              "asset_id": "100000009638043",
+              "og:description": "News about Don Lemon. Commentary and archival information about Don Lemon from The New York Times.",
+              "twitter:image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png",
+              "nyt-collection:display-name": "Business",
+              "twitter:site": "@nytimes",
+              "news_keywords": "Business",
+              "ptime": "20240819134746",
+              "slug": "topic-don-lemon",
+              "collection:section": "Business",
+              "nyt-collection:type": "spotlightcollection",
+              "og:type": "article",
+              "twitter:title": "Don Lemon - Page 2",
+              "utime": "20250512152244",
+              "og:title": "Don Lemon - Page 2",
+              "slack-app-id": "A0121HXPPTQ",
+              "cn": "topic-don-lemon",
+              "color-scheme": "light",
+              "applicationname": "collection",
+              "ct": "spotlight",
+              "fb:app_id": "9869919170",
+              "collection:parentsection": "Business",
+              "nyt-collection:uri": "/topic/don-lemon",
+              "viewport": "width=device-width, initial-scale=1",
+              "nyt-collection:url": "https://www.nytimes.com/topic/don-lemon",
+              "og:url": "https://www.nytimes.com/topic/don-lemon"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Country star Ella Langley wins her first iHeartRadio Music Award",
+        "htmlTitle": "Country star Ella Langley wins her first iHeartRadio <b>Music</b> Award",
+        "link": "https://apnews.com/video/country-star-ella-langley-wins-her-first-iheartradio-music-award-b17a766616b943a1915fad8dd81d9a4b",
+        "displayLink": "apnews.com",
+        "snippet": "2 days ago ... At least two dozen U.S. Immigration and Customs Enforcement employees and contractors have been charged with crimes since 2020 and their wrongdoing includes ...",
+        "htmlSnippet": "2 days ago <b>...</b> At least two dozen U.S. Immigration and Customs Enforcement employees and contractors have been <b>charged</b> with crimes since 2020 and their wrongdoing includes&nbsp;...",
+        "formattedUrl": "https://apnews.com/.../country-star-ella-langley-wins-her-first-iheartradio-m...",
+        "htmlFormattedUrl": "https://apnews.com/.../country-star-ella-langley-wins-her-first-iheartradio-<b>m</b>...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpTQ_MNcD9bvcagBlC-tvLomZ9nqg9xGdVMMFK3_1PIrdkbxXhfX1mJ38&s",
+              "width": "275",
+              "height": "183"
+            }
+          ],
+          "thumbnail": [
+            {
+              "src": "https://dims.apnews.com/dims4/default/4ed4783/2147483647/strip/true/crop/1621x1080+150+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F52%2Fcc%2F0d50ef2c41eea623695a805f25c6%2Fus-sr-ella-langley-20260326e-autocr-1920x1080.jpg"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://dims.apnews.com/dims4/default/4ed4783/2147483647/strip/true/crop/1621x1080+150+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F52%2Fcc%2F0d50ef2c41eea623695a805f25c6%2Fus-sr-ella-langley-20260326e-autocr-1920x1080.jpg",
+              "apple-itunes-app": "app-id=364677107, app-argument=https://apnews.com/video/country-star-ella-langley-wins-her-first-iheartradio-music-award-b17a766616b943a1915fad8dd81d9a4b",
+              "og:image:width": "980",
+              "twitter:card": "summary_large_image",
+              "og:site_name": "AP News",
+              "og:image:type": "image/jpeg",
+              "og:description": "Ella Langley fangirls over sitting between Taylor Swift and Miley Cyrus at the iHeartRadio Music Awards, as she celebrates her win for best new country artist.",
+              "twitter:image": "https://dims.apnews.com/dims4/default/4ed4783/2147483647/strip/true/crop/1621x1080+150+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F52%2Fcc%2F0d50ef2c41eea623695a805f25c6%2Fus-sr-ella-langley-20260326e-autocr-1920x1080.jpg",
+              "twitter:site": "@AP",
+              "brightspot.contentid": "87b4b594-435b-3211-9a33-08d989427ce1",
+              "og:video:type": "application/x-mpegURL",
+              "thumbnail": "https://dims.apnews.com/dims4/default/4ed4783/2147483647/strip/true/crop/1621x1080+150+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F52%2Fcc%2F0d50ef2c41eea623695a805f25c6%2Fus-sr-ella-langley-20260326e-autocr-1920x1080.jpg",
+              "og:type": "video.other",
+              "twitter:title": "Country star Ella Langley wins her first iHeartRadio Music Award",
+              "og:image:url": "https://dims.apnews.com/dims4/default/4ed4783/2147483647/strip/true/crop/1621x1080+150+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F52%2Fcc%2F0d50ef2c41eea623695a805f25c6%2Fus-sr-ella-langley-20260326e-autocr-1920x1080.jpg",
+              "og:title": "Country star Ella Langley wins her first iHeartRadio Music Award",
+              "og:image:height": "653",
+              "permutive-datalayer": "{\n  \"category\" : \"Video\",\n  \"dfp_kv\" : {\n    \"page_type\" : \"Video\"\n  },\n  \"tags\" : [ \"Media API video\", \"Taylor Swift\", \"Celebrity\", \"Country music\", \"Miley Cyrus\", \"Ella Langley iHeart\", \"Music\", \"Ella Langley\" ],\n  \"page_type\" : \"Video\",\n  \"publication_date\" : \"2026-03-27T03:52:04.000Z\",\n  \"item_id\" : \"b17a766616b943a1915fad8dd81d9a4b\",\n  \"headline\" : null,\n  \"authors\" : [ ],\n  \"proximic_video_segments\" : [ \"999998\" ],\n  \"proximic_video_source_url\" : \"https://cdn.jwplayer.com/videos/FNOSrkZU.mp4\"\n}",
+              "fb:app_id": "870613919693099",
+              "og:video": "https://content.jwplatform.com/manifests/FNOSrkZU.m3u8",
+              "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1.0 user-scalable=yes",
+              "twitter:description": "Ella Langley fangirls over sitting between Taylor Swift and Miley Cyrus at the iHeartRadio Music Awards, as she celebrates her win for best new country artist.",
+              "vf:container_id": "b17a766616b943a1915fad8dd81d9a4b",
+              "og:url": "https://apnews.com/video/country-star-ella-langley-wins-her-first-iheartradio-music-award-b17a766616b943a1915fad8dd81d9a4b",
+              "gtm-datalayer": "{\n  \"tag_array\" : \"Media API video,Taylor Swift,Celebrity,Country music,Miley Cyrus,Ella Langley iHeart,Music,Ella Langley,Entertainment\",\n  \"page_type\" : \"Video\",\n  \"is_breaking_news_banner_present\" : \"No\",\n  \"proximic_video_segments\" : [ \"999998\" ],\n  \"audience_name\" : \"default\",\n  \"trending_nav_variation\" : \"Trending List\"\n}"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://dims.apnews.com/dims4/default/4ed4783/2147483647/strip/true/crop/1621x1080+150+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F52%2Fcc%2F0d50ef2c41eea623695a805f25c6%2Fus-sr-ella-langley-20260326e-autocr-1920x1080.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Iran War Live Updates: 12 U.S. Troops Injured in Attack on Saudi ...",
+        "htmlTitle": "Iran War Live Updates: 12 U.S. Troops Injured in Attack on Saudi ...",
+        "link": "https://www.nytimes.com/live/2026/03/27/world/iran-war-trump-oil-israel",
+        "displayLink": "www.nytimes.com",
+        "snippet": "8 hours ago ... When the Tehran home of the late film director Abbas Kiarostami was damaged in a strike earlier this week, amid the U.S.-Israeli military campaign, a spokesman ...",
+        "htmlSnippet": "8 hours ago <b>...</b> When the Tehran home of the late <b>film</b> director Abbas Kiarostami was damaged in a strike earlier this week, amid the U.S.-Israeli military campaign, a spokesman&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/live/2026/03/27/world/iran-war-trump-oil-israel",
+        "htmlFormattedUrl": "https://www.nytimes.com/live/2026/03/27/world/iran-war-trump-oil-israel",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkH6BY81cynY2ZVCg8qoUCrRi_G7SlHZe5ie-rhKssToDoc_4ptvO6SNMf&s",
+              "width": "311",
+              "height": "162"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://static01.nyt.com/images/2026/03/27/multimedia/27israel-iran-promo9p-gckl/27israel-iran-promo9p-gckl-facebookJumbo.jpg",
+              "nyt_uri": "nyt://legacycollection/d6f62d0f-bd0e-5175-b654-367c39667bf2",
+              "twitter:card": "summary_large_image",
+              "article:published_time": "2026-03-27T07:15:58.000Z",
+              "twitter:url": "https://www.nytimes.com/live/2026/03/27/world/iran-war-trump-oil-israel",
+              "pdate": "20260327",
+              "articleid": "100000010804506",
+              "og:description": "Two of the Americans were seriously wounded in the strike on the Prince Sultan Air Base, the officials said, in one of the most serious breaches of American defenses since the war began on Feb. 28.",
+              "twitter:image": "https://static01.nyt.com/images/2026/03/27/multimedia/27israel-iran-promo9p-gckl/27israel-iran-promo9p-gckl-videoSixteenByNine3000.jpg",
+              "twitter:site": "@nytimes",
+              "article:modified_time": "2026-03-28T17:01:32.015Z",
+              "scg": "middleeast",
+              "article:content_tier": "metered",
+              "image": "https://static01.nyt.com/images/2026/03/27/multimedia/27israel-iran-promo9p-gckl/27israel-iran-promo9p-gckl-facebookJumbo.jpg",
+              "og:type": "article",
+              "article:section": "World",
+              "twitter:title": "Iran War Live Updates: 12 U.S. Troops Injured in Attack on Saudi Base, Officials Say",
+              "cg": "world",
+              "pubp_event_id": "pubp://event/cab022d6bab448a9b0b0aaba1cb47b30",
+              "og:title": "Iran War Live Updates: 12 U.S. Troops Injured in Attack on Saudi Base, Officials Say",
+              "slack-app-id": "A0121HXPPTQ",
+              "color-scheme": "light",
+              "article:tag": "Iran",
+              "fb:app_id": "9869919170",
+              "byl": "By Eric Schmitt, Chris Cameron, Farnaz Fassihi, Shirin Hakim and Mark Landler",
+              "viewport": "width=device-width, initial-scale=1",
+              "twitter:description": "Two of the Americans were seriously wounded in the strike on the Prince Sultan Air Base, the officials said, in one of the most serious breaches of American defenses since the war began on Feb. 28.",
+              "og:url": "https://www.nytimes.com/live/2026/03/27/world/iran-war-trump-oil-israel",
+              "article:opinion": "false"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/images/2026/03/27/multimedia/27israel-iran-promo9p-gckl/27israel-iran-promo9p-gckl-facebookJumbo.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Latest news, sport and opinion from the Guardian",
+        "htmlTitle": "Latest news, sport and opinion from the Guardian",
+        "link": "https://www.theguardian.com/uk?q=Online%20slots%20software%20platform",
+        "displayLink": "www.theguardian.com",
+        "snippet": "12 hours ago ... US-Israel war on Iran expands as Yemen's Houthis launch first attack since conflict began. Missile traces launched from Yemen at Israel sighted in the sky over ...",
+        "htmlSnippet": "12 hours ago <b>...</b> US-Israel war on Iran expands as Yemen&#39;s Houthis launch first attack since conflict began. Missile traces <b>launched</b> from Yemen at Israel sighted in the sky over&nbsp;...",
+        "formattedUrl": "https://www.theguardian.com/uk?q...",
+        "htmlFormattedUrl": "https://www.theguardian.com/uk?q...",
+        "pagemap": {
+          "metatags": [
+            {
+              "theme-color": "#052962",
+              "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+              "twitter:dnt": "on"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

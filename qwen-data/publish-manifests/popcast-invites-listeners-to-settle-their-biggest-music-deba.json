@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-29T00:35:08.580Z",
+  "event_id": "evt-2026-03-28-creators-platforms-general-global",
+  "cluster_id": "evt-2026-03-28-creators-platforms-general-global",
+  "article_type": "report",
+  "title": "Popcast Invites Listeners to Settle Their Biggest Music Debates",
+  "slug": "popcast-invites-listeners-to-settle-their-biggest-music-deba",
+  "canonical_slug": "2026-03-29-popcast-invites-listeners-to-settle-their-biggest-music-deba",
+  "expected_url": "/article/2026-03-29-popcast-invites-listeners-to-settle-their-biggest-music-deba",
+  "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-29-popcast-invites-listeners-to-settle-their-biggest-music-deba.mdx",
+  "published_at": "2026-03-29T00:35:08.574Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "creators-platforms",
+  "topic_label": "Creators & Platforms",
+  "subsection": "Creators & Platforms",
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/36757481/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/36757481/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/night-portrait-of-woman-listening-to-music-in-baku-36757481/",
+    "asset_key": "pexels:36757481",
+    "alt_text": "Illustration for Popcast Invites Listeners to Settle Their Biggest Music Debates",
+    "selection_mode": "provider_download_new:pexels:strong",
+    "query_used": "Popcast Invites Listeners photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Creators & Platforms",
+    "Influencer Economy"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Can We Settle Your Music Debate? Of Course We Can.",
+        "url": "https://nytimes.com/2026/03/27/arts/popcast-music-debate-mailbag-questions.html",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Peter Adeshile : For Me , Music Has Always Been an Expression of Faith",
+        "url": "https://www.thisdaylive.com/2026/03/28/peter-adeshile-for-me-music-has-always-been-an-expression-of-faith/",
+        "domain": "thisdaylive.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Peter Adeshile : For Me , Music Has Always Been an Expression of Faith",
+          "url": "https://www.thisdaylive.com/2026/03/28/peter-adeshile-for-me-music-has-always-been-an-expression-of-faith/",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "music"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "creators-platforms",
+          "label": "Creators & Platforms",
+          "type": "topic"
+        },
+        {
+          "slug": "influencer-economy",
+          "label": "Influencer Economy",
+          "type": "theme"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "creators-platforms",
+        "topic_label": "Creators & Platforms",
+        "supported": true,
+        "matched_aliases": [
+          "creator economy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Popcast Invites Listeners photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "popcast",
+        "invites",
+        "listeners"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

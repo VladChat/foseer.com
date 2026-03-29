@@ -1,0 +1,11 @@
+Patch purpose:
+- split cache into runtime cache (qwen-cache) and versioned seed cache (qwen-data/cache-seed)
+- add seed-cache fallback in cache readers
+- add seed-cache builder script
+- harden .gitignore for secrets/runtime artifacts while keeping package-lock.json versionable
+
+Apply by extracting over repo root.
+After extract:
+1) git status
+2) npm run qwen:build-seed-cache   (optional, refresh seed snapshots from current runtime cache)
+3) commit and push

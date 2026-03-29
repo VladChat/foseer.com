@@ -1,0 +1,538 @@
+{
+  "timestamp": 1774744382113,
+  "ttl_hours": 8,
+  "provider": "google",
+  "query_hash": "323g4h",
+  "data": {
+    "kind": "customsearch#search",
+    "url": {
+      "type": "application/json",
+      "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    },
+    "queries": {
+      "request": [
+        {
+          "title": "Google Custom Search - (site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking sports leagues tournaments transfers athlete culture)",
+          "totalResults": "378",
+          "searchTerms": "(site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking sports leagues tournaments transfers athlete culture)",
+          "count": 10,
+          "startIndex": 1,
+          "inputEncoding": "utf8",
+          "outputEncoding": "utf8",
+          "safe": "off",
+          "cx": "f508d19f8630d4015",
+          "dateRestrict": "d2"
+        }
+      ],
+      "nextPage": [
+        {
+          "title": "Google Custom Search - (site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking sports leagues tournaments transfers athlete culture)",
+          "totalResults": "378",
+          "searchTerms": "(site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking sports leagues tournaments transfers athlete culture)",
+          "count": 10,
+          "startIndex": 11,
+          "inputEncoding": "utf8",
+          "outputEncoding": "utf8",
+          "safe": "off",
+          "cx": "f508d19f8630d4015",
+          "dateRestrict": "d2"
+        }
+      ]
+    },
+    "context": {
+      "title": "blog.equalle.com Web Search"
+    },
+    "searchInformation": {
+      "searchTime": 0.508141,
+      "formattedSearchTime": "0.51",
+      "totalResults": "378",
+      "formattedTotalResults": "378"
+    },
+    "items": [
+      {
+        "kind": "customsearch#result",
+        "title": "Tiger Woods' history of car crashes and injuries: What to know after ...",
+        "htmlTitle": "Tiger Woods&#39; history of car crashes and injuries: What to know after ...",
+        "link": "https://www.nytimes.com/athletic/7152847/2026/03/27/tiger-woods-dui-arrest-jupiter-island-accident-timeline/",
+        "displayLink": "www.nytimes.com",
+        "snippet": "1 day ago ... He was also charged with refusal to submit to a lawful test, Budensiek said. Both charges are misdemeanors. The crash is the fourth major incident involving ...",
+        "htmlSnippet": "1 day ago <b>...</b> He was also <b>charged</b> with refusal to submit to a lawful test, Budensiek said. Both charges are misdemeanors. The crash is the fourth major incident involving&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/.../tiger-woods-dui-arrest-jupiter-island-accident-t...",
+        "htmlFormattedUrl": "https://www.nytimes.com/.../tiger-woods-dui-arrest-jupiter-island-accident-t...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRotqQVi6aj4q_I24tuWP3x54V5T5PnKh598Zj18IaxQHnR-8ZtE7DpJg&s=0",
+              "width": "150",
+              "height": "100"
+            }
+          ],
+          "metatags": [
+            {
+              "nyt_uri": "https://www.nytimes.com/athletic/7152847/2026/03/27/tiger-woods-dui-arrest-jupiter-island-accident-timeline/",
+              "og:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27221202/AP26086782701614-scaled.jpg?width=1200&height=630&fit=cover",
+              "apple-itunes-app": "app-id=1135216317, app-argument=https://www.nytimes.com/athletic/7152847/2026/03/27/tiger-woods-dui-arrest-jupiter-island-accident-timeline/",
+              "twitter:card": "summary_large_image",
+              "twitter:title": "Tiger Woods’ history of car crashes and injuries: What to know after latest DUI arrest",
+              "og:type": "article",
+              "og:site_name": "The Athletic",
+              "author": "Gabby Herzig",
+              "og:title": "Tiger Woods’ history of car crashes and injuries: What to know after latest DUI arrest",
+              "msapplication-tileimage": "https://www.nytimes.com/athletic/static/img/athletic-icon-192x192.png",
+              "twitter:creator": "@TheAthletic",
+              "og:description": "Woods, 50, has been involved in four incidents involving automobiles since 2009, causing personal and professional harm.",
+              "twitter:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27221202/AP26086782701614-scaled.jpg?width=1200&height=675&fit=cover",
+              "next-head-count": "43",
+              "fb:app_id": "755512374574534",
+              "twitter:site": "@TheAthletic",
+              "viewport": "width=device-width",
+              "twitter:description": "Woods, 50, has been involved in four incidents involving automobiles since 2009, causing personal and professional harm.",
+              "og:url": "https://www.nytimes.com/athletic/7152847/2026/03/27/tiger-woods-dui-arrest-jupiter-island-accident-timeline/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27221202/AP26086782701614-scaled.jpg?width=1200&height=630&fit=cover"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Women's March Madness 2026 scores, live updates: Louisville vs ...",
+        "htmlTitle": "Women&#39;s March Madness 2026 scores, live updates: Louisville vs ...",
+        "link": "https://www.nytimes.com/athletic/live-blogs/womens-march-madness-2026-live-updates-sweet-16-results-bracket-scores-ncaa/VhucJEHwuwMn/wEnKXhQDF9aD/",
+        "displayLink": "www.nytimes.com",
+        "snippet": "7 hours ago ... Women's March Madness 2026 scores, live updates: Louisville vs. Michigan; NCAA Tournament latest. Follow our live coverage of today's games as the Sweet 16 ...",
+        "htmlSnippet": "7 hours ago <b>...</b> Women&#39;s March Madness 2026 scores, live updates: Louisville vs. Michigan; NCAA <b>Tournament latest</b>. Follow our live coverage of today&#39;s games as the Sweet 16&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/athletic/live-blogs/.../wEnKXhQDF9aD/",
+        "htmlFormattedUrl": "https://www.nytimes.com/athletic/live-blogs/.../wEnKXhQDF9aD/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpREnDFOOvdTYdzShUZifrvDkV8WiZHHI0H7afZzki6bXwB5DN7r0rBt4&s",
+              "width": "310",
+              "height": "163"
+            }
+          ],
+          "metatags": [
+            {
+              "nyt_uri": "https://www.nytimes.com/athletic/live-blogs/womens-march-madness-2026-live-updates-sweet-16-results-bracket-scores-ncaa/VhucJEHwuwMn/wEnKXhQDF9aD/",
+              "og:image": "https://cdn-media.theathletic.com/cdn-cgi/image/width=1200,height=630,fit=cover/VhucJEHwuwMn_WhMFnvllcgos_1440x960.jpg",
+              "apple-itunes-app": "app-id=1135216317, app-argument=https://www.nytimes.com/athletic/live-blogs/womens-march-madness-2026-live-updates-sweet-16-results-bracket-scores-ncaa/VhucJEHwuwMn/wEnKXhQDF9aD/",
+              "twitter:card": "summary_large_image",
+              "twitter:title": "Women's March Madness 2026 scores, live updates: Louisville vs. Michigan; NCAA Tournament latest",
+              "og:type": "article",
+              "article:published_time": "2026-03-27T14:00:11.584Z",
+              "og:site_name": "The Athletic",
+              "author": "The Athletic",
+              "og:title": "Women's March Madness 2026 scores, live updates: Louisville vs. Michigan; NCAA Tournament latest",
+              "msapplication-tileimage": "https://www.nytimes.com/athletic/static/img/athletic-icon-192x192.png",
+              "twitter:creator": "@TheAthletic",
+              "og:description": "Q2 4:30 - Louisville 25, Michigan 20At the under five timeout in the first half, Louisville has a five-point lead on Michigan.",
+              "twitter:image": "https://cdn-media.theathletic.com/cdn-cgi/image/width=1200,height=675,fit=cover/VhucJEHwuwMn_WhMFnvllcgos_1440x960.jpg",
+              "next-head-count": "41",
+              "fb:app_id": "755512374574534",
+              "twitter:site": "@TheAthletic",
+              "article:modified_time": "2026-03-28T17:34:02.947Z",
+              "viewport": "width=device-width",
+              "twitter:description": "Q2 4:30 - Louisville 25, Michigan 20At the under five timeout in the first half, Louisville has a five-point lead on Michigan.",
+              "og:url": "https://www.nytimes.com/athletic/live-blogs/womens-march-madness-2026-live-updates-sweet-16-results-bracket-scores-ncaa/VhucJEHwuwMn/wEnKXhQDF9aD/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://cdn-media.theathletic.com/cdn-cgi/image/width=1200,height=630,fit=cover/VhucJEHwuwMn_WhMFnvllcgos_1440x960.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Women's March Madness 2026 scores, live updates: Louisville vs ...",
+        "htmlTitle": "Women&#39;s March Madness 2026 scores, live updates: Louisville vs ...",
+        "link": "https://www.nytimes.com/athletic/live-blogs/womens-march-madness-2026-live-updates-sweet-16-results-bracket-scores-ncaa/VhucJEHwuwMn/fNGdHbrmtF8k/",
+        "displayLink": "www.nytimes.com",
+        "snippet": "8 hours ago ... Michigan; NCAA Tournament latest. Follow our live coverage of today's games as the Sweet 16 continues in the women's NCAA Tournament. The Athletic Live Team and ...",
+        "htmlSnippet": "8 hours ago <b>...</b> Michigan; NCAA <b>Tournament latest</b>. Follow our live coverage of today&#39;s games as the Sweet 16 continues in the women&#39;s NCAA <b>Tournament</b>. The <b>Athletic</b> Live Team and&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/athletic/live-blogs/.../fNGdHbrmtF8k/",
+        "htmlFormattedUrl": "https://www.nytimes.com/athletic/live-blogs/.../fNGdHbrmtF8k/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCWOlDl0l8YjYvmIxFS8v1kQmMQrruqNJDzPvXro9eQru8I8Reuybxjv-k&s",
+              "width": "310",
+              "height": "163"
+            }
+          ],
+          "metatags": [
+            {
+              "nyt_uri": "https://www.nytimes.com/athletic/live-blogs/womens-march-madness-2026-live-updates-sweet-16-results-bracket-scores-ncaa/VhucJEHwuwMn/fNGdHbrmtF8k/",
+              "og:image": "https://cdn-media.theathletic.com/cdn-cgi/image/width=1200,height=630,fit=cover/VhucJEHwuwMn_x3BXxyUSz4AG_1440x960.jpg",
+              "apple-itunes-app": "app-id=1135216317, app-argument=https://www.nytimes.com/athletic/live-blogs/womens-march-madness-2026-live-updates-sweet-16-results-bracket-scores-ncaa/VhucJEHwuwMn/fNGdHbrmtF8k/",
+              "twitter:card": "summary_large_image",
+              "twitter:title": "Women's March Madness 2026 scores, live updates: Louisville vs. Michigan; NCAA Tournament latest",
+              "og:type": "article",
+              "article:published_time": "2026-03-27T14:00:11.584Z",
+              "og:site_name": "The Athletic",
+              "author": "The Athletic",
+              "og:title": "Women's March Madness 2026 scores, live updates: Louisville vs. Michigan; NCAA Tournament latest",
+              "msapplication-tileimage": "https://www.nytimes.com/athletic/static/img/athletic-icon-192x192.png",
+              "twitter:creator": "@TheAthletic",
+              "og:description": "Q1 1:42 - Louisville 15, Michigan 9That was a sweet driving layup from Olivia Olson to pick up the “and one.”Michigan needs some offense and maybe that’s the spark. Olson completes the three-point play. Suddenly, it’s a six-point game.",
+              "twitter:image": "https://cdn-media.theathletic.com/cdn-cgi/image/width=1200,height=675,fit=cover/VhucJEHwuwMn_x3BXxyUSz4AG_1440x960.jpg",
+              "next-head-count": "41",
+              "fb:app_id": "755512374574534",
+              "twitter:site": "@TheAthletic",
+              "article:modified_time": "2026-03-28T17:21:01.266Z",
+              "viewport": "width=device-width",
+              "twitter:description": "Q1 1:42 - Louisville 15, Michigan 9That was a sweet driving layup from Olivia Olson to pick up the “and one.”Michigan needs some offense and maybe that’s the spark. Olson completes the three-point play. Suddenly, it’s a six-point game.",
+              "og:url": "https://www.nytimes.com/athletic/live-blogs/womens-march-madness-2026-live-updates-sweet-16-results-bracket-scores-ncaa/VhucJEHwuwMn/fNGdHbrmtF8k/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://cdn-media.theathletic.com/cdn-cgi/image/width=1200,height=630,fit=cover/VhucJEHwuwMn_x3BXxyUSz4AG_1440x960.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Casemiro not thinking about reversing Manchester United decision",
+        "htmlTitle": "Casemiro not thinking about reversing Manchester United decision",
+        "link": "https://www.nytimes.com/athletic/7151400/2026/03/27/casemiro-manchester-united-stay-transfer/",
+        "displayLink": "www.nytimes.com",
+        "snippet": "2 days ago ... The midfielder confirmed his intention to leave the club on January 22, but has seen a recent upturn in form under Michael Carrick.",
+        "htmlSnippet": "2 days ago <b>...</b> The midfielder <b>confirmed</b> his intention to leave the club on January 22, but has seen a recent upturn in form under Michael Carrick.",
+        "formattedUrl": "https://www.nytimes.com/.../03/.../casemiro-manchester-united-stay-transfer...",
+        "htmlFormattedUrl": "https://www.nytimes.com/.../03/.../casemiro-manchester-united-stay-transfer...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_fonTgdmgfsWR0WzLiBI6hVdd7gQuV9U1Zs5qVNmh_uZx9ReCAE6R_vMk&s",
+              "width": "275",
+              "height": "183"
+            }
+          ],
+          "metatags": [
+            {
+              "nyt_uri": "https://www.nytimes.com/athletic/7151400/2026/03/27/casemiro-manchester-united-stay-transfer/",
+              "og:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27055703/casemiro-cele-march-26-scaled-e1774605451643.jpg?width=1200&height=630&fit=cover",
+              "apple-itunes-app": "app-id=1135216317, app-argument=https://www.nytimes.com/athletic/7151400/2026/03/27/casemiro-manchester-united-stay-transfer/",
+              "twitter:card": "summary_large_image",
+              "twitter:title": "Casemiro not thinking about reversing Manchester United decision",
+              "og:type": "article",
+              "og:site_name": "The Athletic",
+              "author": "Adam Crafton",
+              "og:title": "Casemiro not thinking about reversing Manchester United decision",
+              "msapplication-tileimage": "https://www.nytimes.com/athletic/static/img/athletic-icon-192x192.png",
+              "twitter:creator": "@TheAthletic",
+              "og:description": "The midfielder confirmed his intention to leave the club on January 22, but has seen a recent upturn in form under Michael Carrick.",
+              "twitter:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27055703/casemiro-cele-march-26-scaled-e1774605451643.jpg?width=1200&height=675&fit=cover",
+              "next-head-count": "43",
+              "fb:app_id": "755512374574534",
+              "twitter:site": "@TheAthletic",
+              "viewport": "width=device-width",
+              "twitter:description": "The midfielder confirmed his intention to leave the club on January 22, but has seen a recent upturn in form under Michael Carrick.",
+              "og:url": "https://www.nytimes.com/athletic/7151400/2026/03/27/casemiro-manchester-united-stay-transfer/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27055703/casemiro-cele-march-26-scaled-e1774605451643.jpg?width=1200&height=630&fit=cover"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Tiger Woods arrested, charged with DUI after rollover crash in Florida",
+        "htmlTitle": "Tiger Woods arrested, <b>charged</b> with DUI after rollover crash in Florida",
+        "link": "https://www.nytimes.com/athletic/7152418/2026/03/27/tiger-woods-car-crash-florida/",
+        "displayLink": "www.nytimes.com",
+        "snippet": "12 hours ago ... But it doesn't matter who you are; if you break the law, we're going to follow the law. It's a really easy path to take. As far as being in the jail, we're ...",
+        "htmlSnippet": "12 hours ago <b>...</b> But it doesn&#39;t matter who you are; if you <b>break</b> the law, we&#39;re going to follow the law. It&#39;s a really easy path to take. As far as being in the jail, we&#39;re&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/athletic/7152418/.../tiger-woods-car-crash-florida...",
+        "htmlFormattedUrl": "https://www.nytimes.com/athletic/7152418/.../tiger-woods-car-crash-florida...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUvjgAlRJuZ0g6b8DIqkiIqhEw9IfG5X9fZbPcHaZUtGITcAHEVDMQ6PA&s",
+              "width": "275",
+              "height": "183"
+            }
+          ],
+          "metatags": [
+            {
+              "nyt_uri": "https://www.nytimes.com/athletic/7152418/2026/03/27/tiger-woods-car-crash-florida/",
+              "og:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27174313/AP26086762245259.jpg?width=1200&height=630&fit=cover",
+              "apple-itunes-app": "app-id=1135216317, app-argument=https://www.nytimes.com/athletic/7152418/2026/03/27/tiger-woods-car-crash-florida/",
+              "twitter:card": "summary_large_image",
+              "twitter:title": "Tiger Woods arrested, charged with DUI after rollover crash in Florida",
+              "og:type": "article",
+              "og:site_name": "The Athletic",
+              "author": "Gabby Herzig and Hugh Kellenberger",
+              "og:title": "Tiger Woods arrested, charged with DUI after rollover crash in Florida",
+              "msapplication-tileimage": "https://www.nytimes.com/athletic/static/img/athletic-icon-192x192.png",
+              "twitter:creator": "@TheAthletic",
+              "og:description": "Woods, 50, was charged with DUI with property damage and refusal to submit to a lawful test. Both charges are misdemeanors.",
+              "twitter:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27174313/AP26086762245259.jpg?width=1200&height=675&fit=cover",
+              "next-head-count": "43",
+              "fb:app_id": "755512374574534",
+              "twitter:site": "@TheAthletic",
+              "viewport": "width=device-width",
+              "twitter:description": "Woods, 50, was charged with DUI with property damage and refusal to submit to a lawful test. Both charges are misdemeanors.",
+              "og:url": "https://www.nytimes.com/athletic/7152418/2026/03/27/tiger-woods-car-crash-florida/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27174313/AP26086762245259.jpg?width=1200&height=630&fit=cover"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+        "htmlTitle": "Manchester United <b>transfers</b>: Zirkzee, Rashford, and should the club ...",
+        "link": "https://www.nytimes.com/athletic/7148954/2026/03/27/manchester-united-transfers-rashford-zirkzee-hojlund/",
+        "displayLink": "www.nytimes.com",
+        "snippet": "2 days ago ... They have much more attacking potency. I still think that when you then add in Champions League football, when you think of potentially Joshua Zirkzee departing ...",
+        "htmlSnippet": "2 days ago <b>...</b> They have much more attacking potency. I still think that when you then add in Champions <b>League</b> football, when you think of potentially Joshua Zirkzee departing&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/.../manchester-united-transfers-rashford-zirkzee-h...",
+        "htmlFormattedUrl": "https://www.nytimes.com/.../manchester-united-<b>transfers</b>-rashford-zirkzee-h...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzX8EcDWndw-jXsyng_h8JRLKizyaowBoU1Lwwx91Rsy3fWpyIaUZeswE&s",
+              "width": "275",
+              "height": "183"
+            }
+          ],
+          "metatags": [
+            {
+              "nyt_uri": "https://www.nytimes.com/athletic/7148954/2026/03/27/manchester-united-transfers-rashford-zirkzee-hojlund/",
+              "og:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/26105314/260326-TOTD.png?width=1200&height=630&fit=cover",
+              "apple-itunes-app": "app-id=1135216317, app-argument=https://www.nytimes.com/athletic/7148954/2026/03/27/manchester-united-transfers-rashford-zirkzee-hojlund/",
+              "twitter:card": "summary_large_image",
+              "twitter:title": "Manchester United transfers: Zirkzee, Rashford, and should the club target an experienced striker?",
+              "og:type": "article",
+              "og:site_name": "The Athletic",
+              "author": "Laurie Whitwell, Carl Anka, Andy Mitten and Ian Irving",
+              "og:title": "Manchester United transfers: Zirkzee, Rashford, and should the club target an experienced striker?",
+              "msapplication-tileimage": "https://www.nytimes.com/athletic/static/img/athletic-icon-192x192.png",
+              "twitter:creator": "@TheAthletic",
+              "og:description": "Ian Irving, Laurie Whitwell, Carl Anka and Andy Mitten debate if the club should look to sign more attacking players this summer",
+              "twitter:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/26105314/260326-TOTD.png?width=1200&height=675&fit=cover",
+              "next-head-count": "43",
+              "fb:app_id": "755512374574534",
+              "twitter:site": "@TheAthletic",
+              "viewport": "width=device-width",
+              "twitter:description": "Ian Irving, Laurie Whitwell, Carl Anka and Andy Mitten debate if the club should look to sign more attacking players this summer",
+              "og:url": "https://www.nytimes.com/athletic/7148954/2026/03/27/manchester-united-transfers-rashford-zirkzee-hojlund/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/athletic/uploads/wp/2026/03/26105314/260326-TOTD.png?width=1200&height=630&fit=cover"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Are these Manchester United's summer transfer priorities?",
+        "htmlTitle": "Are these Manchester United&#39;s summer <b>transfer</b> priorities?",
+        "link": "https://www.nytimes.com/athletic/7151826/2026/03/28/manchester-united-transfer-priorities/",
+        "displayLink": "www.nytimes.com",
+        "snippet": "19 hours ago ... Senne Lammens' competition. Now let's take a closer look at each of those points. Casemiro, Mark II. Speaking to The Athletic's Adam Crafton, Casemiro ...",
+        "htmlSnippet": "19 hours ago <b>...</b> Senne Lammens&#39; competition. Now let&#39;s take a closer look at each of those points. Casemiro, Mark II. Speaking to The <b>Athletic&#39;s</b> Adam Crafton, Casemiro&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/athletic/.../manchester-united-transfer-priorities/",
+        "htmlFormattedUrl": "https://www.nytimes.com/athletic/.../manchester-united-transfer-priorities/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ3WIT3yVjs29rS0G9kemMps_vjDEOn52mPkje1yEQ2iV6auvck_Bj09AL&s",
+              "width": "292",
+              "height": "173"
+            }
+          ],
+          "metatags": [
+            {
+              "nyt_uri": "https://www.nytimes.com/athletic/7151826/2026/03/28/manchester-united-transfer-priorities/",
+              "og:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27124155/GettyImages-2266206288-1-scaled.jpg?width=1200&height=630&fit=cover",
+              "apple-itunes-app": "app-id=1135216317, app-argument=https://www.nytimes.com/athletic/7151826/2026/03/28/manchester-united-transfer-priorities/",
+              "twitter:card": "summary_large_image",
+              "twitter:title": "Are these Manchester United’s summer transfer priorities?",
+              "og:type": "article",
+              "og:site_name": "The Athletic",
+              "author": "Ian Irving",
+              "og:title": "Are these Manchester United’s summer transfer priorities?",
+              "msapplication-tileimage": "https://www.nytimes.com/athletic/static/img/athletic-icon-192x192.png",
+              "twitter:creator": "@TheAthletic",
+              "og:description": "We've spent a week discussing United's summer transfer plans - so what are the most important issues to solve?",
+              "twitter:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27124155/GettyImages-2266206288-1-scaled.jpg?width=1200&height=675&fit=cover",
+              "next-head-count": "43",
+              "fb:app_id": "755512374574534",
+              "twitter:site": "@TheAthletic",
+              "viewport": "width=device-width",
+              "twitter:description": "We've spent a week discussing United's summer transfer plans - so what are the most important issues to solve?",
+              "og:url": "https://www.nytimes.com/athletic/7151826/2026/03/28/manchester-united-transfer-priorities/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27124155/GettyImages-2266206288-1-scaled.jpg?width=1200&height=630&fit=cover"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Athletes train for almost every scenario. But there's a stressor sports ...",
+        "htmlTitle": "<b>Athletes</b> train for almost every scenario. But there&#39;s a stressor <b>sports</b> ...",
+        "link": "https://www.nytimes.com/athletic/7152160/2026/03/28/athletes-train-for-almost-every-scenario-but-theres-a-stressor-sports-hasnt-caught-up-to/",
+        "displayLink": "www.nytimes.com",
+        "snippet": "16 hours ago ... She was a professor at Harvard Business School and is a best-selling author. Before the opening tip of an NCAA tournament game, an unnamed college basketball ...",
+        "htmlSnippet": "16 hours ago <b>...</b> She was a professor at Harvard Business School and is a best-selling author. Before the opening tip of an NCAA <b>tournament</b> game, an unnamed college basketball&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/.../athletes-train-for-almost-every-scenario-but-th...",
+        "htmlFormattedUrl": "https://www.nytimes.com/.../<b>athlete</b>s-train-for-almost-every-scenario-but-th...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBqIuA6arNcDaFI7y7Sx-HlUcFP24mBrfGqef5TORJ8jh3QpqBUTptsh6R&s",
+              "width": "275",
+              "height": "183"
+            }
+          ],
+          "metatags": [
+            {
+              "nyt_uri": "https://www.nytimes.com/athletic/7152160/2026/03/28/athletes-train-for-almost-every-scenario-but-theres-a-stressor-sports-hasnt-caught-up-to/",
+              "og:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27131412/0326-gambling-scaled.jpg?width=1200&height=630&fit=cover",
+              "apple-itunes-app": "app-id=1135216317, app-argument=https://www.nytimes.com/athletic/7152160/2026/03/28/athletes-train-for-almost-every-scenario-but-theres-a-stressor-sports-hasnt-caught-up-to/",
+              "twitter:card": "summary_large_image",
+              "twitter:title": "Athletes train for almost every scenario. But there’s a stressor sports hasn’t caught up to",
+              "og:type": "article",
+              "og:site_name": "The Athletic",
+              "author": "Amy Cuddy",
+              "og:title": "Athletes train for almost every scenario. But there’s a stressor sports hasn’t caught up to",
+              "msapplication-tileimage": "https://www.nytimes.com/athletic/static/img/athletic-icon-192x192.png",
+              "twitter:creator": "@TheAthletic",
+              "og:description": "Social-evaluative threat has always been part of sports. What's changed is the dosage.",
+              "twitter:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27131412/0326-gambling-scaled.jpg?width=1200&height=675&fit=cover",
+              "next-head-count": "42",
+              "fb:app_id": "755512374574534",
+              "twitter:site": "@TheAthletic",
+              "viewport": "width=device-width",
+              "twitter:description": "Social-evaluative threat has always been part of sports. What's changed is the dosage.",
+              "og:url": "https://www.nytimes.com/athletic/7152160/2026/03/28/athletes-train-for-almost-every-scenario-but-theres-a-stressor-sports-hasnt-caught-up-to/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27131412/0326-gambling-scaled.jpg?width=1200&height=630&fit=cover"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "USWNT's Catarina Macario joins San Diego Wave from Chelsea",
+        "htmlTitle": "USWNT&#39;s Catarina Macario joins San Diego Wave from Chelsea",
+        "link": "https://www.nytimes.com/athletic/7151314/2026/03/27/macario-san-diego-wave-chelsea-transfer/",
+        "displayLink": "www.nytimes.com",
+        "snippet": "1 day ago ... San Diego Wave FC has announced the signing of U.S. women's national team striker Catarina Macario from Chelsea. Macario, who was the USWNT's top goal ...",
+        "htmlSnippet": "1 day ago <b>...</b> San Diego Wave FC has <b>announced</b> the signing of U.S. women&#39;s national team striker Catarina Macario from Chelsea. Macario, who was the USWNT&#39;s top goal&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/.../03/.../macario-san-diego-wave-chelsea-transfer...",
+        "htmlFormattedUrl": "https://www.nytimes.com/.../03/.../macario-san-diego-wave-chelsea-transfer...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCr5XBD8_LRVGuC392Ds3RpigWXtZraxnj5osYxk1OQW4cPHOobOkUwus&s",
+              "width": "275",
+              "height": "183"
+            }
+          ],
+          "metatags": [
+            {
+              "nyt_uri": "https://www.nytimes.com/athletic/7151314/2026/03/27/macario-san-diego-wave-chelsea-transfer/",
+              "og:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27053314/Macario-Headshot-scaled-e1774604041946.jpg?width=1200&height=630&fit=cover",
+              "apple-itunes-app": "app-id=1135216317, app-argument=https://www.nytimes.com/athletic/7151314/2026/03/27/macario-san-diego-wave-chelsea-transfer/",
+              "twitter:card": "summary_large_image",
+              "twitter:title": "USWNT’s Catarina Macario joins San Diego Wave from Chelsea",
+              "og:type": "article",
+              "og:site_name": "The Athletic",
+              "author": "Tamerra Griffin",
+              "og:title": "USWNT’s Catarina Macario joins San Diego Wave from Chelsea",
+              "msapplication-tileimage": "https://www.nytimes.com/athletic/static/img/athletic-icon-192x192.png",
+              "twitter:creator": "@TheAthletic",
+              "og:description": "Macario, who was the USWNT’s top goal scorer in 2025, will return to her hometown of San Diego on a contract to 2030.",
+              "twitter:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27053314/Macario-Headshot-scaled-e1774604041946.jpg?width=1200&height=675&fit=cover",
+              "next-head-count": "42",
+              "fb:app_id": "755512374574534",
+              "twitter:site": "@TheAthletic",
+              "viewport": "width=device-width",
+              "twitter:description": "Macario, who was the USWNT’s top goal scorer in 2025, will return to her hometown of San Diego on a contract to 2030.",
+              "og:url": "https://www.nytimes.com/athletic/7151314/2026/03/27/macario-san-diego-wave-chelsea-transfer/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27053314/Macario-Headshot-scaled-e1774604041946.jpg?width=1200&height=630&fit=cover"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "UNC star Caleb Wilson, a projected top-5 pick, declares for NBA Draft",
+        "htmlTitle": "UNC star Caleb Wilson, a projected top-5 pick, declares for NBA Draft",
+        "link": "https://www.nytimes.com/athletic/7152954/2026/03/27/caleb-wilson-nba-draft/",
+        "displayLink": "www.nytimes.com",
+        "snippet": "24 hours ago ... 8 this season for the Tar Heels.) Top League Content. The Athletic's Sam Vecenie's latest draft model has Wilson being drafted at No. 4 by the Indiana Pacers ...",
+        "htmlSnippet": "24 hours ago <b>...</b> 8 this season for the Tar Heels.) Top <b>League</b> Content. The <b>Athletic&#39;s</b> Sam Vecenie&#39;s <b>latest</b> draft model has Wilson being drafted at No. 4 by the Indiana Pacers&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/athletic/7152954/2026/.../caleb-wilson-nba-draft/",
+        "htmlFormattedUrl": "https://www.nytimes.com/athletic/7152954/2026/.../caleb-wilson-nba-draft/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQN5SjuDpy3dS8jcXNdwZ8Ul6_Y9YuIOYgi1sU3wbe2IHg0yy48JlrVg&s=0",
+              "width": "150",
+              "height": "100"
+            }
+          ],
+          "metatags": [
+            {
+              "nyt_uri": "https://www.nytimes.com/athletic/7152954/2026/03/27/caleb-wilson-nba-draft/",
+              "og:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27200047/CalebWilson.jpg?width=1200&height=630&fit=cover",
+              "apple-itunes-app": "app-id=1135216317, app-argument=https://www.nytimes.com/athletic/7152954/2026/03/27/caleb-wilson-nba-draft/",
+              "twitter:card": "summary_large_image",
+              "twitter:title": "UNC star Caleb Wilson, a projected top-5 pick, declares for NBA Draft",
+              "og:type": "article",
+              "og:site_name": "The Athletic",
+              "author": "Lindsay Schnell",
+              "og:title": "UNC star Caleb Wilson, a projected top-5 pick, declares for NBA Draft",
+              "msapplication-tileimage": "https://www.nytimes.com/athletic/static/img/athletic-icon-192x192.png",
+              "twitter:creator": "@TheAthletic",
+              "og:description": "Wilson was part of a stellar freshman class, averaging 19.8 points and 9.4 rebounds this season, but had his season cut short by injuries.",
+              "twitter:image": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27200047/CalebWilson.jpg?width=1200&height=675&fit=cover",
+              "next-head-count": "43",
+              "fb:app_id": "755512374574534",
+              "twitter:site": "@TheAthletic",
+              "viewport": "width=device-width",
+              "twitter:description": "Wilson was part of a stellar freshman class, averaging 19.8 points and 9.4 rebounds this season, but had his season cut short by injuries.",
+              "og:url": "https://www.nytimes.com/athletic/7152954/2026/03/27/caleb-wilson-nba-draft/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/athletic/uploads/wp/2026/03/27200047/CalebWilson.jpg?width=1200&height=630&fit=cover"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

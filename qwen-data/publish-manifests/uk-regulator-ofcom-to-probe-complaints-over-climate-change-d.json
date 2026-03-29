@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-29T03:17:40.738Z",
+  "event_id": "evt-2026-03-29-world-geopolitics-general-global-congress-tsa",
+  "cluster_id": "evt-2026-03-29-world-geopolitics-general-global-congress-tsa",
+  "article_type": "report",
+  "title": "UK Regulator Ofcom to Probe Complaints Over Climate Change Denial",
+  "slug": "uk-regulator-ofcom-to-probe-complaints-over-climate-change-d",
+  "canonical_slug": "2026-03-29-uk-regulator-ofcom-to-probe-complaints-over-climate-change-d",
+  "expected_url": "/article/2026-03-29-uk-regulator-ofcom-to-probe-complaints-over-climate-change-d",
+  "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-29-uk-regulator-ofcom-to-probe-complaints-over-climate-change-d.mdx",
+  "published_at": "2026-03-29T03:17:40.614Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "climate-extreme-weather",
+  "topic_label": "Climate & Extreme Weather",
+  "subsection": "World & Geopolitics",
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/4684217/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/4684217/cover.jpg",
+    "source_url": "https://pixabay.com/photos/pxclimateaction-climate-landscape-4684217/",
+    "asset_key": "pixabay:4684217",
+    "alt_text": "pxclimateaction, climate, nature, landscape, storm, field, dry so, climate change, darling, clouds",
+    "selection_mode": "provider_download_new:pixabay:strong",
+    "query_used": "Climate Change Denial photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Climate & Extreme Weather",
+    "Diplomacy"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Ofcom to investigate complaints of climate change denial",
+        "url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+        "domain": "wattsupwiththat.com"
+      },
+      {
+        "title": "British Regulator OFCOM to Investigate Broadcaster Climate Denial",
+        "url": "https://wattsupwiththat.com/2026/03/25/british-regulator-ofcom-to-investigate-broadcaster-climate-denial/",
+        "domain": "wattsupwiththat.com"
+      },
+      {
+        "title": "Maryland top court rejects climate change lawsuits against oil ...",
+        "url": "https://www.reuters.com/legal/government/maryland-top-court-rejects-climate-change-lawsuits-against-oil-companies-2026-03-25/",
+        "domain": "reuters.com"
+      },
+      {
+        "title": "Trump signs order to pay TSA employees after Congress fails to agree on DHS funding",
+        "url": "https://www.springfieldnewssun.com/news/nation-world/trump-signs-executive-action-to-pay-tsa-employees-after-congress-fails-to-agree-on-dhs-funding/zqcadgo7v5palf52ixj6t3cpjm/",
+        "domain": "springfieldnewssun.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "One publish-ready source has weak title overlap with the article title",
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Trump signs order to pay TSA employees after Congress fails to agree on DHS funding",
+          "url": "https://www.springfieldnewssun.com/news/nation-world/trump-signs-executive-action-to-pay-tsa-employees-after-congress-fails-to-agree-on-dhs-funding/zqcadgo7v5palf52ixj6t3cpjm/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "climate-extreme-weather",
+        "topic_label": "Climate & Extreme Weather",
+        "supported": true,
+        "matched_aliases": [
+          "climate",
+          "warming"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Climate Change Denial photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "climate",
+        "change",
+        "denial"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

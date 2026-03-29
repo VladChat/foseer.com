@@ -1,0 +1,25 @@
+name: Search Console Feedback (Paused)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  search-console-feedback-paused:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Explain paused status
+        shell: bash
+        run: |
+          cat <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+          ## Search Console feedback workflow is paused
+
+          This repository no longer contains the legacy entrypoints that this workflow used:
+          - `scripts/fetch-search-console-feedback.js`
+          - `project-governance/...`
+
+          The active system uses `qwen-*` paths. Keep this workflow paused until a qwen-native Search Console refresh script is added.
+          EOF
+          echo "Workflow paused until qwen-native Search Console integration exists."

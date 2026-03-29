@@ -1,0 +1,126 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-29T00:34:48.159Z",
+  "event_id": "evt-2026-03-27-ai-big-tech-announcement-us-iran-meta",
+  "cluster_id": "evt-2026-03-27-ai-big-tech-announcement-us-iran-meta",
+  "article_type": "report",
+  "title": "5 things to watch before markets open Friday",
+  "slug": "5-things-to-watch-before-markets-open-friday",
+  "canonical_slug": "2026-03-29-5-things-to-watch-before-markets-open-friday",
+  "expected_url": "/article/2026-03-29-5-things-to-watch-before-markets-open-friday",
+  "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-29-5-things-to-watch-before-markets-open-friday.mdx",
+  "published_at": "2026-03-29T00:34:48.088Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "AI & Big Tech",
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/16689015/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/16689015/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/chatgpt-is-always-here-to-help-whether-on-your-phone-or-laptop-16689015/",
+    "asset_key": "pexels:16689015",
+    "alt_text": "Illustration for 5 things to watch before markets open Friday",
+    "selection_mode": "provider_download_new:pexels:strong",
+    "query_used": "Friday technology photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Wall Street"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "5 things to know before the market opens Friday",
+        "url": "https://www.cnbc.com/2026/03/27/5-things-to-know-before-the-market-opens.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "5 things to know before the market opens Thursday",
+        "url": "https://www.cnbc.com/2026/03/26/5-things-to-know-before-the-market-opens.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "Brewers place Jackson Chourio on IL with hand injury hours before ...",
+        "url": "https://www.nytimes.com/athletic/7149022/2026/03/26/jackson-chourio-injury-brewers-opening-day/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Brewers place Jackson Chourio on IL with hand injury hours before ...",
+          "url": "https://www.nytimes.com/athletic/7149022/2026/03/26/jackson-chourio-injury-brewers-opening-day/",
+          "overlap_ratio": 0.17,
+          "shared_tokens": [
+            "before"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "wall-street",
+          "label": "Wall Street",
+          "type": "theme"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets",
+          "market",
+          "market opens",
+          "stocks"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Friday technology photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "friday"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

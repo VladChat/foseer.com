@@ -1,0 +1,675 @@
+{
+  "timestamp": 1774738416487,
+  "ttl_hours": 8,
+  "provider": "google",
+  "query_hash": "t6nrwv",
+  "data": {
+    "kind": "customsearch#search",
+    "url": {
+      "type": "application/json",
+      "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    },
+    "queries": {
+      "request": [
+        {
+          "title": "Google Custom Search - (site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking business markets consumer companies housing crypto travel)",
+          "totalResults": "2600",
+          "searchTerms": "(site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking business markets consumer companies housing crypto travel)",
+          "count": 10,
+          "startIndex": 1,
+          "inputEncoding": "utf8",
+          "outputEncoding": "utf8",
+          "safe": "off",
+          "cx": "f508d19f8630d4015",
+          "dateRestrict": "d2"
+        }
+      ],
+      "nextPage": [
+        {
+          "title": "Google Custom Search - (site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking business markets consumer companies housing crypto travel)",
+          "totalResults": "2600",
+          "searchTerms": "(site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking business markets consumer companies housing crypto travel)",
+          "count": 10,
+          "startIndex": 11,
+          "inputEncoding": "utf8",
+          "outputEncoding": "utf8",
+          "safe": "off",
+          "cx": "f508d19f8630d4015",
+          "dateRestrict": "d2"
+        }
+      ]
+    },
+    "context": {
+      "title": "blog.equalle.com Web Search"
+    },
+    "searchInformation": {
+      "searchTime": 0.406541,
+      "formattedSearchTime": "0.41",
+      "totalResults": "2600",
+      "formattedTotalResults": "2,600"
+    },
+    "items": [
+      {
+        "kind": "customsearch#result",
+        "title": "Squawk Box: Watch Interviews & Clips, Schedule, Latest News",
+        "htmlTitle": "Squawk Box: Watch Interviews &amp; Clips, Schedule, <b>Latest</b> News",
+        "link": "https://www.cnbc.com/squawk-box-us/",
+        "displayLink": "www.cnbc.com",
+        "snippet": "7 hours ago ... \"Squawk Box\" is the ultimate pre-market morning news program, featuring Joe Kernen, Becky Quick and Andrew Ross Sorkin. It's a \"must see\" for everyone from ...",
+        "htmlSnippet": "7 hours ago <b>...</b> &quot;Squawk Box&quot; is the ultimate pre-<b>market</b> morning news program, featuring Joe Kernen, Becky Quick and Andrew Ross Sorkin. It&#39;s a &quot;must see&quot; for everyone from&nbsp;...",
+        "formattedUrl": "https://www.cnbc.com/squawk-box-us/",
+        "htmlFormattedUrl": "https://www.cnbc.com/squawk-box-us/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMoQLDmkOkFkQaCOWxp_Acy91PnI3vD2KdaYb9TJeMsGh2id5iZaFoyh_&s",
+              "width": "300",
+              "height": "168"
+            }
+          ],
+          "newsmediaorganization": [
+            {
+              "foundingdate": "'1989-04-17'",
+              "name": "CNBC",
+              "url": "https://www.cnbc.com"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585&w=1920&h=1080",
+              "apple-itunes-app": "app-id=398018310",
+              "twitter:card": "summary_large_image",
+              "article:published_time": "2012-02-03T16:19:00+0000",
+              "og:site_name": "CNBC",
+              "twitter:url": "https://www.cnbc.com/squawk-box-us/",
+              "tp:preferredformats": "M3U,MPEG4",
+              "og:description": "\"Squawk Box\" is the ultimate pre-market morning news program, featuring Joe Kernen, Becky Quick and Andrew Ross Sorkin. It's a \"must see\" for everyone from the professional trader to the casual investor.",
+              "twitter:creator": "JoeSquawk",
+              "parsely-metadata": "{\"nodeid\":15838368,\"originalImage\":\"https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585\"}",
+              "twitter:image": "https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585&w=1920&h=1080",
+              "article:publisher": "https://www.facebook.com/cnbc",
+              "al:ios:app_store_id": "398018310",
+              "pagenodeid": "15838368",
+              "twitter:site": "@CNBC",
+              "article:modified_time": "2026-03-27T17:50:36+0000",
+              "news_keywords": "business news",
+              "tp:preferredruntimes": "universal",
+              "tp:initialize": "false",
+              "assettype": "franchise",
+              "og:type": "website",
+              "twitter:title": "Squawk Box",
+              "al:ios:app_name": "CNBC Business News and Finance",
+              "og:title": "Squawk Box",
+              "twitter:image:src": "https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585&w=1920&h=1080",
+              "viewport": "initial-scale=1.0, width=device-width",
+              "twitter:description": "\"Squawk Box\" is the ultimate pre-market morning news program, featuring Joe Kernen, Becky Quick and Andrew Ross Sorkin. It's a \"must see\" for everyone from the professional trader to the casual investor.",
+              "og:url": "https://www.cnbc.com/squawk-box-us/",
+              "format-detection": "telephone=no"
+            }
+          ],
+          "webpage": [
+            {
+              "image": "https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585&w=1920&h=1080",
+              "contentrating": "NR",
+              "primaryimageofpage": "https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585",
+              "datemodified": "2026-03-27T17:50:36+0000",
+              "inlanguage": "en-US",
+              "keywords": "business news",
+              "lastreviewed": "2026-03-27T17:50:36+0000",
+              "name": "Squawk Box: Watch Interviews & Clips, Schedule, Latest News",
+              "description": "\"Squawk Box\" is the ultimate pre-market morning news program, featuring Joe Kernen, Becky Quick and Andrew Ross Sorkin. It's a \"must see\" for everyone from the professional trader to the casual...",
+              "datecreated": "2012-02-03T16:19:00+0000"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585&w=1920&h=1080"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Sustainable Business News | Latest Eco Headlines | Reuters",
+        "htmlTitle": "Sustainable <b>Business</b> News | <b>Latest</b> Eco Headlines | Reuters",
+        "link": "https://www.reuters.com/sustainability/",
+        "displayLink": "www.reuters.com",
+        "snippet": "2 days ago ... Impactive ​Capital's board challenge at payment processing and information management services company WEX may hit a ‌speed bump after the company said this ...",
+        "htmlSnippet": "2 days ago <b>...</b> Impactive ​Capital&#39;s board challenge at payment processing and information management services <b>company</b> WEX may hit a ‌speed bump after the <b>company</b> said this&nbsp;...",
+        "formattedUrl": "https://www.reuters.com/sustainability/",
+        "htmlFormattedUrl": "https://www.reuters.com/sustainability/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpd8nbEEzm4yT4-EEbv7zubfuD4LaQ1qvdDbkmPA9SQZa3OKK4jlNOYLE&s",
+              "width": "311",
+              "height": "162"
+            }
+          ],
+          "metatags": [
+            {
+              "apple-itunes-app": "app-id=602660809",
+              "og:image": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355",
+              "analytics:page_layout": "landing",
+              "twitter:card": "summary_large_image",
+              "og:site_name": "Reuters",
+              "ccbot": "nofollow",
+              "analytics:ad_layout": "leaderboard, right rail",
+              "analyticsattributes.topicchannel": "Sustainability",
+              "title": "Reuters Sustainable Business News | Latest Eco Headlines | Reuters",
+              "og:description": "Find latest sustainable news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
+              "twitter:image": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355",
+              "datemodified": "2026-03-27T22:22:19.002Z",
+              "og:type": "website",
+              "twitter:title": "Sustainable Business News | Latest Eco Headlines | Reuters",
+              "ad:template": "landing",
+              "twitter:domain": "reuters.com",
+              "dcsext.dartzone": "/4735792/reuters.com/sustainable/home",
+              "dcsext.channellist": "Sustainability",
+              "og:title": "Sustainable Business News | Latest Eco Headlines | Reuters",
+              "fb:pages": "114050161948682",
+              "fb:app_id": "988502044532272",
+              "viewport": "width=device-width, initial-scale=1",
+              "twitter:description": "Find latest sustainable news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
+              "og:locale": "en_US",
+              "og:url": "https://www.reuters.com/sustainability/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Bloomberg Businessweek",
+        "htmlTitle": "Bloomberg Businessweek",
+        "link": "https://www.bloomberg.com/businessweek",
+        "displayLink": "www.bloomberg.com",
+        "snippet": "17 hours ago ... Bloomberg Businessweek helps global leaders stay ahead with insights and in-depth analysis on the people, companies, events, and trends shaping today's ...",
+        "htmlSnippet": "17 hours ago <b>...</b> Bloomberg Businessweek helps global leaders stay ahead with insights and in-depth analysis on the people, <b>companies</b>, events, and trends shaping today&#39;s&nbsp;...",
+        "formattedUrl": "https://www.bloomberg.com/businessweek",
+        "htmlFormattedUrl": "https://www.bloomberg.com/<b>business</b>week",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH0_6OcBBOK55An8wHmsX5t9dxeZbkD_GmfyBXwhxM7w8EJWS--x4v94UT&s",
+              "width": "275",
+              "height": "183"
+            }
+          ],
+          "metatags": [
+            {
+              "apple-itunes-app": "app-id=281941097",
+              "next-head-count": "2",
+              "parsely-type": "sectionpage",
+              "og:type": "website",
+              "og:site_name": "Bloomberg.com",
+              "viewport": "width=device-width",
+              "parsely-link": "https://www.bloomberg.com/businessweek",
+              "og:title": "Bloomberg Businessweek - Bloomberg",
+              "og:url": "https://www.bloomberg.com/businessweek",
+              "parsely-title": "Bloomberg Businessweek - Bloomberg",
+              "og:description": "Bloomberg Businessweek helps global leaders stay ahead with insights and in-depth analysis on the people, companies, events, and trends shaping today's complex, global economy",
+              "format-detection": "telephone=no"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqd_4Kn1R5Ls/v0/715x477.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Iran war wipes out $100 billion from luxury stocks - CNBC",
+        "htmlTitle": "Iran war wipes out $100 billion from luxury stocks - CNBC",
+        "link": "https://www.cnbc.com/2026/03/27/iran-war-wipes-out-100-billion-from-luxury-stocks.html",
+        "displayLink": "www.cnbc.com",
+        "snippet": "1 day ago ... For investors and luxury companies, the Iran war has highlighted the increasing importance of the Middle East to the global luxury industry and the high-net- ...",
+        "htmlSnippet": "1 day ago <b>...</b> For investors and luxury <b>companies</b>, the Iran war has highlighted the increasing importance of the Middle East to the global luxury industry and the high-net-&nbsp;...",
+        "formattedUrl": "https://www.cnbc.com/.../iran-war-wipes-out-100-billion-from-luxury-stoc...",
+        "htmlFormattedUrl": "https://www.cnbc.com/.../iran-war-wipes-out-100-billion-from-luxury-stoc...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa6A1SSqKJNhzc9U0RRx-o8ZLnZbEIZef8RB9wQU8_9QR0Hvn3Ogsg5H_d&s",
+              "width": "300",
+              "height": "168"
+            }
+          ],
+          "newsmediaorganization": [
+            {
+              "foundingdate": "'1989-04-17'",
+              "name": "CNBC",
+              "url": "https://www.cnbc.com"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://image.cnbcfm.com/api/v1/image/108273632-1772645856713-gettyimages-2264190374-UAE_DUBAI.jpeg?v=1772645940&w=1920&h=1080",
+              "apple-itunes-app": "app-id=398018310",
+              "twitter:card": "summary_large_image",
+              "article:published_time": "2026-03-27T13:00:01+0000",
+              "og:site_name": "CNBC",
+              "twitter:url": "https://www.cnbc.com/2026/03/27/iran-war-wipes-out-100-billion-from-luxury-stocks.html",
+              "tp:preferredformats": "M3U,MPEG4",
+              "og:description": "Dubai in the UAE has been the biggest driver of growth in recent years, and the Middle East tensions come at a critical time in the luxury industry.",
+              "twitter:creator": "robtfrank",
+              "parsely-metadata": "{\"nodeid\":108283609,\"originalImage\":\"https://image.cnbcfm.com/api/v1/image/108273632-1772645856713-gettyimages-2264190374-UAE_DUBAI.jpeg?v=1772645940\"}",
+              "twitter:image": "https://image.cnbcfm.com/api/v1/image/108273632-1772645856713-gettyimages-2264190374-UAE_DUBAI.jpeg?v=1772645940&w=1920&h=1080",
+              "article:publisher": "https://www.facebook.com/cnbc",
+              "al:ios:app_store_id": "398018310",
+              "pagenodeid": "108283609",
+              "twitter:site": "@CNBC",
+              "article:modified_time": "2026-03-27T14:01:07+0000",
+              "news_keywords": "Business,Suppress Zephr,Breaking News: Politics,Politics,Washington,State taxes,LVMH Moet Hennessy Louis Vuitton SE,Hermes International SCA,S&P 500 Index,Ferrari NV,New York,Social issues,Dubai,Ferrari NV,Invesco QQQ Trust,California,Iran,business news",
+              "tp:preferredruntimes": "universal",
+              "tp:initialize": "false",
+              "assettype": "cnbcnewsstory",
+              "og:type": "article",
+              "twitter:title": "Iran war wipes out $100 billion from luxury stocks",
+              "article:section": "Inside Wealth",
+              "al:ios:app_name": "CNBC Business News and Finance",
+              "author": "Robert Frank",
+              "og:title": "Iran war wipes out $100 billion from luxury stocks",
+              "article:author": "https://www.facebook.com/CNBC",
+              "twitter:image:src": "https://image.cnbcfm.com/api/v1/image/108273632-1772645856713-gettyimages-2264190374-UAE_DUBAI.jpeg?v=1772645940&w=1920&h=1080",
+              "article:tag": "Business",
+              "viewport": "initial-scale=1.0, width=device-width",
+              "twitter:description": "Dubai in the UAE has been the biggest driver of growth in recent years, and the Middle East tensions come at a critical time in the luxury industry.",
+              "og:url": "https://www.cnbc.com/2026/03/27/iran-war-wipes-out-100-billion-from-luxury-stocks.html",
+              "format-detection": "telephone=no",
+              "article:opinion": "false"
+            }
+          ],
+          "webpage": [
+            {
+              "image": "https://image.cnbcfm.com/api/v1/image/108273632-1772645856713-gettyimages-2264190374-UAE_DUBAI.jpeg?v=1772645940&w=1920&h=1080",
+              "contentrating": "NR",
+              "specialty": "Business,Suppress Zephr,Breaking News: Politics,Politics,Washington,State taxes,LVMH Moet Hennessy Louis Vuitton SE,Hermes International SCA,S&P 500 Index,Ferrari NV,New York,Social issues,Dubai,Fe...",
+              "primaryimageofpage": "https://image.cnbcfm.com/api/v1/image/108273632-1772645856713-gettyimages-2264190374-UAE_DUBAI.jpeg?v=1772645940",
+              "datemodified": "2026-03-27T14:01:07+0000",
+              "inlanguage": "en-US",
+              "keywords": "Business,Suppress Zephr,Breaking News: Politics,Politics,Washington,State taxes,LVMH Moet Hennessy Louis Vuitton SE,Hermes International SCA,S&P 500 Index,Ferrari NV,New York,Social issues,Dubai,Fe...",
+              "lastreviewed": "2026-03-27T14:01:07+0000",
+              "name": "Iran war wipes out $100 billion from luxury stocks",
+              "description": "Dubai in the UAE has been the biggest driver of growth in recent years, and the Middle East tensions come at a critical time in the luxury industry.",
+              "datecreated": "2026-03-27T13:00:01+0000",
+              "datepublished": "2026-03-27T13:00:01+0000"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://image.cnbcfm.com/api/v1/image/108273632-1772645856713-gettyimages-2264190374-UAE_DUBAI.jpeg?v=1772645940&w=1920&h=1080"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Erin Griffith - Page 9 - The New York Times",
+        "htmlTitle": "Erin Griffith - Page 9 - The New York Times",
+        "link": "https://www.nytimes.com/by/erin-griffith?page=9",
+        "displayLink": "www.nytimes.com",
+        "snippet": "2 days ago ... What I Cover. I focus primarily on start-ups and venture capital. · My Background. I have been reporting on finance, business and technology since 2006.",
+        "htmlSnippet": "2 days ago <b>...</b> What I Cover. I focus primarily on start-ups and venture capital. &middot; My Background. I have been reporting on finance, <b>business</b> and technology since 2006.",
+        "formattedUrl": "https://www.nytimes.com/by/erin-griffith?page=9",
+        "htmlFormattedUrl": "https://www.nytimes.com/by/erin-griffith?page=9",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi4M06Uxv3Rn-yaQHLj9VdeFRejNY3Hbm2daQll-B5dCyrrHi1g3ngFVk&s",
+              "width": "150",
+              "height": "150"
+            }
+          ],
+          "thumbnail": [
+            {
+              "src": "https://static01.nyt.com/images/2019/06/18/reader-center/author-erin-griffith/author-erin-griffith-thumbStandard.png"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://static01.nyt.com/images/2019/06/18/reader-center/author-erin-griffith/author-erin-griffith-facebookJumbo.png",
+              "image": "https://static01.nyt.com/images/2019/06/18/reader-center/author-erin-griffith/author-erin-griffith-facebookJumbo.png",
+              "og:image:alt": "Portrait of Erin Griffith",
+              "twitter:card": "summary_large_image",
+              "thumbnail": "https://static01.nyt.com/images/2019/06/18/reader-center/author-erin-griffith/author-erin-griffith-thumbStandard.png",
+              "twitter:title": "Erin Griffith",
+              "twitter:url": "https://www.nytimes.com/by/erin-griffith",
+              "slack-app-id": "A0121HXPPTQ",
+              "color-scheme": "light",
+              "og:description": "Erin Griffith covers tech companies, start-ups and the culture of Silicon Valley from San Francisco.",
+              "twitter:image": "https://static01.nyt.com/images/2019/06/18/reader-center/author-erin-griffith/author-erin-griffith-videoSixteenByNineJumbo1600.png",
+              "twitter:image:alt": "Portrait of Erin Griffith",
+              "fb:app_id": "9869919170",
+              "twitter:site": "@nytimes",
+              "viewport": "width=device-width, initial-scale=1",
+              "twitter:description": "Erin Griffith covers tech companies, start-ups and the culture of Silicon Valley from San Francisco."
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/images/2019/06/18/reader-center/author-erin-griffith/author-erin-griffith-thumbLarge.png"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "The View of the War From a Florida Gas Station - The New York Times",
+        "htmlTitle": "The View of the War From a Florida Gas Station - The New York Times",
+        "link": "https://www.nytimes.com/2026/03/27/podcasts/the-daily/iran-war-florida-gas-station-prices.html",
+        "displayLink": "www.nytimes.com",
+        "snippet": "2 days ago ... Cameron Joudi, who owns and manages a gas station in Jacksonville, Fla., discusses how the war is reaching him at home. On Today's Episode. Cameron Joudi, the ...",
+        "htmlSnippet": "2 days ago <b>...</b> Cameron Joudi, who owns and manages a gas station in Jacksonville, Fla., discusses how the war is reaching him at <b>home</b>. On Today&#39;s Episode. Cameron Joudi, the&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/2026/.../iran-war-florida-gas-station-prices.html",
+        "htmlFormattedUrl": "https://www.nytimes.com/2026/.../iran-war-florida-gas-station-prices.html",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlZIgUVPcru5D65-y92-xYvWl6b1iCfpq029Nwk42nAB0Wi14vDKQ7Gy4&s",
+              "width": "310",
+              "height": "162"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://static01.nyt.com/images/2026/03/27/multimedia/27DAILY-gas-cam-jclf/27DAILY-gas-cam-jclf-facebookJumbo-v4.jpg",
+              "nyt_uri": "nyt://article/d91121b9-8cdd-5721-95f9-61fd182ccff7",
+              "twitter:card": "summary_large_image",
+              "article:published_time": "2026-03-27T10:00:16.000Z",
+              "pt": "article",
+              "twitter:url": "https://www.nytimes.com/2026/03/27/podcasts/the-daily/iran-war-florida-gas-station-prices.html",
+              "pdate": "20260327",
+              "articleid": "100000010800375",
+              "al:android:package": "com.nytimes.android",
+              "twitter:app:name:googleplay": "NYTimes",
+              "og:description": "Since the start of the war in Iran, the average price of gas in the United States has climbed by nearly a dollar.",
+              "twitter:image": "https://static01.nyt.com/images/2026/03/27/multimedia/27DAILY-gas-cam-jclf/27DAILY-gas-cam-jclf-videoSixteenByNine3000-v4.jpg",
+              "pst": "News",
+              "twitter:image:alt": "Cameron Joudi manages an independent gas station in suburban Jacksonville, Fla.",
+              "article:modified_time": "2026-03-27T10:00:16.000Z",
+              "news_keywords": "US and Israeli Attack on Iran,Price,Oil and Gasoline,Jacksonville FL,internal-open-access-audio",
+              "scg": "the-daily",
+              "article:content_tier": "metered",
+              "msapplication-starturl": "https://www.nytimes.com",
+              "image": "https://static01.nyt.com/images/2026/03/27/multimedia/27DAILY-gas-cam-jclf/27DAILY-gas-cam-jclf-facebookJumbo-v4.jpg",
+              "twitter:title": "The View of the War From a Florida Gas Station",
+              "og:type": "article",
+              "og:image:alt": "Cameron Joudi manages an independent gas station in suburban Jacksonville, Fla.",
+              "article:section": "Podcasts",
+              "cg": "podcasts",
+              "pubp_event_id": "pubp://event/d00abd40017b49a8a88c8ca6a1f8745d",
+              "og:title": "The View of the War From a Florida Gas Station",
+              "cn": "podcasts",
+              "article:author": "https://www.nytimes.com/by/michael-barbaro",
+              "url": "https://www.nytimes.com/2026/03/27/podcasts/the-daily/iran-war-florida-gas-station-prices.html",
+              "article:tag": "Prices (Fares, Fees and Rates)",
+              "al:android:url": "nyt://article/d91121b9-8cdd-5721-95f9-61fd182ccff7",
+              "ct": "spotlight",
+              "byl": "By Michael Barbaro, Anna Foley, Caitlin O’Keefe, Devon Taylor, Dan Powell, Diane Wong, Elisheba Ittoop, Marion Lozano, Chelsea Daniel and Alyssa Moxley",
+              "twitter:description": "Since the start of the war in Iran, the average price of gas in the United States has climbed by nearly a dollar.",
+              "og:url": "https://www.nytimes.com/2026/03/27/podcasts/the-daily/iran-war-florida-gas-station-prices.html",
+              "al:android:app_name": "NYTimes",
+              "article:opinion": "false"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/images/2026/03/27/multimedia/27DAILY-gas-cam-jclf/27DAILY-gas-cam-jclf-facebookJumbo-v4.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Tether hires KPMG as auditor ahead of US expansion",
+        "htmlTitle": "Tether hires KPMG as auditor ahead of US expansion",
+        "link": "https://www.ft.com/content/7109e6d1-dfa1-44b4-a23f-278f6f356489",
+        "displayLink": "www.ft.com",
+        "snippet": "2 days ago ... The company has also hired PwC, a second Big Four accounting firm, to help it ready its internal systems for the audit, said people familiar with the matter.",
+        "htmlSnippet": "2 days ago <b>...</b> The <b>company</b> has also hired PwC, a second Big Four accounting firm, to help it ready its internal systems for the audit, said people familiar with the matter.",
+        "formattedUrl": "https://www.ft.com/content/7109e6d1-dfa1-44b4-a23f-278f6f356489",
+        "htmlFormattedUrl": "https://www.ft.com/content/7109e6d1-dfa1-44b4-a23f-278f6f356489",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-jBOwfLw4TMi24A_G6gU2qenX8zoNM-cuAqE1xqcb26uAZSOPH9FzYfT8&s",
+              "width": "299",
+              "height": "168"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8d58bf6d-f2c9-423c-96a4-47df45109090.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+              "apple-itunes-app": "app-id=1200842933, app-argument=https://www.ft.com/content/7109e6d1-dfa1-44b4-a23f-278f6f356489?syn-25a6b1a6=1",
+              "twitter:card": "summary_large_image",
+              "og:type": "article",
+              "article:published_time": "2026-03-26T23:17:30.331Z",
+              "og:title": "Tether hires KPMG as auditor ahead of US expansion",
+              "fb:pages": "8860325749",
+              "og:description": "The world’s largest stablecoin issuer also brings on PwC to ready internal systems",
+              "article:author": "Jill R Shah",
+              "twitter:image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8d58bf6d-f2c9-423c-96a4-47df45109090.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+              "article:tag": "News",
+              "twitter:site": "@FinancialTimes",
+              "article:modified_time": "2026-03-26T23:17:30.331Z",
+              "viewport": "width=device-width, initial-scale=1",
+              "og:url": "https://www.ft.com/content/7109e6d1-dfa1-44b4-a23f-278f6f356489?syn-25a6b1a6=1"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8d58bf6d-f2c9-423c-96a4-47df45109090.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Global markets recoil as Marco Rubio warns war in Iran could ...",
+        "htmlTitle": "Global <b>markets</b> recoil as Marco Rubio <b>warns</b> war in Iran could ...",
+        "link": "https://www.ft.com/content/4f095d4b-46cb-4ed6-90cf-aa560fba2bc1?syn-25a6b1a6=1",
+        "displayLink": "www.ft.com",
+        "snippet": "23 hours ago ... Only 32 tankers have made the journey, against 1,743 in the previous time period. Rubio's comments added to a surge in oil prices, with Brent finishing the week ...",
+        "htmlSnippet": "23 hours ago <b>...</b> Only 32 tankers have made the <b>journey</b>, against 1,743 in the previous time period. Rubio&#39;s comments added to a surge in oil prices, with Brent finishing the week&nbsp;...",
+        "formattedUrl": "https://www.ft.com/content/4f095d4b-46cb-4ed6-90cf-aa560fba2bc1?syn...",
+        "htmlFormattedUrl": "https://www.ft.com/content/4f095d4b-46cb-4ed6-90cf-aa560fba2bc1?syn...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzdsc1gqGf3shL9RcMoQSG61b4hOiNmixct6aRwSLeoQyh2ytNzav46gX5&s",
+              "width": "299",
+              "height": "168"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F1cc79eac-3696-42a1-91fe-85a44dfda4b4.png?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+              "apple-itunes-app": "app-id=1200842933, app-argument=https://www.ft.com/content/4f095d4b-46cb-4ed6-90cf-aa560fba2bc1?syn-25a6b1a6=1",
+              "twitter:card": "summary_large_image",
+              "og:type": "article",
+              "article:published_time": "2026-03-27T23:51:56.540Z",
+              "og:title": "Global markets recoil as Marco Rubio warns war in Iran could stretch for weeks",
+              "fb:pages": "8860325749",
+              "og:description": "Comments from US secretary of state come as oil jumps to $114 and Wall Street stocks slide",
+              "article:author": "Jamie Smyth",
+              "twitter:image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F1cc79eac-3696-42a1-91fe-85a44dfda4b4.png?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+              "article:tag": "News",
+              "twitter:site": "@FinancialTimes",
+              "article:modified_time": "2026-03-27T23:51:56.540Z",
+              "viewport": "width=device-width, initial-scale=1",
+              "og:url": "https://www.ft.com/content/4f095d4b-46cb-4ed6-90cf-aa560fba2bc1?syn-25a6b1a6=1"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F1cc79eac-3696-42a1-91fe-85a44dfda4b4.png?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Hard truths, soft metals - Politico",
+        "htmlTitle": "Hard truths, soft metals - Politico",
+        "link": "https://www.politico.com/newsletters/morning-money-capital-risk/2026/03/27/hard-truths-soft-metals-00847798",
+        "displayLink": "www.politico.com",
+        "snippet": "1 day ago ... Delivered daily by 8 a.m., Morning Money examines the latest news in finance, politics and policy — and on Fridays, Morning Money: Capital Risk highlights the ...",
+        "htmlSnippet": "1 day ago <b>...</b> Delivered daily by 8 a.m., Morning Money examines the <b>latest</b> news in finance, politics and policy — and on Fridays, Morning Money: Capital Risk highlights the&nbsp;...",
+        "formattedUrl": "https://www.politico.com/newsletters/.../hard-truths-soft-metals-00847798",
+        "htmlFormattedUrl": "https://www.politico.com/newsletters/.../hard-truths-soft-metals-00847798",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6puJAPJ6iaYCObUdzHymkIZJ_NJi44nsSqivHLBTFP1c4BIkBHwrDe1sO&s",
+              "width": "300",
+              "height": "168"
+            }
+          ],
+          "imageobject": [
+            {
+              "width": "150",
+              "url": "https://static.politico.com/6d/9f/1e153a1748fa9ea656c575dc6dff/politico-logo-60px-tall-1.png",
+              "height": "35"
+            },
+            {
+              "width": "50",
+              "url": "https://static.politico.com/61/20/3a4fb0b54e68baaa9d2f9d823f58/nl-header-politico-morning-money-capital-risk.jpg",
+              "height": "50"
+            }
+          ],
+          "person": [
+            {
+              "name": "Sam Sutton",
+              "email": "ssutton@politico.com"
+            }
+          ],
+          "organization": [
+            {
+              "name": "Politico",
+              "url": "https://www.politico.com/"
+            }
+          ],
+          "metatags": [
+            {
+              "msapplication-tilecolor": "#da532c",
+              "og:image": "https://static.politico.com/3d/ee/f4d549cf4e548af6712990ce5b9e/politico-cms-shared-graphic-1120x629.jpg",
+              "theme-color": "#D71920",
+              "og:type": "website",
+              "twitter:title": "Hard truths, soft metals",
+              "twitter:card": "summary_large_image",
+              "og:fb_appid": "114037015331397",
+              "og:site_name": "POLITICO",
+              "og:title": "Hard truths, soft metals",
+              "msapplication-tileimage": "/mstile-144x144.png",
+              "og:description": "U.S. construction firms are bracing for a hit now that Gulf suppliers of aluminum have been cut off from global markets by the closure of the Strait of Hormuz.",
+              "twitter:creator": "@politico",
+              "twitter:site": "@politico",
+              "viewport": "width=device-width, initial-scale=1",
+              "build": "1.0.0-SNAPSHOT",
+              "brightspot.contentid": "0000019d-2ec0-d065-a7bf-6edc89e40000",
+              "host": "www.politico.com",
+              "og:url": "https://www.politico.com/newsletters/morning-money-capital-risk/2026/03/27/hard-truths-soft-metals-00847798"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static.politico.com/3d/ee/f4d549cf4e548af6712990ce5b9e/politico-cms-shared-graphic-1120x629.jpg"
+            }
+          ],
+          "newsarticle": [
+            {
+              "headline": "Hard truths, soft metals",
+              "datepublished": "2026-03-27 08:00:00"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "The Quest to Revive a Frozen Brain - WSJ",
+        "htmlTitle": "The Quest to Revive a Frozen Brain - WSJ",
+        "link": "https://www.wsj.com/tech/the-quest-to-revive-a-frozen-brain-38844635?gaa_at=eafs&gaa_n=AWEtsqdSf5QFXWz2hxTTQHB3Mbq3oqXwxwN8jbiFKoCtDVgj0P1bWMQ_KWqa&gaa_ts=69c85f6c&gaa_sig=QwDY_e3vTaeE6L14k_DU0TYFzTAgvb2pz374lyGuvfM85QGPXMQjpBf5NJqoP85ZKcT8JIhyr3_sXSqsy1W9CA%3D%3D",
+        "displayLink": "www.wsj.com",
+        "snippet": "1 day ago ... Plus, one journalist is going all in on AI and crypto-backed mortgages are entering the mainstream.",
+        "htmlSnippet": "1 day ago <b>...</b> Plus, one journalist is going all in on AI and <b>crypto</b>-backed mortgages are entering the mainstream.",
+        "formattedUrl": "https://www.wsj.com/tech/the-quest-to-revive-a-frozen-brain-38844635",
+        "htmlFormattedUrl": "https://www.wsj.com/tech/the-quest-to-revive-a-frozen-brain-38844635",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxfKkmDg8BKNFfl9-xxEorrEZ-8FAKHXZeipkOMRBqBqQ8Qvd5qZayizXR&s",
+              "width": "318",
+              "height": "159"
+            }
+          ],
+          "metatags": [
+            {
+              "article.origheadline": "The Quest to Revive a Frozen Brain",
+              "og:image": "https://images.wsj.net/im-80172408/social",
+              "article.publisher": "https://www.facebook.com/wsj",
+              "twitter:card": "summary_large_image",
+              "og:image:width": "1280",
+              "article:published_time": "2026-03-27T15:55:00Z",
+              "og:site_name": "The Wall Street Journal",
+              "datelastpubbed": "2026-03-27T15:55:00Z",
+              "article.access": "paid",
+              "article:publisher": "https://www.facebook.com/wsj",
+              "twitter:image:alt": "The Quest to Revive a Frozen Brain",
+              "article:modified_time": "2026-03-27T15:55:00Z",
+              "article.section": "WSJ Newsletters",
+              "article.version": "1",
+              "page.content.format": "responsive",
+              "og:image:alt": "MRI of the Hippocampus with visible cortical folds.",
+              "article:word_count": "852",
+              "twitter:domain": "wsj.com",
+              "article.created": "2026-03-27T15:55:00Z",
+              "author": "Conor Grant",
+              "article:video_count": "0",
+              "fb:pages": "8304333127",
+              "article:internal_link_count": "14",
+              "msnbot": "nocache, noarchive",
+              "og:locale": "en_US",
+              "page.content.type": "Article",
+              "article:image_count": "1",
+              "article.id": "WP-WSJ-0003450718",
+              "article.page": "WSJ Newsletters",
+              "twitter:image": "https://images.wsj.net/im-80172408/social",
+              "article.updated": "2026-03-27T15:55:00Z",
+              "article:embed_count": "9",
+              "twitter:site": "@WSJ",
+              "page.section": "Article",
+              "article.type.display": "The Future of Everything",
+              "twitter:title": "The Quest to Revive a Frozen Brain",
+              "og:type": "article",
+              "servo-context": "servo:prod:virginia:wsj-nextjs-app:article",
+              "og:title": "The Quest to Revive a Frozen Brain",
+              "og:image:height": "640",
+              "page.content.source": "WSJ Online",
+              "fb:app_id": "368513495882",
+              "article.published": "2026-03-27T15:55:00Z",
+              "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0",
+              "article.headline": "The Quest to Revive a Frozen Brain",
+              "branch:deeplink:target": "app",
+              "og:url": "https://www.wsj.com/tech/the-quest-to-revive-a-frozen-brain-38844635",
+              "google-signin-client_id": "61387583289.apps.googleusercontent.com",
+              "article.type": "Future Of Everything Newsletter",
+              "article:external_link_count": "3"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://images.wsj.net/im-80172408/social"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

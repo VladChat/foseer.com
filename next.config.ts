@@ -1,6 +1,5 @@
-path: next.config.ts
-purpose: Configure Next.js defaults for the Foseer MVP workspace.
-*/
+// File: next.config.ts
+// Purpose: Configure Next.js defaults for the Foseer MVP workspace.
 
 import type { NextConfig } from "next";
 

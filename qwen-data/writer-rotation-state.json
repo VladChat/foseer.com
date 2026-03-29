@@ -1,0 +1,436 @@
+{
+  "totalArticles": 79,
+  "lastReset": null,
+  "byWriter": {
+    "reporter": {
+      "count": 28,
+      "lastAssigned": 1774754265669,
+      "streak": 0,
+      "authorCursor": 2,
+      "lastAuthorId": "emma_carter"
+    },
+    "explainer": {
+      "count": 11,
+      "lastAssigned": 1774754287173,
+      "streak": 0,
+      "authorCursor": 1,
+      "lastAuthorId": "olivia_brooks"
+    },
+    "analyst": {
+      "count": 13,
+      "lastAssigned": 1774720333794,
+      "streak": 0,
+      "authorCursor": 3,
+      "lastAuthorId": "jacob_ellis"
+    },
+    "features": {
+      "count": 27,
+      "lastAssigned": 1774756437803,
+      "streak": 2,
+      "authorCursor": 2,
+      "lastAuthorId": "grace_holloway"
+    }
+  },
+  "recentAssignments": [
+    {
+      "writerId": "reporter",
+      "timestamp": 1774568239907,
+      "articleType": "report",
+      "beat": "politics",
+      "section": "Tech",
+      "topic_id": "us-politics"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774569539972,
+      "articleType": "report",
+      "beat": "health",
+      "section": "Health",
+      "topic_id": "mental-health"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774570305294,
+      "articleType": "report",
+      "beat": "politics",
+      "section": "News",
+      "topic_id": "us-politics"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774571677830,
+      "articleType": "report",
+      "beat": "politics",
+      "section": "News",
+      "topic_id": "us-politics"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774571879478,
+      "articleType": "report",
+      "beat": "health policy",
+      "section": "Health",
+      "topic_id": "pharma-fda"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774576013667,
+      "articleType": "report",
+      "beat": "health policy",
+      "section": "Health",
+      "topic_id": "pharma-fda"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774576882156,
+      "articleType": "report",
+      "beat": "international affairs",
+      "section": "News",
+      "topic_id": "world-geopolitics"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774582263389,
+      "articleType": "report",
+      "beat": "politics",
+      "section": "News",
+      "topic_id": "us-politics"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774582335233,
+      "articleType": "report",
+      "beat": "politics",
+      "section": "News",
+      "topic_id": "us-politics"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774582410791,
+      "articleType": "report",
+      "beat": "climate",
+      "section": "News",
+      "topic_id": "climate-extreme-weather"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774619389431,
+      "articleType": "report",
+      "beat": "politics",
+      "section": "News",
+      "topic_id": "us-politics"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774621366112,
+      "articleType": "report",
+      "beat": "climate",
+      "section": "News",
+      "topic_id": "climate-extreme-weather"
+    },
+    {
+      "writerId": "analyst",
+      "timestamp": 1774628263509,
+      "articleType": "analysis",
+      "beat": "markets",
+      "section": "Business",
+      "topic_id": "crypto-bitcoin"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774631138068,
+      "articleType": "report",
+      "beat": "markets",
+      "section": "Business",
+      "topic_id": "crypto-bitcoin"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774635892926,
+      "articleType": "report",
+      "beat": "sports business",
+      "section": "Sports",
+      "topic_id": "transfers-business"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774639686838,
+      "articleType": "report",
+      "beat": "markets",
+      "section": "Business",
+      "topic_id": "crypto-bitcoin"
+    },
+    {
+      "writerId": "analyst",
+      "timestamp": 1774639770944,
+      "articleType": "report",
+      "beat": "markets",
+      "section": "Business",
+      "topic_id": "crypto-bitcoin"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774639878204,
+      "articleType": "report",
+      "beat": "sports business",
+      "section": "Sports",
+      "topic_id": "transfers-business"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774644771431,
+      "articleType": "report",
+      "beat": "markets",
+      "section": "Business",
+      "topic_id": "crypto-bitcoin"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774644842029,
+      "articleType": "report",
+      "beat": "sports business",
+      "section": "Sports",
+      "topic_id": "transfers-business"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774644970414,
+      "articleType": "report",
+      "beat": "sports",
+      "section": "Sports",
+      "topic_id": "events-tournaments"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774650514490,
+      "articleType": "report",
+      "beat": "sports business",
+      "section": "Sports",
+      "topic_id": "transfers-business"
+    },
+    {
+      "writerId": "analyst",
+      "timestamp": 1774651098434,
+      "articleType": "report",
+      "beat": "markets",
+      "section": "Business",
+      "topic_id": "crypto-bitcoin"
+    },
+    {
+      "writerId": "explainer",
+      "timestamp": 1774661431627,
+      "articleType": "report",
+      "beat": "technology",
+      "section": "Tech",
+      "topic_id": "cybersecurity"
+    },
+    {
+      "writerId": "analyst",
+      "timestamp": 1774664365744,
+      "articleType": "analysis",
+      "beat": "culture",
+      "section": "Culture",
+      "topic_id": "film-tv"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774666497917,
+      "articleType": "report",
+      "beat": "sports business",
+      "section": "Sports",
+      "topic_id": "transfers-business"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774667538830,
+      "articleType": "report",
+      "beat": "markets",
+      "section": "Business",
+      "topic_id": "crypto-bitcoin"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774667562182,
+      "articleType": "report",
+      "beat": "sports business",
+      "section": "Sports",
+      "topic_id": "transfers-business"
+    },
+    {
+      "writerId": "explainer",
+      "timestamp": 1774667586635,
+      "articleType": "report",
+      "beat": "technology",
+      "section": "Tech",
+      "topic_id": "cybersecurity"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774670108100,
+      "articleType": "report",
+      "beat": "culture",
+      "section": "Culture",
+      "topic_id": "creators-platforms"
+    },
+    {
+      "writerId": "analyst",
+      "timestamp": 1774720333794,
+      "articleType": "report",
+      "beat": "markets",
+      "section": "Business",
+      "topic_id": "crypto-bitcoin"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774720368476,
+      "articleType": "report",
+      "beat": "culture",
+      "section": "Culture",
+      "topic_id": "creators-platforms"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774720393338,
+      "articleType": "report",
+      "beat": "culture",
+      "section": "Culture",
+      "topic_id": "film-tv"
+    },
+    {
+      "writerId": "explainer",
+      "timestamp": 1774720415634,
+      "articleType": "explainer",
+      "beat": "health",
+      "section": "Health",
+      "topic_id": "mental-health"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774738498059,
+      "articleType": "report",
+      "beat": "markets",
+      "section": "Business",
+      "topic_id": "crypto-bitcoin"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774738515408,
+      "articleType": "report",
+      "beat": "health",
+      "section": "Health",
+      "topic_id": "mental-health"
+    },
+    {
+      "writerId": "explainer",
+      "timestamp": 1774738531706,
+      "articleType": "report",
+      "beat": "technology",
+      "section": "Tech",
+      "topic_id": "ai-big-tech"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774741034233,
+      "articleType": "report",
+      "beat": "health",
+      "section": "Health",
+      "topic_id": "mental-health"
+    },
+    {
+      "writerId": "explainer",
+      "timestamp": 1774741059778,
+      "articleType": "report",
+      "beat": "technology",
+      "section": "Tech",
+      "topic_id": "ai-big-tech"
+    },
+    {
+      "writerId": "explainer",
+      "timestamp": 1774744463776,
+      "articleType": "report",
+      "beat": "technology",
+      "section": "Tech",
+      "topic_id": "ai-big-tech"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774744491635,
+      "articleType": "report",
+      "beat": "culture",
+      "section": "Culture",
+      "topic_id": "creators-platforms"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774744512203,
+      "articleType": "report",
+      "beat": "sports business",
+      "section": "Sports",
+      "topic_id": "transfers-business"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774746196448,
+      "articleType": "report",
+      "beat": "sports business",
+      "section": "Sports",
+      "topic_id": "transfers-business"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774754208313,
+      "articleType": "report",
+      "beat": "politics",
+      "section": "News",
+      "topic_id": "us-politics"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774754223481,
+      "articleType": "report",
+      "beat": "sports",
+      "section": "Sports",
+      "topic_id": "events-tournaments"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774754243821,
+      "articleType": "report",
+      "beat": "international affairs",
+      "section": "News",
+      "topic_id": "world-geopolitics"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774754265669,
+      "articleType": "report",
+      "beat": "international affairs",
+      "section": "News",
+      "topic_id": "world-geopolitics"
+    },
+    {
+      "writerId": "explainer",
+      "timestamp": 1774754287173,
+      "articleType": "explainer",
+      "beat": "health",
+      "section": "Health",
+      "topic_id": "mental-health"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774756415607,
+      "articleType": "report",
+      "beat": "sports",
+      "section": "Sports",
+      "topic_id": "events-tournaments"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774756437803,
+      "articleType": "report",
+      "beat": "health",
+      "section": "Health",
+      "topic_id": "pharma-fda"
+    }
+  ]
+}

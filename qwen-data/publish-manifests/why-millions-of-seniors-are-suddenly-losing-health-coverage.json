@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-29T03:18:27.481Z",
+  "event_id": "evt-2026-03-28-mental-health-general-global",
+  "cluster_id": "evt-2026-03-28-mental-health-general-global",
+  "article_type": "explainer",
+  "title": "Why Millions of Seniors Are Suddenly Losing Health Coverage",
+  "slug": "why-millions-of-seniors-are-suddenly-losing-health-coverage",
+  "canonical_slug": "2026-03-29-why-millions-of-seniors-are-suddenly-losing-health-coverage",
+  "expected_url": "/article/2026-03-29-why-millions-of-seniors-are-suddenly-losing-health-coverage",
+  "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-29-why-millions-of-seniors-are-suddenly-losing-health-coverage.mdx",
+  "published_at": "2026-03-29T03:18:27.475Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "mental-health",
+  "topic_label": "Mental Health",
+  "subsection": "Mental Health",
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/27834232/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/27834232/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/a-mountain-with-a-green-hill-and-trees-27834232/",
+    "asset_key": "pexels:27834232",
+    "alt_text": "Illustration for Why Millions of Seniors Are Suddenly Losing Health Coverage",
+    "selection_mode": "provider_download_new:pexels:strong",
+    "query_used": "Millions of Seniors photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Public Health",
+    "Health Insurance",
+    "Explainer"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Why millions of seniors have suddenly lost health care coverage",
+        "url": "https://washingtonpost.com/health/2026/03/28/insurance-health-care-medicare-seniors",
+        "domain": "washingtonpost.com"
+      },
+      {
+        "title": "Policies, programs, and research shaping maternal mental health care",
+        "url": "https://concentratemedia.com/michigans-maternal-mental-health-landscape-policies-programs-and-research-shaping-response/",
+        "domain": "concentratemedia.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Policies, programs, and research shaping maternal mental health care",
+          "url": "https://concentratemedia.com/michigans-maternal-mental-health-landscape-policies-programs-and-research-shaping-response/",
+          "overlap_ratio": 0.2,
+          "shared_tokens": [
+            "health"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "public-health",
+          "label": "Public Health",
+          "type": "topic"
+        },
+        {
+          "slug": "health-insurance",
+          "label": "Health Insurance",
+          "type": "theme"
+        },
+        {
+          "slug": "explainer",
+          "label": "Explainer",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "mental-health",
+        "topic_label": "Mental Health",
+        "supported": true,
+        "matched_aliases": [
+          "Mental Health"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Millions of Seniors photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "millions",
+        "seniors"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

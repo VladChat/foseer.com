@@ -1,0 +1,689 @@
+{
+  "timestamp": 1774741005727,
+  "ttl_hours": 8,
+  "provider": "google",
+  "query_hash": "ldxa6n",
+  "data": {
+    "kind": "customsearch#search",
+    "url": {
+      "type": "application/json",
+      "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    },
+    "queries": {
+      "request": [
+        {
+          "title": "Google Custom Search - (site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking health public health medical research pharma mental health wellness)",
+          "totalResults": "54",
+          "searchTerms": "(site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking health public health medical research pharma mental health wellness)",
+          "count": 10,
+          "startIndex": 1,
+          "inputEncoding": "utf8",
+          "outputEncoding": "utf8",
+          "safe": "off",
+          "cx": "f508d19f8630d4015",
+          "dateRestrict": "d2"
+        }
+      ],
+      "nextPage": [
+        {
+          "title": "Google Custom Search - (site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking health public health medical research pharma mental health wellness)",
+          "totalResults": "54",
+          "searchTerms": "(site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking health public health medical research pharma mental health wellness)",
+          "count": 10,
+          "startIndex": 11,
+          "inputEncoding": "utf8",
+          "outputEncoding": "utf8",
+          "safe": "off",
+          "cx": "f508d19f8630d4015",
+          "dateRestrict": "d2"
+        }
+      ]
+    },
+    "context": {
+      "title": "blog.equalle.com Web Search"
+    },
+    "searchInformation": {
+      "searchTime": 0.443233,
+      "formattedSearchTime": "0.44",
+      "totalResults": "54",
+      "formattedTotalResults": "54"
+    },
+    "items": [
+      {
+        "kind": "customsearch#result",
+        "title": "Science - The New York Times",
+        "htmlTitle": "Science - The New York Times",
+        "link": "https://www.nytimes.com/section/science",
+        "displayLink": "www.nytimes.com",
+        "snippet": "1 day ago ... The latest science news and developments about space, animal behavior, plant life, the brain, genetics, archaeology, robots and climate change, ...",
+        "htmlSnippet": "1 day ago <b>...</b> The <b>latest</b> science news and developments about space, animal behavior, plant life, the brain, genetics, archaeology, robots and climate change,&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/section/science",
+        "htmlFormattedUrl": "https://www.nytimes.com/section/science",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrEFd9dMV6ZEdLynnRAHAETMJuqcmVYo2BhO9L1d7zeE92oK6AIO_Lb8Q&s",
+              "width": "310",
+              "height": "163"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png",
+              "collection:language": "en",
+              "twitter:card": "summary_large_image",
+              "pt": "collection",
+              "twitter:url": "https://www.nytimes.com/section/science",
+              "nyt-collection:identifier": "science",
+              "pdate": "20150602",
+              "asset_id": "100000003695232",
+              "og:description": "The latest science news and developments about space, animal behavior, plant life, the brain, genetics, archaeology, robots and climate change, along with Carl Zimmer and the weekly Science Times.",
+              "twitter:image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png",
+              "nyt-collection:display-name": "Science",
+              "twitter:site": "@nytimes",
+              "news_keywords": "Science",
+              "ptime": "20150602135109",
+              "slug": "science",
+              "collection:section": "Science",
+              "nyt-collection:type": "sectioncollection",
+              "twitter:title": "Science",
+              "og:type": "article",
+              "utime": "20260326113133",
+              "og:title": "Science",
+              "slack-app-id": "A0121HXPPTQ",
+              "cn": "science",
+              "color-scheme": "light",
+              "applicationname": "collection",
+              "ct": "sectionfront",
+              "fb:app_id": "9869919170",
+              "collection:parentsection": "Science",
+              "nyt-collection:uri": "/section/science",
+              "viewport": "width=device-width, initial-scale=1",
+              "nyt-collection:url": "https://www.nytimes.com/section/science",
+              "og:url": "https://www.nytimes.com/section/science"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "MAHA fans want action Trump hasn't delivered - POLITICO",
+        "htmlTitle": "MAHA fans want action Trump hasn&#39;t delivered - POLITICO",
+        "link": "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
+        "displayLink": "www.politico.com",
+        "snippet": "1 day ago ... A supermajority of American adults favor challenging big pharmaceutical companies, according to a new POLITICO poll, but they're closely divided on which ...",
+        "htmlSnippet": "1 day ago <b>...</b> A supermajority <b>of</b> American adults favor challenging big <b>pharmaceutical</b> companies, according to a new POLITICO poll, but they&#39;re closely divided on which&nbsp;...",
+        "formattedUrl": "https://www.politico.com/.../maha-fans-want-action-trump-hasnt-delivered-...",
+        "htmlFormattedUrl": "https://www.politico.com/.../maha-fans-want-action-trump-hasnt-delivered-...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6puJAPJ6iaYCObUdzHymkIZJ_NJi44nsSqivHLBTFP1c4BIkBHwrDe1sO&s",
+              "width": "300",
+              "height": "168"
+            }
+          ],
+          "imageobject": [
+            {
+              "width": "150",
+              "url": "https://static.politico.com/6d/9f/1e153a1748fa9ea656c575dc6dff/politico-logo-60px-tall-1.png",
+              "height": "35"
+            },
+            {
+              "width": "50",
+              "url": "https://static.politico.com/d6/6f/800cc4be4a62ae2f46bda4c29902/prescription-pulse-logo.png",
+              "height": "50"
+            }
+          ],
+          "person": [
+            {
+              "name": "Lauren Gardner",
+              "email": "lgardner@politico.com"
+            }
+          ],
+          "organization": [
+            {
+              "name": "Politico",
+              "url": "https://www.politico.com/"
+            }
+          ],
+          "metatags": [
+            {
+              "msapplication-tilecolor": "#da532c",
+              "og:image": "https://static.politico.com/3d/ee/f4d549cf4e548af6712990ce5b9e/politico-cms-shared-graphic-1120x629.jpg",
+              "theme-color": "#D71920",
+              "og:type": "website",
+              "twitter:title": "MAHA fans want action Trump hasn’t delivered",
+              "twitter:card": "summary_large_image",
+              "og:fb_appid": "114037015331397",
+              "og:site_name": "POLITICO",
+              "og:title": "MAHA fans want action Trump hasn’t delivered",
+              "msapplication-tileimage": "/mstile-144x144.png",
+              "og:description": "A supermajority of American adults favor challenging big pharmaceutical companies, according to a new POLITICO poll, but they’re closely divided on which political party is up to the task.",
+              "twitter:creator": "@politico",
+              "twitter:site": "@politico",
+              "viewport": "width=device-width, initial-scale=1",
+              "build": "1.0.0-SNAPSHOT",
+              "brightspot.contentid": "0000019d-2f01-d065-a7bf-6f1d6a660000",
+              "host": "www.politico.com",
+              "og:url": "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static.politico.com/3d/ee/f4d549cf4e548af6712990ce5b9e/politico-cms-shared-graphic-1120x629.jpg"
+            }
+          ],
+          "newsarticle": [
+            {
+              "headline": "MAHA fans want action Trump hasn’t delivered",
+              "datepublished": "2026-03-27 12:00:00"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Merck & Company Inc. - The New York Times",
+        "htmlTitle": "Merck &amp; Company Inc. - The New York Times",
+        "link": "https://www.nytimes.com/topic/company/merck-company-inc",
+        "displayLink": "www.nytimes.com",
+        "snippet": "21 hours ago ... Robert F. Kennedy Jr., President Trump's nominee to be health secretary, would have oversight power over the vaccine's maker, Merck, if confirmed.",
+        "htmlSnippet": "21 hours ago <b>...</b> Robert F. Kennedy Jr., President Trump&#39;s nominee to be <b>health</b> secretary, would have oversight power over the vaccine&#39;s maker, Merck, if <b>confirmed</b>.",
+        "formattedUrl": "https://www.nytimes.com/topic/company/merck-company-inc",
+        "htmlFormattedUrl": "https://www.nytimes.com/topic/company/merck-company-inc",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrEFd9dMV6ZEdLynnRAHAETMJuqcmVYo2BhO9L1d7zeE92oK6AIO_Lb8Q&s",
+              "width": "310",
+              "height": "163"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png",
+              "collection:language": "en",
+              "twitter:card": "summary_large_image",
+              "pt": "collection",
+              "twitter:url": "https://www.nytimes.com/topic/company/merck-company-inc",
+              "nyt-collection:identifier": "Merck & Company",
+              "pdate": "20090514",
+              "asset_id": "1154653901706",
+              "og:description": "News about Merck & Company Inc., including commentary and archival articles published in The New York Times.",
+              "twitter:image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png",
+              "nyt-collection:display-name": "Business",
+              "twitter:site": "@nytimes",
+              "news_keywords": "Business",
+              "ptime": "20090514180302",
+              "slug": "Merck & Company",
+              "collection:section": "Business",
+              "nyt-collection:type": "topiccollection",
+              "og:type": "article",
+              "twitter:title": "Merck & Company Inc. - Page 2",
+              "utime": "20250811101131",
+              "og:title": "Merck & Company Inc. - Page 2",
+              "slack-app-id": "A0121HXPPTQ",
+              "cn": "Merck & Company",
+              "color-scheme": "light",
+              "applicationname": "collection",
+              "ct": "topic",
+              "fb:app_id": "9869919170",
+              "collection:parentsection": "Business",
+              "nyt-collection:uri": "/topic/company/merck-company-inc",
+              "viewport": "width=device-width, initial-scale=1",
+              "nyt-collection:url": "https://www.nytimes.com/topic/company/merck-company-inc",
+              "og:url": "https://www.nytimes.com/topic/company/merck-company-inc"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "MAHA fans want action Trump hasn't delivered - POLITICO",
+        "htmlTitle": "MAHA fans want action Trump hasn&#39;t delivered - POLITICO",
+        "link": "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162",
+        "displayLink": "www.politico.com",
+        "snippet": "1 day ago ... The Make America Healthy Again movement joined forces with Republicans in 2024, helping hand Donald Trump the presidency. The midterms might look different.",
+        "htmlSnippet": "1 day ago <b>...</b> The Make America <b>Healthy</b> Again movement joined forces with Republicans in 2024, helping hand Donald Trump the presidency. The midterms might look different.",
+        "formattedUrl": "https://www.politico.com/.../maha-fans-want-action-trump-hasnt-delivered-...",
+        "htmlFormattedUrl": "https://www.politico.com/.../maha-fans-want-action-trump-hasnt-delivered-...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6puJAPJ6iaYCObUdzHymkIZJ_NJi44nsSqivHLBTFP1c4BIkBHwrDe1sO&s",
+              "width": "300",
+              "height": "168"
+            }
+          ],
+          "imageobject": [
+            {
+              "width": "150",
+              "url": "https://static.politico.com/6d/9f/1e153a1748fa9ea656c575dc6dff/politico-logo-60px-tall-1.png",
+              "height": "35"
+            },
+            {
+              "width": "50",
+              "url": "https://static.politico.com/e9/e3/9a3d70284f64a210f32c61d581ce/pulse-logo.png",
+              "height": "50"
+            }
+          ],
+          "person": [
+            {
+              "name": "Sophie Gardner",
+              "email": "sgardner@politico.com"
+            }
+          ],
+          "organization": [
+            {
+              "name": "Politico",
+              "url": "https://www.politico.com/"
+            }
+          ],
+          "metatags": [
+            {
+              "msapplication-tilecolor": "#da532c",
+              "og:image": "https://static.politico.com/3d/ee/f4d549cf4e548af6712990ce5b9e/politico-cms-shared-graphic-1120x629.jpg",
+              "theme-color": "#D71920",
+              "og:type": "website",
+              "twitter:title": "MAHA fans want action Trump hasn’t delivered",
+              "twitter:card": "summary_large_image",
+              "og:fb_appid": "114037015331397",
+              "og:site_name": "POLITICO",
+              "og:title": "MAHA fans want action Trump hasn’t delivered",
+              "msapplication-tileimage": "/mstile-144x144.png",
+              "og:description": "The Make America Healthy Again movement joined forces with Republicans in 2024, helping hand Donald Trump the presidency. The midterms might look different.",
+              "twitter:creator": "@politico",
+              "twitter:site": "@politico",
+              "viewport": "width=device-width, initial-scale=1",
+              "build": "1.0.0-SNAPSHOT",
+              "brightspot.contentid": "0000019d-2ec2-d107-a19d-eecfce070000",
+              "host": "www.politico.com",
+              "og:url": "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static.politico.com/3d/ee/f4d549cf4e548af6712990ce5b9e/politico-cms-shared-graphic-1120x629.jpg"
+            }
+          ],
+          "newsarticle": [
+            {
+              "headline": "MAHA fans want action Trump hasn’t delivered",
+              "datepublished": "2026-03-27 10:00:00"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Implants - Page 9 - The New York Times",
+        "htmlTitle": "Implants - Page 9 - The New York Times",
+        "link": "https://www.nytimes.com/topic/subject/implants?page=9",
+        "displayLink": "www.nytimes.com",
+        "snippet": "2 days ago ... Boston Scientific announced multiple recalls but has said its battery issues were limited. One internal test in 2025 found batteries with an “extremely high ...",
+        "htmlSnippet": "2 days ago <b>...</b> Boston Scientific <b>announced</b> multiple recalls but has said its battery issues were limited. One internal test in 2025 found batteries with an “extremely high&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/topic/subject/implants?page=9",
+        "htmlFormattedUrl": "https://www.nytimes.com/topic/subject/implants?page=9",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrEFd9dMV6ZEdLynnRAHAETMJuqcmVYo2BhO9L1d7zeE92oK6AIO_Lb8Q&s",
+              "width": "310",
+              "height": "163"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png",
+              "collection:language": "en",
+              "twitter:card": "summary_large_image",
+              "pt": "collection",
+              "twitter:url": "https://www.nytimes.com/topic/subject/implants",
+              "nyt-collection:identifier": "Implants",
+              "pdate": "20130312",
+              "asset_id": "1154675711353",
+              "og:description": "News about Implants, including commentary and archival articles published in The New York Times.",
+              "twitter:image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png",
+              "nyt-collection:display-name": "Health",
+              "twitter:site": "@nytimes",
+              "news_keywords": "Health",
+              "ptime": "20130312130656",
+              "slug": "Implants",
+              "collection:section": "Health",
+              "nyt-collection:type": "topiccollection",
+              "og:type": "article",
+              "twitter:title": "Implants",
+              "utime": "20250808104817",
+              "og:title": "Implants",
+              "slack-app-id": "A0121HXPPTQ",
+              "cn": "Implants",
+              "color-scheme": "light",
+              "applicationname": "collection",
+              "ct": "topic",
+              "fb:app_id": "9869919170",
+              "collection:parentsection": "Health",
+              "nyt-collection:uri": "/topic/subject/implants",
+              "viewport": "width=device-width, initial-scale=1",
+              "nyt-collection:url": "https://www.nytimes.com/topic/subject/implants",
+              "og:url": "https://www.nytimes.com/topic/subject/implants"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "The Timeless Fear of Corrupting the Youth - WSJ",
+        "htmlTitle": "The Timeless Fear <b>of</b> Corrupting the Youth - WSJ",
+        "link": "https://www.wsj.com/politics/social-media-freedom-speech-meta-youtube-ruling-32aaee3b?gaa_at=eafs&gaa_n=AWEtsqf_XFTcoqk35lymOjKqJoLPaP6cFQQqooz2KiKhJeSg01HfLuV2-Zlb&gaa_ts=69c86989&gaa_sig=ubSYKJ5VbyRJLAvXV-tDFWrD6TG1M93QrYme7nV8SPFSgPa3IjDcC5lGgHfuGvNmRnaboe6g6pyE1Cagrk8yGw%3D%3D",
+        "displayLink": "www.wsj.com",
+        "snippet": "1 day ago ... From Socrates to social media, society has always worried about protecting the young. But the latest ruling about Meta and YouTube overlooks the upsides of ...",
+        "htmlSnippet": "1 day ago <b>...</b> From Socrates to social media, society has always worried about protecting the young. But the <b>latest</b> ruling about Meta and YouTube overlooks the upsides <b>of</b>&nbsp;...",
+        "formattedUrl": "https://www.wsj.com/.../social-media-freedom-speech-meta-youtube-ruling-...",
+        "htmlFormattedUrl": "https://www.wsj.com/.../social-media-freedom-speech-meta-youtube-ruling-...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTFfk-_yf6T45N4rUzBfbJG0VR5H_pkGqE4bzZRS4zSH842T-rMu6sKQ0&s",
+              "width": "318",
+              "height": "159"
+            }
+          ],
+          "metatags": [
+            {
+              "article.origheadline": "The Timeless Fear of Corrupting the Youth",
+              "og:image": "https://images.wsj.net/im-17155058/social",
+              "article.publisher": "https://www.facebook.com/wsj",
+              "twitter:card": "summary_large_image",
+              "og:image:width": "1280",
+              "og:site_name": "The Wall Street Journal",
+              "datelastpubbed": "2026-03-28T06:34:00Z",
+              "og:description": "From Socrates to social media, society has always worried about protecting the young. But the latest ruling about Meta and YouTube overlooks the upsides of free speech.",
+              "article.access": "paid",
+              "article:publisher": "https://www.facebook.com/wsj",
+              "twitter:image:alt": "The Timeless Fear of Corrupting the Youth",
+              "article.section": "Life",
+              "article.version": "2",
+              "page.content.format": "responsive",
+              "article:word_count": "1224",
+              "twitter:domain": "wsj.com",
+              "article.created": "2026-03-27T23:00:00Z",
+              "author": "Jacob Mchangama and Jeff Kosseff",
+              "article:video_count": "0",
+              "fb:pages": "8304333127",
+              "article:internal_link_count": "6",
+              "msnbot": "nocache, noarchive",
+              "og:locale": "en_US",
+              "page.content.type": "Article",
+              "article:image_count": "3",
+              "article.id": "WP-WSJ-0003453455",
+              "article.page": "Ideas",
+              "twitter:image": "https://images.wsj.net/im-17155058/social",
+              "article.updated": "2026-03-27T23:00:00Z",
+              "article:embed_count": "0",
+              "twitter:site": "@WSJ",
+              "page.section": "Article",
+              "article.type.display": "Essay",
+              "twitter:title": "Essay | The Timeless Fear of Corrupting the Youth",
+              "og:type": "article",
+              "article.summary": "From Socrates to social media, society has always worried about protecting the young. But the latest ruling about Meta and YouTube overlooks the upsides of free speech.",
+              "servo-context": "servo:prod:virginia:wsj-nextjs-app:article",
+              "og:title": "Essay | The Timeless Fear of Corrupting the Youth",
+              "og:image:height": "640",
+              "page.content.source": "WSJ Online",
+              "fb:app_id": "368513495882",
+              "article.published": "2026-03-27T23:00:00Z",
+              "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0",
+              "twitter:description": "From Socrates to social media, society has always worried about protecting the young. But the latest ruling about Meta and YouTube overlooks the upsides of free speech.",
+              "article.headline": "The Timeless Fear of Corrupting the Youth",
+              "branch:deeplink:target": "app",
+              "og:url": "https://www.wsj.com/politics/social-media-freedom-speech-meta-youtube-ruling-32aaee3b",
+              "google-signin-client_id": "61387583289.apps.googleusercontent.com",
+              "article.type": "Essay",
+              "article:external_link_count": "2"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://images.wsj.net/im-17155058/social"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Health - WSJ",
+        "htmlTitle": "<b>Health</b> - WSJ",
+        "link": "https://www.wsj.com/health?page=1&gaa_at=eafs&gaa_n=AWEtsqe8kVh5vjw7UGW9JKebRxgsz6D7nCTPJwXIXC6YdwYqzaSeDpibvV_l&gaa_ts=69c86989&gaa_sig=LdmNYEDNx71xIx7AbdcuUaYvOWu9iPNsEpaxKupKJJGEfBPmHN1XNZAnFZCCLW0PbaIhEQN3ZtMMIU5JRju_Hw%3D%3D",
+        "displayLink": "www.wsj.com",
+        "snippet": "2 days ago ... The latest news on health and wellness, including the healthcare industry, pharmaceuticals and more.",
+        "htmlSnippet": "2 days ago <b>...</b> The <b>latest</b> news on <b>health</b> and wellness, including the <b>healthcare</b> industry, <b>pharmaceuticals</b> and more.",
+        "formattedUrl": "https://www.wsj.com/health?page=1",
+        "htmlFormattedUrl": "https://www.wsj.com/<b>health</b>?page=1",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQylg_XzeWnMwc5Pd83d4KgnnxJznxB-GWxxT5d7SMEYOpAG5GSV-2knTQ&s",
+              "width": "310",
+              "height": "163"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://s.wsj.net/img/meta/wsj-social-share.png",
+              "page.content.type": "Summaries",
+              "twitter:card": "summary",
+              "og:site_name": "The Wall Street Journal",
+              "page.site.product": "WSJ",
+              "og:description": "The latest news on health and wellness, including the healthcare industry, pharmaceuticals and more.",
+              "twitter:image": "https://s.wsj.net/img/meta/wsj-social-share.png",
+              "next-head-count": "32",
+              "twitter:site": "@WSJ",
+              "page.region": "na,us",
+              "twitter:title": "Health",
+              "og:type": "website",
+              "twitter:domain": "wsj.com",
+              "og:title": "Health",
+              "servo-context": "servo:prod:virginia:wsj-nextjs-app:sections",
+              "page.content.source": "WSJ Online",
+              "fb:app_id": "368513495882",
+              "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0",
+              "twitter:description": "The latest news on health and wellness, including the healthcare industry, pharmaceuticals and more.",
+              "user.exp": "google_bot",
+              "msnbot": "noarchive, nocache, max-image-preview:large",
+              "user.type": "nonsubscriber",
+              "og:locale": "en_US",
+              "og:url": "https://www.wsj.com/health?page=1",
+              "page.site": "wsj"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://s.wsj.net/img/meta/wsj-social-share.png"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "27 March 2026 - Sitemap | Reuters",
+        "htmlTitle": "27 March 2026 - Sitemap | Reuters",
+        "link": "https://www.reuters.com/sitemap/2026-03/27/1/",
+        "displayLink": "www.reuters.com",
+        "snippet": "2 days ago ... Explore the list of articles from selected day 2026-03-27 published on reuters.com.",
+        "htmlSnippet": "2 days ago <b>...</b> Explore the list <b>of</b> articles from selected day 2026-03-27 published on reuters.com.",
+        "formattedUrl": "https://www.reuters.com/sitemap/2026-03/27/1/",
+        "htmlFormattedUrl": "https://www.reuters.com/sitemap/2026-03/27/1/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpd8nbEEzm4yT4-EEbv7zubfuD4LaQ1qvdDbkmPA9SQZa3OKK4jlNOYLE&s",
+              "width": "311",
+              "height": "162"
+            }
+          ],
+          "metatags": [
+            {
+              "apple-itunes-app": "app-id=602660809",
+              "og:image": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355",
+              "analytics:page_layout": "landing",
+              "og:type": "website",
+              "twitter:title": "Articles sitemap of 2026-03-27 | Reuters",
+              "og:site_name": "Reuters",
+              "ccbot": "nofollow",
+              "og:title": "Articles sitemap of 2026-03-27 | Reuters",
+              "fb:pages": "114050161948682",
+              "og:description": "Explore the list of articles from selected day 2026-03-27 published on reuters.com.",
+              "twitter:creator": "@Reuters",
+              "twitter:image": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355",
+              "fb:app_id": "988502044532272",
+              "twitter:site": "@Reuters",
+              "viewport": "width=device-width, initial-scale=1",
+              "twitter:description": "Explore the list of articles from selected day 2026-03-27 published on reuters.com.",
+              "og:url": "https://www.reuters.com/sitemap/2026-03/27/1/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Nobel Prize winners face new loss in bid for US CRISPR patents",
+        "htmlTitle": "Nobel Prize winners face new loss in bid for US CRISPR patents",
+        "link": "https://www.reuters.com/legal/litigation/nobel-prize-winners-face-new-loss-bid-us-crispr-patents-2026-03-27/",
+        "displayLink": "www.reuters.com",
+        "snippet": "1 day ago ... CRISPR enables scientists to use biological \"scissors\" to edit DNA. The technology is being tested in clinical trials to help cure diseases caused by genetic ...",
+        "htmlSnippet": "1 day ago <b>...</b> CRISPR enables scientists to use biological &quot;scissors&quot; to edit DNA. The technology is being tested in <b>clinical trials</b> to help cure diseases caused by genetic&nbsp;...",
+        "formattedUrl": "https://www.reuters.com/.../nobel-prize-winners-face-new-loss-bid-us-crispr...",
+        "htmlFormattedUrl": "https://www.reuters.com/.../nobel-prize-winners-face-new-loss-bid-us-crispr...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjo2uJUeeWvjlYtsNz0JSOir79SlR-p0kP_TFGJ6rbGNYryXdeJBHZ6UQ&s",
+              "width": "310",
+              "height": "162"
+            }
+          ],
+          "metatags": [
+            {
+              "apple-itunes-app": "app-id=602660809, app-argument=https://www.reuters.com/legal/litigation/nobel-prize-winners-face-new-loss-bid-us-crispr-patents-2026-03-27/?id=BULEJB3UDRKQFCLC42TYR64QAI",
+              "og:image": "https://www.reuters.com/resizer/v2/XEBLFB35H5LSBM5JCK7UKYF3FU.jpg?auth=0cbfc746eaae32af35fbf4b2d6e3ea7775476c51571142d1f4a752b420b6b05d&height=1005&width=1920&quality=80&smart=true",
+              "analytics:page_layout": "regular-article",
+              "article:published_time": "2026-03-27T15:43:19.798Z",
+              "og:image:width": "1200",
+              "twitter:card": "summary_large_image",
+              "og:site_name": "Reuters",
+              "analytics:product_type": "Project Emerald",
+              "og:article:modified_time": "2026-03-27T20:22:32.839Z",
+              "ccbot": "nofollow",
+              "analytics:ad_layout": "leaderboard, right rail, sponsored",
+              "analyticsattributes.topicchannel": "Legal",
+              "title": "Nobel Prize winners face new loss in bid for US CRISPR patents | Reuters",
+              "og:description": "A U.S. Patent Office tribunal has ruled against Nobel Prize-winning scientists Jennifer Doudna and Emmanuelle Charpentier for a second time in their dispute with ​the Broad Institute, a joint venture of Harvard University and the Massachusetts Institute of ‌Technology, over patent rights to foundational CRISPR gene-editing technology.",
+              "twitter:creator": "@Reuters",
+              "twitter:image": "https://www.reuters.com/resizer/v2/XEBLFB35H5LSBM5JCK7UKYF3FU.jpg?auth=0cbfc746eaae32af35fbf4b2d6e3ea7775476c51571142d1f4a752b420b6b05d&height=1005&width=1920&quality=80&smart=true",
+              "twitter:image:alt": "French microbiologist Emmanuelle Charpentier (L) and professor Jennifer Doudna of the U.S. pose at the San Francisco park in Oviedo, October 21, 2015. REUTERS/Eloy Alonso",
+              "twitter:site": "@Reuters",
+              "article:modified_time": "2026-03-27T20:22:32.839Z",
+              "fb:admins": "988502044532272",
+              "article:content_tier": "metered",
+              "og:type": "article",
+              "article:section": "Litigation",
+              "og:image:alt": "French microbiologist Emmanuelle Charpentier (L) and professor Jennifer Doudna of the U.S. pose at the San Francisco park in Oviedo, October 21, 2015. REUTERS/Eloy Alonso",
+              "twitter:title": "Nobel Prize winners face new loss in bid for US CRISPR patents",
+              "ad:template": "article",
+              "og:image:url": "https://www.reuters.com/resizer/v2/XEBLFB35H5LSBM5JCK7UKYF3FU.jpg?auth=0cbfc746eaae32af35fbf4b2d6e3ea7775476c51571142d1f4a752b420b6b05d&height=1005&width=1920&quality=80&smart=true",
+              "dcsext.dartzone": "/4735792/reuters.com/legal/litigation/article",
+              "og:title": "Nobel Prize winners face new loss in bid for US CRISPR patents",
+              "dcsext.channellist": "Legal;Legal;Government;Litigation;Transactional;Litigation",
+              "sophi-content-id": "BULEJB3UDRKQFCLC42TYR64QAI",
+              "og:image:height": "628",
+              "og:article:published_time": "2026-03-27T15:43:19.798Z",
+              "og:updated_time": "2026-03-27T20:22:32.839Z",
+              "fb:pages": "114050161948682",
+              "article:author": "Blake Brittain",
+              "article:tag": "NRLIN:OPAT,TOPIC:PHARMA-HEALTHCARE-POLICY-REGULATION,RHPI:LAWSUITS,BACT,BIZ,CLJ,CPROD,GEN,HECA,IPROP,JUDIC,SCI,LEGAL,REUTERS-LEGAL,NRLPA:OHLT,NRLIN:OTECH,NRLPA:OIP,DEST:OHLT,DEST:OIP,DEST:OTECH,DEST:LIT,DEST:OPAT,TOPNWS,TOPCMB",
+              "analyticsattributes.topicsubchannel": "Litigation",
+              "fb:app_id": "988502044532272",
+              "og:locale:alternate": "en_US",
+              "viewport": "width=device-width, initial-scale=1",
+              "twitter:description": "A U.S. Patent Office tribunal has ruled against Nobel Prize-winning scientists Jennifer Doudna and Emmanuelle Charpentier for a second time in their dispute with ​the Broad Institute, a joint venture of Harvard University and the Massachusetts Institute of ‌Technology, over patent rights to foundational CRISPR gene-editing technology.",
+              "og:locale": "en_US",
+              "og:url": "https://www.reuters.com/legal/litigation/nobel-prize-winners-face-new-loss-bid-us-crispr-patents-2026-03-27/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://www.reuters.com/resizer/v2/XEBLFB35H5LSBM5JCK7UKYF3FU.jpg?auth=0cbfc746eaae32af35fbf4b2d6e3ea7775476c51571142d1f4a752b420b6b05d&height=1005&width=1920&quality=80&smart=true"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Can a Note-Taking AI Bracelet Really Make You More Productive?",
+        "htmlTitle": "Can a Note-Taking AI Bracelet Really Make You More Productive?",
+        "link": "https://www.nytimes.com/wirecutter/reviews/plaud-notepin-s-review/",
+        "displayLink": "www.nytimes.com",
+        "snippet": "1 day ago ... Two photos: one of the Plaud NotePin S next to its accessories on top of ... I have a penchant for writing by hand. I enjoy the sensory experience, whether I'm ...",
+        "htmlSnippet": "1 day ago <b>...</b> Two photos: one <b>of</b> the Plaud NotePin S next to its accessories on top <b>of</b> ... I have a penchant for writing by hand. I enjoy the sensory experience, whether I&#39;m&nbsp;...",
+        "formattedUrl": "https://www.nytimes.com/wirecutter/reviews/plaud-notepin-s-review/",
+        "htmlFormattedUrl": "https://www.nytimes.com/wirecutter/reviews/plaud-notepin-s-review/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJogtbMfR1w3BH_asYFYsavY9-IdOOJA0qHnDvN7_pGbF5ilruUM4FCjIF&s",
+              "width": "311",
+              "height": "162"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://cdn.thewirecutter.com/wp-content/media/2026/03/FI-WEARABLE-AI-NOTETAKING-DEVICE-2x1-1.jpg?auto=webp&quality=75&crop=1.91:1&width=1200",
+              "theme-color": "#ffffff",
+              "twitter:card": "summary_large_image",
+              "og:type": "article",
+              "twitter:title": "Can a Note-Taking AI Bracelet Really Make You More Productive? I Tested One to Find Out.",
+              "og:site_name": "Wirecutter: Reviews for the Real World",
+              "og:title": "Can a Note-Taking AI Bracelet Really Make You More Productive? I Tested One to Find Out.",
+              "og:description": "The wearable Plaud NotePin S can free up your hands and provide fast AI transcriptions and summaries. But its battery life and app integrations need some work.",
+              "twitter:image": "https://cdn.thewirecutter.com/wp-content/media/2026/03/FI-WEARABLE-AI-NOTETAKING-DEVICE-2x1-1.jpg?auto=webp&quality=75&crop=1.91:1&width=1200",
+              "next-head-count": "52",
+              "fb:app_id": "441494522611849",
+              "twitter:site": "@wirecutter",
+              "viewport": "width=device-width",
+              "twitter:description": "The wearable Plaud NotePin S can free up your hands and provide fast AI transcriptions and summaries. But its battery life and app integrations need some work.",
+              "og:locale": "en_US",
+              "searchobjecttype": "review",
+              "og:url": "https://www.nytimes.com/wirecutter/reviews/plaud-notepin-s-review/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://cdn.thewirecutter.com/wp-content/media/2026/03/FI-WEARABLE-AI-NOTETAKING-DEVICE-2x1-1.jpg?auto=webp&quality=75&crop=1.91:1&width=1200"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

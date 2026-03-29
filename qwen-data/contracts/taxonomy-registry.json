@@ -1,0 +1,1587 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-03-26T21:57:34.323Z",
+  "source_path": "src/data/taxonomy.json",
+  "sections": [
+    {
+      "id": "news",
+      "slug": "news",
+      "label": "News",
+      "description": "Breaking developments, public affairs, law, climate, and major world events explained clearly and without noise.",
+      "kind": "core",
+      "topic_ids": [
+        "us-politics",
+        "world-geopolitics",
+        "law-crime",
+        "climate-extreme-weather",
+        "society-social-trends"
+      ]
+    },
+    {
+      "id": "business",
+      "slug": "business",
+      "label": "Business",
+      "description": "Markets, companies, consumer money, housing, crypto, and travel-related economic pressure in plain English.",
+      "kind": "core",
+      "topic_ids": [
+        "economy-markets",
+        "companies-deals",
+        "consumer-money",
+        "housing-real-estate",
+        "crypto-bitcoin",
+        "travel-consumer-issues"
+      ]
+    },
+    {
+      "id": "tech",
+      "slug": "tech",
+      "label": "Tech",
+      "description": "AI, consumer tech, cybersecurity, mobility, space, and platforms reshaping work and daily life.",
+      "kind": "core",
+      "topic_ids": [
+        "ai-big-tech",
+        "consumer-tech",
+        "cybersecurity",
+        "mobility-evs",
+        "space-astronomy",
+        "enterprise-platforms"
+      ]
+    },
+    {
+      "id": "health",
+      "slug": "health",
+      "label": "Health",
+      "description": "Public health, medical research, FDA and pharma decisions, mental health, and practical wellness coverage.",
+      "kind": "core",
+      "topic_ids": [
+        "public-health",
+        "medical-research",
+        "pharma-fda",
+        "mental-health",
+        "wellness-fitness"
+      ]
+    },
+    {
+      "id": "sports",
+      "slug": "sports",
+      "label": "Sports",
+      "description": "Major leagues, tournaments, transfers, business dynamics, and the culture around athletes and events.",
+      "kind": "core",
+      "topic_ids": [
+        "major-leagues",
+        "events-tournaments",
+        "transfers-business",
+        "athletes-culture"
+      ]
+    },
+    {
+      "id": "culture",
+      "slug": "culture",
+      "label": "Culture",
+      "description": "Film, television, music, internet culture, creator platforms, and the stories dominating entertainment feeds.",
+      "kind": "core",
+      "topic_ids": [
+        "film-tv",
+        "music-celebrities",
+        "internet-culture",
+        "creators-platforms"
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "id": "us-politics",
+      "slug": "us-politics",
+      "label": "U.S. Politics & Policy",
+      "description": "The White House, Congress, courts, agencies, elections, and policy fights shaping everyday life in the U.S.",
+      "section_id": "news",
+      "section_slug": "news",
+      "section_label": "News",
+      "aliases": [
+        "u.s. politics & policy",
+        "us politics",
+        "u.s. politics",
+        "white house",
+        "congress"
+      ]
+    },
+    {
+      "id": "world-geopolitics",
+      "slug": "world-geopolitics",
+      "label": "World & Geopolitics",
+      "description": "Wars, diplomacy, military escalations, and international power shifts with global consequences.",
+      "section_id": "news",
+      "section_slug": "news",
+      "section_label": "News",
+      "aliases": [
+        "world & geopolitics",
+        "world geopolitics",
+        "global conflicts",
+        "world news",
+        "geopolitics"
+      ]
+    },
+    {
+      "id": "law-crime",
+      "slug": "law-crime",
+      "label": "Law & Crime",
+      "description": "Courts, investigations, arrests, legal disputes, and major crime stories with public impact.",
+      "section_id": "news",
+      "section_slug": "news",
+      "section_label": "News",
+      "aliases": [
+        "law & crime",
+        "law crime",
+        "courts",
+        "crime",
+        "legal"
+      ]
+    },
+    {
+      "id": "climate-extreme-weather",
+      "slug": "climate-extreme-weather",
+      "label": "Climate & Extreme Weather",
+      "description": "Heatwaves, storms, fires, floods, and the science and policy questions around a changing climate.",
+      "section_id": "news",
+      "section_slug": "news",
+      "section_label": "News",
+      "aliases": [
+        "climate & extreme weather",
+        "climate extreme weather",
+        "climate",
+        "extreme weather"
+      ]
+    },
+    {
+      "id": "society-social-trends",
+      "slug": "society-social-trends",
+      "label": "Society & Social Trends",
+      "description": "Education, labor, communities, demographics, and shifts in how people live, work, and relate.",
+      "section_id": "news",
+      "section_slug": "news",
+      "section_label": "News",
+      "aliases": [
+        "society & social trends",
+        "society social trends",
+        "society",
+        "social trends"
+      ]
+    },
+    {
+      "id": "economy-markets",
+      "slug": "economy-markets",
+      "label": "Economy & Markets",
+      "description": "Inflation, jobs, rates, GDP, and broad market moves that frame the economic picture.",
+      "section_id": "business",
+      "section_slug": "business",
+      "section_label": "Business",
+      "aliases": [
+        "economy & markets",
+        "economy markets",
+        "economy",
+        "markets"
+      ]
+    },
+    {
+      "id": "companies-deals",
+      "slug": "companies-deals",
+      "label": "Companies & Deals",
+      "description": "Corporate strategy, earnings, mergers, restructurings, and the decisions moving industries.",
+      "section_id": "business",
+      "section_slug": "business",
+      "section_label": "Business",
+      "aliases": [
+        "companies & deals",
+        "companies deals",
+        "companies",
+        "deals",
+        "earnings"
+      ]
+    },
+    {
+      "id": "consumer-money",
+      "slug": "consumer-money",
+      "label": "Consumer Money",
+      "description": "Debt, credit, pricing pressure, household budgets, and the money questions readers actually face.",
+      "section_id": "business",
+      "section_slug": "business",
+      "section_label": "Business",
+      "aliases": [
+        "consumer money",
+        "personal finance"
+      ]
+    },
+    {
+      "id": "housing-real-estate",
+      "slug": "housing-real-estate",
+      "label": "Housing & Real Estate",
+      "description": "Home prices, rent, mortgages, construction, landlords, and the forces shaping housing access.",
+      "section_id": "business",
+      "section_slug": "business",
+      "section_label": "Business",
+      "aliases": [
+        "housing & real estate",
+        "housing real estate",
+        "housing",
+        "real estate"
+      ]
+    },
+    {
+      "id": "crypto-bitcoin",
+      "slug": "crypto-bitcoin",
+      "label": "Crypto",
+      "description": "Bitcoin, Ethereum, crypto regulation, exchange drama, and the business reality behind digital assets.",
+      "section_id": "business",
+      "section_slug": "business",
+      "section_label": "Business",
+      "aliases": [
+        "crypto",
+        "crypto bitcoin",
+        "bitcoin"
+      ]
+    },
+    {
+      "id": "travel-consumer-issues",
+      "slug": "travel-consumer-issues",
+      "label": "Travel & Consumer Issues",
+      "description": "Airlines, airports, fees, refunds, transportation friction, and service failures affecting consumers.",
+      "section_id": "business",
+      "section_slug": "business",
+      "section_label": "Business",
+      "aliases": [
+        "travel & consumer issues",
+        "travel consumer issues",
+        "travel",
+        "consumer issues"
+      ]
+    },
+    {
+      "id": "ai-big-tech",
+      "slug": "ai-big-tech",
+      "label": "AI & Big Tech",
+      "description": "AI labs, major platforms, chips, regulation, and the companies racing to control the next layer of software.",
+      "section_id": "tech",
+      "section_slug": "tech",
+      "section_label": "Tech",
+      "aliases": [
+        "ai & big tech",
+        "ai big tech",
+        "ai",
+        "big tech",
+        "artificial intelligence"
+      ]
+    },
+    {
+      "id": "consumer-tech",
+      "slug": "consumer-tech",
+      "label": "Consumer Tech",
+      "description": "Phones, apps, gadgets, devices, and the products mainstream users interact with every day.",
+      "section_id": "tech",
+      "section_slug": "tech",
+      "section_label": "Tech",
+      "aliases": [
+        "consumer tech",
+        "consumer technology",
+        "gadgets",
+        "devices"
+      ]
+    },
+    {
+      "id": "cybersecurity",
+      "slug": "cybersecurity",
+      "label": "Cybersecurity",
+      "description": "Breaches, ransomware, cyber risk, security failures, and how institutions respond when systems fail.",
+      "section_id": "tech",
+      "section_slug": "tech",
+      "section_label": "Tech",
+      "aliases": [
+        "cybersecurity",
+        "cyber",
+        "security"
+      ]
+    },
+    {
+      "id": "mobility-evs",
+      "slug": "mobility-evs",
+      "label": "Mobility & EVs",
+      "description": "Electric vehicles, charging, autonomous systems, transit infrastructure, and how mobility is changing.",
+      "section_id": "tech",
+      "section_slug": "tech",
+      "section_label": "Tech",
+      "aliases": [
+        "mobility & evs",
+        "mobility evs",
+        "evs",
+        "electric vehicles",
+        "mobility"
+      ]
+    },
+    {
+      "id": "space-astronomy",
+      "slug": "space-astronomy",
+      "label": "Space & Astronomy",
+      "description": "Launches, missions, satellites, telescopes, and discoveries beyond Earth.",
+      "section_id": "tech",
+      "section_slug": "tech",
+      "section_label": "Tech",
+      "aliases": [
+        "space & astronomy",
+        "space astronomy",
+        "space",
+        "astronomy"
+      ]
+    },
+    {
+      "id": "enterprise-platforms",
+      "slug": "enterprise-platforms",
+      "label": "Enterprise & Platforms",
+      "description": "Cloud, software platforms, enterprise tools, developer ecosystems, and the business of digital infrastructure.",
+      "section_id": "tech",
+      "section_slug": "tech",
+      "section_label": "Tech",
+      "aliases": [
+        "enterprise & platforms",
+        "enterprise platforms",
+        "enterprise",
+        "platforms",
+        "cloud software"
+      ]
+    },
+    {
+      "id": "public-health",
+      "slug": "public-health",
+      "label": "Public Health",
+      "description": "Disease trends, outbreaks, hospital systems, health agencies, and population-scale health risks.",
+      "section_id": "health",
+      "section_slug": "health",
+      "section_label": "Health",
+      "aliases": [
+        "public health",
+        "health agencies"
+      ]
+    },
+    {
+      "id": "medical-research",
+      "slug": "medical-research",
+      "label": "Medical Research",
+      "description": "Clinical studies, treatment breakthroughs, new evidence, and the limits of what current science shows.",
+      "section_id": "health",
+      "section_slug": "health",
+      "section_label": "Health",
+      "aliases": [
+        "medical research",
+        "clinical studies"
+      ]
+    },
+    {
+      "id": "pharma-fda",
+      "slug": "pharma-fda",
+      "label": "Pharma & FDA",
+      "description": "Drug approvals, recalls, regulation, biotech pipelines, and the commercial side of medicine.",
+      "section_id": "health",
+      "section_slug": "health",
+      "section_label": "Health",
+      "aliases": [
+        "pharma & fda",
+        "pharma fda",
+        "pharma",
+        "fda",
+        "drug approvals"
+      ]
+    },
+    {
+      "id": "mental-health",
+      "slug": "mental-health",
+      "label": "Mental Health",
+      "description": "Therapy access, anxiety, depression, treatment trends, and the systems surrounding mental health care.",
+      "section_id": "health",
+      "section_slug": "health",
+      "section_label": "Health",
+      "aliases": [
+        "mental health"
+      ]
+    },
+    {
+      "id": "wellness-fitness",
+      "slug": "wellness-fitness",
+      "label": "Wellness & Fitness",
+      "description": "Exercise, sleep, nutrition, and evidence-based coverage of habits people try to build into daily life.",
+      "section_id": "health",
+      "section_slug": "health",
+      "section_label": "Health",
+      "aliases": [
+        "wellness & fitness",
+        "wellness fitness",
+        "wellness",
+        "fitness"
+      ]
+    },
+    {
+      "id": "major-leagues",
+      "slug": "major-leagues",
+      "label": "Major Leagues",
+      "description": "NFL, NBA, MLB, NHL, soccer, and other top leagues followed through performance, standings, and trends.",
+      "section_id": "sports",
+      "section_slug": "sports",
+      "section_label": "Sports",
+      "aliases": [
+        "major leagues",
+        "league coverage"
+      ]
+    },
+    {
+      "id": "events-tournaments",
+      "slug": "events-tournaments",
+      "label": "Events & Tournaments",
+      "description": "World Cups, playoffs, Olympics-style events, and major competitions that shape the sports calendar.",
+      "section_id": "sports",
+      "section_slug": "sports",
+      "section_label": "Sports",
+      "aliases": [
+        "events & tournaments",
+        "events tournaments",
+        "events",
+        "tournaments"
+      ]
+    },
+    {
+      "id": "transfers-business",
+      "slug": "transfers-business",
+      "label": "Transfers & Business",
+      "description": "Contracts, trades, rights deals, ownership moves, sponsorships, and the money around sports.",
+      "section_id": "sports",
+      "section_slug": "sports",
+      "section_label": "Sports",
+      "aliases": [
+        "transfers & business",
+        "transfers business",
+        "transfers",
+        "sports business"
+      ]
+    },
+    {
+      "id": "athletes-culture",
+      "slug": "athletes-culture",
+      "label": "Athletes & Culture",
+      "description": "Athlete-driven storylines, fandom, identity, celebrity crossover, and how sports shapes culture.",
+      "section_id": "sports",
+      "section_slug": "sports",
+      "section_label": "Sports",
+      "aliases": [
+        "athletes & culture",
+        "athletes culture",
+        "athletes",
+        "sports culture"
+      ]
+    },
+    {
+      "id": "film-tv",
+      "slug": "film-tv",
+      "label": "Film & TV",
+      "description": "Movies, streaming, television, franchise news, and the business and creative shifts behind the screen.",
+      "section_id": "culture",
+      "section_slug": "culture",
+      "section_label": "Culture",
+      "aliases": [
+        "film & tv",
+        "film tv",
+        "film",
+        "tv",
+        "streaming"
+      ]
+    },
+    {
+      "id": "music-celebrities",
+      "slug": "music-celebrities",
+      "label": "Music & Celebrities",
+      "description": "Artists, tours, celebrity narratives, awards, and music-industry developments with broad attention.",
+      "section_id": "culture",
+      "section_slug": "culture",
+      "section_label": "Culture",
+      "aliases": [
+        "music & celebrities",
+        "music celebrities",
+        "music",
+        "celebrities"
+      ]
+    },
+    {
+      "id": "internet-culture",
+      "slug": "internet-culture",
+      "label": "Internet Culture",
+      "description": "Viral moments, memes, fandom, online discourse, and the weird social gravity of the internet.",
+      "section_id": "culture",
+      "section_slug": "culture",
+      "section_label": "Culture",
+      "aliases": [
+        "internet culture",
+        "viral culture"
+      ]
+    },
+    {
+      "id": "creators-platforms",
+      "slug": "creators-platforms",
+      "label": "Creators & Platforms",
+      "description": "YouTubers, streamers, social platforms, creator economies, moderation, and audience-platform power shifts.",
+      "section_id": "culture",
+      "section_slug": "culture",
+      "section_label": "Culture",
+      "aliases": [
+        "creators & platforms",
+        "creators platforms",
+        "creator economy",
+        "social platforms"
+      ]
+    }
+  ],
+  "sectionById": {
+    "news": {
+      "id": "news",
+      "slug": "news",
+      "label": "News",
+      "description": "Breaking developments, public affairs, law, climate, and major world events explained clearly and without noise.",
+      "kind": "core",
+      "topic_ids": [
+        "us-politics",
+        "world-geopolitics",
+        "law-crime",
+        "climate-extreme-weather",
+        "society-social-trends"
+      ]
+    },
+    "business": {
+      "id": "business",
+      "slug": "business",
+      "label": "Business",
+      "description": "Markets, companies, consumer money, housing, crypto, and travel-related economic pressure in plain English.",
+      "kind": "core",
+      "topic_ids": [
+        "economy-markets",
+        "companies-deals",
+        "consumer-money",
+        "housing-real-estate",
+        "crypto-bitcoin",
+        "travel-consumer-issues"
+      ]
+    },
+    "tech": {
+      "id": "tech",
+      "slug": "tech",
+      "label": "Tech",
+      "description": "AI, consumer tech, cybersecurity, mobility, space, and platforms reshaping work and daily life.",
+      "kind": "core",
+      "topic_ids": [
+        "ai-big-tech",
+        "consumer-tech",
+        "cybersecurity",
+        "mobility-evs",
+        "space-astronomy",
+        "enterprise-platforms"
+      ]
+    },
+    "health": {
+      "id": "health",
+      "slug": "health",
+      "label": "Health",
+      "description": "Public health, medical research, FDA and pharma decisions, mental health, and practical wellness coverage.",
+      "kind": "core",
+      "topic_ids": [
+        "public-health",
+        "medical-research",
+        "pharma-fda",
+        "mental-health",
+        "wellness-fitness"
+      ]
+    },
+    "sports": {
+      "id": "sports",
+      "slug": "sports",
+      "label": "Sports",
+      "description": "Major leagues, tournaments, transfers, business dynamics, and the culture around athletes and events.",
+      "kind": "core",
+      "topic_ids": [
+        "major-leagues",
+        "events-tournaments",
+        "transfers-business",
+        "athletes-culture"
+      ]
+    },
+    "culture": {
+      "id": "culture",
+      "slug": "culture",
+      "label": "Culture",
+      "description": "Film, television, music, internet culture, creator platforms, and the stories dominating entertainment feeds.",
+      "kind": "core",
+      "topic_ids": [
+        "film-tv",
+        "music-celebrities",
+        "internet-culture",
+        "creators-platforms"
+      ]
+    }
+  },
+  "topicById": {
+    "us-politics": {
+      "id": "us-politics",
+      "slug": "us-politics",
+      "label": "U.S. Politics & Policy",
+      "description": "The White House, Congress, courts, agencies, elections, and policy fights shaping everyday life in the U.S.",
+      "section_id": "news",
+      "section_slug": "news",
+      "section_label": "News",
+      "aliases": [
+        "u.s. politics & policy",
+        "us politics",
+        "u.s. politics",
+        "white house",
+        "congress"
+      ]
+    },
+    "world-geopolitics": {
+      "id": "world-geopolitics",
+      "slug": "world-geopolitics",
+      "label": "World & Geopolitics",
+      "description": "Wars, diplomacy, military escalations, and international power shifts with global consequences.",
+      "section_id": "news",
+      "section_slug": "news",
+      "section_label": "News",
+      "aliases": [
+        "world & geopolitics",
+        "world geopolitics",
+        "global conflicts",
+        "world news",
+        "geopolitics"
+      ]
+    },
+    "law-crime": {
+      "id": "law-crime",
+      "slug": "law-crime",
+      "label": "Law & Crime",
+      "description": "Courts, investigations, arrests, legal disputes, and major crime stories with public impact.",
+      "section_id": "news",
+      "section_slug": "news",
+      "section_label": "News",
+      "aliases": [
+        "law & crime",
+        "law crime",
+        "courts",
+        "crime",
+        "legal"
+      ]
+    },
+    "climate-extreme-weather": {
+      "id": "climate-extreme-weather",
+      "slug": "climate-extreme-weather",
+      "label": "Climate & Extreme Weather",
+      "description": "Heatwaves, storms, fires, floods, and the science and policy questions around a changing climate.",
+      "section_id": "news",
+      "section_slug": "news",
+      "section_label": "News",
+      "aliases": [
+        "climate & extreme weather",
+        "climate extreme weather",
+        "climate",
+        "extreme weather"
+      ]
+    },
+    "society-social-trends": {
+      "id": "society-social-trends",
+      "slug": "society-social-trends",
+      "label": "Society & Social Trends",
+      "description": "Education, labor, communities, demographics, and shifts in how people live, work, and relate.",
+      "section_id": "news",
+      "section_slug": "news",
+      "section_label": "News",
+      "aliases": [
+        "society & social trends",
+        "society social trends",
+        "society",
+        "social trends"
+      ]
+    },
+    "economy-markets": {
+      "id": "economy-markets",
+      "slug": "economy-markets",
+      "label": "Economy & Markets",
+      "description": "Inflation, jobs, rates, GDP, and broad market moves that frame the economic picture.",
+      "section_id": "business",
+      "section_slug": "business",
+      "section_label": "Business",
+      "aliases": [
+        "economy & markets",
+        "economy markets",
+        "economy",
+        "markets"
+      ]
+    },
+    "companies-deals": {
+      "id": "companies-deals",
+      "slug": "companies-deals",
+      "label": "Companies & Deals",
+      "description": "Corporate strategy, earnings, mergers, restructurings, and the decisions moving industries.",
+      "section_id": "business",
+      "section_slug": "business",
+      "section_label": "Business",
+      "aliases": [
+        "companies & deals",
+        "companies deals",
+        "companies",
+        "deals",
+        "earnings"
+      ]
+    },
+    "consumer-money": {
+      "id": "consumer-money",
+      "slug": "consumer-money",
+      "label": "Consumer Money",
+      "description": "Debt, credit, pricing pressure, household budgets, and the money questions readers actually face.",
+      "section_id": "business",
+      "section_slug": "business",
+      "section_label": "Business",
+      "aliases": [
+        "consumer money",
+        "personal finance"
+      ]
+    },
+    "housing-real-estate": {
+      "id": "housing-real-estate",
+      "slug": "housing-real-estate",
+      "label": "Housing & Real Estate",
+      "description": "Home prices, rent, mortgages, construction, landlords, and the forces shaping housing access.",
+      "section_id": "business",
+      "section_slug": "business",
+      "section_label": "Business",
+      "aliases": [
+        "housing & real estate",
+        "housing real estate",
+        "housing",
+        "real estate"
+      ]
+    },
+    "crypto-bitcoin": {
+      "id": "crypto-bitcoin",
+      "slug": "crypto-bitcoin",
+      "label": "Crypto",
+      "description": "Bitcoin, Ethereum, crypto regulation, exchange drama, and the business reality behind digital assets.",
+      "section_id": "business",
+      "section_slug": "business",
+      "section_label": "Business",
+      "aliases": [
+        "crypto",
+        "crypto bitcoin",
+        "bitcoin"
+      ]
+    },
+    "travel-consumer-issues": {
+      "id": "travel-consumer-issues",
+      "slug": "travel-consumer-issues",
+      "label": "Travel & Consumer Issues",
+      "description": "Airlines, airports, fees, refunds, transportation friction, and service failures affecting consumers.",
+      "section_id": "business",
+      "section_slug": "business",
+      "section_label": "Business",
+      "aliases": [
+        "travel & consumer issues",
+        "travel consumer issues",
+        "travel",
+        "consumer issues"
+      ]
+    },
+    "ai-big-tech": {
+      "id": "ai-big-tech",
+      "slug": "ai-big-tech",
+      "label": "AI & Big Tech",
+      "description": "AI labs, major platforms, chips, regulation, and the companies racing to control the next layer of software.",
+      "section_id": "tech",
+      "section_slug": "tech",
+      "section_label": "Tech",
+      "aliases": [
+        "ai & big tech",
+        "ai big tech",
+        "ai",
+        "big tech",
+        "artificial intelligence"
+      ]
+    },
+    "consumer-tech": {
+      "id": "consumer-tech",
+      "slug": "consumer-tech",
+      "label": "Consumer Tech",
+      "description": "Phones, apps, gadgets, devices, and the products mainstream users interact with every day.",
+      "section_id": "tech",
+      "section_slug": "tech",
+      "section_label": "Tech",
+      "aliases": [
+        "consumer tech",
+        "consumer technology",
+        "gadgets",
+        "devices"
+      ]
+    },
+    "cybersecurity": {
+      "id": "cybersecurity",
+      "slug": "cybersecurity",
+      "label": "Cybersecurity",
+      "description": "Breaches, ransomware, cyber risk, security failures, and how institutions respond when systems fail.",
+      "section_id": "tech",
+      "section_slug": "tech",
+      "section_label": "Tech",
+      "aliases": [
+        "cybersecurity",
+        "cyber",
+        "security"
+      ]
+    },
+    "mobility-evs": {
+      "id": "mobility-evs",
+      "slug": "mobility-evs",
+      "label": "Mobility & EVs",
+      "description": "Electric vehicles, charging, autonomous systems, transit infrastructure, and how mobility is changing.",
+      "section_id": "tech",
+      "section_slug": "tech",
+      "section_label": "Tech",
+      "aliases": [
+        "mobility & evs",
+        "mobility evs",
+        "evs",
+        "electric vehicles",
+        "mobility"
+      ]
+    },
+    "space-astronomy": {
+      "id": "space-astronomy",
+      "slug": "space-astronomy",
+      "label": "Space & Astronomy",
+      "description": "Launches, missions, satellites, telescopes, and discoveries beyond Earth.",
+      "section_id": "tech",
+      "section_slug": "tech",
+      "section_label": "Tech",
+      "aliases": [
+        "space & astronomy",
+        "space astronomy",
+        "space",
+        "astronomy"
+      ]
+    },
+    "enterprise-platforms": {
+      "id": "enterprise-platforms",
+      "slug": "enterprise-platforms",
+      "label": "Enterprise & Platforms",
+      "description": "Cloud, software platforms, enterprise tools, developer ecosystems, and the business of digital infrastructure.",
+      "section_id": "tech",
+      "section_slug": "tech",
+      "section_label": "Tech",
+      "aliases": [
+        "enterprise & platforms",
+        "enterprise platforms",
+        "enterprise",
+        "platforms",
+        "cloud software"
+      ]
+    },
+    "public-health": {
+      "id": "public-health",
+      "slug": "public-health",
+      "label": "Public Health",
+      "description": "Disease trends, outbreaks, hospital systems, health agencies, and population-scale health risks.",
+      "section_id": "health",
+      "section_slug": "health",
+      "section_label": "Health",
+      "aliases": [
+        "public health",
+        "health agencies"
+      ]
+    },
+    "medical-research": {
+      "id": "medical-research",
+      "slug": "medical-research",
+      "label": "Medical Research",
+      "description": "Clinical studies, treatment breakthroughs, new evidence, and the limits of what current science shows.",
+      "section_id": "health",
+      "section_slug": "health",
+      "section_label": "Health",
+      "aliases": [
+        "medical research",
+        "clinical studies"
+      ]
+    },
+    "pharma-fda": {
+      "id": "pharma-fda",
+      "slug": "pharma-fda",
+      "label": "Pharma & FDA",
+      "description": "Drug approvals, recalls, regulation, biotech pipelines, and the commercial side of medicine.",
+      "section_id": "health",
+      "section_slug": "health",
+      "section_label": "Health",
+      "aliases": [
+        "pharma & fda",
+        "pharma fda",
+        "pharma",
+        "fda",
+        "drug approvals"
+      ]
+    },
+    "mental-health": {
+      "id": "mental-health",
+      "slug": "mental-health",
+      "label": "Mental Health",
+      "description": "Therapy access, anxiety, depression, treatment trends, and the systems surrounding mental health care.",
+      "section_id": "health",
+      "section_slug": "health",
+      "section_label": "Health",
+      "aliases": [
+        "mental health"
+      ]
+    },
+    "wellness-fitness": {
+      "id": "wellness-fitness",
+      "slug": "wellness-fitness",
+      "label": "Wellness & Fitness",
+      "description": "Exercise, sleep, nutrition, and evidence-based coverage of habits people try to build into daily life.",
+      "section_id": "health",
+      "section_slug": "health",
+      "section_label": "Health",
+      "aliases": [
+        "wellness & fitness",
+        "wellness fitness",
+        "wellness",
+        "fitness"
+      ]
+    },
+    "major-leagues": {
+      "id": "major-leagues",
+      "slug": "major-leagues",
+      "label": "Major Leagues",
+      "description": "NFL, NBA, MLB, NHL, soccer, and other top leagues followed through performance, standings, and trends.",
+      "section_id": "sports",
+      "section_slug": "sports",
+      "section_label": "Sports",
+      "aliases": [
+        "major leagues",
+        "league coverage"
+      ]
+    },
+    "events-tournaments": {
+      "id": "events-tournaments",
+      "slug": "events-tournaments",
+      "label": "Events & Tournaments",
+      "description": "World Cups, playoffs, Olympics-style events, and major competitions that shape the sports calendar.",
+      "section_id": "sports",
+      "section_slug": "sports",
+      "section_label": "Sports",
+      "aliases": [
+        "events & tournaments",
+        "events tournaments",
+        "events",
+        "tournaments"
+      ]
+    },
+    "transfers-business": {
+      "id": "transfers-business",
+      "slug": "transfers-business",
+      "label": "Transfers & Business",
+      "description": "Contracts, trades, rights deals, ownership moves, sponsorships, and the money around sports.",
+      "section_id": "sports",
+      "section_slug": "sports",
+      "section_label": "Sports",
+      "aliases": [
+        "transfers & business",
+        "transfers business",
+        "transfers",
+        "sports business"
+      ]
+    },
+    "athletes-culture": {
+      "id": "athletes-culture",
+      "slug": "athletes-culture",
+      "label": "Athletes & Culture",
+      "description": "Athlete-driven storylines, fandom, identity, celebrity crossover, and how sports shapes culture.",
+      "section_id": "sports",
+      "section_slug": "sports",
+      "section_label": "Sports",
+      "aliases": [
+        "athletes & culture",
+        "athletes culture",
+        "athletes",
+        "sports culture"
+      ]
+    },
+    "film-tv": {
+      "id": "film-tv",
+      "slug": "film-tv",
+      "label": "Film & TV",
+      "description": "Movies, streaming, television, franchise news, and the business and creative shifts behind the screen.",
+      "section_id": "culture",
+      "section_slug": "culture",
+      "section_label": "Culture",
+      "aliases": [
+        "film & tv",
+        "film tv",
+        "film",
+        "tv",
+        "streaming"
+      ]
+    },
+    "music-celebrities": {
+      "id": "music-celebrities",
+      "slug": "music-celebrities",
+      "label": "Music & Celebrities",
+      "description": "Artists, tours, celebrity narratives, awards, and music-industry developments with broad attention.",
+      "section_id": "culture",
+      "section_slug": "culture",
+      "section_label": "Culture",
+      "aliases": [
+        "music & celebrities",
+        "music celebrities",
+        "music",
+        "celebrities"
+      ]
+    },
+    "internet-culture": {
+      "id": "internet-culture",
+      "slug": "internet-culture",
+      "label": "Internet Culture",
+      "description": "Viral moments, memes, fandom, online discourse, and the weird social gravity of the internet.",
+      "section_id": "culture",
+      "section_slug": "culture",
+      "section_label": "Culture",
+      "aliases": [
+        "internet culture",
+        "viral culture"
+      ]
+    },
+    "creators-platforms": {
+      "id": "creators-platforms",
+      "slug": "creators-platforms",
+      "label": "Creators & Platforms",
+      "description": "YouTubers, streamers, social platforms, creator economies, moderation, and audience-platform power shifts.",
+      "section_id": "culture",
+      "section_slug": "culture",
+      "section_label": "Culture",
+      "aliases": [
+        "creators & platforms",
+        "creators platforms",
+        "creator economy",
+        "social platforms"
+      ]
+    }
+  },
+  "topicsBySection": {
+    "news": [
+      "us-politics",
+      "world-geopolitics",
+      "law-crime",
+      "climate-extreme-weather",
+      "society-social-trends"
+    ],
+    "business": [
+      "economy-markets",
+      "companies-deals",
+      "consumer-money",
+      "housing-real-estate",
+      "crypto-bitcoin",
+      "travel-consumer-issues"
+    ],
+    "tech": [
+      "ai-big-tech",
+      "consumer-tech",
+      "cybersecurity",
+      "mobility-evs",
+      "space-astronomy",
+      "enterprise-platforms"
+    ],
+    "health": [
+      "public-health",
+      "medical-research",
+      "pharma-fda",
+      "mental-health",
+      "wellness-fitness"
+    ],
+    "sports": [
+      "major-leagues",
+      "events-tournaments",
+      "transfers-business",
+      "athletes-culture"
+    ],
+    "culture": [
+      "film-tv",
+      "music-celebrities",
+      "internet-culture",
+      "creators-platforms"
+    ]
+  },
+  "sectionByTopic": {
+    "us-politics": "news",
+    "world-geopolitics": "news",
+    "law-crime": "news",
+    "climate-extreme-weather": "news",
+    "society-social-trends": "news",
+    "economy-markets": "business",
+    "companies-deals": "business",
+    "consumer-money": "business",
+    "housing-real-estate": "business",
+    "crypto-bitcoin": "business",
+    "travel-consumer-issues": "business",
+    "ai-big-tech": "tech",
+    "consumer-tech": "tech",
+    "cybersecurity": "tech",
+    "mobility-evs": "tech",
+    "space-astronomy": "tech",
+    "enterprise-platforms": "tech",
+    "public-health": "health",
+    "medical-research": "health",
+    "pharma-fda": "health",
+    "mental-health": "health",
+    "wellness-fitness": "health",
+    "major-leagues": "sports",
+    "events-tournaments": "sports",
+    "transfers-business": "sports",
+    "athletes-culture": "sports",
+    "film-tv": "culture",
+    "music-celebrities": "culture",
+    "internet-culture": "culture",
+    "creators-platforms": "culture"
+  },
+  "aliases": {
+    "sections": {
+      "politics": "news",
+      "world": "news",
+      "technology": "tech",
+      "science": "health",
+      "entertainment": "culture"
+    },
+    "topics": {
+      "u.s. politics": "us-politics",
+      "us politics": "us-politics",
+      "white house": "us-politics",
+      "congress": "us-politics",
+      "global conflicts": "world-geopolitics",
+      "world news": "world-geopolitics",
+      "geopolitics": "world-geopolitics",
+      "courts": "law-crime",
+      "crime": "law-crime",
+      "legal": "law-crime",
+      "climate": "climate-extreme-weather",
+      "extreme weather": "climate-extreme-weather",
+      "society": "society-social-trends",
+      "social trends": "society-social-trends",
+      "economy": "economy-markets",
+      "markets": "economy-markets",
+      "companies": "companies-deals",
+      "deals": "companies-deals",
+      "earnings": "companies-deals",
+      "personal finance": "consumer-money",
+      "consumer money": "consumer-money",
+      "housing": "housing-real-estate",
+      "real estate": "housing-real-estate",
+      "crypto": "crypto-bitcoin",
+      "bitcoin": "crypto-bitcoin",
+      "travel": "travel-consumer-issues",
+      "consumer issues": "travel-consumer-issues",
+      "ai": "ai-big-tech",
+      "big tech": "ai-big-tech",
+      "artificial intelligence": "ai-big-tech",
+      "consumer technology": "consumer-tech",
+      "gadgets": "consumer-tech",
+      "devices": "consumer-tech",
+      "cyber": "cybersecurity",
+      "security": "cybersecurity",
+      "evs": "mobility-evs",
+      "electric vehicles": "mobility-evs",
+      "mobility": "mobility-evs",
+      "space": "space-astronomy",
+      "astronomy": "space-astronomy",
+      "enterprise": "enterprise-platforms",
+      "platforms": "enterprise-platforms",
+      "cloud software": "enterprise-platforms",
+      "public health": "public-health",
+      "health agencies": "public-health",
+      "medical research": "medical-research",
+      "clinical studies": "medical-research",
+      "pharma": "pharma-fda",
+      "fda": "pharma-fda",
+      "drug approvals": "pharma-fda",
+      "mental health": "mental-health",
+      "wellness": "wellness-fitness",
+      "fitness": "wellness-fitness",
+      "major leagues": "major-leagues",
+      "league coverage": "major-leagues",
+      "events": "events-tournaments",
+      "tournaments": "events-tournaments",
+      "transfers": "transfers-business",
+      "sports business": "transfers-business",
+      "athletes": "athletes-culture",
+      "sports culture": "athletes-culture",
+      "film": "film-tv",
+      "tv": "film-tv",
+      "streaming": "film-tv",
+      "music": "music-celebrities",
+      "celebrities": "music-celebrities",
+      "internet culture": "internet-culture",
+      "viral culture": "internet-culture",
+      "creator economy": "creators-platforms",
+      "social platforms": "creators-platforms"
+    }
+  },
+  "legacyMappings": {
+    "topics": {
+      "global-conflicts": "world-geopolitics",
+      "culture-entertainment": "film-tv",
+      "social-media-trends": "internet-culture",
+      "tech-gadgets": "consumer-tech",
+      "transportation-evs": "mobility-evs",
+      "stock-market-economy": "companies-deals",
+      "consumer-money-personal-finance": "consumer-money",
+      "health-science": "public-health",
+      "sports-leagues-analysis": "major-leagues",
+      "sports-business-transfers": "transfers-business",
+      "big-issues-explained": "society-social-trends",
+      "editorial-perspectives": "society-social-trends"
+    },
+    "sections": {
+      "politics": "news",
+      "world": "news",
+      "technology": "tech",
+      "science": "health",
+      "entertainment": "culture"
+    }
+  },
+  "navigation": {
+    "coreSectionIds": [
+      "news",
+      "business",
+      "tech",
+      "health",
+      "sports",
+      "culture"
+    ],
+    "footerBrowseIds": [],
+    "headerTopicLimit": 5
+  },
+  "discoveryHints": {
+    "bySection": {
+      "news": [
+        "breaking news public affairs law climate world events",
+        "us politics geopolitics law crime climate social trends"
+      ],
+      "business": [
+        "breaking business markets consumer companies housing crypto travel",
+        "economy markets consumer money companies travel issues"
+      ],
+      "tech": [
+        "breaking technology ai cybersecurity consumer tech mobility space enterprise software",
+        "ai big tech cyber gadgets evs space platforms"
+      ],
+      "health": [
+        "breaking health public health medical research pharma mental health wellness",
+        "health agencies medical studies pharma fda mental health wellness"
+      ],
+      "sports": [
+        "breaking sports leagues tournaments transfers athlete culture",
+        "sports leagues playoffs tournaments transfer market athlete culture"
+      ],
+      "culture": [
+        "breaking culture film tv music celebrities internet creators platforms",
+        "streaming movies celebrity news internet culture creator economy"
+      ]
+    },
+    "byTopic": {
+      "us-politics": [
+        "white house congress federal policy supreme court election campaign"
+      ],
+      "world-geopolitics": [
+        "war diplomacy military sanctions ceasefire russia ukraine israel iran china"
+      ],
+      "law-crime": [
+        "court trial investigation arrest lawsuit police prosecutors"
+      ],
+      "climate-extreme-weather": [
+        "hurricane tornado wildfire heatwave flooding climate risks"
+      ],
+      "society-social-trends": [
+        "education labor unions demographics communities social shifts"
+      ],
+      "economy-markets": [
+        "inflation rates jobs gdp markets tariffs recession"
+      ],
+      "companies-deals": [
+        "earnings merger acquisition ceo restructuring corporate strategy"
+      ],
+      "consumer-money": [
+        "fees credit debt loans refund bills household budgets"
+      ],
+      "housing-real-estate": [
+        "rent mortgage home prices housing inventory landlords"
+      ],
+      "crypto-bitcoin": [
+        "bitcoin ethereum crypto exchange regulation tokens"
+      ],
+      "travel-consumer-issues": [
+        "airlines airports tsa flight cancellations refunds rental cars"
+      ],
+      "ai-big-tech": [
+        "openai google meta microsoft nvidia chips ai regulation"
+      ],
+      "consumer-tech": [
+        "iphone android apps gadgets laptops wearables"
+      ],
+      "cybersecurity": [
+        "data breach ransomware malware security flaws cyberattacks"
+      ],
+      "mobility-evs": [
+        "tesla ev charging robotaxi autonomous vehicles transit"
+      ],
+      "space-astronomy": [
+        "nasa spacex rocket launch satellites telescope astronomy"
+      ],
+      "enterprise-platforms": [
+        "cloud software enterprise platforms developer tools saas infrastructure"
+      ],
+      "public-health": [
+        "outbreak hospital system cdc who disease surveillance"
+      ],
+      "medical-research": [
+        "clinical trial study researchers treatment evidence"
+      ],
+      "pharma-fda": [
+        "drug approval fda recall biotech pharma"
+      ],
+      "mental-health": [
+        "therapy anxiety depression stress treatment access"
+      ],
+      "wellness-fitness": [
+        "exercise sleep nutrition workouts healthy habits"
+      ],
+      "major-leagues": [
+        "nfl nba mlb nhl premier league standings"
+      ],
+      "events-tournaments": [
+        "playoffs championship world cup olympics tournament"
+      ],
+      "transfers-business": [
+        "trade transfer contract rights deal sponsorship ownership"
+      ],
+      "athletes-culture": [
+        "athletes fans fandom locker room sports culture"
+      ],
+      "film-tv": [
+        "streaming box office television film franchise"
+      ],
+      "music-celebrities": [
+        "albums tours celebrities awards music industry"
+      ],
+      "internet-culture": [
+        "viral meme discourse fandom online communities"
+      ],
+      "creators-platforms": [
+        "youtube tiktok twitch instagram creators monetization moderation"
+      ]
+    }
+  },
+  "imageHints": {
+    "bySection": {
+      "news": [
+        "public affairs",
+        "world events",
+        "court building"
+      ],
+      "business": [
+        "financial district",
+        "consumer checkout",
+        "office meeting"
+      ],
+      "tech": [
+        "computer hardware",
+        "data center",
+        "consumer gadgets"
+      ],
+      "health": [
+        "hospital exterior",
+        "medical research",
+        "wellness lifestyle"
+      ],
+      "sports": [
+        "stadium crowd",
+        "athlete action",
+        "sports venue"
+      ],
+      "culture": [
+        "concert crowd",
+        "movie theater",
+        "creator studio"
+      ]
+    },
+    "byTopic": {
+      "us-politics": [
+        "white house exterior",
+        "capitol building",
+        "policy briefing"
+      ],
+      "world-geopolitics": [
+        "diplomatic summit",
+        "military map",
+        "world leaders"
+      ],
+      "law-crime": [
+        "courthouse exterior",
+        "police lights",
+        "gavel courtroom"
+      ],
+      "climate-extreme-weather": [
+        "storm clouds",
+        "wildfire smoke",
+        "flooded street"
+      ],
+      "society-social-trends": [
+        "community gathering",
+        "classroom",
+        "workers"
+      ],
+      "economy-markets": [
+        "stock market screen",
+        "economic chart",
+        "trading floor"
+      ],
+      "companies-deals": [
+        "corporate headquarters",
+        "boardroom meeting",
+        "earnings call"
+      ],
+      "consumer-money": [
+        "credit cards",
+        "shopping cart",
+        "utility bill"
+      ],
+      "housing-real-estate": [
+        "houses neighborhood",
+        "for rent sign",
+        "apartment building"
+      ],
+      "crypto-bitcoin": [
+        "bitcoin coin",
+        "crypto chart",
+        "digital wallet"
+      ],
+      "travel-consumer-issues": [
+        "airport terminal",
+        "airline gate",
+        "rental car lot"
+      ],
+      "ai-big-tech": [
+        "computer chip",
+        "server room",
+        "ai interface"
+      ],
+      "consumer-tech": [
+        "smartphone closeup",
+        "laptop on desk",
+        "gadgets"
+      ],
+      "cybersecurity": [
+        "padlock code",
+        "security terminal",
+        "cyber dashboard"
+      ],
+      "mobility-evs": [
+        "electric vehicle charging",
+        "ev dashboard",
+        "urban transit"
+      ],
+      "space-astronomy": [
+        "rocket launch",
+        "night sky telescope",
+        "satellite"
+      ],
+      "enterprise-platforms": [
+        "cloud dashboard",
+        "software team",
+        "office screens"
+      ],
+      "public-health": [
+        "hospital hallway",
+        "health agency briefing",
+        "vaccination clinic"
+      ],
+      "medical-research": [
+        "lab research",
+        "microscope",
+        "clinical study"
+      ],
+      "pharma-fda": [
+        "medicine bottles",
+        "drug manufacturing",
+        "regulatory documents"
+      ],
+      "mental-health": [
+        "therapy office",
+        "quiet reflection",
+        "support group"
+      ],
+      "wellness-fitness": [
+        "running trail",
+        "healthy meal",
+        "fitness training"
+      ],
+      "major-leagues": [
+        "stadium action",
+        "league match",
+        "sports field"
+      ],
+      "events-tournaments": [
+        "tournament trophy",
+        "competition arena",
+        "playoff crowd"
+      ],
+      "transfers-business": [
+        "press conference",
+        "signing table",
+        "sports executive"
+      ],
+      "athletes-culture": [
+        "athlete portrait",
+        "fans crowd",
+        "locker room"
+      ],
+      "film-tv": [
+        "movie set",
+        "cinema seats",
+        "streaming remote"
+      ],
+      "music-celebrities": [
+        "concert stage",
+        "red carpet",
+        "microphone performance"
+      ],
+      "internet-culture": [
+        "phone screen social media",
+        "meme collage",
+        "online chat"
+      ],
+      "creators-platforms": [
+        "content creator studio",
+        "streaming setup",
+        "social media creator"
+      ]
+    }
+  },
+  "writerHints": {
+    "defaultArticleTypeBySection": {
+      "news": "report",
+      "business": "analysis",
+      "tech": "analysis",
+      "health": "analysis",
+      "sports": "report",
+      "culture": "report"
+    },
+    "reportTopicIds": [
+      "us-politics",
+      "world-geopolitics",
+      "law-crime",
+      "climate-extreme-weather",
+      "major-leagues",
+      "events-tournaments",
+      "film-tv",
+      "music-celebrities"
+    ]
+  }
+}

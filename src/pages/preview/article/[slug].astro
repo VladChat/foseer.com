@@ -1,0 +1,62 @@
+---
+// File: src/pages/preview/article/[slug].astro
+// Purpose: Render local preview-only editorial articles without mixing them into public post inventory.
+
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
+import { getCollection, render } from 'astro:content';
+
+import Layout from '~/layouts/PageLayout.astro';
+import SinglePost from '~/components/blog/SinglePost.astro';
+import { getCanonical } from '~/utils/permalinks';
+import { resolvePostImage } from '~/utils/post-image';
+
+export const prerender = true;
+
+export const getStaticPaths = (async () => {
+  const previews = await getCollection('previewPost');
+  const normalized = await Promise.all(
+    previews.map(async (entry) => {
+      const rendered = await render(entry);
+      const slug = entry.id.replace(/\.mdx?$/i, '').replace(/^\/+/, '');
+      return {
+        id: entry.id,
+        slug,
+        permalink: `preview/article/${slug}`,
+        publishDate: entry.data.publishDate ? new Date(entry.data.publishDate) : new Date(),
+        updateDate: entry.data.updateDate ? new Date(entry.data.updateDate) : undefined,
+        title: entry.data.title,
+        excerpt: entry.data.excerpt,
+        image: entry.data.image,
+        imagePublicUrl: entry.data.imagePublicUrl,
+        category: entry.data.category ? { slug: entry.data.category.toLowerCase().replace(/\s+/g, '-'), title: entry.data.category } : undefined,
+        tags: (entry.data.tags || []).map((tag) => ({ slug: tag.toLowerCase().replace(/\s+/g, '-'), title: tag })),
+        author: entry.data.author,
+        authorTitle: entry.data.authorTitle,
+        draft: entry.data.draft ?? true,
+        metadata: entry.data.metadata,
+        Content: rendered.Content,
+      };
+    })
+  );
+
+  return normalized.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { post } = Astro.props as Props;
+
+const url = getCanonical(`/${post.permalink}`);
+const coverImage = await resolvePostImage(post.image, post.slug);
+const metadataImageUrl = typeof post.imagePublicUrl === 'string' && post.imagePublicUrl.trim().startsWith('/')
+  ? post.imagePublicUrl.trim()
+  : undefined;
+---
+
+<Layout metadata={{ title: post.title, description: post.excerpt, openGraph: metadataImageUrl ? { images: [{ url: metadataImageUrl }] } : undefined }}>
+  <SinglePost post={{ ...post, image: coverImage }} url={url}>
+    {post.Content ? <post.Content /> : null}
+  </SinglePost>
+</Layout>

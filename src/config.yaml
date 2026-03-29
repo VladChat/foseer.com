@@ -11,7 +11,7 @@ metadata:
   title:
     default: Foseer
     template: '%s — Foseer'
-  description: 'Foseer is a news and insights site highlighting what matters now in business, technology, politics, society, and culture.'
+  description: 'Foseer is a news and insights site highlighting what matters now across news, business, tech, health, sports, and culture.'
   robots:
     index: true
     follow: true
@@ -58,10 +58,10 @@ apps:
         index: true
 
     tag:
-      isEnabled: false
+      isEnabled: true
       pathname: 'tag'
       robots:
-        index: false
+        index: true
 
     isRelatedPostsEnabled: true
     relatedPostsCount: 4

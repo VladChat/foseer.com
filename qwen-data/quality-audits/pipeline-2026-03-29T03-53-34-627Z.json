@@ -1,0 +1,923 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-03-29T03-53-34-627Z",
+  "started_at": "2026-03-29T03:53:34.627Z",
+  "generated_at": "2026-03-29T03:54:20.532Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "discovery_candidates": 30,
+    "event_clusters": 8,
+    "briefs_normalized": 6,
+    "source_packs_assembled": 20,
+    "publishable_candidates": 4,
+    "selected_topic": "IOC says women's Olympic events to be limited to 'biological females'",
+    "selected_topics": [
+      "IOC says women's Olympic events to be limited to 'biological females'",
+      "Every Cure's drug repurposing could change rare disease treatment"
+    ],
+    "articles_attempted": 2,
+    "articles_published": 2,
+    "news_pool": {
+      "total": 73,
+      "active": 56,
+      "published": 17,
+      "ready_candidates": 5
+    },
+    "cache_stats": {
+      "mode": "cache_only",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": false,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 0,
+        "gdelt": 0,
+        "google": 0
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "providers": {
+          "brave": {
+            "files": 71,
+            "fresh_files": 1,
+            "expired_files": 70,
+            "corrupt_files": 0,
+            "size_bytes": 1536573
+          },
+          "gdelt": {
+            "files": 7,
+            "fresh_files": 1,
+            "expired_files": 6,
+            "corrupt_files": 0,
+            "size_bytes": 34432
+          },
+          "google": {
+            "files": 63,
+            "fresh_files": 9,
+            "expired_files": 54,
+            "corrupt_files": 0,
+            "size_bytes": 1508804
+          }
+        }
+      }
+    },
+    "duration_ms": 45895,
+    "ready_candidates": 5,
+    "additional_ready_candidates": 5
+  },
+  "provider_stats": {
+    "mode": "cache_only",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": false,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 0,
+      "gdelt": 0,
+      "google": 0
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "providers": {
+        "brave": {
+          "files": 71,
+          "fresh_files": 1,
+          "expired_files": 70,
+          "corrupt_files": 0,
+          "size_bytes": 1536573
+        },
+        "gdelt": {
+          "files": 7,
+          "fresh_files": 1,
+          "expired_files": 6,
+          "corrupt_files": 0,
+          "size_bytes": 34432
+        },
+        "google": {
+          "files": 63,
+          "fresh_files": 9,
+          "expired_files": 54,
+          "corrupt_files": 0,
+          "size_bytes": 1508804
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claimMapCreation": {
+      "success": true,
+      "error": null,
+      "total": 2,
+      "success_count": 2,
+      "failure_count": 0
+    },
+    "articleDrafting": {
+      "success": true,
+      "error": null,
+      "total": 2,
+      "success_count": 2,
+      "failure_count": 0
+    },
+    "imageSupport": {
+      "success": true,
+      "error": null,
+      "total": 2,
+      "success_count": 2,
+      "failure_count": 0
+    },
+    "publishing": {
+      "success": true,
+      "error": null,
+      "total": 2,
+      "success_count": 2,
+      "failure_count": 0
+    },
+    "localVerification": {
+      "success": true,
+      "error": null,
+      "total": 2,
+      "success_count": 2,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 2,
+    "editorial_pass_count": 2,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "IOC Moves to Restrict Women’s Olympic Events to ‘Biological Females’",
+      "slug": "ioc-moves-to-restrict-women-s-olympic-events-to-biological-f",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "sports",
+          "topic_id": null,
+          "placement_confidence": "medium",
+          "placement_reason": []
+        },
+        "metrics": {
+          "total_sources": 4,
+          "unique_domains": 4,
+          "direct_event_source_count": 4,
+          "independent_event_domains": 4,
+          "source_consistency_score": 8.8,
+          "strong_match_count": 4,
+          "core_source_count": 3,
+          "supporting_source_count": 1,
+          "background_source_count": 4,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 3,
+          "supporting": 1,
+          "background": 12,
+          "signal_only": 1
+        },
+        "publish_ready_sources": [
+          {
+            "title": "IOC says women's Olympic events to be limited to 'biological females'",
+            "domain": "nytimes.com",
+            "url": "https://www.nytimes.com/athletic/7148904/2026/03/26/olympics-transgender-ban-women/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          },
+          {
+            "title": "Olympic committee bans trans athletes from women's events",
+            "domain": "npr.org",
+            "url": "https://www.npr.org/2026/03/26/nx-s1-5762579/ioc-bans-trans-women-events-genetic-testing",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          },
+          {
+            "title": "International Olympics Committee Bans Trans Athletes from Women's Events",
+            "domain": "breitbart.com",
+            "url": "https://www.breitbart.com/sports/2026/03/26/international-olympics-committee-bans-trans-athletes-from-womens-events/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          },
+          {
+            "title": "Alert: Olympic Committee Steps up to Protect Women, Bans Trans Athletes from Female Events | The Gateway Pundit",
+            "domain": "thegatewaypundit.com",
+            "url": "https://www.thegatewaypundit.com/2026/03/alert-olympic-committee-steps-protect-women-bans-trans/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "IOC says women's Olympic events to be limited to 'biological females'",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": 4,
+            "source_quality_score": 39.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Olympic committee bans trans athletes from women's events",
+            "domain": "npr.org",
+            "page_kind": "article",
+            "same_event_score": 8,
+            "topic_fit_score": 3,
+            "source_quality_score": 23.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "International Olympics Committee Bans Trans Athletes from Women's Events",
+            "domain": "breitbart.com",
+            "page_kind": "article",
+            "same_event_score": 4,
+            "topic_fit_score": 4,
+            "source_quality_score": 21.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "Alert: Olympic Committee Steps up to Protect Women, Bans Trans Athletes from Female Events | The Gateway Pundit",
+            "domain": "thegatewaypundit.com",
+            "page_kind": "article",
+            "same_event_score": 4,
+            "topic_fit_score": 3,
+            "source_quality_score": 18.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "NC State AD 'shocked' and 'disappointed' by Will Wade leaving for ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 2,
+            "topic_fit_score": 3,
+            "source_quality_score": 12.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Mohamed Salah to leave Liverpool at end of season: Does it make ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 10,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "The World Cup and fatigue: 'Some players have gone three ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 10,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Sidelined from tennis by injury, Arthur Fils put in the work to return a ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 10,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Manchester City's Rodri says he 'could not turn down' potential Real ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 10,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Casemiro not thinking about reversing Manchester United decision",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 10,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Bob Costas : The IOC Ban of Trans Women is Common Sense",
+            "domain": "hotair.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 11,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "NWSL extends media reach with WSN partnership through 2027",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 10,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 4,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": []
+        }
+      },
+      "tags": {
+        "tags": [
+          "Events & Tournaments",
+          "Olympics"
+        ],
+        "tag_slugs": [
+          "events-tournaments",
+          "olympics"
+        ],
+        "primary_topic_tag": "Events & Tournaments",
+        "primary_topic_slug": "events-tournaments",
+        "warnings": [],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "Events & Tournaments",
+            "slug": "events-tournaments",
+            "score": 40,
+            "reason": "Primary topic tag validated from topic_id=events-tournaments",
+            "fallback": false
+          },
+          {
+            "label": "Olympics",
+            "slug": "olympics",
+            "score": 32,
+            "reason": "Theme match score 32",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "events-tournaments",
+              "label": "Events & Tournaments",
+              "type": "topic"
+            },
+            {
+              "slug": "olympics",
+              "label": "Olympics",
+              "type": "theme"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "events-tournaments",
+            "topic_label": "Events & Tournaments",
+            "supported": true,
+            "matched_aliases": [
+              "events",
+              "olympic",
+              "olympics",
+              "ioc"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pixabay",
+        "image_path": "~/assets/images/library/pixabay/7040298/cover.jpg",
+        "source_url": "https://pixabay.com/photos/tree-hill-nature-outdoors-travel-7040298/",
+        "selection_mode": "provider_download_new:pixabay:strong",
+        "query_used": "Olympic Events photo",
+        "relevance_tier": "strong",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "stadium",
+        "visual_type": "photo",
+        "entity_hints": [
+          "tree",
+          "hill",
+          "nature",
+          "outdoors",
+          "travel",
+          "exploration",
+          "olympic",
+          "mountain"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "Olympic Events photo",
+          "Olympic Events portrait",
+          "global Olympic Events photo",
+          "Biological Females photo",
+          "Biological Females portrait",
+          "global Biological Females photo",
+          "Olympic Events Biological Females photo",
+          "Olympic Events moves restrict women photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Olympic Events photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "7040298",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Olympic Events photo",
+          "provider": "pixabay",
+          "providerAssetId": "7040298",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pixabay",
+          "query_used": "Olympic Events photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "strong",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "olympic",
+            "events"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-data\\publish-manifests\\ioc-moves-to-restrict-women-s-olympic-events-to-biological-f.json",
+        "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-29-ioc-moves-to-restrict-women-s-olympic-events-to-biological-f.mdx",
+        "expected_url": "/article/2026-03-29-ioc-moves-to-restrict-women-s-olympic-events-to-biological-f",
+        "verified_url": "http://localhost:4321/article/2026-03-29-ioc-moves-to-restrict-women-s-olympic-events-to-biological-f"
+      }
+    },
+    {
+      "rank": 2,
+      "title": "How Every Cure’s Drug Search Aims to Rewrite Rare Disease Treatment",
+      "slug": "how-every-cure-s-drug-search-aims-to-rewrite-rare-disease-tr",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "health",
+          "topic_id": "pharma-fda",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 2,
+          "unique_domains": 2,
+          "direct_event_source_count": 2,
+          "independent_event_domains": 2,
+          "source_consistency_score": 6.3,
+          "strong_match_count": 2,
+          "core_source_count": 1,
+          "supporting_source_count": 1,
+          "background_source_count": 0,
+          "rejected_source_count": 5
+        },
+        "role_counts": {
+          "core": 1,
+          "supporting": 1,
+          "signal_only": 5,
+          "reject": 5
+        },
+        "publish_ready_sources": [
+          {
+            "title": "Every Cure's drug repurposing could change rare disease treatment",
+            "domain": "cnbc.com",
+            "url": "https://www.cnbc.com/2026/03/27/every-cure-drug-repurposing-rare-disease-treatment.html",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "tech"
+          },
+          {
+            "title": "Pharmalittle: We're reading about an FDA OK for a rare disease drug, a grilling of the PTO chief, and more",
+            "domain": "statnews.com",
+            "url": "https://statnews.com/pharmalot/2026/03/26/fda-rare-disease-pto-novo-nordisk-340b-abortion-hiv",
+            "page_kind": "article",
+            "topic_id": "pharma-fda",
+            "section_id": "health"
+          }
+        ],
+        "excluded_sources": [
+          {
+            "title": "AI Is Redrawing the Cybersecurity Vendor Landscape",
+            "domain": "bankinfosecurity.com",
+            "url": "https://bankinfosecurity.com/ai-redrawing-cybersecurity-vendor-landscape-a-31199",
+            "page_kind": "article",
+            "topic_id": "cybersecurity",
+            "section_id": "tech"
+          },
+          {
+            "title": "Nobel Prize winners face new loss in bid for US CRISPR patents",
+            "domain": "reuters.com",
+            "url": "https://www.reuters.com/legal/litigation/nobel-prize-winners-face-new-loss-bid-us-crispr-patents-2026-03-27/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "tech"
+          },
+          {
+            "title": "5 things to know before the market opens Friday",
+            "domain": "cnbc.com",
+            "url": "https://www.cnbc.com/2026/03/27/5-things-to-know-before-the-market-opens.html",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "tech"
+          },
+          {
+            "title": "The latest Chappell Roan scandal may have been fueled by bot",
+            "domain": "out.com",
+            "url": "https://www.out.com/celebs/chappell-roan-bot-smear-campaign",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "tech"
+          },
+          {
+            "title": "AI (artificial intelligence)",
+            "domain": "theguardian.com",
+            "url": "https://www.theguardian.com/technology/artificialintelligenceai",
+            "page_kind": "article",
+            "topic_id": "ai-big-tech",
+            "section_id": "tech"
+          }
+        ],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "Every Cure's drug repurposing could change rare disease treatment",
+            "domain": "cnbc.com",
+            "page_kind": "article",
+            "same_event_score": 19,
+            "topic_fit_score": -2,
+            "source_quality_score": 44,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "Pharmalittle: We're reading about an FDA OK for a rare disease drug, a grilling of the PTO chief, and more",
+            "domain": "statnews.com",
+            "page_kind": "article",
+            "same_event_score": 8,
+            "topic_fit_score": -2,
+            "source_quality_score": 16,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "UNC star Caleb Wilson, a projected top",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": -2,
+            "source_quality_score": 9.5,
+            "article_likelihood": 10,
+            "genericity_score": 2
+          },
+          {
+            "role": "signal_only",
+            "title": "5 things to know before the market opens Thursday",
+            "domain": "cnbc.com",
+            "page_kind": "article",
+            "same_event_score": 2,
+            "topic_fit_score": -1,
+            "source_quality_score": 8,
+            "article_likelihood": 10,
+            "genericity_score": 2
+          },
+          {
+            "role": "signal_only",
+            "title": "Iran War Live Updates: 12 U.S. Troops Injured in Attack on Saudi ...",
+            "domain": "nytimes.com",
+            "page_kind": "live",
+            "same_event_score": 2,
+            "topic_fit_score": -3,
+            "source_quality_score": 4,
+            "article_likelihood": 2,
+            "genericity_score": 8
+          },
+          {
+            "role": "signal_only",
+            "title": "Trump Signs Order to Pay TSA Workers",
+            "domain": "wsj.com",
+            "page_kind": "official_release",
+            "same_event_score": 1,
+            "topic_fit_score": -2,
+            "source_quality_score": 10.5,
+            "article_likelihood": 8,
+            "genericity_score": 1
+          },
+          {
+            "role": "signal_only",
+            "title": "Improving Wage Protections for the Temporary and Permanent ...",
+            "domain": "federalregister.gov",
+            "page_kind": "official_release",
+            "same_event_score": 1,
+            "topic_fit_score": -2,
+            "source_quality_score": 10.5,
+            "article_likelihood": 9,
+            "genericity_score": 1
+          },
+          {
+            "role": "reject",
+            "title": "AI Is Redrawing the Cybersecurity Vendor Landscape",
+            "domain": "bankinfosecurity.com",
+            "page_kind": "article",
+            "same_event_score": 2,
+            "topic_fit_score": -7,
+            "source_quality_score": 7,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "reject",
+            "title": "Nobel Prize winners face new loss in bid for US CRISPR patents",
+            "domain": "reuters.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": -3,
+            "source_quality_score": 11.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "reject",
+            "title": "5 things to know before the market opens Friday",
+            "domain": "cnbc.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": -1,
+            "source_quality_score": 8.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "reject",
+            "title": "The latest Chappell Roan scandal may have been fueled by bot",
+            "domain": "out.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": -2,
+            "source_quality_score": 7.5,
+            "article_likelihood": 9,
+            "genericity_score": 2
+          },
+          {
+            "role": "reject",
+            "title": "AI (artificial intelligence)",
+            "domain": "theguardian.com",
+            "page_kind": "article",
+            "same_event_score": -1,
+            "topic_fit_score": -7,
+            "source_quality_score": 10,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 2,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": []
+        }
+      },
+      "tags": {
+        "tags": [
+          "Pharma & FDA",
+          "Rare Disease"
+        ],
+        "tag_slugs": [
+          "pharma-fda",
+          "rare-disease"
+        ],
+        "primary_topic_tag": "Pharma & FDA",
+        "primary_topic_slug": "pharma-fda",
+        "warnings": [],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "Pharma & FDA",
+            "slug": "pharma-fda",
+            "score": 32,
+            "reason": "Primary topic inferred from supported theme tag Rare Disease",
+            "fallback": false
+          },
+          {
+            "label": "Rare Disease",
+            "slug": "rare-disease",
+            "score": 26,
+            "reason": "Theme match score 26",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "pharma-fda",
+              "label": "Pharma & FDA",
+              "type": "topic"
+            },
+            {
+              "slug": "rare-disease",
+              "label": "Rare Disease",
+              "type": "theme"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "pharma-fda",
+            "topic_label": "Pharma & FDA",
+            "supported": true,
+            "matched_aliases": [
+              "fda",
+              "drug approvals"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pixabay",
+        "image_path": "~/assets/images/library/pixabay/7666143/cover.jpg",
+        "source_url": "https://pixabay.com/photos/photos-nostalgia-retro-photography-7666143/",
+        "selection_mode": "provider_download_new:pixabay:strong",
+        "query_used": "Every photo",
+        "relevance_tier": "strong",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "portrait",
+        "visual_type": "photo",
+        "entity_hints": [
+          "nostalgia",
+          "retro",
+          "photography",
+          "woman",
+          "memories",
+          "album",
+          "health",
+          "every"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "Every photo",
+          "Every portrait",
+          "Every medical photo",
+          "global Every photo",
+          "Treatment photo",
+          "Treatment portrait",
+          "Treatment medical photo",
+          "global Treatment photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Every photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "7666143",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Every photo",
+          "provider": "pixabay",
+          "providerAssetId": "7666143",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pixabay",
+          "query_used": "Every photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "strong",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "every"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-data\\publish-manifests\\how-every-cure-s-drug-search-aims-to-rewrite-rare-disease-tr.json",
+        "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-29-how-every-cure-s-drug-search-aims-to-rewrite-rare-disease-tr.mdx",
+        "expected_url": "/article/2026-03-29-how-every-cure-s-drug-search-aims-to-rewrite-rare-disease-tr",
+        "verified_url": "http://localhost:4321/article/2026-03-29-how-every-cure-s-drug-search-aims-to-rewrite-rare-disease-tr"
+      }
+    }
+  ]
+}

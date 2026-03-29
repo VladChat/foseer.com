@@ -1,0 +1,1365 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-03-28T22-53-29-789Z",
+  "started_at": "2026-03-28T22:53:29.789Z",
+  "generated_at": "2026-03-28T22:55:49.577Z",
+  "success": false,
+  "hard_blocker": "Publish-ready source pack mixes unrelated event titles (3 weak-title sources)",
+  "stats": {
+    "discovery_candidates": 36,
+    "event_clusters": 9,
+    "briefs_normalized": 6,
+    "source_packs_assembled": 20,
+    "publishable_candidates": 9,
+    "selected_topic": "Strategy is accelerating its crypto purchases as rivals sit on the sidelines",
+    "selected_topics": [
+      "Strategy is accelerating its crypto purchases as rivals sit on the sidelines",
+      "US has caused $10tn worth of climate damage since 1990, research finds",
+      "5 things to know before the market opens Friday"
+    ],
+    "articles_attempted": 3,
+    "articles_published": 0,
+    "news_pool": {
+      "total": 92,
+      "active": 77,
+      "published": 15,
+      "ready_candidates": 6
+    },
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 1,
+        "gdelt": 2,
+        "google": 2
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "providers": {
+          "brave": {
+            "files": 71,
+            "fresh_files": 6,
+            "expired_files": 65,
+            "corrupt_files": 0,
+            "size_bytes": 1536573
+          },
+          "gdelt": {
+            "files": 7,
+            "fresh_files": 0,
+            "expired_files": 7,
+            "corrupt_files": 0,
+            "size_bytes": 34228
+          },
+          "google": {
+            "files": 63,
+            "fresh_files": 4,
+            "expired_files": 59,
+            "corrupt_files": 0,
+            "size_bytes": 1522511
+          }
+        }
+      }
+    },
+    "duration_ms": 139778,
+    "ready_candidates": 5,
+    "additional_ready_candidates": 5
+  },
+  "provider_stats": {
+    "mode": "cache_refresh_with_live_quota",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": true,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 1,
+      "gdelt": 2,
+      "google": 2
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "providers": {
+        "brave": {
+          "files": 71,
+          "fresh_files": 6,
+          "expired_files": 65,
+          "corrupt_files": 0,
+          "size_bytes": 1536573
+        },
+        "gdelt": {
+          "files": 7,
+          "fresh_files": 0,
+          "expired_files": 7,
+          "corrupt_files": 0,
+          "size_bytes": 34228
+        },
+        "google": {
+          "files": 63,
+          "fresh_files": 4,
+          "expired_files": 59,
+          "corrupt_files": 0,
+          "size_bytes": 1522511
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claimMapCreation": {
+      "success": true,
+      "error": null,
+      "total": 3,
+      "success_count": 3,
+      "failure_count": 0
+    },
+    "articleDrafting": {
+      "success": true,
+      "error": null,
+      "total": 3,
+      "success_count": 3,
+      "failure_count": 0
+    },
+    "imageSupport": {
+      "success": true,
+      "error": null,
+      "total": 3,
+      "success_count": 3,
+      "failure_count": 0
+    },
+    "publishing": {
+      "success": false,
+      "error": "Strategy is accelerating its crypto purchases as rivals sit on the sidelines: Publish-ready source pack mixes unrelated event titles (3 weak-title sources) | US has caused $10tn worth of climate damage since 1990, research finds: Primary topic_id unsupported by article evidence: mental-health | 5 things to know before the market opens Friday: Canonical tag unsupported by article evidence: Artificial Intelligence",
+      "total": 3,
+      "success_count": 0,
+      "failure_count": 3
+    },
+    "localVerification": {
+      "success": false,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 3,
+    "editorial_pass_count": 0,
+    "editorial_fail_count": 3
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "Strategy Ramps Up Bitcoin Buying as Corporate Rivals Hold Back",
+      "slug": "strategy-ramps-up-bitcoin-buying-as-corporate-rivals-hold-ba",
+      "published": false,
+      "editorial_pass": false,
+      "editorial_blockers": [
+        "Publish-ready source pack mixes unrelated event titles (3 weak-title sources)"
+      ],
+      "editorial_warnings": [],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 4,
+          "unique_domains": 4,
+          "direct_event_source_count": 4,
+          "independent_event_domains": 4,
+          "source_consistency_score": 10,
+          "strong_match_count": 4,
+          "core_source_count": 3,
+          "supporting_source_count": 1,
+          "background_source_count": 4,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 10,
+          "supporting": 1,
+          "background": 4,
+          "signal_only": 1
+        },
+        "publish_ready_sources": [
+          {
+            "title": "Strategy is accelerating its crypto purchases as rivals sit on the sidelines",
+            "domain": "cnbc.com",
+            "url": "https://cnbc.com/2026/03/27/strategy-is-accelerating-its-crypto-purchases-as-rivals-sit-on-the-sidelines.html",
+            "page_kind": "article",
+            "topic_id": "crypto-bitcoin",
+            "section_id": "business"
+          },
+          {
+            "title": "BREAKING News: Fannie Mae to Accept Crypto",
+            "domain": "cryptoticker.io",
+            "url": "https://cryptoticker.io/en/fannie-mae-crypto-backed-mortgages-bitcoin-collateral",
+            "page_kind": "article",
+            "topic_id": "crypto-bitcoin",
+            "section_id": "business"
+          },
+          {
+            "title": "Fannie Mae Will Accept Crypto-Backed Mortgages for the First Time",
+            "domain": "unchainedcrypto.com",
+            "url": "https://unchainedcrypto.com/fannie-mae-will-accept-crypto-backed-mortgages-for-the-first-time",
+            "page_kind": "article",
+            "topic_id": "crypto-bitcoin",
+            "section_id": "business"
+          },
+          {
+            "title": "Fannie Mae to Accept Crypto-Backed Mortgages for the First Time",
+            "domain": "wsj.com",
+            "url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7",
+            "page_kind": "article",
+            "topic_id": "crypto-bitcoin",
+            "section_id": "business"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "Strategy is accelerating its crypto purchases as rivals sit on the sidelines",
+            "domain": "cnbc.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": 8,
+            "source_quality_score": 46.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "BREAKING News: Fannie Mae to Accept Crypto",
+            "domain": "cryptoticker.io",
+            "page_kind": "article",
+            "same_event_score": 6,
+            "topic_fit_score": 8,
+            "source_quality_score": 22,
+            "article_likelihood": 8,
+            "genericity_score": 2
+          },
+          {
+            "role": "core",
+            "title": "Fannie Mae Plans First Crypto-Backed Mortgages with Coinbase Partnership",
+            "domain": "livebitcoinnews.com",
+            "page_kind": "article",
+            "same_event_score": 5,
+            "topic_fit_score": 7,
+            "source_quality_score": 21,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Fannie Mae Will Accept Crypto-Backed Mortgages for the First Time",
+            "domain": "unchainedcrypto.com",
+            "page_kind": "article",
+            "same_event_score": 5,
+            "topic_fit_score": 8,
+            "source_quality_score": 18.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Fannie Mae to Accept Crypto-Backed Mortgages for the First Time",
+            "domain": "wsj.com",
+            "page_kind": "article",
+            "same_event_score": 5,
+            "topic_fit_score": 8,
+            "source_quality_score": 18.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Coinbase Powers Crypto-Backed Fannie Mae Mortgages With New Partnership",
+            "domain": "finance.yahoo.com",
+            "page_kind": "official_release",
+            "same_event_score": 5,
+            "topic_fit_score": 7,
+            "source_quality_score": 18,
+            "article_likelihood": 8,
+            "genericity_score": 1
+          },
+          {
+            "role": "core",
+            "title": "Crypto for a home? Coinbase brings token-backed down payments to housing market",
+            "domain": "reuters.com",
+            "page_kind": "article",
+            "same_event_score": 5,
+            "topic_fit_score": 6,
+            "source_quality_score": 16.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Homebuyers can now use crypto as collateral for mortgage loans without selling their tokens",
+            "domain": "nbcconnecticut.com",
+            "page_kind": "article",
+            "same_event_score": 5,
+            "topic_fit_score": 8,
+            "source_quality_score": 16,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Fannie Mae opens door to crypto",
+            "domain": "therealdeal.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 7,
+            "source_quality_score": 18,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Mortgage giant Fannie Mae will soon accept crypto",
+            "domain": "finance.yahoo.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 8,
+            "source_quality_score": 16.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "Coinbase, Fannie Mae Launch Bitcoin",
+            "domain": "bitcoinmagazine.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 3,
+            "source_quality_score": 12,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "2026 Donald J. Trump Executive Orders",
+            "domain": "federalregister.gov",
+            "page_kind": "official_release",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 13,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 4,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "BREAKING News: Fannie Mae to Accept Crypto",
+              "url": "https://cryptoticker.io/en/fannie-mae-crypto-backed-mortgages-bitcoin-collateral",
+              "overlap_ratio": 0,
+              "shared_tokens": []
+            },
+            {
+              "title": "Fannie Mae Will Accept Crypto-Backed Mortgages for the First Time",
+              "url": "https://unchainedcrypto.com/fannie-mae-will-accept-crypto-backed-mortgages-for-the-first-time",
+              "overlap_ratio": 0,
+              "shared_tokens": []
+            },
+            {
+              "title": "Fannie Mae to Accept Crypto-Backed Mortgages for the First Time",
+              "url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7",
+              "overlap_ratio": 0,
+              "shared_tokens": []
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "Crypto",
+          "Cybersecurity",
+          "Bitcoin"
+        ],
+        "tag_slugs": [
+          "crypto-bitcoin",
+          "cybersecurity",
+          "bitcoin"
+        ],
+        "primary_topic_tag": "Crypto",
+        "primary_topic_slug": "crypto-bitcoin",
+        "warnings": [],
+        "diagnostics": {
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "article_type": "report",
+          "source_entity_count": 1,
+          "source_title_count": 16,
+          "direct_source_title_count": 11,
+          "background_source_title_count": 5
+        },
+        "selected": [
+          {
+            "label": "Crypto",
+            "slug": "crypto-bitcoin",
+            "score": 77,
+            "reason": "Primary topic tag validated from topic_id=crypto-bitcoin",
+            "fallback": false
+          },
+          {
+            "label": "Cybersecurity",
+            "slug": "cybersecurity",
+            "score": 12,
+            "reason": "Secondary topic score 12",
+            "fallback": false
+          },
+          {
+            "label": "Bitcoin",
+            "slug": "bitcoin",
+            "score": 23,
+            "reason": "Theme match score 23",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "crypto-bitcoin",
+              "label": "Crypto",
+              "type": "topic"
+            },
+            {
+              "slug": "cybersecurity",
+              "label": "Cybersecurity",
+              "type": "topic"
+            },
+            {
+              "slug": "bitcoin",
+              "label": "Bitcoin",
+              "type": "theme"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "crypto-bitcoin",
+            "topic_label": "Crypto",
+            "supported": true,
+            "matched_aliases": [
+              "Crypto",
+              "bitcoin"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pexels",
+        "image_path": "~/assets/images/library/pexels/20855743/cover.jpg",
+        "source_url": "https://www.pexels.com/photo/doorway-of-building-20855743/",
+        "selection_mode": "provider_download_new:pexels:strong",
+        "query_used": "Strategy photo",
+        "relevance_tier": "strong",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "building",
+        "visual_type": "photo",
+        "entity_hints": [
+          "typical",
+          "taipei",
+          "home",
+          "entrance",
+          "decorative",
+          "symbols",
+          "doorway",
+          "strategy"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "Strategy photo",
+          "Strategy mortgage photo",
+          "global Strategy photo",
+          "Bitcoin Buying photo",
+          "Bitcoin Buying mortgage photo",
+          "global Bitcoin Buying photo",
+          "Strategy Bitcoin Buying photo",
+          "Strategy corporate rivals hold photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Strategy photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "20855743",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Strategy photo",
+          "provider": "pexels",
+          "providerAssetId": "20855743",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pexels",
+          "query_used": "Strategy photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "strong",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "strategy"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": null,
+        "file_path": null,
+        "expected_url": null,
+        "verified_url": null
+      }
+    },
+    {
+      "rank": 2,
+      "title": "Study estimates US emissions caused $10tn in global climate damage",
+      "slug": "study-estimates-us-emissions-caused-10tn-in-global-climate-d",
+      "published": false,
+      "editorial_pass": false,
+      "editorial_blockers": [
+        "Primary topic_id unsupported by article evidence: mental-health"
+      ],
+      "editorial_warnings": [],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "health",
+          "topic_id": "mental-health",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 2,
+          "unique_domains": 2,
+          "direct_event_source_count": 2,
+          "independent_event_domains": 2,
+          "source_consistency_score": 8.8,
+          "strong_match_count": 2,
+          "core_source_count": 2,
+          "supporting_source_count": 0,
+          "background_source_count": 3,
+          "rejected_source_count": 1
+        },
+        "role_counts": {
+          "core": 3,
+          "background": 3,
+          "signal_only": 2,
+          "reject": 1
+        },
+        "publish_ready_sources": [
+          {
+            "title": "US has caused $10tn worth of climate damage since 1990, research finds",
+            "domain": "theguardian.com",
+            "url": "https://theguardian.com/environment/2026/mar/25/us-climate-damage-research",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "news"
+          },
+          {
+            "title": "ADHD medication may reduce later risk of psychosis, study finds",
+            "domain": "nbcnews.com",
+            "url": "https://www.nbcnews.com/health/mental-health/adhd-methylphenidate-ritalin-children-reduces-risk-psychosis-study-rcna264987",
+            "page_kind": "official_release",
+            "topic_id": "mental-health",
+            "section_id": "health"
+          }
+        ],
+        "excluded_sources": [
+          {
+            "title": "Trump news at a glance: administration official warns of 'dire ...",
+            "domain": "theguardian.com",
+            "url": "https://www.theguardian.com/us-news/2026/mar/25/trump-news-at-a-glance-airports-world-cup",
+            "page_kind": "official_release",
+            "topic_id": "world-geopolitics",
+            "section_id": "news"
+          }
+        ],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "US has caused $10tn worth of climate damage since 1990, research finds",
+            "domain": "theguardian.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": -1,
+            "source_quality_score": 39,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "ADHD medication may reduce later risk of psychosis, study finds",
+            "domain": "nbcnews.com",
+            "page_kind": "official_release",
+            "same_event_score": 6,
+            "topic_fit_score": 8,
+            "source_quality_score": 20.5,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          },
+          {
+            "role": "core",
+            "title": "Policies, programs, and research shaping maternal mental health care",
+            "domain": "concentratemedia.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 8,
+            "source_quality_score": 14,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Ofcom to investigate complaints of climate change denial",
+            "domain": "wattsupwiththat.com",
+            "page_kind": "official_release",
+            "same_event_score": 3,
+            "topic_fit_score": -2,
+            "source_quality_score": 11.5,
+            "article_likelihood": 9,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "Latest Stories",
+            "domain": "nbcnews.com",
+            "page_kind": "unknown",
+            "same_event_score": 1,
+            "topic_fit_score": 8,
+            "source_quality_score": 11.5,
+            "article_likelihood": 1,
+            "genericity_score": 2
+          },
+          {
+            "role": "background",
+            "title": "Gov. Hochul receives award for leadership in NY state mental health policy",
+            "domain": "brooklyneagle.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 7,
+            "source_quality_score": 9.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "British Regulator OFCOM to Investigate Broadcaster Climate Denial",
+            "domain": "wattsupwiththat.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": -2,
+            "source_quality_score": 8.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "Top Health News -",
+            "domain": "sciencedaily.com",
+            "page_kind": "section",
+            "same_event_score": 2,
+            "topic_fit_score": -2,
+            "source_quality_score": -2,
+            "article_likelihood": 0,
+            "genericity_score": 7
+          },
+          {
+            "role": "reject",
+            "title": "Trump news at a glance: administration official warns of 'dire ...",
+            "domain": "theguardian.com",
+            "page_kind": "official_release",
+            "same_event_score": 2,
+            "topic_fit_score": -7,
+            "source_quality_score": 12.5,
+            "article_likelihood": 7,
+            "genericity_score": 3
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 2,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "ADHD medication may reduce later risk of psychosis, study finds",
+              "url": "https://www.nbcnews.com/health/mental-health/adhd-methylphenidate-ritalin-children-reduces-risk-psychosis-study-rcna264987",
+              "overlap_ratio": 0.13,
+              "shared_tokens": [
+                "study"
+              ]
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "Public Health",
+          "Climate & Extreme Weather",
+          "United States"
+        ],
+        "tag_slugs": [
+          "public-health",
+          "climate-extreme-weather",
+          "united-states"
+        ],
+        "primary_topic_tag": "Public Health",
+        "primary_topic_slug": "public-health",
+        "warnings": [],
+        "diagnostics": {
+          "section_id": "health",
+          "topic_id": "mental-health",
+          "article_type": "report",
+          "source_entity_count": 1,
+          "source_title_count": 8,
+          "direct_source_title_count": 3,
+          "background_source_title_count": 5
+        },
+        "selected": [
+          {
+            "label": "Public Health",
+            "slug": "public-health",
+            "score": 36,
+            "reason": "Primary topic tag overridden by stronger evidence (Public Health)",
+            "fallback": false
+          },
+          {
+            "label": "Climate & Extreme Weather",
+            "slug": "climate-extreme-weather",
+            "score": 19,
+            "reason": "Secondary topic score 19",
+            "fallback": false
+          },
+          {
+            "label": "United States",
+            "slug": "united-states",
+            "score": 23,
+            "reason": "Geography match score 23",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "public-health",
+              "label": "Public Health",
+              "type": "topic"
+            },
+            {
+              "slug": "climate-extreme-weather",
+              "label": "Climate & Extreme Weather",
+              "type": "topic"
+            },
+            {
+              "slug": "united-states",
+              "label": "United States",
+              "type": "geography"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "mental-health",
+            "topic_label": "Mental Health",
+            "supported": false,
+            "matched_aliases": []
+          }
+        }
+      },
+      "image": {
+        "provider": "pixabay",
+        "image_path": "~/assets/images/library/pixabay/499481/cover.jpg",
+        "source_url": "https://pixabay.com/photos/dollars-currency-money-us-dollars-499481/",
+        "selection_mode": "provider_download_new:pixabay:strong",
+        "query_used": "global US photo",
+        "relevance_tier": "strong",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "hospital",
+        "visual_type": "photo",
+        "entity_hints": [
+          "dollars",
+          "currency",
+          "money",
+          "us",
+          "franklin",
+          "benjamin",
+          "banknote",
+          "finance"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "US photo",
+          "US medical photo",
+          "global US photo",
+          "ADHD photo",
+          "ADHD medical photo",
+          "global ADHD photo",
+          "US ADHD photo",
+          "US estimates emissions caused photo"
+        ],
+        "decision_log": [
+          {
+            "query": "US photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "7359709",
+            "finalScore": 79,
+            "articleRelevanceScore": 71,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "US medical photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "499481",
+            "finalScore": 94,
+            "articleRelevanceScore": 92,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "global US photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "499481",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "global US photo",
+          "provider": "pixabay",
+          "providerAssetId": "499481",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pixabay",
+          "query_used": "global US photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "strong",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "global"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": null,
+        "file_path": null,
+        "expected_url": null,
+        "verified_url": null
+      }
+    },
+    {
+      "rank": 3,
+      "title": "5 things to know before the market opens Friday",
+      "slug": "5-things-to-know-before-the-market-opens-friday",
+      "published": false,
+      "editorial_pass": false,
+      "editorial_blockers": [
+        "Canonical tag unsupported by article evidence: Artificial Intelligence"
+      ],
+      "editorial_warnings": [],
+      "stages": {
+        "claimMapCreation": {
+          "success": true,
+          "error": null
+        },
+        "articleDrafting": {
+          "success": true,
+          "error": null
+        },
+        "imageSupport": {
+          "success": true,
+          "error": null
+        },
+        "publishing": {
+          "success": false,
+          "error": "Pre-publish graph invalid: Canonical tag unsupported by article evidence: Artificial Intelligence"
+        }
+      },
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "tech",
+          "topic_id": "ai-big-tech",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 3,
+          "unique_domains": 2,
+          "direct_event_source_count": 3,
+          "independent_event_domains": 2,
+          "source_consistency_score": 5,
+          "strong_match_count": 3,
+          "core_source_count": 2,
+          "supporting_source_count": 1,
+          "background_source_count": 4,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 3,
+          "supporting": 1,
+          "background": 6,
+          "signal_only": 4
+        },
+        "publish_ready_sources": [
+          {
+            "title": "5 things to know before the market opens Friday",
+            "domain": "cnbc.com",
+            "url": "https://www.cnbc.com/2026/03/27/5-things-to-know-before-the-market-opens.html",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "tech"
+          },
+          {
+            "title": "5 things to know before the market opens Thursday",
+            "domain": "cnbc.com",
+            "url": "https://www.cnbc.com/2026/03/26/5-things-to-know-before-the-market-opens.html",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "tech"
+          },
+          {
+            "title": "Brewers place Jackson Chourio on IL with hand injury hours before ...",
+            "domain": "nytimes.com",
+            "url": "https://www.nytimes.com/athletic/7149022/2026/03/26/jackson-chourio-injury-brewers-opening-day/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "tech"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "5 things to know before the market opens Friday",
+            "domain": "cnbc.com",
+            "page_kind": "article",
+            "same_event_score": 19,
+            "topic_fit_score": 4,
+            "source_quality_score": 43.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "5 things to know before the market opens Thursday",
+            "domain": "cnbc.com",
+            "page_kind": "article",
+            "same_event_score": 13,
+            "topic_fit_score": 3,
+            "source_quality_score": 22.5,
+            "article_likelihood": 10,
+            "genericity_score": 2
+          },
+          {
+            "role": "core",
+            "title": "China boycotts top AI conference after ban on papers from ...",
+            "domain": "reuters.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 6,
+            "source_quality_score": 18,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "Brewers place Jackson Chourio on IL with hand injury hours before ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 4,
+            "topic_fit_score": 2,
+            "source_quality_score": 10.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "AI (artificial intelligence)",
+            "domain": "theguardian.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 6,
+            "source_quality_score": 11,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Artificial Intelligence",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 6,
+            "source_quality_score": 11,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Transcript",
+            "domain": "reuters.com",
+            "page_kind": "official_release",
+            "same_event_score": 0,
+            "topic_fit_score": 6,
+            "source_quality_score": 14,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "German army eyes AI tools to expedite wartime decision",
+            "domain": "reuters.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 6,
+            "source_quality_score": 8.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Tech company climate goals under pressure due to AI energy demand",
+            "domain": "apnews.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 6,
+            "source_quality_score": 8.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "How the AI Coding Boom Is Rewriting Application Security",
+            "domain": "bankinfosecurity.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 6,
+            "source_quality_score": 8.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "Day 27 of Middle East conflict — US extends pause on Iran energy ...",
+            "domain": "cnn.com",
+            "page_kind": "live",
+            "same_event_score": 4,
+            "topic_fit_score": -8,
+            "source_quality_score": 9.5,
+            "article_likelihood": 2,
+            "genericity_score": 6
+          },
+          {
+            "role": "signal_only",
+            "title": "Iran War: Markets Want to Declare an Off",
+            "domain": "bloomberg.com",
+            "page_kind": "analysis",
+            "same_event_score": 3,
+            "topic_fit_score": -2,
+            "source_quality_score": 18,
+            "article_likelihood": 7,
+            "genericity_score": 2
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 3,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "Brewers place Jackson Chourio on IL with hand injury hours before ...",
+              "url": "https://www.nytimes.com/athletic/7149022/2026/03/26/jackson-chourio-injury-brewers-opening-day/",
+              "overlap_ratio": 0.17,
+              "shared_tokens": [
+                "before"
+              ]
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "Cybersecurity",
+          "Diplomacy",
+          "Artificial Intelligence",
+          "Meta"
+        ],
+        "tag_slugs": [
+          "cybersecurity",
+          "diplomacy",
+          "artificial-intelligence",
+          "meta"
+        ],
+        "primary_topic_tag": "Cybersecurity",
+        "primary_topic_slug": "cybersecurity",
+        "warnings": [],
+        "diagnostics": {
+          "section_id": "tech",
+          "topic_id": "ai-big-tech",
+          "article_type": "report",
+          "source_entity_count": 3,
+          "source_title_count": 14,
+          "direct_source_title_count": 4,
+          "background_source_title_count": 10
+        },
+        "selected": [
+          {
+            "label": "Cybersecurity",
+            "slug": "cybersecurity",
+            "score": 36,
+            "reason": "Primary topic tag overridden by stronger evidence (Cybersecurity)",
+            "fallback": false
+          },
+          {
+            "label": "Diplomacy",
+            "slug": "diplomacy",
+            "score": 12,
+            "reason": "Theme match score 12",
+            "fallback": false
+          },
+          {
+            "label": "Artificial Intelligence",
+            "slug": "artificial-intelligence",
+            "score": 11,
+            "reason": "Theme match score 11",
+            "fallback": false
+          },
+          {
+            "label": "Meta",
+            "slug": "meta",
+            "score": 15,
+            "reason": "Entity match score 15",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "cybersecurity",
+              "label": "Cybersecurity",
+              "type": "topic"
+            },
+            {
+              "slug": "diplomacy",
+              "label": "Diplomacy",
+              "type": "theme"
+            },
+            {
+              "slug": "artificial-intelligence",
+              "label": "Artificial Intelligence",
+              "type": "theme"
+            },
+            {
+              "slug": "meta",
+              "label": "Meta",
+              "type": "entity"
+            }
+          ],
+          "unsupported_tags": [
+            {
+              "slug": "artificial-intelligence",
+              "label": "Artificial Intelligence",
+              "support": {
+                "supported": false,
+                "matchedAliases": []
+              }
+            }
+          ],
+          "primary_topic": {
+            "topic_id": "ai-big-tech",
+            "topic_label": "AI & Big Tech",
+            "supported": true,
+            "matched_aliases": [
+              "big tech"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pixabay",
+        "image_path": "~/assets/images/library/pixabay/5994942/cover.jpg",
+        "source_url": "https://pixabay.com/photos/fish-lemon-salt-raw-sea-bream-5994942/",
+        "selection_mode": "provider_download_new:pixabay:strong",
+        "query_used": "Friday photo",
+        "relevance_tier": "strong",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "office",
+        "visual_type": "photo",
+        "entity_hints": [
+          "fish",
+          "lemon",
+          "salt",
+          "bream",
+          "fresh",
+          "gilthead",
+          "orata",
+          "enjoy"
+        ],
+        "geo_hints": [
+          "china",
+          "iran"
+        ],
+        "queries_tried": [
+          "Friday photo",
+          "Friday portrait",
+          "Friday technology photo",
+          "iran Friday photo",
+          "Jackson Chourio photo",
+          "Jackson Chourio portrait",
+          "Jackson Chourio technology photo",
+          "iran Jackson Chourio photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Friday photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "5994942",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Friday photo",
+          "provider": "pixabay",
+          "providerAssetId": "5994942",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pixabay",
+          "query_used": "Friday photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "strong",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "friday"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": null,
+        "file_path": null,
+        "expected_url": null,
+        "verified_url": null
+      }
+    }
+  ]
+}
