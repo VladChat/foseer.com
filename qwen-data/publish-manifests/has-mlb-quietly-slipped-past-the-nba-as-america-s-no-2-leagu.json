@@ -1,0 +1,140 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-29T01:03:39.965Z",
+  "event_id": "evt-2026-03-27-sports-general-us-nba-nfl",
+  "cluster_id": "evt-2026-03-27-sports-general-us-nba-nfl",
+  "article_type": "report",
+  "title": "Has MLB Quietly Slipped Past the NBA as America’s No. 2 League?",
+  "slug": "has-mlb-quietly-slipped-past-the-nba-as-america-s-no-2-leagu",
+  "canonical_slug": "2026-03-29-has-mlb-quietly-slipped-past-the-nba-as-america-s-no-2-leagu",
+  "expected_url": "/article/2026-03-29-has-mlb-quietly-slipped-past-the-nba-as-america-s-no-2-leagu",
+  "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-29-has-mlb-quietly-slipped-past-the-nba-as-america-s-no-2-leagu.mdx",
+  "published_at": "2026-03-29T01:03:39.884Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Transfers & Business",
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/3579691/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/3579691/cover.jpg",
+    "source_url": "https://pixabay.com/photos/american-football-3579691/",
+    "asset_key": "pixabay:3579691",
+    "alt_text": "american football, national football league, nfl, miami dolphins, nfl, nfl, nfl, miami dolphins, miami dolphins, miami dolphins, miami dolphins, miami dolphins",
+    "selection_mode": "provider_download_new:pixabay:strong",
+    "query_used": "League photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "NBA"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Federal judge dismisses lawsuit claiming Fanatics, pro sports leagues monopolized trading card industry",
+        "url": "https://www.foxbusiness.com/sports/federal-judge-dismisses-lawsuit-claiming-fanatics-pro-sports-leagues-monopolized-trading-card-industry",
+        "domain": "foxbusiness.com"
+      },
+      {
+        "title": "The Champions League legend around Real Madrid's enigmatic ...",
+        "url": "https://www.nytimes.com/athletic/7143030/2026/03/25/real-madrid-lunin-champions-league-courtois-injury/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "UNC star Caleb Wilson, a projected top",
+        "url": "https://www.nytimes.com/athletic/7152954/2026/03/27/caleb-wilson-nba-draft/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Federal judge dismisses lawsuit claiming Fanatics, pro sports leagues monopolized trading card industry",
+          "url": "https://www.foxbusiness.com/sports/federal-judge-dismisses-lawsuit-claiming-fanatics-pro-sports-leagues-monopolized-trading-card-industry",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        },
+        {
+          "title": "The Champions League legend around Real Madrid's enigmatic ...",
+          "url": "https://www.nytimes.com/athletic/7143030/2026/03/25/real-madrid-lunin-champions-league-courtois-injury/",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "league"
+          ]
+        },
+        {
+          "title": "UNC star Caleb Wilson, a projected top",
+          "url": "https://www.nytimes.com/athletic/7152954/2026/03/27/caleb-wilson-nba-draft/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "nba",
+          "label": "NBA",
+          "type": "theme"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "mlb",
+          "nba",
+          "major league baseball",
+          "national basketball association",
+          "baseball",
+          "basketball"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "League photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "league"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

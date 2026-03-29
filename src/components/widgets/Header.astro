@@ -2,11 +2,9 @@
 import { Icon } from 'astro-icon/components';
 import Logo from '~/components/Logo.astro';
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
-import ToggleMenu from '~/components/common/ToggleMenu.astro';
 import Button from '~/components/ui/Button.astro';
 
-import { getHomePermalink } from '~/utils/permalinks';
-import { trimSlash, getAsset } from '~/utils/permalinks';
+import { getHomePermalink, trimSlash, getAsset } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
 
 interface Link {
@@ -50,7 +48,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 <header
   class:list={[
     { sticky: isSticky, relative: !isSticky, dark: isDark },
-    'top-0 z-40 flex-none mx-auto w-full border-b border-slate-200/40 dark:border-slate-800/80 transition-[opacity] ease-in-out',
+    'top-0 z-50 flex-none mx-auto w-full border-b border-slate-200/40 dark:border-slate-800/80 transition-[opacity] ease-in-out',
   ]}
   {...isSticky ? { 'data-aw-sticky-header': true } : {}}
   {...id ? { id } : {}}
@@ -71,11 +69,21 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     ]}
   >
     <div class:list={[{ 'mr-auto rtl:mr-0 rtl:ml-auto': position === 'right' }, 'flex justify-between']}>
-      <a class="flex items-center" href={getHomePermalink()}>
+      <a class="flex items-center flex-shrink-0" href={getHomePermalink()}>
         <Logo />
       </a>
       <div class="flex items-center md:hidden">
-        <ToggleMenu />
+        <button
+          type="button"
+          class="p-2 -mr-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          data-aw-toggle-menu
+        >
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
     </div>
     <nav
@@ -92,12 +100,14 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                 <>
                   <button
                     type="button"
-                    class="hover:text-link dark:hover:text-white px-3 py-3 flex items-center whitespace-nowrap uppercase text-[0.82rem]"
+                    class="hover:text-link dark:hover:text-white px-3 py-3 flex items-center whitespace-nowrap uppercase text-[0.82rem] cursor-pointer"
+                    aria-haspopup="true"
+                    aria-expanded="false"
                   >
                     {text}{' '}
                     <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
                   </button>
-                  <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded-md md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/95 md:border md:border-slate-200 md:min-w-[220px] drop-shadow-xl dark:md:border-slate-700">
+                  <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded-md md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/95 md:border md:border-slate-200 md:min-w-[220px] drop-shadow-xl dark:md:border-slate-700 z-50">
                     {links.map(({ text: text2, href: href2 }) => (
                       <li>
                         <a
@@ -132,12 +142,12 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     <div
       class:list={[
         { 'ml-auto rtl:ml-0 rtl:mr-auto': position === 'left' },
-        'hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0 md:justify-self-end',
+        'hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 rtl:left-0 rtl:right-auto left-auto bg-white dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent border-t md:border-t-0 border-slate-200 dark:border-slate-800 md:justify-self-end',
       ]}
     >
-      <div class="items-center flex justify-between w-full md:w-auto">
-        <div class="flex">
-          {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
+      <div class="items-center flex justify-between w-full md:w-auto px-4 py-3 md:p-0">
+        <div class="flex items-center gap-2">
+          {showToggleTheme && <ToggleTheme iconClass="w-5 h-5 md:w-5 md:h-5 md:inline-block" />}
           {
             showRssFeed && (
               <a
@@ -164,4 +174,113 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
       </div>
     </div>
   </div>
+
+  <!-- Mobile Navigation Drawer -->
+  <div
+    id="mobile-nav-drawer"
+    class="fixed inset-0 z-40 hidden md:hidden bg-black/50"
+    aria-hidden="true"
+  >
+    <div
+      class="fixed inset-y-0 right-0 z-50 w-full max-w-xs overflow-y-auto bg-white px-6 py-4 shadow-xl dark:bg-gray-900"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation"
+    >
+      <div class="flex items-center justify-between mb-6">
+        <span class="text-lg font-semibold text-gray-900 dark:text-white">Menu</span>
+        <button
+          type="button"
+          class="p-2 -mr-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+          aria-label="Close menu"
+          data-close-mobile-menu
+        >
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="space-y-1" aria-label="Mobile navigation">
+        {links.map((item) => (
+          <div class="border-b border-gray-100 dark:border-gray-800 pb-2 last:border-0">
+            {item.links?.length ? (
+              <details class="group">
+                <summary
+                  class="flex items-center justify-between py-3 text-base font-medium text-gray-900 dark:text-white cursor-pointer list-none"
+                >
+                  {item.text}
+                  <svg class="h-5 w-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div class="mt-2 space-y-2 pl-4">
+                  {item.links.map((sub) => (
+                    <a
+                      href={sub.href}
+                      class="block py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                    >
+                      {sub.text}
+                    </a>
+                  ))}
+                </div>
+              </details>
+            ) : (
+              <a
+                href={item.href}
+                class="block py-3 text-base font-medium text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
+              >
+                {item.text}
+              </a>
+            )}
+          </div>
+        ))}
+
+        {actions?.length && (
+          <div class="pt-4 border-t border-gray-100 dark:border-gray-800">
+            {actions.map((btnProps) => (
+              <a
+                href={btnProps.href}
+                class="flex items-center justify-center rounded-lg bg-gray-900 dark:bg-white px-4 py-3 text-base font-medium text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+              >
+                {btnProps.text}
+              </a>
+            ))}
+          </div>
+        )}
+      </nav>
+    </div>
+  </div>
 </header>
+
+<script>
+  // Mobile menu toggle functionality
+  const menuButton = document.querySelector('[data-aw-toggle-menu]');
+  const closeButton = document.querySelector('[data-close-mobile-menu]');
+  const mobileNav = document.getElementById('mobile-nav-drawer');
+
+  function openMenu() {
+    mobileNav?.classList.remove('hidden');
+    menuButton?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    mobileNav?.classList.add('hidden');
+    menuButton?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  menuButton?.addEventListener('click', openMenu);
+  closeButton?.addEventListener('click', closeMenu);
+  mobileNav?.addEventListener('click', (e) => {
+    if (e.target === mobileNav) closeMenu();
+  });
+
+  // Close on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !mobileNav?.classList.contains('hidden')) {
+      closeMenu();
+    }
+  });
+</script>

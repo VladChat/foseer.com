@@ -94,3 +94,33 @@
 .dd *:first-child {
   margin-top: 0;
 }
+
+/* Article H2 accent bar - vertically centered */
+.prose h2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.prose h2::before {
+  content: '';
+  flex-shrink: 0;
+  width: 4px;
+  height: 2.25rem;
+  background: linear-gradient(to bottom, var(--aw-color-primary), #2563eb);
+  border-radius: 9999px;
+  align-self: center;
+}
+
+/* Article list items - supporting emphasis size */
+.prose li {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+@media (min-width: 1024px) {
+  .prose li {
+    font-size: 1.125rem;
+  }
+}

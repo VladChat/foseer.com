@@ -1,0 +1,63 @@
+---
+// File: src/pages/tag/[tag].astro
+// Purpose: Static tag landing page for article tags.
+
+import type { GetStaticPaths } from 'astro';
+import Layout from '~/layouts/PageLayout.astro';
+import EditorialStoryCard from '~/components/EditorialStoryCard.astro';
+import { fetchPosts } from '~/utils/blog';
+
+export const prerender = true;
+
+export const getStaticPaths = (async () => {
+  const posts = await fetchPosts();
+  const byTag = new Map();
+
+  for (const post of posts) {
+    for (const tag of post.tags || []) {
+      if (!tag?.slug) continue;
+      const entry = byTag.get(tag.slug) || { tag, posts: [] };
+      entry.posts.push(post);
+      byTag.set(tag.slug, entry);
+    }
+  }
+
+  return Array.from(byTag.values()).map(({ tag, posts }) => ({
+    params: { tag: tag.slug },
+    props: { tag, posts },
+  }));
+}) satisfies GetStaticPaths;
+
+const { tag, posts = [] } = Astro.props;
+
+const metadata = {
+  title: `${tag?.title || 'Tag'} — Foseer`,
+  description: `Coverage tagged ${tag?.title || 'topic'} on Foseer.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <header class="mb-12 border-b border-slate-200 dark:border-slate-700 pb-8">
+        <div class="mb-4 flex items-center gap-3 text-sm text-muted dark:text-slate-400">
+          <span class="text-primary dark:text-blue-400 font-semibold uppercase tracking-wide text-xs">Tag</span>
+          <span class="text-gray-300 dark:text-slate-600">•</span>
+          <span class="text-sm font-medium text-gray-600 dark:text-slate-300">{posts.length} article{posts.length === 1 ? '' : 's'}</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white font-heading mb-4">{tag?.title}</h1>
+        <p class="text-lg text-muted dark:text-slate-300 max-w-3xl leading-relaxed font-light">Tagged coverage related to {tag?.title}.</p>
+      </header>
+
+      {posts.length === 0 ? (
+        <p class="text-gray-600 dark:text-slate-400">No articles found for this tag.</p>
+      ) : (
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post) => (
+            <EditorialStoryCard post={post} variant="compact" />
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>

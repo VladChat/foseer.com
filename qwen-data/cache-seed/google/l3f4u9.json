@@ -1,0 +1,612 @@
+{
+  "timestamp": 1774739300977,
+  "ttl_hours": 8,
+  "provider": "google",
+  "query_hash": "l3f4u9",
+  "data": {
+    "kind": "customsearch#search",
+    "url": {
+      "type": "application/json",
+      "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    },
+    "queries": {
+      "request": [
+        {
+          "title": "Google Custom Search - (site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking technology ai cybersecurity consumer tech mobility space enterprise software)",
+          "totalResults": "9",
+          "searchTerms": "(site:reuters.com OR site:apnews.com OR site:bloomberg.com OR site:ft.com OR site:wsj.com OR site:nytimes.com OR site:bbc.com OR site:bbc.co.uk OR site:theguardian.com OR site:washingtonpost.com OR site:cnbc.com OR site:politico.com OR site:axios.com OR site:npr.org OR site:abcnews.go.com OR site:abcnews.com) (announced OR approved OR filed OR charged OR launched OR confirmed OR warns) (breaking technology ai cybersecurity consumer tech mobility space enterprise software)",
+          "count": 9,
+          "startIndex": 1,
+          "inputEncoding": "utf8",
+          "outputEncoding": "utf8",
+          "safe": "off",
+          "cx": "f508d19f8630d4015",
+          "dateRestrict": "d2"
+        }
+      ]
+    },
+    "context": {
+      "title": "blog.equalle.com Web Search"
+    },
+    "searchInformation": {
+      "searchTime": 0.344196,
+      "formattedSearchTime": "0.34",
+      "totalResults": "9",
+      "formattedTotalResults": "9"
+    },
+    "items": [
+      {
+        "kind": "customsearch#result",
+        "title": "Tech News | Today's Latest Technology News | Reuters",
+        "htmlTitle": "<b>Tech</b> News | Today&#39;s Latest <b>Technology</b> News | Reuters",
+        "link": "https://www.reuters.com/technology/",
+        "displayLink": "www.reuters.com",
+        "snippet": "1 hour ago ... Researchers at Northwestern University have developed modular robots designed with the help of artificial intelligence (AI) that can keep moving outdoors even ...",
+        "htmlSnippet": "1 hour ago <b>...</b> Researchers at Northwestern University have developed modular robots designed with the help of <b>artificial intelligence</b> (<b>AI</b>) that can keep moving outdoors even&nbsp;...",
+        "formattedUrl": "https://www.reuters.com/technology/",
+        "htmlFormattedUrl": "https://www.reuters.com/<b>technology</b>/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL67EwKMkQejSBRqtemomxfQswIUi0J88pvOfwMgMeyEdiaE2dl6FyGLA&s",
+              "width": "311",
+              "height": "162"
+            }
+          ],
+          "metatags": [
+            {
+              "apple-itunes-app": "app-id=602660809",
+              "og:image": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355",
+              "analytics:page_layout": "landing",
+              "twitter:card": "summary_large_image",
+              "og:site_name": "Reuters",
+              "ccbot": "nofollow",
+              "analytics:ad_layout": "leaderboard, right rail, sponsored",
+              "analyticsattributes.topicchannel": "Technology",
+              "title": "Reuters Tech News | Today's Latest Technology News | Reuters",
+              "og:description": "Find latest technology news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
+              "twitter:image": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355",
+              "datemodified": "2026-03-28T14:22:24.454Z",
+              "og:type": "website",
+              "twitter:title": "Tech News | Today's Latest Technology News | Reuters",
+              "ad:template": "landing",
+              "twitter:domain": "reuters.com",
+              "dcsext.dartzone": "/4735792/reuters.com/technology/home",
+              "dcsext.channellist": "Technology",
+              "og:title": "Tech News | Today's Latest Technology News | Reuters",
+              "fb:pages": "114050161948682",
+              "fb:app_id": "988502044532272",
+              "viewport": "width=device-width, initial-scale=1",
+              "twitter:description": "Find latest technology news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
+              "og:locale": "en_US",
+              "og:url": "https://www.reuters.com/technology/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Chinese universities with military links bought Super Micro servers ...",
+        "htmlTitle": "Chinese universities with military links bought Super Micro servers ...",
+        "link": "https://www.reuters.com/world/china/chinese-universities-with-military-links-bought-super-micro-servers-with-2026-03-27/",
+        "displayLink": "www.reuters.com",
+        "snippet": "2 days ago ... Four Chinese ​universities, including two linked to the People's Liberation Army, bought Super Micro Computer servers with restricted AI chips over the past ...",
+        "htmlSnippet": "2 days ago <b>...</b> Four Chinese ​universities, including two linked to the People&#39;s Liberation Army, bought Super Micro Computer servers with restricted <b>AI</b> chips over the past&nbsp;...",
+        "formattedUrl": "https://www.reuters.com/.../chinese-universities-with-military-links-bought-...",
+        "htmlFormattedUrl": "https://www.reuters.com/.../chinese-universities-with-military-links-bought-...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN_YEVXhepypDsCbi0wDHl8VT0xcaM5o0QIN7JobFlfiwGUzKeWEUX50K1&s",
+              "width": "310",
+              "height": "162"
+            }
+          ],
+          "metatags": [
+            {
+              "apple-itunes-app": "app-id=602660809, app-argument=https://www.reuters.com/world/china/chinese-universities-with-military-links-bought-super-micro-servers-with-2026-03-27/?id=UKGNUUO6LJJ4NMWYS5QCJ475HM",
+              "og:image": "https://www.reuters.com/resizer/v2/WW56OIST7FL7VO2PLEJMC3ZRE4.jpg?auth=2046ff46a866bf7c7c0938612b1ba707e98ae8153944c9a5624b61ab6bedb04a&height=1005&width=1920&quality=80&smart=true",
+              "analytics:page_layout": "regular-article",
+              "article:published_time": "2026-03-27T06:16:49.947Z",
+              "og:image:width": "1200",
+              "twitter:card": "summary_large_image",
+              "og:site_name": "Reuters",
+              "og:article:modified_time": "2026-03-27T06:16:59.241Z",
+              "ccbot": "nofollow",
+              "analytics:ad_layout": "leaderboard, right rail, sponsored",
+              "analyticsattributes.topicchannel": "World",
+              "title": "Chinese universities with military links bought Super Micro servers with restricted AI chips | Reuters",
+              "og:description": "Four Chinese ​universities, including two linked to the People's Liberation Army, bought Super Micro Computer servers with restricted AI chips over the past year, ‌procurement data shows, even as the U.S. clamps down on sales of some advanced processors to China.",
+              "twitter:creator": "@Reuters",
+              "twitter:image": "https://www.reuters.com/resizer/v2/WW56OIST7FL7VO2PLEJMC3ZRE4.jpg?auth=2046ff46a866bf7c7c0938612b1ba707e98ae8153944c9a5624b61ab6bedb04a&height=1005&width=1920&quality=80&smart=true",
+              "twitter:image:alt": "The Super Micro logo is seen in this illustration taken August 3, 2025. REUTERS/Dado Ruvic/Illustration/File Photo",
+              "twitter:site": "@Reuters",
+              "article:modified_time": "2026-03-27T06:16:59.241Z",
+              "fb:admins": "988502044532272",
+              "article:content_tier": "metered",
+              "og:type": "article",
+              "article:section": "China",
+              "og:image:alt": "The Super Micro logo is seen in this illustration taken August 3, 2025. REUTERS/Dado Ruvic/Illustration/File Photo",
+              "twitter:title": "Chinese universities with military links bought Super Micro servers with restricted AI chips",
+              "ad:template": "article",
+              "og:image:url": "https://www.reuters.com/resizer/v2/WW56OIST7FL7VO2PLEJMC3ZRE4.jpg?auth=2046ff46a866bf7c7c0938612b1ba707e98ae8153944c9a5624b61ab6bedb04a&height=1005&width=1920&quality=80&smart=true",
+              "dcsext.dartzone": "/4735792/reuters.com/technology/ai/article",
+              "og:title": "Chinese universities with military links bought Super Micro servers with restricted AI chips",
+              "dcsext.channellist": "World;Asia Pacific;China;Business;Emerging Markets;Technology",
+              "sophi-content-id": "UKGNUUO6LJJ4NMWYS5QCJ475HM",
+              "og:image:height": "628",
+              "og:article:published_time": "2026-03-27T06:16:49.947Z",
+              "og:updated_time": "2026-03-27T06:16:59.241Z",
+              "fb:pages": "114050161948682",
+              "article:author": "Eduardo Baptista",
+              "article:tag": "TOPIC:WORLD-CHINA-SLUG,MTPIX,ARTI,BACT,BIZ,CHIP,CHIP1,CMPELC,CMPNY,DEF,DEFBUY,GEN,HARW,MNGISS,NEWS1,POL,PUBL,REGS,SCI,SEMI,SERSYS,TECH,TEEQ,TMT,TRD,TRDEMB,EASIA,AMERS,US,NAMER,ASXPAC,EMRG,CN,ASIA,DEST:CSA,DEST:LBY,DEST:REULB,DEST:ABX,DEST:RAST,DEST:Z,DEST:RNP,DEST:E,DEST:PCU,DEST:ABN,DEST:AFA,DEST:BNX,DEST:PSC,DEST:U,DEST:DNP,DEST:FUN,DEST:UCDPTEST,DEST:RWSA,DEST:GNS,DEST:RWS,DEST:PCO,DEST:RBN,DEST:SEABS,DEST:SEATP,DEST:OUSTCM,DEST:OCABSM,DEST:OUSBSM",
+              "analyticsattributes.topicsubchannel": "China",
+              "fb:app_id": "988502044532272",
+              "og:locale:alternate": "en_US",
+              "viewport": "width=device-width, initial-scale=1",
+              "twitter:description": "Four Chinese ​universities, including two linked to the People's Liberation Army, bought Super Micro Computer servers with restricted AI chips over the past year, ‌procurement data shows, even as the U.S. clamps down on sales of some advanced processors to China.",
+              "og:locale": "en_US",
+              "og:url": "https://www.reuters.com/world/china/chinese-universities-with-military-links-bought-super-micro-servers-with-2026-03-27/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://www.reuters.com/resizer/v2/WW56OIST7FL7VO2PLEJMC3ZRE4.jpg?auth=2046ff46a866bf7c7c0938612b1ba707e98ae8153944c9a5624b61ab6bedb04a&height=1005&width=1920&quality=80&smart=true"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "OpenAI News | Today's Latest Stories - Reuters",
+        "htmlTitle": "OpenAI News | Today&#39;s Latest Stories - Reuters",
+        "link": "https://www.reuters.com/technology/openai/",
+        "displayLink": "www.reuters.com",
+        "snippet": "2 days ago ... Latest Stories ; 13 hours ago. SoftBank secures $40 billion loan to boost OpenAI investments · Event to pitch AI for businesses in Tokyo ; March 26, 2026. OpenAI's ...",
+        "htmlSnippet": "2 days ago <b>...</b> Latest Stories ; 13 hours ago. SoftBank secures $40 billion loan to boost OpenAI investments &middot; Event to pitch <b>AI</b> for businesses in Tokyo ; March 26, 2026. OpenAI&#39;s&nbsp;...",
+        "formattedUrl": "https://www.reuters.com/technology/openai/",
+        "htmlFormattedUrl": "https://www.reuters.com/<b>technology</b>/openai/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL67EwKMkQejSBRqtemomxfQswIUi0J88pvOfwMgMeyEdiaE2dl6FyGLA&s",
+              "width": "311",
+              "height": "162"
+            }
+          ],
+          "metatags": [
+            {
+              "apple-itunes-app": "app-id=602660809",
+              "og:image": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355",
+              "og:type": "website",
+              "twitter:title": "OpenAI News | Today's Latest Stories | Reuters",
+              "twitter:card": "summary_large_image",
+              "ad:template": "landing",
+              "og:site_name": "Reuters",
+              "twitter:domain": "reuters.com",
+              "dcsext.dartzone": "/4735792/reuters.com/technology/home",
+              "ccbot": "nofollow",
+              "dcsext.channellist": "OpenAI",
+              "og:title": "OpenAI News | Today's Latest Stories | Reuters",
+              "analyticsattributes.topicchannel": "OpenAI",
+              "title": "Reuters OpenAI News | Today's Latest Stories | Reuters",
+              "fb:pages": "114050161948682",
+              "og:description": "Reuters.com is your online source for the latest news stories and current events, ensuring our readers up to date with any breaking news developments",
+              "twitter:image": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355",
+              "fb:app_id": "988502044532272",
+              "datemodified": "2026-03-27T10:14:11.676Z",
+              "viewport": "width=device-width, initial-scale=1",
+              "twitter:description": "Reuters.com is your online source for the latest news stories and current events, ensuring our readers up to date with any breaking news developments",
+              "og:locale": "en_US",
+              "og:url": "https://www.reuters.com/technology/openai/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Squawk Box: Watch Interviews & Clips, Schedule, Latest News",
+        "htmlTitle": "Squawk Box: Watch Interviews &amp; Clips, Schedule, Latest News",
+        "link": "https://www.cnbc.com/squawk-box-us/",
+        "displayLink": "www.cnbc.com",
+        "snippet": "7 hours ago ... \"Squawk Box\" is the ultimate pre-market morning news program, featuring Joe Kernen, Becky Quick and Andrew Ross Sorkin. It's a \"must see\" for everyone from ...",
+        "htmlSnippet": "7 hours ago <b>...</b> &quot;Squawk Box&quot; is the ultimate pre-market morning news program, featuring Joe Kernen, Becky Quick and Andrew Ross Sorkin. It&#39;s a &quot;must see&quot; for everyone from&nbsp;...",
+        "formattedUrl": "https://www.cnbc.com/squawk-box-us/",
+        "htmlFormattedUrl": "https://www.cnbc.com/squawk-box-us/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMoQLDmkOkFkQaCOWxp_Acy91PnI3vD2KdaYb9TJeMsGh2id5iZaFoyh_&s",
+              "width": "300",
+              "height": "168"
+            }
+          ],
+          "newsmediaorganization": [
+            {
+              "foundingdate": "'1989-04-17'",
+              "name": "CNBC",
+              "url": "https://www.cnbc.com"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585&w=1920&h=1080",
+              "apple-itunes-app": "app-id=398018310",
+              "twitter:card": "summary_large_image",
+              "article:published_time": "2012-02-03T16:19:00+0000",
+              "og:site_name": "CNBC",
+              "twitter:url": "https://www.cnbc.com/squawk-box-us/",
+              "tp:preferredformats": "M3U,MPEG4",
+              "og:description": "\"Squawk Box\" is the ultimate pre-market morning news program, featuring Joe Kernen, Becky Quick and Andrew Ross Sorkin. It's a \"must see\" for everyone from the professional trader to the casual investor.",
+              "twitter:creator": "JoeSquawk",
+              "parsely-metadata": "{\"nodeid\":15838368,\"originalImage\":\"https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585\"}",
+              "twitter:image": "https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585&w=1920&h=1080",
+              "article:publisher": "https://www.facebook.com/cnbc",
+              "al:ios:app_store_id": "398018310",
+              "pagenodeid": "15838368",
+              "twitter:site": "@CNBC",
+              "article:modified_time": "2026-03-27T17:50:36+0000",
+              "news_keywords": "business news",
+              "tp:preferredruntimes": "universal",
+              "tp:initialize": "false",
+              "assettype": "franchise",
+              "og:type": "website",
+              "twitter:title": "Squawk Box",
+              "al:ios:app_name": "CNBC Business News and Finance",
+              "og:title": "Squawk Box",
+              "twitter:image:src": "https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585&w=1920&h=1080",
+              "viewport": "initial-scale=1.0, width=device-width",
+              "twitter:description": "\"Squawk Box\" is the ultimate pre-market morning news program, featuring Joe Kernen, Becky Quick and Andrew Ross Sorkin. It's a \"must see\" for everyone from the professional trader to the casual investor.",
+              "og:url": "https://www.cnbc.com/squawk-box-us/",
+              "format-detection": "telephone=no"
+            }
+          ],
+          "webpage": [
+            {
+              "image": "https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585&w=1920&h=1080",
+              "contentrating": "NR",
+              "primaryimageofpage": "https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585",
+              "datemodified": "2026-03-27T17:50:36+0000",
+              "inlanguage": "en-US",
+              "keywords": "business news",
+              "lastreviewed": "2026-03-27T17:50:36+0000",
+              "name": "Squawk Box: Watch Interviews & Clips, Schedule, Latest News",
+              "description": "\"Squawk Box\" is the ultimate pre-market morning news program, featuring Joe Kernen, Becky Quick and Andrew Ross Sorkin. It's a \"must see\" for everyone from the professional trader to the casual...",
+              "datecreated": "2012-02-03T16:19:00+0000"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://image.cnbcfm.com/api/v1/image/108240019-1765391287090-img_squawk_box.png?v=1765391585&w=1920&h=1080"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "5 things to know before the market opens Friday - CNBC",
+        "htmlTitle": "5 things to know before the market opens Friday - CNBC",
+        "link": "https://www.cnbc.com/2026/03/27/5-things-to-know-before-the-market-opens.html",
+        "displayLink": "www.cnbc.com",
+        "snippet": "1 day ago ... While the Dow Jones Industrial Average is on track to break a weekly losing streak, the S&P 500 is set to record its longest weekly negative run since 2022.",
+        "htmlSnippet": "1 day ago <b>...</b> While the Dow Jones Industrial Average is on track to <b>break</b> a weekly losing streak, the S&amp;P 500 is set to record its longest weekly negative run since 2022.",
+        "formattedUrl": "https://www.cnbc.com/.../5-things-to-know-before-the-market-opens.html",
+        "htmlFormattedUrl": "https://www.cnbc.com/.../5-things-to-know-before-the-market-opens.html",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD-gYq0KBEGUrNif6SMfTSFrL0mYXDaXM2VTY2nSlgzwjk1p3cNObMetU&s",
+              "width": "300",
+              "height": "168"
+            }
+          ],
+          "newsmediaorganization": [
+            {
+              "foundingdate": "'1989-04-17'",
+              "name": "CNBC",
+              "url": "https://www.cnbc.com"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://image.cnbcfm.com/api/v1/image/108283591-17745455872026-03-26t171715z_542136484_rc2gckaplaai_rtrmadp_0_usa-trump.jpeg?v=1774545616&w=1920&h=1080",
+              "apple-itunes-app": "app-id=398018310",
+              "twitter:card": "summary_large_image",
+              "article:published_time": "2026-03-27T12:14:18+0000",
+              "og:site_name": "CNBC",
+              "twitter:url": "https://www.cnbc.com/2026/03/27/5-things-to-know-before-the-market-opens.html",
+              "tp:preferredformats": "M3U,MPEG4",
+              "og:description": "Here are five key things investors need to know to start the trading day.",
+              "twitter:creator": "@alex_harring",
+              "parsely-metadata": "{\"nodeid\":108283799,\"originalImage\":\"https://image.cnbcfm.com/api/v1/image/108283591-17745455872026-03-26t171715z_542136484_rc2gckaplaai_rtrmadp_0_usa-trump.jpeg?v=1774545616\"}",
+              "twitter:image": "https://image.cnbcfm.com/api/v1/image/108283591-17745455872026-03-26t171715z_542136484_rc2gckaplaai_rtrmadp_0_usa-trump.jpeg?v=1774545616&w=1920&h=1080",
+              "article:publisher": "https://www.facebook.com/cnbc",
+              "al:ios:app_store_id": "398018310",
+              "pagenodeid": "108283799",
+              "twitter:site": "@CNBC",
+              "article:modified_time": "2026-03-27T22:56:14+0000",
+              "news_keywords": "Investment strategy,Economy,Markets,Business,S&P 500 Index,NASDAQ Composite,American Airlines Group Inc,Dow Jones Industrial Average,Donald Trump,Meta Platforms Inc,Fidelity NASDAQ Composite Index Track,Arrow Dow Jones Global Yield ETF,Invesco QQQ Trust,Invesco DB Oil Fund,@LCO26K,Netflix Inc,United States Oil Fund, LP,@LCO26Q,United Airlines Holdings Inc,Amazon.com Inc,iShares MSCI USA Momentum Factor ETF,JetBlue Airways Corp,Walmart Inc,UnitedHealth Group Inc,Viasat Inc,Target Corp,Costco Wholesale Corp,Gogo Inc,SPDR S&P Transportation ETF,iShares Russell 2000 ETF,Invesco Dynamic Leisure and Entertainment ETF,Delta Air Lines Inc,Southwest Airlines Co,Technology Select Sector SPDR Fund,iShares U.S. Aerospace & Defense ETF,Iran,Kevin Warsh,business news",
+              "tp:preferredruntimes": "universal",
+              "tp:initialize": "false",
+              "assettype": "cnbcnewsstory",
+              "og:type": "article",
+              "twitter:title": "Trump's Iran extension, DHS funding deal, Anthropic's injunction and more in Morning Squawk",
+              "article:section": "5 Things to Know",
+              "al:ios:app_name": "CNBC Business News and Finance",
+              "author": "Alex Harring",
+              "og:title": "Trump's Iran extension, DHS funding deal, Anthropic's injunction and more in Morning Squawk",
+              "article:author": "https://www.facebook.com/CNBC",
+              "twitter:image:src": "https://image.cnbcfm.com/api/v1/image/108283591-17745455872026-03-26t171715z_542136484_rc2gckaplaai_rtrmadp_0_usa-trump.jpeg?v=1774545616&w=1920&h=1080",
+              "article:tag": "Investment strategy",
+              "viewport": "initial-scale=1.0, width=device-width",
+              "twitter:description": "Here are five key things investors need to know to start the trading day.",
+              "og:url": "https://www.cnbc.com/2026/03/27/5-things-to-know-before-the-market-opens.html",
+              "format-detection": "telephone=no",
+              "article:opinion": "false"
+            }
+          ],
+          "webpage": [
+            {
+              "image": "https://image.cnbcfm.com/api/v1/image/108283591-17745455872026-03-26t171715z_542136484_rc2gckaplaai_rtrmadp_0_usa-trump.jpeg?v=1774545616&w=1920&h=1080",
+              "contentrating": "NR",
+              "specialty": "Investment strategy,Economy,Markets,Business,S&P 500 Index,NASDAQ Composite,American Airlines Group Inc,Dow Jones Industrial Average,Donald Trump,Meta Platforms Inc,Fidelity NASDAQ Composite...",
+              "primaryimageofpage": "https://image.cnbcfm.com/api/v1/image/108283591-17745455872026-03-26t171715z_542136484_rc2gckaplaai_rtrmadp_0_usa-trump.jpeg?v=1774545616",
+              "datemodified": "2026-03-27T22:56:14+0000",
+              "inlanguage": "en-US",
+              "keywords": "Investment strategy,Economy,Markets,Business,S&P 500 Index,NASDAQ Composite,American Airlines Group Inc,Dow Jones Industrial Average,Donald Trump,Meta Platforms Inc,Fidelity NASDAQ Composite...",
+              "lastreviewed": "2026-03-27T22:56:14+0000",
+              "name": "5 things to know before the market opens Friday",
+              "description": "Here are five key things investors need to know to start the trading day.",
+              "datecreated": "2026-03-27T12:14:18+0000",
+              "datepublished": "2026-03-27T12:14:18+0000"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://image.cnbcfm.com/api/v1/image/108283591-17745455872026-03-26t171715z_542136484_rc2gckaplaai_rtrmadp_0_usa-trump.jpeg?v=1774545616&w=1920&h=1080"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "CNBC Pro - Premium Live TV, Stock Picks and Investing Insights",
+        "htmlTitle": "CNBC Pro - Premium Live TV, Stock Picks and Investing Insights",
+        "link": "https://www.cnbc.com/pro/",
+        "displayLink": "www.cnbc.com",
+        "snippet": "10 hours ago ... CNBC PRO is your all-access pass to CNBC's premium digital experience. It's a comprehensive 24-hour online destination that provides behind-the-scenes ...",
+        "htmlSnippet": "10 hours ago <b>...</b> CNBC PRO is your all-access pass to CNBC&#39;s premium digital experience. It&#39;s a comprehensive 24-hour online destination that provides behind-the-scenes&nbsp;...",
+        "formattedUrl": "https://www.cnbc.com/pro/",
+        "htmlFormattedUrl": "https://www.cnbc.com/pro/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6O90M7qRUxTMJfF16HbUL8uXuc9sVbh2UzyLCk4ee1BDN174nBrL9QG5N&s",
+              "width": "310",
+              "height": "163"
+            }
+          ],
+          "newsmediaorganization": [
+            {
+              "foundingdate": "'1989-04-17'",
+              "name": "CNBC",
+              "url": "https://www.cnbc.com"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://fm.cnbc.com/applications/cnbc.com/staticcontent/img/versant/cnbc_share_versant.png?v=1524171804&w=1920&h=1080",
+              "apple-itunes-app": "app-id=398018310",
+              "twitter:card": "summary_large_image",
+              "article:published_time": "2016-05-09T20:46:42+0000",
+              "og:site_name": "CNBC",
+              "twitter:url": "https://www.cnbc.com/pro/",
+              "tp:preferredformats": "M3U,MPEG4",
+              "og:description": "CNBC PRO is your all-access pass to CNBC’s premium digital experience. It’s a comprehensive 24-hour online destination that provides behind-the-scenes content and tools for active investors and business decision makers.",
+              "twitter:creator": "@CNBC",
+              "parsely-metadata": "{\"nodeid\":103620081,\"originalImage\":\"https://sc.cnbcfm.com/applications/cnbc.com/resources/img/editorial/2015/03/30/102546467-Most-Popular--Image-Placeholder-Large.jpg\"}",
+              "twitter:image": "https://fm.cnbc.com/applications/cnbc.com/staticcontent/img/versant/cnbc_share_versant.png?v=1524171804&w=1920&h=1080",
+              "article:publisher": "https://www.facebook.com/cnbc",
+              "al:ios:app_store_id": "398018310",
+              "pagenodeid": "103620081",
+              "twitter:site": "@CNBC",
+              "article:modified_time": "2026-02-11T14:19:15+0000",
+              "news_keywords": "Josh Brown,Pro: Analyst Calls,Pro: Stock Picks,Pro: Analysis,PRO: Playbooks,Pro: Income Investing,Pro: Chart Investing Pro,Pro: Options Investing Pro,Mike Santoli Insight,Pro Uncut,Pro: Market forecasts,PRO: Invest like Buffett,PRO: China Investing,Pro Talks,business news",
+              "tp:preferredruntimes": "universal",
+              "tp:initialize": "false",
+              "assettype": "franchise",
+              "og:type": "website",
+              "twitter:title": "CNBC PRO",
+              "al:ios:app_name": "CNBC Business News and Finance",
+              "og:title": "CNBC PRO",
+              "twitter:image:src": "https://fm.cnbc.com/applications/cnbc.com/staticcontent/img/versant/cnbc_share_versant.png?v=1524171804&w=1920&h=1080",
+              "viewport": "initial-scale=1.0, width=device-width",
+              "twitter:description": "CNBC PRO is your all-access pass to CNBC’s premium digital experience. It’s a comprehensive 24-hour online destination that provides behind-the-scenes content and tools for active investors and business decision makers.",
+              "og:url": "https://www.cnbc.com/pro/",
+              "format-detection": "telephone=no"
+            }
+          ],
+          "webpage": [
+            {
+              "image": "https://fm.cnbc.com/applications/cnbc.com/staticcontent/img/versant/cnbc_share_versant.png?v=1524171804&w=1920&h=1080",
+              "contentrating": "NR",
+              "specialty": "Josh Brown,Pro: Analyst Calls,Pro: Stock Picks,Pro: Analysis,PRO: Playbooks,Pro: Income Investing,Pro: Chart Investing Pro,Pro: Options Investing Pro,Mike Santoli Insight,Pro Uncut,Pro: Market...",
+              "primaryimageofpage": "https://fm.cnbc.com/applications/cnbc.com/staticcontent/img/versant/cnbc_share_versant.png?v=1524171804",
+              "datemodified": "2026-02-11T14:19:15+0000",
+              "inlanguage": "en-US",
+              "keywords": "Josh Brown,Pro: Analyst Calls,Pro: Stock Picks,Pro: Analysis,PRO: Playbooks,Pro: Income Investing,Pro: Chart Investing Pro,Pro: Options Investing Pro,Mike Santoli Insight,Pro Uncut,Pro: Market...",
+              "lastreviewed": "2026-02-11T14:19:15+0000",
+              "name": "CNBC Pro - Premium Live TV, Stock Picks and Investing Insights",
+              "description": "CNBC PRO is your all-access pass to CNBC’s premium digital experience. It’s a comprehensive 24-hour online destination that provides behind-the-scenes content and tools for active investors...",
+              "datecreated": "2016-05-09T20:46:42+0000"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://fm.cnbc.com/applications/cnbc.com/staticcontent/img/versant/cnbc_share_versant.png?v=1524171804&w=1920&h=1080"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Economy - WSJ.com",
+        "htmlTitle": "Economy - WSJ.com",
+        "link": "https://www.wsj.com/economy?gaa_at=eafs&gaa_n=AWEtsqcPPPUOR28a9sPy4SEgKPL7tgtrNzF5f2w-aPvr2M6niluF9arndpWk&gaa_ts=69c862e1&gaa_sig=YjtCMnh1PcDKDIreiu8stsENdzSN_ZKWILENHjrhdrVt752iBOCoUop6yzGA8CLjNqUndKKhEg-sc0Fk54YLlw%3D%3D",
+        "displayLink": "www.wsj.com",
+        "snippet": "2 days ago ... The latest news on the economy, jobs market, U.S. trade and housing, including the latest news and analysis on the Federal Reserve and Central Banking.",
+        "htmlSnippet": "2 days ago <b>...</b> The latest news on the economy, jobs market, U.S. trade and housing, including the latest news and analysis on the Federal Reserve and Central Banking.",
+        "formattedUrl": "https://www.wsj.com/economy",
+        "htmlFormattedUrl": "https://www.wsj.com/economy",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQylg_XzeWnMwc5Pd83d4KgnnxJznxB-GWxxT5d7SMEYOpAG5GSV-2knTQ&s",
+              "width": "310",
+              "height": "163"
+            }
+          ],
+          "metatags": [
+            {
+              "publish.version": "UCSP_WSJ_ECONOMY1774679705294",
+              "og:image": "https://s.wsj.net/img/meta/wsj-social-share.png",
+              "page.content.type": "Summaries",
+              "twitter:card": "summary",
+              "cxenseparse:wsj-taxonomy-l1": "economy",
+              "og:site_name": "The Wall Street Journal",
+              "page.site.product": "WSJ",
+              "cxenseparse:wsj-meta-version": "1",
+              "og:description": "Read Economy on The Wall Street Journal",
+              "twitter:image": "https://s.wsj.net/img/meta/wsj-social-share.png",
+              "cxenseparse:wsj-keyword": "financial markets,stock,stock news,investments,stock market,market,todays market,bonds,securities,equities,commodities,foreign exchange,banks,trading,top us funds,currencies,stock market today,stock market data,stock quotes,dow jones,dow jones index,company data",
+              "cxenseparse:wsj-pageregion": "na,us",
+              "publish.datetime": "2026-03-28T06:35:06.2103334Z",
+              "next-head-count": "70",
+              "twitter:site": "@WSJmarketes",
+              "page.section": "Economy",
+              "parsely-section": "Economy",
+              "cxenseparse:recs:recommendable": "false",
+              "page.region": "na,us",
+              "twitter:title": "Economy",
+              "og:type": "website",
+              "twitter:domain": "wsj.com",
+              "page.access": "nonsubscriber",
+              "og:title": "Economy",
+              "servo-context": "servo:prod:virginia:wsj-nextjs-app:sections",
+              "page.content.source": "WSJ Online",
+              "fb:app_id": "368513495882",
+              "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0",
+              "page.content.region": "na,us",
+              "twitter:description": "Read Economy on The Wall Street Journal",
+              "user.exp": "google_bot",
+              "msnbot": "nocache, noarchive",
+              "user.type": "nonsubscriber",
+              "og:locale": "en_US",
+              "page.url": "https://www.wsj.com/economy",
+              "page.content.language": "en-US",
+              "cxenseparse:wsj-pagesite": "wsj",
+              "og:url": "https://www.wsj.com/economy",
+              "page.site": "wsj",
+              "cxenseparse:wsj-pagesection": "economy"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://s.wsj.net/img/meta/wsj-social-share.png"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Emerging Markets Headlines | Breaking Stock Market News - Reuters",
+        "htmlTitle": "Emerging Markets Headlines | <b>Breaking</b> Stock Market News - Reuters",
+        "link": "https://www.reuters.com/markets/emerging/",
+        "displayLink": "www.reuters.com",
+        "snippet": "3 hours ago ... Lisa Bernhard reports. Up next. CIO likes tech, defense stocks despite recent volatility.",
+        "htmlSnippet": "3 hours ago <b>...</b> Lisa Bernhard reports. Up next. CIO likes <b>tech</b>, defense stocks despite recent volatility.",
+        "formattedUrl": "https://www.reuters.com/markets/emerging/",
+        "htmlFormattedUrl": "https://www.reuters.com/markets/emerging/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpd8nbEEzm4yT4-EEbv7zubfuD4LaQ1qvdDbkmPA9SQZa3OKK4jlNOYLE&s",
+              "width": "311",
+              "height": "162"
+            }
+          ],
+          "metatags": [
+            {
+              "apple-itunes-app": "app-id=602660809",
+              "og:image": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355",
+              "og:type": "website",
+              "twitter:title": "Emerging Markets Headlines | Breaking Stock Market News | Reuters",
+              "ad:template": "landing",
+              "og:site_name": "Reuters",
+              "dcsext.dartzone": "/4735792/reuters.com/markets/emerging/home",
+              "ccbot": "nofollow",
+              "og:title": "Emerging Markets Headlines | Breaking Stock Market News | Reuters",
+              "fb:pages": "114050161948682",
+              "og:description": "Find the latest stock market news from every corner of the globe at Reuters.com, your online source for breaking international market and finance news",
+              "fb:app_id": "988502044532272",
+              "datemodified": "2026-03-28T15:01:25.039Z",
+              "viewport": "width=device-width, initial-scale=1",
+              "twitter:description": "Find the latest stock market news from every corner of the globe at Reuters.com, your online source for breaking international market and finance news",
+              "og:url": "https://www.reuters.com/markets/emerging/"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=355"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Trump Signs Order to Pay TSA Workers - WSJ",
+        "htmlTitle": "Trump Signs Order to Pay TSA Workers - WSJ",
+        "link": "https://www.wsj.com/public/resources/documents/GqF7D5JzRw3xpQ4mBoPa-WSJNewsPaper-3-28-2026.pdf?gaa_at=eafs&gaa_n=AWEtsqcHdMqeNHCe3FfrY5mj7Gp6m9we5rHVFDh9jIO9Y26nSNw7_CWPJZ7W&gaa_ts=69c862e1&gaa_sig=Dzfbv_1POYxFmR28afVJiBfQa9QWNhPzIMYmtfPy__RKoKilddZx_rDITM3wIVBCRUMmgSJHnXY5YdeA5pOsMA%3D%3D",
+        "displayLink": "www.wsj.com",
+        "snippet": "17 hours ago ... Many unpaid TSA employees have been calling in sick while others have quit, causing delays at airports across the country as travelers head out on spring break.",
+        "htmlSnippet": "17 hours ago <b>...</b> Many unpaid TSA employees have been calling in sick while others have quit, causing delays at airports across the country as travelers head out on spring <b>break</b>.",
+        "formattedUrl": "https://www.wsj.com/.../GqF7D5JzRw3xpQ4mBoPa-WSJNewsPaper-3-28-...",
+        "htmlFormattedUrl": "https://www.wsj.com/.../GqF7D5JzRw3xpQ4mBoPa-WSJNewsPaper-3-28-...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHtv-S7Y92p5EfsFHvpP-yiL0u7vENLtmmVAhe8-Zz27y0syujFxzAM4Jn&s",
+              "width": "229",
+              "height": "220"
+            }
+          ],
+          "metatags": [
+            {
+              "moddate": "D:20260328022037-04'00'",
+              "creator": "pdftk-java 3.3.3",
+              "creationdate": "D:20260328022037-04'00'",
+              "producer": "itext-paulo-155 (itextpdf.sf.net - lowagie.com)"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "x-raw-image:///a93f1766ff9a9a6ce078bb80df740e59284113b8d5eb3bad527fded2a6fa88f8"
+            }
+          ]
+        },
+        "mime": "application/pdf",
+        "fileFormat": "PDF/Adobe Acrobat"
+      }
+    ]
+  }
+}

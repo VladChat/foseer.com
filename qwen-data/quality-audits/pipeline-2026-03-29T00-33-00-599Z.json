@@ -1,0 +1,1350 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-03-29T00-33-00-599Z",
+  "started_at": "2026-03-29T00:33:00.599Z",
+  "generated_at": "2026-03-29T00:35:40.494Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "discovery_candidates": 47,
+    "event_clusters": 10,
+    "briefs_normalized": 6,
+    "source_packs_assembled": 20,
+    "publishable_candidates": 9,
+    "selected_topic": "5 things to know before the market opens Friday",
+    "selected_topics": [
+      "5 things to know before the market opens Friday",
+      "Can We Settle Your Music Debate? Of Course We Can.",
+      "Has MLB overtaken the NBA as America’s No. 2 league?"
+    ],
+    "articles_attempted": 3,
+    "articles_published": 2,
+    "news_pool": {
+      "total": 88,
+      "active": 74,
+      "published": 14,
+      "ready_candidates": 7
+    },
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 0,
+        "gdelt": 2,
+        "google": 2
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "providers": {
+          "brave": {
+            "files": 71,
+            "fresh_files": 6,
+            "expired_files": 65,
+            "corrupt_files": 0,
+            "size_bytes": 1536573
+          },
+          "gdelt": {
+            "files": 7,
+            "fresh_files": 0,
+            "expired_files": 7,
+            "corrupt_files": 0,
+            "size_bytes": 34228
+          },
+          "google": {
+            "files": 63,
+            "fresh_files": 10,
+            "expired_files": 53,
+            "corrupt_files": 0,
+            "size_bytes": 1512677
+          }
+        }
+      }
+    },
+    "duration_ms": 159836,
+    "ready_candidates": 6,
+    "additional_ready_candidates": 6
+  },
+  "provider_stats": {
+    "mode": "cache_refresh_with_live_quota",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": true,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 0,
+      "gdelt": 2,
+      "google": 2
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "providers": {
+        "brave": {
+          "files": 71,
+          "fresh_files": 6,
+          "expired_files": 65,
+          "corrupt_files": 0,
+          "size_bytes": 1536573
+        },
+        "gdelt": {
+          "files": 7,
+          "fresh_files": 0,
+          "expired_files": 7,
+          "corrupt_files": 0,
+          "size_bytes": 34228
+        },
+        "google": {
+          "files": 63,
+          "fresh_files": 10,
+          "expired_files": 53,
+          "corrupt_files": 0,
+          "size_bytes": 1512677
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claimMapCreation": {
+      "success": true,
+      "error": null,
+      "total": 3,
+      "success_count": 3,
+      "failure_count": 0
+    },
+    "articleDrafting": {
+      "success": true,
+      "error": null,
+      "total": 3,
+      "success_count": 3,
+      "failure_count": 0
+    },
+    "imageSupport": {
+      "success": true,
+      "error": null,
+      "total": 3,
+      "success_count": 3,
+      "failure_count": 0
+    },
+    "publishing": {
+      "success": true,
+      "error": "Has MLB overtaken the NBA as America’s No. 2 league?: Primary topic tag unsupported by article evidence: Major Leagues",
+      "total": 3,
+      "success_count": 2,
+      "failure_count": 1
+    },
+    "localVerification": {
+      "success": true,
+      "error": null,
+      "total": 2,
+      "success_count": 2,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 3,
+    "editorial_pass_count": 2,
+    "editorial_fail_count": 1
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "5 things to watch before markets open Friday",
+      "slug": "5-things-to-watch-before-markets-open-friday",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "tech",
+          "topic_id": "ai-big-tech",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 3,
+          "unique_domains": 2,
+          "direct_event_source_count": 3,
+          "independent_event_domains": 2,
+          "source_consistency_score": 5,
+          "strong_match_count": 3,
+          "core_source_count": 2,
+          "supporting_source_count": 1,
+          "background_source_count": 4,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 3,
+          "supporting": 1,
+          "background": 6,
+          "signal_only": 4
+        },
+        "publish_ready_sources": [
+          {
+            "title": "5 things to know before the market opens Friday",
+            "domain": "cnbc.com",
+            "url": "https://www.cnbc.com/2026/03/27/5-things-to-know-before-the-market-opens.html",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "tech"
+          },
+          {
+            "title": "5 things to know before the market opens Thursday",
+            "domain": "cnbc.com",
+            "url": "https://www.cnbc.com/2026/03/26/5-things-to-know-before-the-market-opens.html",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "tech"
+          },
+          {
+            "title": "Brewers place Jackson Chourio on IL with hand injury hours before ...",
+            "domain": "nytimes.com",
+            "url": "https://www.nytimes.com/athletic/7149022/2026/03/26/jackson-chourio-injury-brewers-opening-day/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "tech"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "5 things to know before the market opens Friday",
+            "domain": "cnbc.com",
+            "page_kind": "article",
+            "same_event_score": 19,
+            "topic_fit_score": 4,
+            "source_quality_score": 43.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "5 things to know before the market opens Thursday",
+            "domain": "cnbc.com",
+            "page_kind": "article",
+            "same_event_score": 13,
+            "topic_fit_score": 3,
+            "source_quality_score": 22.5,
+            "article_likelihood": 10,
+            "genericity_score": 2
+          },
+          {
+            "role": "core",
+            "title": "China boycotts top AI conference after ban on papers from ...",
+            "domain": "reuters.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 6,
+            "source_quality_score": 18,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "Brewers place Jackson Chourio on IL with hand injury hours before ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 4,
+            "topic_fit_score": 2,
+            "source_quality_score": 10.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "AI (artificial intelligence)",
+            "domain": "theguardian.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 6,
+            "source_quality_score": 11,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Artificial Intelligence",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 6,
+            "source_quality_score": 11,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Transcript",
+            "domain": "reuters.com",
+            "page_kind": "official_release",
+            "same_event_score": 0,
+            "topic_fit_score": 6,
+            "source_quality_score": 14,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "German army eyes AI tools to expedite wartime decision",
+            "domain": "reuters.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 6,
+            "source_quality_score": 8.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "How the AI Coding Boom Is Rewriting Application Security",
+            "domain": "bankinfosecurity.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 6,
+            "source_quality_score": 8.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Tech company climate goals under pressure due to AI energy demand",
+            "domain": "apnews.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 6,
+            "source_quality_score": 8.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "Iran War: Markets Want to Declare an Off",
+            "domain": "bloomberg.com",
+            "page_kind": "analysis",
+            "same_event_score": 3,
+            "topic_fit_score": -2,
+            "source_quality_score": 18,
+            "article_likelihood": 7,
+            "genericity_score": 2
+          },
+          {
+            "role": "signal_only",
+            "title": "Global markets recoil as Marco Rubio warns war in Iran could ...",
+            "domain": "ft.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": -2,
+            "source_quality_score": 12,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 3,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "Brewers place Jackson Chourio on IL with hand injury hours before ...",
+              "url": "https://www.nytimes.com/athletic/7149022/2026/03/26/jackson-chourio-injury-brewers-opening-day/",
+              "overlap_ratio": 0.17,
+              "shared_tokens": [
+                "before"
+              ]
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "Economy & Markets",
+          "Wall Street"
+        ],
+        "tag_slugs": [
+          "economy-markets",
+          "wall-street"
+        ],
+        "primary_topic_tag": "Economy & Markets",
+        "primary_topic_slug": "economy-markets",
+        "warnings": [],
+        "diagnostics": {
+          "section_id": "tech",
+          "topic_id": "ai-big-tech",
+          "article_type": "report",
+          "source_entity_count": 0,
+          "source_title_count": 3,
+          "direct_source_title_count": 3,
+          "background_source_title_count": 0
+        },
+        "selected": [
+          {
+            "label": "Economy & Markets",
+            "slug": "economy-markets",
+            "score": 24,
+            "reason": "Primary topic inferred from supported theme tag Wall Street",
+            "fallback": false
+          },
+          {
+            "label": "Wall Street",
+            "slug": "wall-street",
+            "score": 18,
+            "reason": "Theme match score 18",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "economy-markets",
+              "label": "Economy & Markets",
+              "type": "topic"
+            },
+            {
+              "slug": "wall-street",
+              "label": "Wall Street",
+              "type": "theme"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "economy-markets",
+            "topic_label": "Economy & Markets",
+            "supported": true,
+            "matched_aliases": [
+              "markets",
+              "market",
+              "market opens",
+              "stocks"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pexels",
+        "image_path": "~/assets/images/library/pexels/16689015/cover.jpg",
+        "source_url": "https://www.pexels.com/photo/chatgpt-is-always-here-to-help-whether-on-your-phone-or-laptop-16689015/",
+        "selection_mode": "provider_download_new:pexels:strong",
+        "query_used": "Friday technology photo",
+        "relevance_tier": "strong",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "product",
+        "visual_type": "photo",
+        "entity_hints": [
+          "smartphone",
+          "showing",
+          "chatgpt",
+          "interface",
+          "emphasizing",
+          "ai",
+          "indoors",
+          "tech"
+        ],
+        "geo_hints": [
+          "china",
+          "iran"
+        ],
+        "queries_tried": [
+          "Friday photo",
+          "Friday portrait",
+          "Friday technology photo",
+          "iran Friday photo",
+          "Jackson Chourio photo",
+          "Jackson Chourio portrait",
+          "Jackson Chourio technology photo",
+          "iran Jackson Chourio photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Friday photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "4635080",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Friday portrait",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "4635080",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Friday technology photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "16689015",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Friday technology photo",
+          "provider": "pexels",
+          "providerAssetId": "16689015",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pexels",
+          "query_used": "Friday technology photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "strong",
+          "overlap_ratio": 0.5,
+          "shared_tokens": [
+            "friday"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-data\\publish-manifests\\5-things-to-watch-before-markets-open-friday.json",
+        "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-29-5-things-to-watch-before-markets-open-friday.mdx",
+        "expected_url": "/article/2026-03-29-5-things-to-watch-before-markets-open-friday",
+        "verified_url": "http://localhost:4321/article/2026-03-29-5-things-to-watch-before-markets-open-friday"
+      }
+    },
+    {
+      "rank": 2,
+      "title": "Popcast Invites Listeners to Settle Their Biggest Music Debates",
+      "slug": "popcast-invites-listeners-to-settle-their-biggest-music-deba",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "culture",
+          "topic_id": "creators-platforms",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 2,
+          "unique_domains": 2,
+          "direct_event_source_count": 2,
+          "independent_event_domains": 2,
+          "source_consistency_score": 7.5,
+          "strong_match_count": 1,
+          "core_source_count": 1,
+          "supporting_source_count": 1,
+          "background_source_count": 3,
+          "rejected_source_count": 2
+        },
+        "role_counts": {
+          "core": 2,
+          "supporting": 1,
+          "background": 3,
+          "signal_only": 1,
+          "reject": 2
+        },
+        "publish_ready_sources": [
+          {
+            "title": "Can We Settle Your Music Debate? Of Course We Can.",
+            "domain": "nytimes.com",
+            "url": "https://nytimes.com/2026/03/27/arts/popcast-music-debate-mailbag-questions.html",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "culture"
+          },
+          {
+            "title": "Peter Adeshile : For Me , Music Has Always Been an Expression of Faith",
+            "domain": "thisdaylive.com",
+            "url": "https://www.thisdaylive.com/2026/03/28/peter-adeshile-for-me-music-has-always-been-an-expression-of-faith/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "culture"
+          }
+        ],
+        "excluded_sources": [
+          {
+            "title": "The AI Risk Nobody In Consumer Electronics Is Talking About: Autonomous Agents With Your House Keys",
+            "domain": "twice.com",
+            "url": "https://twice.com/blog/another-view/the-ai-risk-nobody-in-consumer-electronics-is-talking-about-autonomous-agents-with-your-house-keys",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "tech"
+          },
+          {
+            "title": "Where to play: a guide to western Queens adult sport leagues",
+            "domain": "qns.com",
+            "url": "https://qns.com/2026/03/guide-western-queens-adult-sports-leagues/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          }
+        ],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "Can We Settle Your Music Debate? Of Course We Can.",
+            "domain": "marksmendaily.com",
+            "page_kind": "article",
+            "same_event_score": 28,
+            "topic_fit_score": 8,
+            "source_quality_score": 48,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Can We Settle Your Music Debate? Of Course We Can.",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": 4,
+            "source_quality_score": 39,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "Peter Adeshile : For Me , Music Has Always Been an Expression of Faith",
+            "domain": "thisdaylive.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 4,
+            "source_quality_score": 11,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Research points to how companies could make social media less addictive for teens : NPR",
+            "domain": "npr.org",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 7,
+            "source_quality_score": 12,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Alexander Kluge, a Lodestar in New German Cinema Movement ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 10,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "The latest Chappell Roan scandal may have been fueled by bot",
+            "domain": "out.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 9,
+            "genericity_score": 2
+          },
+          {
+            "role": "signal_only",
+            "title": "The Music Industry Is Sending Its Stars to Hollywood",
+            "domain": "rollingstone.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": -1,
+            "source_quality_score": 11,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "reject",
+            "title": "The AI Risk Nobody In Consumer Electronics Is Talking About: Autonomous Agents With Your House Keys",
+            "domain": "twice.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": -1,
+            "source_quality_score": 12,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "reject",
+            "title": "Where to play: a guide to western Queens adult sport leagues",
+            "domain": "qns.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": -1,
+            "source_quality_score": 11,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 2,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "Peter Adeshile : For Me , Music Has Always Been an Expression of Faith",
+              "url": "https://www.thisdaylive.com/2026/03/28/peter-adeshile-for-me-music-has-always-been-an-expression-of-faith/",
+              "overlap_ratio": 0.14,
+              "shared_tokens": [
+                "music"
+              ]
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "Creators & Platforms",
+          "Influencer Economy"
+        ],
+        "tag_slugs": [
+          "creators-platforms",
+          "influencer-economy"
+        ],
+        "primary_topic_tag": "Creators & Platforms",
+        "primary_topic_slug": "creators-platforms",
+        "warnings": [],
+        "diagnostics": {
+          "section_id": "culture",
+          "topic_id": "creators-platforms",
+          "article_type": "report",
+          "source_entity_count": 0,
+          "source_title_count": 1,
+          "direct_source_title_count": 1,
+          "background_source_title_count": 0
+        },
+        "selected": [
+          {
+            "label": "Creators & Platforms",
+            "slug": "creators-platforms",
+            "score": 40,
+            "reason": "Primary topic tag validated from topic_id=creators-platforms",
+            "fallback": false
+          },
+          {
+            "label": "Influencer Economy",
+            "slug": "influencer-economy",
+            "score": 17,
+            "reason": "Theme match score 17",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "creators-platforms",
+              "label": "Creators & Platforms",
+              "type": "topic"
+            },
+            {
+              "slug": "influencer-economy",
+              "label": "Influencer Economy",
+              "type": "theme"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "creators-platforms",
+            "topic_label": "Creators & Platforms",
+            "supported": true,
+            "matched_aliases": [
+              "creator economy"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pexels",
+        "image_path": "~/assets/images/library/pexels/36757481/cover.jpg",
+        "source_url": "https://www.pexels.com/photo/night-portrait-of-woman-listening-to-music-in-baku-36757481/",
+        "selection_mode": "provider_download_new:pexels:strong",
+        "query_used": "Popcast Invites Listeners photo",
+        "relevance_tier": "strong",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "portrait",
+        "visual_type": "photo",
+        "entity_hints": [
+          "woman",
+          "headphones",
+          "serene",
+          "night",
+          "water",
+          "baku",
+          "azerbaijan",
+          "culture"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "Popcast Invites Listeners photo",
+          "Popcast Invites Listeners portrait",
+          "Popcast Invites Listeners concert photo",
+          "global Popcast Invites Listeners photo",
+          "Settle Their Biggest photo",
+          "Settle Their Biggest portrait",
+          "Settle Their Biggest concert photo",
+          "global Settle Their Biggest photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Popcast Invites Listeners photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "36757481",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Popcast Invites Listeners photo",
+          "provider": "pexels",
+          "providerAssetId": "36757481",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pexels",
+          "query_used": "Popcast Invites Listeners photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "strong",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "popcast",
+            "invites",
+            "listeners"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-data\\publish-manifests\\popcast-invites-listeners-to-settle-their-biggest-music-deba.json",
+        "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-29-popcast-invites-listeners-to-settle-their-biggest-music-deba.mdx",
+        "expected_url": "/article/2026-03-29-popcast-invites-listeners-to-settle-their-biggest-music-deba",
+        "verified_url": "http://localhost:4321/article/2026-03-29-popcast-invites-listeners-to-settle-their-biggest-music-deba"
+      }
+    },
+    {
+      "rank": 3,
+      "title": "Has MLB Really Passed the NBA as America’s No. 2 League?",
+      "slug": "has-mlb-really-passed-the-nba-as-america-s-no-2-league",
+      "published": false,
+      "editorial_pass": false,
+      "editorial_blockers": [
+        "Primary topic tag unsupported by article evidence: Major Leagues"
+      ],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "sports",
+          "topic_id": "transfers-business",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 3,
+          "unique_domains": 2,
+          "direct_event_source_count": 3,
+          "independent_event_domains": 2,
+          "source_consistency_score": 5,
+          "strong_match_count": 1,
+          "core_source_count": 1,
+          "supporting_source_count": 2,
+          "background_source_count": 3,
+          "rejected_source_count": 3
+        },
+        "role_counts": {
+          "core": 2,
+          "supporting": 3,
+          "background": 5,
+          "signal_only": 1,
+          "reject": 3
+        },
+        "publish_ready_sources": [
+          {
+            "title": "Federal judge dismisses lawsuit claiming Fanatics, pro sports leagues monopolized trading card industry",
+            "domain": "foxbusiness.com",
+            "url": "https://www.foxbusiness.com/sports/federal-judge-dismisses-lawsuit-claiming-fanatics-pro-sports-leagues-monopolized-trading-card-industry",
+            "page_kind": "article",
+            "topic_id": "transfers-business",
+            "section_id": "sports"
+          },
+          {
+            "title": "The Champions League legend around Real Madrid's enigmatic ...",
+            "domain": "nytimes.com",
+            "url": "https://www.nytimes.com/athletic/7143030/2026/03/25/real-madrid-lunin-champions-league-courtois-injury/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          },
+          {
+            "title": "UNC star Caleb Wilson, a projected top",
+            "domain": "nytimes.com",
+            "url": "https://www.nytimes.com/athletic/7152954/2026/03/27/caleb-wilson-nba-draft/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          }
+        ],
+        "excluded_sources": [
+          {
+            "title": "Latin America | Latest News & Updates",
+            "domain": "bbc.com",
+            "url": "https://www.bbc.com/news/world/latin_america",
+            "page_kind": "unknown",
+            "topic_id": "world-geopolitics",
+            "section_id": "news"
+          },
+          {
+            "title": "Better and Coinbase Launch the First Token",
+            "domain": "markets.ft.com",
+            "url": "https://markets.ft.com/data/announce/detail",
+            "page_kind": "unknown",
+            "topic_id": null,
+            "section_id": "business"
+          },
+          {
+            "title": "BREAKING News: Fannie Mae to Accept Crypto",
+            "domain": "cryptoticker.io",
+            "url": "https://cryptoticker.io/en/fannie-mae-crypto-backed-mortgages-bitcoin-collateral",
+            "page_kind": "article",
+            "topic_id": "crypto-bitcoin",
+            "section_id": "business"
+          }
+        ],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "Has MLB overtaken the NBA as America’s No. 2 league?",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 20,
+            "topic_fit_score": 4,
+            "source_quality_score": 41,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Federal judge dismisses lawsuit claiming Fanatics, pro sports leagues monopolized trading card industry",
+            "domain": "foxbusiness.com",
+            "page_kind": "article",
+            "same_event_score": 4,
+            "topic_fit_score": 6,
+            "source_quality_score": 18.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "The Champions League legend around Real Madrid's enigmatic ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 3,
+            "source_quality_score": 15,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "UNC star Caleb Wilson, a projected top",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 3,
+            "source_quality_score": 13.5,
+            "article_likelihood": 10,
+            "genericity_score": 2
+          },
+          {
+            "role": "supporting",
+            "title": "With NBA expected to formally begin expansion vetting, what's next ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 3,
+            "source_quality_score": 11,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 14,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Fantasy Baseball Waiver Wire: 5 players who should've been drafted in more leagues, but weren't",
+            "domain": "sports.yahoo.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 13.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Yankees' Netflix debut is latest example of sports' complicated TV ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 9,
+            "article_likelihood": 10,
+            "genericity_score": 2
+          },
+          {
+            "role": "background",
+            "title": "Casemiro not thinking about reversing Manchester United decision",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 9,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "USATF granted extra world championship spots after half ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "Day 27 of Middle East conflict — US extends pause on Iran energy ...",
+            "domain": "cnn.com",
+            "page_kind": "live",
+            "same_event_score": 2,
+            "topic_fit_score": -7,
+            "source_quality_score": 4.5,
+            "article_likelihood": 2,
+            "genericity_score": 6
+          },
+          {
+            "role": "reject",
+            "title": "Latin America | Latest News & Updates",
+            "domain": "bbc.com",
+            "page_kind": "unknown",
+            "same_event_score": 6,
+            "topic_fit_score": -7,
+            "source_quality_score": 9,
+            "article_likelihood": 1,
+            "genericity_score": 2
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 3,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "Federal judge dismisses lawsuit claiming Fanatics, pro sports leagues monopolized trading card industry",
+              "url": "https://www.foxbusiness.com/sports/federal-judge-dismisses-lawsuit-claiming-fanatics-pro-sports-leagues-monopolized-trading-card-industry",
+              "overlap_ratio": 0,
+              "shared_tokens": []
+            },
+            {
+              "title": "The Champions League legend around Real Madrid's enigmatic ...",
+              "url": "https://www.nytimes.com/athletic/7143030/2026/03/25/real-madrid-lunin-champions-league-courtois-injury/",
+              "overlap_ratio": 0.17,
+              "shared_tokens": [
+                "league"
+              ]
+            },
+            {
+              "title": "UNC star Caleb Wilson, a projected top",
+              "url": "https://www.nytimes.com/athletic/7152954/2026/03/27/caleb-wilson-nba-draft/",
+              "overlap_ratio": 0,
+              "shared_tokens": []
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "Major Leagues",
+          "NBA"
+        ],
+        "tag_slugs": [
+          "major-leagues",
+          "nba"
+        ],
+        "primary_topic_tag": "Major Leagues",
+        "primary_topic_slug": "major-leagues",
+        "warnings": [],
+        "diagnostics": {
+          "section_id": "sports",
+          "topic_id": "transfers-business",
+          "article_type": "report",
+          "source_entity_count": 1,
+          "source_title_count": 1,
+          "direct_source_title_count": 1,
+          "background_source_title_count": 0
+        },
+        "selected": [
+          {
+            "label": "Major Leagues",
+            "slug": "major-leagues",
+            "score": 33,
+            "reason": "Primary topic inferred from supported entity tag NBA",
+            "fallback": false
+          },
+          {
+            "label": "NBA",
+            "slug": "nba",
+            "score": 16,
+            "reason": "Theme match score 16",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "major-leagues",
+              "label": "Major Leagues",
+              "type": "topic"
+            },
+            {
+              "slug": "nba",
+              "label": "NBA",
+              "type": "theme"
+            }
+          ],
+          "unsupported_tags": [
+            {
+              "slug": "major-leagues",
+              "label": "Major Leagues",
+              "support": {
+                "supported": false,
+                "matchedAliases": []
+              }
+            }
+          ],
+          "primary_topic": {
+            "topic_id": "law-crime",
+            "topic_label": "Law & Crime",
+            "supported": true,
+            "matched_aliases": [
+              "courts",
+              "legal"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pixabay",
+        "image_path": "~/assets/images/library/pixabay/1222404/cover.jpg",
+        "source_url": "https://pixabay.com/photos/baseball-summer-professional-pro-1222404/",
+        "selection_mode": "provider_download_new:pixabay:strong",
+        "query_used": "League baseball photo",
+        "relevance_tier": "strong",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "stadium",
+        "visual_type": "photo",
+        "entity_hints": [
+          "baseball",
+          "summer",
+          "professional",
+          "ball",
+          "game",
+          "field",
+          "base",
+          "american"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "League photo",
+          "League portrait",
+          "League baseball photo",
+          "NBA photo",
+          "NBA portrait",
+          "NBA basketball photo",
+          "League NBA photo",
+          "League america photo"
+        ],
+        "decision_log": [
+          {
+            "query": "League photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "8259184",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "League portrait",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "5532045",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "League baseball photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "1222404",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "League baseball photo",
+          "provider": "pixabay",
+          "providerAssetId": "1222404",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pixabay",
+          "query_used": "League baseball photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "strong",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "league",
+            "baseball"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": null,
+        "file_path": null,
+        "expected_url": null,
+        "verified_url": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "timestamp": 1774744387621,
+  "ttl_hours": 8,
+  "provider": "google",
+  "query_hash": "9wm3kc",
+  "data": {
+    "kind": "customsearch#search",
+    "url": {
+      "type": "application/json",
+      "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    },
+    "queries": {
+      "request": [
+        {
+          "title": "Google Custom Search - (site:cbsnews.com OR site:nbcnews.com OR site:cnn.com OR site:nikkei.com OR site:asia.nikkei.com OR site:theglobeandmail.com OR site:economist.com OR site:sec.gov OR site:fda.gov OR site:whitehouse.gov OR site:justice.gov OR site:uscourts.gov OR site:supremecourt.gov OR site:congress.gov OR site:federalregister.gov OR site:govinfo.gov) (markets OR economy OR policy OR ai OR cybersecurity OR health OR conflict) (breaking business markets consumer companies housing crypto travel)",
+          "totalResults": "7",
+          "searchTerms": "(site:cbsnews.com OR site:nbcnews.com OR site:cnn.com OR site:nikkei.com OR site:asia.nikkei.com OR site:theglobeandmail.com OR site:economist.com OR site:sec.gov OR site:fda.gov OR site:whitehouse.gov OR site:justice.gov OR site:uscourts.gov OR site:supremecourt.gov OR site:congress.gov OR site:federalregister.gov OR site:govinfo.gov) (markets OR economy OR policy OR ai OR cybersecurity OR health OR conflict) (breaking business markets consumer companies housing crypto travel)",
+          "count": 7,
+          "startIndex": 1,
+          "inputEncoding": "utf8",
+          "outputEncoding": "utf8",
+          "safe": "off",
+          "cx": "f508d19f8630d4015",
+          "dateRestrict": "d2"
+        }
+      ]
+    },
+    "context": {
+      "title": "blog.equalle.com Web Search"
+    },
+    "searchInformation": {
+      "searchTime": 0.309974,
+      "formattedSearchTime": "0.31",
+      "totalResults": "7",
+      "formattedTotalResults": "7"
+    },
+    "items": [
+      {
+        "kind": "customsearch#result",
+        "title": "Nikkei Asia - Business, Politics, Economy and Tech News & Analysis",
+        "htmlTitle": "Nikkei Asia - <b>Business</b>, Politics, <b>Economy</b> and Tech News &amp; Analysis",
+        "link": "https://asia.nikkei.com/",
+        "displayLink": "asia.nikkei.com",
+        "snippet": "4 hours ago ... Japan, China, India and Southeast Asia news and expert analysis published by Nikkei, an award-winning independent provider of quality journalism.",
+        "htmlSnippet": "4 hours ago <b>...</b> Japan, China, India and Southeast Asia news and expert analysis published by Nikkei, an award-winning independent provider of quality journalism.",
+        "formattedUrl": "https://asia.nikkei.com/",
+        "htmlFormattedUrl": "https://asia.nikkei.com/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWniGSQB03GW8CuBqmIE18m0JyjuVd_I62ie4TvYjXX7ImmlqKVD4-JEo&s",
+              "width": "225",
+              "height": "225"
+            }
+          ],
+          "metatags": [
+            {
+              "application-name": "Nikkei Asia",
+              "msapplication-starturl": "/",
+              "og:image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fasia.nikkei.com%2Fimages%2Ffrontend%2Ffavicons%2F630x630.png?width=630&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=auto&height=630",
+              "theme-color": "#0076bf",
+              "twitter:card": "summary",
+              "twitter:title": "Home",
+              "og:type": "website",
+              "og:image:width": "630",
+              "og:site_name": "Nikkei Asia",
+              "apple-mobile-web-app-title": "Nikkei Asia",
+              "og:image:height": "630",
+              "msapplication-navbutton-color": "#0076bf",
+              "og:description": "Japan, China, India and Southeast Asia news and expert analysis published by Nikkei, an award-winning independent provider of quality journalism.",
+              "twitter:image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fasia.nikkei.com%2Fimages%2Ffrontend%2Ffavicons%2F630x630.png?width=630&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=auto&height=630",
+              "next-head-count": "32",
+              "apple-mobile-web-app-status-bar-style": "black-translucent",
+              "twitter:site": "@NAR",
+              "viewport": "width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no",
+              "apple-mobile-web-app-capable": "yes",
+              "twitter:description": "Japan, China, India and Southeast Asia news and expert analysis published by Nikkei, an award-winning independent provider of quality journalism.",
+              "mobile-web-app-capable": "yes",
+              "og:locale": "en_GB",
+              "og:url": "https://asia.nikkei.com"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fasia.nikkei.com%2Fimages%2Ffrontend%2Ffavicons%2F630x630.png?width=630&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=auto&height=630"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...",
+        "htmlTitle": "<b>Travel</b> and Vacation Providers Stocks&#39; Q4 Earnings: Hyatt Hotels ...",
+        "link": "https://www.theglobeandmail.com/investing/markets/stocks/H/pressreleases/1002532/reflecting-on-consumer-discretionary-travel-and-vacation-providers-stocks-q4-earnings-hyatt-hotels-nyseh/",
+        "displayLink": "www.theglobeandmail.com",
+        "snippet": "2 days ago ... The Consumer Discretionary sector, by definition, is made up of companies selling non-essential goods and services. When economic conditions deteriorate or ...",
+        "htmlSnippet": "2 days ago <b>...</b> The <b>Consumer</b> Discretionary sector, by definition, is made up of <b>companies</b> selling non-essential goods and services. When economic conditions deteriorate or&nbsp;...",
+        "formattedUrl": "https://www.theglobeandmail.com/.../markets/.../reflecting-on-consumer-dis...",
+        "htmlFormattedUrl": "https://www.theglobeandmail.com/.../<b>markets</b>/.../reflecting-on-<b>consumer</b>-dis...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTS94SLe3P1V7A-NyvXZYEqPgdqAAsnxe54DSQ6_3vQELERDFB0FmcSfkx&s",
+              "width": "318",
+              "height": "159"
+            }
+          ],
+          "metatags": [
+            {
+              "application-name": "The Globe and Mail",
+              "og:type": "website",
+              "twitter:card": "summary",
+              "twitter:title": "Reflecting On Consumer Discretionary - Travel and Vacation Providers Stocks’ Q4 Earnings: Hyatt Hotels (NYSE:H)",
+              "theme-color": "var(--color-red-500)",
+              "og:site_name": "The Globe and Mail",
+              "twitter:url": "https://www.theglobeandmail.com/investing/markets/stocks/H/pressreleases/1002532/reflecting-on-consumer-discretionary-travel-and-vacation-providers-stocks-q4-earnings-hyatt-hotels-nyseh/",
+              "og:title": "Reflecting On Consumer Discretionary - Travel and Vacation Providers Stocks’ Q4 Earnings: Hyatt Hotels (NYSE:H)",
+              "apple-mobile-web-app-title": "The Globe and Mail",
+              "arc-id": "675300dbf8eea3d4f214d5d43992ad30fad76d64a5c2a02d029cbf0f4d2d1144",
+              "og:description": "Detailed price information for Hyatt Hotels Corp (H-N) from The Globe and Mail including charting and trades.",
+              "twitter:image": "https://www.theglobeandmail.com/pf/resources/assets/meta/twitter-summary-240x240.png?d=861",
+              "fb:app_id": "392592514262068",
+              "twitter:image:alt": "The Globe and Mail",
+              "twitter:site": "@globeandmail",
+              "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+              "twitter:description": "Detailed price information for Hyatt Hotels Corp (H-N) from The Globe and Mail including charting and trades.",
+              "og:locale": "en_GB",
+              "og:url": "https://www.theglobeandmail.com/investing/markets/stocks/H/pressreleases/1002532/reflecting-on-consumer-discretionary-travel-and-vacation-providers-stocks-q4-earnings-hyatt-hotels-nyseh/",
+              "article:opinion": "false"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://news-assets.stockstory.org/cover-images/_1400x700_crop_center-center_none/hyatt-hotels-cover-image-4850d1154004_2025-01-16-133113_amwg.jpeg"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Spotting Winners: Hilton (NYSE:HLT) And Consumer Discretionary",
+        "htmlTitle": "Spotting Winners: Hilton (NYSE:HLT) And <b>Consumer</b> Discretionary",
+        "link": "https://www.theglobeandmail.com/investing/markets/stocks/HLT/pressreleases/999257/spotting-winners-hilton-nysehlt-and-consumer-discretionary-travel-and-vacation-providers-stocks-in-q4/",
+        "displayLink": "www.theglobeandmail.com",
+        "snippet": "2 days ago ... The 19 consumer discretionary - travel and vacation providers stocks we track reported a mixed Q4. As a group, revenues beat analysts' consensus estimates by ...",
+        "htmlSnippet": "2 days ago <b>...</b> The 19 <b>consumer</b> discretionary - <b>travel</b> and vacation providers stocks we track reported a mixed Q4. As a group, revenues beat analysts&#39; consensus estimates by&nbsp;...",
+        "formattedUrl": "https://www.theglobeandmail.com/.../markets/.../spotting-winners-hilton-ny...",
+        "htmlFormattedUrl": "https://www.theglobeandmail.com/.../<b>markets</b>/.../spotting-winners-hilton-ny...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSU02hiRcbnbFr67DvasB-n9tk0Xe9IJP6-qJIfTOS6bJ2eRWVzIUTj2I&s",
+              "width": "318",
+              "height": "159"
+            }
+          ],
+          "metatags": [
+            {
+              "application-name": "The Globe and Mail",
+              "og:type": "website",
+              "twitter:card": "summary",
+              "twitter:title": "Spotting Winners: Hilton (NYSE:HLT) And Consumer Discretionary - Travel and Vacation Providers Stocks In Q4",
+              "theme-color": "var(--color-red-500)",
+              "og:site_name": "The Globe and Mail",
+              "twitter:url": "https://www.theglobeandmail.com/investing/markets/stocks/HLT/pressreleases/999257/spotting-winners-hilton-nysehlt-and-consumer-discretionary-travel-and-vacation-providers-stocks-in-q4/",
+              "og:title": "Spotting Winners: Hilton (NYSE:HLT) And Consumer Discretionary - Travel and Vacation Providers Stocks In Q4",
+              "apple-mobile-web-app-title": "The Globe and Mail",
+              "arc-id": "a3aeedf55882512bfb934ec0e363419113390ad7f0815b4543b4c5eeec5e2a4b",
+              "og:description": "Detailed price information for Hilton Inc (HLT-N) from The Globe and Mail including charting and trades.",
+              "twitter:image": "https://www.theglobeandmail.com/pf/resources/assets/meta/twitter-summary-240x240.png?d=861",
+              "fb:app_id": "392592514262068",
+              "twitter:image:alt": "The Globe and Mail",
+              "twitter:site": "@globeandmail",
+              "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+              "twitter:description": "Detailed price information for Hilton Inc (HLT-N) from The Globe and Mail including charting and trades.",
+              "og:locale": "en_GB",
+              "og:url": "https://www.theglobeandmail.com/investing/markets/stocks/HLT/pressreleases/999257/spotting-winners-hilton-nysehlt-and-consumer-discretionary-travel-and-vacation-providers-stocks-in-q4/",
+              "article:opinion": "false"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://news-assets.stockstory.org/cover-images/_1400x700_crop_center-center_none/hilton-worldwide-cover-image-2791d6a709e6_2024-01-10-174713_nzst.jpeg"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Q4 Consumer Discretionary - Casino Operator Earnings: PENN ...",
+        "htmlTitle": "Q4 <b>Consumer</b> Discretionary - Casino Operator Earnings: PENN ...",
+        "link": "https://www.theglobeandmail.com/investing/markets/stocks/PENN-Q/pressreleases/999537/q4-consumer-discretionary-casino-operator-earnings-penn-entertainment-nasdaqpenn-earns-top-marks/",
+        "displayLink": "www.theglobeandmail.com",
+        "snippet": "2 days ago ... Rising competition from online gambling platforms, regional saturation in mature markets, and geopolitical risks in key international jurisdictions add further ...",
+        "htmlSnippet": "2 days ago <b>...</b> Rising competition from online gambling platforms, regional saturation in mature <b>markets</b>, and geopolitical risks in key international jurisdictions add further&nbsp;...",
+        "formattedUrl": "https://www.theglobeandmail.com/.../markets/.../q4-consumer-discretionary...",
+        "htmlFormattedUrl": "https://www.theglobeandmail.com/.../<b>markets</b>/.../q4-<b>consumer</b>-discretionary...",
+        "pagemap": {
+          "metatags": [
+            {
+              "application-name": "The Globe and Mail",
+              "og:type": "website",
+              "twitter:card": "summary",
+              "twitter:title": "Q4 Consumer Discretionary - Casino Operator Earnings: PENN Entertainment (NASDAQ:PENN) Earns Top Marks",
+              "theme-color": "var(--color-red-500)",
+              "og:site_name": "The Globe and Mail",
+              "twitter:url": "https://www.theglobeandmail.com/investing/markets/stocks/PENN-Q/pressreleases/999537/q4-consumer-discretionary-casino-operator-earnings-penn-entertainment-nasdaqpenn-earns-top-marks/",
+              "og:title": "Q4 Consumer Discretionary - Casino Operator Earnings: PENN Entertainment (NASDAQ:PENN) Earns Top Marks",
+              "apple-mobile-web-app-title": "The Globe and Mail",
+              "arc-id": "c1b36b8299781436118170c3877f24b7593e4572f080893261c996d51dd7e4cb",
+              "og:description": "Detailed price information for Penn Entertainment Inc (PENN-Q) from The Globe and Mail including charting and trades.",
+              "twitter:image": "https://www.theglobeandmail.com/pf/resources/assets/meta/twitter-summary-240x240.png?d=861",
+              "fb:app_id": "392592514262068",
+              "twitter:image:alt": "The Globe and Mail",
+              "twitter:site": "@globeandmail",
+              "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+              "twitter:description": "Detailed price information for Penn Entertainment Inc (PENN-Q) from The Globe and Mail including charting and trades.",
+              "og:locale": "en_GB",
+              "og:url": "https://www.theglobeandmail.com/investing/markets/stocks/PENN-Q/pressreleases/999537/q4-consumer-discretionary-casino-operator-earnings-penn-entertainment-nasdaqpenn-earns-top-marks/",
+              "article:opinion": "false"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "BNZI Stock Quote Price and Forecast - CNN",
+        "htmlTitle": "BNZI Stock Quote Price and Forecast - CNN",
+        "link": "https://www.cnn.com/markets/stocks/BNZI",
+        "displayLink": "www.cnn.com",
+        "snippet": "2 days ago ... View Banzai International, Inc. Class A BNZI stock quote prices, financial information, real-time forecasts, and company news from CNN.",
+        "htmlSnippet": "2 days ago <b>...</b> View Banzai International, Inc. Class A BNZI stock quote prices, financial information, real-time forecasts, and <b>company</b> news from CNN.",
+        "formattedUrl": "https://www.cnn.com/markets/stocks/BNZI",
+        "htmlFormattedUrl": "https://www.cnn.com/<b>markets</b>/stocks/BNZI",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5cT0GPXj1CELf6dQguE0OoUsBykYyViKZ04bcqbym_qrcSipW8iW-TiA&s",
+              "width": "300",
+              "height": "168"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://media.cnn.com/api/v1/images/cnn/cnn-placeholder-image.jpeg",
+              "twitter:title": "__symbol__ Stock Quote Price and Forecast | CNN",
+              "og:type": "website",
+              "twitter:card": "summary_large_image",
+              "og:site_name": "CNN",
+              "og:title": "__symbol__ Stock Quote Price and Forecast | CNN",
+              "meta-section": "markets",
+              "type": "section",
+              "og:description": "View Banzai International, Inc. Class A BNZI stock quote prices, financial information, real-time forecasts, and company news from CNN.",
+              "twitter:image": "https://media.cnn.com/api/v1/images/cnn/cnn-placeholder-image.jpeg",
+              "article:publisher": "https://www.facebook.com/CNN",
+              "fb:app_id": "80401312489",
+              "twitter:site": "@CNNbusiness",
+              "viewport": "width=device-width,initial-scale=1,shrink-to-fit=no",
+              "twitter:description": "View Banzai International, Inc. Class A BNZI stock quote prices, financial information, real-time forecasts, and company news from CNN.",
+              "template_type": "markets",
+              "theme": "markets",
+              "og:url": "https://www.cnn.com/markets/stocks/BNZI"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://media.cnn.com/api/v1/images/cnn/cnn-placeholder-image.jpeg"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "RadNet (NASDAQ:RDNT) Q4 Earnings - The Globe and Mail",
+        "htmlTitle": "RadNet (NASDAQ:RDNT) Q4 Earnings - The Globe and Mail",
+        "link": "https://www.theglobeandmail.com/investing/markets/stocks/RDNT-Q/pressreleases/999248/radnet-nasdaqrdnt-q4-earnings-leading-the-testing-diagnostics-services-pack/",
+        "displayLink": "www.theglobeandmail.com",
+        "snippet": "2 days ago ... The business had a very strong quarter with full-year revenue guidance exceeding analysts' expectations and a decent beat of analysts' revenue estimates. Quest ...",
+        "htmlSnippet": "2 days ago <b>...</b> The <b>business</b> had a very strong quarter with full-year revenue guidance exceeding analysts&#39; expectations and a decent beat of analysts&#39; revenue estimates. Quest&nbsp;...",
+        "formattedUrl": "https://www.theglobeandmail.com/.../markets/.../radnet-nasdaqrdnt-q4-earni...",
+        "htmlFormattedUrl": "https://www.theglobeandmail.com/.../<b>markets</b>/.../radnet-nasdaqrdnt-q4-earni...",
+        "pagemap": {
+          "metatags": [
+            {
+              "application-name": "The Globe and Mail",
+              "og:type": "website",
+              "twitter:card": "summary",
+              "twitter:title": "RadNet (NASDAQ:RDNT) Q4 Earnings: Leading The Testing & Diagnostics Services Pack",
+              "theme-color": "var(--color-red-500)",
+              "og:site_name": "The Globe and Mail",
+              "twitter:url": "https://www.theglobeandmail.com/investing/markets/stocks/RDNT-Q/pressreleases/999248/radnet-nasdaqrdnt-q4-earnings-leading-the-testing-diagnostics-services-pack/",
+              "og:title": "RadNet (NASDAQ:RDNT) Q4 Earnings: Leading The Testing & Diagnostics Services Pack",
+              "apple-mobile-web-app-title": "The Globe and Mail",
+              "arc-id": "5516a457705146d9c9030b2d4d1fdc12ade61e96a440741e91305e318e80a003",
+              "og:description": "Detailed price information for Radnet Inc (RDNT-Q) from The Globe and Mail including charting and trades.",
+              "twitter:image": "https://www.theglobeandmail.com/pf/resources/assets/meta/twitter-summary-240x240.png?d=861",
+              "fb:app_id": "392592514262068",
+              "twitter:image:alt": "The Globe and Mail",
+              "twitter:site": "@globeandmail",
+              "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+              "twitter:description": "Detailed price information for Radnet Inc (RDNT-Q) from The Globe and Mail including charting and trades.",
+              "og:locale": "en_GB",
+              "og:url": "https://www.theglobeandmail.com/investing/markets/stocks/RDNT-Q/pressreleases/999248/radnet-nasdaqrdnt-q4-earnings-leading-the-testing-diagnostics-services-pack/",
+              "article:opinion": "false"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Finance & economics | Latest news and analysis from The Economist",
+        "htmlTitle": "Finance &amp; economics | <b>Latest</b> news and analysis from The Economist",
+        "link": "https://www.economist.com/topics/finance-and-economics?after=d211d2f5-dc21-49e0-a014-6d88f81c7e1f",
+        "displayLink": "www.economist.com",
+        "snippet": "1 day ago ... ... consumer prices. 3 min read. Finance & economics. Chinese companies suffer an intense cash crunch in offshore bond markets. Spreads on junk bonds are at their ...",
+        "htmlSnippet": "1 day ago <b>...</b> ... <b>consumer</b> prices. 3 min read. Finance &amp; economics. Chinese <b>companies</b> suffer an intense cash crunch in offshore bond <b>markets</b>. Spreads on junk bonds are at their&nbsp;...",
+        "formattedUrl": "https://www.economist.com/topics/finance-and-economics?after...dc21...",
+        "htmlFormattedUrl": "https://www.economist.com/topics/finance-and-economics?after...dc21...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSESMq3fVNh4_X6ONECBO0ywod1FnQ3OVCiYyiB7XiS-lC6m34vhvGXRDmp&s",
+              "width": "225",
+              "height": "225"
+            }
+          ],
+          "thumbnail": [
+            {
+              "src": "https://www.economist.com/engassets/google-search-logo.png"
+            }
+          ],
+          "metatags": [
+            {
+              "application-name": "The Economist",
+              "og:image": "https://www.economist.com/engassets/google-search-logo.png",
+              "apple-itunes-app": "app-id=1239397626, app-argument=https://www.economist.com/topics/finance-and-economics",
+              "theme-color": "#E3120B",
+              "thumbnail": "https://www.economist.com/engassets/google-search-logo.png",
+              "og:type": "website",
+              "twitter:card": "summary_large_image",
+              "og:site_name": "The Economist",
+              "og:title": "Finance & economics | Latest news and analysis from The Economist",
+              "apple-mobile-web-app-title": "The Economist",
+              "og:description": "Explore our coverage of finance and economics, from stockmarkets and central banks to business trends and our opinions on stories of global significance",
+              "twitter:image": "https://www.economist.com/engassets/google-search-logo.png",
+              "fb:app_id": "193926687345108",
+              "twitter:site": "@TheEconomist",
+              "viewport": "width=device-width",
+              "twitter:description": "Explore our coverage of finance and economics, from stockmarkets and central banks to business trends and our opinions on stories of global significance",
+              "apple-mobile-web-app-capable": "yes",
+              "mobile-web-app-capable": "yes",
+              "og:url": "https://www.economist.com/topics/finance-and-economics"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://www.economist.com/engassets/google-search-logo.png"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -98,9 +98,9 @@ export const PERFORMANCE_CONFIG = {
       '/_astro/apple-touch-icon.DHIlG7dp.png'
     ],
     prefetch: [
-      '/blog',
-      '/news',
-      '/technology'
+      '/latest',
+      '/sections/news',
+      '/sections/tech'
     ]
   }
 };

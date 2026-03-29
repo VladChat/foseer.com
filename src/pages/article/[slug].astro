@@ -36,7 +36,12 @@ const coverImage = await resolvePostImage(post.image, post.slug);
 
 // Resolve image for metadata/OG/Twitter
 let ogImage: { url: string | ImageMetadata; width?: number; height?: number } | undefined = undefined;
-if (coverImage) {
+const metadataImageUrl = typeof post.imagePublicUrl === 'string' && post.imagePublicUrl.trim().startsWith('/')
+  ? post.imagePublicUrl.trim()
+  : null;
+if (metadataImageUrl) {
+  ogImage = { url: metadataImageUrl };
+} else if (coverImage) {
   if (typeof coverImage === 'string') {
     ogImage = { url: coverImage };
   } else {

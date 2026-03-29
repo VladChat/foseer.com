@@ -47,7 +47,11 @@ const metadataDefinition = () =>
     .optional();
 
 const postCollection = defineCollection({
-  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/post' }),
+  loader: glob({ 
+    pattern: ['*.md', '*.mdx'], 
+    base: 'src/data/post',
+    ignore: ['_quarantine/**'],
+  }),
   schema: z.object({
     publishDate: z.date().optional(),
     updateDate: z.date().optional(),
@@ -56,10 +60,51 @@ const postCollection = defineCollection({
     title: z.string(),
     excerpt: z.string().optional(),
     image: z.string().optional(),
+    imagePublicUrl: z.string().optional(),
 
+    // Legacy fields (kept for backward compatibility)
     category: z.string().optional(),
     tags: z.array(z.string()).optional(),
+    section: z.string().optional(),
+    subsection: z.string().optional(),
     author: z.string().optional(),
+    authorTitle: z.string().optional(),
+    sources: z.array(z.object({ title: z.string(), url: z.string().url(), domain: z.string().optional() })).optional(),
+
+    // Canonical taxonomy fields (new)
+    article_type: z.enum(['explainer', 'analysis', 'report']).optional(),
+    section_id: z.string().optional(),
+    topic_id: z.string().optional(),
+
+    metadata: metadataDefinition(),
+  }),
+});
+
+const previewPostCollection = defineCollection({
+  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/preview-post' }),
+  schema: z.object({
+    publishDate: z.date().optional(),
+    updateDate: z.date().optional(),
+    draft: z.boolean().optional(),
+
+    title: z.string(),
+    excerpt: z.string().optional(),
+    image: z.string().optional(),
+    imagePublicUrl: z.string().optional(),
+
+    // Legacy fields (kept for backward compatibility)
+    category: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+    section: z.string().optional(),
+    subsection: z.string().optional(),
+    author: z.string().optional(),
+    authorTitle: z.string().optional(),
+    sources: z.array(z.object({ title: z.string(), url: z.string().url(), domain: z.string().optional() })).optional(),
+
+    // Canonical taxonomy fields (new)
+    article_type: z.enum(['explainer', 'analysis', 'report']).optional(),
+    section_id: z.string().optional(),
+    topic_id: z.string().optional(),
 
     metadata: metadataDefinition(),
   }),
@@ -67,4 +112,5 @@ const postCollection = defineCollection({
 
 export const collections = {
   post: postCollection,
+  previewPost: previewPostCollection,
 };

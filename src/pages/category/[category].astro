@@ -1,0 +1,61 @@
+---
+// File: src/pages/category/[category].astro
+// Purpose: Static category landing page for article categories.
+
+import type { GetStaticPaths } from 'astro';
+import Layout from '~/layouts/PageLayout.astro';
+import EditorialStoryCard from '~/components/EditorialStoryCard.astro';
+import { fetchPosts } from '~/utils/blog';
+
+export const prerender = true;
+
+export const getStaticPaths = (async () => {
+  const posts = await fetchPosts();
+  const byCategory = new Map();
+
+  for (const post of posts) {
+    if (!post.category?.slug) continue;
+    const entry = byCategory.get(post.category.slug) || { category: post.category, posts: [] };
+    entry.posts.push(post);
+    byCategory.set(post.category.slug, entry);
+  }
+
+  return Array.from(byCategory.values()).map(({ category, posts }) => ({
+    params: { category: category.slug },
+    props: { category, posts },
+  }));
+}) satisfies GetStaticPaths;
+
+const { category, posts = [] } = Astro.props;
+
+const metadata = {
+  title: `${category?.title || 'Category'} — Foseer`,
+  description: `Coverage filed under ${category?.title || 'category'} on Foseer.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <header class="mb-12 border-b border-slate-200 dark:border-slate-700 pb-8">
+        <div class="mb-4 flex items-center gap-3 text-sm text-muted dark:text-slate-400">
+          <span class="text-primary dark:text-blue-400 font-semibold uppercase tracking-wide text-xs">Category</span>
+          <span class="text-gray-300 dark:text-slate-600">•</span>
+          <span class="text-sm font-medium text-gray-600 dark:text-slate-300">{posts.length} article{posts.length === 1 ? '' : 's'}</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white font-heading mb-4">{category?.title}</h1>
+        <p class="text-lg text-muted dark:text-slate-300 max-w-3xl leading-relaxed font-light">Coverage collected under the {category?.title} desk.</p>
+      </header>
+
+      {posts.length === 0 ? (
+        <p class="text-gray-600 dark:text-slate-400">No articles found for this category.</p>
+      ) : (
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post) => (
+            <EditorialStoryCard post={post} variant="compact" />
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>

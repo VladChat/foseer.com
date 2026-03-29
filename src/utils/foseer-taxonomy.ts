@@ -1,8 +1,8 @@
 // File: src/utils/foseer-taxonomy.ts
-// Purpose: Helper functions to read taxonomy and topic metrics and compute popularity scores for Foseer.
+// Purpose: Helper functions to read the compiled taxonomy registry and topic metrics for Foseer.
 
-import fs from "node:fs";
-import path from "node:path";
+import fs from 'node:fs';
+import path from 'node:path';
 
 export type TrendInfo = {
   score: number;
@@ -30,6 +30,7 @@ export type Section = {
   description?: string;
   trend: TrendInfo;
   topics: Topic[];
+  kind: 'core' | 'special';
 };
 
 export type Taxonomy = {
@@ -43,24 +44,76 @@ export type TopicMetrics = {
   engagement_score?: number;
 };
 
-type MetricsMap = Record<string, TopicMetrics>;
-
-type RawTaxonomy = {
-  sections?: Array<{
+export type TaxonomyRegistry = {
+  version: string;
+  generated_at: string;
+  source_path: string;
+  sections: Array<{
     id: string;
+    slug: string;
     label: string;
+    description?: string;
     kind?: string;
-    description?: string;
-    topics?: string[];
+    topic_ids?: string[];
   }>;
-  topics?: Array<{
+  topics: Array<{
     id: string;
+    slug: string;
     label: string;
     description?: string;
-    section?: string;
-    keywords?: string[];
+    section_id: string;
+    section_slug: string;
+    section_label: string;
+    aliases?: string[];
   }>;
+  sectionById?: Record<string, {
+    id: string;
+    slug: string;
+    label: string;
+    description?: string;
+    kind?: string;
+    topic_ids?: string[];
+  }>;
+  topicById?: Record<string, {
+    id: string;
+    slug: string;
+    label: string;
+    description?: string;
+    section_id: string;
+    section_slug: string;
+    section_label: string;
+    aliases?: string[];
+  }>;
+  topicsBySection?: Record<string, string[]>;
+  sectionByTopic?: Record<string, string>;
+  aliases?: {
+    sections?: Record<string, string>;
+    topics?: Record<string, string>;
+  };
+  legacyMappings?: {
+    topics?: Record<string, string>;
+    sections?: Record<string, string>;
+  };
+  navigation?: {
+    coreSectionIds?: string[];
+    footerBrowseIds?: string[];
+    headerTopicLimit?: number;
+  };
+  discoveryHints?: {
+    bySection?: Record<string, string[]>;
+    byTopic?: Record<string, string[]>;
+  };
+  imageHints?: {
+    bySection?: Record<string, string[]>;
+    byTopic?: Record<string, string[]>;
+  };
+  writerHints?: {
+    defaultArticleTypeBySection?: Record<string, 'report' | 'analysis' | 'explainer'>;
+    reportTopicIds?: string[];
+  };
 };
+
+type MetricsMap = Record<string, TopicMetrics>;
 
 type RawMetrics = {
   topics?: Record<string, { trendScore?: number; onsiteEngagementScore?: number }>;
@@ -76,18 +129,15 @@ export type TopicWithSection = Topic & {
 let cachedTaxonomy: Taxonomy | null = null;
 let cachedMetrics: MetricsMap | null = null;
 let cachedRawMetrics: RawMetrics | null = null;
+let cachedRegistry: TaxonomyRegistry | null = null;
 
 function loadJson<T>(filePath: string, fallback: T): T {
   try {
-    const raw = fs.readFileSync(filePath, "utf-8");
+    const raw = fs.readFileSync(filePath, 'utf-8');
     return JSON.parse(raw) as T;
   } catch {
     return fallback;
   }
-}
-
-function getDataDir(): string {
-  return path.resolve(process.cwd(), "src", "data");
 }
 
 function safeNumber(v: unknown, fallback = 0): number {
@@ -95,79 +145,84 @@ function safeNumber(v: unknown, fallback = 0): number {
   return Number.isFinite(n) ? n : fallback;
 }
 
-function makeTrend(score: number, lastSeen = ""): TrendInfo {
+function makeTrend(score: number, lastSeen = ''): TrendInfo {
   return {
     score: safeNumber(score, 0),
     last_seen: lastSeen,
   };
 }
 
-export function getRawMetrics(): RawMetrics {
-  if (cachedRawMetrics) return cachedRawMetrics;
-
-  const dataDir = getDataDir();
-  const metricsPath = path.join(dataDir, "topic-metrics.json");
-
-  const raw = loadJson<RawMetrics>(metricsPath, { topics: {}, sections: {} });
-  cachedRawMetrics = raw;
-  return raw;
+export function getTaxonomyRegistryPath(): string {
+  return path.resolve(process.cwd(), 'qwen-data', 'contracts', 'taxonomy-registry.json');
 }
 
-/**
- * Normalize src/data/taxonomy.json into runtime Taxonomy model
- */
+function getMetricsPath(): string {
+  return path.resolve(process.cwd(), 'src', 'data', 'topic-metrics.json');
+}
+
+export function getTaxonomyRegistry(): TaxonomyRegistry {
+  if (cachedRegistry) return cachedRegistry;
+  cachedRegistry = loadJson<TaxonomyRegistry>(getTaxonomyRegistryPath(), {
+    version: '0.0.0',
+    generated_at: '',
+    source_path: 'src/data/taxonomy.json',
+    sections: [],
+    topics: [],
+    sectionById: {},
+    topicById: {},
+    topicsBySection: {},
+    sectionByTopic: {},
+    aliases: { sections: {}, topics: {} },
+    legacyMappings: { topics: {}, sections: {} },
+    navigation: { coreSectionIds: [], footerBrowseIds: [], headerTopicLimit: 5 },
+  });
+  return cachedRegistry;
+}
+
+export function getRawMetrics(): RawMetrics {
+  if (cachedRawMetrics) return cachedRawMetrics;
+  cachedRawMetrics = loadJson<RawMetrics>(getMetricsPath(), { topics: {}, sections: {} });
+  return cachedRawMetrics;
+}
+
 export function getTaxonomy(): Taxonomy {
   if (cachedTaxonomy) return cachedTaxonomy;
 
-  const dataDir = getDataDir();
-  const taxonomyPath = path.join(dataDir, "taxonomy.json");
-
-  const rawTaxonomy = loadJson<RawTaxonomy>(taxonomyPath, {
-    sections: [],
-    topics: [],
-  });
-
+  const registry = getTaxonomyRegistry();
   const rawMetrics = getRawMetrics();
+  const topicsById = new Map(registry.topics.map((topic) => [topic.id, topic]));
 
-  const rawTopicsById = new Map<string, { id: string; label: string; description?: string; section?: string; keywords?: string[] }>();
-  for (const t of rawTaxonomy.topics ?? []) rawTopicsById.set(t.id, t);
-
-  const sections: Section[] = [];
-
-  for (const s of rawTaxonomy.sections ?? []) {
-    const sectionTrendScore = safeNumber(rawMetrics.sections?.[s.id]?.trendScore, 0);
-
-    const topics: Topic[] = [];
-    for (const topicId of s.topics ?? []) {
-      const rt = rawTopicsById.get(topicId);
-      if (!rt) continue;
-
+  const sections: Section[] = registry.sections.map((section) => {
+    const topics: Topic[] = (section.topic_ids || []).map((topicId) => {
+      const topic = topicsById.get(topicId);
       const topicTrendScore = safeNumber(rawMetrics.topics?.[topicId]?.trendScore, 0);
+      return topic
+        ? {
+            id: topic.id,
+            slug: topic.slug,
+            title: topic.label,
+            description: topic.description,
+            trend: makeTrend(topicTrendScore),
+          }
+        : null;
+    }).filter(Boolean) as Topic[];
 
-      topics.push({
-        id: rt.id,
-        slug: rt.id,
-        title: rt.label,
-        description: rt.description,
-        trend: makeTrend(topicTrendScore),
-      });
-    }
-
-    sections.push({
-      id: s.id,
-      slug: s.id,
-      title: s.label,
-      description: s.description,
+    const sectionTrendScore = safeNumber(rawMetrics.sections?.[section.id]?.trendScore, 0);
+    return {
+      id: section.id,
+      slug: section.slug,
+      title: section.label,
+      description: section.description,
       trend: makeTrend(sectionTrendScore),
       topics,
-    });
-  }
+      kind: (section.kind as 'core' | 'special') || 'core',
+    };
+  });
 
   cachedTaxonomy = {
     sections,
-    updated_at: "",
+    updated_at: registry.generated_at || '',
   };
-
   return cachedTaxonomy;
 }
 
@@ -175,29 +230,22 @@ export function getMetrics(): MetricsMap {
   if (cachedMetrics) return cachedMetrics;
 
   const raw = getRawMetrics();
-  const m: MetricsMap = {};
-
-  for (const [topicId, v] of Object.entries(raw.topics ?? {})) {
-    m[topicId] = {
+  const metrics: MetricsMap = {};
+  for (const [topicId, value] of Object.entries(raw.topics || {})) {
+    metrics[topicId] = {
       views_7d: 0,
       views_30d: 0,
-      engagement_score: safeNumber(v.onsiteEngagementScore, 0),
+      engagement_score: safeNumber(value.onsiteEngagementScore, 0),
     };
   }
 
-  cachedMetrics = m;
-  return m;
+  cachedMetrics = metrics;
+  return cachedMetrics;
 }
 
 export function getTopicMetrics(topicId: string): TopicMetrics {
   const metrics = getMetrics();
-  return (
-    metrics[topicId] ?? {
-      views_7d: 0,
-      views_30d: 0,
-      engagement_score: 0,
-    }
-  );
+  return metrics[topicId] || { views_7d: 0, views_30d: 0, engagement_score: 0 };
 }
 
 export function getSections(): Section[] {
@@ -209,10 +257,8 @@ export function getSectionBySlug(slug: string): Section | undefined {
 }
 
 export function getTopicsFlat(): TopicWithSection[] {
-  const taxonomy = getTaxonomy();
   const topics: TopicWithSection[] = [];
-
-  for (const section of taxonomy.sections) {
+  for (const section of getTaxonomy().sections) {
     for (const topic of section.topics) {
       topics.push({
         ...topic,
@@ -222,7 +268,6 @@ export function getTopicsFlat(): TopicWithSection[] {
       });
     }
   }
-
   return topics;
 }
 
@@ -236,49 +281,30 @@ export function getCombinedScore(topic: TopicWithSection): number {
 export function getTopSections(limit = 6): Section[] {
   const sections = getSections();
   const topics = getTopicsFlat();
-
   const sectionScoreMap = new Map<string, number>();
 
   for (const section of sections) {
-    const sectionTopics = topics.filter((t) => t.sectionId === section.id);
-
+    const sectionTopics = topics.filter((topic) => topic.sectionId === section.id);
     if (sectionTopics.length === 0) {
       sectionScoreMap.set(section.id, section.trend?.score ?? 0);
       continue;
     }
-
-    const maxScore = Math.max(...sectionTopics.map((t) => getCombinedScore(t)));
-    sectionScoreMap.set(section.id, maxScore);
+    sectionScoreMap.set(section.id, Math.max(...sectionTopics.map((topic) => getCombinedScore(topic))));
   }
 
-  return [...sections]
-    .sort((a, b) => {
-      const sa = sectionScoreMap.get(a.id) ?? 0;
-      const sb = sectionScoreMap.get(b.id) ?? 0;
-      return sb - sa;
-    })
-    .slice(0, limit);
+  return [...sections].sort((a, b) => (sectionScoreMap.get(b.id) ?? 0) - (sectionScoreMap.get(a.id) ?? 0)).slice(0, limit);
 }
 
 export function getTrendingTopics(limit = 8): TopicWithSection[] {
-  return [...getTopicsFlat()]
-    .sort((a, b) => getCombinedScore(b) - getCombinedScore(a))
-    .slice(0, limit);
+  return [...getTopicsFlat()].sort((a, b) => getCombinedScore(b) - getCombinedScore(a)).slice(0, limit);
 }
 
 export function getTopicsBySection(sectionId: string): TopicWithSection[] {
-  return getTopicsFlat().filter((t) => t.sectionId === sectionId);
+  return getTopicsFlat().filter((topic) => topic.sectionId === sectionId);
 }
 
-/**
- * Added for section/topic pages compatibility
- */
-export function getTopicBySlugs(
-  sectionSlug: string,
-  topicSlug: string
-): Topic | undefined {
+export function getTopicBySlugs(sectionSlug: string, topicSlug: string): Topic | undefined {
   const section = getSectionBySlug(sectionSlug);
   if (!section) return undefined;
-
   return section.topics.find((topic) => topic.slug === topicSlug);
 }

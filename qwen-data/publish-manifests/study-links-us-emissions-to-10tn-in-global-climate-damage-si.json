@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-28T23:37:36.297Z",
+  "event_id": "evt-2026-03-26-mental-health-research-us-sec",
+  "cluster_id": "evt-2026-03-26-mental-health-research-us-sec",
+  "article_type": "report",
+  "title": "Study links US emissions to $10tn in global climate damage since 1990",
+  "slug": "study-links-us-emissions-to-10tn-in-global-climate-damage-si",
+  "canonical_slug": "2026-03-28-study-links-us-emissions-to-10tn-in-global-climate-damage-si",
+  "expected_url": "/article/2026-03-28-study-links-us-emissions-to-10tn-in-global-climate-damage-si",
+  "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-28-study-links-us-emissions-to-10tn-in-global-climate-damage-si.mdx",
+  "published_at": "2026-03-28T23:37:36.123Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "climate-extreme-weather",
+  "topic_label": "Climate & Extreme Weather",
+  "subsection": "Mental Health",
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/7903435/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/7903435/cover.jpg",
+    "source_url": "https://pixabay.com/photos/camera-video-cinema-photographer-7903435/",
+    "asset_key": "pixabay:7903435",
+    "alt_text": "Illustration for Study links US emissions to $10tn in global climate damage since 1990",
+    "selection_mode": "provider_download_new:pixabay:strong",
+    "query_used": "global US photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Public Health",
+    "Climate & Extreme Weather",
+    "United States"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "US has caused $10tn worth of climate damage since 1990, research finds",
+        "url": "https://theguardian.com/environment/2026/mar/25/us-climate-damage-research",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "ADHD medication may reduce later risk of psychosis, study finds",
+        "url": "https://www.nbcnews.com/health/mental-health/adhd-methylphenidate-ritalin-children-reduces-risk-psychosis-study-rcna264987",
+        "domain": "nbcnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "ADHD medication may reduce later risk of psychosis, study finds",
+          "url": "https://www.nbcnews.com/health/mental-health/adhd-methylphenidate-ritalin-children-reduces-risk-psychosis-study-rcna264987",
+          "overlap_ratio": 0.11,
+          "shared_tokens": [
+            "study"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "public-health",
+          "label": "Public Health",
+          "type": "topic"
+        },
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "type": "topic"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "climate-extreme-weather",
+        "topic_label": "Climate & Extreme Weather",
+        "supported": true,
+        "matched_aliases": [
+          "climate",
+          "climate damage",
+          "emissions",
+          "warming"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "global US photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "global"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

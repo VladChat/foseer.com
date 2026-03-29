@@ -1,47 +1,22 @@
 // File: src/navigation.ts
-// Purpose: Clean 5-section header for Foseer with dropdown categories.
+// Purpose: Site navigation derived from the compiled taxonomy registry.
 
-import { getPermalink, getBlogPermalink, getHomePermalink } from './utils/permalinks';
+import { buildHeaderNavigation, buildFooterNavigation } from './utils/taxonomy-navigation.js';
+import { getBlogPermalink, getHomePermalink } from './utils/permalinks.js';
+
+const headerNav = buildHeaderNavigation();
+const footerNav = buildFooterNavigation();
+
+console.log('[navigation] Header sections:', headerNav.map((entry) => entry.text).join(', '));
+console.log('[navigation] Footer coverage:', footerNav.coverageGroup.links.length, 'links');
+console.log('[navigation] Footer browse:', footerNav.browseGroup.links.length, 'links');
 
 export const headerData = {
-  links: [
-    {
-      text: 'News',
-      href: getPermalink('/sections/news'),
-      links: [
-        { text: 'U.S. Politics', href: getPermalink('/sections/news/us-politics') },
-        { text: 'Global Conflicts', href: getPermalink('/sections/news/global-conflicts') },
-      ],
-    },
-    {
-      text: 'Technology',
-      href: getPermalink('/sections/technology'),
-      links: [
-        { text: 'AI & Big Tech', href: getPermalink('/sections/technology/ai-big-tech') },
-        { text: 'Cybersecurity', href: getPermalink('/sections/technology/cybersecurity') },
-        { text: 'Tech & Gadgets', href: getPermalink('/sections/technology/tech-gadgets') },
-      ],
-    },
-    {
-      text: 'Business',
-      href: getPermalink('/sections/business-markets'),
-      links: [
-        { text: 'Stock Market & Economy', href: getPermalink('/sections/business-markets/stock-market-economy') },
-        { text: 'Crypto & Bitcoin', href: getPermalink('/sections/business-markets/crypto-bitcoin') },
-        { text: 'Personal Finance', href: getPermalink('/sections/business-markets/consumer-money-personal-finance') },
-      ],
-    },
-    {
-      text: 'Science',
-      href: getPermalink('/sections/science-innovation'),
-      links: [
-        { text: 'Climate & Weather', href: getPermalink('/sections/science-innovation/climate-extreme-weather') },
-        { text: 'Space & Astronomy', href: getPermalink('/sections/science-innovation/space-astronomy') },
-        { text: 'Health & Medicine', href: getPermalink('/sections/science-innovation/health-science') },
-      ],
-    },
-  ],
-
+  links: headerNav.map((item) => ({
+    text: item.text,
+    href: item.href,
+    links: item.links,
+  })),
   actions: [
     {
       text: 'Latest',
@@ -53,28 +28,36 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Coverage',
-      links: [
-        { text: 'News', href: getPermalink('/sections/news') },
-        { text: 'Business', href: getPermalink('/sections/business-markets') },
-        { text: 'Technology', href: getPermalink('/sections/technology') },
-        { text: 'Science', href: getPermalink('/sections/science-innovation') },
-      ],
+      title: footerNav.coverageGroup.title,
+      links: footerNav.coverageGroup.links.map((link) => ({
+        text: link.text,
+        href: link.href,
+      })),
     },
     {
-      title: 'Browse',
-      links: [
-        { text: 'Latest', href: getBlogPermalink() },
-        { text: 'Explainers', href: getPermalink('/sections/explainers') },
-      ],
+      title: footerNav.browseGroup.title,
+      links: footerNav.browseGroup.links.map((link) => ({
+        text: link.text,
+        href: link.href,
+      })),
     },
   ],
-
-  secondaryLinks: [
-    { text: 'Home', href: getHomePermalink() },
-  ],
-
-  socialLinks: [],
-
+  secondaryLinks: [{ text: 'Home', href: getHomePermalink() }],
+  socialNodes: [],
   footNote: '© Foseer. Reporting, context, and analysis.',
+};
+
+export const navigationTaxonomyInfo = {
+  coreSections: headerNav.map((item) => ({
+    id: item.sectionId,
+    label: item.text,
+    href: item.href,
+    topicCount: item.links?.length || 0,
+    kind: item.kind,
+  })),
+  specialSections: footerNav.browseGroup.links.slice(1).map((link) => ({
+    label: link.text,
+    href: link.href,
+  })),
+  generatedAt: new Date().toISOString(),
 };

@@ -1,0 +1,17 @@
+File: qwen-project-governance/qwen-plan-mode-prompt.txt
+Purpose: minimal plan-mode launcher prompt for the agent
+
+Project root:
+C:\Users\vladi\Documents\vcoding\projects\foseer.com
+
+Read these files completely and use them as the operating instructions for this task:
+C:\Users\vladi\Documents\vcoding\projects\foseer.com\qwen-project-governance\qwen-system-instructions.md
+C:\Users\vladi\Documents\vcoding\projects\foseer.com\qwen-project-governance\qwen-current-context.md
+C:\Users\vladi\Documents\vcoding\projects\foseer.com\qwen-project-governance\qwen-task-queue.md
+C:\Users\vladi\Documents\vcoding\projects\foseer.com\qwen-project-governance\qwen-operations-log.md
+C:\Users\vladi\Documents\vcoding\projects\foseer.com\qwen-project-governance\qwen-definition-of-done.md
+C:\Users\vladi\Documents\vcoding\projects\foseer.com\qwen-project-governance\how-to-use.md
+
+Inspect the current repository, verify the existing state from files instead of guessing, and return a concrete stage-by-stage execution plan that follows those instructions.
+
+Do not act yet. Only inspect, verify, and return the plan.

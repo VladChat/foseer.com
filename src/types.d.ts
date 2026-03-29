@@ -22,6 +22,8 @@ export interface Post {
   excerpt?: string;
   /**  */
   image?: ImageMetadata | string;
+  /** Public production-safe URL for social/metadata use. */
+  imagePublicUrl?: string;
   /** Optional caption for the featured image. */
   imageCaption?: string;
 
@@ -31,6 +33,8 @@ export interface Post {
   tags?: Taxonomy[];
   /**  */
   author?: string;
+  /** Optional source links shown in article footer. */
+  sources?: Array<{ title: string; url: string; domain?: string }>;
   /** Optional author title/role. */
   authorTitle?: string;
 
@@ -48,6 +52,18 @@ export interface Post {
   readingTime?: number;
   /** Optional view count for display. */
   views?: string;
+
+  /** Legacy visible section label (e.g., "News", "Tech") */
+  section?: string;
+  /** Legacy visible subsection label (e.g., "AI & Big Tech", "U.S. Politics") */
+  subsection?: string;
+
+  /** Canonical taxonomy: section ID (e.g., "news", "tech") */
+  section_id?: string;
+  /** Canonical taxonomy: topic/subsection ID (e.g., "ai-big-tech", "world-geopolitics") */
+  topic_id?: string;
+  /** Canonical taxonomy: article type (explainer | analysis | report) */
+  article_type?: 'explainer' | 'analysis' | 'report';
 }
 
 export interface Taxonomy {

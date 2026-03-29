@@ -1,0 +1,126 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-29T03:53:53.677Z",
+  "event_id": "evt-2026-03-27-sports-general-global",
+  "cluster_id": "evt-2026-03-27-sports-general-global",
+  "article_type": "report",
+  "title": "IOC Moves to Restrict Women’s Olympic Events to ‘Biological Females’",
+  "slug": "ioc-moves-to-restrict-women-s-olympic-events-to-biological-f",
+  "canonical_slug": "2026-03-29-ioc-moves-to-restrict-women-s-olympic-events-to-biological-f",
+  "expected_url": "/article/2026-03-29-ioc-moves-to-restrict-women-s-olympic-events-to-biological-f",
+  "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-29-ioc-moves-to-restrict-women-s-olympic-events-to-biological-f.mdx",
+  "published_at": "2026-03-29T03:53:53.674Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "events-tournaments",
+  "topic_label": "Events & Tournaments",
+  "subsection": "Events & Tournaments",
+  "topics": [
+    "Events & Tournaments"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/7040298/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/7040298/cover.jpg",
+    "source_url": "https://pixabay.com/photos/tree-hill-nature-outdoors-travel-7040298/",
+    "asset_key": "pixabay:7040298",
+    "alt_text": "tree, hill, nature, outdoors, travel, exploration, olympic mountain, munich, tree, tree, tree, tree, tree",
+    "selection_mode": "provider_download_new:pixabay:strong",
+    "query_used": "Olympic Events photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Events & Tournaments",
+    "Olympics"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "IOC says women's Olympic events to be limited to 'biological females'",
+        "url": "https://www.nytimes.com/athletic/7148904/2026/03/26/olympics-transgender-ban-women/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Olympic committee bans trans athletes from women's events",
+        "url": "https://www.npr.org/2026/03/26/nx-s1-5762579/ioc-bans-trans-women-events-genetic-testing",
+        "domain": "npr.org"
+      },
+      {
+        "title": "International Olympics Committee Bans Trans Athletes from Women's Events",
+        "url": "https://www.breitbart.com/sports/2026/03/26/international-olympics-committee-bans-trans-athletes-from-womens-events/",
+        "domain": "breitbart.com"
+      },
+      {
+        "title": "Alert: Olympic Committee Steps up to Protect Women, Bans Trans Athletes from Female Events | The Gateway Pundit",
+        "url": "https://www.thegatewaypundit.com/2026/03/alert-olympic-committee-steps-protect-women-bans-trans/",
+        "domain": "thegatewaypundit.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "events-tournaments",
+          "label": "Events & Tournaments",
+          "type": "topic"
+        },
+        {
+          "slug": "olympics",
+          "label": "Olympics",
+          "type": "theme"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "events-tournaments",
+        "topic_label": "Events & Tournaments",
+        "supported": true,
+        "matched_aliases": [
+          "events",
+          "olympic",
+          "olympics",
+          "ioc"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Olympic Events photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "olympic",
+        "events"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

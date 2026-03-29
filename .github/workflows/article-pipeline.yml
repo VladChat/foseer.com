@@ -1,0 +1,83 @@
+name: Article Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_articles_per_run:
+        description: 'How many articles to attempt in one run (1-5)'
+        required: false
+        default: '1'
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  run-article-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/${{ github.run_id }}
+      QWEN_MAX_ARTICLES_PER_RUN: ${{ inputs.max_articles_per_run }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run canonical article pipeline
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          BRAVE_SEARCH_API_KEY: ${{ secrets.BRAVE_SEARCH_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          SEARCH_WEB_API: ${{ secrets.SEARCH_WEB_API }}
+          SEARCH_WEB_CX: ${{ secrets.SEARCH_WEB_CX }}
+          QWEN_API_RETRY_MAX_ATTEMPTS: '3'
+          QWEN_API_RETRY_BASE_DELAY_MS: '700'
+          QWEN_API_RETRY_MAX_DELAY_MS: '6000'
+        run: npm run article:auto
+
+      - name: Validate site build before persistence
+        run: npm run build
+
+      - name: Create publish pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: 'chore(content): publish generated article'
+          title: 'Publish generated article'
+          body: |
+            Automated publish output from the canonical qwen article pipeline.
+            Max articles requested: `${{ inputs.max_articles_per_run }}`
+          branch: automation/publish-${{ github.run_id }}
+          delete-branch: true
+          add-paths: |
+            src/data/post/**
+            src/assets/images/posts/**
+            src/assets/images/library/**
+            qwen-data/images/**
+            qwen-data/publish-manifests/**
+            qwen-data/events/**
+            qwen-data/quality-audits/**
+            qwen-data/writer-rotation-state.json
+
+      - name: Upload runtime artifacts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: article-pipeline-run-output
+          path: |
+            ${{ env.PIPELINE_RUNTIME_ROOT }}/run_outputs
+            ${{ env.PIPELINE_RUNTIME_ROOT }}/dry_run_artifacts
+            qwen-data/quality-audits/**
+          if-no-files-found: ignore

@@ -1,26 +1,25 @@
 ---
 // File: src/components/TopSections.astro
-// Purpose: Highlight the strongest sections from the Foseer taxonomy with a short list of topics.
+// Purpose: Display all core sections from the compiled Foseer taxonomy registry.
 
-import { getTopSections, getTopicsBySection } from "~/utils/foseer-taxonomy";
+import { getHomepageSections, getSectionTopics } from "~/utils/taxonomy-navigation";
 
-const sections = getTopSections(4);
+const sections = getHomepageSections();
 ---
 
 <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-950/60">
-  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <header class="mb-8 flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
       <div>
         <p class="text-sm font-semibold uppercase tracking-[0.08em] text-accent">
           Coverage areas
         </p>
         <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-3xl">
-          Main desks across the site
+          All editorial desks
         </h2>
       </div>
       <p class="max-w-xl text-sm text-slate-600 dark:text-slate-400">
-        Each section groups together ongoing coverage, explainers, and recurring themes so readers
-        can follow a subject with more continuity.
+        Each section groups together ongoing coverage and recurring themes so readers can follow a subject with more continuity. Browse by desk or dive into specific topics.
       </p>
     </header>
 
@@ -29,9 +28,9 @@ const sections = getTopSections(4);
         No sections are available yet. Add taxonomy data to start structuring the site.
       </p>
     ) : (
-      <div class="grid gap-6 md:grid-cols-2">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {sections.map((section) => {
-          const topics = getTopicsBySection(section.id).slice(0, 4);
+          const topics = getSectionTopics(section.id).slice(0, 4);
           return (
             <div
               class="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900"
@@ -40,9 +39,6 @@ const sections = getTopSections(4);
                 <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50">
                   {section.title}
                 </h3>
-                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-300">
-                  Editorial desk
-                </span>
               </div>
 
               {section.description && (
@@ -56,7 +52,7 @@ const sections = getTopSections(4);
                   {topics.map((topic) => (
                     <li>
                       <a
-                        href={`/sections/${topic.sectionSlug}/${topic.slug}/`}
+                        href={`/sections/${topic.sectionSlug}/${topic.slug}`}
                         class="inline-flex items-center gap-1 text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300"
                       >
                         <span class="h-1.5 w-1.5 rounded-full bg-sky-500" />
@@ -69,7 +65,7 @@ const sections = getTopSections(4);
 
               <div class="mt-auto pt-2">
                 <a
-                  href={`/sections/${section.slug}/`}
+                  href={`/sections/${section.slug}`}
                   class="inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300"
                 >
                   <span>View section</span>

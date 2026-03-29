@@ -1,0 +1,562 @@
+{
+  "timestamp": 1774738422624,
+  "ttl_hours": 8,
+  "provider": "google",
+  "query_hash": "w2su2m",
+  "data": {
+    "kind": "customsearch#search",
+    "url": {
+      "type": "application/json",
+      "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    },
+    "queries": {
+      "request": [
+        {
+          "title": "Google Custom Search - (site:cbsnews.com OR site:nbcnews.com OR site:cnn.com OR site:nikkei.com OR site:asia.nikkei.com OR site:theglobeandmail.com OR site:economist.com OR site:sec.gov OR site:fda.gov OR site:whitehouse.gov OR site:justice.gov OR site:uscourts.gov OR site:supremecourt.gov OR site:congress.gov OR site:federalregister.gov OR site:govinfo.gov) (markets OR economy OR policy OR ai OR cybersecurity OR health OR conflict) (breaking news public affairs law climate world events)",
+          "totalResults": "387",
+          "searchTerms": "(site:cbsnews.com OR site:nbcnews.com OR site:cnn.com OR site:nikkei.com OR site:asia.nikkei.com OR site:theglobeandmail.com OR site:economist.com OR site:sec.gov OR site:fda.gov OR site:whitehouse.gov OR site:justice.gov OR site:uscourts.gov OR site:supremecourt.gov OR site:congress.gov OR site:federalregister.gov OR site:govinfo.gov) (markets OR economy OR policy OR ai OR cybersecurity OR health OR conflict) (breaking news public affairs law climate world events)",
+          "count": 10,
+          "startIndex": 1,
+          "inputEncoding": "utf8",
+          "outputEncoding": "utf8",
+          "safe": "off",
+          "cx": "f508d19f8630d4015",
+          "dateRestrict": "d2"
+        }
+      ],
+      "nextPage": [
+        {
+          "title": "Google Custom Search - (site:cbsnews.com OR site:nbcnews.com OR site:cnn.com OR site:nikkei.com OR site:asia.nikkei.com OR site:theglobeandmail.com OR site:economist.com OR site:sec.gov OR site:fda.gov OR site:whitehouse.gov OR site:justice.gov OR site:uscourts.gov OR site:supremecourt.gov OR site:congress.gov OR site:federalregister.gov OR site:govinfo.gov) (markets OR economy OR policy OR ai OR cybersecurity OR health OR conflict) (breaking news public affairs law climate world events)",
+          "totalResults": "387",
+          "searchTerms": "(site:cbsnews.com OR site:nbcnews.com OR site:cnn.com OR site:nikkei.com OR site:asia.nikkei.com OR site:theglobeandmail.com OR site:economist.com OR site:sec.gov OR site:fda.gov OR site:whitehouse.gov OR site:justice.gov OR site:uscourts.gov OR site:supremecourt.gov OR site:congress.gov OR site:federalregister.gov OR site:govinfo.gov) (markets OR economy OR policy OR ai OR cybersecurity OR health OR conflict) (breaking news public affairs law climate world events)",
+          "count": 10,
+          "startIndex": 11,
+          "inputEncoding": "utf8",
+          "outputEncoding": "utf8",
+          "safe": "off",
+          "cx": "f508d19f8630d4015",
+          "dateRestrict": "d2"
+        }
+      ]
+    },
+    "context": {
+      "title": "blog.equalle.com Web Search"
+    },
+    "searchInformation": {
+      "searchTime": 0.51787,
+      "formattedSearchTime": "0.52",
+      "totalResults": "387",
+      "formattedTotalResults": "387"
+    },
+    "items": [
+      {
+        "kind": "customsearch#result",
+        "title": "Search for FDA Guidance Documents",
+        "htmlTitle": "Search for FDA Guidance Documents",
+        "link": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents",
+        "displayLink": "www.fda.gov",
+        "snippet": "2 days ago ... The .gov means it's official. Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you're on a federal ...",
+        "htmlSnippet": "2 days ago <b>...</b> The .gov means it&#39;s official. Federal <b>government</b> websites often end in .gov or .mil. Before sharing sensitive information, make sure you&#39;re on a federal&nbsp;...",
+        "formattedUrl": "https://www.fda.gov/regulatory.../search-fda-guidance-documents",
+        "htmlFormattedUrl": "https://www.fda.gov/regulatory.../search-fda-guidance-documents",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8PwCSyBEqPFXCQR3_z9KNFB4UkPiqQPUzKE0Ck8igX_6L91A2U02b23k&s",
+              "width": "300",
+              "height": "168"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://www.fda.gov/themes/custom/preview/img/FDA-Social-Graphic.png",
+              "og:type": "Article",
+              "article:published_time": "Wed, 02/11/2026 - 08:58",
+              "twitter:card": "summary_large_image",
+              "twitter:title": "Search for FDA Guidance Documents",
+              "og:site_name": "U.S. Food and Drug Administration",
+              "handheldfriendly": "true",
+              "dcterms.title": "Search for FDA Guidance Documents",
+              "og:title": "Search for FDA Guidance Documents",
+              "dcterms.creator": "Office of the Commissioner",
+              "dcterms.description": "Search for official FDA guidance documents and other regulatory guidance.",
+              "og:updated_time": "Mon, 02/02/2026 - 00:00",
+              "og:description": "Search for official FDA guidance documents and other regulatory guidance for all topics",
+              "twitter:creator": "@US_FDA",
+              "twitter:image": "https://www.fda.gov/themes/custom/preview/img/FDA-Social-Graphic.png",
+              "twitter:site": "@US_FDA",
+              "dcterms.source": "FDA",
+              "article:modified_time": "Mon, 02/02/2026 - 00:00",
+              "viewport": "width=device-width, initial-scale=1.0",
+              "dcterms.publisher": "FDA",
+              "twitter:description": "Search for official FDA guidance documents and other regulatory guidance for all topics",
+              "mobileoptimized": "width",
+              "og:url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://www.fda.gov/themes/custom/preview/img/FDA-Social-Graphic.png"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Federal Register :: Home - Monday, March 30th",
+        "htmlTitle": "Federal Register :: Home - Monday, March 30th",
+        "link": "https://www.federalregister.gov/",
+        "displayLink": "www.federalregister.gov",
+        "snippet": "2 days ago ... Search Federal Register Documents · Popular Documents · Presidential Documents · Using FederalRegister.Gov view · Recent Site Updates view.",
+        "htmlSnippet": "2 days ago <b>...</b> Search Federal Register Documents &middot; Popular Documents &middot; Presidential Documents &middot; Using FederalRegister.Gov view &middot; <b>Recent</b> Site Updates view.",
+        "formattedUrl": "https://www.federalregister.gov/",
+        "htmlFormattedUrl": "https://www.federalregister.gov/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyoM5PYH4GhWDdaZ8dYnYt7QDiTgpVc_hTJvnYht4Bk5ert4eDlW7z9nk&s",
+              "width": "458",
+              "height": "110"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://www.federalregister.gov/assets/open_graph_site_banner.png",
+              "og:image:width": "832",
+              "og:site_name": "Federal Register",
+              "og:title": "Home - Monday, March 30th",
+              "og:image:height": "200",
+              "medium": "news",
+              "title": "Home - Monday, March 30th",
+              "csrf-param": "authenticity_token",
+              "og:description": "Search, browse and learn about the Federal Register. Federal Register 2.0 is the unofficial daily publication for rules, proposed rules, and notices of Federal agencies and organizations, as well as executive orders and other presidential documents.",
+              "viewport": "initial-scale=1.0",
+              "csrf-token": "2bqFFsWMbMyVuqsIAPxcQ8qxtwmiuFqxp_30AFpZpTAeZX1ZJxOaO7iOSg6vezSpPIIt0FOi-eqNcSS1EIs6dA",
+              "og:url": "https://www.federalregister.gov/",
+              "format-detection": "telephone=no"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://www.federalregister.gov/assets/open_graph_site_banner.png"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "March 26, 2026 – Trump administration news | CNN Politics",
+        "htmlTitle": "March 26, 2026 – Trump <b>administration news</b> | CNN Politics",
+        "link": "https://www.cnn.com/2026/03/26/politics/live-news/trump-administration-latest-news",
+        "displayLink": "www.cnn.com",
+        "snippet": "2 days ago ... They, along with other TSA employees, have been working without pay since DHS funding lapsed on February 14, prompting a partial government shutdown. Nearly 500 ...",
+        "htmlSnippet": "2 days ago <b>...</b> They, along with other TSA employees, have been working without pay since DHS funding lapsed on February 14, prompting a partial <b>government</b> shutdown. Nearly 500&nbsp;...",
+        "formattedUrl": "https://www.cnn.com/2026/03/26/...news/trump-administration-latest-news",
+        "htmlFormattedUrl": "https://www.cnn.com/2026/03/26/...<b>news</b>/trump-administration-latest-<b>news</b>",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTs99-O0hAVHlf2i62TH0-BmpGkju4ufTabzz63Jle7YepmpBWxKK9G-Q&s",
+              "width": "300",
+              "height": "168"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://media.cnn.com/api/v1/images/stellar/prod/06-ap26083695852532.jpg?c=16x9&q=w_800,c_fill",
+              "twitter:title": "March 26, 2026 – Trump administration news | CNN Politics",
+              "og:type": "website",
+              "twitter:card": "summary_large_image",
+              "article:published_time": "2026-03-26T13:31:25.315Z",
+              "og:site_name": "CNN",
+              "author": "Kaitlan Collins, Tami Luhby, Morgan Rimmer, Piper Hudspeth Blackburn, Aleena Fayaz, Emma Tucker, Devon M. Sayers, Samantha Waldenberg, Elise Hammond, Lauren Fox, Betsy Klein, Ted  Barrett, Annie Grayer, Kylie Atwood, Maureen Chowdhury, David Goldman, Kaanita Iyer, Sarah Ferris, Alison Main, Aileen Graef, Alejandra Jaramillo, Ariel Edwards-Levy",
+              "og:title": "March 26, 2026 – Trump administration news | CNN Politics",
+              "meta-section": "politics",
+              "type": "live-story",
+              "og:description": "President Donald Trump will hold the 11th Cabinet meeting of his second term, the White House said.",
+              "twitter:image": "https://media.cnn.com/api/v1/images/stellar/prod/06-ap26083695852532.jpg?c=16x9&q=w_800,c_fill",
+              "article:publisher": "https://www.facebook.com/CNN",
+              "fb:app_id": "80401312489",
+              "twitter:site": "@cnnpolitics",
+              "article:modified_time": "2026-03-27T06:30:50.305Z",
+              "viewport": "width=device-width,initial-scale=1,shrink-to-fit=no",
+              "twitter:description": "President Donald Trump will hold the 11th Cabinet meeting of his second term, the White House said.",
+              "template_type": "article_livestory",
+              "meta-branding": "live-story-v2",
+              "theme": "politics",
+              "og:url": "https://www.cnn.com/2026/03/26/politics/live-news/trump-administration-latest-news"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://media.cnn.com/api/v1/images/stellar/prod/06-ap26083695852532.jpg?c=16x9&q=w_800,c_fill"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "2026 Donald J. Trump Executive Orders - Federal Register",
+        "htmlTitle": "2026 Donald J. Trump Executive Orders - Federal Register",
+        "link": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
+        "displayLink": "www.federalregister.gov",
+        "snippet": "22 hours ago ... Once received, OFR gives presidential documents priority processing and documents will appear on public inspection the business day before publication. These 26 ...",
+        "htmlSnippet": "22 hours ago <b>...</b> Once received, OFR gives presidential documents priority processing and documents will appear on <b>public</b> inspection the business day before publication. These 26&nbsp;...",
+        "formattedUrl": "https://www.federalregister.gov/presidential-documents/executive.../2026",
+        "htmlFormattedUrl": "https://www.federalregister.gov/presidential-documents/executive.../2026",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyoM5PYH4GhWDdaZ8dYnYt7QDiTgpVc_hTJvnYht4Bk5ert4eDlW7z9nk&s",
+              "width": "458",
+              "height": "110"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://www.federalregister.gov/assets/open_graph_site_banner.png",
+              "og:image:width": "832",
+              "og:site_name": "Federal Register",
+              "og:title": "Executive Orders",
+              "og:image:height": "200",
+              "medium": "news",
+              "title": "Executive Orders",
+              "csrf-param": "authenticity_token",
+              "og:description": "Disposition Tables contain information about Presidential Documents beginning with those signed by Franklin D. Roosevelt and are arranged according to Presidential administration and year of signature. \n\n The tables are compiled and maintained by the Office of the Federal Register editors.",
+              "viewport": "initial-scale=1.0",
+              "csrf-token": "ga-fBOJU5SSJuvRujR8dz0haF_-cF4bVM6hyR49UsCk_szMVoQ2-Z7zUooDPjOsgMOMreAPXG-2FpyKmG1224g",
+              "og:url": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
+              "format-detection": "telephone=no"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://www.federalregister.gov/assets/open_graph_site_banner.png"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Attorney General News | United States Department of Justice",
+        "htmlTitle": "Attorney General <b>News</b> | United States Department of Justice",
+        "link": "https://www.justice.gov/ag/news",
+        "displayLink": "www.justice.gov",
+        "snippet": "2 days ago ... Have a question about Government Services? Contact USA.gov.",
+        "htmlSnippet": "2 days ago <b>...</b> Have a question about <b>Government</b> Services? Contact USA.gov.",
+        "formattedUrl": "https://www.justice.gov/ag/news",
+        "htmlFormattedUrl": "https://www.justice.gov/ag/<b>news</b>",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9ahcrovg5IufehgIQ1IksZQWRb6cd4xsJEsDDbuaBZFHUv_iha62nOto&s",
+              "width": "299",
+              "height": "168"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png",
+              "og:type": "article",
+              "article:published_time": "2014-09-10T11:47:40-04:00",
+              "twitter:card": "summary_large_image",
+              "article:modified_time": "2025-12-12T13:05:43-05:00",
+              "handheldfriendly": "true",
+              "viewport": "width=device-width, initial-scale=1.0",
+              "og:title": "Attorney General News",
+              "mobileoptimized": "width",
+              "twitter:image": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Live updates: 'No Kings' protests across the US rally against Trump ...",
+        "htmlTitle": "Live updates: &#39;No Kings&#39; protests across the US rally against Trump ...",
+        "link": "https://www.cnn.com/2026/03/28/us/live-news/no-kings-protests-03-28-26",
+        "displayLink": "www.cnn.com",
+        "snippet": "1 hour ago ... 'No Kings' protests: Large crowds attend nationwide rallies against the Trump administration. A marquee event is underway in Minnesota and protesters are ...",
+        "htmlSnippet": "1 hour ago <b>...</b> &#39;No Kings&#39; protests: Large crowds attend nationwide rallies against the Trump <b>administration</b>. A marquee <b>event</b> is underway in Minnesota and protesters are&nbsp;...",
+        "formattedUrl": "https://www.cnn.com/2026/03/28/us/live-news/no-kings-protests-03-28-26",
+        "htmlFormattedUrl": "https://www.cnn.com/2026/03/28/us/live-<b>news</b>/no-kings-protests-03-28-26",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2GJJoYHuPkyOjC9t_oo8ajTNBJBquopPfYYvYr-d9LqUWyOhVxoio-ZZ2&s",
+              "width": "300",
+              "height": "168"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://media.cnn.com/api/v1/images/stellar/prod/2026-03-28t161718z-840871205-rc2sdkamhk56-rtrmadp-3-usa-trump-protests.JPG?c=16x9&q=w_800,c_fill",
+              "twitter:title": "Live updates: ‘No Kings’ protests across the US rally against Trump administration | CNN",
+              "og:type": "website",
+              "twitter:card": "summary_large_image",
+              "article:published_time": "2026-03-28T12:30:19.921Z",
+              "og:site_name": "CNN",
+              "author": "Elise Hammond, David Williams, Aditi Sangal, Tori B. Powell, Veronica  Miracle, Graham Hurley, Zoe Sottile, Shimon Prokupecz, Carolyn Sung, Nic Anderson, Rebekah Riess, Alisha Ebrahimji, Chris Youd, Dalia Faheid, Sophia Peyser, Donie O'Sullivan, Danya Gainor, Nina Giraldo",
+              "og:title": "Live updates: ‘No Kings’ protests across the US rally against Trump administration | CNN",
+              "meta-section": "us",
+              "type": "live-story",
+              "og:description": "Attendees at thousands of “No Kings” protests across the country are rallying against President Donald Trump’s administration today. Follow for live updates.",
+              "twitter:image": "https://media.cnn.com/api/v1/images/stellar/prod/2026-03-28t161718z-840871205-rc2sdkamhk56-rtrmadp-3-usa-trump-protests.JPG?c=16x9&q=w_800,c_fill",
+              "article:publisher": "https://www.facebook.com/CNN",
+              "fb:app_id": "80401312489",
+              "twitter:site": "@CNN",
+              "article:modified_time": "2026-03-28T21:29:32.803Z",
+              "viewport": "width=device-width,initial-scale=1,shrink-to-fit=no",
+              "twitter:description": "Attendees at thousands of “No Kings” protests across the country are rallying against President Donald Trump’s administration today. Follow for live updates.",
+              "template_type": "article_livestory",
+              "meta-branding": "live-story-v2",
+              "theme": "us",
+              "og:url": "https://www.cnn.com/2026/03/28/us/live-news/no-kings-protests-03-28-26"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://media.cnn.com/api/v1/images/stellar/prod/2026-03-28t161718z-840871205-rc2sdkamhk56-rtrmadp-3-usa-trump-protests.JPG?c=16x9&q=w_800,c_fill"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Western District of New York | News - Department of Justice",
+        "htmlTitle": "Western District of New York | <b>News</b> - Department of Justice",
+        "link": "https://www.justice.gov/usao-wdny/pr",
+        "displayLink": "www.justice.gov",
+        "snippet": "2 days ago ... Dunkirk man pleads guilty to theft of government funds involving COVID-19 fraud. U.S. Attorney Michael DiGiacomo announced today that Jesus Ramos aka Manny, 42, ...",
+        "htmlSnippet": "2 days ago <b>...</b> Dunkirk man pleads guilty to theft of <b>government</b> funds involving COVID-19 fraud. U.S. Attorney Michael DiGiacomo announced today that Jesus Ramos aka Manny, 42,&nbsp;...",
+        "formattedUrl": "https://www.justice.gov/usao-wdny/pr",
+        "htmlFormattedUrl": "https://www.justice.gov/usao-wdny/pr",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9ahcrovg5IufehgIQ1IksZQWRb6cd4xsJEsDDbuaBZFHUv_iha62nOto&s",
+              "width": "299",
+              "height": "168"
+            }
+          ],
+          "metatags": [
+            {
+              "og:image": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png",
+              "og:type": "article",
+              "article:published_time": "2014-11-19T05:54:51-05:00",
+              "twitter:card": "summary_large_image",
+              "article:modified_time": "2023-07-03T10:51:11-04:00",
+              "handheldfriendly": "true",
+              "viewport": "width=device-width, initial-scale=1.0",
+              "og:title": "News",
+              "mobileoptimized": "width",
+              "twitter:image": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Science - NBC News",
+        "htmlTitle": "Science - NBC News",
+        "link": "https://www.nbcnews.com/science",
+        "displayLink": "www.nbcnews.com",
+        "snippet": "1 day ago ... Find the latest science news articles, photos and videos covering space, the environment, human development and more on NBCNews.com.",
+        "htmlSnippet": "1 day ago <b>...</b> Find the <b>latest</b> science <b>news</b> articles, photos and videos covering space, the <b>environment</b>, human development and more on NBCNews.com.",
+        "formattedUrl": "https://www.nbcnews.com/science",
+        "htmlFormattedUrl": "https://www.nbc<b>news</b>.com/science",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwNkGzJBUygYGPF0RlTdK9V1UfRBt_RB8teWOefOdCOl1pnsQBPL9mzP0&s",
+              "width": "275",
+              "height": "183"
+            }
+          ],
+          "thumbnail": [
+            {
+              "src": "https://media2.s-nbcnews.com/j/newscms/2020_27/3393335/science_dfcfcfcb5559c96e3677d3339926baca.social_share_1024x768_scale.jpg"
+            }
+          ],
+          "metatags": [
+            {
+              "msapplication-config": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/nbcnews/all-other-sizes-PNG.ico/browserconfig.xml",
+              "og:image": "https://media2.s-nbcnews.com/j/newscms/2020_27/3393335/science_dfcfcfcb5559c96e3677d3339926baca.nbcnews-fp-1200-630.jpg",
+              "thumbnail": "https://media2.s-nbcnews.com/j/newscms/2020_27/3393335/science_dfcfcfcb5559c96e3677d3339926baca.social_share_1024x768_scale.jpg",
+              "og:image:width": "1200",
+              "og:type": "website",
+              "twitter:title": "Science News: Breaking News on Scientific Advances, Global Warming, Vaccines, Artificial Intelligence & More",
+              "twitter:card": "summary_large_image",
+              "og:site_name": "NBC News",
+              "og:title": "Science News: Breaking News on Scientific Advances, Global Warming, Vaccines, Artificial Intelligence & More",
+              "og:image:height": "630",
+              "fb:pages": "155869377766434",
+              "twitter:creator": "NBCNews",
+              "og:description": "Find the latest science news articles, photos and videos covering space, the environment, human development and more on NBCNews.com.",
+              "twitter:image": "https://media2.s-nbcnews.com/j/newscms/2020_27/3393335/science_dfcfcfcb5559c96e3677d3339926baca.nbcnews-fp-1024-512.jpg",
+              "twitter:image:src": "https://media2.s-nbcnews.com/j/newscms/2020_27/3393335/science_dfcfcfcb5559c96e3677d3339926baca.nbcnews-fp-1024-512.jpg",
+              "branch:deeplink:unibrow": "Science News",
+              "fb:app_id": "143643636297368",
+              "twitter:site": "NBCNews",
+              "viewport": "width=device-width, initial-scale=1, user-scalable=yes",
+              "twitter:description": "Find the latest science news articles, photos and videos covering space, the environment, human development and more on NBCNews.com.",
+              "og:locale": "en_US",
+              "og:url": "https://www.nbcnews.com/science"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://media-cldnry.s-nbcnews.com/image/upload/t_focal-762x508,f_auto,q_auto:best/rockcms/2026-03/260327-heat-wave-colorado-mn-1545-c96d1f.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Nikkei Asia - Business, Politics, Economy and Tech News & Analysis",
+        "htmlTitle": "Nikkei Asia - Business, Politics, <b>Economy</b> and Tech <b>News</b> &amp; Analysis",
+        "link": "https://asia.nikkei.com/",
+        "displayLink": "asia.nikkei.com",
+        "snippet": "3 hours ago ... Japan, China, India and Southeast Asia news and expert analysis published by Nikkei, an award-winning independent provider of quality journalism.",
+        "htmlSnippet": "3 hours ago <b>...</b> Japan, China, India and Southeast Asia <b>news</b> and expert analysis published by Nikkei, an award-winning independent provider of quality journalism.",
+        "formattedUrl": "https://asia.nikkei.com/",
+        "htmlFormattedUrl": "https://asia.nikkei.com/",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWniGSQB03GW8CuBqmIE18m0JyjuVd_I62ie4TvYjXX7ImmlqKVD4-JEo&s",
+              "width": "225",
+              "height": "225"
+            }
+          ],
+          "metatags": [
+            {
+              "application-name": "Nikkei Asia",
+              "msapplication-starturl": "/",
+              "og:image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fasia.nikkei.com%2Fimages%2Ffrontend%2Ffavicons%2F630x630.png?width=630&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=auto&height=630",
+              "theme-color": "#0076bf",
+              "twitter:card": "summary",
+              "twitter:title": "Home",
+              "og:type": "website",
+              "og:image:width": "630",
+              "og:site_name": "Nikkei Asia",
+              "apple-mobile-web-app-title": "Nikkei Asia",
+              "og:image:height": "630",
+              "msapplication-navbutton-color": "#0076bf",
+              "og:description": "Japan, China, India and Southeast Asia news and expert analysis published by Nikkei, an award-winning independent provider of quality journalism.",
+              "twitter:image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fasia.nikkei.com%2Fimages%2Ffrontend%2Ffavicons%2F630x630.png?width=630&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=auto&height=630",
+              "next-head-count": "32",
+              "apple-mobile-web-app-status-bar-style": "black-translucent",
+              "twitter:site": "@NAR",
+              "viewport": "width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no",
+              "apple-mobile-web-app-capable": "yes",
+              "twitter:description": "Japan, China, India and Southeast Asia news and expert analysis published by Nikkei, an award-winning independent provider of quality journalism.",
+              "mobile-web-app-capable": "yes",
+              "og:locale": "en_GB",
+              "og:url": "https://asia.nikkei.com"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fasia.nikkei.com%2Fimages%2Ffrontend%2Ffavicons%2F630x630.png?width=630&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=auto&height=630"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "customsearch#result",
+        "title": "Israel says it killed Iran navy chief; Trump warns Tehran to 'get ...",
+        "htmlTitle": "Israel says it killed Iran navy chief; Trump warns Tehran to &#39;get ...",
+        "link": "https://www.nbcnews.com/world/iran/live-blog/live-updates-iran-war-trump-talks-israel-attacks-oil-hormuz-kharg-rcna265243",
+        "displayLink": "www.nbcnews.com",
+        "snippet": "2 days ago ... Follow NBC News for live updates on the latest about the war with Iran, peace talks, the energy crisis and a possible ground operation.",
+        "htmlSnippet": "2 days ago <b>...</b> Follow NBC <b>News</b> for live updates on the <b>latest</b> about the war with Iran, peace talks, the energy crisis and a possible ground operation.",
+        "formattedUrl": "https://www.nbcnews.com/world/.../live-updates-iran-war-trump-talks-israel...",
+        "htmlFormattedUrl": "https://www.nbc<b>news</b>.com/<b>world</b>/.../live-updates-iran-war-trump-talks-israel...",
+        "pagemap": {
+          "cse_thumbnail": [
+            {
+              "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz0rRzSBpi5zKx0FcTQa__Dd5ThrCEJNnatemILcAb4YvpbUvwCDISMlw&s",
+              "width": "275",
+              "height": "183"
+            }
+          ],
+          "thumbnail": [
+            {
+              "src": "https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1024x768_scale,f_auto,q_auto:best/rockcms/2026-03/260326-iran-rs-8a615a.jpg"
+            }
+          ],
+          "metatags": [
+            {
+              "twitter:card": "summary_large_image",
+              "twitter:creator": "NBCNews",
+              "branch:deeplink:authorname12": "Jennifer Jett",
+              "branch:deeplink:authorname11": "Rebecca Shabad",
+              "branch:deeplink:authorname10": "Jay Ganglani",
+              "branch:deeplink:authorname16": "The Associated Press",
+              "branch:deeplink:authorname15": "Matt Bradley",
+              "branch:deeplink:authorname14": "Steve Kopack",
+              "branch:deeplink:authorname13": "Kathryn Prociv",
+              "branch:deeplink:authorname19": "Omer Bekin",
+              "branch:deeplink:authorname18": "Richard Engel",
+              "branch:deeplink:authorname17": "Raf Sanchez",
+              "thumbnail": "https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1024x768_scale,f_auto,q_auto:best/rockcms/2026-03/260326-iran-rs-8a615a.jpg",
+              "twitter:image:src": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1024-512,f_auto,q_auto:best/rockcms/2026-03/260326-iran-rs-8a615a.jpg",
+              "branch:deeplink:authorthumbnail11": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2023_08/3595832/rebecca-shabad-byline-jm-1.jpg",
+              "branch:deeplink:authorthumbnail13": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2021_44/3517122/kathryn-prociv.jpg",
+              "branch:deeplink:authorthumbnail18": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2024_41/3665286/241010-engel-mb.jpg",
+              "branch:deeplink:authorthumbnail15": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2024_41/3665289/241010-matt-bradley-mb-1338.jpg",
+              "branch:deeplink:authorthumbnail14": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2024_51/3672748/steve_kopack.jpg",
+              "branch:deeplink:authorthumbnail17": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2026_05/3718031/250127_1x1_nbc_headshots_raf_sanchez_5366.jpg",
+              "branch:deeplink:authorthumbnail16": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2024_21/3649013/ap-live-blog-byline-image.png",
+              "branch:deeplink:authorname8": "Roisín Savage",
+              "msapplication-config": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/nbcnews/all-other-sizes-PNG.ico/browserconfig.xml",
+              "branch:deeplink:authorname9": "Yuliya Talmazan",
+              "branch:deeplink:authorname6": "Alexander Smith",
+              "branch:deeplink:authorname7": "Tara Prindiville",
+              "branch:deeplink:authorname4": "NBC News",
+              "branch:deeplink:authorname5": "Phil Helsel",
+              "branch:deeplink:authorname2": "F. Brinley Bruton",
+              "branch:deeplink:authorname3": "Daniel Arkin",
+              "branch:deeplink:authorthumbnail22": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2025_39/3705683/nl6zmg-g.jpeg",
+              "branch:deeplink:authorthumbnail21": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2025_26/3694246/250624-courtney-kube.jpg",
+              "branch:deeplink:authorthumbnail23": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2024_26/3653033/230226-jonathan-allen.jpg",
+              "twitter:site": "@NBCNews",
+              "twitter:title": "Israel says it killed Iran navy chief; Trump warns Tehran to 'get serious' in talks 'before it is too late'",
+              "branch:deeplink:authorthumbnail3": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2024_47/3669551/241118-daniel-arkin.jpg",
+              "branch:deeplink:authorthumbnail2": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2026_05/3718021/250127_1x1_nbc_headshots_brinley_bruton_5536.jpg",
+              "branch:deeplink:authorname23": "Jonathan Allen",
+              "branch:deeplink:authorname22": "Melanie Zanona",
+              "branch:deeplink:authorname21": "Courtney Kube",
+              "fb:app_id": "143643636297368",
+              "branch:deeplink:authorthumbnail9": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2026_05/3717927/250127_1x1_nbc_headshots_yuliya_talmazan_5413.jpg",
+              "branch:deeplink:authorname20": "Erin Tan",
+              "branch:deeplink:authorthumbnail8": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2026_05/3717942/250127_nbc_headshots_roisin_savage.jpg",
+              "viewport": "width=device-width,initial-scale=1,user-scalable=yes",
+              "branch:deeplink:authorthumbnail6": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2026_05/3717931/250127_1x1_nbc_headshots_alex_smith_5514.jpg",
+              "twitter:description": "Follow NBC News for live updates on the latest about the war with Iran, peace talks, the energy crisis and a possible ground operation.",
+              "branch:deeplink:authorthumbnail5": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2024_16/3645833/230208-phil-helsel-headshots-14-mjf.jpg",
+              "branch:deeplink:authorname24": "Gordon Lubold",
+              "branch:deeplink:authorname1": "NBC News"
+            }
+          ],
+          "cse_image": [
+            {
+              "src": "https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1024x768_scale,f_auto,q_auto:best/rockcms/2026-03/260326-iran-rs-8a615a.jpg"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

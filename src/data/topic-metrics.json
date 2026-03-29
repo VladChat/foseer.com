@@ -1,76 +1,124 @@
 {
   "topics": {
-    "ai-big-tech": {
-      "trendScore": 0.96,
-      "onsiteEngagementScore": 0.9
-    },
-    "stock-market-economy": {
-      "trendScore": 0.94,
-      "onsiteEngagementScore": 0.88
-    },
     "us-politics": {
       "trendScore": 0.9,
       "onsiteEngagementScore": 0.85
     },
-    "global-conflicts": {
+    "world-geopolitics": {
       "trendScore": 0.9,
       "onsiteEngagementScore": 0.83
+    },
+    "law-crime": {
+      "trendScore": 0.88,
+      "onsiteEngagementScore": 0.84
     },
     "climate-extreme-weather": {
       "trendScore": 0.88,
       "onsiteEngagementScore": 0.8
     },
-    "space-astronomy": {
-      "trendScore": 0.82,
-      "onsiteEngagementScore": 0.75
-    },
-    "tech-gadgets": {
-      "trendScore": 0.86,
-      "onsiteEngagementScore": 0.8
-    },
-    "crypto-bitcoin": {
+    "society-social-trends": {
       "trendScore": 0.84,
-      "onsiteEngagementScore": 0.78
-    },
-    "health-science": {
-      "trendScore": 0.83,
-      "onsiteEngagementScore": 0.76
-    },
-    "celebrities-entertainment": {
-      "trendScore": 0.85,
-      "onsiteEngagementScore": 0.82
-    },
-    "social-media-trends": {
-      "trendScore": 0.87,
-      "onsiteEngagementScore": 0.84
-    },
-    "transportation-evs": {
-      "trendScore": 0.8,
-      "onsiteEngagementScore": 0.72
-    },
-    "cybersecurity": {
-      "trendScore": 0.83,
-      "onsiteEngagementScore": 0.78
-    },
-    "housing-real-estate": {
-      "trendScore": 0.82,
-      "onsiteEngagementScore": 0.77
-    },
-    "consumer-money-personal-finance": {
-      "trendScore": 0.88,
-      "onsiteEngagementScore": 0.86
+      "onsiteEngagementScore": 0.79
     },
     "economy-markets": {
       "trendScore": 0.9,
       "onsiteEngagementScore": 0.82
     },
-    "big-issues-explained": {
-      "trendScore": 0.89,
+    "companies-deals": {
+      "trendScore": 0.91,
+      "onsiteEngagementScore": 0.84
+    },
+    "consumer-money": {
+      "trendScore": 0.88,
+      "onsiteEngagementScore": 0.86
+    },
+    "housing-real-estate": {
+      "trendScore": 0.82,
+      "onsiteEngagementScore": 0.77
+    },
+    "crypto-bitcoin": {
+      "trendScore": 0.84,
+      "onsiteEngagementScore": 0.78
+    },
+    "travel-consumer-issues": {
+      "trendScore": 0.82,
+      "onsiteEngagementScore": 0.76
+    },
+    "ai-big-tech": {
+      "trendScore": 0.96,
       "onsiteEngagementScore": 0.9
     },
-    "editorial-perspectives": {
+    "consumer-tech": {
+      "trendScore": 0.86,
+      "onsiteEngagementScore": 0.8
+    },
+    "cybersecurity": {
+      "trendScore": 0.83,
+      "onsiteEngagementScore": 0.78
+    },
+    "mobility-evs": {
       "trendScore": 0.8,
+      "onsiteEngagementScore": 0.72
+    },
+    "space-astronomy": {
+      "trendScore": 0.82,
+      "onsiteEngagementScore": 0.75
+    },
+    "enterprise-platforms": {
+      "trendScore": 0.84,
+      "onsiteEngagementScore": 0.79
+    },
+    "public-health": {
+      "trendScore": 0.83,
+      "onsiteEngagementScore": 0.76
+    },
+    "medical-research": {
+      "trendScore": 0.81,
+      "onsiteEngagementScore": 0.75
+    },
+    "pharma-fda": {
+      "trendScore": 0.82,
+      "onsiteEngagementScore": 0.77
+    },
+    "mental-health": {
+      "trendScore": 0.82,
+      "onsiteEngagementScore": 0.77
+    },
+    "wellness-fitness": {
+      "trendScore": 0.79,
+      "onsiteEngagementScore": 0.74
+    },
+    "major-leagues": {
+      "trendScore": 0.86,
+      "onsiteEngagementScore": 0.8
+    },
+    "events-tournaments": {
+      "trendScore": 0.87,
+      "onsiteEngagementScore": 0.82
+    },
+    "transfers-business": {
+      "trendScore": 0.84,
+      "onsiteEngagementScore": 0.79
+    },
+    "athletes-culture": {
+      "trendScore": 0.83,
+      "onsiteEngagementScore": 0.78
+    },
+    "film-tv": {
+      "trendScore": 0.85,
+      "onsiteEngagementScore": 0.82
+    },
+    "music-celebrities": {
+      "trendScore": 0.86,
       "onsiteEngagementScore": 0.83
+    },
+    "internet-culture": {
+      "trendScore": 0.87,
+      "onsiteEngagementScore": 0.84
+    },
+    "creators-platforms": {
+      "trendScore": 0.85,
+      "onsiteEngagementScore": 0.81
     }
   },
   "sections": {
@@ -78,29 +126,25 @@
       "trendScore": 0.9,
       "onsiteEngagementScore": 0.84
     },
-    "technology": {
-      "trendScore": 0.92,
-      "onsiteEngagementScore": 0.86
-    },
-    "business-markets": {
+    "business": {
       "trendScore": 0.89,
       "onsiteEngagementScore": 0.85
     },
-    "science-innovation": {
-      "trendScore": 0.85,
+    "tech": {
+      "trendScore": 0.92,
+      "onsiteEngagementScore": 0.86
+    },
+    "health": {
+      "trendScore": 0.84,
+      "onsiteEngagementScore": 0.78
+    },
+    "sports": {
+      "trendScore": 0.86,
       "onsiteEngagementScore": 0.8
     },
-    "culture-media": {
-      "trendScore": 0.86,
-      "onsiteEngagementScore": 0.83
-    },
-    "explainers": {
-      "trendScore": 0.9,
-      "onsiteEngagementScore": 0.9
-    },
-    "editorial-picks": {
-      "trendScore": 0.82,
-      "onsiteEngagementScore": 0.84
+    "culture": {
+      "trendScore": 0.85,
+      "onsiteEngagementScore": 0.82
     }
   }
 }
