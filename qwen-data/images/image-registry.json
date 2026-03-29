@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-03-29T22:03:15.401Z",
+  "updatedAt": "2026-03-29T22:44:18.166Z",
   "assets": [
     {
       "assetKey": "legacy:7-social-media-trends-you-need-to-know-in-2026",
@@ -6918,16 +6918,143 @@
       "sceneType": "portrait",
       "geoHints": [],
       "visualType": "photo",
-      "editorialFitScore": 100,
+      "editorialFitScore": 98,
       "firstSeenAt": "2026-03-29T22:03:15.401Z",
       "lastFetchedAt": "2026-03-29T22:03:15.401Z",
       "lastUsedAt": "2026-03-29T22:03:15.401Z",
       "useCount": 1,
       "status": "ready",
       "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pixabay:3644538",
+      "provider": "pixabay",
+      "providerAssetId": "3644538",
+      "sourcePageUrl": "https://pixabay.com/photos/card-trump-magician-3644538/",
+      "sourceDownloadUrl": "https://pixabay.com/get/g776f6b9985361e24ce6c9ead43e87a9f3c6f0815c622cfaf0b39c0d87b550a94d6c5c6ab9bd3da9b938e3a58948bae8a4421a253c0292705ec7a639bf984ff13_1280.jpg",
+      "authorName": "u_dg9pheol",
+      "authorUrl": "https://pixabay.com/users/u_dg9pheol-9978493/",
+      "license": "Pixabay Content License",
+      "altText": "card, trump, magician, magician, magician, magician, magician, magician",
+      "width": 7648,
+      "height": 5408,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pixabay/3644538/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pixabay/3644538/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pixabay/3644538/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "Business"
+      ],
+      "queryHistory": [
+        "Trump photo"
+      ],
+      "tags": [
+        "companies-deals",
+        "Unspecified",
+        "card",
+        "trump",
+        "magician"
+      ],
+      "topicHints": [
+        "companies-deals"
+      ],
+      "entityHints": [
+        "card",
+        "trump",
+        "magician",
+        "companies-deals",
+        "dg9pheol",
+        "https",
+        "pixabay"
+      ],
+      "sceneType": "office",
+      "geoHints": [],
+      "visualType": "photo",
+      "editorialFitScore": 98,
+      "firstSeenAt": "2026-03-29T22:43:59.248Z",
+      "lastFetchedAt": "2026-03-29T22:43:59.248Z",
+      "lastUsedAt": "2026-03-29T22:43:59.248Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pexels:33943415",
+      "provider": "pexels",
+      "providerAssetId": "33943415",
+      "sourcePageUrl": "https://www.pexels.com/photo/close-up-of-green-sweat-bee-on-yellow-flower-33943415/",
+      "sourceDownloadUrl": "https://images.pexels.com/photos/33943415/pexels-photo-33943415.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "authorName": "cassius cardoso",
+      "authorUrl": "https://www.pexels.com/@cassius-cardoso-927917183",
+      "license": "Pexels License",
+      "altText": "Macro photo of a vibrant green sweat bee (Agapostemon) on a yellow flower.",
+      "width": 5390,
+      "height": 4314,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pexels/33943415/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pexels/33943415/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pexels/33943415/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "Tech"
+      ],
+      "queryHistory": [
+        "AI photo"
+      ],
+      "tags": [
+        "ai-big-tech",
+        "tsa",
+        "Macro photo of a vibrant green sweat bee (Agapostemon) on a yellow flower."
+      ],
+      "topicHints": [
+        "ai-big-tech"
+      ],
+      "entityHints": [
+        "macro",
+        "vibrant",
+        "green",
+        "sweat",
+        "agapostemon",
+        "yellow",
+        "flower",
+        "tech"
+      ],
+      "sceneType": "office",
+      "geoHints": [],
+      "visualType": "photo",
+      "editorialFitScore": 100,
+      "firstSeenAt": "2026-03-29T22:44:18.166Z",
+      "lastFetchedAt": "2026-03-29T22:44:18.166Z",
+      "lastUsedAt": "2026-03-29T22:44:18.166Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
     }
   ],
   "usage": [
+    {
+      "assetKey": "pexels:33943415",
+      "articleSlug": "ai-s-soaring-power-use-puts-tech-climate-pledges-under-strai",
+      "articleTitle": "AI’s Soaring Power Use Puts Tech Climate Pledges Under Strain",
+      "section": "Tech",
+      "topicId": "ai-big-tech",
+      "query": "AI photo",
+      "usedAt": "2026-03-29T22:44:18.166Z",
+      "selectionMode": "provider_download_new:pexels:strong"
+    },
+    {
+      "assetKey": "pixabay:3644538",
+      "articleSlug": "why-maha-loyalists-say-trump-hasn-t-delivered-on-big-pharma",
+      "articleTitle": "Why MAHA Loyalists Say Trump Hasn’t Delivered on Big Pharma",
+      "section": "Business",
+      "topicId": "companies-deals",
+      "query": "Trump photo",
+      "usedAt": "2026-03-29T22:43:59.248Z",
+      "selectionMode": "provider_download_new:pixabay:strong"
+    },
     {
       "assetKey": "pexels:16461434",
       "articleSlug": "ai-s-soaring-power-use-puts-tech-climate-pledges-under-strai",
@@ -7592,6 +7719,6 @@
   "maintenance": {
     "lastLegacyImportAt": "2026-03-26T18:24:48.254Z",
     "lastCooldownBackfillAt": null,
-    "lastMetadataEnrichmentAt": "2026-03-29T22:03:14.873Z"
+    "lastMetadataEnrichmentAt": "2026-03-29T22:44:17.850Z"
   }
 }

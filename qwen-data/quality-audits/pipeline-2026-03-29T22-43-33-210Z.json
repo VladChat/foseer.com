@@ -1,0 +1,950 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-03-29T22-43-33-210Z",
+  "started_at": "2026-03-29T22:43:33.210Z",
+  "generated_at": "2026-03-29T22:44:18.237Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "discovery_candidates": 18,
+    "event_clusters": 5,
+    "briefs_normalized": 5,
+    "source_packs_assembled": 12,
+    "publishable_candidates": 2,
+    "selected_topic": "MAHA fans want action Trump hasn't delivered",
+    "selected_topics": [
+      "MAHA fans want action Trump hasn't delivered",
+      "Tech company climate goals under pressure due to AI energy demand"
+    ],
+    "articles_attempted": 2,
+    "articles_published": 2,
+    "news_pool": {
+      "total": 51,
+      "active": 38,
+      "published": 13,
+      "ready_candidates": 5
+    },
+    "cache_stats": {
+      "mode": "cache_only",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": false,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 0,
+        "gdelt": 0,
+        "google": 0
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          },
+          "gdelt": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          },
+          "google": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 45024,
+    "ready_candidates": 5,
+    "additional_ready_candidates": 5
+  },
+  "provider_stats": {
+    "mode": "cache_only",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": false,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 0,
+      "gdelt": 0,
+      "google": 0
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+      "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        },
+        "gdelt": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        },
+        "google": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14135
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6189
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 285008
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claimMapCreation": {
+      "success": true,
+      "error": null,
+      "total": 2,
+      "success_count": 2,
+      "failure_count": 0
+    },
+    "articleDrafting": {
+      "success": true,
+      "error": null,
+      "total": 2,
+      "success_count": 2,
+      "failure_count": 0
+    },
+    "imageSupport": {
+      "success": true,
+      "error": null,
+      "total": 2,
+      "success_count": 2,
+      "failure_count": 0
+    },
+    "publishing": {
+      "success": true,
+      "error": null,
+      "total": 2,
+      "success_count": 2,
+      "failure_count": 0
+    },
+    "localVerification": {
+      "success": true,
+      "error": null,
+      "total": 2,
+      "success_count": 2,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 2,
+    "editorial_pass_count": 2,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "Why MAHA Loyalists Say Trump Hasn’t Delivered on Big Pharma",
+      "slug": "why-maha-loyalists-say-trump-hasn-t-delivered-on-big-pharma",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "business",
+          "topic_id": null,
+          "placement_confidence": "medium",
+          "placement_reason": []
+        },
+        "metrics": {
+          "total_sources": 3,
+          "unique_domains": 2,
+          "direct_event_source_count": 3,
+          "independent_event_domains": 2,
+          "source_consistency_score": 9.2,
+          "strong_match_count": 2,
+          "core_source_count": 3,
+          "supporting_source_count": 0,
+          "background_source_count": 4,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 3,
+          "background": 6,
+          "signal_only": 3
+        },
+        "publish_ready_sources": [
+          {
+            "title": "MAHA fans want action Trump hasn't delivered",
+            "domain": "politico.com",
+            "url": "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "business"
+          },
+          {
+            "title": "MAHA fans want action Trump hasn't delivered",
+            "domain": "politico.com",
+            "url": "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "health"
+          },
+          {
+            "title": "2026 Donald J. Trump Executive Orders",
+            "domain": "federalregister.gov",
+            "url": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
+            "page_kind": "official_release",
+            "topic_id": null,
+            "section_id": "business"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "MAHA fans want action Trump hasn't delivered",
+            "domain": "politico.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": 4,
+            "source_quality_score": 44.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "MAHA fans want action Trump hasn't delivered",
+            "domain": "politico.com",
+            "page_kind": "article",
+            "same_event_score": 15,
+            "topic_fit_score": -2,
+            "source_quality_score": 29.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "2026 Donald J. Trump Executive Orders",
+            "domain": "federalregister.gov",
+            "page_kind": "official_release",
+            "same_event_score": 3,
+            "topic_fit_score": 4,
+            "source_quality_score": 14,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "The Quest to Revive a Frozen Brain",
+            "domain": "wsj.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Tether hires KPMG as auditor ahead of US expansion",
+            "domain": "ft.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Bloomberg Businessweek",
+            "domain": "bloomberg.com",
+            "page_kind": "analysis",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 7,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Cue Biopharma Announces CEO Transition",
+            "domain": "theglobeandmail.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Fannie Mae to Accept Crypto-Backed Mortgages for the First Time",
+            "domain": "wsj.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "RadNet (NASDAQ:RDNT) Q4 Earnings",
+            "domain": "theglobeandmail.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "Erin Griffith - Page 9",
+            "domain": "nytimes.com",
+            "page_kind": "unknown",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 3.5,
+            "article_likelihood": 1,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "Finance & economics | Latest news and analysis from The Economist",
+            "domain": "economist.com",
+            "page_kind": "topic",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": -1.5,
+            "article_likelihood": 0,
+            "genericity_score": 8
+          },
+          {
+            "role": "signal_only",
+            "title": "Don Lemon",
+            "domain": "nytimes.com",
+            "page_kind": "topic",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": -2.5,
+            "article_likelihood": 0,
+            "genericity_score": 6
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 3,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "2026 Donald J. Trump Executive Orders",
+              "url": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
+              "overlap_ratio": 0.13,
+              "shared_tokens": [
+                "trump"
+              ]
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "Companies & Deals"
+        ],
+        "tag_slugs": [
+          "companies-deals"
+        ],
+        "primary_topic_tag": "Companies & Deals",
+        "primary_topic_slug": "companies-deals",
+        "warnings": [
+          "Synthesized canonical primary topic tag from repaired placement"
+        ],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "Companies & Deals",
+            "slug": "companies-deals",
+            "score": 100,
+            "reason": "Synthesized primary topic tag from repaired placement",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "Fewer than 2 canonical tags (target floor is 2)"
+          ]
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "companies-deals",
+              "label": "Companies & Deals",
+              "type": "topic"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "companies-deals",
+            "topic_label": "Companies & Deals",
+            "supported": true,
+            "matched_aliases": [
+              "companies"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pixabay",
+        "image_path": "~/assets/images/library/pixabay/3644538/cover.jpg",
+        "source_url": "https://pixabay.com/photos/card-trump-magician-3644538/",
+        "selection_mode": "provider_download_new:pixabay:strong",
+        "query_used": "Trump photo",
+        "relevance_tier": "strong",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "office",
+        "visual_type": "photo",
+        "entity_hints": [
+          "card",
+          "trump",
+          "magician",
+          "companies-deals",
+          "dg9pheol",
+          "https",
+          "pixabay"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "Trump photo",
+          "Trump portrait",
+          "global Trump photo",
+          "Delivered photo",
+          "Delivered portrait",
+          "global Delivered photo",
+          "Trump Delivered photo",
+          "Trump loyalists hasn photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Trump photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "3644538",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Trump photo",
+          "provider": "pixabay",
+          "providerAssetId": "3644538",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pixabay",
+          "query_used": "Trump photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "strong",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "trump"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/why-maha-loyalists-say-trump-hasn-t-delivered-on-big-pharma.json",
+        "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-29-why-maha-loyalists-say-trump-hasn-t-delivered-on-big-pharma.mdx",
+        "expected_url": "/article/2026-03-29-why-maha-loyalists-say-trump-hasn-t-delivered-on-big-pharma",
+        "verified_url": null
+      }
+    },
+    {
+      "rank": 2,
+      "title": "AI’s Soaring Power Use Puts Tech Climate Pledges Under Strain",
+      "slug": "ai-s-soaring-power-use-puts-tech-climate-pledges-under-strai",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "tech",
+          "topic_id": "ai-big-tech",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 2,
+          "unique_domains": 2,
+          "direct_event_source_count": 2,
+          "independent_event_domains": 2,
+          "source_consistency_score": 7.5,
+          "strong_match_count": 2,
+          "core_source_count": 1,
+          "supporting_source_count": 1,
+          "background_source_count": 4,
+          "rejected_source_count": 3
+        },
+        "role_counts": {
+          "core": 1,
+          "supporting": 2,
+          "background": 8,
+          "reject": 3
+        },
+        "publish_ready_sources": [
+          {
+            "title": "Tech company climate goals under pressure due to AI energy demand",
+            "domain": "apnews.com",
+            "url": "https://apnews.com/article/technology-artificial-intelligence-climate-change-data-centers-ef3a9c264bd6376d77e2c81ab266fb38",
+            "page_kind": "article",
+            "topic_id": "ai-big-tech",
+            "section_id": "tech"
+          },
+          {
+            "title": "Climate & Energy | Sustainable Business News",
+            "domain": "reuters.com",
+            "url": "https://www.reuters.com/sustainability/climate-energy/",
+            "page_kind": "official_release",
+            "topic_id": null,
+            "section_id": "news"
+          }
+        ],
+        "excluded_sources": [
+          {
+            "title": "AI vs. AI: The Future of Cybersecurity Is a Machine",
+            "domain": "startupnews.fyi",
+            "url": "https://startupnews.fyi/2026/03/27/ai-vs-ai-the-future-of-cybersecurity-is-a-machine-only-battlefield",
+            "page_kind": "article",
+            "topic_id": "cybersecurity",
+            "section_id": "tech"
+          },
+          {
+            "title": "Bloomberg Green",
+            "domain": "bloomberg.com",
+            "url": "https://www.bloomberg.com/green",
+            "page_kind": "unknown",
+            "topic_id": "us-politics",
+            "section_id": "news"
+          },
+          {
+            "title": "Strategy is accelerating its crypto purchases as rivals sit on the sidelines",
+            "domain": "cnbc.com",
+            "url": "https://cnbc.com/2026/03/27/strategy-is-accelerating-its-crypto-purchases-as-rivals-sit-on-the-sidelines.html",
+            "page_kind": "article",
+            "topic_id": "crypto-bitcoin",
+            "section_id": "business"
+          }
+        ],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "Tech company climate goals under pressure due to AI energy demand",
+            "domain": "apnews.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": 8,
+            "source_quality_score": 42.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "Climate & Energy | Sustainable Business News",
+            "domain": "reuters.com",
+            "page_kind": "official_release",
+            "same_event_score": 9,
+            "topic_fit_score": -2,
+            "source_quality_score": 15,
+            "article_likelihood": 6,
+            "genericity_score": 1
+          },
+          {
+            "role": "supporting",
+            "title": "Trump Signs Order to Pay TSA Workers",
+            "domain": "wsj.com",
+            "page_kind": "official_release",
+            "same_event_score": 2,
+            "topic_fit_score": 3,
+            "source_quality_score": 11.5,
+            "article_likelihood": 8,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "AI (artificial intelligence)",
+            "domain": "theguardian.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 8,
+            "source_quality_score": 14,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Reviewing Tri - Tech ( OTCMKTS : TRITF ) and Chart Industries ( NYSE : GTLS )",
+            "domain": "tickerreport.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 11,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Tech News",
+            "domain": "reuters.com",
+            "page_kind": "section",
+            "same_event_score": 1,
+            "topic_fit_score": 8,
+            "source_quality_score": 5,
+            "article_likelihood": 0,
+            "genericity_score": 7
+          },
+          {
+            "role": "background",
+            "title": "A CPU crunch and Alibaba's latest chip",
+            "domain": "asia.nikkei.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 11,
+            "article_likelihood": 8,
+            "genericity_score": 2
+          },
+          {
+            "role": "background",
+            "title": "How the AI Coding Boom Is Rewriting Application Security",
+            "domain": "bankinfosecurity.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 8,
+            "source_quality_score": 10.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Tether hires KPMG as auditor ahead of US expansion",
+            "domain": "ft.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 10,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "5 things to know before the market opens Friday",
+            "domain": "cnbc.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Chinese universities with military links bought Super Micro servers ...",
+            "domain": "reuters.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "reject",
+            "title": "AI vs. AI: The Future of Cybersecurity Is a Machine",
+            "domain": "startupnews.fyi",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": -1,
+            "source_quality_score": 11,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 2,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "Climate & Energy | Sustainable Business News",
+              "url": "https://www.reuters.com/sustainability/climate-energy/",
+              "overlap_ratio": 0.11,
+              "shared_tokens": [
+                "climate"
+              ]
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "AI & Big Tech",
+          "Artificial Intelligence"
+        ],
+        "tag_slugs": [
+          "ai-big-tech",
+          "artificial-intelligence"
+        ],
+        "primary_topic_tag": "AI & Big Tech",
+        "primary_topic_slug": "ai-big-tech",
+        "warnings": [],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "AI & Big Tech",
+            "slug": "ai-big-tech",
+            "score": 40,
+            "reason": "Primary topic tag validated from topic_id=ai-big-tech",
+            "fallback": false
+          },
+          {
+            "label": "Artificial Intelligence",
+            "slug": "artificial-intelligence",
+            "score": 23,
+            "reason": "Theme match score 23",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "ai-big-tech",
+              "label": "AI & Big Tech",
+              "type": "topic"
+            },
+            {
+              "slug": "artificial-intelligence",
+              "label": "Artificial Intelligence",
+              "type": "theme"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "ai-big-tech",
+            "topic_label": "AI & Big Tech",
+            "supported": true,
+            "matched_aliases": [
+              "ai",
+              "big tech",
+              "artificial intelligence"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pexels",
+        "image_path": "~/assets/images/library/pexels/33943415/cover.jpg",
+        "source_url": "https://www.pexels.com/photo/close-up-of-green-sweat-bee-on-yellow-flower-33943415/",
+        "selection_mode": "provider_download_new:pexels:strong",
+        "query_used": "AI photo",
+        "relevance_tier": "strong",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "office",
+        "visual_type": "photo",
+        "entity_hints": [
+          "macro",
+          "vibrant",
+          "green",
+          "sweat",
+          "agapostemon",
+          "yellow",
+          "flower",
+          "tech"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "AI photo",
+          "AI technology photo",
+          "global AI photo",
+          "Climate and Energy photo",
+          "Climate and Energy portrait",
+          "Climate and Energy technology photo",
+          "global Climate and Energy photo",
+          "AI Climate and Energy photo"
+        ],
+        "decision_log": [
+          {
+            "query": "AI photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "33943415",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "AI photo",
+          "provider": "pexels",
+          "providerAssetId": "33943415",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pexels",
+          "query_used": "AI photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "strong",
+          "overlap_ratio": 1,
+          "shared_tokens": [],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/ai-s-soaring-power-use-puts-tech-climate-pledges-under-strai.json",
+        "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-29-ai-s-soaring-power-use-puts-tech-climate-pledges-under-strai-2026-03-29-.mdx",
+        "expected_url": "/article/2026-03-29-ai-s-soaring-power-use-puts-tech-climate-pledges-under-strai-2026-03-29-",
+        "verified_url": null
+      }
+    }
+  ]
+}

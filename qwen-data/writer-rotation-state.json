@@ -1,5 +1,5 @@
 {
-  "totalArticles": 81,
+  "totalArticles": 83,
   "lastReset": null,
   "byWriter": {
     "reporter": {
@@ -10,18 +10,18 @@
       "lastAuthorId": "daniel_reed"
     },
     "explainer": {
-      "count": 12,
-      "lastAssigned": 1774821770418,
+      "count": 13,
+      "lastAssigned": 1774824239511,
       "streak": 1,
-      "authorCursor": 2,
-      "lastAuthorId": "ethan_hall"
+      "authorCursor": 3,
+      "lastAuthorId": "mia_turner"
     },
     "analyst": {
-      "count": 13,
-      "lastAssigned": 1774720333794,
+      "count": 14,
+      "lastAssigned": 1774824214001,
       "streak": 0,
-      "authorCursor": 3,
-      "lastAuthorId": "jacob_ellis"
+      "authorCursor": 0,
+      "lastAuthorId": "ava_mitchell"
     },
     "features": {
       "count": 27,
@@ -32,22 +32,6 @@
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "reporter",
-      "timestamp": 1774570305294,
-      "articleType": "report",
-      "beat": "politics",
-      "section": "News",
-      "topic_id": "us-politics"
-    },
-    {
-      "writerId": "reporter",
-      "timestamp": 1774571677830,
-      "articleType": "report",
-      "beat": "politics",
-      "section": "News",
-      "topic_id": "us-politics"
-    },
     {
       "writerId": "features",
       "timestamp": 1774571879478,
@@ -427,6 +411,22 @@
     {
       "writerId": "explainer",
       "timestamp": 1774821770418,
+      "articleType": "report",
+      "beat": "technology",
+      "section": "Tech",
+      "topic_id": "ai-big-tech"
+    },
+    {
+      "writerId": "analyst",
+      "timestamp": 1774824214001,
+      "articleType": "analysis",
+      "beat": "business",
+      "section": "Business",
+      "topic_id": "companies-deals"
+    },
+    {
+      "writerId": "explainer",
+      "timestamp": 1774824239511,
       "articleType": "report",
       "beat": "technology",
       "section": "Tech",
