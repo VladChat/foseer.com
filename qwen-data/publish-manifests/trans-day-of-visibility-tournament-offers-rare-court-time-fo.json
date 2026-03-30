@@ -1,15 +1,15 @@
 {
   "version": 3,
-  "generated_at": "2026-03-30T20:31:19.774Z",
+  "generated_at": "2026-03-30T23:20:17.980Z",
   "event_id": "evt-2026-03-30-sports-general-global",
   "cluster_id": "evt-2026-03-30-sports-general-global",
   "article_type": "report",
   "title": "Trans Day of Visibility tournament offers rare court time for trans athletes",
   "slug": "trans-day-of-visibility-tournament-offers-rare-court-time-fo",
-  "canonical_slug": "2026-03-30-trans-day-of-visibility-tournament-offers-rare-court-time-fo",
-  "expected_url": "/article/2026-03-30-trans-day-of-visibility-tournament-offers-rare-court-time-fo",
-  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-30-trans-day-of-visibility-tournament-offers-rare-court-time-fo.mdx",
-  "published_at": "2026-03-30T20:31:19.772Z",
+  "canonical_slug": "2026-03-30-trans-day-of-visibility-tournament-offers-rare-court-time-fo-2026-03-30-",
+  "expected_url": "/article/2026-03-30-trans-day-of-visibility-tournament-offers-rare-court-time-fo-2026-03-30-",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-30-trans-day-of-visibility-tournament-offers-rare-court-time-fo-2026-03-30-.mdx",
+  "published_at": "2026-03-30T23:20:17.978Z",
   "section_id": "sports",
   "section_label": "Sports",
   "topic_id": "events-tournaments",
@@ -20,19 +20,19 @@
   ],
   "writer": {
     "writer_id": "features",
-    "author_id": "chloe_warren",
-    "author_name": "Chloe Warren",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
     "author_title": "Features Desk"
   },
   "image": {
-    "provider": "pexels",
-    "image_path": "~/assets/images/library/pexels/27866609/cover.jpg",
-    "file_relative_path": "src/assets/images/library/pexels/27866609/cover.jpg",
-    "source_url": "https://www.pexels.com/photo/basketball-hoop-with-ball-in-the-air-27866609/",
-    "asset_key": "pexels:27866609",
-    "alt_text": "A basketball hoop on a playground during the day with clear blue sky.",
-    "selection_mode": "provider_download_new:pexels:strong",
-    "query_used": "Trans Day of Visibility basketball photo",
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/7442815/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/7442815/cover.jpg",
+    "source_url": "https://pixabay.com/photos/woman-rhinestones-pink-hair-7442815/",
+    "asset_key": "pixabay:7442815",
+    "alt_text": "woman, rhinestones, pink hair, portrait, smile, face, cap, nature, green eyes, art, colour, joy in life, summer, multicoloured, color contest, coneflower, sun protection, art portrait, artistic portrait, international womens day",
+    "selection_mode": "provider_download_new:pixabay:strong",
+    "query_used": "Trans Day of Visibility portrait",
     "relevance_tier": "strong",
     "article_relevance_score": 100,
     "asset_quality_score": 100,
@@ -106,16 +106,15 @@
       }
     },
     "image_checks": {
-      "provider": "pexels",
-      "query_used": "Trans Day of Visibility basketball photo",
+      "provider": "pixabay",
+      "query_used": "Trans Day of Visibility portrait",
       "article_relevance_score": 100,
       "relevance_tier": "strong",
-      "overlap_ratio": 1,
+      "overlap_ratio": 0.75,
       "shared_tokens": [
         "trans",
         "day",
-        "visibility",
-        "basketball"
+        "visibility"
       ],
       "placeholder_query": false
     }
