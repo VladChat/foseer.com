@@ -42,6 +42,7 @@ jobs:
         run: npm ci
 
       - name: Run canonical article pipeline
+        id: article_pipeline
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           BRAVE_SEARCH_API_KEY: ${{ secrets.BRAVE_SEARCH_API_KEY }}
@@ -55,10 +56,12 @@ jobs:
         run: npm run article:auto
 
       - name: Validate site build before persistence
+        if: ${{ success() && steps.article_pipeline.outcome == 'success' }}
         run: npm run build
 
       - name: Commit generated article artifacts
         id: commit_changes
+        if: ${{ success() && steps.article_pipeline.outcome == 'success' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -76,7 +79,7 @@ jobs:
           echo "committed=true" >> "$GITHUB_OUTPUT"
 
       - name: Trigger deploy workflow for new content commit
-        if: steps.commit_changes.outputs.committed == 'true'
+        if: ${{ success() && steps.article_pipeline.outcome == 'success' && steps.commit_changes.outputs.committed == 'true' }}
         run: |
           curl --fail --show-error --silent \
             -X POST \

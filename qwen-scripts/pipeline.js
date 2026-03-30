@@ -917,6 +917,57 @@ function buildPipelineResult(success, hard_blocker, published_path, verified_url
   };
 }
 
+function evaluatePipelineRunForExit(result) {
+  const reasons = [];
+  const hardBlocker = String(result?.hard_blocker || '').trim();
+  const rawArticlesPublished = Number(result?.stats?.articles_published);
+  const publishedArticlesCount = Number.isFinite(rawArticlesPublished)
+    ? rawArticlesPublished
+    : Array.isArray(result?.published_articles)
+      ? result.published_articles.length
+      : Array.isArray(result?.published_paths)
+        ? result.published_paths.length
+        : 0;
+  const hasNoPublishableCandidate = hardBlocker.toLowerCase().includes('no publishable candidate');
+
+  const stageWasRun = (stageResult) => {
+    if (!stageResult) return false;
+    const total = Number(stageResult?.data?.total);
+    if (Number.isFinite(total)) return total > 0;
+    return true;
+  };
+
+  if (result?.success !== true) {
+    reasons.push('final Success is false');
+  }
+
+  if (hardBlocker) {
+    reasons.push(`hard blocker exists: ${hardBlocker}`);
+  }
+
+  if (!(publishedArticlesCount > 0)) {
+    reasons.push('articles_published is 0');
+  }
+
+  if (hasNoPublishableCandidate) {
+    reasons.push('no publishable candidate');
+  }
+
+  if (!stageWasRun(result?.stages?.articleDrafting)) {
+    reasons.push('articleDrafting stage was not run');
+  }
+
+  if (!stageWasRun(result?.stages?.publishing)) {
+    reasons.push('publishing stage was not run');
+  }
+
+  return {
+    success: reasons.length === 0,
+    reasons,
+    articles_published: publishedArticlesCount,
+  };
+}
+
 /**
  * Generate URL-safe slug from title
  */
@@ -1088,6 +1139,16 @@ if (process.argv[1]?.endsWith('pipeline.js')) {
         console.log('Selected topics:', result.selected_candidates.map((candidate) => candidate?.brief?.title).filter(Boolean).join(' | '));
       }
       console.log('Stats:', JSON.stringify(result.stats, null, 2));
+
+      const exitEvaluation = evaluatePipelineRunForExit(result);
+      if (!exitEvaluation.success) {
+        console.error('[pipeline] FINAL STATUS: FAIL');
+        console.error('[pipeline] Exit reason(s):', exitEvaluation.reasons.join(' | '));
+        process.exit(1);
+      }
+
+      console.log('[pipeline] FINAL STATUS: PASS');
+      process.exit(0);
     } catch (error) {
       console.error('[pipeline] Fatal error:', error.message);
       process.exit(1);
