@@ -136,7 +136,7 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
 
     onlineDecisions.push(decision);
     bestOnlineDecision = chooseBetterDecision(bestOnlineDecision, decision);
-    if (shouldEarlyStopOnlineSelection(bestOnlineDecision, imageQueryPlan)) {
+    if (onlineDecisions.length >= 2 && shouldEarlyStopOnlineSelection(bestOnlineDecision, imageQueryPlan)) {
       console.log(`[image] Early stop with context-confirmed strong match query="${query}" provider=${bestOnlineDecision.candidate.provider} score=${bestOnlineDecision.fit.finalScore}`);
       break;
     }
@@ -494,6 +494,10 @@ function selectProviderCandidate(candidates, registry, { query, section, topicId
 
     const scored = scoreProviderPhoto(enrichedCandidate, articleProfile);
     if (!scored || scored.score < 0) continue;
+    if (isLowEvidenceGenericCandidate(enrichedCandidate, scored.fit, section)) {
+      console.log(`[image] Rejecting low-evidence generic candidate provider=${enrichedCandidate.provider || 'unknown'} query="${query}"`);
+      continue;
+    }
     if (!hasSemanticImageConfirmation(scored.fit) && scored.fit.tier !== 'strong') continue;
     if (scored.fit.tier === 'weak' && scored.fit.articleRelevanceScore < 18) continue;
     if (scored.fit.contextRequired && Number(scored.fit.contextOverlap || 0) === 0 && Number(scored.fit.sourceOverlap || 0) < 2) continue;
@@ -509,6 +513,31 @@ function selectProviderCandidate(candidates, registry, { query, section, topicId
 
   ranked.sort((a, b) => b.score - a.score);
   return ranked[0] || null;
+}
+
+function isLowEvidenceGenericCandidate(candidate = {}, fit = {}, section = '') {
+  const anchorScore = Number(fit.titleOverlap || 0)
+    + Number(fit.primaryEntityOverlap || 0)
+    + Number(fit.sourceOverlap || 0)
+    + Number(fit.contextOverlap || 0)
+    + Number(fit.geoOverlap || 0);
+  if (anchorScore > 0) return false;
+
+  const strictSection = ['news', 'business', 'culture'].includes(String(section || '').toLowerCase());
+  if (!strictSection) return false;
+
+  const searchableText = [
+    candidate.altText,
+    candidate.searchQuery,
+    ...(Array.isArray(candidate.rawTags) ? candidate.rawTags : []),
+    ...(Array.isArray(candidate.tags) ? candidate.tags : []),
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+
+  const genericStockPattern = /\b(camera|lens|photographer|photography|abstract|texture|background|wallpaper|equipment|gear|studio)\b/;
+  return genericStockPattern.test(searchableText);
 }
 
 
