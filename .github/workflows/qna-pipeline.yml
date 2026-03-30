@@ -1,0 +1,77 @@
+name: QnA Pipeline
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: write
+
+concurrency:
+  group: qna-pipeline
+  cancel-in-progress: false
+
+jobs:
+  run-qna-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/${{ github.run_id }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run question-led article pipeline
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          BRAVE_SEARCH_API_KEY: ${{ secrets.BRAVE_SEARCH_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          SEARCH_WEB_API: ${{ secrets.SEARCH_WEB_API }}
+          SEARCH_WEB_CX: ${{ secrets.SEARCH_WEB_CX }}
+          QWEN_API_RETRY_MAX_ATTEMPTS: '3'
+          QWEN_API_RETRY_BASE_DELAY_MS: '700'
+          QWEN_API_RETRY_MAX_DELAY_MS: '6000'
+        run: npm run article:qna
+
+      - name: Validate site build before persistence
+        run: npm run build
+
+      - name: Commit generated article artifacts
+        id: commit_changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A src/data/post src/assets/images/posts src/assets/images/library qwen-data/images qwen-data/publish-manifests qwen-data/events qwen-data/questions qwen-data/quality-audits qwen-data/writer-rotation-state.json
+
+          if git diff --cached --quiet; then
+            echo "No generated article changes to commit."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git commit -m "chore(content): auto-generate qna article"
+          git push
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger deploy workflow for new content commit
+        if: steps.commit_changes.outputs.committed == 'true'
+        run: |
+          curl --fail --show-error --silent \
+            -X POST \
+            -H "Authorization: Bearer ${{ github.token }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy.yml/dispatches \
+            -d '{"ref":"main"}'

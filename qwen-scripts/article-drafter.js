@@ -150,6 +150,7 @@ export async function draftArticle(eventBrief, sourcePack, claimMap, openAiApiKe
     includeForecast,
     forecastVariant,
     forecastConfidence: claimMap?.avgConfidence >= 7 ? 'high' : claimMap?.avgConfidence >= 5 ? 'medium' : 'low',
+    questionIntent: eventBrief.questionIntent || eventBrief.question_intent || null,
   });
 
   // Log assembly summary only (no giant prompt dump)
@@ -159,6 +160,7 @@ export async function draftArticle(eventBrief, sourcePack, claimMap, openAiApiKe
     authorProfile: writerSelection.selectedAuthor,
     includeForecast,
     forecastVariant,
+    questionIntent: eventBrief.questionIntent || eventBrief.question_intent || null,
   });
   console.log(`[drafter] Prompt assembled: ${assemblySummary.layers_count} layers`);
   console.log(`[drafter] Prompt size: ${finalPrompt.length} chars`);

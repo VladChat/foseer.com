@@ -13,6 +13,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "article:auto": "node qwen-scripts/pipeline.js",
+    "article:qna": "node qwen-scripts/qna-pipeline.js",
     "qwen:repair-posts": "node qwen-scripts/repair-content-posts.js",
     "check": "npm run check:astro && npm run check:eslint && npm run check:prettier",
     "check:astro": "astro check",

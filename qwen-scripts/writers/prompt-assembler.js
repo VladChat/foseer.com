@@ -6,6 +6,7 @@ import { getCoreEditorialPrompt } from './core-editorial-prompt.js';
 import { getArticleTypeLayer } from './article-type-layers.js';
 import { getWriterById } from './writer-registry.js';
 import { getPublishReadySources } from '../utils/source-pack-access.js';
+import { buildQuestionAngleLayer } from './question-angle-layer.js';
 
 /**
  * Evidence Layer Builder
@@ -146,6 +147,7 @@ export function assembleFinalPrompt(options) {
     includeForecast = false,
     forecastVariant = 'report-watch',
     forecastConfidence = 'medium',
+    questionIntent = null,
   } = options;
 
   const corePrompt = getCoreEditorialPrompt();
@@ -157,6 +159,7 @@ export function assembleFinalPrompt(options) {
   const evidencePrompt = buildEvidenceLayer(claimMap, sourcePack);
   const focusPrompt = buildFocusDisciplineLayer(eventBrief, claimMap, sourcePack, includeForecast);
   const authorPrompt = buildAuthorLayer(authorProfile, writer);
+  const questionPrompt = buildQuestionAngleLayer(questionIntent);
   const forecastPrompt = includeForecast
     ? buildForecastPrompt({ articleType, forecastVariant, confidence: forecastConfidence })
     : '';
@@ -169,6 +172,8 @@ export function assembleFinalPrompt(options) {
     writerPrompt,
     '',
     authorPrompt,
+    '',
+    questionPrompt,
     '',
     contextPrompt,
     '',
@@ -302,6 +307,7 @@ export function getPromptAssemblySummary(options) {
     authorProfile = null,
     includeForecast = false,
     forecastVariant = 'report-watch',
+    questionIntent = null,
   } = options;
 
   const articleTypeLayer = getArticleTypeLayer(articleType);
@@ -323,6 +329,7 @@ export function getPromptAssemblySummary(options) {
     } : null,
     forecast_included: includeForecast,
     forecast_variant: includeForecast ? forecastVariant : null,
-    layers_count: includeForecast ? 6 : 5,
+    question_mode: !!questionIntent?.question,
+    layers_count: 5 + (includeForecast ? 1 : 0) + (questionIntent?.question ? 1 : 0),
   };
 }
