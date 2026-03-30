@@ -188,7 +188,7 @@ export async function runQnaPipeline(options = {}) {
     return finalizeRun(result, questionCandidates, null, startTime);
   }
 
-  const sourcePackAttemptQuestions = rankedQuestions.slice(0, sourcePackTryLimit);
+  const sourcePackAttemptQuestions = rankedQuestions.slice(0, Math.max(sourcePackTryLimit, 2));
   let selected = null;
 
   for (const questionCandidate of sourcePackAttemptQuestions) {

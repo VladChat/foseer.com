@@ -3,6 +3,8 @@
 
 import { openAIComplete } from './utils/api-clients.js';
 
+const DEFAULT_WRITER_MODEL = 'gpt-5.1';
+
 const GENERIC_QUESTION_PATTERNS = [
   /^what is this\??$/i,
   /^why is this important\??$/i,
@@ -39,7 +41,7 @@ const RUMOR_TEXT_PATTERNS = [
 
 export async function extractQuestionCandidate(eventBrief, openAiApiKey, options = {}) {
   const fallback = buildFallbackQuestionCandidate(eventBrief);
-  const model = options.model || process.env.OPENAI_WRITER_MODEL || 'gpt-5.1';
+  const model = options.model || process.env.OPENAI_WRITER_MODEL || DEFAULT_WRITER_MODEL;
 
   if (!openAiApiKey) {
     return finalizeQuestionCandidate(fallback, eventBrief, {
@@ -52,7 +54,8 @@ export async function extractQuestionCandidate(eventBrief, openAiApiKey, options
   const prompt = buildQuestionPrompt(eventBrief, options);
 
   try {
-    const response = await openAIComplete(prompt, openAiApiKey, {
+    let activeModel = model;
+    let response = await openAIComplete(prompt, openAiApiKey, {
       model,
       maxTokens: 1200,
       temperature: 0.2,
@@ -60,10 +63,21 @@ export async function extractQuestionCandidate(eventBrief, openAiApiKey, options
       logLabel: 'question_extraction',
     });
 
+    if (response.status !== 'called_success' && shouldRetryWithDefaultModel(response.error, activeModel)) {
+      activeModel = DEFAULT_WRITER_MODEL;
+      response = await openAIComplete(prompt, openAiApiKey, {
+        model: activeModel,
+        maxTokens: 1200,
+        temperature: 0.2,
+        systemPrompt: 'You extract one urgent, concrete, evidence-safe reader question from a news brief. Return strict JSON only.',
+        logLabel: 'question_extraction_fallback_model',
+      });
+    }
+
     if (response.status !== 'called_success' || !response.data) {
       return finalizeQuestionCandidate(fallback, eventBrief, {
         provider: 'fallback',
-        model,
+        model: activeModel,
         note: response.error || 'Question extraction API failed',
       });
     }
@@ -93,7 +107,7 @@ export async function extractQuestionCandidate(eventBrief, openAiApiKey, options
 
     return finalizeQuestionCandidate(candidate, eventBrief, {
       provider: 'openai',
-      model,
+      model: activeModel,
       note: null,
     });
   } catch (error) {
@@ -338,7 +352,7 @@ function evaluateQuestionCandidateQuality({ candidate, eventBrief, question }) {
     rejectionReasons.push('Generic or malformed question');
   }
 
-  if (GENERIC_QUESTION_PHRASES.some((phrase) => lowerQuestion.includes(phrase))) {
+  if (containsGenericPhraseWithoutConcreteAnchor(lowerQuestion, entityAnchors)) {
     rejectionReasons.push('Question is too generic');
   }
 
@@ -404,6 +418,30 @@ function isVagueLikelihoodQuestion(questionLower, anchors = []) {
 function isBroadQuestionForm(questionLower) {
   if (!questionLower) return true;
   return /^(how likely|what happens next|what specific|what are the|what could|what would|which scenario)/i.test(questionLower);
+}
+
+function containsGenericPhraseWithoutConcreteAnchor(questionLower, entityAnchors = []) {
+  for (const phrase of GENERIC_QUESTION_PHRASES) {
+    if (!questionLower.includes(phrase)) continue;
+
+    if (phrase === 'how likely is it') {
+      const hasEntityAnchor = questionContainsEntityAnchor(questionLower, entityAnchors);
+      const hasConcreteWindow = /\b(next|week|month|quarter|year|202\d)\b/.test(questionLower);
+      const hasConcreteSubject = /\b(how likely is it)\b.*\b(that|after|before|if|when|for)\b/.test(questionLower);
+      if (hasEntityAnchor || (hasConcreteSubject && hasConcreteWindow)) {
+        continue;
+      }
+    }
+
+    return true;
+  }
+  return false;
+}
+
+function shouldRetryWithDefaultModel(errorMessage, currentModel) {
+  if (!errorMessage || currentModel === DEFAULT_WRITER_MODEL) return false;
+  const normalized = String(errorMessage).toLowerCase();
+  return normalized.includes('model_not_found') || normalized.includes('does not exist') || normalized.includes('unsupported model');
 }
 
 function getEntityScore(eventBrief) {
