@@ -1,0 +1,671 @@
+{
+  "version": 2,
+  "run_id": "qna-pipeline-2026-03-30T20-17-44-733Z",
+  "started_at": "2026-03-30T20:17:44.733Z",
+  "generated_at": "2026-03-30T20:20:13.858Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 1
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 5,
+            "fresh_files": 5,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 68190
+          },
+          "gdelt": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          },
+          "google": {
+            "files": 1,
+            "fresh_files": 1,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 52705
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 149116,
+    "news_pool": {
+      "total": 50,
+      "active": 43,
+      "published": 7,
+      "ready_candidates": 3
+    },
+    "brief_candidates": 16,
+    "question_candidates": 2,
+    "source_pack_attempts": 24
+  },
+  "provider_stats": {
+    "mode": "cache_refresh_with_live_quota",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": true,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 1
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+      "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 5,
+          "fresh_files": 5,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 68190
+        },
+        "gdelt": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        },
+        "google": {
+          "files": 1,
+          "fresh_files": 1,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 52705
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14135
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6189
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 285008
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "shared_cache_load": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "brief_source_pack_gate": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "discovery_refresh": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "question_extraction": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "question_filtering": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "source_pack_selection": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claim_map": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "draft": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "image": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "publish": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 1,
+    "editorial_pass_count": 1,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "How Democrats’ Affordability Pivot Sets Up a Climate Law ‘Battle Royale’",
+      "slug": "how-democrats-affordability-pivot-sets-up-a-climate-law-batt",
+      "published": false,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "news",
+          "topic_id": "us-politics",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 2,
+          "unique_domains": 2,
+          "direct_event_source_count": 2,
+          "independent_event_domains": 2,
+          "source_consistency_score": 6.3,
+          "strong_match_count": 2,
+          "core_source_count": 2,
+          "supporting_source_count": 0,
+          "background_source_count": 4,
+          "rejected_source_count": 1
+        },
+        "role_counts": {
+          "core": 3,
+          "supporting": 1,
+          "background": 6,
+          "signal_only": 3,
+          "reject": 1
+        },
+        "publish_ready_sources": [
+          {
+            "title": "Climate law 'battle royale'",
+            "domain": "politico.com",
+            "url": "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808",
+            "page_kind": "article",
+            "topic_id": "us-politics",
+            "section_id": "news"
+          },
+          {
+            "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever",
+            "domain": "civilbeat.org",
+            "url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "news"
+          }
+        ],
+        "excluded_sources": [
+          {
+            "title": "Here & Now",
+            "domain": "npr.org",
+            "url": "https://www.npr.org/programs/here-and-now/2015/04/07/398103323",
+            "page_kind": "article",
+            "topic_id": "world-geopolitics",
+            "section_id": "news"
+          }
+        ],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "Climate law 'battle royale'",
+            "domain": "politico.com",
+            "page_kind": "article",
+            "same_event_score": 16,
+            "topic_fit_score": 6,
+            "source_quality_score": 41.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever",
+            "domain": "civilbeat.org",
+            "page_kind": "article",
+            "same_event_score": 4,
+            "topic_fit_score": 4,
+            "source_quality_score": 13.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Ofcom to investigate complaints of climate change denial",
+            "domain": "wattsupwiththat.com",
+            "page_kind": "official_release",
+            "same_event_score": 3,
+            "topic_fit_score": 4,
+            "source_quality_score": 14,
+            "article_likelihood": 9,
+            "genericity_score": 1
+          },
+          {
+            "role": "supporting",
+            "title": "Climate & Energy | Sustainable Business News",
+            "domain": "reuters.com",
+            "page_kind": "official_release",
+            "same_event_score": 3,
+            "topic_fit_score": 3,
+            "source_quality_score": 13,
+            "article_likelihood": 6,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "Environmental & Climate News",
+            "domain": "reuters.com",
+            "page_kind": "unknown",
+            "same_event_score": 4,
+            "topic_fit_score": 4,
+            "source_quality_score": 8.5,
+            "article_likelihood": 1,
+            "genericity_score": 2
+          },
+          {
+            "role": "background",
+            "title": "He Helped Write the Clean Air Act. He Fears for Its Future.",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 11,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "No Kings protests: Thousands across the US rally against Trump",
+            "domain": "bbc.com",
+            "page_kind": "unknown",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 6,
+            "article_likelihood": 1,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "OpenAI News | Today's Latest Stories",
+            "domain": "reuters.com",
+            "page_kind": "unknown",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 6,
+            "article_likelihood": 1,
+            "genericity_score": 2
+          },
+          {
+            "role": "background",
+            "title": "Hims & Hers Health Inc (HIMS",
+            "domain": "theglobeandmail.com",
+            "page_kind": "unknown",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 6,
+            "article_likelihood": 1,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "US abortion rate holds steady largely due to travel and telehealth ...",
+            "domain": "theguardian.com",
+            "page_kind": "official_release",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 10.5,
+            "article_likelihood": 8,
+            "genericity_score": 1
+          },
+          {
+            "role": "signal_only",
+            "title": "Law",
+            "domain": "theguardian.com",
+            "page_kind": "unknown",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 8,
+            "article_likelihood": 1,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "Latest and breaking political news today",
+            "domain": "politico.com",
+            "page_kind": "unknown",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 6,
+            "article_likelihood": 1,
+            "genericity_score": 2
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 2,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever",
+              "url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+              "overlap_ratio": 0.13,
+              "shared_tokens": [
+                "climate"
+              ]
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "Climate & Extreme Weather",
+          "United States",
+          "Analysis"
+        ],
+        "tag_slugs": [
+          "climate-extreme-weather",
+          "united-states",
+          "analysis"
+        ],
+        "primary_topic_tag": "Climate & Extreme Weather",
+        "primary_topic_slug": "climate-extreme-weather",
+        "warnings": [],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "Climate & Extreme Weather",
+            "slug": "climate-extreme-weather",
+            "score": 38,
+            "reason": "Primary topic tag overridden by stronger evidence (Climate & Extreme Weather)",
+            "fallback": false
+          },
+          {
+            "label": "United States",
+            "slug": "united-states",
+            "score": 18,
+            "reason": "Geography match score 18",
+            "fallback": false
+          },
+          {
+            "label": "Analysis",
+            "slug": "analysis",
+            "score": 10,
+            "reason": "Format from article type: analysis",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "climate-extreme-weather",
+              "label": "Climate & Extreme Weather",
+              "type": "topic"
+            },
+            {
+              "slug": "united-states",
+              "label": "United States",
+              "type": "geography"
+            },
+            {
+              "slug": "analysis",
+              "label": "Analysis",
+              "type": "format"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "climate-extreme-weather",
+            "topic_label": "Climate & Extreme Weather",
+            "supported": true,
+            "matched_aliases": [
+              "climate",
+              "emissions"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "fallback",
+        "image_path": "~/assets/images/posts/fallback/foseer-default-cover.svg",
+        "source_url": null,
+        "selection_mode": null,
+        "query_used": null,
+        "relevance_tier": null,
+        "article_relevance_score": null,
+        "asset_quality_score": null,
+        "editorial_fit_score": null,
+        "scene_type": null,
+        "visual_type": null,
+        "entity_hints": [],
+        "geo_hints": [],
+        "queries_tried": [
+          "Climate Law Battle climate photo",
+          "Climate Law Battle photo",
+          "Climate Law Battle portrait",
+          "global Climate Law Battle photo",
+          "Climate climate photo",
+          "Climate photo",
+          "global Climate photo",
+          "Climate Law Battle sets photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Climate Law Battle climate photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "3313646",
+            "finalScore": 91,
+            "articleRelevanceScore": 88,
+            "assetQualityScore": 97,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Climate Law Battle photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "5348740",
+            "finalScore": 91,
+            "articleRelevanceScore": 88,
+            "assetQualityScore": 97,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Climate Law Battle portrait",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "3313646",
+            "finalScore": 91,
+            "articleRelevanceScore": 88,
+            "assetQualityScore": 97,
+            "tier": "acceptable"
+          },
+          {
+            "query": "global Climate Law Battle photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "5224748",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Climate climate photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "2433451",
+            "finalScore": 91,
+            "articleRelevanceScore": 88,
+            "assetQualityScore": 97,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Climate photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "2433451",
+            "finalScore": 91,
+            "articleRelevanceScore": 88,
+            "assetQualityScore": 97,
+            "tier": "acceptable"
+          },
+          {
+            "query": "global Climate photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "5224748",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Climate Law Battle sets photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "25755",
+            "finalScore": 94,
+            "articleRelevanceScore": 91,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          }
+        ],
+        "best_online_decision": {
+          "query": "global Climate Law Battle photo",
+          "provider": "pixabay",
+          "providerAssetId": "5224748",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "acceptable"
+        },
+        "online_attempted": true,
+        "fallback_used": true,
+        "semantic": {
+          "provider": "fallback",
+          "query_used": null,
+          "article_relevance_score": 0,
+          "relevance_tier": null,
+          "overlap_ratio": 1,
+          "shared_tokens": [],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/how-democrats-affordability-pivot-sets-up-a-climate-law-batt.json",
+        "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-30-how-democrats-affordability-pivot-sets-up-a-climate-law-batt.mdx",
+        "expected_url": "/article/2026-03-30-how-democrats-affordability-pivot-sets-up-a-climate-law-batt",
+        "verified_url": null
+      }
+    }
+  ]
+}

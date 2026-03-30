@@ -1,0 +1,46 @@
+{
+  "run_id": "qna-pipeline-2026-03-30T20-17-44-733Z",
+  "generated_at": "2026-03-30T20:19:40.344Z",
+  "items": [
+    {
+      "brief_title": "Climate law 'battle royale'",
+      "question": "Over the next one to two years, how is the Democratic Party’s turn toward affordability politics likely to change the design, timing, or enforcement of major U.S. climate laws and regulations, and which specific climate measures are most at risk of being weakened, delayed, or reworked as a result?",
+      "question_type": "what_happens_next",
+      "score": 9,
+      "selection_score": 40,
+      "uncertainty": "It is unclear how this affordability push will concretely reshape climate legislation, regulatory timelines, and implementation of existing climate programs.",
+      "stakes": "Changes could weaken, delay, or redirect major climate policies, affecting emissions trajectories, energy prices, federal spending, and how agencies enforce or revise climate rules.",
+      "time_horizon": "next 6–24 months",
+      "valid": true,
+      "selection_eligible": true,
+      "invalid_reason": null,
+      "rejection_reasons": [],
+      "provider": "openai",
+      "model": "gpt-5.1",
+      "note": null,
+      "poolIdentityKey": "cluster:evt-2026-03-30-us-politics-general-us",
+      "source_pack_gate": null
+    },
+    {
+      "brief_title": "Trans Day of Visibility basketball tournament creates space for trans athletes amid international sports bans",
+      "question": "In light of the IOC’s new ban on transgender women in women’s Olympic events, how likely is it that national federations, school sports bodies, and local leagues will tighten their own eligibility rules for trans athletes over the next few years, and what concrete changes should trans players and teams realistically expect?",
+      "question_type": "how_likely",
+      "score": 9,
+      "selection_score": 40,
+      "uncertainty": "How this new IOC ban will influence future eligibility rules and opportunities for trans athletes in other levels of sport, from national teams to local leagues.",
+      "stakes": "The policy could determine whether trans athletes are allowed to compete in women’s categories across sports systems worldwide, affecting careers, funding, inclusion in public and school sports programs, and shaping broader anti-discrimination and equality policies.",
+      "time_horizon": "near_term",
+      "valid": false,
+      "selection_eligible": false,
+      "invalid_reason": "Question is too generic",
+      "rejection_reasons": [
+        "Question is too generic"
+      ],
+      "provider": "openai",
+      "model": "gpt-5.1",
+      "note": null,
+      "poolIdentityKey": "cluster:evt-2026-03-30-sports-general-global",
+      "source_pack_gate": null
+    }
+  ]
+}

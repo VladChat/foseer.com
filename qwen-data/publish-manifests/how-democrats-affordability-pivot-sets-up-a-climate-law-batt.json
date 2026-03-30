@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-30T20:20:13.818Z",
+  "event_id": "evt-2026-03-30-us-politics-general-us",
+  "cluster_id": "evt-2026-03-30-us-politics-general-us",
+  "article_type": "analysis",
+  "title": "How Democrats’ Affordability Pivot Sets Up a Climate Law ‘Battle Royale’",
+  "slug": "how-democrats-affordability-pivot-sets-up-a-climate-law-batt",
+  "canonical_slug": "2026-03-30-how-democrats-affordability-pivot-sets-up-a-climate-law-batt",
+  "expected_url": "/article/2026-03-30-how-democrats-affordability-pivot-sets-up-a-climate-law-batt",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-30-how-democrats-affordability-pivot-sets-up-a-climate-law-batt.mdx",
+  "published_at": "2026-03-30T20:20:13.816Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "climate-extreme-weather",
+  "topic_label": "Climate & Extreme Weather",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "fallback",
+    "image_path": "~/assets/images/posts/fallback/foseer-default-cover.svg",
+    "file_relative_path": "src/assets/images/posts/fallback/foseer-default-cover.svg",
+    "source_url": null,
+    "asset_key": null,
+    "alt_text": "Illustration for How Democrats’ Affordability Pivot Sets Up a Climate Law ‘Battle Royale’",
+    "selection_mode": null,
+    "query_used": null,
+    "relevance_tier": null,
+    "article_relevance_score": null,
+    "asset_quality_score": null,
+    "editorial_fit_score": null,
+    "is_fallback": true
+  },
+  "tags": [
+    "Climate & Extreme Weather",
+    "United States",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Climate law 'battle royale'",
+        "url": "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808",
+        "domain": "politico.com"
+      },
+      {
+        "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever",
+        "url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+        "domain": "civilbeat.org"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever",
+          "url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "climate"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "type": "topic"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "climate-extreme-weather",
+        "topic_label": "Climate & Extreme Weather",
+        "supported": true,
+        "matched_aliases": [
+          "climate",
+          "emissions"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "fallback",
+      "query_used": null,
+      "article_relevance_score": 0,
+      "relevance_tier": null,
+      "overlap_ratio": 1,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "totalArticles": 84,
+  "totalArticles": 85,
   "lastReset": null,
   "byWriter": {
     "reporter": {
@@ -19,27 +19,19 @@
     "analyst": {
       "count": 15,
       "lastAssigned": 1774878781924,
-      "streak": 1,
+      "streak": 0,
       "authorCursor": 1,
       "lastAuthorId": "liam_parker"
     },
     "features": {
-      "count": 27,
-      "lastAssigned": 1774756437803,
-      "streak": 0,
-      "authorCursor": 2,
-      "lastAuthorId": "grace_holloway"
+      "count": 28,
+      "lastAssigned": 1774901980553,
+      "streak": 1,
+      "authorCursor": 3,
+      "lastAuthorId": "owen_foster"
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "features",
-      "timestamp": 1774576013667,
-      "articleType": "report",
-      "beat": "health policy",
-      "section": "Health",
-      "topic_id": "pharma-fda"
-    },
     {
       "writerId": "reporter",
       "timestamp": 1774576882156,
@@ -431,6 +423,14 @@
       "beat": "business",
       "section": "Business",
       "topic_id": "companies-deals"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774901980553,
+      "articleType": "analysis",
+      "beat": "politics",
+      "section": "News",
+      "topic_id": "us-politics"
     }
   ]
 }
