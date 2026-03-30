@@ -1,13 +1,13 @@
 {
-  "totalArticles": 88,
+  "totalArticles": 89,
   "lastReset": null,
   "byWriter": {
     "reporter": {
-      "count": 30,
-      "lastAssigned": 1774908214788,
-      "streak": 0,
-      "authorCursor": 0,
-      "lastAuthorId": "maya_collins"
+      "count": 31,
+      "lastAssigned": 1774913122490,
+      "streak": 1,
+      "authorCursor": 1,
+      "lastAuthorId": "john_smith"
     },
     "explainer": {
       "count": 13,
@@ -26,20 +26,12 @@
     "features": {
       "count": 30,
       "lastAssigned": 1774912793935,
-      "streak": 1,
+      "streak": 0,
       "authorCursor": 1,
       "lastAuthorId": "lucas_morris"
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "reporter",
-      "timestamp": 1774582410791,
-      "articleType": "report",
-      "beat": "climate",
-      "section": "News",
-      "topic_id": "climate-extreme-weather"
-    },
     {
       "writerId": "features",
       "timestamp": 1774619389431,
@@ -431,6 +423,14 @@
       "beat": "sports",
       "section": "Sports",
       "topic_id": "transfers-business"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774913122490,
+      "articleType": "analysis",
+      "beat": "politics",
+      "section": "News",
+      "topic_id": "us-politics"
     }
   ]
 }

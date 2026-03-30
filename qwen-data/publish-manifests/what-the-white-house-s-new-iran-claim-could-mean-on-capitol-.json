@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-30T23:25:50.348Z",
+  "event_id": "evt-2026-03-30-us-politics-general-us-congress-white-house",
+  "cluster_id": "evt-2026-03-30-us-politics-general-us-congress-white-house",
+  "article_type": "analysis",
+  "title": "What the White House’s new Iran claim could mean on Capitol Hill",
+  "slug": "what-the-white-house-s-new-iran-claim-could-mean-on-capitol-",
+  "canonical_slug": "2026-03-30-what-the-white-house-s-new-iran-claim-could-mean-on-capitol",
+  "expected_url": "/article/2026-03-30-what-the-white-house-s-new-iran-claim-could-mean-on-capitol",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-30-what-the-white-house-s-new-iran-claim-could-mean-on-capitol.mdx",
+  "published_at": "2026-03-30T23:25:50.345Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/2930214/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/2930214/cover.jpg",
+    "source_url": "https://pixabay.com/photos/cottage-house-red-cottage-croft-2930214/",
+    "asset_key": "pixabay:2930214",
+    "alt_text": "cottage, house, red cottage, croft, old house, roof, red house, slate roof, faluröd, red, dalsland, idyll, sweden, summer cottage, separated, garden, atmospheric, alone, window, door, nature, cultural heritage, åsnebyn, old window, summer house, romantic, architecture, outside, slate, photo, facade, wooden house, building, white trim",
+    "selection_mode": "provider_download_new:pixabay:acceptable",
+    "query_used": "White House photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Congress",
+    "White House",
+    "United States"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "White House claims US",
+        "url": "http://www.bignewsnetwork.com/news/278954047/white-house-claims-us-iran-talks-continuing-going-well-despite-tehran-denying-direct-negotiations",
+        "domain": "bignewsnetwork.com"
+      },
+      {
+        "title": "House Appropriations Committee",
+        "url": "https://www.congress.gov/committee/house-appropriations/hsap00",
+        "domain": "congress.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "House Appropriations Committee",
+          "url": "https://www.congress.gov/committee/house-appropriations/hsap00",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "house"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "white-house",
+          "label": "White House",
+          "type": "theme"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house",
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "White House photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "white",
+        "house"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

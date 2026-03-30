@@ -1,0 +1,690 @@
+{
+  "version": 2,
+  "run_id": "qna-pipeline-2026-03-30T23-24-33-508Z",
+  "started_at": "2026-03-30T23:24:33.508Z",
+  "generated_at": "2026-03-30T23:25:50.402Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 4,
+        "gdelt": 1,
+        "google": 0
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 4,
+            "fresh_files": 4,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 57454
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 1,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 5315
+          },
+          "google": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 76881,
+    "news_pool": {
+      "total": 56,
+      "active": 47,
+      "published": 9,
+      "ready_candidates": 3
+    },
+    "brief_candidates": 16,
+    "question_candidates": 1,
+    "source_pack_attempts": 28
+  },
+  "provider_stats": {
+    "mode": "cache_refresh_with_live_quota",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": true,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 4,
+      "gdelt": 1,
+      "google": 0
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+      "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 4,
+          "fresh_files": 4,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 57454
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 1,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 5315
+        },
+        "google": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14135
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6189
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 285008
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "shared_cache_load": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "brief_source_pack_gate": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "discovery_refresh": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "question_extraction": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "question_filtering": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "source_pack_selection": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claim_map": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "draft": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "image": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "publish": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 1,
+    "editorial_pass_count": 1,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "What the White House’s new Iran claim could mean on Capitol Hill",
+      "slug": "what-the-white-house-s-new-iran-claim-could-mean-on-capitol-",
+      "published": false,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "news",
+          "topic_id": "us-politics",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 2,
+          "unique_domains": 2,
+          "direct_event_source_count": 2,
+          "independent_event_domains": 2,
+          "source_consistency_score": 8.8,
+          "strong_match_count": 2,
+          "core_source_count": 2,
+          "supporting_source_count": 0,
+          "background_source_count": 3,
+          "rejected_source_count": 2
+        },
+        "role_counts": {
+          "core": 2,
+          "supporting": 1,
+          "background": 3,
+          "signal_only": 3,
+          "reject": 2
+        },
+        "publish_ready_sources": [
+          {
+            "title": "White House claims US",
+            "domain": "bignewsnetwork.com",
+            "url": "http://www.bignewsnetwork.com/news/278954047/white-house-claims-us-iran-talks-continuing-going-well-despite-tehran-denying-direct-negotiations",
+            "page_kind": "article",
+            "topic_id": "us-politics",
+            "section_id": "news"
+          },
+          {
+            "title": "House Appropriations Committee",
+            "domain": "congress.gov",
+            "url": "https://www.congress.gov/committee/house-appropriations/hsap00",
+            "page_kind": "official_release",
+            "topic_id": null,
+            "section_id": "news"
+          }
+        ],
+        "excluded_sources": [
+          {
+            "title": "Global markets recoil as Marco Rubio warns war in Iran could ...",
+            "domain": "ft.com",
+            "url": "https://www.ft.com/content/4f095d4b-46cb-4ed6-90cf-aa560fba2bc1",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "business"
+          },
+          {
+            "title": "Iran war wipes out $100 billion from luxury stocks",
+            "domain": "cnbc.com",
+            "url": "https://www.cnbc.com/2026/03/27/iran-war-wipes-out-100-billion-from-luxury-stocks.html",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "business"
+          }
+        ],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "White House claims US",
+            "domain": "bignewsnetwork.com",
+            "page_kind": "article",
+            "same_event_score": 18,
+            "topic_fit_score": 8,
+            "source_quality_score": 25,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "House Appropriations Committee",
+            "domain": "congress.gov",
+            "page_kind": "official_release",
+            "same_event_score": 5,
+            "topic_fit_score": 4,
+            "source_quality_score": 16,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          },
+          {
+            "role": "supporting",
+            "title": "Trump threatens to destroy Iran oil island despite price surge",
+            "domain": "guampdn.com",
+            "page_kind": "article",
+            "same_event_score": 2,
+            "topic_fit_score": 3,
+            "source_quality_score": 8.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Trump signs order to pay TSA employees after Congress fails to agree on DHS funding",
+            "domain": "springfieldnewssun.com",
+            "page_kind": "official_release",
+            "same_event_score": 2,
+            "topic_fit_score": -1,
+            "source_quality_score": 12.5,
+            "article_likelihood": 8,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "Latest news, sport and opinion from the Guardian",
+            "domain": "theguardian.com",
+            "page_kind": "analysis",
+            "same_event_score": 2,
+            "topic_fit_score": 2,
+            "source_quality_score": 10.5,
+            "article_likelihood": 6,
+            "genericity_score": 2
+          },
+          {
+            "role": "background",
+            "title": "Climate law 'battle royale'",
+            "domain": "politico.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 7,
+            "source_quality_score": 12,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "US foreign policy",
+            "domain": "theguardian.com",
+            "page_kind": "unknown",
+            "same_event_score": 2,
+            "topic_fit_score": 2,
+            "source_quality_score": 7,
+            "article_likelihood": 1,
+            "genericity_score": 2
+          },
+          {
+            "role": "signal_only",
+            "title": "Israel says it killed Iran navy chief; Trump warns Tehran to 'get ...",
+            "domain": "nbcnews.com",
+            "page_kind": "live",
+            "same_event_score": 2,
+            "topic_fit_score": -3,
+            "source_quality_score": 2.5,
+            "article_likelihood": 0,
+            "genericity_score": 6
+          },
+          {
+            "role": "signal_only",
+            "title": "Iran War Live Updates: 12 U.S. Troops Injured in Attack on Saudi ...",
+            "domain": "nytimes.com",
+            "page_kind": "live",
+            "same_event_score": 2,
+            "topic_fit_score": -2,
+            "source_quality_score": 2,
+            "article_likelihood": 2,
+            "genericity_score": 8
+          },
+          {
+            "role": "reject",
+            "title": "Global markets recoil as Marco Rubio warns war in Iran could ...",
+            "domain": "ft.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": -3,
+            "source_quality_score": 8.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "reject",
+            "title": "Iran war wipes out $100 billion from luxury stocks",
+            "domain": "cnbc.com",
+            "page_kind": "article",
+            "same_event_score": 2,
+            "topic_fit_score": -3,
+            "source_quality_score": 6,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 2,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "House Appropriations Committee",
+              "url": "https://www.congress.gov/committee/house-appropriations/hsap00",
+              "overlap_ratio": 0.13,
+              "shared_tokens": [
+                "house"
+              ]
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "U.S. Politics & Policy",
+          "Congress",
+          "White House",
+          "United States"
+        ],
+        "tag_slugs": [
+          "us-politics",
+          "congress",
+          "white-house",
+          "united-states"
+        ],
+        "primary_topic_tag": "U.S. Politics & Policy",
+        "primary_topic_slug": "us-politics",
+        "warnings": [],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "U.S. Politics & Policy",
+            "slug": "us-politics",
+            "score": 40,
+            "reason": "Primary topic tag validated from topic_id=us-politics",
+            "fallback": false
+          },
+          {
+            "label": "Congress",
+            "slug": "congress",
+            "score": 39,
+            "reason": "Theme match score 39",
+            "fallback": false
+          },
+          {
+            "label": "White House",
+            "slug": "white-house",
+            "score": 34,
+            "reason": "Theme match score 34",
+            "fallback": false
+          },
+          {
+            "label": "United States",
+            "slug": "united-states",
+            "score": 20,
+            "reason": "Geography match score 20",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "us-politics",
+              "label": "U.S. Politics & Policy",
+              "type": "topic"
+            },
+            {
+              "slug": "congress",
+              "label": "Congress",
+              "type": "theme"
+            },
+            {
+              "slug": "white-house",
+              "label": "White House",
+              "type": "theme"
+            },
+            {
+              "slug": "united-states",
+              "label": "United States",
+              "type": "geography"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "us-politics",
+            "topic_label": "U.S. Politics & Policy",
+            "supported": true,
+            "matched_aliases": [
+              "white house",
+              "congress"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pixabay",
+        "image_path": "~/assets/images/library/pixabay/2930214/cover.jpg",
+        "source_url": "https://pixabay.com/photos/cottage-house-red-cottage-croft-2930214/",
+        "selection_mode": "provider_download_new:pixabay:acceptable",
+        "query_used": "White House photo",
+        "relevance_tier": "acceptable",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "building",
+        "visual_type": "photo",
+        "entity_hints": [
+          "cottage",
+          "house",
+          "croft",
+          "roof",
+          "slate",
+          "falur",
+          "dalsland",
+          "idyll"
+        ],
+        "geo_hints": [
+          "iran"
+        ],
+        "queries_tried": [
+          "White House government photo",
+          "White House photo",
+          "White House portrait",
+          "us White House photo",
+          "White government photo",
+          "White photo",
+          "us White photo",
+          "White House White photo"
+        ],
+        "decision_log": [
+          {
+            "query": "White House government photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "11699573",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "White House photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "2930214",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "White House portrait",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "1750215",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "us White House photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "16701076",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "White government photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "7017147",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "White photo",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "us White photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "1159790",
+            "finalScore": 99,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 97,
+            "tier": "acceptable"
+          },
+          {
+            "query": "White House White photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "2930214",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          }
+        ],
+        "best_online_decision": {
+          "query": "White House photo",
+          "provider": "pixabay",
+          "providerAssetId": "2930214",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "acceptable"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pixabay",
+          "query_used": "White House photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "acceptable",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "white",
+            "house"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/what-the-white-house-s-new-iran-claim-could-mean-on-capitol-.json",
+        "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-30-what-the-white-house-s-new-iran-claim-could-mean-on-capitol.mdx",
+        "expected_url": "/article/2026-03-30-what-the-white-house-s-new-iran-claim-could-mean-on-capitol",
+        "verified_url": null
+      }
+    }
+  ]
+}

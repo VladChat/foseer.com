@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-03-30T23:20:17.881Z",
+  "updatedAt": "2026-03-30T23:25:50.327Z",
   "assets": [
     {
       "assetKey": "legacy:7-social-media-trends-you-need-to-know-in-2026",
@@ -7218,16 +7218,116 @@
       "sceneType": "portrait",
       "geoHints": [],
       "visualType": "photo",
-      "editorialFitScore": 100,
+      "editorialFitScore": 98,
       "firstSeenAt": "2026-03-30T23:20:17.881Z",
       "lastFetchedAt": "2026-03-30T23:20:17.881Z",
       "lastUsedAt": "2026-03-30T23:20:17.881Z",
       "useCount": 1,
       "status": "ready",
       "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pixabay:2930214",
+      "provider": "pixabay",
+      "providerAssetId": "2930214",
+      "sourcePageUrl": "https://pixabay.com/photos/cottage-house-red-cottage-croft-2930214/",
+      "sourceDownloadUrl": "https://pixabay.com/get/gcdd6ac5def02fa25d49a874b6f0d296c250d9ea03753905b76b9b000f1db61ffb3c2f45c5e9128071538d4d89fe5b897c351a5983c3d4ab520e8bd8db25ef248_1280.jpg",
+      "authorName": "lenalindell20",
+      "authorUrl": "https://pixabay.com/users/lenalindell20-6853905/",
+      "license": "Pixabay Content License",
+      "altText": "cottage, house, red cottage, croft, old house, roof, red house, slate roof, faluröd, red, dalsland, idyll, sweden, summer cottage, separated, garden, atmospheric, alone, window, door, nature, cultural heritage, åsnebyn, old window, summer house, romantic, architecture, outside, slate, photo, facade, wooden house, building, white trim",
+      "width": 6877,
+      "height": 4352,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pixabay/2930214/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pixabay/2930214/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pixabay/2930214/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "News"
+      ],
+      "queryHistory": [
+        "White House photo"
+      ],
+      "tags": [
+        "us-politics",
+        "congress",
+        "white house",
+        "iran",
+        "cottage",
+        "house",
+        "red cottage",
+        "croft",
+        "old house",
+        "roof",
+        "red house",
+        "slate roof",
+        "faluröd",
+        "red",
+        "dalsland",
+        "idyll",
+        "sweden",
+        "summer cottage",
+        "separated",
+        "garden",
+        "atmospheric",
+        "alone",
+        "window",
+        "door",
+        "nature",
+        "cultural heritage",
+        "åsnebyn",
+        "old window",
+        "summer house",
+        "romantic",
+        "architecture",
+        "outside",
+        "slate",
+        "photo",
+        "facade",
+        "wooden house",
+        "building",
+        "white trim"
+      ],
+      "topicHints": [
+        "us-politics"
+      ],
+      "entityHints": [
+        "cottage",
+        "house",
+        "croft",
+        "roof",
+        "slate",
+        "falur",
+        "dalsland",
+        "idyll"
+      ],
+      "sceneType": "building",
+      "geoHints": [
+        "iran"
+      ],
+      "visualType": "photo",
+      "editorialFitScore": 100,
+      "firstSeenAt": "2026-03-30T23:25:50.327Z",
+      "lastFetchedAt": "2026-03-30T23:25:50.327Z",
+      "lastUsedAt": "2026-03-30T23:25:50.327Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
     }
   ],
   "usage": [
+    {
+      "assetKey": "pixabay:2930214",
+      "articleSlug": "what-the-white-house-s-new-iran-claim-could-mean-on-capitol-",
+      "articleTitle": "What the White House’s new Iran claim could mean on Capitol Hill",
+      "section": "News",
+      "topicId": "us-politics",
+      "query": "White House photo",
+      "usedAt": "2026-03-30T23:25:50.327Z",
+      "selectionMode": "provider_download_new:pixabay:acceptable"
+    },
     {
       "assetKey": "pixabay:7442815",
       "articleSlug": "trans-day-of-visibility-tournament-offers-rare-court-time-fo",
@@ -7942,6 +8042,6 @@
   "maintenance": {
     "lastLegacyImportAt": "2026-03-26T18:24:48.254Z",
     "lastCooldownBackfillAt": null,
-    "lastMetadataEnrichmentAt": "2026-03-30T22:03:58.145Z"
+    "lastMetadataEnrichmentAt": "2026-03-30T23:25:47.147Z"
   }
 }
