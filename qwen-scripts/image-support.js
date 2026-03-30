@@ -80,6 +80,7 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
   });
 
   let bestOnlineDecision = null;
+  const onlineDecisions = [];
   const decisionLog = [];
 
   for (const query of queries.slice(0, IMAGE_CONFIG.maxQueriesPerRun)) {
@@ -133,6 +134,7 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
       tier: decision.fit.tier,
     });
 
+    onlineDecisions.push(decision);
     bestOnlineDecision = chooseBetterDecision(bestOnlineDecision, decision);
     if (shouldEarlyStopOnlineSelection(bestOnlineDecision, imageQueryPlan)) {
       console.log(`[image] Early stop with context-confirmed strong match query="${query}" provider=${bestOnlineDecision.candidate.provider} score=${bestOnlineDecision.fit.finalScore}`);
@@ -141,13 +143,32 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
   }
 
   if (bestOnlineDecision?.type === 'download_new') {
-    const storedAsset = await persistProviderCandidate(bestOnlineDecision.candidate, {
-      section,
-      query: bestOnlineDecision.query,
-      topicId,
-      entityHints: imageContext.entityHints,
-    });
-    if (storedAsset) {
+    const rankedOnlineDecisions = [
+      bestOnlineDecision,
+      ...onlineDecisions
+        .filter((decision) => decision !== bestOnlineDecision)
+        .sort((a, b) => Number(b?.score || 0) - Number(a?.score || 0)),
+    ];
+    const attemptedOnlineCandidates = new Set();
+
+    for (const decision of rankedOnlineDecisions) {
+      if (!decision?.candidate) continue;
+
+      const candidateKey = `${decision.candidate.provider || 'provider'}:${decision.candidate.providerAssetId || decision.candidate.sourceDownloadUrl || decision.query || 'candidate'}`;
+      if (attemptedOnlineCandidates.has(candidateKey)) continue;
+      attemptedOnlineCandidates.add(candidateKey);
+
+      const storedAsset = await persistProviderCandidate(decision.candidate, {
+        section,
+        query: decision.query,
+        topicId,
+        entityHints: imageContext.entityHints,
+      });
+      if (!storedAsset) {
+        console.warn(`[image] Online candidate persistence failed provider=${decision.candidate.provider || 'unknown'} query="${decision.query || ''}"`);
+        continue;
+      }
+
       const assetRecord = registerAssetRecord(registry, storedAsset);
       recordImageUsage(registry, {
         asset: assetRecord,
@@ -155,14 +176,14 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
         articleTitle: article.title,
         section,
         topicId,
-        query: bestOnlineDecision.query,
-        selectionMode: `provider_download_new:${bestOnlineDecision.candidate.provider}:${bestOnlineDecision.fit.tier}`,
+        query: decision.query,
+        selectionMode: `provider_download_new:${decision.candidate.provider}:${decision.fit.tier}`,
       });
       saveImageRegistry(registry);
       return buildResultFromAsset(assetRecord, article, {
         articleSlug,
-        queryUsed: bestOnlineDecision.query,
-        selectionMode: `provider_download_new:${bestOnlineDecision.candidate.provider}:${bestOnlineDecision.fit.tier}`,
+        queryUsed: decision.query,
+        selectionMode: `provider_download_new:${decision.candidate.provider}:${decision.fit.tier}`,
         sectionId,
         topicId,
         articleProfile,
@@ -175,6 +196,8 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
         }),
       });
     }
+
+    console.warn('[image] No online candidates could be persisted; trying local registry reuse before fallback');
   }
 
   const localAsset = findReusableAsset(registry, {
