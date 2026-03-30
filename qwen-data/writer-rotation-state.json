@@ -1,5 +1,5 @@
 {
-  "totalArticles": 83,
+  "totalArticles": 84,
   "lastReset": null,
   "byWriter": {
     "reporter": {
@@ -12,16 +12,16 @@
     "explainer": {
       "count": 13,
       "lastAssigned": 1774824239511,
-      "streak": 1,
+      "streak": 0,
       "authorCursor": 3,
       "lastAuthorId": "mia_turner"
     },
     "analyst": {
-      "count": 14,
-      "lastAssigned": 1774824214001,
-      "streak": 0,
-      "authorCursor": 0,
-      "lastAuthorId": "ava_mitchell"
+      "count": 15,
+      "lastAssigned": 1774878781924,
+      "streak": 1,
+      "authorCursor": 1,
+      "lastAuthorId": "liam_parker"
     },
     "features": {
       "count": 27,
@@ -32,14 +32,6 @@
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "features",
-      "timestamp": 1774571879478,
-      "articleType": "report",
-      "beat": "health policy",
-      "section": "Health",
-      "topic_id": "pharma-fda"
-    },
     {
       "writerId": "features",
       "timestamp": 1774576013667,
@@ -431,6 +423,14 @@
       "beat": "technology",
       "section": "Tech",
       "topic_id": "ai-big-tech"
+    },
+    {
+      "writerId": "analyst",
+      "timestamp": 1774878781924,
+      "articleType": "analysis",
+      "beat": "business",
+      "section": "Business",
+      "topic_id": "companies-deals"
     }
   ]
 }

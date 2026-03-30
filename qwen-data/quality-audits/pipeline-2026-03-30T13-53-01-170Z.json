@@ -1,0 +1,601 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-03-30T13-53-01-170Z",
+  "started_at": "2026-03-30T13:53:01.170Z",
+  "generated_at": "2026-03-30T13:53:38.494Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "discovery_candidates": 22,
+    "event_clusters": 6,
+    "briefs_normalized": 6,
+    "source_packs_assembled": 12,
+    "publishable_candidates": 1,
+    "selected_topic": "MAHA fans want action Trump hasn't delivered",
+    "selected_topics": [
+      "MAHA fans want action Trump hasn't delivered"
+    ],
+    "articles_attempted": 1,
+    "articles_published": 1,
+    "news_pool": {
+      "total": 39,
+      "active": 30,
+      "published": 9,
+      "ready_candidates": 3
+    },
+    "cache_stats": {
+      "mode": "cache_only",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": false,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 0,
+        "gdelt": 0,
+        "google": 0
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          },
+          "gdelt": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          },
+          "google": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 37323,
+    "ready_candidates": 3,
+    "additional_ready_candidates": 3
+  },
+  "provider_stats": {
+    "mode": "cache_only",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": false,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 0,
+      "gdelt": 0,
+      "google": 0
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+      "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        },
+        "gdelt": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        },
+        "google": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14135
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6189
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 285008
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claimMapCreation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "articleDrafting": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "imageSupport": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "publishing": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "localVerification": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 1,
+    "editorial_pass_count": 1,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "Why Trump’s MAHA Base Is Restless Over Undelivered Pharma Crackdowns",
+      "slug": "why-trump-s-maha-base-is-restless-over-undelivered-pharma-cr",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "business",
+          "topic_id": null,
+          "placement_confidence": "medium",
+          "placement_reason": []
+        },
+        "metrics": {
+          "total_sources": 3,
+          "unique_domains": 2,
+          "direct_event_source_count": 3,
+          "independent_event_domains": 2,
+          "source_consistency_score": 9.2,
+          "strong_match_count": 2,
+          "core_source_count": 3,
+          "supporting_source_count": 0,
+          "background_source_count": 4,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 3,
+          "background": 8,
+          "signal_only": 3
+        },
+        "publish_ready_sources": [
+          {
+            "title": "MAHA fans want action Trump hasn't delivered",
+            "domain": "politico.com",
+            "url": "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "business"
+          },
+          {
+            "title": "MAHA fans want action Trump hasn't delivered",
+            "domain": "politico.com",
+            "url": "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "health"
+          },
+          {
+            "title": "2026 Donald J. Trump Executive Orders",
+            "domain": "federalregister.gov",
+            "url": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
+            "page_kind": "official_release",
+            "topic_id": null,
+            "section_id": "business"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "MAHA fans want action Trump hasn't delivered",
+            "domain": "politico.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": 4,
+            "source_quality_score": 44.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "MAHA fans want action Trump hasn't delivered",
+            "domain": "politico.com",
+            "page_kind": "article",
+            "same_event_score": 15,
+            "topic_fit_score": -2,
+            "source_quality_score": 29.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "2026 Donald J. Trump Executive Orders",
+            "domain": "federalregister.gov",
+            "page_kind": "official_release",
+            "same_event_score": 3,
+            "topic_fit_score": 4,
+            "source_quality_score": 14,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "The Quest to Revive a Frozen Brain",
+            "domain": "wsj.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Tether hires KPMG as auditor ahead of US expansion",
+            "domain": "ft.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Bloomberg Businessweek",
+            "domain": "bloomberg.com",
+            "page_kind": "analysis",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 7,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Cue Biopharma Announces CEO Transition",
+            "domain": "theglobeandmail.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "RadNet (NASDAQ:RDNT) Q4 Earnings",
+            "domain": "theglobeandmail.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Q4 Consumer Discretionary - Casino Operator Earnings: PENN ...",
+            "domain": "theglobeandmail.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Spotting Winners: Hilton (NYSE:HLT) And Consumer Discretionary",
+            "domain": "theglobeandmail.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...",
+            "domain": "theglobeandmail.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "Erin Griffith - Page 9",
+            "domain": "nytimes.com",
+            "page_kind": "unknown",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 3.5,
+            "article_likelihood": 1,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 3,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "2026 Donald J. Trump Executive Orders",
+              "url": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
+              "overlap_ratio": 0.13,
+              "shared_tokens": [
+                "trump"
+              ]
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "Companies & Deals"
+        ],
+        "tag_slugs": [
+          "companies-deals"
+        ],
+        "primary_topic_tag": "Companies & Deals",
+        "primary_topic_slug": "companies-deals",
+        "warnings": [
+          "Synthesized canonical primary topic tag from repaired placement"
+        ],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "Companies & Deals",
+            "slug": "companies-deals",
+            "score": 100,
+            "reason": "Synthesized primary topic tag from repaired placement",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "Fewer than 2 canonical tags (target floor is 2)"
+          ]
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "companies-deals",
+              "label": "Companies & Deals",
+              "type": "topic"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "companies-deals",
+            "topic_label": "Companies & Deals",
+            "supported": true,
+            "matched_aliases": [
+              "companies"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pixabay",
+        "image_path": "~/assets/images/library/pixabay/2546104/cover.jpg",
+        "source_url": "https://pixabay.com/photos/trump-president-usa-america-flag-2546104/",
+        "selection_mode": "provider_download_new:pixabay:strong",
+        "query_used": "Trump medical photo",
+        "relevance_tier": "strong",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "portrait",
+        "visual_type": "photo",
+        "entity_hints": [
+          "trump",
+          "president",
+          "british",
+          "flag",
+          "usa",
+          "america",
+          "banner",
+          "union"
+        ],
+        "geo_hints": [
+          "united states"
+        ],
+        "queries_tried": [
+          "MAHA medical photo",
+          "MAHA photo",
+          "MAHA portrait",
+          "global MAHA photo",
+          "Trump medical photo",
+          "Trump photo",
+          "Trump portrait",
+          "global Trump photo"
+        ],
+        "decision_log": [
+          {
+            "query": "MAHA medical photo",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "MAHA photo",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "MAHA portrait",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "global MAHA photo",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "Trump medical photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "2546104",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Trump medical photo",
+          "provider": "pixabay",
+          "providerAssetId": "2546104",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pixabay",
+          "query_used": "Trump medical photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "strong",
+          "overlap_ratio": 0.5,
+          "shared_tokens": [
+            "trump"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/why-trump-s-maha-base-is-restless-over-undelivered-pharma-cr.json",
+        "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-30-why-trump-s-maha-base-is-restless-over-undelivered-pharma-cr.mdx",
+        "expected_url": "/article/2026-03-30-why-trump-s-maha-base-is-restless-over-undelivered-pharma-cr",
+        "verified_url": null
+      }
+    }
+  ]
+}

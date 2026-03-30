@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-30T13:53:38.455Z",
+  "event_id": "evt-2026-03-29-business-general-global",
+  "cluster_id": "evt-2026-03-29-business-general-global",
+  "article_type": "analysis",
+  "title": "Why Trump’s MAHA Base Is Restless Over Undelivered Pharma Crackdowns",
+  "slug": "why-trump-s-maha-base-is-restless-over-undelivered-pharma-cr",
+  "canonical_slug": "2026-03-30-why-trump-s-maha-base-is-restless-over-undelivered-pharma-cr",
+  "expected_url": "/article/2026-03-30-why-trump-s-maha-base-is-restless-over-undelivered-pharma-cr",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-30-why-trump-s-maha-base-is-restless-over-undelivered-pharma-cr.mdx",
+  "published_at": "2026-03-30T13:53:38.453Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "companies-deals",
+  "topic_label": "Companies & Deals",
+  "subsection": "Companies & Deals",
+  "topics": [
+    "Companies & Deals"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "liam_parker",
+    "author_name": "Liam Parker",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/2546104/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/2546104/cover.jpg",
+    "source_url": "https://pixabay.com/photos/trump-president-usa-america-flag-2546104/",
+    "asset_key": "pixabay:2546104",
+    "alt_text": "trump, president, british flag, usa, america, flag, banner, union jack, donald trump, republican, politics, presidency, speech, politician",
+    "selection_mode": "provider_download_new:pixabay:strong",
+    "query_used": "Trump medical photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Companies & Deals"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "MAHA fans want action Trump hasn't delivered",
+        "url": "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
+        "domain": "politico.com"
+      },
+      {
+        "title": "MAHA fans want action Trump hasn't delivered",
+        "url": "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162",
+        "domain": "politico.com"
+      },
+      {
+        "title": "2026 Donald J. Trump Executive Orders",
+        "url": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
+        "domain": "federalregister.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "2026 Donald J. Trump Executive Orders",
+          "url": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "trump"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "companies-deals",
+          "label": "Companies & Deals",
+          "type": "topic"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "companies-deals",
+        "topic_label": "Companies & Deals",
+        "supported": true,
+        "matched_aliases": [
+          "companies"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Trump medical photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "trump"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

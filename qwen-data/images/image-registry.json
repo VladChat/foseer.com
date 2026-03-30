@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-03-29T22:44:18.166Z",
+  "updatedAt": "2026-03-30T13:53:38.236Z",
   "assets": [
     {
       "assetKey": "legacy:7-social-media-trends-you-need-to-know-in-2026",
@@ -7025,16 +7025,94 @@
       "sceneType": "office",
       "geoHints": [],
       "visualType": "photo",
-      "editorialFitScore": 100,
+      "editorialFitScore": 98,
       "firstSeenAt": "2026-03-29T22:44:18.166Z",
       "lastFetchedAt": "2026-03-29T22:44:18.166Z",
       "lastUsedAt": "2026-03-29T22:44:18.166Z",
       "useCount": 1,
       "status": "ready",
       "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pixabay:2546104",
+      "provider": "pixabay",
+      "providerAssetId": "2546104",
+      "sourcePageUrl": "https://pixabay.com/photos/trump-president-usa-america-flag-2546104/",
+      "sourceDownloadUrl": "https://pixabay.com/get/gd27262ad9dbcd094585f5af0f2ede3b5b6c9dcc29778bc776eff5a884455dab286042a38b14b634f51463e48a59e8f46f771874c0b72348b66845d3dcc6475f2_1280.jpg",
+      "authorName": "geralt",
+      "authorUrl": "https://pixabay.com/users/geralt-9301/",
+      "license": "Pixabay Content License",
+      "altText": "trump, president, british flag, usa, america, flag, banner, union jack, donald trump, republican, politics, presidency, speech, politician",
+      "width": 4700,
+      "height": 1621,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pixabay/2546104/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pixabay/2546104/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pixabay/2546104/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "Business"
+      ],
+      "queryHistory": [
+        "Trump medical photo"
+      ],
+      "tags": [
+        "companies-deals",
+        "Unspecified",
+        "trump",
+        "president",
+        "british flag",
+        "usa",
+        "america",
+        "flag",
+        "banner",
+        "union jack",
+        "donald trump",
+        "republican",
+        "politics",
+        "presidency",
+        "speech",
+        "politician"
+      ],
+      "topicHints": [
+        "companies-deals"
+      ],
+      "entityHints": [
+        "trump",
+        "president",
+        "british",
+        "flag",
+        "usa",
+        "america",
+        "banner",
+        "union"
+      ],
+      "sceneType": "portrait",
+      "geoHints": [
+        "united states"
+      ],
+      "visualType": "photo",
+      "editorialFitScore": 100,
+      "firstSeenAt": "2026-03-30T13:53:38.236Z",
+      "lastFetchedAt": "2026-03-30T13:53:38.236Z",
+      "lastUsedAt": "2026-03-30T13:53:38.236Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
     }
   ],
   "usage": [
+    {
+      "assetKey": "pixabay:2546104",
+      "articleSlug": "why-trump-s-maha-base-is-restless-over-undelivered-pharma-cr",
+      "articleTitle": "Why Trump’s MAHA Base Is Restless Over Undelivered Pharma Crackdowns",
+      "section": "Business",
+      "topicId": "companies-deals",
+      "query": "Trump medical photo",
+      "usedAt": "2026-03-30T13:53:38.236Z",
+      "selectionMode": "provider_download_new:pixabay:strong"
+    },
     {
       "assetKey": "pexels:33943415",
       "articleSlug": "ai-s-soaring-power-use-puts-tech-climate-pledges-under-strai",
@@ -7719,6 +7797,6 @@
   "maintenance": {
     "lastLegacyImportAt": "2026-03-26T18:24:48.254Z",
     "lastCooldownBackfillAt": null,
-    "lastMetadataEnrichmentAt": "2026-03-29T22:44:17.850Z"
+    "lastMetadataEnrichmentAt": "2026-03-30T13:53:35.291Z"
   }
 }
