@@ -13,6 +13,9 @@ export interface Props {
 const { post } = Astro.props;
 
 const relatedPosts = post.tags ? await getRelatedPosts(post, 4) : [];
+
+// Get current page path for source tracking
+const currentPagePath = Astro.url?.pathname || '/';
 ---
 
 {APP_BLOG.isRelatedPostsEnabled && relatedPosts.length > 0 ? (
@@ -26,7 +29,7 @@ const relatedPosts = post.tags ? await getRelatedPosts(post, 4) : [];
           Explore more articles on {post.category?.title || 'this topic'} and related subjects
         </p>
       </div>
-      
+
       <BlogHighlightedPosts
         classes={{
           container: 'pt-0 lg:pt-0 md:pt-0',
@@ -50,19 +53,121 @@ const relatedPosts = post.tags ? await getRelatedPosts(post, 4) : [];
       <p class="text-lg text-muted dark:text-slate-300 mb-6">
         Get the latest news and analysis delivered to your inbox. Join our community of readers who stay ahead of the curve.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+      
+      <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" novalidate>
         <input
           type="email"
+          name="email"
+          id="newsletter-email"
           placeholder="Enter your email address"
+          required
+          autocomplete="email"
           class="flex-1 px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
         />
-        <button class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium">
+        {/* Honeypot field for spam protection - hidden from real users */}
+        <input
+          type="text"
+          name="website_url"
+          id="newsletter-website"
+          tabindex="-1"
+          autocomplete="off"
+          class="hidden"
+          aria-hidden="true"
+        />
+        <button
+          type="submit"
+          id="newsletter-submit"
+          class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+        >
           Subscribe
         </button>
-      </div>
+      </form>
+      
+      {/* Status messages */}
+      <div id="newsletter-message" class="hidden mt-4 text-sm" role="status" aria-live="polite"></div>
+      
       <p class="text-sm text-muted dark:text-slate-400 mt-4">
-        No spam, unsubscribe anytime. Privacy policy applies.
+        No spam, unsubscribe anytime. See our <a href="/privacy" class="underline hover:text-primary">Privacy Policy</a>.
       </p>
     </div>
   </div>
 </section>
+
+<script>
+  // Newsletter form handling with Supabase submission
+  const form = document.getElementById('newsletter-form') as HTMLFormElement;
+  const emailInput = document.getElementById('newsletter-email') as HTMLInputElement;
+  const submitBtn = document.getElementById('newsletter-submit') as HTMLButtonElement;
+  const messageEl = document.getElementById('newsletter-message') as HTMLDivElement;
+  const honeypotInput = document.getElementById('newsletter-website') as HTMLInputElement;
+  
+  const sourcePage = '{currentPagePath}';
+  
+  // Email validation regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  function showMessage(text: string, type: 'success' | 'error') {
+    messageEl.textContent = text;
+    messageEl.classList.remove('hidden', 'text-red-500', 'text-green-600', 'dark:text-green-400', 'dark:text-red-400');
+    messageEl.classList.add(type === 'success' ? 'text-green-600 dark:text-green-400' : 'text-red-500 dark:text-red-400');
+  }
+  
+  function hideMessage() {
+    messageEl.classList.add('hidden');
+  }
+  
+  async function handleSubmit(e: Event) {
+    e.preventDefault();
+    hideMessage();
+    
+    const email = emailInput.value.trim();
+    
+    // Client-side validation
+    if (!email) {
+      showMessage('Please enter your email address.', 'error');
+      return;
+    }
+    
+    if (!emailRegex.test(email)) {
+      showMessage('Please enter a valid email address.', 'error');
+      return;
+    }
+    
+    // Check honeypot (spam protection)
+    if (honeypotInput.value) {
+      // Silently succeed - don't let spammers know they're caught
+      showMessage('Thanks for subscribing!', 'success');
+      emailInput.value = '';
+      return;
+    }
+    
+    // Disable button during submission
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Subscribing...';
+    
+    try {
+      // Import Supabase client dynamically
+      const { subscribeToNewsletter } = await import('~/utils/supabase');
+      
+      const result = await subscribeToNewsletter(email, sourcePage);
+      
+      if (result.success) {
+        showMessage(result.message, 'success');
+        emailInput.value = '';
+      } else {
+        showMessage(result.message, 'error');
+      }
+    } catch (err) {
+      console.error('Newsletter submission error:', err);
+      showMessage('Unable to process subscription. Please try again.', 'error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Subscribe';
+    }
+  }
+  
+  form.addEventListener('submit', handleSubmit);
+  
+  // Clear message on input
+  emailInput.addEventListener('input', hideMessage);
+</script>

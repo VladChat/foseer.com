@@ -11,7 +11,7 @@ This Privacy Policy explains what information Foseer may collect, how we use it,
 
 ## Scope
 
-This policy applies to the public website, article pages, and direct communications you send to us by email or phone. Foseer does not currently offer user accounts, paid memberships, on-site comments, or a public newsletter sign-up.
+This policy applies to the public website, article pages, direct communications you send to us by email or phone, and our newsletter subscription service. Foseer does not currently offer user accounts, paid memberships, or on-site comments.
 
 ## Information We May Collect
 
@@ -19,6 +19,7 @@ This policy applies to the public website, article pages, and direct communicati
 
 - Your name, email address, phone number, and any other information you choose to include when you contact us.
 - News tips, corrections, media inquiries, business inquiries, or other messages you send to us.
+- Your email address when you subscribe to our newsletter, along with the page where you subscribed and your subscription status.
 
 ### Technical information collected automatically
 
@@ -31,12 +32,25 @@ This policy applies to the public website, article pages, and direct communicati
 - To respond to questions, tips, corrections, and support requests.
 - To detect abuse, malicious traffic, fraud, or technical issues.
 - To keep internal records reasonably necessary for editorial, legal, and operational purposes.
+- To send newsletter emails to subscribers who have provided their email addresses.
+- To manage newsletter subscriptions, including confirmation, unsubscribes, and bounce handling.
 
 ## Cookies, Analytics, and Similar Technologies
 
 Foseer currently uses limited local browser storage to remember interface preferences such as dark or light theme selection. We do not currently run a configured third-party analytics ID or advertising network on the live site.
 
 If we later enable analytics, advertising, newsletter tools, or other technologies that materially change our data practices, we will update this Privacy Policy and related notices.
+
+## Newsletter Subscription
+
+When you subscribe to our newsletter:
+
+- We collect your email address, the page where you subscribed, and your subscription status.
+- Your email is stored securely in our database with Row Level Security (RLS) policies.
+- We use your email to send you newsletter communications with news, analysis, and updates.
+- You can unsubscribe at any time by contacting us at [info@foseer.com](mailto:info@foseer.com).
+- We do not sell, rent, or share your email address with third parties for marketing purposes.
+- Duplicate email submissions are handled gracefully to protect your privacy.
 
 ## How We Share Information
 
