@@ -9,7 +9,7 @@ on:
         default: '2'
         type: string
   schedule:
-    - cron: '27 13 * * *'
+    - cron: '27 16 * * *'
       timezone: 'America/Chicago'
 
 permissions:
