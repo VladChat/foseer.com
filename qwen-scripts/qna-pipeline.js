@@ -55,6 +55,7 @@ export async function runQnaPipeline(options = {}) {
     hard_blocker: null,
     rejection_report: {
       pre_selection: [],
+      brief_source_pack: [],
       source_pack: [],
     },
   };
@@ -82,7 +83,55 @@ export async function runQnaPipeline(options = {}) {
     return finalizeRun(result, [], null, startTime);
   }
 
-  const questionCandidates = await extractQuestionCandidates(briefs, openAiApiKey, {});
+  let screened = await screenBriefSourcePackViability(briefs, {
+    options,
+    braveApiKey,
+    googleApiKey,
+    googleCx,
+  });
+  result.stats.source_pack_attempts += screened.attempted;
+  result.rejection_report.brief_source_pack.push(...screened.rejections);
+  result.stages.brief_source_pack_gate = {
+    success: screened.viableBriefs.length > 0,
+    attempted: screened.attempted,
+    passed: screened.viableBriefs.length,
+    rejected: screened.rejections,
+  };
+
+  if (screened.viableBriefs.length === 0) {
+    const refreshed = await refreshSharedDiscoveryCache({
+      braveApiKey,
+      googleApiKey,
+      googleCx,
+      openAiApiKey,
+      candidateLimit: Math.max(candidateLimit * 2, 12),
+    });
+    result.stages.discovery_refresh = refreshed.stage;
+    result.stats.brief_candidates = refreshed.briefs.length;
+    if (refreshed.briefs.length > 0) {
+      screened = await screenBriefSourcePackViability(refreshed.briefs, {
+        options,
+        braveApiKey,
+        googleApiKey,
+        googleCx,
+      });
+      result.stats.source_pack_attempts += screened.attempted;
+      result.rejection_report.brief_source_pack.push(...screened.rejections);
+      result.stages.brief_source_pack_gate = {
+        success: screened.viableBriefs.length > 0,
+        attempted: (result.stages.brief_source_pack_gate?.attempted || 0) + screened.attempted,
+        passed: screened.viableBriefs.length,
+        rejected: result.rejection_report.brief_source_pack,
+      };
+    }
+  }
+
+  if (screened.viableBriefs.length === 0) {
+    result.hard_blocker = 'No brief candidate passed source-pack viability gate';
+    return finalizeRun(result, [], null, startTime);
+  }
+
+  const questionCandidates = await extractQuestionCandidates(screened.viableBriefs, openAiApiKey, {});
   const extractionModels = Array.from(new Set(questionCandidates.map((candidate) => candidate.model).filter(Boolean)));
   console.log(`[qna-pipeline] Question extraction model(s): ${extractionModels.length > 0 ? extractionModels.join(', ') : 'fallback-only'}`);
   result.stats.question_candidates = questionCandidates.length;
@@ -143,20 +192,24 @@ export async function runQnaPipeline(options = {}) {
   let selected = null;
 
   for (const questionCandidate of sourcePackAttemptQuestions) {
-    result.stats.source_pack_attempts += 1;
     const brief = questionCandidate.brief;
-    console.log(`[qna-pipeline] Source-pack attempt #${result.stats.source_pack_attempts} :: ${questionCandidate.question} :: score=${questionCandidate.selection_score}`);
+    const briefKey = getBriefCandidateKey(brief);
+    let sourcePack = screened.sourcePackByKey.get(briefKey) || null;
+    console.log(`[qna-pipeline] Source-pack attempt (prevalidated=${sourcePack ? 'yes' : 'no'}) :: ${questionCandidate.question} :: score=${questionCandidate.selection_score}`);
     try {
-      const sourcePack = await assembleSourcePack({
-        ...brief,
-        articleType: resolveQuestionArticleType(questionCandidate),
-      }, {
-        ...options,
-        braveApiKey,
-        googleApiKey,
-        googleCx,
-        articleType: resolveQuestionArticleType(questionCandidate),
-      });
+      if (!sourcePack) {
+        result.stats.source_pack_attempts += 1;
+        sourcePack = await assembleSourcePack({
+          ...brief,
+          articleType: resolveQuestionArticleType(questionCandidate),
+        }, {
+          ...options,
+          braveApiKey,
+          googleApiKey,
+          googleCx,
+          articleType: resolveQuestionArticleType(questionCandidate),
+        });
+      }
 
       const editorialGate = evaluateSourcePackEditorialIntegrity({ brief, sourcePack });
       sourcePack.stage3EditorialGate = editorialGate;
@@ -172,12 +225,13 @@ export async function runQnaPipeline(options = {}) {
           passes: false,
           notes: sourcePack.gateNotes || [],
         };
+        const reasons = Array.from(new Set(sourcePack.gateNotes || ['Source-pack gate failed']));
         result.rejection_report.source_pack.push({
           question: questionCandidate.question,
           brief_title: questionCandidate.briefTitle,
-          reasons: sourcePack.gateNotes || ['Source-pack gate failed'],
+          reasons,
         });
-        console.log(`[qna-pipeline] Source-pack rejected :: ${questionCandidate.question} :: ${(sourcePack.gateNotes || []).join(' | ')}`);
+        console.log(`[qna-pipeline] Source-pack rejected :: ${questionCandidate.question} :: ${reasons.join(' | ')}`);
         continue;
       }
 
@@ -467,6 +521,76 @@ function writeQuestionArtifacts(runId, questionCandidates) {
   fs.writeFileSync(filePath, JSON.stringify(payload, null, 2), 'utf-8');
   fs.writeFileSync(path.resolve(QUESTIONS_DIR, 'latest-question-candidates.json'), JSON.stringify(payload, null, 2), 'utf-8');
   return filePath;
+}
+
+async function screenBriefSourcePackViability(briefs = [], { options = {}, braveApiKey, googleApiKey, googleCx } = {}) {
+  const viableBriefs = [];
+  const rejections = [];
+  const sourcePackByKey = new Map();
+  const uniqueBriefs = dedupeBriefCandidates(Array.isArray(briefs) ? briefs : []);
+
+  for (const brief of uniqueBriefs) {
+    const briefKey = getBriefCandidateKey(brief);
+    try {
+      const sourcePack = await assembleSourcePack({
+        ...brief,
+        articleType: 'analysis',
+      }, {
+        ...options,
+        braveApiKey,
+        googleApiKey,
+        googleCx,
+        articleType: 'analysis',
+      });
+
+      const editorialGate = evaluateSourcePackEditorialIntegrity({ brief, sourcePack });
+      const hardErrors = (editorialGate.blocking_errors || []).filter((message) => !String(message).startsWith('Primary topic_id unsupported by source-pack evidence'));
+      const gateReasons = [...(Array.isArray(sourcePack.gateNotes) ? sourcePack.gateNotes : []), ...hardErrors];
+      const pass = Boolean(sourcePack.passesGate) && hardErrors.length === 0;
+
+      if (!pass) {
+        const reasons = Array.from(new Set(gateReasons.length > 0 ? gateReasons : ['Source-pack gate failed']));
+        rejections.push({
+          brief_title: brief.title || null,
+          poolIdentityKey: brief.poolIdentityKey || null,
+          reasons,
+        });
+        console.log(`[qna-pipeline] Brief source-pack rejected :: ${brief.title || 'untitled'} :: ${reasons.join(' | ')}`);
+        continue;
+      }
+
+      sourcePackByKey.set(briefKey, sourcePack);
+      viableBriefs.push(brief);
+      console.log(`[qna-pipeline] Brief source-pack passed :: ${brief.title || 'untitled'} :: sources=${sourcePack.sources?.length || 0} domains=${sourcePack.uniqueDomains || 0}`);
+    } catch (error) {
+      const reasons = [`Source-pack assembly error: ${error.message}`];
+      rejections.push({
+        brief_title: brief.title || null,
+        poolIdentityKey: brief.poolIdentityKey || null,
+        reasons,
+      });
+      console.log(`[qna-pipeline] Brief source-pack error :: ${brief.title || 'untitled'} :: ${error.message}`);
+    }
+  }
+
+  return {
+    attempted: uniqueBriefs.length,
+    viableBriefs,
+    sourcePackByKey,
+    rejections,
+  };
+}
+
+function getBriefCandidateKey(brief = {}) {
+  const sourceUrl = Array.isArray(brief.sourceUrls) && brief.sourceUrls.length > 0 ? String(brief.sourceUrls[0]) : '';
+  return [
+    brief.poolIdentityKey || '',
+    brief.id || '',
+    brief.cluster_id || '',
+    brief.eventKey || '',
+    brief.title || '',
+    sourceUrl,
+  ].join('::');
 }
 
 function finalizeRun(result, questionCandidates = [], selected = null, startTime = Date.now()) {

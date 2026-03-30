@@ -9,6 +9,10 @@ const GENERIC_QUESTION_PATTERNS = [
   /^what does this mean\??$/i,
   /^what happens\??$/i,
   /^what next\??$/i,
+  /^what happens next\??$/i,
+  /^how likely is this\??$/i,
+  /^how likely is it\??$/i,
+  /^what are the chances/i,
   /^how likely is the reported move/i,
   /^what happens next after .+\?$/i,
 ];
@@ -19,6 +23,8 @@ const GENERIC_QUESTION_PHRASES = [
   'this situation',
   'coming days',
   'what happens next after',
+  'how likely is this',
+  'how likely is it',
 ];
 
 const RUMOR_TEXT_PATTERNS = [
@@ -325,6 +331,7 @@ function evaluateQuestionCandidateQuality({ candidate, eventBrief, question }) {
   const publishabilityScore = Number(eventBrief?.publishabilityScore || 0);
   const articleRichCount = Number(eventBrief?.article_rich_count || 0);
   const entityCount = getEntityMentions(eventBrief).length;
+  const entityAnchors = buildEntityAnchors(eventBrief);
   const stakesText = cleanText(candidate?.stakes);
 
   if (!isValidQuestion(question)) {
@@ -346,9 +353,15 @@ function evaluateQuestionCandidateQuality({ candidate, eventBrief, question }) {
   if (entityCount === 0) {
     rejectionReasons.push('No concrete entities in brief');
   }
+  if (entityAnchors.length > 0 && !questionContainsEntityAnchor(lowerQuestion, entityAnchors) && isBroadQuestionForm(lowerQuestion)) {
+    rejectionReasons.push('Question is not anchored to concrete entities');
+  }
 
   if (stakesText.length < 20 || /readers want clarity/i.test(stakesText)) {
     rejectionReasons.push('Stakes are too vague');
+  }
+  if (isVagueLikelihoodQuestion(lowerQuestion, entityAnchors)) {
+    rejectionReasons.push('Vague likelihood framing without concrete anchor');
   }
 
   return {
@@ -366,6 +379,31 @@ function getEntityMentions(eventBrief) {
     ...(Array.isArray(eventBrief?.keyEntities) ? eventBrief.keyEntities : []),
   ].map((value) => cleanText(value)).filter(Boolean);
   return Array.from(new Set(values));
+}
+
+function buildEntityAnchors(eventBrief) {
+  const anchors = getEntityMentions(eventBrief)
+    .flatMap((value) => String(value || '').toLowerCase().split(/[^a-z0-9]+/))
+    .map((token) => token.trim())
+    .filter((token) => token.length >= 4);
+  return Array.from(new Set(anchors));
+}
+
+function questionContainsEntityAnchor(questionLower, anchors = []) {
+  if (!questionLower || !anchors.length) return false;
+  return anchors.some((anchor) => questionLower.includes(anchor));
+}
+
+function isVagueLikelihoodQuestion(questionLower, anchors = []) {
+  if (!/^how likely is/i.test(questionLower)) return false;
+  if (questionContainsEntityAnchor(questionLower, anchors)) return false;
+  if (/\b(next|week|month|quarter|year|202\d)\b/.test(questionLower)) return false;
+  return true;
+}
+
+function isBroadQuestionForm(questionLower) {
+  if (!questionLower) return true;
+  return /^(how likely|what happens next|what specific|what are the|what could|what would|which scenario)/i.test(questionLower);
 }
 
 function getEntityScore(eventBrief) {
