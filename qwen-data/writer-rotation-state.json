@@ -1,11 +1,11 @@
 {
-  "totalArticles": 89,
+  "totalArticles": 90,
   "lastReset": null,
   "byWriter": {
     "reporter": {
       "count": 31,
       "lastAssigned": 1774913122490,
-      "streak": 1,
+      "streak": 0,
       "authorCursor": 1,
       "lastAuthorId": "john_smith"
     },
@@ -24,22 +24,14 @@
       "lastAuthorId": "liam_parker"
     },
     "features": {
-      "count": 30,
-      "lastAssigned": 1774912793935,
-      "streak": 0,
-      "authorCursor": 1,
-      "lastAuthorId": "lucas_morris"
+      "count": 31,
+      "lastAssigned": 1774914933854,
+      "streak": 1,
+      "authorCursor": 2,
+      "lastAuthorId": "grace_holloway"
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "features",
-      "timestamp": 1774619389431,
-      "articleType": "report",
-      "beat": "politics",
-      "section": "News",
-      "topic_id": "us-politics"
-    },
     {
       "writerId": "reporter",
       "timestamp": 1774621366112,
@@ -431,6 +423,14 @@
       "beat": "politics",
       "section": "News",
       "topic_id": "us-politics"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774914933854,
+      "articleType": "report",
+      "beat": "sports",
+      "section": "Sports",
+      "topic_id": "transfers-business"
     }
   ]
 }
