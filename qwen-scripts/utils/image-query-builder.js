@@ -20,6 +20,7 @@ const SHORT_ENTITY_ALLOWLIST = new Set([
 const LEAKY_ENTITY_TERMS = new Set([
   'analysis', 'breaking', 'coverage', 'creators', 'platforms', 'economy', 'markets', 'mental', 'health',
   'cybersecurity', 'technology', 'tech', 'sports', 'culture', 'news', 'business', 'world', 'geopolitics',
+  'white', 'black', 'red', 'blue', 'green', 'yellow', 'orange', 'purple', 'brown', 'gray', 'grey',
 ]);
 
 const BROAD_SINGLE_TOKEN_ENTITIES = new Set([

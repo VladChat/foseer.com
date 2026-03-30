@@ -537,7 +537,19 @@ function isLowEvidenceGenericCandidate(candidate = {}, fit = {}, section = '') {
     .toLowerCase();
 
   const genericStockPattern = /\b(camera|lens|photographer|photography|abstract|texture|background|wallpaper|equipment|gear|studio)\b/;
-  return genericStockPattern.test(searchableText);
+  if (genericStockPattern.test(searchableText)) return true;
+
+  const politicalContextPattern = /\b(white house|capitol|congress|senate|administration|president|washington|iran)\b/;
+  if (politicalContextPattern.test(searchableText)) return false;
+
+  const literalHomePattern = /\b(cottage|croft|villa|residential|roof|garden|window|door|summer house|summer cottage|red house|old house|wooden house|facade)\b/;
+  const queryText = String(candidate.searchQuery || '').toLowerCase();
+  const querySuggestsPoliticalContext = politicalContextPattern.test(queryText);
+  if (querySuggestsPoliticalContext && literalHomePattern.test(searchableText)) {
+    return true;
+  }
+
+  return false;
 }
 
 
