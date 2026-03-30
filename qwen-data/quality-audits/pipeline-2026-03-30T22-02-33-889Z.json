@@ -1,0 +1,575 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-03-30T22-02-33-889Z",
+  "started_at": "2026-03-30T22:02:33.889Z",
+  "generated_at": "2026-03-30T22:03:58.522Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "discovery_candidates": 47,
+    "event_clusters": 12,
+    "briefs_normalized": 6,
+    "source_packs_assembled": 12,
+    "publishable_candidates": 1,
+    "selected_topic": "Trans Day of Visibility basketball tournament creates space for trans athletes amid international sports bans",
+    "selected_topics": [
+      "Trans Day of Visibility basketball tournament creates space for trans athletes amid international sports bans"
+    ],
+    "articles_attempted": 1,
+    "articles_published": 1,
+    "news_pool": {
+      "total": 54,
+      "active": 46,
+      "published": 8,
+      "ready_candidates": 3
+    },
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 4,
+        "gdelt": 2,
+        "google": 0
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 4,
+            "fresh_files": 4,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 55073
+          },
+          "gdelt": {
+            "files": 2,
+            "fresh_files": 2,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 11340
+          },
+          "google": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 84630,
+    "ready_candidates": 3,
+    "additional_ready_candidates": 3
+  },
+  "provider_stats": {
+    "mode": "cache_refresh_with_live_quota",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": true,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 4,
+      "gdelt": 2,
+      "google": 0
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+      "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 4,
+          "fresh_files": 4,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 55073
+        },
+        "gdelt": {
+          "files": 2,
+          "fresh_files": 2,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 11340
+        },
+        "google": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14135
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6189
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 285008
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claimMapCreation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "articleDrafting": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "imageSupport": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "publishing": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "localVerification": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 1,
+    "editorial_pass_count": 1,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "Trans Day of Visibility tournament offers court time as bans tighten",
+      "slug": "trans-day-of-visibility-tournament-offers-court-time-as-bans",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "sports",
+          "topic_id": "transfers-business",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 3,
+          "unique_domains": 3,
+          "direct_event_source_count": 3,
+          "independent_event_domains": 3,
+          "source_consistency_score": 5.8,
+          "strong_match_count": 3,
+          "core_source_count": 3,
+          "supporting_source_count": 0,
+          "background_source_count": 4,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 4,
+          "supporting": 1,
+          "background": 7,
+          "signal_only": 1
+        },
+        "publish_ready_sources": [
+          {
+            "title": "Trans Day of Visibility basketball tournament creates space for trans athletes amid international sports bans",
+            "domain": "chicago.suntimes.com",
+            "url": "https://chicago.suntimes.com/lgbtq/2026/03/29/basketball-tournament-makes-space-for-trans-athletes-amid-international-sports-bans",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          },
+          {
+            "title": "Olympic committee bans trans athletes from women's events",
+            "domain": "npr.org",
+            "url": "https://www.npr.org/2026/03/26/nx-s1-5762579/ioc-bans-trans-women-events-genetic-testing",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          },
+          {
+            "title": "Alert: Olympic Committee Steps up to Protect Women, Bans Trans Athletes from Female Events | The Gateway Pundit",
+            "domain": "thegatewaypundit.com",
+            "url": "https://www.thegatewaypundit.com/2026/03/alert-olympic-committee-steps-protect-women-bans-trans/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "Trans Day of Visibility basketball tournament creates space for trans athletes amid international sports bans",
+            "domain": "chicago.suntimes.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": 4,
+            "source_quality_score": 47.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Olympic committee bans trans athletes from women's events",
+            "domain": "npr.org",
+            "page_kind": "article",
+            "same_event_score": 10,
+            "topic_fit_score": 3,
+            "source_quality_score": 16,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Alert: Olympic Committee Steps up to Protect Women, Bans Trans Athletes from Female Events | The Gateway Pundit",
+            "domain": "thegatewaypundit.com",
+            "page_kind": "article",
+            "same_event_score": 6,
+            "topic_fit_score": 3,
+            "source_quality_score": 16,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Athletes train for almost every scenario. But there's a stressor sports ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 7,
+            "source_quality_score": 21.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "Anti-Science NPR Tries to Muddy Waters on Olympics: 'Will Ban Transgender Athletes'",
+            "domain": "newsbusters.org",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 3,
+            "source_quality_score": 12.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Nebrasketball Transfer Portal Tracker: Additions, Departures & Updated Roster for 2026",
+            "domain": "si.com",
+            "page_kind": "official_release",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 16.5,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "What's next for Duke, Tennessee after Elite Eight: Recruits, transfer portal, more",
+            "domain": "espn.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 14.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 10,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "The Leftist No Kings Protest Is in Several Cities Today",
+            "domain": "independentsentinel.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Youre a presenter now , not a Labour minister Ed Balls is told after on - air dust - up with young Jewish campaigner ove",
+            "domain": "dailymail.co.uk",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Washington Drivers Will Soon Carry Blue Envelopes Here Why",
+            "domain": "mega993online.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Jim Cramer Blesses Rigel Pharmaceuticals as a Spec as It Doing Better Than People Realize",
+            "domain": "finance.yahoo.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 3,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": []
+        }
+      },
+      "tags": {
+        "tags": [
+          "Athletes & Culture",
+          "Basketball"
+        ],
+        "tag_slugs": [
+          "athletes-culture",
+          "basketball"
+        ],
+        "primary_topic_tag": "Athletes & Culture",
+        "primary_topic_slug": "athletes-culture",
+        "warnings": [],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "Athletes & Culture",
+            "slug": "athletes-culture",
+            "score": 36,
+            "reason": "Primary topic tag overridden by stronger evidence (Athletes & Culture)",
+            "fallback": false
+          },
+          {
+            "label": "Basketball",
+            "slug": "basketball",
+            "score": 17,
+            "reason": "Theme match score 17",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "athletes-culture",
+              "label": "Athletes & Culture",
+              "type": "topic"
+            },
+            {
+              "slug": "basketball",
+              "label": "Basketball",
+              "type": "theme"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "events-tournaments",
+            "topic_label": "Events & Tournaments",
+            "supported": true,
+            "matched_aliases": [
+              "events",
+              "olympic",
+              "olympics",
+              "ioc"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "fallback",
+        "image_path": "~/assets/images/posts/fallback/foseer-default-cover.svg",
+        "source_url": null,
+        "selection_mode": null,
+        "query_used": null,
+        "relevance_tier": null,
+        "article_relevance_score": null,
+        "asset_quality_score": null,
+        "editorial_fit_score": null,
+        "scene_type": null,
+        "visual_type": null,
+        "entity_hints": [],
+        "geo_hints": [],
+        "queries_tried": [
+          "Trans Day of Visibility basketball photo",
+          "Trans Day of Visibility courtroom photo",
+          "Trans Day of Visibility photo",
+          "Trans Day of Visibility portrait",
+          "global Trans Day of Visibility photo",
+          "Trans Athletes basketball photo",
+          "Trans Athletes courtroom photo",
+          "Trans Athletes photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Trans Day of Visibility basketball photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "6554286",
+            "finalScore": 99,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 97,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Trans Day of Visibility basketball photo",
+          "provider": "pixabay",
+          "providerAssetId": "6554286",
+          "finalScore": 99,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 97,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": true,
+        "semantic": {
+          "provider": "fallback",
+          "query_used": null,
+          "article_relevance_score": 0,
+          "relevance_tier": null,
+          "overlap_ratio": 1,
+          "shared_tokens": [],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/trans-day-of-visibility-tournament-offers-court-time-as-bans.json",
+        "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-30-trans-day-of-visibility-tournament-offers-court-time-as-bans.mdx",
+        "expected_url": "/article/2026-03-30-trans-day-of-visibility-tournament-offers-court-time-as-bans",
+        "verified_url": null
+      }
+    }
+  ]
+}

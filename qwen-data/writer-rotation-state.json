@@ -1,13 +1,13 @@
 {
-  "totalArticles": 86,
+  "totalArticles": 87,
   "lastReset": null,
   "byWriter": {
     "reporter": {
-      "count": 29,
-      "lastAssigned": 1774821743858,
-      "streak": 0,
-      "authorCursor": 3,
-      "lastAuthorId": "daniel_reed"
+      "count": 30,
+      "lastAssigned": 1774908214788,
+      "streak": 1,
+      "authorCursor": 0,
+      "lastAuthorId": "maya_collins"
     },
     "explainer": {
       "count": 13,
@@ -26,20 +26,12 @@
     "features": {
       "count": 29,
       "lastAssigned": 1774902639329,
-      "streak": 2,
+      "streak": 0,
       "authorCursor": 0,
       "lastAuthorId": "chloe_warren"
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "reporter",
-      "timestamp": 1774582263389,
-      "articleType": "report",
-      "beat": "politics",
-      "section": "News",
-      "topic_id": "us-politics"
-    },
     {
       "writerId": "features",
       "timestamp": 1774582335233,
@@ -427,6 +419,14 @@
     {
       "writerId": "features",
       "timestamp": 1774902639329,
+      "articleType": "report",
+      "beat": "sports",
+      "section": "Sports",
+      "topic_id": "transfers-business"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774908214788,
       "articleType": "report",
       "beat": "sports",
       "section": "Sports",
