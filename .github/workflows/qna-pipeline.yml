@@ -2,9 +2,11 @@ name: QnA Pipeline
 
 on:
   workflow_dispatch:
+  
   schedule:
-    - cron: '45 20 * * *'
-
+  - cron: '17 16 * * *'
+    timezone: 'America/Chicago'
+    
 permissions:
   actions: write
   contents: write
