@@ -217,8 +217,12 @@ function hasUsableImagePath(imagePath) {
   if (!normalized) return false;
   if (/^https?:\/\//i.test(normalized) || normalized.startsWith('/')) return true;
   if (normalized.startsWith('~/')) {
-    const localPath = path.resolve(PROJECT_ROOT, normalized.replace(/^~\//, ''));
-    return fs.existsSync(localPath);
+    const relativePath = normalized.replace(/^~\//, '');
+    const localPaths = [
+      path.resolve(PROJECT_ROOT, relativePath),
+      path.resolve(PROJECT_ROOT, 'src', relativePath),
+    ];
+    return localPaths.some((localPath) => fs.existsSync(localPath));
   }
   if (
     normalized.startsWith('src/')

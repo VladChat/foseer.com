@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const POSTS_DIR = path.resolve(process.cwd(), 'src/data/post');
-const FRONTMATTER_RE = /^---\n([\s\S]*?)\n---\n?/;
+const FRONTMATTER_RE = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/;
 const FALLBACK_IMAGE_PATH = '~/assets/images/posts/fallback/foseer-default-cover.svg';
 
 export function repairContentPosts() {
@@ -111,8 +111,12 @@ function isUsableImageValue(imageValue) {
   if (!value) return false;
   if (/^https?:\/\//i.test(value) || value.startsWith('/')) return true;
   if (value.startsWith('~/')) {
-    const fullPath = path.resolve(process.cwd(), value.replace(/^~\//, ''));
-    return fs.existsSync(fullPath);
+    const relativePath = value.replace(/^~\//, '');
+    const fullPaths = [
+      path.resolve(process.cwd(), relativePath),
+      path.resolve(process.cwd(), 'src', relativePath),
+    ];
+    return fullPaths.some((fullPath) => fs.existsSync(fullPath));
   }
   if (
     value.startsWith('src/')
