@@ -10,7 +10,7 @@ on:
         type: string
   schedule:
     - cron: '27 13 * * *'
-    timezone: 'America/Chicago'
+      timezone: 'America/Chicago'
 
 permissions:
   actions: write
