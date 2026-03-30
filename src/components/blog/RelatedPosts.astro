@@ -54,7 +54,7 @@ const currentPagePath = Astro.url?.pathname || '/';
         Get the latest news and analysis delivered to your inbox. Join our community of readers who stay ahead of the curve.
       </p>
       
-      <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" novalidate>
+      <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" novalidate data-source-page="{currentPagePath}">
         <input
           type="email"
           name="email"
@@ -101,7 +101,8 @@ const currentPagePath = Astro.url?.pathname || '/';
   const messageEl = document.getElementById('newsletter-message') as HTMLDivElement;
   const honeypotInput = document.getElementById('newsletter-website') as HTMLInputElement;
 
-  const sourcePage = '{currentPagePath}';
+  // Get source page from data attribute (set by Astro during build)
+  const sourcePage = form.dataset.sourcePage || window.location.pathname;
 
   // Email validation regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
