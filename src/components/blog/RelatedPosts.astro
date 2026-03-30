@@ -100,39 +100,39 @@ const currentPagePath = Astro.url?.pathname || '/';
   const submitBtn = document.getElementById('newsletter-submit') as HTMLButtonElement;
   const messageEl = document.getElementById('newsletter-message') as HTMLDivElement;
   const honeypotInput = document.getElementById('newsletter-website') as HTMLInputElement;
-  
+
   const sourcePage = '{currentPagePath}';
-  
+
   // Email validation regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
+
   function showMessage(text: string, type: 'success' | 'error') {
     messageEl.textContent = text;
     messageEl.classList.remove('hidden', 'text-red-500', 'text-green-600', 'dark:text-green-400', 'dark:text-red-400');
     messageEl.classList.add(type === 'success' ? 'text-green-600 dark:text-green-400' : 'text-red-500 dark:text-red-400');
   }
-  
+
   function hideMessage() {
     messageEl.classList.add('hidden');
   }
-  
+
   async function handleSubmit(e: Event) {
     e.preventDefault();
     hideMessage();
-    
+
     const email = emailInput.value.trim();
-    
+
     // Client-side validation
     if (!email) {
       showMessage('Please enter your email address.', 'error');
       return;
     }
-    
+
     if (!emailRegex.test(email)) {
       showMessage('Please enter a valid email address.', 'error');
       return;
     }
-    
+
     // Check honeypot (spam protection)
     if (honeypotInput.value) {
       // Silently succeed - don't let spammers know they're caught
@@ -140,17 +140,17 @@ const currentPagePath = Astro.url?.pathname || '/';
       emailInput.value = '';
       return;
     }
-    
+
     // Disable button during submission
     submitBtn.disabled = true;
     submitBtn.textContent = 'Subscribing...';
-    
+
     try {
       // Import Supabase client dynamically
       const { subscribeToNewsletter } = await import('~/utils/supabase');
-      
+
       const result = await subscribeToNewsletter(email, sourcePage);
-      
+
       if (result.success) {
         showMessage(result.message, 'success');
         emailInput.value = '';
@@ -158,16 +158,16 @@ const currentPagePath = Astro.url?.pathname || '/';
         showMessage(result.message, 'error');
       }
     } catch (err) {
-      console.error('Newsletter submission error:', err);
+      console.error('[Newsletter Form] Submission error:', err);
       showMessage('Unable to process subscription. Please try again.', 'error');
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = 'Subscribe';
     }
   }
-  
+
   form.addEventListener('submit', handleSubmit);
-  
+
   // Clear message on input
   emailInput.addEventListener('input', hideMessage);
 </script>

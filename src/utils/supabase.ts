@@ -10,11 +10,9 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 
 // Validate required environment variables
 if (!supabaseUrl || !supabaseAnonKey) {
-  // In development, warn but don't crash
-  if (import.meta.env.DEV) {
-    console.warn('Supabase credentials not configured. Newsletter form will not work.');
-    console.warn('Set PUBLIC_SUPABASE_URL and PUBLIC_SUPABASE_PUBLISHABLE_KEY in your .env file.');
-  }
+  console.error('[Supabase Error] Missing required environment variables');
+  console.error('[Supabase Error] PUBLIC_SUPABASE_URL:', supabaseUrl ? 'present' : 'MISSING');
+  console.error('[Supabase Error] PUBLIC_SUPABASE_PUBLISHABLE_KEY:', supabaseAnonKey ? 'present' : 'MISSING');
 }
 
 // Create Supabase client for client-side operations
@@ -44,6 +42,7 @@ export async function subscribeToNewsletter(
   sourcePage?: string
 ): Promise<{ success: boolean; message: string; isDuplicate?: boolean }> {
   if (!supabase) {
+    console.error('[Newsletter Error] Supabase client is null - check environment variables');
     return {
       success: false,
       message: 'Newsletter service is not configured.',
@@ -69,9 +68,16 @@ export async function subscribeToNewsletter(
       .single();
 
     if (error) {
+      // Log full error details for debugging
+      console.error('[Newsletter Error] Insert failed:', {
+        message: error.message,
+        code: error.code,
+        details: error.details,
+        hint: error.hint,
+      });
+
       // Check for unique constraint violation (duplicate email)
-      if (error.code === '23505' || error.message.includes('duplicate')) {
-        // Return neutral success for duplicates - don't expose that email exists
+      if (error.code === '23505' || error.message.includes('duplicate') || error.message.includes('unique')) {
         return {
           success: true,
           message: 'Thanks for subscribing!',
@@ -79,8 +85,7 @@ export async function subscribeToNewsletter(
         };
       }
 
-      // Log error for debugging but return generic message
-      console.error('Newsletter subscription error:', error);
+      // Return user-friendly error message
       return {
         success: false,
         message: 'Unable to process subscription. Please try again.',
@@ -89,11 +94,11 @@ export async function subscribeToNewsletter(
 
     return {
       success: true,
-      message: 'Thanks for subscribing! Check your inbox for confirmation.',
+      message: 'Thanks for subscribing!',
       isDuplicate: false,
     };
   } catch (err) {
-    console.error('Newsletter subscription unexpected error:', err);
+    console.error('[Newsletter Error] Unexpected error:', err);
     return {
       success: false,
       message: 'Unable to process subscription. Please try again.',

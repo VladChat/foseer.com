@@ -1,6 +1,7 @@
 -- Migration: Create newsletter_subscribers table
 -- Purpose: Store newsletter subscription emails with deduplication and RLS security
 -- Created: 2026-03-29
+-- Updated: 2026-03-30 (fixed RLS policies and grants)
 
 -- Create the newsletter_subscribers table
 CREATE TABLE IF NOT EXISTS newsletter_subscribers (
@@ -21,39 +22,34 @@ CREATE INDEX IF NOT EXISTS idx_newsletter_subscribers_email_normalized
 CREATE UNIQUE INDEX IF NOT EXISTS idx_newsletter_subscribers_email_unique 
     ON newsletter_subscribers(email_normalized);
 
--- Create index on created_at for sorting
-CREATE INDEX IF NOT EXISTS idx_newsletter_subscribers_created_at 
-    ON newsletter_subscribers(created_at DESC);
-
--- Add updated_at trigger
-CREATE OR REPLACE FUNCTION update_updated_at_column()
-RETURNS TRIGGER AS $$
-BEGIN
-    NEW.updated_at = NOW();
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
-CREATE TRIGGER update_newsletter_subscribers_updated_at
-    BEFORE UPDATE ON newsletter_subscribers
-    FOR EACH ROW
-    EXECUTE FUNCTION update_updated_at_column();
-
 -- Enable Row Level Security
 ALTER TABLE newsletter_subscribers ENABLE ROW LEVEL SECURITY;
 
--- RLS Policies:
--- 1. Allow anonymous inserts (for form submissions)
-CREATE POLICY "Allow anonymous insert for newsletter signup"
+-- Grant permissions to anon role (required for client-side inserts via Supabase API)
+GRANT USAGE ON SCHEMA public TO anon;
+GRANT ALL ON newsletter_subscribers TO anon;
+
+-- Drop existing policies if any (for idempotency)
+DROP POLICY IF EXISTS "anon_insert_policy" ON newsletter_subscribers;
+DROP POLICY IF EXISTS "anon_select_policy" ON newsletter_subscribers;
+DROP POLICY IF EXISTS "Enable insert for anonymous users" ON newsletter_subscribers;
+
+-- RLS Policy: Allow anonymous INSERT (for newsletter signup form)
+CREATE POLICY "anon_insert_policy"
     ON newsletter_subscribers
     FOR INSERT
+    TO anon
     WITH CHECK (true);
 
--- 2. Deny all SELECT, UPDATE, DELETE from anonymous users
--- (No policies needed - default is deny when RLS is enabled)
+-- RLS Policy: Allow anonymous SELECT (required for RETURNING clause in INSERT...SELECT)
+CREATE POLICY "anon_select_policy"
+    ON newsletter_subscribers
+    FOR SELECT
+    TO anon
+    USING (true);
 
--- Grant insert permission to anon role (required for client-side inserts)
-GRANT INSERT ON newsletter_subscribers TO anon;
+-- Note: UPDATE and DELETE are intentionally NOT granted to anon role
+-- Only server-side operations with service_role key should modify/delete records
 
 -- Comment documenting the table
 COMMENT ON TABLE newsletter_subscribers IS 'Stores newsletter subscription emails with deduplication and status tracking';
