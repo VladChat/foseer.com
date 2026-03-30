@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-30T20:31:19.774Z",
+  "event_id": "evt-2026-03-30-sports-general-global",
+  "cluster_id": "evt-2026-03-30-sports-general-global",
+  "article_type": "report",
+  "title": "Trans Day of Visibility tournament offers rare court time for trans athletes",
+  "slug": "trans-day-of-visibility-tournament-offers-rare-court-time-fo",
+  "canonical_slug": "2026-03-30-trans-day-of-visibility-tournament-offers-rare-court-time-fo",
+  "expected_url": "/article/2026-03-30-trans-day-of-visibility-tournament-offers-rare-court-time-fo",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-30-trans-day-of-visibility-tournament-offers-rare-court-time-fo.mdx",
+  "published_at": "2026-03-30T20:31:19.772Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "events-tournaments",
+  "topic_label": "Events & Tournaments",
+  "subsection": "Transfers & Business",
+  "topics": [
+    "Transfers & Business"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/27866609/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/27866609/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/basketball-hoop-with-ball-in-the-air-27866609/",
+    "asset_key": "pexels:27866609",
+    "alt_text": "A basketball hoop on a playground during the day with clear blue sky.",
+    "selection_mode": "provider_download_new:pexels:strong",
+    "query_used": "Trans Day of Visibility basketball photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Athletes & Culture",
+    "Basketball"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Trans Day of Visibility basketball tournament creates space for trans athletes amid international sports bans",
+        "url": "https://chicago.suntimes.com/lgbtq/2026/03/29/basketball-tournament-makes-space-for-trans-athletes-amid-international-sports-bans",
+        "domain": "chicago.suntimes.com"
+      },
+      {
+        "title": "Olympic committee bans trans athletes from women's events",
+        "url": "https://www.npr.org/2026/03/26/nx-s1-5762579/ioc-bans-trans-women-events-genetic-testing",
+        "domain": "npr.org"
+      },
+      {
+        "title": "Alert: Olympic Committee Steps up to Protect Women, Bans Trans Athletes from Female Events | The Gateway Pundit",
+        "url": "https://www.thegatewaypundit.com/2026/03/alert-olympic-committee-steps-protect-women-bans-trans/",
+        "domain": "thegatewaypundit.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "athletes-culture",
+          "label": "Athletes & Culture",
+          "type": "topic"
+        },
+        {
+          "slug": "basketball",
+          "label": "Basketball",
+          "type": "theme"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "events-tournaments",
+        "topic_label": "Events & Tournaments",
+        "supported": true,
+        "matched_aliases": [
+          "events",
+          "olympic",
+          "olympics",
+          "ioc"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Trans Day of Visibility basketball photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "trans",
+        "day",
+        "visibility",
+        "basketball"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

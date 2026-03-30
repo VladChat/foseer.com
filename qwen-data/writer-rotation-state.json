@@ -1,5 +1,5 @@
 {
-  "totalArticles": 85,
+  "totalArticles": 86,
   "lastReset": null,
   "byWriter": {
     "reporter": {
@@ -24,22 +24,14 @@
       "lastAuthorId": "liam_parker"
     },
     "features": {
-      "count": 28,
-      "lastAssigned": 1774901980553,
-      "streak": 1,
-      "authorCursor": 3,
-      "lastAuthorId": "owen_foster"
+      "count": 29,
+      "lastAssigned": 1774902639329,
+      "streak": 2,
+      "authorCursor": 0,
+      "lastAuthorId": "chloe_warren"
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "reporter",
-      "timestamp": 1774576882156,
-      "articleType": "report",
-      "beat": "international affairs",
-      "section": "News",
-      "topic_id": "world-geopolitics"
-    },
     {
       "writerId": "reporter",
       "timestamp": 1774582263389,
@@ -431,6 +423,14 @@
       "beat": "politics",
       "section": "News",
       "topic_id": "us-politics"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774902639329,
+      "articleType": "report",
+      "beat": "sports",
+      "section": "Sports",
+      "topic_id": "transfers-business"
     }
   ]
 }

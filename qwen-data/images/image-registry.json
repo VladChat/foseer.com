@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-03-30T13:53:38.236Z",
+  "updatedAt": "2026-03-30T20:31:19.688Z",
   "assets": [
     {
       "assetKey": "legacy:7-social-media-trends-you-need-to-know-in-2026",
@@ -7100,9 +7100,72 @@
       "useCount": 1,
       "status": "ready",
       "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pexels:27866609",
+      "provider": "pexels",
+      "providerAssetId": "27866609",
+      "sourcePageUrl": "https://www.pexels.com/photo/basketball-hoop-with-ball-in-the-air-27866609/",
+      "sourceDownloadUrl": "https://images.pexels.com/photos/27866609/pexels-photo-27866609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "authorName": "Justiniano Adriano",
+      "authorUrl": "https://www.pexels.com/@justinianoadriano",
+      "license": "Pexels License",
+      "altText": "A basketball hoop on a playground during the day with clear blue sky.",
+      "width": 5184,
+      "height": 3456,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pexels/27866609/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pexels/27866609/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pexels/27866609/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "Sports"
+      ],
+      "queryHistory": [
+        "Trans Day of Visibility basketball photo"
+      ],
+      "tags": [
+        "transfers-business",
+        "Unspecified",
+        "A basketball hoop on a playground during the day with clear blue sky."
+      ],
+      "topicHints": [
+        "transfers-business"
+      ],
+      "entityHints": [
+        "basketball",
+        "hoop",
+        "playground",
+        "during",
+        "clear",
+        "blue",
+        "sports",
+        "transfers-business"
+      ],
+      "sceneType": "stadium",
+      "geoHints": [],
+      "visualType": "photo",
+      "editorialFitScore": 100,
+      "firstSeenAt": "2026-03-30T20:31:19.687Z",
+      "lastFetchedAt": "2026-03-30T20:31:19.687Z",
+      "lastUsedAt": "2026-03-30T20:31:19.687Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
     }
   ],
   "usage": [
+    {
+      "assetKey": "pexels:27866609",
+      "articleSlug": "trans-day-of-visibility-tournament-offers-rare-court-time-fo",
+      "articleTitle": "Trans Day of Visibility tournament offers rare court time for trans athletes",
+      "section": "Sports",
+      "topicId": "transfers-business",
+      "query": "Trans Day of Visibility basketball photo",
+      "usedAt": "2026-03-30T20:31:19.687Z",
+      "selectionMode": "provider_download_new:pexels:strong"
+    },
     {
       "assetKey": "pixabay:2546104",
       "articleSlug": "why-trump-s-maha-base-is-restless-over-undelivered-pharma-cr",
