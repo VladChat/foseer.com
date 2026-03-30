@@ -9,11 +9,31 @@ const GENERIC_QUESTION_PATTERNS = [
   /^what does this mean\??$/i,
   /^what happens\??$/i,
   /^what next\??$/i,
+  /^how likely is the reported move/i,
+  /^what happens next after .+\?$/i,
+];
+
+const GENERIC_QUESTION_PHRASES = [
+  'reported move',
+  'this development',
+  'this situation',
+  'coming days',
+  'what happens next after',
+];
+
+const RUMOR_TEXT_PATTERNS = [
+  /\brumou?r\b/i,
+  /\bspeculat/i,
+  /\bunconfirmed\b/i,
+  /\blinked with\b/i,
+  /\btransfer\b/i,
+  /\bgossip\b/i,
+  /\binsider\b/i,
 ];
 
 export async function extractQuestionCandidate(eventBrief, openAiApiKey, options = {}) {
   const fallback = buildFallbackQuestionCandidate(eventBrief);
-  const model = options.model || process.env.OPENAI_QUESTION_MODEL || process.env.OPENAI_WRITER_MODEL || 'gpt-5.1-mini';
+  const model = options.model || process.env.OPENAI_WRITER_MODEL || 'gpt-5.1';
 
   if (!openAiApiKey) {
     return finalizeQuestionCandidate(fallback, eventBrief, {
@@ -90,7 +110,7 @@ export async function extractQuestionCandidates(briefs = [], openAiApiKey, optio
 
 export function selectBestQuestionCandidate(questionCandidates = []) {
   return [...(Array.isArray(questionCandidates) ? questionCandidates : [])]
-    .filter((candidate) => candidate?.valid !== false)
+    .filter((candidate) => candidate?.valid !== false && candidate?.selection_eligible !== false)
     .sort((left, right) => {
       const scoreDiff = Number(right?.selection_score || 0) - Number(left?.selection_score || 0);
       if (scoreDiff !== 0) return scoreDiff;
@@ -151,12 +171,16 @@ OUTPUT JSON ONLY:
 
 function finalizeQuestionCandidate(candidate, eventBrief, meta = {}) {
   const question = normalizeQuestion(candidate?.question);
-  const valid = isValidQuestion(question);
+  const quality = evaluateQuestionCandidateQuality({ candidate, eventBrief, question });
   const publishabilityScore = Number(eventBrief?.publishabilityScore || 0);
+  const evidenceScore = getEvidenceScore(eventBrief);
+  const entityScore = getEntityScore(eventBrief);
   const selectionScore = (Number(candidate?.score || 0) * 2)
     + publishabilityScore
     + Math.min(4, Number(eventBrief?.cluster_size || 0) || 0)
-    + Math.min(3, Number(eventBrief?.article_rich_count || 0) || 0);
+    + Math.min(3, Number(eventBrief?.article_rich_count || 0) || 0)
+    + evidenceScore
+    + entityScore;
 
   return {
     signal: cleanText(candidate?.signal) || cleanText(eventBrief?.title) || 'Untitled signal',
@@ -168,8 +192,10 @@ function finalizeQuestionCandidate(candidate, eventBrief, meta = {}) {
     question_type: normalizeQuestionType(candidate?.question_type || candidate?.questionType) || 'what_happens_next',
     score: clampScore(candidate?.score, 6),
     reason: cleanText(candidate?.reason) || 'Fallback-ranked question candidate',
-    valid,
-    invalid_reason: valid ? null : 'Generic or malformed question',
+    valid: quality.valid,
+    invalid_reason: quality.invalid_reason,
+    rejection_reasons: quality.rejection_reasons,
+    selection_eligible: quality.selection_eligible,
     provider: meta.provider || 'fallback',
     model: meta.model || null,
     note: meta.note || null,
@@ -190,13 +216,13 @@ function buildFallbackQuestionCandidate(eventBrief) {
   const developmentText = `${title} ${cleanText(eventBrief?.whatHappened)} ${why}`.toLowerCase();
 
   let questionType = 'what_happens_next';
-  let question = `What happens next after ${stripTrailingPunctuation(title)}?`;
+  let question = `Which concrete decision or action is most likely to be confirmed next in ${stripTrailingPunctuation(title)}?`;
   let uncertainty = 'the next confirmed move or outcome';
   let stakes = why;
 
   if (/(may|might|could|set to|expected|prepar|plan|consider|weigh|pending|vote|talks|deadline|review)/i.test(developmentText)) {
     questionType = 'how_likely';
-    question = 'How likely is the reported move to become official in the coming days?';
+    question = `How likely is ${stripTrailingPunctuation(title)} to be formally confirmed in the next week?`;
     uncertainty = 'whether the reported move becomes a concrete action';
   } else if (/(market|stocks|bond|fed|rates|inflation|tariff|trade|economy|housing|mortgage|bitcoin|crypto)/i.test(developmentText)) {
     questionType = 'impact';
@@ -283,6 +309,77 @@ function isValidQuestion(question) {
   if (!question) return false;
   if (question.split(/\s+/).length < 5) return false;
   return !GENERIC_QUESTION_PATTERNS.some((pattern) => pattern.test(question.trim()));
+}
+
+function evaluateQuestionCandidateQuality({ candidate, eventBrief, question }) {
+  const rejectionReasons = [];
+  const combinedText = [
+    question,
+    cleanText(candidate?.signal),
+    cleanText(candidate?.event),
+    cleanText(candidate?.stakes),
+    cleanText(eventBrief?.title),
+    cleanText(eventBrief?.whatHappened),
+  ].join(' ');
+  const lowerQuestion = question.toLowerCase();
+  const publishabilityScore = Number(eventBrief?.publishabilityScore || 0);
+  const articleRichCount = Number(eventBrief?.article_rich_count || 0);
+  const entityCount = getEntityMentions(eventBrief).length;
+  const stakesText = cleanText(candidate?.stakes);
+
+  if (!isValidQuestion(question)) {
+    rejectionReasons.push('Generic or malformed question');
+  }
+
+  if (GENERIC_QUESTION_PHRASES.some((phrase) => lowerQuestion.includes(phrase))) {
+    rejectionReasons.push('Question is too generic');
+  }
+
+  if (RUMOR_TEXT_PATTERNS.some((pattern) => pattern.test(combinedText))) {
+    rejectionReasons.push('Rumor-like or gossip-like framing detected');
+  }
+
+  if (publishabilityScore < 5 && articleRichCount < 1) {
+    rejectionReasons.push('Low evidence brief');
+  }
+
+  if (entityCount === 0) {
+    rejectionReasons.push('No concrete entities in brief');
+  }
+
+  if (stakesText.length < 20 || /readers want clarity/i.test(stakesText)) {
+    rejectionReasons.push('Stakes are too vague');
+  }
+
+  return {
+    valid: rejectionReasons.length === 0,
+    selection_eligible: rejectionReasons.length === 0,
+    invalid_reason: rejectionReasons[0] || null,
+    rejection_reasons: rejectionReasons,
+  };
+}
+
+function getEntityMentions(eventBrief) {
+  const values = [
+    ...(Array.isArray(eventBrief?.involvedParties) ? eventBrief.involvedParties : []),
+    ...(Array.isArray(eventBrief?.entities) ? eventBrief.entities : []),
+    ...(Array.isArray(eventBrief?.keyEntities) ? eventBrief.keyEntities : []),
+  ].map((value) => cleanText(value)).filter(Boolean);
+  return Array.from(new Set(values));
+}
+
+function getEntityScore(eventBrief) {
+  return Math.min(2, getEntityMentions(eventBrief).length);
+}
+
+function getEvidenceScore(eventBrief) {
+  const publishabilityScore = Number(eventBrief?.publishabilityScore || 0);
+  const articleRichCount = Number(eventBrief?.article_rich_count || 0);
+  let score = 0;
+  if (publishabilityScore >= 6) score += 2;
+  if (publishabilityScore >= 8) score += 1;
+  if (articleRichCount >= 2) score += 2;
+  return score;
 }
 
 function stripTrailingPunctuation(value) {

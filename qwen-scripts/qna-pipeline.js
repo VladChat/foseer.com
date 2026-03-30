@@ -16,7 +16,7 @@ import { validatePrePublishGraph, buildCanonicalPublishPayload, buildPublishMani
 import { mergeDiscoveredNews, mergeBriefsIntoPool, getSelectableBriefs, getReadySelectableBriefs, dedupeBriefCandidates, markBriefSelected, markBriefPublished, getNewsPoolStats } from './utils/news-pool.js';
 import { getProviderStats } from './utils/api-clients.js';
 import { writeQualityAuditRun } from './utils/quality-audit.js';
-import { extractQuestionCandidates, selectBestQuestionCandidate } from './question-extractor.js';
+import { extractQuestionCandidates } from './question-extractor.js';
 
 loadProjectEnv();
 
@@ -53,10 +53,14 @@ export async function runQnaPipeline(options = {}) {
     stages: {},
     artifacts: {},
     hard_blocker: null,
+    rejection_report: {
+      pre_selection: [],
+      source_pack: [],
+    },
   };
 
   const candidateLimit = Math.max(4, Number(options.candidateLimit || process.env.QNA_BRIEF_CANDIDATE_LIMIT || 8));
-  const sourcePackTryLimit = Math.max(1, Number(options.sourcePackTryLimit || process.env.QNA_SOURCE_PACK_TRY_LIMIT || 3));
+  const sourcePackTryLimit = Math.max(1, Number(options.sourcePackTryLimit || process.env.QNA_SOURCE_PACK_TRY_LIMIT || candidateLimit));
 
   let briefs = loadSharedBriefCandidates(candidateLimit);
   result.stats.brief_candidates = briefs.length;
@@ -79,22 +83,59 @@ export async function runQnaPipeline(options = {}) {
   }
 
   const questionCandidates = await extractQuestionCandidates(briefs, openAiApiKey, {});
+  const extractionModels = Array.from(new Set(questionCandidates.map((candidate) => candidate.model).filter(Boolean)));
+  console.log(`[qna-pipeline] Question extraction model(s): ${extractionModels.length > 0 ? extractionModels.join(', ') : 'fallback-only'}`);
   result.stats.question_candidates = questionCandidates.length;
   result.stages.question_extraction = {
-    success: questionCandidates.some((candidate) => candidate.valid),
+    success: questionCandidates.some((candidate) => candidate.selection_eligible),
     count: questionCandidates.length,
     valid_count: questionCandidates.filter((candidate) => candidate.valid).length,
+    eligible_count: questionCandidates.filter((candidate) => candidate.selection_eligible).length,
+    models: extractionModels,
   };
 
   const questionArtifactPath = writeQuestionArtifacts(runId, questionCandidates);
   result.artifacts.question_candidates = questionArtifactPath;
 
-  const rankedQuestions = [...questionCandidates]
-    .filter((candidate) => candidate.valid)
+  const eligibleQuestions = [];
+  for (const candidate of questionCandidates) {
+    const rejectionReasons = [];
+    if (candidate.valid === false) {
+      rejectionReasons.push(candidate.invalid_reason || 'Candidate failed question validation');
+    }
+    if (candidate.selection_eligible === false) {
+      rejectionReasons.push(...(Array.isArray(candidate.rejection_reasons) ? candidate.rejection_reasons : ['Candidate not selection eligible']));
+    }
+
+    if (rejectionReasons.length > 0) {
+      const rejection = {
+        question: candidate.question,
+        brief_title: candidate.briefTitle,
+        provider: candidate.provider,
+        model: candidate.model,
+        reasons: Array.from(new Set(rejectionReasons)),
+      };
+      result.rejection_report.pre_selection.push(rejection);
+      console.log(`[qna-pipeline] Rejecting candidate before source-pack :: ${candidate.question} :: ${rejection.reasons.join(' | ')}`);
+      continue;
+    }
+
+    console.log(`[qna-pipeline] Candidate eligible for source-pack :: ${candidate.question} :: score=${candidate.selection_score} :: provider=${candidate.provider}${candidate.model ? ` :: model=${candidate.model}` : ''}`);
+    eligibleQuestions.push(candidate);
+  }
+
+  const rankedQuestions = [...eligibleQuestions]
     .sort((left, right) => Number(right.selection_score || 0) - Number(left.selection_score || 0));
 
+  result.stages.question_filtering = {
+    success: rankedQuestions.length > 0,
+    total_candidates: questionCandidates.length,
+    eligible_candidates: rankedQuestions.length,
+    rejected_candidates: result.rejection_report.pre_selection,
+  };
+
   if (rankedQuestions.length === 0) {
-    result.hard_blocker = 'Question extraction produced no valid candidates';
+    result.hard_blocker = 'No viable question candidates after quality filtering';
     return finalizeRun(result, questionCandidates, null, startTime);
   }
 
@@ -104,6 +145,7 @@ export async function runQnaPipeline(options = {}) {
   for (const questionCandidate of sourcePackAttemptQuestions) {
     result.stats.source_pack_attempts += 1;
     const brief = questionCandidate.brief;
+    console.log(`[qna-pipeline] Source-pack attempt #${result.stats.source_pack_attempts} :: ${questionCandidate.question} :: score=${questionCandidate.selection_score}`);
     try {
       const sourcePack = await assembleSourcePack({
         ...brief,
@@ -130,8 +172,20 @@ export async function runQnaPipeline(options = {}) {
           passes: false,
           notes: sourcePack.gateNotes || [],
         };
+        result.rejection_report.source_pack.push({
+          question: questionCandidate.question,
+          brief_title: questionCandidate.briefTitle,
+          reasons: sourcePack.gateNotes || ['Source-pack gate failed'],
+        });
+        console.log(`[qna-pipeline] Source-pack rejected :: ${questionCandidate.question} :: ${(sourcePack.gateNotes || []).join(' | ')}`);
         continue;
       }
+
+      questionCandidate.source_pack_gate = {
+        passes: true,
+        notes: [],
+      };
+      console.log(`[qna-pipeline] Source-pack passed :: ${questionCandidate.question}`);
 
       selected = {
         brief,
@@ -144,6 +198,12 @@ export async function runQnaPipeline(options = {}) {
         passes: false,
         notes: [`Source-pack assembly error: ${error.message}`],
       };
+      result.rejection_report.source_pack.push({
+        question: questionCandidate.question,
+        brief_title: questionCandidate.briefTitle,
+        reasons: questionCandidate.source_pack_gate.notes,
+      });
+      console.log(`[qna-pipeline] Source-pack error :: ${questionCandidate.question} :: ${error.message}`);
     }
   }
 
@@ -151,10 +211,11 @@ export async function runQnaPipeline(options = {}) {
     success: !!selected,
     attempted: sourcePackAttemptQuestions.length,
     selected_question: selected?.questionCandidate?.question || null,
+    rejected_candidates: result.rejection_report.source_pack,
   };
 
   if (!selected) {
-    result.hard_blocker = 'No question candidate passed source-pack assembly';
+    result.hard_blocker = 'No question candidate passed source-pack assembly (see rejection_report)';
     return finalizeRun(result, questionCandidates, null, startTime);
   }
 
@@ -390,7 +451,12 @@ function writeQuestionArtifacts(runId, questionCandidates) {
       stakes: candidate.stakes,
       time_horizon: candidate.time_horizon,
       valid: candidate.valid,
+      selection_eligible: candidate.selection_eligible,
+      invalid_reason: candidate.invalid_reason || null,
+      rejection_reasons: Array.isArray(candidate.rejection_reasons) ? candidate.rejection_reasons : [],
       provider: candidate.provider,
+      model: candidate.model || null,
+      note: candidate.note || null,
       poolIdentityKey: candidate.poolIdentityKey,
       source_pack_gate: candidate.source_pack_gate || null,
     })),
@@ -425,19 +491,6 @@ function finalizeRun(result, questionCandidates = [], selected = null, startTime
 
   result.artifacts.quality_audit = auditPath;
   result.artifacts.latest_question_candidates = path.resolve(QUESTIONS_DIR, 'latest-question-candidates.json');
-  if (!result.selected_question) {
-    const fallbackSelection = selectBestQuestionCandidate(questionCandidates);
-    if (fallbackSelection) {
-      result.selected_question = {
-        question: fallbackSelection.question,
-        question_type: fallbackSelection.question_type,
-        score: fallbackSelection.score,
-        selection_score: fallbackSelection.selection_score,
-        signal: fallbackSelection.signal,
-        brief_title: fallbackSelection.briefTitle,
-      };
-    }
-  }
   return result;
 }
 
