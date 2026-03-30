@@ -454,9 +454,13 @@ function resolveQuestionArticleType(questionCandidate) {
 }
 
 function loadSharedBriefCandidates(limit) {
-  const readyBriefs = getReadySelectableBriefs({ limit, includeSelected: true });
-  const poolBriefs = getSelectableBriefs({ limit, prioritizeReady: true, readyBoost: 10 });
-  return dedupeBriefCandidates([...readyBriefs, ...poolBriefs]).slice(0, limit);
+  const wideLimit = Math.max(limit * 3, 24);
+  const readyBriefs = getReadySelectableBriefs({ limit: wideLimit, includeSelected: false });
+  const poolBriefs = getSelectableBriefs({ limit: wideLimit, prioritizeReady: true, readyBoost: 8 });
+  const merged = dedupeBriefCandidates([...readyBriefs, ...poolBriefs])
+    .filter(isLikelyViableBrief)
+    .sort((left, right) => Number(right.selectionScore || 0) - Number(left.selectionScore || 0));
+  return merged.slice(0, Math.max(limit, 12));
 }
 
 async function refreshSharedDiscoveryCache({ braveApiKey, googleApiKey, googleCx, openAiApiKey, candidateLimit }) {
@@ -521,6 +525,15 @@ function writeQuestionArtifacts(runId, questionCandidates) {
   fs.writeFileSync(filePath, JSON.stringify(payload, null, 2), 'utf-8');
   fs.writeFileSync(path.resolve(QUESTIONS_DIR, 'latest-question-candidates.json'), JSON.stringify(payload, null, 2), 'utf-8');
   return filePath;
+}
+
+function isLikelyViableBrief(brief) {
+  const publishabilityScore = Number(brief?.publishabilityScore || 0);
+  const articleRichCount = Number(brief?.article_rich_count || 0);
+  const sourceCount = Array.isArray(brief?.sourceUrls) ? brief.sourceUrls.length : 0;
+  if (publishabilityScore >= 6) return true;
+  if (articleRichCount >= 2) return true;
+  return sourceCount >= 2 && publishabilityScore >= 5;
 }
 
 async function screenBriefSourcePackViability(briefs = [], { options = {}, braveApiKey, googleApiKey, googleCx } = {}) {
