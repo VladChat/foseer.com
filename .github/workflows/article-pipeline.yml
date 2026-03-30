@@ -6,10 +6,10 @@ on:
       max_articles_per_run:
         description: 'How many articles to attempt in one run (1-5)'
         required: false
-        default: '2'
+        default: '3'
         type: string
   schedule:
-    - cron: '27 16 * * *'
+    - cron: '27 6 * * *'
       timezone: 'America/Chicago'
 
 permissions:
