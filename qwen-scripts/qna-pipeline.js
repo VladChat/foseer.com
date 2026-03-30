@@ -375,19 +375,21 @@ export async function runQnaPipeline(options = {}) {
 }
 
 function buildQuestionDraftBrief(brief, questionCandidate) {
+  const question = String(questionCandidate?.question || '').trim();
+  const uncertainty = String(questionCandidate?.uncertainty || '').trim();
+  const stakes = String(questionCandidate?.stakes || '').trim();
+  const readerQuestionLine = question ? `Reader question: ${question}` : '';
+  const focusLine = [uncertainty && `Core uncertainty: ${uncertainty}`, stakes && `Stakes: ${stakes}`].filter(Boolean).join(' ');
+  const mergedWhatHappened = [brief?.whatHappened, readerQuestionLine].filter(Boolean).join(' ');
+  const mergedWhyItMatters = [brief?.whyItMatters, focusLine].filter(Boolean).join(' ');
+
   return {
     ...brief,
     articleType: resolveQuestionArticleType(questionCandidate),
-    questionIntent: {
-      question: questionCandidate.question,
-      question_type: questionCandidate.question_type,
-      uncertainty: questionCandidate.uncertainty,
-      stakes: questionCandidate.stakes,
-      time_horizon: questionCandidate.time_horizon,
-      signal: questionCandidate.signal,
-      reason: questionCandidate.reason,
-      score: questionCandidate.score,
-    },
+    title: question ? `${brief?.title || 'Developing story'} — ${question}` : brief?.title,
+    whatHappened: mergedWhatHappened || brief?.whatHappened || brief?.title,
+    whyItMatters: mergedWhyItMatters || brief?.whyItMatters,
+    summary: [readerQuestionLine, focusLine].filter(Boolean).join(' ') || brief?.summary || brief?.whyItMatters || brief?.whatHappened,
   };
 }
 
