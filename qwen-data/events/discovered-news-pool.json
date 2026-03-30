@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T13:53:01.358Z",
+  "updatedAt": "2026-03-30T14:52:05.222Z",
   "items": [
     {
       "identityKey": "event:news:sustainable business news latest eco headlines reuters",
@@ -132,7 +132,7 @@
     {
       "identityKey": "event:ai-big-tech:ai artificial intelligence the guardian",
       "item": {
-        "id": "google-sec-1774746158317-5",
+        "id": "google-sec-1774882325189-5",
         "title": "AI (artificial intelligence) | The Guardian",
         "summary": "3 hours ago ... At last, David has landed a double punch on the tech Goliaths. Now to hit them even harder · Wikipedia bans AI-generated content in its online encyclopedia.",
         "whyItMatters": "",
@@ -144,7 +144,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-29T01:02:38.320Z",
+        "discoveredAt": "2026-03-30T14:52:05.191Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:culture",
@@ -168,14 +168,14 @@
         "discoveryScore": 14.4,
         "eventKey": "ai-big-tech:ai artificial intelligence the guardian"
       },
-      "discoveredAt": "2026-03-29T01:02:38.320Z",
-      "lastSeenAt": "2026-03-29T01:03:14.690Z",
-      "expiresAt": "2026-03-31T01:03:14.689Z"
+      "discoveredAt": "2026-03-30T14:52:05.191Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:news:latest news sport and opinion from the guardian",
       "item": {
-        "id": "google-sec-1774746158330-9",
+        "id": "google-sec-1774882325198-9",
         "title": "Latest news, sport and opinion from the Guardian",
         "summary": "12 hours ago ... US-Israel war on Iran expands as Yemen's Houthis launch first attack since conflict began. Missile traces launched from Yemen at Israel sighted in the sky over ...",
         "whyItMatters": "",
@@ -193,7 +193,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-29T01:02:38.333Z",
+        "discoveredAt": "2026-03-30T14:52:05.200Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:culture",
@@ -215,9 +215,9 @@
         "discoveryScore": 14.2,
         "eventKey": "news:latest news sport and opinion from the guardian"
       },
-      "discoveredAt": "2026-03-29T01:02:38.333Z",
-      "lastSeenAt": "2026-03-29T01:03:14.690Z",
-      "expiresAt": "2026-03-31T01:03:14.689Z"
+      "discoveredAt": "2026-03-30T14:52:05.200Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:business:2026 donald j trump executive orders federal register",
@@ -387,7 +387,7 @@
     {
       "identityKey": "event:news:ofcom to investigate complaints of climate change denial watts up with that",
       "item": {
-        "id": "brave-sec-1774878781181-0",
+        "id": "brave-sec-1774882325131-0",
         "title": "Ofcom to investigate complaints of climate change denial – Watts Up With That?",
         "summary": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
         "whyItMatters": "",
@@ -399,7 +399,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T13:53:01.221Z",
+        "discoveredAt": "2026-03-30T14:52:05.153Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -422,9 +422,9 @@
         "discoveryScore": 13,
         "eventKey": "news:ofcom to investigate complaints of climate change denial watts up with that"
       },
-      "discoveredAt": "2026-03-30T13:53:01.221Z",
-      "lastSeenAt": "2026-03-30T13:53:01.358Z",
-      "expiresAt": "2026-04-01T13:53:01.357Z"
+      "discoveredAt": "2026-03-30T14:52:05.153Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:medical-research:quantum biopharma s 2025 audited year end financial results",
@@ -556,7 +556,7 @@
     {
       "identityKey": "event:business:bloomberg businessweek",
       "item": {
-        "id": "google-sec-1774756414743-2",
+        "id": "google-sec-1774882325185-3",
         "title": "Bloomberg Businessweek",
         "summary": "17 hours ago ... Bloomberg Businessweek helps global leaders stay ahead with insights and in-depth analysis on the people, companies, events, and trends shaping today's ...",
         "whyItMatters": "",
@@ -568,13 +568,14 @@
         ],
         "freshness": 4,
         "urgency": 5,
-        "discoveredAt": "2026-03-29T03:53:34.744Z",
+        "discoveredAt": "2026-03-30T14:52:05.187Z",
         "provider": "google_trusted",
         "trustedSource": true,
-        "discoveryLane": "google:business",
+        "discoveryLane": "google:culture",
         "sectionCandidates": [
           "business",
-          "sports"
+          "sports",
+          "culture"
         ],
         "topicCandidates": [
           "companies-deals",
@@ -593,9 +594,9 @@
         "discoveryScore": 13.8,
         "eventKey": "business:bloomberg businessweek"
       },
-      "discoveredAt": "2026-03-29T03:53:34.744Z",
-      "lastSeenAt": "2026-03-29T03:53:34.767Z",
-      "expiresAt": "2026-03-31T03:53:34.766Z"
+      "discoveredAt": "2026-03-30T14:52:05.187Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:world-geopolitics:israel says it killed iran navy chief trump warns tehran to get",
@@ -3346,7 +3347,7 @@
     {
       "identityKey": "event:ai-big-tech:tech company climate goals under pressure due to ai energy demand ap news",
       "item": {
-        "id": "brave-sec-1774878781221-1",
+        "id": "brave-sec-1774882325153-1",
         "title": "Tech company climate goals under pressure due to AI energy demand | AP News",
         "summary": "Tech companies set ambitious climate goals at the start of the decade, promising to slash emissoins that contribute to global warming.",
         "whyItMatters": "",
@@ -3358,7 +3359,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T13:53:01.242Z",
+        "discoveredAt": "2026-03-30T14:52:05.163Z",
         "provider": "brave",
         "trustedSource": true,
         "discoveryLane": "section:news",
@@ -3385,9 +3386,9 @@
         "discoveryScore": 16.4,
         "eventKey": "ai-big-tech:tech company climate goals under pressure due to ai energy demand ap news"
       },
-      "discoveredAt": "2026-03-30T13:53:01.242Z",
-      "lastSeenAt": "2026-03-30T13:53:01.357Z",
-      "expiresAt": "2026-04-01T13:53:01.357Z"
+      "discoveredAt": "2026-03-30T14:52:05.163Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:business:iran war wipes out 100 billion from luxury stocks cnbc",
@@ -3603,7 +3604,7 @@
     {
       "identityKey": "event:news:in the age of misinformation climate literacy matters more than ever honolulu ci",
       "item": {
-        "id": "brave-sec-1774878781248-3",
+        "id": "brave-sec-1774882325166-3",
         "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever - Honolulu Civil Beat",
         "summary": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
         "whyItMatters": "",
@@ -3615,7 +3616,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T13:53:01.253Z",
+        "discoveredAt": "2026-03-30T14:52:05.169Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -3638,9 +3639,9 @@
         "discoveryScore": 12.4,
         "eventKey": "news:in the age of misinformation climate literacy matters more than ever honolulu ci"
       },
-      "discoveredAt": "2026-03-30T13:53:01.253Z",
-      "lastSeenAt": "2026-03-30T13:53:01.358Z",
-      "expiresAt": "2026-04-01T13:53:01.357Z"
+      "discoveredAt": "2026-03-30T14:52:05.169Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:news:march 26 2026 trump administration news cnn politics",
@@ -4970,7 +4971,7 @@
     {
       "identityKey": "event:culture:alexander kluge 94 revolutionary filmmaker in postwar germany",
       "item": {
-        "id": "google-sec-1774746158303-1",
+        "id": "google-sec-1774882325180-1",
         "title": "Alexander Kluge, 94, Revolutionary Filmmaker in Postwar Germany ...",
         "summary": "1 day ago ... As a director, theorist and prolific author, he was one of his country's towering artists and public intellectuals.",
         "whyItMatters": "",
@@ -4980,9 +4981,9 @@
         "sourceUrls": [
           "https://www.nytimes.com/2026/03/27/movies/alexander-kluge-dead.html"
         ],
-        "freshness": 5,
+        "freshness": 3,
         "urgency": 4,
-        "discoveredAt": "2026-03-29T01:02:38.305Z",
+        "discoveredAt": "2026-03-30T14:52:05.182Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:culture",
@@ -5000,12 +5001,12 @@
         "article_likelihood": 10,
         "normalizedTitle": "alexander kluge 94 revolutionary filmmaker in postwar germany",
         "canonicalUrl": "https://www.nytimes.com/2026/03/27/movies/alexander-kluge-dead.html",
-        "discoveryScore": 14.6,
+        "discoveryScore": 12.6,
         "eventKey": "culture:alexander kluge 94 revolutionary filmmaker in postwar germany"
       },
-      "discoveredAt": "2026-03-29T01:02:38.305Z",
-      "lastSeenAt": "2026-03-29T01:03:14.690Z",
-      "expiresAt": "2026-03-31T01:03:14.689Z"
+      "discoveredAt": "2026-03-30T14:52:05.182Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:culture:iran war live updates 12 u s troops injured in attack on saudi",
@@ -5056,7 +5057,7 @@
     {
       "identityKey": "event:sports:the leftist no kings protest is in several cities today",
       "item": {
-        "id": "gdelt-sec-1774878781317-0",
+        "id": "gdelt-sec-1774882325202-0",
         "title": "The Leftist No Kings Protest Is in Several Cities Today",
         "summary": "",
         "whyItMatters": "",
@@ -5068,7 +5069,7 @@
         ],
         "freshness": 4,
         "urgency": 5,
-        "discoveredAt": "2026-03-30T13:53:01.320Z",
+        "discoveredAt": "2026-03-30T14:52:05.203Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -5089,14 +5090,14 @@
         "discoveryScore": 11.4,
         "eventKey": "sports:the leftist no kings protest is in several cities today"
       },
-      "discoveredAt": "2026-03-30T13:53:01.320Z",
-      "lastSeenAt": "2026-03-30T13:53:01.358Z",
-      "expiresAt": "2026-04-01T13:53:01.357Z"
+      "discoveredAt": "2026-03-30T14:52:05.203Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:health:jim cramer on hinge health this is actually a really good time to buy it",
       "item": {
-        "id": "gdelt-sec-1774878781320-1",
+        "id": "gdelt-sec-1774882325203-1",
         "title": "Jim Cramer on Hinge Health : This Is Actually a Really Good Time to Buy It",
         "summary": "",
         "whyItMatters": "",
@@ -5108,7 +5109,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T13:53:01.324Z",
+        "discoveredAt": "2026-03-30T14:52:05.205Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -5133,14 +5134,14 @@
         "discoveryScore": 11.4,
         "eventKey": "health:jim cramer on hinge health this is actually a really good time to buy it"
       },
-      "discoveredAt": "2026-03-30T13:53:01.324Z",
-      "lastSeenAt": "2026-03-30T13:53:01.358Z",
-      "expiresAt": "2026-04-01T13:53:01.357Z"
+      "discoveredAt": "2026-03-30T14:52:05.205Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:news:talent from across country gathers at iffd tourism minister kapil mishra attends",
       "item": {
-        "id": "gdelt-sec-1774878781328-3",
+        "id": "gdelt-sec-1774882325207-3",
         "title": "Talent from across country gathers at IFFD : Tourism Minister Kapil Mishra attends festival",
         "summary": "",
         "whyItMatters": "",
@@ -5152,7 +5153,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T13:53:01.331Z",
+        "discoveredAt": "2026-03-30T14:52:05.209Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -5174,14 +5175,14 @@
         "discoveryScore": 11.4,
         "eventKey": "news:talent from across country gathers at iffd tourism minister kapil mishra attends"
       },
-      "discoveredAt": "2026-03-30T13:53:01.331Z",
-      "lastSeenAt": "2026-03-30T13:53:01.358Z",
-      "expiresAt": "2026-04-01T13:53:01.357Z"
+      "discoveredAt": "2026-03-30T14:52:05.209Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:news:16 year old sensations ski and snowboard club vail teammates enjoy breakout firs",
       "item": {
-        "id": "gdelt-sec-1774878781331-4",
+        "id": "gdelt-sec-1774882325209-4",
         "title": "16 - year - old sensations : Ski and Snowboard Club Vail teammates enjoy breakout first - year FIS season",
         "summary": "",
         "whyItMatters": "",
@@ -5193,7 +5194,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T13:53:01.335Z",
+        "discoveredAt": "2026-03-30T14:52:05.211Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -5215,14 +5216,14 @@
         "discoveryScore": 11.4,
         "eventKey": "news:16 year old sensations ski and snowboard club vail teammates enjoy breakout firs"
       },
-      "discoveredAt": "2026-03-30T13:53:01.335Z",
-      "lastSeenAt": "2026-03-30T13:53:01.358Z",
-      "expiresAt": "2026-04-01T13:53:01.357Z"
+      "discoveredAt": "2026-03-30T14:52:05.211Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:news:man is arrested after multiple people are hit by a car in city centre with some ",
       "item": {
-        "id": "gdelt-sec-1774878781335-5",
+        "id": "gdelt-sec-1774882325211-5",
         "title": "Man is arrested after multiple people are hit by a car in city centre with some seriously injured",
         "summary": "",
         "whyItMatters": "",
@@ -5234,7 +5235,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T13:53:01.339Z",
+        "discoveredAt": "2026-03-30T14:52:05.213Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -5256,14 +5257,14 @@
         "discoveryScore": 11.4,
         "eventKey": "news:man is arrested after multiple people are hit by a car in city centre with some "
       },
-      "discoveredAt": "2026-03-30T13:53:01.339Z",
-      "lastSeenAt": "2026-03-30T13:53:01.358Z",
-      "expiresAt": "2026-04-01T13:53:01.357Z"
+      "discoveredAt": "2026-03-30T14:52:05.213Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:news:the fake political news pages fooling countless aussies",
       "item": {
-        "id": "gdelt-sec-1774878781339-6",
+        "id": "gdelt-sec-1774882325213-6",
         "title": "The fake political news pages fooling countless Aussies",
         "summary": "",
         "whyItMatters": "",
@@ -5275,7 +5276,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T13:53:01.342Z",
+        "discoveredAt": "2026-03-30T14:52:05.214Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -5297,14 +5298,14 @@
         "discoveryScore": 11.4,
         "eventKey": "news:the fake political news pages fooling countless aussies"
       },
-      "discoveredAt": "2026-03-30T13:53:01.342Z",
-      "lastSeenAt": "2026-03-30T13:53:01.358Z",
-      "expiresAt": "2026-04-01T13:53:01.357Z"
+      "discoveredAt": "2026-03-30T14:52:05.214Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:business:jim cramer on paychex this is a stock that strangely has been crushed by ai disr",
       "item": {
-        "id": "gdelt-sec-1774878781342-7",
+        "id": "gdelt-sec-1774882325214-7",
         "title": "Jim Cramer on Paychex : This Is a Stock That Strangely Has Been Crushed By AI Disruption Worries , I Think Theyre Overbl",
         "summary": "",
         "whyItMatters": "",
@@ -5316,7 +5317,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T13:53:01.346Z",
+        "discoveredAt": "2026-03-30T14:52:05.216Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -5342,14 +5343,14 @@
         "discoveryScore": 11.4,
         "eventKey": "business:jim cramer on paychex this is a stock that strangely has been crushed by ai disr"
       },
-      "discoveredAt": "2026-03-30T13:53:01.346Z",
-      "lastSeenAt": "2026-03-30T13:53:01.358Z",
-      "expiresAt": "2026-04-01T13:53:01.357Z"
+      "discoveredAt": "2026-03-30T14:52:05.216Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:sports:youre a presenter now not a labour minister ed balls is told after on air dust u",
       "item": {
-        "id": "gdelt-sec-1774878781324-2",
+        "id": "gdelt-sec-1774882325205-2",
         "title": "Youre a presenter now , not a Labour minister Ed Balls is told after on - air dust - up with young Jewish campaigner ove",
         "summary": "",
         "whyItMatters": "",
@@ -5361,7 +5362,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T13:53:01.328Z",
+        "discoveredAt": "2026-03-30T14:52:05.207Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -5382,14 +5383,14 @@
         "discoveryScore": 10.4,
         "eventKey": "sports:youre a presenter now not a labour minister ed balls is told after on air dust u"
       },
-      "discoveredAt": "2026-03-30T13:53:01.328Z",
-      "lastSeenAt": "2026-03-30T13:53:01.358Z",
-      "expiresAt": "2026-04-01T13:53:01.357Z"
+      "discoveredAt": "2026-03-30T14:52:05.207Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:sports:washington drivers will soon carry blue envelopes here why",
       "item": {
-        "id": "gdelt-sec-1774878781346-8",
+        "id": "gdelt-sec-1774882325216-8",
         "title": "Washington Drivers Will Soon Carry Blue Envelopes Here Why",
         "summary": "",
         "whyItMatters": "",
@@ -5401,7 +5402,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T13:53:01.348Z",
+        "discoveredAt": "2026-03-30T14:52:05.218Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -5422,14 +5423,14 @@
         "discoveryScore": 10.4,
         "eventKey": "sports:washington drivers will soon carry blue envelopes here why"
       },
-      "discoveredAt": "2026-03-30T13:53:01.348Z",
-      "lastSeenAt": "2026-03-30T13:53:01.358Z",
-      "expiresAt": "2026-04-01T13:53:01.357Z"
+      "discoveredAt": "2026-03-30T14:52:05.218Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:sports:jim cramer blesses rigel pharmaceuticals as a spec as it doing better than peopl",
       "item": {
-        "id": "gdelt-sec-1774878781348-9",
+        "id": "gdelt-sec-1774882325218-9",
         "title": "Jim Cramer Blesses Rigel Pharmaceuticals as a Spec as It Doing Better Than People Realize",
         "summary": "",
         "whyItMatters": "",
@@ -5441,7 +5442,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T13:53:01.352Z",
+        "discoveredAt": "2026-03-30T14:52:05.219Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -5462,14 +5463,14 @@
         "discoveryScore": 10.4,
         "eventKey": "sports:jim cramer blesses rigel pharmaceuticals as a spec as it doing better than peopl"
       },
-      "discoveredAt": "2026-03-30T13:53:01.352Z",
-      "lastSeenAt": "2026-03-30T13:53:01.358Z",
-      "expiresAt": "2026-04-01T13:53:01.357Z"
+      "discoveredAt": "2026-03-30T14:52:05.219Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     },
     {
       "identityKey": "event:business:don lemon the new york times",
       "item": {
-        "id": "google-sec-1774746158320-6",
+        "id": "google-sec-1774882325191-6",
         "title": "Don Lemon - The New York Times",
         "summary": "2 days ago ... The former CNN anchor released a wide-ranging interview with the billionaire about business, politics, online hate speech and more.",
         "whyItMatters": "",
@@ -5481,7 +5482,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-29T01:02:38.323Z",
+        "discoveredAt": "2026-03-30T14:52:05.193Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:culture",
@@ -5503,9 +5504,9 @@
         "discoveryScore": 10,
         "eventKey": "business:don lemon the new york times"
       },
-      "discoveredAt": "2026-03-29T01:02:38.323Z",
-      "lastSeenAt": "2026-03-29T01:03:14.691Z",
-      "expiresAt": "2026-03-31T01:03:14.689Z"
+      "discoveredAt": "2026-03-30T14:52:05.193Z",
+      "lastSeenAt": "2026-03-30T14:52:05.222Z",
+      "expiresAt": "2026-04-01T14:52:05.221Z"
     }
   ]
 }
