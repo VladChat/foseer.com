@@ -27,6 +27,7 @@ jobs:
     env:
       PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/${{ github.run_id }}
       QWEN_MAX_ARTICLES_PER_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.max_articles_per_run || '1' }}
+      QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
     steps:
       - name: Checkout
         uses: actions/checkout@v4

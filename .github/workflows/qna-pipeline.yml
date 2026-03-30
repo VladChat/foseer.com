@@ -17,6 +17,7 @@ jobs:
     timeout-minutes: 45
     env:
       PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/${{ github.run_id }}
+      QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
     steps:
       - name: Checkout
         uses: actions/checkout@v4
