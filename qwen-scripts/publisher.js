@@ -14,6 +14,8 @@ import { validateTagSelection } from './validate-tags.js';
 
 const POSTS_DIR = path.resolve(PROJECT_ROOT, 'src/data/post');
 const INVENTORY_PATH = path.resolve(PROJECT_ROOT, 'qwen-project-governance/article_inventory.md');
+const FALLBACK_IMAGE_PATH = '~/assets/images/posts/fallback/foseer-default-cover.svg';
+const FALLBACK_IMAGE_FILE = path.resolve(PROJECT_ROOT, 'src/assets/images/posts/fallback/foseer-default-cover.svg');
 const INVENTORY_HEADER = '| Article ID | Topic ID | Title | Created | Last Updated | Status | Section | Article Type | Primary Topic | Key Entities | Search Keywords | Canonical URL |';
 const INVENTORY_SEPARATOR = '|------------|----------|-------|---------|--------------|--------|---------|--------------|---------------|--------------|-----------------|---------------|';
 const RELATED_LINK_MIN_SCORE = 3.5;
@@ -35,6 +37,9 @@ const REQUIRED_FIELDS = ['title', 'slug', 'article_type', 'excerpt', 'image', 's
  */
 export function publishArticle(article) {
   console.log('[publisher] Publishing article...');
+
+  // Ensure every published article has a valid image package.
+  article = ensurePublishImage(article);
 
   // Validate required fields before any write operation
   const validation = validateRequiredFields(article);
@@ -175,6 +180,55 @@ ${contentBody}`;
       error: `Atomic write failed: ${error.message}`,
     };
   }
+}
+
+function ensurePublishImage(article) {
+  const currentImagePath = String(article?.image?.imagePath || '').trim();
+  const hasUsableImage = hasUsableImagePath(currentImagePath);
+  if (hasUsableImage) return article;
+
+  if (!fs.existsSync(FALLBACK_IMAGE_FILE)) {
+    console.warn('[publisher] Fallback image is missing on disk; article publish may fail');
+    return article;
+  }
+
+  const fallbackAlt = `Illustration for ${String(article?.draft?.title || article?.brief?.title || 'this article').replace(/["']/g, '').trim()}`;
+  console.warn(`[publisher] Image package missing or invalid; applying fallback image ${FALLBACK_IMAGE_PATH}`);
+
+  return {
+    ...article,
+    image: {
+      ...(article?.image || {}),
+      provider: article?.image?.provider || 'fallback',
+      imagePath: FALLBACK_IMAGE_PATH,
+      altText: article?.image?.altText || article?.image?.imageAlt || fallbackAlt,
+      imageAlt: article?.image?.imageAlt || article?.image?.altText || fallbackAlt,
+      sourceUrl: article?.image?.sourceUrl || null,
+      metadata: {
+        ...(article?.image?.metadata || {}),
+        fallbackAppliedByPublisher: true,
+      },
+    },
+  };
+}
+
+function hasUsableImagePath(imagePath) {
+  const normalized = String(imagePath || '').trim();
+  if (!normalized) return false;
+  if (/^https?:\/\//i.test(normalized) || normalized.startsWith('/')) return true;
+  if (normalized.startsWith('~/')) {
+    const localPath = path.resolve(PROJECT_ROOT, normalized.replace(/^~\//, ''));
+    return fs.existsSync(localPath);
+  }
+  if (
+    normalized.startsWith('src/')
+    || normalized.startsWith('assets/')
+    || normalized.startsWith('./')
+    || normalized.startsWith('../')
+  ) {
+    return fs.existsSync(path.resolve(PROJECT_ROOT, normalized));
+  }
+  return true;
 }
 
 /**

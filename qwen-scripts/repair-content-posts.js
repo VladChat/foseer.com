@@ -6,6 +6,7 @@ import path from 'node:path';
 
 const POSTS_DIR = path.resolve(process.cwd(), 'src/data/post');
 const FRONTMATTER_RE = /^---\n([\s\S]*?)\n---\n?/;
+const FALLBACK_IMAGE_PATH = '~/assets/images/posts/fallback/foseer-default-cover.svg';
 
 export function repairContentPosts() {
   if (!fs.existsSync(POSTS_DIR)) {
@@ -36,38 +37,92 @@ function repairSingleFile(raw) {
   const match = raw.match(FRONTMATTER_RE);
   if (!match) return { changed: false, removedSources: 0, content: raw };
 
-  const frontmatter = match[1];
+  const originalFrontmatter = match[1];
   const body = raw.slice(match[0].length);
-  const lines = frontmatter.split('\n');
+  let lines = originalFrontmatter.split('\n');
+  let changed = false;
+  let removedSources = 0;
+
   const sourceStart = lines.findIndex((line) => /^sources:\s*$/.test(line));
-  if (sourceStart === -1) return { changed: false, removedSources: 0, content: raw };
+  if (sourceStart !== -1) {
+    let sourceEnd = sourceStart + 1;
+    while (sourceEnd < lines.length && (/^  /.test(lines[sourceEnd]) || /^\s*$/.test(lines[sourceEnd]))) {
+      sourceEnd += 1;
+    }
 
-  let sourceEnd = sourceStart + 1;
-  while (sourceEnd < lines.length && (/^  /.test(lines[sourceEnd]) || /^\s*$/.test(lines[sourceEnd]))) {
-    sourceEnd += 1;
-  }
+    const before = lines.slice(0, sourceStart);
+    const sourceLines = lines.slice(sourceStart + 1, sourceEnd);
+    const after = lines.slice(sourceEnd);
 
-  const before = lines.slice(0, sourceStart);
-  const sourceLines = lines.slice(sourceStart + 1, sourceEnd);
-  const after = lines.slice(sourceEnd);
-
-  const parsed = parseSourcesBlock(sourceLines);
-  const sanitized = sanitizeSources(parsed.sources);
-  const removedSources = parsed.sources.length - sanitized.length;
-  if (removedSources <= 0) return { changed: false, removedSources: 0, content: raw };
-
-  const rebuilt = [...before];
-  if (sanitized.length > 0) {
-    rebuilt.push('sources:');
-    for (const source of sanitized) {
-      rebuilt.push(`  - title: "${escapeDoubleQuotes(source.title)}"`);
-      rebuilt.push(`    url: "${source.url}"`);
+    const parsed = parseSourcesBlock(sourceLines);
+    const sanitized = sanitizeSources(parsed.sources);
+    removedSources = parsed.sources.length - sanitized.length;
+    if (removedSources > 0) {
+      const rebuilt = [...before];
+      if (sanitized.length > 0) {
+        rebuilt.push('sources:');
+        for (const source of sanitized) {
+          rebuilt.push(`  - title: "${escapeDoubleQuotes(source.title)}"`);
+          rebuilt.push(`    url: "${source.url}"`);
+        }
+      }
+      if (after.length > 0) rebuilt.push(...after);
+      lines = rebuilt;
+      changed = true;
     }
   }
-  if (after.length > 0) rebuilt.push(...after);
 
-  const next = `---\n${rebuilt.join('\n')}\n---\n${body}`;
+  const imageRepair = ensureImageFrontmatter(lines);
+  if (imageRepair.changed) {
+    lines = imageRepair.lines;
+    changed = true;
+  }
+
+  if (!changed) return { changed: false, removedSources: 0, content: raw };
+  const next = `---\n${lines.join('\n')}\n---\n${body}`;
   return { changed: true, removedSources, content: next };
+}
+
+function ensureImageFrontmatter(lines = []) {
+  const next = Array.isArray(lines) ? [...lines] : [];
+  const imageIndex = next.findIndex((line) => /^image:\s*/.test(line));
+  if (imageIndex === -1) {
+    const insertAt = next.findIndex((line) => /^canonicalUrl:\s*/.test(line));
+    if (insertAt === -1) {
+      next.push(`image: ${FALLBACK_IMAGE_PATH}`);
+    } else {
+      next.splice(insertAt, 0, `image: ${FALLBACK_IMAGE_PATH}`);
+    }
+    return { changed: true, lines: next };
+  }
+
+  const rawValue = String(next[imageIndex] || '').replace(/^image:\s*/, '').trim();
+  const imageValue = stripYamlString(rawValue);
+  if (isUsableImageValue(imageValue)) {
+    return { changed: false, lines: next };
+  }
+
+  next[imageIndex] = `image: ${FALLBACK_IMAGE_PATH}`;
+  return { changed: true, lines: next };
+}
+
+function isUsableImageValue(imageValue) {
+  const value = String(imageValue || '').trim();
+  if (!value) return false;
+  if (/^https?:\/\//i.test(value) || value.startsWith('/')) return true;
+  if (value.startsWith('~/')) {
+    const fullPath = path.resolve(process.cwd(), value.replace(/^~\//, ''));
+    return fs.existsSync(fullPath);
+  }
+  if (
+    value.startsWith('src/')
+    || value.startsWith('assets/')
+    || value.startsWith('./')
+    || value.startsWith('../')
+  ) {
+    return fs.existsSync(path.resolve(process.cwd(), value));
+  }
+  return true;
 }
 
 function parseSourcesBlock(lines) {
