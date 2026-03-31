@@ -293,50 +293,71 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 
 <script>
   // Mobile menu toggle functionality
-  const menuButton = document.querySelector('[data-aw-toggle-menu]');
-  const closeButton = document.querySelector('[data-close-mobile-menu]');
-  const mobileNav = document.getElementById('mobile-nav-drawer');
-  const mobileNavPanel = mobileNav?.querySelector('[role="dialog"]');
+  function initMobileMenu() {
+    const menuButton = document.querySelector('[data-aw-toggle-menu]');
+    const closeButton = document.querySelector('[data-close-mobile-menu]');
+    const mobileNav = document.getElementById('mobile-nav-drawer');
+    const mobileNavPanel = mobileNav?.querySelector('[role="dialog"]');
 
-  function openMenu() {
-    // Remove hidden first to allow layout calculation
-    mobileNav?.classList.remove('hidden');
-    menuButton?.setAttribute('aria-expanded', 'true');
-    
-    // Use requestAnimationFrame to ensure layout is computed before animating
-    requestAnimationFrame(() => {
+    if (!menuButton || !closeButton || !mobileNav) return;
+
+    function openMenu() {
+      // Remove hidden first to allow layout calculation
+      mobileNav.classList.remove('hidden');
+      menuButton.setAttribute('aria-expanded', 'true');
+
+      // Use requestAnimationFrame to ensure layout is computed before animating
       requestAnimationFrame(() => {
-        mobileNav?.classList.remove('opacity-0');
-        mobileNavPanel?.classList.remove('translate-x-full');
+        requestAnimationFrame(() => {
+          mobileNav.classList.remove('opacity-0');
+          mobileNavPanel?.classList.remove('translate-x-full');
+        });
       });
-    });
-    
-    document.body.style.overflow = 'hidden';
-  }
 
-  function closeMenu() {
-    // Animate out
-    mobileNav?.classList.add('opacity-0');
-    mobileNavPanel?.classList.add('translate-x-full');
-    
-    // Wait for animation to complete before hiding
-    setTimeout(() => {
-      mobileNav?.classList.add('hidden');
-      menuButton?.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }, 300);
-  }
-
-  menuButton?.addEventListener('click', openMenu);
-  closeButton?.addEventListener('click', closeMenu);
-  mobileNav?.addEventListener('click', (e) => {
-    if (e.target === mobileNav) closeMenu();
-  });
-
-  // Close on escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !mobileNav?.classList.contains('hidden')) {
-      closeMenu();
+      document.body.style.overflow = 'hidden';
     }
-  });
+
+    function closeMenu() {
+      // Animate out
+      mobileNav.classList.add('opacity-0');
+      mobileNavPanel?.classList.add('translate-x-full');
+
+      // Wait for animation to complete before hiding
+      setTimeout(() => {
+        mobileNav.classList.add('hidden');
+        menuButton.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    // Remove old listeners to prevent duplicates
+    menuButton.removeEventListener('click', openMenu);
+    closeButton.removeEventListener('click', closeMenu);
+    mobileNav.removeEventListener('click', closeMenuOnOverlayClick);
+
+    function closeMenuOnOverlayClick(e) {
+      if (e.target === mobileNav) closeMenu();
+    }
+
+    menuButton.addEventListener('click', openMenu);
+    closeButton.addEventListener('click', closeMenu);
+    mobileNav.addEventListener('click', closeMenuOnOverlayClick);
+
+    // Close on escape key
+    function handleEscapeKey(e) {
+      if (e.key === 'Escape' && !mobileNav.classList.contains('hidden')) {
+        closeMenu();
+      }
+    }
+
+    document.removeEventListener('keydown', handleEscapeKey);
+    document.addEventListener('keydown', handleEscapeKey);
+  }
+
+  // Initialize on first load
+  initMobileMenu();
+
+  // Re-initialize after Astro page navigation (View Transitions)
+  document.addEventListener('astro:after-swap', initMobileMenu);
+  document.addEventListener('astro:page-load', initMobileMenu);
 </script>
