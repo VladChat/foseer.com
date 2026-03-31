@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-31T15:34:57.563Z",
+  "event_id": "evt-2026-03-31-us-politics-general-global-israel-meta",
+  "cluster_id": "evt-2026-03-31-us-politics-general-global-israel-meta",
+  "article_type": "report",
+  "title": "Vermont Defends ‘Climate Superfund’ Law Against Trump Challenge",
+  "slug": "vermont-defends-climate-superfund-law-against-trump-challeng",
+  "canonical_slug": "2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng",
+  "expected_url": "/article/2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng.mdx",
+  "published_at": "2026-03-31T15:34:57.562Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "climate-extreme-weather",
+  "topic_label": "Climate & Extreme Weather",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/4986048/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/4986048/cover.jpg",
+    "source_url": "https://pixabay.com/photos/trump-donald-trump-president-speech-4986048/",
+    "asset_key": "pixabay:4986048",
+    "alt_text": "trump, donald trump, president, speech, a speech, speech to the people, q, lectern, red tie, usa, america, choice, presidential elections, politics, politician, comic, portrait, government, masculine, celebrity, presidency, trump, trump, trump, donald trump, donald trump, donald trump, speech, speech, speech, speech, speech, lectern, lectern, lectern, red tie, politician, politician, politician",
+    "selection_mode": "provider_download_new:pixabay:strong",
+    "query_used": "Trump government photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Climate & Extreme Weather"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+        "url": "https://www.nytimes.com/2026/03/30/climate/vermont-hits-back-at-trumps-effort-to-block-climate-superfund-law.html",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Trump administration sues Minnesota for allowing trans athletes in ...",
+        "url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Trump administration sues Minnesota for allowing trans athletes in ...",
+          "url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "trump"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "type": "topic"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "climate-extreme-weather",
+        "topic_label": "Climate & Extreme Weather",
+        "supported": true,
+        "matched_aliases": [
+          "climate",
+          "extreme weather",
+          "climate damage",
+          "emissions",
+          "warming"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Trump government photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "trump"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

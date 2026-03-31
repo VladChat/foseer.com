@@ -1,13 +1,13 @@
 {
-  "totalArticles": 90,
+  "totalArticles": 92,
   "lastReset": null,
   "byWriter": {
     "reporter": {
-      "count": 31,
-      "lastAssigned": 1774913122490,
+      "count": 32,
+      "lastAssigned": 1774971275529,
       "streak": 0,
-      "authorCursor": 1,
-      "lastAuthorId": "john_smith"
+      "authorCursor": 2,
+      "lastAuthorId": "emma_carter"
     },
     "explainer": {
       "count": 13,
@@ -17,37 +17,21 @@
       "lastAuthorId": "mia_turner"
     },
     "analyst": {
-      "count": 15,
-      "lastAssigned": 1774878781924,
-      "streak": 0,
-      "authorCursor": 1,
-      "lastAuthorId": "liam_parker"
+      "count": 16,
+      "lastAssigned": 1774971297691,
+      "streak": 1,
+      "authorCursor": 2,
+      "lastAuthorId": "sophia_bennett"
     },
     "features": {
       "count": 31,
       "lastAssigned": 1774914933854,
-      "streak": 1,
+      "streak": 0,
       "authorCursor": 2,
       "lastAuthorId": "grace_holloway"
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "reporter",
-      "timestamp": 1774621366112,
-      "articleType": "report",
-      "beat": "climate",
-      "section": "News",
-      "topic_id": "climate-extreme-weather"
-    },
-    {
-      "writerId": "analyst",
-      "timestamp": 1774628263509,
-      "articleType": "analysis",
-      "beat": "markets",
-      "section": "Business",
-      "topic_id": "crypto-bitcoin"
-    },
     {
       "writerId": "features",
       "timestamp": 1774631138068,
@@ -431,6 +415,22 @@
       "beat": "sports",
       "section": "Sports",
       "topic_id": "transfers-business"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774971275529,
+      "articleType": "report",
+      "beat": "breaking news",
+      "section": "News",
+      "topic_id": "us-politics"
+    },
+    {
+      "writerId": "analyst",
+      "timestamp": 1774971297691,
+      "articleType": "report",
+      "beat": "markets",
+      "section": "Business",
+      "topic_id": "crypto-bitcoin"
     }
   ]
 }

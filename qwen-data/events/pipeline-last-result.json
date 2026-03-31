@@ -1,0 +1,1839 @@
+{
+  "timestamp": "2026-03-31T15:35:19.551Z",
+  "success": true,
+  "hard_blocker": null,
+  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng.mdx",
+  "verified_url": "/article/2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng",
+  "stages": {
+    "discovery": {
+      "stage": "discovery",
+      "success": true,
+      "error": null,
+      "data": {
+        "candidatesCount": 35,
+        "discoveredPoolTotal": 168
+      }
+    },
+    "briefNormalization": {
+      "stage": "briefNormalization",
+      "success": true,
+      "error": null,
+      "data": {
+        "briefsCount": 6,
+        "clusterCount": 7
+      }
+    },
+    "sourcePackAssembly": {
+      "stage": "sourcePackAssembly",
+      "success": true,
+      "error": null,
+      "data": {
+        "selectedCount": 2,
+        "selectedTopics": [
+          {
+            "title": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+            "eventId": "evt-2026-03-31-us-politics-general-global-israel-meta",
+            "sources": 2,
+            "uniqueDomains": 2,
+            "section_id": "news",
+            "topic_id": "us-politics",
+            "gate_notes": [
+              "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+              "Role-aware one-event source-pack gate passed"
+            ],
+            "stage3_editorial_gate": {
+              "editorial_valid": true,
+              "blocking_errors": [],
+              "warnings": []
+            }
+          },
+          {
+            "title": "NFL asks prediction market operators to refrain from 'objectionable bets'",
+            "eventId": "evt-2026-03-31-crypto-bitcoin-general-global-nfl",
+            "sources": 2,
+            "uniqueDomains": 2,
+            "section_id": "business",
+            "topic_id": "crypto-bitcoin",
+            "gate_notes": [
+              "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+              "Role-aware one-event source-pack gate passed"
+            ],
+            "stage3_editorial_gate": {
+              "editorial_valid": true,
+              "blocking_errors": [],
+              "warnings": []
+            }
+          }
+        ],
+        "readyCandidates": {
+          "readyCount": 2,
+          "additionalReadyCandidates": [
+            {
+              "identityKey": "cluster:evt-2026-03-27-sports-ban-global",
+              "briefId": "evt-2026-03-27-sports-ban-global",
+              "title": "International Olympics Committee Bans Trans Athletes from Women's Events",
+              "normalizedTitle": "international olympics committee bans trans athletes women s events",
+              "section_id": "sports",
+              "topic_id": "transfers-business",
+              "articleType": "report",
+              "selectionOrigin": "ready_backlog",
+              "poolIdentityKey": "cluster:evt-2026-03-27-sports-ban-global",
+              "rank": 2,
+              "score": 62.3,
+              "scoreNotes": [
+                "undercovered_section:sports",
+                "section_penalty:6",
+                "topic_penalty:14",
+                "region_penalty:54",
+                "angle_penalty:46",
+                "cluster_repeat:1",
+                "entity_penalty:25",
+                "domains:4",
+                "consistency:6.3",
+                "core:3",
+                "supporting:1"
+              ],
+              "sourceCount": 4,
+              "uniqueDomains": 4,
+              "directEventSourceCount": 4,
+              "independentEventDomains": 4,
+              "gateDecision": "PASS",
+              "gateNotes": [
+                "Role-aware one-event source-pack gate passed"
+              ],
+              "discoveredAt": "2026-03-27T22:37:44.510Z",
+              "firstQueuedAt": "2026-03-27T22:28:34.339Z",
+              "lastQueuedAt": "2026-03-29T22:02:23.720Z",
+              "status": "ready",
+              "lastSelectedAt": null,
+              "lastPublishedAt": null,
+              "publishedSlug": null
+            },
+            {
+              "identityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
+              "briefId": "evt-2026-03-30-crypto-bitcoin-general-global",
+              "title": "MAHA fans want action Trump hasn't delivered",
+              "normalizedTitle": "maha fans want action trump hasn t delivered",
+              "section_id": "business",
+              "topic_id": "crypto-bitcoin",
+              "articleType": "report",
+              "selectionOrigin": "current_run",
+              "poolIdentityKey": null,
+              "rank": 2,
+              "score": 50.2,
+              "scoreNotes": [
+                "section_penalty:9",
+                "topic_penalty:3",
+                "region_penalty:44",
+                "angle_penalty:35",
+                "cluster_repeat:1",
+                "entity_penalty:30",
+                "domains:2",
+                "consistency:6.7",
+                "core:3",
+                "supporting:0"
+              ],
+              "sourceCount": 3,
+              "uniqueDomains": 2,
+              "directEventSourceCount": 3,
+              "independentEventDomains": 2,
+              "gateDecision": "PASS",
+              "gateNotes": [
+                "Role-aware one-event source-pack gate passed"
+              ],
+              "discoveredAt": "2026-03-30T23:18:43.039Z",
+              "firstQueuedAt": "2026-03-30T23:19:53.820Z",
+              "lastQueuedAt": "2026-03-30T23:19:53.820Z",
+              "status": "ready",
+              "lastSelectedAt": null,
+              "lastPublishedAt": null,
+              "publishedSlug": null
+            }
+          ],
+          "selectedCandidates": [
+            {
+              "identityKey": "cluster:evt-2026-03-31-us-politics-general-global-israel-meta",
+              "briefId": "evt-2026-03-31-us-politics-general-global-israel-meta",
+              "title": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+              "normalizedTitle": "vermont hits back at trump s effort to block climate superfund law",
+              "section_id": "news",
+              "topic_id": "us-politics",
+              "articleType": "report",
+              "selectionOrigin": "pool",
+              "poolIdentityKey": "cluster:evt-2026-03-31-us-politics-general-global-israel-meta",
+              "rank": 1,
+              "score": 55.9,
+              "scoreNotes": [
+                "section_penalty:16",
+                "topic_penalty:3",
+                "region_penalty:39",
+                "angle_penalty:33",
+                "cluster_repeat:1",
+                "entity_penalty:6",
+                "domains:2",
+                "consistency:7.5",
+                "core:2",
+                "supporting:0"
+              ],
+              "sourceCount": 2,
+              "uniqueDomains": 2,
+              "directEventSourceCount": 2,
+              "independentEventDomains": 2,
+              "gateDecision": "PASS",
+              "gateNotes": [
+                "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+                "Role-aware one-event source-pack gate passed"
+              ],
+              "discoveredAt": "2026-03-31T15:33:15.962Z",
+              "firstQueuedAt": "2026-03-31T15:34:35.385Z",
+              "lastQueuedAt": "2026-03-31T15:34:35.385Z",
+              "status": "selected",
+              "lastSelectedAt": "2026-03-31T15:34:35.385Z",
+              "lastPublishedAt": null,
+              "publishedSlug": null
+            },
+            {
+              "identityKey": "cluster:evt-2026-03-31-crypto-bitcoin-general-global-nfl",
+              "briefId": "evt-2026-03-31-crypto-bitcoin-general-global-nfl",
+              "title": "NFL asks prediction market operators to refrain from 'objectionable bets'",
+              "normalizedTitle": "nfl asks prediction market operators to refrain objectionable bets",
+              "section_id": "business",
+              "topic_id": "crypto-bitcoin",
+              "articleType": "report",
+              "selectionOrigin": "pool",
+              "poolIdentityKey": "cluster:evt-2026-03-31-crypto-bitcoin-general-global-nfl",
+              "rank": 2,
+              "score": 53.7,
+              "scoreNotes": [
+                "section_penalty:8",
+                "topic_penalty:3",
+                "region_penalty:39",
+                "angle_penalty:5",
+                "cluster_repeat:1",
+                "entity_penalty:1",
+                "domains:2",
+                "consistency:8.8",
+                "core:2",
+                "supporting:0"
+              ],
+              "sourceCount": 2,
+              "uniqueDomains": 2,
+              "directEventSourceCount": 2,
+              "independentEventDomains": 2,
+              "gateDecision": "PASS",
+              "gateNotes": [
+                "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+                "Role-aware one-event source-pack gate passed"
+              ],
+              "discoveredAt": "2026-03-31T15:33:21.624Z",
+              "firstQueuedAt": "2026-03-31T15:34:35.385Z",
+              "lastQueuedAt": "2026-03-31T15:34:35.385Z",
+              "status": "selected",
+              "lastSelectedAt": "2026-03-31T15:34:35.385Z",
+              "lastPublishedAt": null,
+              "publishedSlug": null
+            }
+          ],
+          "filePath": "/home/runner/work/foseer.com/foseer.com/qwen-data/events/ready-article-candidates.json"
+        },
+        "duplicateRejectedCandidates": []
+      }
+    },
+    "claimMapCreation": {
+      "stage": "claimMapCreation",
+      "success": true,
+      "error": null,
+      "data": {
+        "total": 2,
+        "successCount": 2,
+        "failureCount": 0,
+        "items": [
+          {
+            "title": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+            "success": true,
+            "error": null,
+            "data": {
+              "totalClaims": 3,
+              "supportedClaims": 3,
+              "passesGate": true,
+              "issues": []
+            }
+          },
+          {
+            "title": "NFL asks prediction market operators to refrain from 'objectionable bets'",
+            "success": true,
+            "error": null,
+            "data": {
+              "totalClaims": 2,
+              "supportedClaims": 2,
+              "passesGate": true,
+              "issues": []
+            }
+          }
+        ]
+      }
+    },
+    "articleDrafting": {
+      "stage": "articleDrafting",
+      "success": true,
+      "error": null,
+      "data": {
+        "total": 2,
+        "successCount": 2,
+        "failureCount": 0,
+        "items": [
+          {
+            "title": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+            "success": true,
+            "error": null,
+            "data": {
+              "wordCount": 1018,
+              "articleType": "report",
+              "quality": "strong",
+              "safeForPublishing": true
+            }
+          },
+          {
+            "title": "NFL asks prediction market operators to refrain from 'objectionable bets'",
+            "success": true,
+            "error": null,
+            "data": {
+              "wordCount": 947,
+              "articleType": "report",
+              "quality": "strong",
+              "safeForPublishing": true
+            }
+          }
+        ]
+      }
+    },
+    "imageSupport": {
+      "stage": "imageSupport",
+      "success": true,
+      "error": null,
+      "data": {
+        "total": 2,
+        "successCount": 2,
+        "failureCount": 0,
+        "items": [
+          {
+            "title": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+            "success": true,
+            "error": null,
+            "data": {
+              "provider": "pixabay",
+              "imagePath": "~/assets/images/library/pixabay/4986048/cover.jpg",
+              "hasAltText": true
+            }
+          },
+          {
+            "title": "NFL asks prediction market operators to refrain from 'objectionable bets'",
+            "success": true,
+            "error": null,
+            "data": {
+              "provider": "pixabay",
+              "imagePath": "~/assets/images/library/pixabay/3561225/cover.jpg",
+              "hasAltText": true
+            }
+          }
+        ]
+      }
+    },
+    "publishing": {
+      "stage": "publishing",
+      "success": true,
+      "error": null,
+      "data": {
+        "total": 2,
+        "successCount": 2,
+        "failureCount": 0,
+        "items": [
+          {
+            "title": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+            "success": true,
+            "error": null,
+            "data": {
+              "filename": "2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng.mdx",
+              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng.mdx",
+              "canonicalSlug": "2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng",
+              "expectedUrl": "/article/2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng",
+              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/vermont-defends-climate-superfund-law-against-trump-challeng.json",
+              "section_id": "news",
+              "topic_id": "climate-extreme-weather"
+            }
+          },
+          {
+            "title": "NFL asks prediction market operators to refrain from 'objectionable bets'",
+            "success": true,
+            "error": null,
+            "data": {
+              "filename": "2026-03-31-nfl-urges-prediction-markets-to-avoid-objectionable-football.mdx",
+              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-nfl-urges-prediction-markets-to-avoid-objectionable-football.mdx",
+              "canonicalSlug": "2026-03-31-nfl-urges-prediction-markets-to-avoid-objectionable-football",
+              "expectedUrl": "/article/2026-03-31-nfl-urges-prediction-markets-to-avoid-objectionable-football",
+              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/nfl-urges-prediction-markets-to-avoid-objectionable-football.json",
+              "section_id": "business",
+              "topic_id": "crypto-bitcoin"
+            }
+          }
+        ]
+      }
+    },
+    "localVerification": {
+      "stage": "localVerification",
+      "success": true,
+      "error": null,
+      "data": {
+        "total": 2,
+        "successCount": 2,
+        "failureCount": 0,
+        "items": [
+          {
+            "title": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+            "success": true,
+            "error": null,
+            "data": {
+              "skipped": true,
+              "reason": "CI environment: localhost verification skipped; publish + build checks passed",
+              "expectedUrl": "/article/2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng"
+            }
+          },
+          {
+            "title": "NFL asks prediction market operators to refrain from 'objectionable bets'",
+            "success": true,
+            "error": null,
+            "data": {
+              "skipped": true,
+              "reason": "CI environment: localhost verification skipped; publish + build checks passed",
+              "expectedUrl": "/article/2026-03-31-nfl-urges-prediction-markets-to-avoid-objectionable-football"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "selected": {
+    "brief": {
+      "id": "evt-2026-03-31-us-politics-general-global-israel-meta",
+      "title": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+      "whatHappened": "18 hours ago ... The law would make fuel companies help pay for damages caused by climate change.",
+      "whoIsInvolved": "israel, meta",
+      "involvedParties": [
+        "israel",
+        "meta"
+      ],
+      "entities": [
+        "israel",
+        "meta"
+      ],
+      "when": "2026-03-30T21:21:49.022Z",
+      "where": "Trump",
+      "whyItMatters": "The development could affect policy decisions, government operations, or how public institutions respond next.",
+      "developmentStage": "developing",
+      "sourceUrls": [
+        "https://www.nytimes.com/2026/03/30/climate/vermont-hits-back-at-trumps-effort-to-block-climate-superfund-law.html",
+        "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
+        "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+        "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808",
+        "https://www.bbc.com/news/articles/cr513dnq61mo",
+        "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
+        "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
+        "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/",
+        "https://www.techmarketview.com/ukhotviews/",
+        "https://www.reuters.com/business/environment/",
+        "https://abcnews.com/Business/wireStory/vermont-defends-landmark-climate-superfund-law-trump-administration-131551210",
+        "https://www.skysports.com/football/live-blog/31771/12476234/transfer-centre-live-football-transfer-news-updates-and-rumours",
+        "https://www.bbc.com/news/us-canada"
+      ],
+      "publishabilityScore": 10,
+      "publishabilityNotes": [
+        "Has a usable summary sentence",
+        "Specific parties are identified",
+        "Fresh enough for same-day editorial use",
+        "Multiple source URLs already attached",
+        "Clustered across multiple discovery hits",
+        "Cluster contains multiple article-like materials",
+        "Taxonomy topic match is specific enough for routing",
+        "At least one trusted source hit is present"
+      ],
+      "discoveredAt": "2026-03-31T15:33:15.962Z",
+      "provider": "google_trusted",
+      "section_id": "news",
+      "topic_id": "us-politics",
+      "region": "global",
+      "angle": "general",
+      "cluster_id": "evt-2026-03-31-us-politics-general-global-israel-meta",
+      "eventKey": "2026-03-31:us-politics-general-global-israel-meta",
+      "cluster_size": 13,
+      "article_rich_count": 9,
+      "generic_page_count": 3,
+      "discoveryContext": [
+        {
+          "id": "google-sec-1774971195926-0",
+          "title": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+          "summary": "18 hours ago ... The law would make fuel companies help pay for damages caused by climate change. The administration argues it's unconstitutional.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "2026-03-30T21:21:49.022Z",
+          "sourceUrls": [
+            "https://www.nytimes.com/2026/03/30/climate/vermont-hits-back-at-trumps-effort-to-block-climate-superfund-law.html"
+          ],
+          "freshness": 6,
+          "urgency": 4,
+          "discoveredAt": "2026-03-31T15:33:15.931Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:news",
+          "sectionCandidates": [
+            "news",
+            "business"
+          ],
+          "topicCandidates": [
+            "climate-extreme-weather",
+            "companies-deals"
+          ],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 10,
+          "normalizedTitle": "vermont hits back at trump s effort to block climate superfund law",
+          "canonicalUrl": "https://www.nytimes.com/2026/03/30/climate/vermont-hits-back-at-trumps-effort-to-block-climate-superfund-law.html",
+          "discoveryScore": 16.6,
+          "eventKey": "news:vermont hits back at trump s effort to block climate superfund law",
+          "source_id": "google-sec-1774971195926-0",
+          "url": "https://www.nytimes.com/2026/03/30/climate/vermont-hits-back-at-trumps-effort-to-block-climate-superfund-law.html",
+          "canonical_url": "https://www.nytimes.com/2026/03/30/climate/vermont-hits-back-at-trumps-effort-to-block-climate-superfund-law.html",
+          "domain": "nytimes.com",
+          "canonical_domain": "nytimes.com",
+          "normalized_title": "vermont hits back at trump s effort to block climate superfund law",
+          "snippet": "18 hours ago ... The law would make fuel companies help pay for damages caused by climate change. The administration argues it's unconstitutional.",
+          "published_at": "2026-03-30T21:21:49.022Z",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news",
+            "business"
+          ],
+          "topic_candidates": [
+            "climate-extreme-weather",
+            "companies-deals"
+          ],
+          "cluster_id": null,
+          "event_key": "news:vermont hits back at trump s effort to block climate superfund law",
+          "keywords": [
+            "vermont",
+            "hits",
+            "back",
+            "trump",
+            "effort",
+            "block",
+            "climate",
+            "superfund",
+            "hours",
+            "make",
+            "fuel",
+            "companies"
+          ],
+          "title_signal_tokens": [
+            "vermont",
+            "hits",
+            "back",
+            "trump",
+            "effort",
+            "block",
+            "climate",
+            "superfund"
+          ],
+          "url_signal_tokens": [
+            "climate",
+            "vermont",
+            "hits",
+            "back",
+            "trumps",
+            "effort",
+            "block",
+            "superfund"
+          ],
+          "title_url_overlap": 0.875,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "vermont",
+            "hits",
+            "back",
+            "trump",
+            "effort",
+            "block",
+            "climate",
+            "superfund"
+          ]
+        },
+        {
+          "id": "brave-sec-1774971177662-1",
+          "title": "Medical Bulletin 31/March/2026",
+          "summary": "Here are the top medical news for today:New Study Identifies Exercise Type That Significantly Improves Sleep Quality A new meta-analysis published in Sleep and Biological Rhythms suggests that yoga...",
+          "whyItMatters": "",
+          "involvedParties": [
+            "meta"
+          ],
+          "entities": [
+            "meta"
+          ],
+          "when": "6 hours ago",
+          "sourceUrls": [
+            "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669"
+          ],
+          "freshness": 8,
+          "urgency": 5,
+          "discoveredAt": "2026-03-31T15:32:57.666Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:health",
+          "sectionCandidates": [
+            "news",
+            "health"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "research",
+          "genericPage": false,
+          "page_kind": "analysis",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "medical bulletin 31 march 2026",
+          "canonicalUrl": "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
+          "discoveryScore": 16.4,
+          "eventKey": "news:medical bulletin 31 march 2026",
+          "source_id": "brave-sec-1774971177662-1",
+          "url": "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
+          "canonical_url": "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
+          "domain": "medicaldialogues.in",
+          "canonical_domain": "medicaldialogues.in",
+          "normalized_title": "medical bulletin 31 march 2026",
+          "snippet": "Here are the top medical news for today:New Study Identifies Exercise Type That Significantly Improves Sleep Quality A new meta-analysis published in Sleep and Biological Rhythms suggests that yoga...",
+          "published_at": "6 hours ago",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news",
+            "health"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "news:medical bulletin 31 march 2026",
+          "keywords": [
+            "medical",
+            "bulletin",
+            "march",
+            "2026",
+            "here",
+            "study",
+            "identifies",
+            "exercise",
+            "type",
+            "significantly",
+            "improves",
+            "sleep"
+          ],
+          "title_signal_tokens": [
+            "medical",
+            "bulletin",
+            "march",
+            "2026"
+          ],
+          "url_signal_tokens": [
+            "mdtv",
+            "medical",
+            "bulletin",
+            "31march2026"
+          ],
+          "title_url_overlap": 0.5,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "medical",
+            "bulletin",
+            "march",
+            "2026"
+          ]
+        },
+        {
+          "id": "google-sec-1774971195940-4",
+          "title": "Trump administration sues Minnesota for allowing trans athletes in ...",
+          "summary": "18 hours ago ... Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "2026-03-30T21:37:09.000Z",
+          "sourceUrls": [
+            "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration"
+          ],
+          "freshness": 7,
+          "urgency": 4,
+          "discoveredAt": "2026-03-31T15:33:15.945Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:news",
+          "sectionCandidates": [
+            "news",
+            "sports"
+          ],
+          "topicCandidates": [
+            "athletes-culture"
+          ],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "trump administration sues minnesota for allowing trans athletes in",
+          "canonicalUrl": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+          "discoveryScore": 16.4,
+          "eventKey": "news:trump administration sues minnesota for allowing trans athletes in",
+          "source_id": "google-sec-1774971195940-4",
+          "url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+          "canonical_url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+          "domain": "theguardian.com",
+          "canonical_domain": "theguardian.com",
+          "normalized_title": "trump administration sues minnesota for allowing trans athletes in",
+          "snippet": "18 hours ago ... Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination.",
+          "published_at": "2026-03-30T21:37:09.000Z",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news",
+            "sports"
+          ],
+          "topic_candidates": [
+            "athletes-culture"
+          ],
+          "cluster_id": null,
+          "event_key": "news:trump administration sues minnesota for allowing trans athletes in",
+          "keywords": [
+            "trump",
+            "administration",
+            "sues",
+            "minnesota",
+            "allowing",
+            "trans",
+            "athletes",
+            "hours",
+            "justice",
+            "department",
+            "claims",
+            "state"
+          ],
+          "title_signal_tokens": [
+            "trump",
+            "administration",
+            "sues",
+            "minnesota",
+            "allowing",
+            "trans",
+            "athletes"
+          ],
+          "url_signal_tokens": [
+            "minnesota",
+            "trans",
+            "athletes",
+            "lawsuit",
+            "trump",
+            "administration"
+          ],
+          "title_url_overlap": 0.8333333333333334,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "trump",
+            "administration",
+            "sues",
+            "minnesota",
+            "allowing",
+            "trans",
+            "athletes"
+          ]
+        },
+        {
+          "id": "google-sec-1774971195938-3",
+          "title": "Climate law 'battle royale'",
+          "summary": "1 day ago ... The Democratic Party's embrace of affordability politics is pushing what remains of U.S. climate policy to the brink.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-31T15:33:15.940Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:news",
+          "sectionCandidates": [
+            "news"
+          ],
+          "topicCandidates": [
+            "us-politics",
+            "climate-extreme-weather"
+          ],
+          "detectedSectionId": "news",
+          "detectedTopicId": "us-politics",
+          "region": "us",
+          "angle": "policy",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 10,
+          "normalizedTitle": "climate law battle royale politico",
+          "canonicalUrl": "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808",
+          "discoveryScore": 15.6,
+          "eventKey": "us-politics:climate law battle royale politico",
+          "source_id": "google-sec-1774971195938-3",
+          "url": "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808",
+          "canonical_url": "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808",
+          "domain": "politico.com",
+          "canonical_domain": "politico.com",
+          "normalized_title": "climate law battle royale",
+          "snippet": "1 day ago ... The Democratic Party's embrace of affordability politics is pushing what remains of U.S. climate policy to the brink.",
+          "published_at": "2026-03-31T15:33:15.940Z",
+          "section_id": "news",
+          "topic_id": "us-politics",
+          "section_candidates": [
+            "news"
+          ],
+          "topic_candidates": [
+            "us-politics",
+            "climate-extreme-weather"
+          ],
+          "cluster_id": null,
+          "event_key": "us-politics:climate law battle royale politico",
+          "keywords": [
+            "climate",
+            "battle",
+            "royale",
+            "democratic",
+            "party",
+            "embrace",
+            "affordability",
+            "politics",
+            "pushing",
+            "what",
+            "remains",
+            "policy"
+          ],
+          "title_signal_tokens": [
+            "climate",
+            "battle",
+            "royale"
+          ],
+          "url_signal_tokens": [
+            "newsletters",
+            "weekly",
+            "york",
+            "jersey",
+            "energy",
+            "climate",
+            "battle",
+            "royale"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "us",
+          "titleTokens": [
+            "climate",
+            "battle",
+            "royale"
+          ]
+        },
+        {
+          "id": "google-sec-1774971195946-5",
+          "title": "What's next in the US government shutdown, as situation eases at ...",
+          "summary": "22 hours ago ... Wait times in US airport security queues eased somewhat on Monday after President Donald Trump signed an order instructing his administration to find a way ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.bbc.com/news/articles/cr513dnq61mo"
+          ],
+          "freshness": 4,
+          "urgency": 6,
+          "discoveredAt": "2026-03-31T15:33:15.949Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:news",
+          "sectionCandidates": [
+            "news",
+            "tech"
+          ],
+          "topicCandidates": [
+            "cybersecurity"
+          ],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "policy",
+          "genericPage": false,
+          "page_kind": "official_release",
+          "genericity_score": 1,
+          "article_likelihood": 7,
+          "normalizedTitle": "what s next in the us government shutdown as situation eases at",
+          "canonicalUrl": "https://www.bbc.com/news/articles/cr513dnq61mo",
+          "discoveryScore": 14.8,
+          "eventKey": "news:what s next in the us government shutdown as situation eases at",
+          "source_id": "google-sec-1774971195946-5",
+          "url": "https://www.bbc.com/news/articles/cr513dnq61mo",
+          "canonical_url": "https://www.bbc.com/news/articles/cr513dnq61mo",
+          "domain": "bbc.com",
+          "canonical_domain": "bbc.com",
+          "normalized_title": "what s next in the us government shutdown as situation eases at",
+          "snippet": "22 hours ago ... Wait times in US airport security queues eased somewhat on Monday after President Donald Trump signed an order instructing his administration to find a way ...",
+          "published_at": "2026-03-31T15:33:15.949Z",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news",
+            "tech"
+          ],
+          "topic_candidates": [
+            "cybersecurity"
+          ],
+          "cluster_id": null,
+          "event_key": "news:what s next in the us government shutdown as situation eases at",
+          "keywords": [
+            "what",
+            "next",
+            "government",
+            "shutdown",
+            "situation",
+            "eases",
+            "hours",
+            "wait",
+            "times",
+            "airport",
+            "security",
+            "queues"
+          ],
+          "title_signal_tokens": [
+            "what",
+            "next",
+            "government",
+            "shutdown",
+            "situation",
+            "eases"
+          ],
+          "url_signal_tokens": [
+            "cr513dnq61mo"
+          ],
+          "title_url_overlap": 0,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "shutdown",
+          "place": "us",
+          "titleTokens": [
+            "what",
+            "next",
+            "government",
+            "shutdown",
+            "situation",
+            "eases"
+          ]
+        },
+        {
+          "id": "google-sec-1774971195931-1",
+          "title": "Constantino's sticky ad spending problem",
+          "summary": "1 day ago ... GREENBERGER BECOMES POLITICO EDITOR-IN-CHIEF: After an extensive search, POLITICO has named Jonathan Greenberger as the news organization's next Global ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-31T15:33:15.935Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:news",
+          "sectionCandidates": [
+            "news",
+            "business"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 10,
+          "normalizedTitle": "constantino s sticky ad spending problem politico",
+          "canonicalUrl": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
+          "discoveryScore": 14.6,
+          "eventKey": "news:constantino s sticky ad spending problem politico",
+          "source_id": "google-sec-1774971195931-1",
+          "url": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
+          "canonical_url": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
+          "domain": "politico.com",
+          "canonical_domain": "politico.com",
+          "normalized_title": "constantino s sticky ad spending problem",
+          "snippet": "1 day ago ... GREENBERGER BECOMES POLITICO EDITOR-IN-CHIEF: After an extensive search, POLITICO has named Jonathan Greenberger as the news organization's next Global ...",
+          "published_at": "2026-03-31T15:33:15.935Z",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news",
+            "business"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "news:constantino s sticky ad spending problem politico",
+          "keywords": [
+            "constantino",
+            "sticky",
+            "spending",
+            "problem",
+            "greenberger",
+            "becomes",
+            "politico",
+            "editor",
+            "chief",
+            "extensive",
+            "search",
+            "named"
+          ],
+          "title_signal_tokens": [
+            "constantino",
+            "sticky",
+            "spending",
+            "problem"
+          ],
+          "url_signal_tokens": [
+            "newsletters",
+            "york",
+            "playbook",
+            "candidates",
+            "were",
+            "paid",
+            "campaign"
+          ],
+          "title_url_overlap": 0,
+          "title_url_mismatch": true,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "constantino",
+            "sticky",
+            "spending",
+            "problem"
+          ]
+        },
+        {
+          "id": "google-sec-1774971195935-2",
+          "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+          "summary": "22 hours ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
+          "whyItMatters": "",
+          "involvedParties": [
+            "israel"
+          ],
+          "entities": [
+            "israel"
+          ],
+          "when": "2026-03-30T19:29:35.000Z",
+          "sourceUrls": [
+            "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists"
+          ],
+          "freshness": 6,
+          "urgency": 4,
+          "discoveredAt": "2026-03-31T15:33:15.938Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:news",
+          "sectionCandidates": [
+            "news"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "israel",
+          "angle": "conflict",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "israel passes law to give death penalty to palestinians convicted of",
+          "canonicalUrl": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
+          "discoveryScore": 14.4,
+          "eventKey": "news:israel passes law to give death penalty to palestinians convicted of",
+          "source_id": "google-sec-1774971195935-2",
+          "url": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
+          "canonical_url": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
+          "domain": "theguardian.com",
+          "canonical_domain": "theguardian.com",
+          "normalized_title": "israel passes law to give death penalty to palestinians convicted of",
+          "snippet": "22 hours ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
+          "published_at": "2026-03-30T19:29:35.000Z",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "news:israel passes law to give death penalty to palestinians convicted of",
+          "keywords": [
+            "israel",
+            "passes",
+            "give",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted",
+            "hours",
+            "rarely",
+            "used",
+            "applying",
+            "only"
+          ],
+          "title_signal_tokens": [
+            "israel",
+            "passes",
+            "give",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted"
+          ],
+          "url_signal_tokens": [
+            "israel",
+            "passes",
+            "death",
+            "penalty",
+            "palestinian",
+            "convicted",
+            "terrorists"
+          ],
+          "title_url_overlap": 0.7142857142857143,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "israel",
+          "titleTokens": [
+            "israel",
+            "passes",
+            "give",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted"
+          ]
+        },
+        {
+          "id": "google-sec-1774971195950-6",
+          "title": "Israel passes death penalty law for Palestinians convicted of lethal ...",
+          "summary": "16 hours ago ... \"Such laws and measures will not break the will of the Palestinian people or undermine their steadfastness,\" Abbas' office said in a statement. \"Nor will they ...",
+          "whyItMatters": "",
+          "involvedParties": [
+            "israel"
+          ],
+          "entities": [
+            "israel"
+          ],
+          "when": "2026-03-30T13:20:45.675Z",
+          "sourceUrls": [
+            "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/"
+          ],
+          "freshness": 6,
+          "urgency": 4,
+          "discoveredAt": "2026-03-31T15:33:15.955Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:news",
+          "sectionCandidates": [
+            "news"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "israel",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "official_release",
+          "genericity_score": 1,
+          "article_likelihood": 8,
+          "normalizedTitle": "israel passes death penalty law for palestinians convicted of lethal",
+          "canonicalUrl": "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/",
+          "discoveryScore": 14.4,
+          "eventKey": "news:israel passes death penalty law for palestinians convicted of lethal",
+          "source_id": "google-sec-1774971195950-6",
+          "url": "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/",
+          "canonical_url": "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/",
+          "domain": "reuters.com",
+          "canonical_domain": "reuters.com",
+          "normalized_title": "israel passes death penalty law for palestinians convicted of lethal",
+          "snippet": "16 hours ago ... \"Such laws and measures will not break the will of the Palestinian people or undermine their steadfastness,\" Abbas' office said in a statement. \"Nor will they ...",
+          "published_at": "2026-03-30T13:20:45.675Z",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "news:israel passes death penalty law for palestinians convicted of lethal",
+          "keywords": [
+            "israel",
+            "passes",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted",
+            "lethal",
+            "hours",
+            "such",
+            "laws",
+            "measures",
+            "break"
+          ],
+          "title_signal_tokens": [
+            "israel",
+            "passes",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted",
+            "lethal"
+          ],
+          "url_signal_tokens": [
+            "middle",
+            "east",
+            "israeli",
+            "death",
+            "penalty",
+            "bill",
+            "palestinian",
+            "murder",
+            "convicts",
+            "faces",
+            "vote"
+          ],
+          "title_url_overlap": 0.2857142857142857,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "israel",
+          "titleTokens": [
+            "israel",
+            "passes",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted",
+            "lethal"
+          ]
+        },
+        {
+          "id": "brave-sec-1774971171713-3",
+          "title": "UKHotViews",
+          "summary": "Bringing you opinionated, authoritative research & analysis on the UK technology scene.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "16 hours ago",
+          "sourceUrls": [
+            "https://www.techmarketview.com/ukhotviews/"
+          ],
+          "freshness": 7,
+          "urgency": 4,
+          "discoveredAt": "2026-03-31T15:32:51.715Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:tech",
+          "sectionCandidates": [
+            "news",
+            "tech"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "research",
+          "genericPage": false,
+          "page_kind": "analysis",
+          "genericity_score": 0,
+          "article_likelihood": 7,
+          "normalizedTitle": "ukhotviews latest tech news views",
+          "canonicalUrl": "https://www.techmarketview.com/ukhotviews/",
+          "discoveryScore": 13.8,
+          "eventKey": "news:ukhotviews latest tech news views",
+          "source_id": "brave-sec-1774971171713-3",
+          "url": "https://www.techmarketview.com/ukhotviews/",
+          "canonical_url": "https://www.techmarketview.com/ukhotviews/",
+          "domain": "techmarketview.com",
+          "canonical_domain": "techmarketview.com",
+          "normalized_title": "ukhotviews",
+          "snippet": "Bringing you opinionated, authoritative research & analysis on the UK technology scene.",
+          "published_at": "16 hours ago",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news",
+            "tech"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "news:ukhotviews latest tech news views",
+          "keywords": [
+            "ukhotviews",
+            "bringing",
+            "opinionated",
+            "authoritative",
+            "research",
+            "analysis",
+            "technology",
+            "scene"
+          ],
+          "title_signal_tokens": [
+            "ukhotviews"
+          ],
+          "url_signal_tokens": [
+            "ukhotviews"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "research",
+          "place": "global",
+          "titleTokens": [
+            "ukhotviews"
+          ]
+        },
+        {
+          "id": "google-sec-1774971195957-8",
+          "title": "Environmental & Climate News",
+          "summary": "1 hour ago ... Find latest environment news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.reuters.com/business/environment/"
+          ],
+          "freshness": 4,
+          "urgency": 6,
+          "discoveredAt": "2026-03-31T15:33:15.960Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:news",
+          "sectionCandidates": [
+            "news",
+            "business"
+          ],
+          "topicCandidates": [
+            "climate-extreme-weather"
+          ],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "unknown",
+          "genericity_score": 2,
+          "article_likelihood": 1,
+          "normalizedTitle": "environmental climate news reuters",
+          "canonicalUrl": "https://www.reuters.com/business/environment/",
+          "discoveryScore": 13,
+          "eventKey": "news:environmental climate news reuters",
+          "source_id": "google-sec-1774971195957-8",
+          "url": "https://www.reuters.com/business/environment/",
+          "canonical_url": "https://www.reuters.com/business/environment/",
+          "domain": "reuters.com",
+          "canonical_domain": "reuters.com",
+          "normalized_title": "environmental climate news",
+          "snippet": "1 hour ago ... Find latest environment news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
+          "published_at": "2026-03-31T15:33:15.960Z",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news",
+            "business"
+          ],
+          "topic_candidates": [
+            "climate-extreme-weather"
+          ],
+          "cluster_id": null,
+          "event_key": "news:environmental climate news reuters",
+          "keywords": [
+            "environmental",
+            "climate",
+            "hour",
+            "find",
+            "environment",
+            "every",
+            "corner",
+            "globe",
+            "reuters",
+            "your",
+            "online",
+            "source"
+          ],
+          "title_signal_tokens": [
+            "environmental",
+            "climate"
+          ],
+          "url_signal_tokens": [
+            "environment"
+          ],
+          "title_url_overlap": 0,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "environmental",
+            "climate"
+          ]
+        },
+        {
+          "id": "google-sec-1774971195960-9",
+          "title": "Vermont defends its landmark climate superfund law against Trump ...",
+          "summary": "12 hours ago ... Headlines from ABC News LiveCatch up on the developing stories making headlines. Vermont's effort to make fossil fuel companies pay for damage caused by climate ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://abcnews.com/Business/wireStory/vermont-defends-landmark-climate-superfund-law-trump-administration-131551210"
+          ],
+          "freshness": 4,
+          "urgency": 6,
+          "discoveredAt": "2026-03-31T15:33:15.962Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:news",
+          "sectionCandidates": [
+            "news",
+            "business"
+          ],
+          "topicCandidates": [
+            "climate-extreme-weather",
+            "companies-deals"
+          ],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "roundup",
+          "genericity_score": 6,
+          "article_likelihood": 0,
+          "normalizedTitle": "vermont defends its landmark climate superfund law against trump",
+          "canonicalUrl": "https://abcnews.com/business/wirestory/vermont-defends-landmark-climate-superfund-law-trump-administration-131551210",
+          "discoveryScore": 12,
+          "eventKey": "news:vermont defends its landmark climate superfund law against trump",
+          "source_id": "google-sec-1774971195960-9",
+          "url": "https://abcnews.com/business/wirestory/vermont-defends-landmark-climate-superfund-law-trump-administration-131551210",
+          "canonical_url": "https://abcnews.com/business/wirestory/vermont-defends-landmark-climate-superfund-law-trump-administration-131551210",
+          "domain": "abcnews.com",
+          "canonical_domain": "abcnews.com",
+          "normalized_title": "vermont defends its landmark climate superfund law against trump",
+          "snippet": "12 hours ago ... Headlines from ABC News LiveCatch up on the developing stories making headlines. Vermont's effort to make fossil fuel companies pay for damage caused by climate ...",
+          "published_at": "2026-03-31T15:33:15.962Z",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news",
+            "business"
+          ],
+          "topic_candidates": [
+            "climate-extreme-weather",
+            "companies-deals"
+          ],
+          "cluster_id": null,
+          "event_key": "news:vermont defends its landmark climate superfund law against trump",
+          "keywords": [
+            "vermont",
+            "defends",
+            "landmark",
+            "climate",
+            "superfund",
+            "against",
+            "trump",
+            "hours",
+            "headlines",
+            "livecatch",
+            "developing",
+            "making"
+          ],
+          "title_signal_tokens": [
+            "vermont",
+            "defends",
+            "landmark",
+            "climate",
+            "superfund",
+            "against",
+            "trump"
+          ],
+          "url_signal_tokens": [
+            "wirestory",
+            "vermont",
+            "defends",
+            "landmark",
+            "climate",
+            "superfund",
+            "trump",
+            "administration"
+          ],
+          "title_url_overlap": 0.8571428571428571,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "vermont",
+            "defends",
+            "landmark",
+            "climate",
+            "superfund",
+            "against",
+            "trump"
+          ]
+        },
+        {
+          "id": "brave-sec-1774971183676-3",
+          "title": "Transfer Centre LIVE! Football transfer news, updates and rumours | Transfer Centre News",
+          "summary": "Follow the latest news, gossip, rumours and reaction with the Sky Sports Transfer Centre...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "20 hours ago",
+          "sourceUrls": [
+            "https://www.skysports.com/football/live-blog/31771/12476234/transfer-centre-live-football-transfer-news-updates-and-rumours"
+          ],
+          "freshness": 6,
+          "urgency": 4,
+          "discoveredAt": "2026-03-31T15:33:03.678Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:sports",
+          "sectionCandidates": [
+            "news",
+            "sports"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "transfers",
+          "genericPage": false,
+          "page_kind": "live",
+          "genericity_score": 6,
+          "article_likelihood": 0,
+          "normalizedTitle": "transfer centre live football transfer news updates and rumours transfer centre news sky sports",
+          "canonicalUrl": "https://www.skysports.com/football/live-blog/31771/12476234/transfer-centre-live-football-transfer-news-updates-and-rumours",
+          "discoveryScore": 10,
+          "eventKey": "news:transfer centre live football transfer news updates and rumours transfer centre ",
+          "source_id": "brave-sec-1774971183676-3",
+          "url": "https://www.skysports.com/football/live-blog/31771/12476234/transfer-centre-live-football-transfer-news-updates-and-rumours",
+          "canonical_url": "https://www.skysports.com/football/live-blog/31771/12476234/transfer-centre-live-football-transfer-news-updates-and-rumours",
+          "domain": "skysports.com",
+          "canonical_domain": "skysports.com",
+          "normalized_title": "transfer centre live football transfer news updates and rumours",
+          "snippet": "Follow the latest news, gossip, rumours and reaction with the Sky Sports Transfer Centre...",
+          "published_at": "20 hours ago",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news",
+            "sports"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "news:transfer centre live football transfer news updates and rumours transfer centre ",
+          "keywords": [
+            "transfer",
+            "centre",
+            "football",
+            "rumours",
+            "follow",
+            "gossip",
+            "reaction",
+            "sports"
+          ],
+          "title_signal_tokens": [
+            "transfer",
+            "centre",
+            "football",
+            "rumours"
+          ],
+          "url_signal_tokens": [
+            "football",
+            "blog",
+            "transfer",
+            "centre",
+            "rumours"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "transfer",
+            "centre",
+            "football",
+            "rumours"
+          ]
+        },
+        {
+          "id": "google-sec-1774971195955-7",
+          "title": "US & Canada | Latest News & Updates",
+          "summary": "4 hours ago ... Get all the latest news, live updates and content about the US & Canada from across the BBC.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.bbc.com/news/us-canada"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-31T15:33:15.957Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:news",
+          "sectionCandidates": [
+            "news"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "canada",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "live",
+          "genericity_score": 6,
+          "article_likelihood": 0,
+          "normalizedTitle": "us canada latest news updates bbc",
+          "canonicalUrl": "https://www.bbc.com/news/us-canada",
+          "discoveryScore": 10,
+          "eventKey": "news:us canada latest news updates bbc",
+          "source_id": "google-sec-1774971195955-7",
+          "url": "https://www.bbc.com/news/us-canada",
+          "canonical_url": "https://www.bbc.com/news/us-canada",
+          "domain": "bbc.com",
+          "canonical_domain": "bbc.com",
+          "normalized_title": "us canada",
+          "snippet": "4 hours ago ... Get all the latest news, live updates and content about the US & Canada from across the BBC.",
+          "published_at": "2026-03-31T15:33:15.957Z",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "news:us canada latest news updates bbc",
+          "keywords": [
+            "canada",
+            "hours",
+            "content",
+            "about",
+            "across"
+          ],
+          "title_signal_tokens": [
+            "canada"
+          ],
+          "url_signal_tokens": [
+            "canada"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "us",
+          "titleTokens": [
+            "canada"
+          ]
+        }
+      ],
+      "poolIdentityKey": "cluster:evt-2026-03-31-us-politics-general-global-israel-meta",
+      "selectionScore": 13.49450923611111,
+      "selectionNotes": [
+        "section_penalty:15",
+        "topic_penalty:2",
+        "region_penalty:38",
+        "angle_penalty:32",
+        "entity_penalty:4"
+      ],
+      "readyCandidateStatus": null,
+      "readyCandidateRank": null,
+      "_selectionOrigin": "pool"
+    },
+    "sourcePack": {
+      "eventId": "evt-2026-03-31-us-politics-general-global-israel-meta",
+      "topic": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+      "sources": 2,
+      "uniqueDomains": 2,
+      "credibilityScore": null,
+      "passesGate": true,
+      "gateNotes": [
+        "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+        "Role-aware one-event source-pack gate passed"
+      ]
+    }
+  },
+  "stats": {
+    "discovery_candidates": 35,
+    "event_clusters": 7,
+    "briefs_normalized": 6,
+    "source_packs_assembled": 12,
+    "publishable_candidates": 2,
+    "selected_topic": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+    "selected_topics": [
+      "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+      "NFL asks prediction market operators to refrain from 'objectionable bets'"
+    ],
+    "articles_attempted": 2,
+    "articles_published": 2,
+    "news_pool": {
+      "total": 47,
+      "active": 40,
+      "published": 7,
+      "ready_candidates": 2
+    },
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 5,
+            "fresh_files": 5,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 73742
+          },
+          "gdelt": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          },
+          "google": {
+            "files": 2,
+            "fresh_files": 2,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 52875
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 154414,
+    "ready_candidates": 2,
+    "additional_ready_candidates": 2,
+    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T15-32-45-133Z.json"
+  },
+  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T15-32-45-133Z.json",
+  "published_paths": [
+    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng.mdx",
+    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-nfl-urges-prediction-markets-to-avoid-objectionable-football.mdx"
+  ],
+  "verified_urls": [
+    "/article/2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng",
+    "/article/2026-03-31-nfl-urges-prediction-markets-to-avoid-objectionable-football"
+  ],
+  "selected_candidates": [
+    {
+      "title": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+      "topic": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+      "section_id": "news",
+      "topic_id": "us-politics"
+    },
+    {
+      "title": "NFL asks prediction market operators to refrain from 'objectionable bets'",
+      "topic": "NFL asks prediction market operators to refrain from 'objectionable bets'",
+      "section_id": "business",
+      "topic_id": "crypto-bitcoin"
+    }
+  ],
+  "published_articles": [
+    {
+      "title": "Vermont Defends ‘Climate Superfund’ Law Against Trump Challenge",
+      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng.mdx",
+      "verifiedUrl": null
+    },
+    {
+      "title": "NFL Urges Prediction Markets to Avoid ‘Objectionable’ Football Bets",
+      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-nfl-urges-prediction-markets-to-avoid-objectionable-football.mdx",
+      "verifiedUrl": null
+    }
+  ]
+}
