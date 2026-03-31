@@ -17,6 +17,16 @@ const EXPANSION_TOPIC_LIMIT = 4;
 const GOOGLE_LANE_LIMIT = 3;
 const GDELT_LANE_LIMIT = 3;
 const DISCOVERY_STATE_PATH = path.resolve(PROJECT_ROOT, 'qwen-data', 'events', 'discovery-lane-state.json');
+const NEWS_POOL_PATH = path.resolve(PROJECT_ROOT, 'qwen-data', 'events', 'news-pool.json');
+const TARGETED_BRAVE_QUERY_LIMIT = 1;
+const TARGETED_COVERAGE_WINDOW_HOURS = 48;
+const TARGETED_COVERAGE_RECENT_LIMIT = 16;
+const TARGETED_COVERAGE_MIN_SAMPLE = 8;
+const TARGETED_COVERAGE_MIN_MAX_SECTION_COUNT = 4;
+const TARGETED_COVERAGE_MIN_GAP = 3;
+const TARGETED_SECTION_VIABLE_FLOOR = 1;
+
+let targetedCoverageQueriesUsed = 0;
 
 const REGION_PATTERNS = [
   ['united states', 'us'], ['u.s.', 'us'], ['america', 'us'], ['white house', 'us'], ['congress', 'us'], ['senate', 'us'],
@@ -163,6 +173,7 @@ export async function runDiscovery(options = {}) {
     candidate_floor: CANDIDATE_FLOOR,
     viable_candidate_floor: VIABLE_CANDIDATE_FLOOR,
     brave_queries: 0,
+    targeted_brave_queries: 0,
     google_trusted_queries: 0,
     gdelt_queries: 0,
     total_candidates: 0,
@@ -176,9 +187,22 @@ export async function runDiscovery(options = {}) {
     lanes: plan.core.map((entry) => entry.lane),
     channels: {
       brave_core: 0,
+      brave_targeted: 0,
       brave_expansion: 0,
       google_trusted: 0,
       gdelt: 0,
+    },
+    targeted_coverage: {
+      triggered: false,
+      reason: null,
+      section_id: null,
+      topic_id: null,
+      recent_window_hours: TARGETED_COVERAGE_WINDOW_HOURS,
+      recent_sample_size: 0,
+      section_counts: {},
+      viable_in_target_section_before: 0,
+      viable_in_target_section_after: 0,
+      skipped_reason: null,
     },
   };
 
@@ -219,12 +243,54 @@ export async function runDiscovery(options = {}) {
   let filteredCandidates = filterAndRankCandidates(allCandidates, stats);
   let viableCandidateCount = countViableCandidates(filteredCandidates);
   stats.viable_candidates = viableCandidateCount;
+  const targetedCoveragePlan = buildTargetedCoveragePlan(options);
+  if (targetedCoveragePlan?.sampleSize) {
+    stats.targeted_coverage.recent_sample_size = targetedCoveragePlan.sampleSize;
+    stats.targeted_coverage.section_counts = targetedCoveragePlan.sectionCounts;
+  }
 
-  const needsExpansion = filteredCandidates.length < CANDIDATE_FLOOR || viableCandidateCount < VIABLE_CANDIDATE_FLOOR;
+  if (
+    targetedCoveragePlan
+    && enableBrave
+    && braveApiKey
+    && targetedCoverageQueriesUsed < TARGETED_BRAVE_QUERY_LIMIT
+  ) {
+    const viableInTargetSection = countViableCandidatesBySection(filteredCandidates, targetedCoveragePlan.sectionId);
+    stats.targeted_coverage.viable_in_target_section_before = viableInTargetSection;
+
+    if (viableInTargetSection < TARGETED_SECTION_VIABLE_FLOOR) {
+      console.log(`[discovery] Targeted coverage pass: section=${targetedCoveragePlan.sectionId}${targetedCoveragePlan.topicId ? ` topic=${targetedCoveragePlan.topicId}` : ''}`);
+      const targetedResult = await discoverWithBrave(braveApiKey, [targetedCoveragePlan.queryEntry], {
+        ...options,
+        logLabel: 'discovery_brave_news_targeted',
+      });
+      targetedCoverageQueriesUsed += 1;
+      stats.brave_queries += 1;
+      stats.targeted_brave_queries += 1;
+      stats.channels.brave_targeted = targetedResult.briefs.length;
+      allCandidates.push(...targetedResult.briefs);
+      filteredCandidates = filterAndRankCandidates(allCandidates, stats, true);
+      viableCandidateCount = countViableCandidates(filteredCandidates);
+      stats.viable_candidates = viableCandidateCount;
+      stats.targeted_coverage.triggered = true;
+      stats.targeted_coverage.reason = targetedCoveragePlan.reason;
+      stats.targeted_coverage.section_id = targetedCoveragePlan.sectionId;
+      stats.targeted_coverage.topic_id = targetedCoveragePlan.topicId || null;
+      stats.targeted_coverage.viable_in_target_section_after = countViableCandidatesBySection(filteredCandidates, targetedCoveragePlan.sectionId);
+    } else {
+      stats.targeted_coverage.skipped_reason = `target_section_already_has_viable_candidates:${viableInTargetSection}`;
+    }
+  } else if (!targetedCoveragePlan) {
+    stats.targeted_coverage.skipped_reason = 'no_clear_recent_imbalance';
+  } else if (!(enableBrave && braveApiKey)) {
+    stats.targeted_coverage.skipped_reason = 'brave_unavailable';
+  } else if (targetedCoverageQueriesUsed >= TARGETED_BRAVE_QUERY_LIMIT) {
+    stats.targeted_coverage.skipped_reason = 'targeted_query_limit_reached';
+  }
+
+  const needsExpansion = viableCandidateCount < VIABLE_CANDIDATE_FLOOR;
   if (needsExpansion && allowExpansion && enableBrave && braveApiKey && plan.expansion.length > 0) {
-    const shortageReason = filteredCandidates.length < CANDIDATE_FLOOR
-      ? `raw_candidates=${filteredCandidates.length}<${CANDIDATE_FLOOR}`
-      : `viable_candidates=${viableCandidateCount}<${VIABLE_CANDIDATE_FLOOR}`;
+    const shortageReason = `viable_candidates=${viableCandidateCount}<${VIABLE_CANDIDATE_FLOOR}`;
     console.log(`[discovery] Candidate quality floor not met (${shortageReason}); running Brave expansion...`);
     const braveExpansion = await discoverWithBrave(braveApiKey, plan.expansion.map((entry) => ({ ...entry, logLabel: 'discovery_brave_news_expansion' })), options);
     stats.brave_queries += plan.expansion.length;
@@ -364,6 +430,113 @@ function buildGdeltSectionQuery(sectionId) {
   return `(${usableTerms.join(' OR ')}) AND sourcelang:english`;
 }
 
+function buildTargetedCoveragePlan(options = {}) {
+  const disableTargetedCoverage = parseBooleanOption(
+    options.disableTargetedCoverage
+      ?? options.disable_targeted_coverage
+      ?? process.env.QWEN_DISABLE_TARGETED_COVERAGE,
+  );
+  if (disableTargetedCoverage === true) return null;
+
+  const registry = loadTaxonomyRegistry();
+  const sample = loadRecentPublishedCoverageSample(registry, {
+    windowHours: Number(options.coverageWindowHours || TARGETED_COVERAGE_WINDOW_HOURS),
+    limit: Number(options.coverageRecentLimit || TARGETED_COVERAGE_RECENT_LIMIT),
+  });
+  if (sample.length < TARGETED_COVERAGE_MIN_SAMPLE) return null;
+
+  const sectionIds = (registry.sections || []).map((section) => String(section.id || '').trim().toLowerCase()).filter(Boolean);
+  if (sectionIds.length === 0) return null;
+
+  const sectionCounts = Object.fromEntries(sectionIds.map((sectionId) => [sectionId, 0]));
+  for (const record of sample) {
+    if (!record.sectionId || sectionCounts[record.sectionId] === undefined) continue;
+    sectionCounts[record.sectionId] += 1;
+  }
+
+  const maxCount = Math.max(...Object.values(sectionCounts));
+  const minCount = Math.min(...Object.values(sectionCounts));
+  const imbalanceGap = maxCount - minCount;
+  if (maxCount < TARGETED_COVERAGE_MIN_MAX_SECTION_COUNT || imbalanceGap < TARGETED_COVERAGE_MIN_GAP) {
+    return null;
+  }
+
+  const underfilledSections = sectionIds.filter((sectionId) => (sectionCounts[sectionId] || 0) === minCount);
+  if (underfilledSections.length === 0) return null;
+  const sectionId = underfilledSections[0];
+
+  const sectionTopicIds = getTopicIdsBySection(sectionId).map((topicId) => String(topicId || '').trim().toLowerCase()).filter(Boolean);
+  const topicCounts = Object.fromEntries(sectionTopicIds.map((topicId) => [topicId, 0]));
+  for (const record of sample) {
+    if (!record.topicId || topicCounts[record.topicId] === undefined) continue;
+    topicCounts[record.topicId] += 1;
+  }
+
+  const topicId = pickTargetTopic(sectionTopicIds, topicCounts);
+  const query = (topicId && getTopicDiscoveryQueries(topicId)[0]) || getSectionDiscoveryQueries(sectionId)[0] || null;
+  if (!query) return null;
+
+  return {
+    sectionId,
+    topicId: topicId || null,
+    sampleSize: sample.length,
+    sectionCounts,
+    reason: `recent_section_imbalance:${sectionId}:${minCount}_vs_${maxCount}`,
+    queryEntry: {
+      query,
+      lane: topicId ? `targeted:section:${sectionId}:topic:${topicId}` : `targeted:section:${sectionId}`,
+      sectionId,
+      topicId: topicId || null,
+      idPrefix: 'brave-targeted',
+      count: 5,
+    },
+  };
+}
+
+function loadRecentPublishedCoverageSample(registry, { windowHours = TARGETED_COVERAGE_WINDOW_HOURS, limit = TARGETED_COVERAGE_RECENT_LIMIT } = {}) {
+  try {
+    const raw = fs.readFileSync(NEWS_POOL_PATH, 'utf-8');
+    const parsed = JSON.parse(raw);
+    const now = Date.now();
+    const maxAgeMs = Math.max(1, Number(windowHours || TARGETED_COVERAGE_WINDOW_HOURS)) * 60 * 60 * 1000;
+    const items = (Array.isArray(parsed.items) ? parsed.items : [])
+      .map((item) => {
+        const publishedAt = parsePublishedTimestamp(item?.lastPublishedAt || item?.publishedAt || item?.updatedAt || null);
+        if (!publishedAt) return null;
+        if (now - publishedAt > maxAgeMs) return null;
+        const brief = item?.brief || {};
+        const sectionId = normalizeSectionId(
+          item?.section_id || brief?.section_id || brief?.detectedSectionId || null,
+          registry,
+        );
+        const topicId = String(item?.topic_id || brief?.topic_id || brief?.detectedTopicId || '')
+          .trim()
+          .toLowerCase();
+        if (!sectionId) return null;
+        return {
+          publishedAt,
+          sectionId,
+          topicId: topicId || null,
+        };
+      })
+      .filter(Boolean)
+      .sort((left, right) => right.publishedAt - left.publishedAt)
+      .slice(0, Math.max(1, Number(limit || TARGETED_COVERAGE_RECENT_LIMIT)));
+    return items;
+  } catch {
+    return [];
+  }
+}
+
+function pickTargetTopic(topicIds = [], topicCounts = {}) {
+  if (!Array.isArray(topicIds) || topicIds.length === 0) return null;
+  const withQueries = topicIds.filter((topicId) => Boolean(getTopicDiscoveryQueries(topicId)[0]));
+  if (withQueries.length === 0) return null;
+  const minCount = Math.min(...withQueries.map((topicId) => Number(topicCounts[topicId] || 0)));
+  const underfilledTopics = withQueries.filter((topicId) => Number(topicCounts[topicId] || 0) === minCount);
+  return underfilledTopics[0] || withQueries[0] || null;
+}
+
 function normalizeQueryEntries(entries) {
   return (Array.isArray(entries) ? entries : []).map((entry, index) => {
     if (typeof entry === 'string') {
@@ -426,16 +599,33 @@ function filterAndRankCandidates(candidates, stats, recompute = false) {
 
 function countViableCandidates(candidates = []) {
   return (Array.isArray(candidates) ? candidates : []).filter((brief) => {
-    if (!brief) return false;
-    if (brief.crossTopicRisk) return false;
-    if (brief.genericPage) return false;
-    if (Number(brief.signalSpecificityScore || 0) < 6) return false;
-    if (Number(brief.article_likelihood || 0) < 5) return false;
-
-    const topicHints = Array.isArray(brief.topicCandidates) ? brief.topicCandidates.length : 0;
-    const entities = Array.isArray(brief.entities) ? brief.entities.length : 0;
-    return Boolean(brief.trustedSource) || topicHints > 0 || entities > 0;
+    return isViableCandidate(brief);
   }).length;
+}
+
+function countViableCandidatesBySection(candidates = [], sectionId = null) {
+  if (!sectionId) return 0;
+  return (Array.isArray(candidates) ? candidates : []).filter((brief) => {
+    if (!isViableCandidate(brief)) return false;
+    const detected = String(brief.detectedSectionId || '').trim().toLowerCase();
+    if (detected === sectionId) return true;
+    const sectionHints = Array.isArray(brief.sectionCandidates)
+      ? brief.sectionCandidates.map((value) => String(value || '').trim().toLowerCase())
+      : [];
+    return sectionHints.includes(sectionId);
+  }).length;
+}
+
+function isViableCandidate(brief = null) {
+  if (!brief) return false;
+  if (brief.crossTopicRisk) return false;
+  if (brief.genericPage) return false;
+  if (Number(brief.signalSpecificityScore || 0) < 6) return false;
+  if (Number(brief.article_likelihood || 0) < 5) return false;
+
+  const topicHints = Array.isArray(brief.topicCandidates) ? brief.topicCandidates.length : 0;
+  const entities = Array.isArray(brief.entities) ? brief.entities.length : 0;
+  return Boolean(brief.trustedSource) || topicHints > 0 || entities > 0;
 }
 
 function buildBrief({ id, title, summary, when, url, provider, trustedSource, lane, sectionHint, topicHint }) {
@@ -449,12 +639,14 @@ function buildBrief({ id, title, summary, when, url, provider, trustedSource, la
   const pageKind = detectPageKind({ url, title: cleanedTitle, snippet: summary || '' });
   const genericityScore = scoreGenericity(pageKind, { url, title: cleanedTitle, snippet: summary || '' });
   const articleLikelihood = scoreArticleLikelihood(pageKind, { url, title: cleanedTitle, snippet: summary || '' });
+  const targetedLane = String(lane || '').startsWith('targeted:');
   const genericPage = genericityScore >= 7;
   const trustedBoost = trustedSource ? 2 : 0;
   const taxonomyBoost = taxonomy.detectedTopicId ? 2 : taxonomy.detectedSectionId ? 1 : 0;
   const articleBonus = Math.max(0, articleLikelihood - 4) * 0.6;
+  const targetedBoost = targetedLane ? 0.8 : 0;
   const genericPenalty = pageKind === 'homepage' ? 7 : Math.max(0, genericityScore - 5);
-  const discoveryScore = freshness + urgency + trustedBoost + taxonomyBoost + articleBonus - genericPenalty;
+  const discoveryScore = freshness + urgency + trustedBoost + taxonomyBoost + articleBonus + targetedBoost - genericPenalty;
   const detectedSectionId = taxonomy.detectedSectionId || sectionHint || null;
   const detectedTopicId = taxonomy.detectedTopicId || topicHint || null;
   const normalizedTitle = cleanedTitle.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
@@ -495,6 +687,7 @@ function buildBrief({ id, title, summary, when, url, provider, trustedSource, la
     normalizedTitle,
     canonicalUrl: canonicalizeUrl(url),
     discoveryScore: Math.round(discoveryScore * 10) / 10,
+    targetedCoverage: targetedLane,
     eventKey: `${(detectedTopicId || detectedSectionId || 'general')}:${normalizedTitle.slice(0, 80)}`,
     signalSpecificityScore: signalQuality.score,
     signalSpecificityNotes: signalQuality.notes,
@@ -629,6 +822,32 @@ function scoreUrgency(title, summary) {
 
 function uniqueStrings(values) {
   return Array.from(new Set(values.map((value) => String(value || '').trim()).filter(Boolean)));
+}
+
+function parseBooleanOption(value) {
+  if (value === undefined || value === null || value === '') return null;
+  if (typeof value === 'boolean') return value;
+  const normalized = String(value).trim().toLowerCase();
+  if (['1', 'true', 'yes', 'on'].includes(normalized)) return true;
+  if (['0', 'false', 'no', 'off'].includes(normalized)) return false;
+  return null;
+}
+
+function parsePublishedTimestamp(value) {
+  const parsed = new Date(value || 0).getTime();
+  if (!Number.isFinite(parsed) || parsed <= 0) return 0;
+  return parsed;
+}
+
+function normalizeSectionId(value, registry = null) {
+  const raw = String(value || '').trim().toLowerCase();
+  if (!raw) return null;
+  const taxonomy = registry || loadTaxonomyRegistry();
+  const direct = (taxonomy.sections || []).find((section) => String(section.id || '').trim().toLowerCase() === raw);
+  if (direct) return String(direct.id).trim().toLowerCase();
+  const byLabel = (taxonomy.sections || []).find((section) => String(section.label || '').trim().toLowerCase() === raw);
+  if (byLabel) return String(byLabel.id).trim().toLowerCase();
+  return raw;
 }
 
 function rotate(items, offset) {

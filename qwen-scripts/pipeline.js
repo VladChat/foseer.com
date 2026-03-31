@@ -1287,6 +1287,7 @@ function resolveSourcePackRetryPhase(attemptNumber = 1) {
       discoveryOptions: {
         disableBrave: true,
         disableBraveExpansion: true,
+        disableTargetedCoverage: true,
         disableGoogle: false,
         disableGdelt: false,
         googleLaneLimit: 2,
@@ -1301,6 +1302,7 @@ function resolveSourcePackRetryPhase(attemptNumber = 1) {
     discoveryOptions: {
       disableBrave: false,
       disableBraveExpansion: true,
+      disableTargetedCoverage: true,
       disableGoogle: false,
       disableGdelt: false,
       coreSectionLimit: 1,
