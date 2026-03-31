@@ -3,6 +3,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 import { runDiscovery } from './discovery.js';
 import { normalizeClusteredBrief } from './event-brief-builder.js';
@@ -21,6 +22,7 @@ import { extractQuestionCandidates } from './question-extractor.js';
 loadProjectEnv();
 
 const QUESTIONS_DIR = path.resolve(process.cwd(), 'qwen-data', 'questions');
+const QNA_LAST_RESULT_PATH = path.resolve(process.cwd(), 'qwen-data', 'events', 'qna-pipeline-last-result.json');
 
 export async function runQnaPipeline(options = {}) {
   ensureQuestionsDir();
@@ -671,12 +673,80 @@ function generateSlug(title) {
     .substring(0, 60) || 'untitled';
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+const isMainModule = process.argv[1]
+  && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (isMainModule) {
   runQnaPipeline({}).then((result) => {
+    saveQnaPipelineResult(result, QNA_LAST_RESULT_PATH);
     console.log(JSON.stringify(result, null, 2));
-    process.exit(result.success ? 0 : 1);
+    const exitEvaluation = evaluateQnaRunForExit(result);
+    if (!exitEvaluation.success) {
+      console.error('[qna-pipeline] FINAL STATUS: FAIL');
+      console.error('[qna-pipeline] Exit reason(s):', exitEvaluation.reasons.join(' | '));
+      if (exitEvaluation.controlled_no_article_failure) {
+        console.error('[qna-pipeline] EXIT CLASS: controlled_no_article_failure');
+        process.exit(1);
+      }
+      console.error('[qna-pipeline] EXIT CLASS: unexpected_failure');
+      process.exit(2);
+    }
+    console.log('[qna-pipeline] FINAL STATUS: PASS');
+    process.exit(0);
   }).catch((error) => {
     console.error('[qna-pipeline] Fatal error:', error);
-    process.exit(1);
+    const fatalResult = {
+      started_at: new Date().toISOString(),
+      success: false,
+      runId: `qna-pipeline-fatal-${Date.now()}`,
+      mode: 'question-led',
+      hard_blocker: `Fatal error: ${error.message}`,
+      stages: {},
+      stats: {
+        cache_stats: null,
+        duration_ms: 0,
+        news_pool: getNewsPoolStats(),
+        brief_candidates: 0,
+        question_candidates: 0,
+        source_pack_attempts: 0,
+      },
+    };
+    saveQnaPipelineResult(fatalResult, QNA_LAST_RESULT_PATH);
+    process.exit(2);
   });
+}
+
+function saveQnaPipelineResult(result, outputPath) {
+  const dir = path.dirname(outputPath);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+  fs.writeFileSync(outputPath, JSON.stringify({
+    timestamp: new Date().toISOString(),
+    ...result,
+  }, null, 2), 'utf-8');
+}
+
+function evaluateQnaRunForExit(result) {
+  const reasons = [];
+  const hardBlocker = String(result?.hard_blocker || '').trim();
+  const normalized = hardBlocker.toLowerCase();
+
+  if (result?.success !== true) reasons.push('final Success is false');
+  if (hardBlocker) reasons.push(`hard blocker exists: ${hardBlocker}`);
+  if (!result?.published_path) reasons.push('published_path is missing');
+
+  const controlledNoArticleFailure = reasons.length > 0 && (
+    normalized.includes('no brief candidates available')
+    || normalized.includes('no brief candidate passed source-pack viability gate')
+    || normalized.includes('no viable question candidates after quality filtering')
+    || normalized.includes('no question candidate passed source-pack assembly')
+    || normalized.includes('source-pack gate failed')
+  );
+
+  return {
+    success: reasons.length === 0,
+    reasons,
+    controlled_no_article_failure: controlledNoArticleFailure,
+  };
 }

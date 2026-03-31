@@ -574,7 +574,8 @@ function buildGeographyParentFallbacks(registry, geographySelections = []) {
   return [buildSelectionItem(unitedStatesTag, 12, 'Geography fallback inferred from U.S. state coverage', null, true)];
 }
 
-function sanitizeStoredTagging(selection = {}) {
+function sanitizeStoredTagging(selection = null) {
+  if (!selection || typeof selection !== 'object') return null;
   const tags = Array.isArray(selection.tags) ? selection.tags.map((value) => String(value || '').trim()).filter(Boolean) : [];
   const tag_slugs = Array.isArray(selection.tag_slugs) ? selection.tag_slugs.map((value) => String(value || '').trim()).filter(Boolean) : [];
   if (tags.length === 0 || tag_slugs.length === 0 || tags.length !== tag_slugs.length) return null;
@@ -595,7 +596,7 @@ function sanitizeStoredTagging(selection = {}) {
 }
 
 export function resolveCanonicalTagFrame(context = {}) {
-  const stored = sanitizeStoredTagging(context?.draft?.metadata?.tagging || null);
+  const stored = sanitizeStoredTagging(context?.draft?.metadata?.tagging);
   if (stored) return stored;
   const picked = pickArticleTags(context);
   return { ...picked, source_of_truth: 'picked' };

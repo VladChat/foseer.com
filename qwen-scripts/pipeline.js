@@ -1521,6 +1521,7 @@ function evaluatePipelineRunForExit(result) {
       || normalizedBlocker.includes('source pack gate failed')
       || normalizedBlocker.includes('no candidates discovered')
       || normalizedBlocker.includes('no briefs normalized')
+      || normalizedBlocker.includes('pre-draft quality gate failed')
     );
 
   return {
