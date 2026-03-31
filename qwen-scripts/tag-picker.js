@@ -579,7 +579,7 @@ function sanitizeStoredTagging(selection = null) {
   const tags = Array.isArray(selection.tags) ? selection.tags.map((value) => String(value || '').trim()).filter(Boolean) : [];
   const tag_slugs = Array.isArray(selection.tag_slugs) ? selection.tag_slugs.map((value) => String(value || '').trim()).filter(Boolean) : [];
   if (tags.length === 0 || tag_slugs.length === 0 || tags.length !== tag_slugs.length) return null;
-  if (tags.length < MIN_CANONICAL_TAGS || tags.length > MAX_CANONICAL_TAGS) return null;
+  if (tags.length < 2 || tags.length > MAX_CANONICAL_TAGS) return null;
   if (!selection.primary_topic_slug) return null;
   const registry = loadTagRegistry();
   const tagRecords = [];
@@ -747,7 +747,15 @@ export function pickArticleTags(context = {}) {
 
   if (!hasAnyNonTopicTag(deduped)) {
     const added = pushFirstMatchingSelection(deduped, nonTopicFallbackPool, (item) => String(item?.type || '').toLowerCase() !== 'topic');
-    if (!added) warnings.push('Missing non-topic evidence tag (entity/theme/geography/format)');
+    if (!added && topicId) {
+      const topicLinkedTheme = (registry.themeTagSlugsByTopicId?.[topicId] || [])
+        .map((slug) => registry.bySlug?.[slug])
+        .find((tag) => tag && String(tag.type || '').toLowerCase() !== 'topic');
+      if (topicLinkedTheme) {
+        deduped.push(buildSelectionItem(topicLinkedTheme, 5, 'Topic-linked non-topic fallback for sparse evidence', null, true));
+      }
+    }
+    if (!hasAnyNonTopicTag(deduped)) warnings.push('Missing non-topic evidence tag (entity/theme/geography/format)');
   }
 
   if (deduped.length < MIN_CANONICAL_TAGS) {
