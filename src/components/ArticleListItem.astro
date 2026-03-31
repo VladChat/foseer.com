@@ -1,0 +1,109 @@
+---
+// File: src/components/ArticleListItem.astro
+// Purpose: Compact article list item with thumbnail for topic/section pages.
+// Design: Clean, modern list layout with small preview image and improved meta icons.
+
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import { getPermalink } from '~/utils/permalinks';
+import { getFormattedDate } from '~/utils/utils';
+import { resolvePostImage, generateImageAlt } from '~/utils/post-image';
+import type { Post } from '~/types';
+
+export interface Props {
+  post: Post;
+  showCategory?: boolean;
+}
+
+const { post, showCategory = true } = Astro.props;
+
+const postHref = getPermalink(post.permalink, 'post');
+const categoryHref = post.category ? getPermalink(post.category.slug, 'category') : undefined;
+
+// Resolve thumbnail image
+const thumbnail = await resolvePostImage(post.image, post.slug);
+const imageAlt = `Cover image for: ${post.title || 'Article'}`;
+
+// Thumbnail dimensions for compact list
+const thumbnailWidth = 320;
+const thumbnailHeight = 180;
+const thumbnailSizes = '(max-width: 768px) 80px, 120px';
+---
+
+<article class="group border-b border-slate-200 dark:border-slate-700 pb-6 last:border-b-0">
+  <div class="flex gap-4 sm:gap-5">
+    <!-- Thumbnail Image -->
+    {thumbnail && (
+      <a href={postHref} class="flex-shrink-0 w-20 sm:w-28 md:w-32 group">
+        <div class="relative aspect-video overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800 shadow-sm transition-transform duration-300 group-hover:scale-105">
+          <Image
+            src={thumbnail}
+            alt={imageAlt}
+            width={thumbnailWidth}
+            height={thumbnailHeight}
+            sizes={thumbnailSizes}
+            loading="lazy"
+            decoding="async"
+            quality={80}
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </a>
+    )}
+
+    <!-- Content -->
+    <div class="flex flex-col flex-grow min-w-0">
+      <!-- Category (optional) -->
+      {showCategory && post.category && categoryHref && (
+        <div class="mb-2">
+          <a
+            href={categoryHref}
+            class="inline-block text-xs font-semibold uppercase tracking-wider text-primary dark:text-blue-400 hover:text-secondary dark:hover:text-blue-300 transition-colors"
+          >
+            {post.category.title}
+          </a>
+        </div>
+      )}
+
+      <!-- Title -->
+      <h3 class="text-base sm:text-lg md:text-xl font-bold font-heading text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-blue-400 transition-colors duration-200 line-clamp-2">
+        <a href={postHref} class="hover:text-primary dark:hover:text-blue-400">
+          {post.title}
+        </a>
+      </h3>
+
+      <!-- Meta Information with Modern Icons -->
+      <div class="mt-2 flex flex-wrap items-center gap-3 text-xs sm:text-sm text-muted dark:text-slate-400">
+        <!-- Date -->
+        <time
+          datetime={String(post.publishDate)}
+          class="flex items-center gap-1.5"
+        >
+          <Icon
+            name="tabler:calendar"
+            class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-400 dark:text-slate-500 flex-shrink-0"
+          />
+          <span class="truncate">{getFormattedDate(post.publishDate, { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+        </time>
+
+        <!-- Author -->
+        {post.author && (
+          <span class="flex items-center gap-1.5">
+            <Icon
+              name="tabler:user"
+              class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-400 dark:text-slate-500 flex-shrink-0"
+            />
+            <span class="truncate">{post.author}</span>
+          </span>
+        )}
+      </div>
+
+      <!-- Excerpt (optional, shown on larger screens) -->
+      {post.excerpt && (
+        <p class="hidden sm:block mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">
+          {post.excerpt}
+        </p>
+      )}
+    </div>
+  </div>
+</article>
