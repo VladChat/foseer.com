@@ -3,10 +3,11 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { spawnSync } from 'node:child_process';
 import yaml from 'js-yaml';
 
 import { resolveProjectRoot } from './utils/project-root.js';
-import { loadImageRegistry, saveImageRegistry, recordImageUsage, assetFileExists } from './image-library/registry.js';
+import { loadImageRegistry, saveImageRegistry, recordImageUsage, assetFileExists, getRegistryPath } from './image-library/registry.js';
 import { buildArticleSearchProfile, computeContextualEditorialFit } from './image-library/enrichment.js';
 
 const PROJECT_ROOT = resolveProjectRoot(import.meta.url);
@@ -18,6 +19,7 @@ function parseArgs(argv = []) {
     apply: false,
     limit: 0,
     minScore: 60,
+    scanRef: null,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -42,6 +44,15 @@ function parseArgs(argv = []) {
     }
     if (arg === '--min-score') {
       options.minScore = Math.max(0, Math.min(100, Number(argv[index + 1]) || options.minScore));
+      index += 1;
+      continue;
+    }
+    if (arg.startsWith('--scan-ref=')) {
+      options.scanRef = String(arg.split('=')[1] || '').trim() || null;
+      continue;
+    }
+    if (arg === '--scan-ref') {
+      options.scanRef = String(argv[index + 1] || '').trim() || null;
       index += 1;
     }
   }
@@ -207,20 +218,98 @@ function loadCandidates() {
   return candidates;
 }
 
+function runGit(args = []) {
+  const result = spawnSync('git', args, {
+    cwd: PROJECT_ROOT,
+    encoding: 'utf-8',
+    windowsHide: true,
+  });
+  if (result.status !== 0) {
+    const stderr = String(result.stderr || '').trim();
+    throw new Error(stderr || `git ${args.join(' ')} failed`);
+  }
+  return String(result.stdout || '');
+}
+
+function loadCandidatesFromGitRef(ref) {
+  const output = runGit(['ls-tree', '-r', '--name-only', ref, '--', 'src/data/post']);
+  const relPaths = output
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .filter((value) => /\.(md|mdx)$/i.test(value))
+    .filter((value) => !value.split('/').some((segment) => segment.startsWith('_')));
+
+  const candidates = [];
+  for (const relPath of relPaths) {
+    let raw = '';
+    try {
+      raw = runGit(['show', `${ref}:${relPath}`]);
+    } catch {
+      continue;
+    }
+    const split = splitFrontmatter(raw);
+    if (!split) continue;
+
+    const frontmatter = yaml.load(split.frontmatterRaw) || {};
+    if (!canBackfillArticle(frontmatter)) continue;
+
+    candidates.push({
+      filePath: path.resolve(PROJECT_ROOT, relPath),
+      raw,
+      frontmatterRaw: split.frontmatterRaw,
+      bodyRaw: split.bodyRaw,
+      frontmatter,
+      title: normalizeText(frontmatter.title),
+      excerpt: normalizeText(frontmatter.excerpt),
+      section: normalizeText(frontmatter.section) || 'News',
+      topicId: normalizeText(frontmatter.topic_id) || null,
+      sourceHints: collectSourceHints(frontmatter),
+      entityHints: collectEntityHints(frontmatter),
+      slug: toSlugFromCanonicalUrl(frontmatter.canonicalUrl, relPath),
+      sourceRef: ref,
+      relativePath: relPath,
+    });
+  }
+
+  return candidates;
+}
+
 function getPreferredAssets(registry) {
   const allAssets = Array.isArray(registry?.assets) ? registry.assets : [];
   const libraryAssets = allAssets.filter((asset) => String(asset?.localPath || '').startsWith('~/assets/images/library/'));
   return libraryAssets.length > 0 ? libraryAssets : allAssets;
 }
 
+function loadImageRegistryReadOnly() {
+  try {
+    const registryPath = getRegistryPath();
+    if (!fs.existsSync(registryPath)) {
+      return { assets: [], usage: [] };
+    }
+    const parsed = JSON.parse(fs.readFileSync(registryPath, 'utf-8'));
+    return {
+      assets: Array.isArray(parsed?.assets) ? parsed.assets : [],
+      usage: Array.isArray(parsed?.usage) ? parsed.usage : [],
+    };
+  } catch (error) {
+    console.warn(`[fallback-backfill] read-only registry parse failed: ${error.message}`);
+    return { assets: [], usage: [] };
+  }
+}
+
 function backfillFallbackImages(options = {}) {
-  const registry = loadImageRegistry();
+  if (options.apply && options.scanRef) {
+    throw new Error('Cannot use --apply together with --scan-ref. Use dry-run for ref scanning.');
+  }
+
+  const registry = options.apply ? loadImageRegistry() : loadImageRegistryReadOnly();
   const assets = getPreferredAssets(registry);
-  const candidates = loadCandidates();
+  const candidates = options.scanRef ? loadCandidatesFromGitRef(options.scanRef) : loadCandidates();
   const limit = Number(options.limit || 0);
   const targetCandidates = limit > 0 ? candidates.slice(0, limit) : candidates;
 
-  console.log(`[fallback-backfill] mode=${options.apply ? 'apply' : 'dry-run'} candidates=${targetCandidates.length} assets=${assets.length} min_score=${options.minScore}`);
+  console.log(`[fallback-backfill] mode=${options.apply ? 'apply' : 'dry-run'} candidates=${targetCandidates.length} assets=${assets.length} min_score=${options.minScore}${options.scanRef ? ` scan_ref=${options.scanRef}` : ''}`);
 
   const results = [];
   let updated = 0;
