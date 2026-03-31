@@ -248,6 +248,44 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
             ))}
           </div>
         )}
+
+        <!-- Theme toggle and RSS -->
+        <div class="pt-4 pb-4 border-t border-gray-100 dark:border-gray-800">
+          <div class="flex items-center justify-center gap-4">
+            <ToggleTheme iconClass="w-6 h-6" />
+            {showRssFeed && (
+              <a
+                class="text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg text-sm p-2.5 inline-flex items-center"
+                aria-label="RSS Feed"
+                href={getAsset('/rss.xml')}
+              >
+                <Icon name="tabler:rss" class="w-6 h-6" />
+              </a>
+            )}
+          </div>
+        </div>
+
+        <!-- Legal links -->
+        <div class="pt-4 border-t border-gray-100 dark:border-gray-800">
+          <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Legal</div>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="/privacy" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:underline">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/terms" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:underline">Terms of Use</a>
+            </li>
+            <li>
+              <a href="/cookies" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:underline">Cookies</a>
+            </li>
+            <li>
+              <a href="/disclaimer" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:underline">Disclaimer</a>
+            </li>
+            <li>
+              <a href="/copyright" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:underline">Copyright</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </div>

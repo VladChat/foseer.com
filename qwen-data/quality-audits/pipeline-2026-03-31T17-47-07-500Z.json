@@ -1,0 +1,213 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-03-31T17-47-07-500Z",
+  "started_at": "2026-03-31T17:47:07.500Z",
+  "generated_at": "2026-03-31T17:47:10.350Z",
+  "success": false,
+  "hard_blocker": "Pre-draft quality gate failed: no candidate passed canonical placement/tag lock",
+  "stats": {
+    "discovery_candidates": 32,
+    "event_clusters": 7,
+    "briefs_normalized": 6,
+    "source_packs_assembled": 12,
+    "publishable_candidates": 2,
+    "selected_topic": null,
+    "selected_topics": [],
+    "articles_attempted": 0,
+    "articles_published": 0,
+    "news_pool": {
+      "total": 57,
+      "active": 50,
+      "published": 7,
+      "ready_candidates": 3
+    },
+    "cache_stats": {
+      "mode": "cache_only",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": false,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 0,
+        "gdelt": 0,
+        "google": 0
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-cache",
+        "seed_root": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-data\\cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 72,
+            "fresh_files": 0,
+            "expired_files": 72,
+            "corrupt_files": 0,
+            "size_bytes": 1539591
+          },
+          "gdelt": {
+            "files": 7,
+            "fresh_files": 0,
+            "expired_files": 7,
+            "corrupt_files": 0,
+            "size_bytes": 34432
+          },
+          "google": {
+            "files": 63,
+            "fresh_files": 0,
+            "expired_files": 63,
+            "corrupt_files": 0,
+            "size_bytes": 1508804
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14290
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6298
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 289351
+          }
+        }
+      }
+    },
+    "duration_ms": 2849,
+    "ready_candidates": 2,
+    "additional_ready_candidates": 2,
+    "source_pack_attempts": 1,
+    "source_pack_retry_external_queries": 0,
+    "source_pack_retry_brave_queries": 0,
+    "source_pack_retry_estimated_tokens": 0,
+    "pre_draft_rejected": 2
+  },
+  "provider_stats": {
+    "mode": "cache_only",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": false,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 0,
+      "gdelt": 0,
+      "google": 0
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "runtime_root": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-cache",
+      "seed_root": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-data\\cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 72,
+          "fresh_files": 0,
+          "expired_files": 72,
+          "corrupt_files": 0,
+          "size_bytes": 1539591
+        },
+        "gdelt": {
+          "files": 7,
+          "fresh_files": 0,
+          "expired_files": 7,
+          "corrupt_files": 0,
+          "size_bytes": 34432
+        },
+        "google": {
+          "files": 63,
+          "fresh_files": 0,
+          "expired_files": 63,
+          "corrupt_files": 0,
+          "size_bytes": 1508804
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14290
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6298
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 289351
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "preDraftPreparation": {
+      "success": false,
+      "error": "No candidates passed pre-draft canonical lock",
+      "total": 2,
+      "success_count": 0,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 0,
+    "editorial_pass_count": 0,
+    "editorial_fail_count": 0
+  },
+  "candidates": []
+}

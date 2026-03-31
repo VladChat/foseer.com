@@ -1,0 +1,786 @@
+﻿2026-03-31T21:46:23.7073748Z ##[group]Run set +e
+2026-03-31T21:46:23.7074072Z [36;1mset +e[0m
+2026-03-31T21:46:23.7074292Z [36;1mnpm run article:qna[0m
+2026-03-31T21:46:23.7074542Z [36;1mexit_code=$?[0m
+2026-03-31T21:46:23.7074849Z [36;1mecho "exit_code=$exit_code" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T21:46:23.7075171Z [36;1m[0m
+2026-03-31T21:46:23.7075388Z [36;1mif [ "$exit_code" -eq 0 ]; then[0m
+2026-03-31T21:46:23.7075707Z [36;1m  echo "result=success" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T21:46:23.7076001Z [36;1m  exit 0[0m
+2026-03-31T21:46:23.7076201Z [36;1mfi[0m
+2026-03-31T21:46:23.7076388Z [36;1m[0m
+2026-03-31T21:46:23.7076684Z [36;1mresult_file="qwen-data/events/qna-pipeline-last-result.json"[0m
+2026-03-31T21:46:23.7077067Z [36;1mif [ -f "$result_file" ]; then[0m
+2026-03-31T21:46:23.7079185Z [36;1m  if node -e "const fs=require('node:fs');const p='qwen-data/events/qna-pipeline-last-result.json';const data=JSON.parse(fs.readFileSync(p,'utf8'));const blocker=String(data?.hard_blocker||'').toLowerCase();const controlled=/(no brief candidates available|no brief candidate passed source-pack viability gate|no viable question candidates after quality filtering|no question candidate passed source-pack assembly|source-pack gate failed)/.test(blocker);process.exit(controlled?0:1);"; then[0m
+2026-03-31T21:46:23.7081299Z [36;1m    echo "result=no_article" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T21:46:23.7081749Z [36;1m    echo "No publishable QnA article this run. Skipping build/commit/push."[0m
+2026-03-31T21:46:23.7082143Z [36;1m    exit 0[0m
+2026-03-31T21:46:23.7082352Z [36;1m  fi[0m
+2026-03-31T21:46:23.7082539Z [36;1mfi[0m
+2026-03-31T21:46:23.7082721Z [36;1m[0m
+2026-03-31T21:46:23.7082948Z [36;1mecho "result=failure" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T21:46:23.7083250Z [36;1mexit "$exit_code"[0m
+2026-03-31T21:46:23.7109991Z shell: /usr/bin/bash -e {0}
+2026-03-31T21:46:23.7110266Z env:
+2026-03-31T21:46:23.7110544Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23820920262
+2026-03-31T21:46:23.7110937Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T21:46:23.7111979Z   OPENAI_API_KEY: ***
+2026-03-31T21:46:23.7112224Z   OPENAI_WRITER_MODEL: gpt-5.1
+2026-03-31T21:46:23.7112546Z   BRAVE_SEARCH_API_KEY: ***
+2026-03-31T21:46:23.7112951Z   PEXELS_API_KEY: ***
+2026-03-31T21:46:23.7113217Z   PIXABAY_API_KEY: ***
+2026-03-31T21:46:23.7113560Z   SEARCH_WEB_API: ***
+2026-03-31T21:46:23.7113800Z   SEARCH_WEB_CX: ***
+2026-03-31T21:46:23.7114034Z   QWEN_API_RETRY_MAX_ATTEMPTS: 3
+2026-03-31T21:46:23.7114296Z   QWEN_API_RETRY_BASE_DELAY_MS: 700
+2026-03-31T21:46:23.7114563Z   QWEN_API_RETRY_MAX_DELAY_MS: 6000
+2026-03-31T21:46:23.7114813Z ##[endgroup]
+2026-03-31T21:46:23.8297848Z 
+2026-03-31T21:46:23.8298407Z > foseer@1.0.0 article:qna
+2026-03-31T21:46:23.8299206Z > node qwen-scripts/qna-pipeline.js
+2026-03-31T21:46:23.8299462Z 
+2026-03-31T21:46:23.8947077Z [writer-selector] Loaded persistent rotation state
+2026-03-31T21:46:24.0082314Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T21:46:24.0574188Z [qna-pipeline] Brief source-pack rejected :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.0576524Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T21:46:24.0822061Z [qna-pipeline] Brief source-pack rejected :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: Need at least 2 different domains among publishable sources, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.0823762Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T21:46:24.1112400Z [qna-pipeline] Brief source-pack rejected :: Hard truths, soft metals :: Need at least 2 publishable sources, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.1114545Z [source-pack] topic=Why Is Horror TV So Complicated Right Now?
+2026-03-31T21:46:24.1237196Z [qna-pipeline] Brief source-pack rejected :: Why Is Horror TV So Complicated Right Now? :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.1239373Z [source-pack] topic=Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...
+2026-03-31T21:46:24.1361147Z [qna-pipeline] Brief source-pack rejected :: Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ... :: Need at least 2 publishable sources, found 1
+2026-03-31T21:46:24.1363434Z [source-pack] topic=XRP Market Trends & Ripple's Regulatory Milestones in 2026
+2026-03-31T21:46:24.1610584Z [qna-pipeline] Brief source-pack rejected :: XRP Market Trends & Ripple's Regulatory Milestones in 2026 :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.1613241Z [source-pack] topic=10 TV Shows That Changed Fandom Culture
+2026-03-31T21:46:24.1731306Z [qna-pipeline] Brief source-pack rejected :: 10 TV Shows That Changed Fandom Culture :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.1734114Z [source-pack] topic=Tech company climate goals under pressure due to AI energy demand
+2026-03-31T21:46:24.1867578Z [qna-pipeline] Brief source-pack rejected :: Tech company climate goals under pressure due to AI energy demand :: Need at least 2 publishable sources, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.1870317Z [source-pack] topic=Medical Bulletin 31/March/2026
+2026-03-31T21:46:24.2017731Z [qna-pipeline] Brief source-pack rejected :: Medical Bulletin 31/March/2026 :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.2020906Z [source-pack] topic=Why Businesses Are Paying Closer Attention to Crypto Infrastructure
+2026-03-31T21:46:24.2176148Z [qna-pipeline] Brief source-pack rejected :: Why Businesses Are Paying Closer Attention to Crypto Infrastructure :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.2179583Z [source-pack] topic=Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms
+2026-03-31T21:46:24.2327840Z [qna-pipeline] Brief source-pack rejected :: Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.2331316Z [source-pack] topic=AI: The Cybersecurity Crisis That Vendors Love
+2026-03-31T21:46:24.2474324Z [qna-pipeline] Brief source-pack rejected :: AI: The Cybersecurity Crisis That Vendors Love :: Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.2478168Z [qna-pipeline] Brief source-pack near-miss retry :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: poolMatchLimit=24
+2026-03-31T21:46:24.2481494Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T21:46:24.2659078Z [qna-pipeline] Brief source-pack retry rejected :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.2662648Z [qna-pipeline] Brief source-pack near-miss retry :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: poolMatchLimit=24
+2026-03-31T21:46:24.2664400Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T21:46:24.2809275Z [qna-pipeline] Brief source-pack retry rejected :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: Need at least 2 different domains among publishable sources, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.2812695Z [qna-pipeline] Brief source-pack near-miss retry :: Hard truths, soft metals :: poolMatchLimit=24
+2026-03-31T21:46:24.2814076Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T21:46:24.3039282Z [qna-pipeline] Brief source-pack retry rejected :: Hard truths, soft metals :: Need at least 2 publishable sources, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:24.3044580Z [discovery] Starting taxonomy-driven signal discovery...
+2026-03-31T21:46:24.3057684Z [discovery] Channel 1: Brave core discovery...
+2026-03-31T21:46:24.3071890Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=1 live_quota=5
+2026-03-31T21:46:24.3080389Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+culture+film+tv+music+celebrities+internet+creators+platforms&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T21:46:24.5240435Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=48, 0 rate_limit_reset=1, 8014 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T21:46:24.5242756Z [discovery] Brave query status=called_success items=5 lane=section:culture query=breaking culture film tv music celebrities internet creators platforms
+2026-03-31T21:46:24.5723822Z [brave] label=discovery_brave_news status=stale_cache_hit age_ms=255173976 ttl_hours=8 mode=stale_cache
+2026-03-31T21:46:24.5725628Z [discovery] Brave query status=stale_cache_hit items=5 lane=section:news query=breaking news public affairs law climate world events
+2026-03-31T21:46:24.5861529Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5721 min_interval_ms=6000
+2026-03-31T21:46:30.3094515Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=2 live_quota=5
+2026-03-31T21:46:30.3099187Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+business+markets+consumer+companies+housing+crypto+travel&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T21:46:30.6576923Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=48, 0 rate_limit_reset=1, 8008 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T21:46:30.6578798Z [discovery] Brave query status=called_success items=5 lane=section:business query=breaking business markets consumer companies housing crypto travel
+2026-03-31T21:46:30.6708021Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5639 min_interval_ms=6000
+2026-03-31T21:46:36.3120869Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=3 live_quota=5
+2026-03-31T21:46:36.3125575Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+technology+ai+cybersecurity+consumer+tech+mobility+space+enterprise+software&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T21:46:36.4881465Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=48, 0 rate_limit_reset=1, 8002 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T21:46:36.4884117Z [discovery] Brave query status=called_success items=5 lane=section:tech query=breaking technology ai cybersecurity consumer tech mobility space enterprise software
+2026-03-31T21:46:36.5002801Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5812 min_interval_ms=6000
+2026-03-31T21:46:42.3147891Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=4 live_quota=5
+2026-03-31T21:46:42.3151844Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+health+public+health+medical+research+pharma+mental+health+wellness&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T21:46:42.4863646Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=48, 0 rate_limit_reset=1, 7996 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T21:46:42.4865340Z [discovery] Brave query status=called_success items=5 lane=section:health query=breaking health public health medical research pharma mental health wellness
+2026-03-31T21:46:42.5002066Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5815 min_interval_ms=6000
+2026-03-31T21:46:48.3163689Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=5 live_quota=5
+2026-03-31T21:46:48.3166499Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+sports+leagues+tournaments+transfers+athlete+culture&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T21:46:48.5003719Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=48, 0 rate_limit_reset=1, 7990 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T21:46:48.5006037Z [discovery] Brave query status=called_success items=5 lane=section:sports query=breaking sports leagues tournaments transfers athlete culture
+2026-03-31T21:46:48.5130684Z [discovery] Brave core found 30 candidates across 6 lanes
+2026-03-31T21:46:48.5131247Z [discovery] Channel 2: Google trusted-source discovery...
+2026-03-31T21:46:48.5139425Z [google] label=discovery_google_trusted status=stale_cache_hit age_ms=249226400 ttl_hours=8 mode=stale_cache
+2026-03-31T21:46:48.5140264Z [discovery] Google trusted query status=stale_cache_hit items=10 lane=google:sports
+2026-03-31T21:46:48.5394424Z [google] label=discovery_google_trusted status=stale_cache_hit age_ms=252596996 ttl_hours=8 mode=stale_cache
+2026-03-31T21:46:48.5396051Z [discovery] Google trusted query status=stale_cache_hit items=0 lane=google:culture
+2026-03-31T21:46:48.5397074Z [discovery] Google trusted-source found 10 candidates
+2026-03-31T21:46:48.5397877Z [discovery] Channel 3: GDELT signal discovery...
+2026-03-31T21:46:48.5401272Z [gdelt] label=discovery_gdelt status=stale_cache_hit age_ms=247413888 ttl_hours=8 mode=stale_cache
+2026-03-31T21:46:48.5403528Z [discovery] GDELT query status=stale_cache_hit items=10 lane=gdelt:sports query=(breaking OR sports OR leagues OR tournaments OR transfers OR athlete OR culture) AND sourcelang:english
+2026-03-31T21:46:48.5579932Z [discovery] GDELT signal discovery found 10 candidates
+2026-03-31T21:46:48.5695798Z [discovery] Targeted coverage skipped: target_section_already_has_viable_candidates:3
+2026-03-31T21:46:48.5697107Z [discovery] Discovery complete: 39 candidates after filtering (17 viable)
+2026-03-31T21:46:48.6985689Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T21:46:48.7239500Z [qna-pipeline] Brief source-pack rejected :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.7241769Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T21:46:48.7376657Z [qna-pipeline] Brief source-pack rejected :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: Need at least 2 different domains among publishable sources, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.7379965Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T21:46:48.7629617Z [qna-pipeline] Brief source-pack rejected :: Hard truths, soft metals :: Need at least 2 publishable sources, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.7631624Z [source-pack] topic=Sydney Chandler Talks Anima, SXSW, and Alien: Earth Season 2 [INTERVIEW]
+2026-03-31T21:46:48.7843219Z [qna-pipeline] Brief source-pack rejected :: Sydney Chandler Talks Anima, SXSW, and Alien: Earth Season 2 [INTERVIEW] :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.7845204Z [source-pack] topic=Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...
+2026-03-31T21:46:48.8015273Z [qna-pipeline] Brief source-pack rejected :: Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ... :: Need at least 2 publishable sources, found 1
+2026-03-31T21:46:48.8016383Z [source-pack] topic=Medical Bulletin 31/March/2026
+2026-03-31T21:46:48.8177985Z [qna-pipeline] Brief source-pack rejected :: Medical Bulletin 31/March/2026 :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.8180367Z [source-pack] topic=XRP Market Trends & Ripple's Regulatory Milestones in 2026
+2026-03-31T21:46:48.8359543Z [qna-pipeline] Brief source-pack rejected :: XRP Market Trends & Ripple's Regulatory Milestones in 2026 :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.8362115Z [source-pack] topic=10 TV Shows That Changed Fandom Culture
+2026-03-31T21:46:48.8473117Z [qna-pipeline] Brief source-pack rejected :: 10 TV Shows That Changed Fandom Culture :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.8475861Z [source-pack] topic=Tech company climate goals under pressure due to AI energy demand
+2026-03-31T21:46:48.8641658Z [qna-pipeline] Brief source-pack rejected :: Tech company climate goals under pressure due to AI energy demand :: Need at least 2 publishable sources, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.8644431Z [source-pack] topic=Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms
+2026-03-31T21:46:48.8787537Z [qna-pipeline] Brief source-pack rejected :: Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.8790894Z [source-pack] topic=AI: The Cybersecurity Crisis That Vendors Love
+2026-03-31T21:46:48.8916388Z [qna-pipeline] Brief source-pack rejected :: AI: The Cybersecurity Crisis That Vendors Love :: Need at least one trusted reporting source or official primary source
+2026-03-31T21:46:48.8917992Z [source-pack] topic=Climate law 'battle royale'
+2026-03-31T21:46:48.9079330Z [qna-pipeline] Brief source-pack rejected :: Climate law 'battle royale' :: Need at least 2 publishable sources, found 1
+2026-03-31T21:46:48.9088954Z [source-pack] topic=Constantino's sticky ad spending problem
+2026-03-31T21:46:48.9239952Z [qna-pipeline] Brief source-pack rejected :: Constantino's sticky ad spending problem :: Need at least 1 core source, found 0 | Need at least 2 publishable sources, found 0 | Publish-ready source pack coherence too low (0.00) | Source consistency too weak (0) | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.9242447Z [source-pack] topic=Why Businesses Are Paying Closer Attention to Crypto Infrastructure
+2026-03-31T21:46:48.9384250Z [qna-pipeline] Brief source-pack rejected :: Why Businesses Are Paying Closer Attention to Crypto Infrastructure :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.9386114Z [source-pack] topic=The Link Between Medicine and Psychology
+2026-03-31T21:46:48.9486458Z [qna-pipeline] Brief source-pack rejected :: The Link Between Medicine and Psychology :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.9489013Z [source-pack] topic=UK-Registered AI Cybersecurity Patent Signals New Era of Intelligent Threat Management and Interdisciplinary I
+2026-03-31T21:46:48.9636955Z [qna-pipeline] Brief source-pack rejected :: UK-Registered AI Cybersecurity Patent Signals New Era of Intelligent Threat Management and Interdisciplinary I :: Need at least one trusted reporting source or official primary source
+2026-03-31T21:46:48.9639888Z [qna-pipeline] Brief source-pack near-miss retry :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: poolMatchLimit=24
+2026-03-31T21:46:48.9642110Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T21:46:48.9830344Z [qna-pipeline] Brief source-pack retry rejected :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: Need at least 2 publishable sources, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.9832909Z [qna-pipeline] Brief source-pack near-miss retry :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: poolMatchLimit=24
+2026-03-31T21:46:48.9834073Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T21:46:48.9946658Z [qna-pipeline] Brief source-pack retry rejected :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: Need at least 2 different domains among publishable sources, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:48.9948866Z [qna-pipeline] Brief source-pack near-miss retry :: Hard truths, soft metals :: poolMatchLimit=24
+2026-03-31T21:46:49.0192301Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T21:46:49.0193857Z [qna-pipeline] Brief source-pack retry rejected :: Hard truths, soft metals :: Need at least 2 publishable sources, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:46:49.0335680Z {
+2026-03-31T21:46:49.0336352Z   "started_at": "2026-03-31T21:46:23.897Z",
+2026-03-31T21:46:49.0336992Z   "success": false,
+2026-03-31T21:46:49.0337623Z   "runId": "qna-pipeline-2026-03-31T21-46-23-897Z",
+2026-03-31T21:46:49.0338321Z   "mode": "question-led",
+2026-03-31T21:46:49.0339219Z   "used_shared_discovery_cache": true,
+2026-03-31T21:46:49.0339808Z   "selected_question": null,
+2026-03-31T21:46:49.0340363Z   "published_path": null,
+2026-03-31T21:46:49.0340990Z   "published_url": null,
+2026-03-31T21:46:49.0341531Z   "stats": {
+2026-03-31T21:46:49.0341999Z     "cache_stats": {
+2026-03-31T21:46:49.0342578Z       "mode": "cache_refresh_with_live_quota",
+2026-03-31T21:46:49.0343196Z       "retry_policy": {
+2026-03-31T21:46:49.0343591Z         "max_attempts": 3,
+2026-03-31T21:46:49.0343908Z         "base_delay_ms": 700,
+2026-03-31T21:46:49.0344536Z         "max_delay_ms": 6000,
+2026-03-31T21:46:49.0344832Z         "jitter_ms": 250
+2026-03-31T21:46:49.0345103Z       },
+2026-03-31T21:46:49.0345438Z       "search_network_enabled": true,
+2026-03-31T21:46:49.0345849Z       "min_search_interval_ms": 6000,
+2026-03-31T21:46:49.0346165Z       "live_quota": {
+2026-03-31T21:46:49.0346425Z         "brave": 5,
+2026-03-31T21:46:49.0346679Z         "gdelt": 2,
+2026-03-31T21:46:49.0346919Z         "google": 2
+2026-03-31T21:46:49.0347153Z       },
+2026-03-31T21:46:49.0347378Z       "live_usage": {
+2026-03-31T21:46:49.0347630Z         "brave": 5,
+2026-03-31T21:46:49.0347870Z         "gdelt": 0,
+2026-03-31T21:46:49.0348108Z         "google": 0
+2026-03-31T21:46:49.0348341Z       },
+2026-03-31T21:46:49.0348879Z       "cache": {
+2026-03-31T21:46:49.0349173Z         "ttl_hours": 8,
+2026-03-31T21:46:49.0349725Z         "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+2026-03-31T21:46:49.0350770Z         "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+2026-03-31T21:46:49.0351611Z         "runtime": {
+2026-03-31T21:46:49.0352061Z           "brave": {
+2026-03-31T21:46:49.0352468Z             "files": 5,
+2026-03-31T21:46:49.0353038Z             "fresh_files": 5,
+2026-03-31T21:46:49.0353639Z             "expired_files": 0,
+2026-03-31T21:46:49.0354201Z             "corrupt_files": 0,
+2026-03-31T21:46:49.0354750Z             "size_bytes": 74226
+2026-03-31T21:46:49.0355250Z           },
+2026-03-31T21:46:49.0355656Z           "gdelt": {
+2026-03-31T21:46:49.0356097Z             "files": 0,
+2026-03-31T21:46:49.0356498Z             "fresh_files": 0,
+2026-03-31T21:46:49.0356952Z             "expired_files": 0,
+2026-03-31T21:46:49.0357405Z             "corrupt_files": 0,
+2026-03-31T21:46:49.0357821Z             "size_bytes": 0
+2026-03-31T21:46:49.0358211Z           },
+2026-03-31T21:46:49.0358737Z           "google": {
+2026-03-31T21:46:49.0359116Z             "files": 0,
+2026-03-31T21:46:49.0359494Z             "fresh_files": 0,
+2026-03-31T21:46:49.0359981Z             "expired_files": 0,
+2026-03-31T21:46:49.0360415Z             "corrupt_files": 0,
+2026-03-31T21:46:49.0360814Z             "size_bytes": 0
+2026-03-31T21:46:49.0361199Z           }
+2026-03-31T21:46:49.0361546Z         },
+2026-03-31T21:46:49.0361871Z         "seed": {
+2026-03-31T21:46:49.0362230Z           "brave": {
+2026-03-31T21:46:49.0362603Z             "files": 1,
+2026-03-31T21:46:49.0363004Z             "fresh_files": 0,
+2026-03-31T21:46:49.0363459Z             "expired_files": 1,
+2026-03-31T21:46:49.0363896Z             "corrupt_files": 0,
+2026-03-31T21:46:49.0364313Z             "size_bytes": 14135
+2026-03-31T21:46:49.0364670Z           },
+2026-03-31T21:46:49.0364967Z           "gdelt": {
+2026-03-31T21:46:49.0365322Z             "files": 1,
+2026-03-31T21:46:49.0365698Z             "fresh_files": 0,
+2026-03-31T21:46:49.0366128Z             "expired_files": 1,
+2026-03-31T21:46:49.0366567Z             "corrupt_files": 0,
+2026-03-31T21:46:49.0366977Z             "size_bytes": 6189
+2026-03-31T21:46:49.0367357Z           },
+2026-03-31T21:46:49.0367657Z           "google": {
+2026-03-31T21:46:49.0368004Z             "files": 9,
+2026-03-31T21:46:49.0368863Z             "fresh_files": 0,
+2026-03-31T21:46:49.0369298Z             "expired_files": 9,
+2026-03-31T21:46:49.0369740Z             "corrupt_files": 0,
+2026-03-31T21:46:49.0370165Z             "size_bytes": 285008
+2026-03-31T21:46:49.0370556Z           }
+2026-03-31T21:46:49.0370853Z         }
+2026-03-31T21:46:49.0371142Z       }
+2026-03-31T21:46:49.0371417Z     },
+2026-03-31T21:46:49.0371723Z     "duration_ms": 25125,
+2026-03-31T21:46:49.0372089Z     "news_pool": {
+2026-03-31T21:46:49.0372431Z       "total": 65,
+2026-03-31T21:46:49.0372758Z       "active": 54,
+2026-03-31T21:46:49.0373096Z       "published": 11,
+2026-03-31T21:46:49.0373467Z       "ready_candidates": 2
+2026-03-31T21:46:49.0373825Z     },
+2026-03-31T21:46:49.0374145Z     "brief_candidates": 16,
+2026-03-31T21:46:49.0374545Z     "question_candidates": 0,
+2026-03-31T21:46:49.0375298Z     "source_pack_attempts": 34
+2026-03-31T21:46:49.0375682Z   },
+2026-03-31T21:46:49.0375978Z   "stages": {
+2026-03-31T21:46:49.0376322Z     "shared_cache_load": {
+2026-03-31T21:46:49.0376695Z       "success": true,
+2026-03-31T21:46:49.0377032Z       "count": 12,
+2026-03-31T21:46:49.0377437Z       "source": "shared-news-pool"
+2026-03-31T21:46:49.0377842Z     },
+2026-03-31T21:46:49.0378175Z     "brief_source_pack_gate": {
+2026-03-31T21:46:49.0378757Z       "success": false,
+2026-03-31T21:46:49.0379118Z       "attempted": 34,
+2026-03-31T21:46:49.0379471Z       "passed": 0,
+2026-03-31T21:46:49.0379803Z       "rejected": [
+2026-03-31T21:46:49.0380120Z         {
+2026-03-31T21:46:49.0381529Z           "brief_title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+2026-03-31T21:46:49.0382911Z           "poolIdentityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
+2026-03-31T21:46:49.0383622Z           "reasons": [
+2026-03-31T21:46:49.0384124Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0384971Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0386133Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0386963Z           ]
+2026-03-31T21:46:49.0387274Z         },
+2026-03-31T21:46:49.0387582Z         {
+2026-03-31T21:46:49.0388327Z           "brief_title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+2026-03-31T21:46:49.0389722Z           "poolIdentityKey": "cluster:evt-2026-03-30-transfers-business-general-global-nba",
+2026-03-31T21:46:49.0390506Z           "reasons": [
+2026-03-31T21:46:49.0391179Z             "Need at least 2 different domains among publishable sources, found 1",
+2026-03-31T21:46:49.0392311Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0393182Z           ]
+2026-03-31T21:46:49.0393493Z         },
+2026-03-31T21:46:49.0393797Z         {
+2026-03-31T21:46:49.0394416Z [qna-pipeline] FINAL STATUS: FAIL
+2026-03-31T21:46:49.0395885Z [qna-pipeline] Exit reason(s): final Success is false | hard blocker exists: No brief candidate passed source-pack viability gate | published_path is missing
+2026-03-31T21:46:49.0397307Z [qna-pipeline] EXIT CLASS: controlled_no_article_failure
+2026-03-31T21:46:49.0397993Z           "brief_title": "Hard truths, soft metals",
+2026-03-31T21:46:49.0399094Z           "poolIdentityKey": "cluster:evt-2026-03-30-climate-extreme-weather-general-global",
+2026-03-31T21:46:49.0399877Z           "reasons": [
+2026-03-31T21:46:49.0400400Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0401361Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0402174Z           ]
+2026-03-31T21:46:49.0402490Z         },
+2026-03-31T21:46:49.0402805Z         {
+2026-03-31T21:46:49.0403350Z           "brief_title": "Why Is Horror TV So Complicated Right Now?",
+2026-03-31T21:46:49.0404216Z           "poolIdentityKey": "cluster:evt-2026-03-31-film-tv-general-global",
+2026-03-31T21:46:49.0405059Z           "reasons": [
+2026-03-31T21:46:49.0405551Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0406362Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0407455Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0408229Z           ]
+2026-03-31T21:46:49.0408685Z         },
+2026-03-31T21:46:49.0408981Z         {
+2026-03-31T21:46:49.0409664Z           "brief_title": "Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...",
+2026-03-31T21:46:49.0410750Z           "poolIdentityKey": "cluster:evt-2026-03-31-companies-deals-earnings-global",
+2026-03-31T21:46:49.0411459Z           "reasons": [
+2026-03-31T21:46:49.0412110Z             "Need at least 2 publishable sources, found 1"
+2026-03-31T21:46:49.0412603Z           ]
+2026-03-31T21:46:49.0412892Z         },
+2026-03-31T21:46:49.0413193Z         {
+2026-03-31T21:46:49.0413802Z           "brief_title": "XRP Market Trends & Ripple's Regulatory Milestones in 2026",
+2026-03-31T21:46:49.0414787Z           "poolIdentityKey": "cluster:evt-2026-03-30-news-general-global-sec",
+2026-03-31T21:46:49.0415440Z           "reasons": [
+2026-03-31T21:46:49.0415922Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0416710Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0417801Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0418762Z           ]
+2026-03-31T21:46:49.0419058Z         },
+2026-03-31T21:46:49.0419356Z         {
+2026-03-31T21:46:49.0419839Z           "brief_title": "10 TV Shows That Changed Fandom Culture",
+2026-03-31T21:46:49.0420681Z           "poolIdentityKey": "cluster:evt-2026-03-30-film-tv-general-global",
+2026-03-31T21:46:49.0421379Z           "reasons": [
+2026-03-31T21:46:49.0421904Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0422754Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0423840Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0424637Z           ]
+2026-03-31T21:46:49.0424976Z         },
+2026-03-31T21:46:49.0425286Z         {
+2026-03-31T21:46:49.0425973Z           "brief_title": "Tech company climate goals under pressure due to AI energy demand",
+2026-03-31T21:46:49.0427057Z           "poolIdentityKey": "cluster:evt-2026-03-30-ai-big-tech-general-global-tsa",
+2026-03-31T21:46:49.0427744Z           "reasons": [
+2026-03-31T21:46:49.0428246Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0429444Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0430268Z           ]
+2026-03-31T21:46:49.0430581Z         },
+2026-03-31T21:46:49.0430881Z         {
+2026-03-31T21:46:49.0431340Z           "brief_title": "Medical Bulletin 31/March/2026",
+2026-03-31T21:46:49.0432173Z           "poolIdentityKey": "cluster:evt-2026-03-31-news-general-global-meta",
+2026-03-31T21:46:49.0432846Z           "reasons": [
+2026-03-31T21:46:49.0433337Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0434155Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0435305Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0436123Z           ]
+2026-03-31T21:46:49.0436429Z         },
+2026-03-31T21:46:49.0436731Z         {
+2026-03-31T21:46:49.0437443Z           "brief_title": "Why Businesses Are Paying Closer Attention to Crypto Infrastructure",
+2026-03-31T21:46:49.0438699Z           "poolIdentityKey": "cluster:evt-2026-03-31-crypto-bitcoin-general-global",
+2026-03-31T21:46:49.0439604Z           "reasons": [
+2026-03-31T21:46:49.0440137Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0440975Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0442114Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0442913Z           ]
+2026-03-31T21:46:49.0443220Z         },
+2026-03-31T21:46:49.0443540Z         {
+2026-03-31T21:46:49.0444511Z           "brief_title": "Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms",
+2026-03-31T21:46:49.0445885Z           "poolIdentityKey": "cluster:evt-2026-03-31-mental-health-general-global-fda",
+2026-03-31T21:46:49.0446634Z           "reasons": [
+2026-03-31T21:46:49.0447321Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0448149Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0449493Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0450303Z           ]
+2026-03-31T21:46:49.0450601Z         },
+2026-03-31T21:46:49.0450898Z         {
+2026-03-31T21:46:49.0451425Z           "brief_title": "AI: The Cybersecurity Crisis That Vendors Love",
+2026-03-31T21:46:49.0452291Z           "poolIdentityKey": "cluster:evt-2026-03-31-cybersecurity-general-global",
+2026-03-31T21:46:49.0452942Z           "reasons": [
+2026-03-31T21:46:49.0453626Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0454786Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0455602Z           ]
+2026-03-31T21:46:49.0455915Z         },
+2026-03-31T21:46:49.0456230Z         {
+2026-03-31T21:46:49.0457519Z           "brief_title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+2026-03-31T21:46:49.0459080Z           "poolIdentityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
+2026-03-31T21:46:49.0459573Z           "reasons": [
+2026-03-31T21:46:49.0459878Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0460353Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0461316Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0462083Z           ]
+2026-03-31T21:46:49.0462366Z         },
+2026-03-31T21:46:49.0462644Z         {
+2026-03-31T21:46:49.0463333Z           "brief_title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+2026-03-31T21:46:49.0464526Z           "poolIdentityKey": "cluster:evt-2026-03-30-transfers-business-general-global-nba",
+2026-03-31T21:46:49.0465322Z           "reasons": [
+2026-03-31T21:46:49.0466030Z             "Need at least 2 different domains among publishable sources, found 1",
+2026-03-31T21:46:49.0467277Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0468152Z           ]
+2026-03-31T21:46:49.0468761Z         },
+2026-03-31T21:46:49.0469122Z         {
+2026-03-31T21:46:49.0469610Z           "brief_title": "Hard truths, soft metals",
+2026-03-31T21:46:49.0470613Z           "poolIdentityKey": "cluster:evt-2026-03-30-climate-extreme-weather-general-global",
+2026-03-31T21:46:49.0471447Z           "reasons": [
+2026-03-31T21:46:49.0472024Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0473120Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0473933Z           ]
+2026-03-31T21:46:49.0474256Z         },
+2026-03-31T21:46:49.0474567Z         {
+2026-03-31T21:46:49.0475313Z           "brief_title": "Sydney Chandler Talks Anima, SXSW, and Alien: Earth Season 2 [INTERVIEW]",
+2026-03-31T21:46:49.0476768Z           "poolIdentityKey": "cluster:evt-2026-03-31-film-tv-general-global",
+2026-03-31T21:46:49.0477534Z           "reasons": [
+2026-03-31T21:46:49.0478111Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0479179Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0480326Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0481195Z           ]
+2026-03-31T21:46:49.0481535Z         },
+2026-03-31T21:46:49.0481884Z         {
+2026-03-31T21:46:49.0482643Z           "brief_title": "Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...",
+2026-03-31T21:46:49.0483830Z           "poolIdentityKey": "cluster:evt-2026-03-31-companies-deals-earnings-global",
+2026-03-31T21:46:49.0484926Z           "reasons": [
+2026-03-31T21:46:49.0485514Z             "Need at least 2 publishable sources, found 1"
+2026-03-31T21:46:49.0486113Z           ]
+2026-03-31T21:46:49.0486467Z         },
+2026-03-31T21:46:49.0486806Z         {
+2026-03-31T21:46:49.0487328Z           "brief_title": "Medical Bulletin 31/March/2026",
+2026-03-31T21:46:49.0488255Z           "poolIdentityKey": "cluster:evt-2026-03-31-news-general-global-meta",
+2026-03-31T21:46:49.0489222Z           "reasons": [
+2026-03-31T21:46:49.0489567Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0490066Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0490743Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0491210Z           ]
+2026-03-31T21:46:49.0491400Z         },
+2026-03-31T21:46:49.0491588Z         {
+2026-03-31T21:46:49.0491959Z           "brief_title": "XRP Market Trends & Ripple's Regulatory Milestones in 2026",
+2026-03-31T21:46:49.0492528Z           "poolIdentityKey": "cluster:evt-2026-03-30-news-general-global-sec",
+2026-03-31T21:46:49.0492971Z           "reasons": [
+2026-03-31T21:46:49.0493293Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0493765Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0494405Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0494862Z           ]
+2026-03-31T21:46:49.0495049Z         },
+2026-03-31T21:46:49.0495232Z         {
+2026-03-31T21:46:49.0495538Z           "brief_title": "10 TV Shows That Changed Fandom Culture",
+2026-03-31T21:46:49.0496030Z           "poolIdentityKey": "cluster:evt-2026-03-30-film-tv-general-global",
+2026-03-31T21:46:49.0496414Z           "reasons": [
+2026-03-31T21:46:49.0496720Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0497198Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0497827Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0498293Z           ]
+2026-03-31T21:46:49.0498711Z         },
+2026-03-31T21:46:49.0499018Z         {
+2026-03-31T21:46:49.0499666Z           "brief_title": "Tech company climate goals under pressure due to AI energy demand",
+2026-03-31T21:46:49.0500669Z           "poolIdentityKey": "cluster:evt-2026-03-30-ai-big-tech-general-global-tsa",
+2026-03-31T21:46:49.0501338Z           "reasons": [
+2026-03-31T21:46:49.0501795Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0502360Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0502812Z           ]
+2026-03-31T21:46:49.0502992Z         },
+2026-03-31T21:46:49.0503172Z         {
+2026-03-31T21:46:49.0503714Z           "brief_title": "Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms",
+2026-03-31T21:46:49.0505057Z           "poolIdentityKey": "cluster:evt-2026-03-31-mental-health-general-global-fda",
+2026-03-31T21:46:49.0505927Z           "reasons": [
+2026-03-31T21:46:49.0506383Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0506991Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0507645Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0508106Z           ]
+2026-03-31T21:46:49.0508298Z         },
+2026-03-31T21:46:49.0508726Z         {
+2026-03-31T21:46:49.0509089Z           "brief_title": "AI: The Cybersecurity Crisis That Vendors Love",
+2026-03-31T21:46:49.0509646Z           "poolIdentityKey": "cluster:evt-2026-03-31-cybersecurity-general-global",
+2026-03-31T21:46:49.0510053Z           "reasons": [
+2026-03-31T21:46:49.0510618Z             "Need at least one trusted reporting source or official primary source"
+2026-03-31T21:46:49.0510993Z           ]
+2026-03-31T21:46:49.0511182Z         },
+2026-03-31T21:46:49.0511361Z         {
+2026-03-31T21:46:49.0511631Z           "brief_title": "Climate law 'battle royale'",
+2026-03-31T21:46:49.0512088Z           "poolIdentityKey": "cluster:evt-2026-03-31-us-politics-general-us",
+2026-03-31T21:46:49.0512467Z           "reasons": [
+2026-03-31T21:46:49.0512770Z             "Need at least 2 publishable sources, found 1"
+2026-03-31T21:46:49.0513067Z           ]
+2026-03-31T21:46:49.0513247Z         },
+2026-03-31T21:46:49.0513428Z         {
+2026-03-31T21:46:49.0513736Z           "brief_title": "Constantino's sticky ad spending problem",
+2026-03-31T21:46:49.0514212Z           "poolIdentityKey": "cluster:evt-2026-03-31-news-general-global",
+2026-03-31T21:46:49.0514576Z           "reasons": [
+2026-03-31T21:46:49.0514858Z             "Need at least 1 core source, found 0",
+2026-03-31T21:46:49.0515240Z             "Need at least 2 publishable sources, found 0",
+2026-03-31T21:46:49.0515658Z             "Publish-ready source pack coherence too low (0.00)",
+2026-03-31T21:46:49.0516054Z             "Source consistency too weak (0)",
+2026-03-31T21:46:49.0516501Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0517139Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0517597Z           ]
+2026-03-31T21:46:49.0517783Z         },
+2026-03-31T21:46:49.0517963Z         {
+2026-03-31T21:46:49.0518369Z           "brief_title": "Why Businesses Are Paying Closer Attention to Crypto Infrastructure",
+2026-03-31T21:46:49.0519266Z           "poolIdentityKey": "cluster:evt-2026-03-31-crypto-bitcoin-general-global",
+2026-03-31T21:46:49.0539320Z           "reasons": [
+2026-03-31T21:46:49.0539933Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0540571Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0541238Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0541706Z           ]
+2026-03-31T21:46:49.0541903Z         },
+2026-03-31T21:46:49.0542084Z         {
+2026-03-31T21:46:49.0542400Z           "brief_title": "The Link Between Medicine and Psychology",
+2026-03-31T21:46:49.0542974Z           "poolIdentityKey": "cluster:evt-2026-03-30-mental-health-general-global-sec-fda",
+2026-03-31T21:46:49.0543432Z           "reasons": [
+2026-03-31T21:46:49.0543757Z             "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0544251Z             "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0544896Z             "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0545357Z           ]
+2026-03-31T21:46:49.0545552Z         },
+2026-03-31T21:46:49.0545737Z         {
+2026-03-31T21:46:49.0546318Z           "brief_title": "UK-Registered AI Cybersecurity Patent Signals New Era of Intelligent Threat Management and Interdisciplinary I",
+2026-03-31T21:46:49.0547311Z           "poolIdentityKey": "cluster:evt-2026-03-30-cybersecurity-general-global",
+2026-03-31T21:46:49.0547742Z           "reasons": [
+2026-03-31T21:46:49.0548133Z             "Need at least one trusted reporting source or official primary source"
+2026-03-31T21:46:49.0548791Z           ]
+2026-03-31T21:46:49.0548996Z         }
+2026-03-31T21:46:49.0549181Z       ]
+2026-03-31T21:46:49.0549361Z     },
+2026-03-31T21:46:49.0549562Z     "discovery_refresh": {
+2026-03-31T21:46:49.0549807Z       "success": true,
+2026-03-31T21:46:49.0550040Z       "discovered": 39,
+2026-03-31T21:46:49.0550267Z       "normalized": 7,
+2026-03-31T21:46:49.0550491Z       "queryUsage": {
+2026-03-31T21:46:49.0550711Z         "brave": 6,
+2026-03-31T21:46:49.0550920Z         "google": 2,
+2026-03-31T21:46:49.0551278Z         "gdelt": 1,
+2026-03-31T21:46:49.0551497Z         "targeted_brave": 0
+2026-03-31T21:46:49.0551731Z       },
+2026-03-31T21:46:49.0551941Z       "targeted_coverage": {
+2026-03-31T21:46:49.0552188Z         "triggered": false,
+2026-03-31T21:46:49.0552509Z         "reason": "recent_section_imbalance:health:0_vs_5",
+2026-03-31T21:46:49.0552852Z         "section_id": "health",
+2026-03-31T21:46:49.0553136Z         "topic_id": "public-health",
+2026-03-31T21:46:49.0553441Z         "recent_window_hours": 48,
+2026-03-31T21:46:49.0553734Z         "recent_sample_size": 11,
+2026-03-31T21:46:49.0553995Z         "section_counts": {
+2026-03-31T21:46:49.0554221Z           "news": 5,
+2026-03-31T21:46:49.0554434Z           "business": 2,
+2026-03-31T21:46:49.0554657Z           "tech": 2,
+2026-03-31T21:46:49.0554865Z           "health": 0,
+2026-03-31T21:46:49.0555080Z           "sports": 2,
+2026-03-31T21:46:49.0555301Z           "culture": 0
+2026-03-31T21:46:49.0555522Z         },
+2026-03-31T21:46:49.0555777Z         "viable_in_target_section_before": 3,
+2026-03-31T21:46:49.0556109Z         "viable_in_target_section_after": 0,
+2026-03-31T21:46:49.0556536Z         "skipped_reason": "target_section_already_has_viable_candidates:3"
+2026-03-31T21:46:49.0556901Z       }
+2026-03-31T21:46:49.0557079Z     }
+2026-03-31T21:46:49.0557257Z   },
+2026-03-31T21:46:49.0557442Z   "artifacts": {
+2026-03-31T21:46:49.0558043Z     "quality_audit": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/qna-pipeline-2026-03-31T21-46-23-897Z.json",
+2026-03-31T21:46:49.0559219Z     "latest_question_candidates": "/home/runner/work/foseer.com/foseer.com/qwen-data/questions/latest-question-candidates.json"
+2026-03-31T21:46:49.0559781Z   },
+2026-03-31T21:46:49.0560118Z   "hard_blocker": "No brief candidate passed source-pack viability gate",
+2026-03-31T21:46:49.0560499Z   "rejection_report": {
+2026-03-31T21:46:49.0560739Z     "pre_selection": [],
+2026-03-31T21:46:49.0560986Z     "brief_source_pack": [
+2026-03-31T21:46:49.0561221Z       {
+2026-03-31T21:46:49.0562084Z         "brief_title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+2026-03-31T21:46:49.0562870Z         "poolIdentityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
+2026-03-31T21:46:49.0563286Z         "reasons": [
+2026-03-31T21:46:49.0563589Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0564071Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0564698Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0565160Z         ]
+2026-03-31T21:46:49.0565348Z       },
+2026-03-31T21:46:49.0565533Z       {
+2026-03-31T21:46:49.0565947Z         "brief_title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+2026-03-31T21:46:49.0566608Z         "poolIdentityKey": "cluster:evt-2026-03-30-transfers-business-general-global-nba",
+2026-03-31T21:46:49.0567069Z         "reasons": [
+2026-03-31T21:46:49.0567450Z           "Need at least 2 different domains among publishable sources, found 1",
+2026-03-31T21:46:49.0568232Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0568920Z         ]
+2026-03-31T21:46:49.0569111Z       },
+2026-03-31T21:46:49.0569289Z       {
+2026-03-31T21:46:49.0569544Z         "brief_title": "Hard truths, soft metals",
+2026-03-31T21:46:49.0570069Z         "poolIdentityKey": "cluster:evt-2026-03-30-climate-extreme-weather-general-global",
+2026-03-31T21:46:49.0570530Z         "reasons": [
+2026-03-31T21:46:49.0570834Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0571389Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0571840Z         ]
+2026-03-31T21:46:49.0572020Z       },
+2026-03-31T21:46:49.0572209Z       {
+2026-03-31T21:46:49.0572662Z         "brief_title": "Why Is Horror TV So Complicated Right Now?",
+2026-03-31T21:46:49.0573170Z         "poolIdentityKey": "cluster:evt-2026-03-31-film-tv-general-global",
+2026-03-31T21:46:49.0573557Z         "reasons": [
+2026-03-31T21:46:49.0573851Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0574323Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0574966Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0575418Z         ]
+2026-03-31T21:46:49.0575596Z       },
+2026-03-31T21:46:49.0575773Z       {
+2026-03-31T21:46:49.0576227Z         "brief_title": "Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...",
+2026-03-31T21:46:49.0576848Z         "poolIdentityKey": "cluster:evt-2026-03-31-companies-deals-earnings-global",
+2026-03-31T21:46:49.0577267Z         "reasons": [
+2026-03-31T21:46:49.0577575Z           "Need at least 2 publishable sources, found 1"
+2026-03-31T21:46:49.0577881Z         ]
+2026-03-31T21:46:49.0578060Z       },
+2026-03-31T21:46:49.0578237Z       {
+2026-03-31T21:46:49.0578878Z         "brief_title": "XRP Market Trends & Ripple's Regulatory Milestones in 2026",
+2026-03-31T21:46:49.0579452Z         "poolIdentityKey": "cluster:evt-2026-03-30-news-general-global-sec",
+2026-03-31T21:46:49.0579839Z         "reasons": [
+2026-03-31T21:46:49.0580148Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0580617Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0581251Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0581709Z         ]
+2026-03-31T21:46:49.0581893Z       },
+2026-03-31T21:46:49.0582078Z       {
+2026-03-31T21:46:49.0582392Z         "brief_title": "10 TV Shows That Changed Fandom Culture",
+2026-03-31T21:46:49.0582889Z         "poolIdentityKey": "cluster:evt-2026-03-30-film-tv-general-global",
+2026-03-31T21:46:49.0583283Z         "reasons": [
+2026-03-31T21:46:49.0583579Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0584058Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0584689Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0585152Z         ]
+2026-03-31T21:46:49.0585330Z       },
+2026-03-31T21:46:49.0585512Z       {
+2026-03-31T21:46:49.0586045Z         "brief_title": "Tech company climate goals under pressure due to AI energy demand",
+2026-03-31T21:46:49.0586673Z         "poolIdentityKey": "cluster:evt-2026-03-30-ai-big-tech-general-global-tsa",
+2026-03-31T21:46:49.0587086Z         "reasons": [
+2026-03-31T21:46:49.0587382Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0587936Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0588392Z         ]
+2026-03-31T21:46:49.0588829Z       },
+2026-03-31T21:46:49.0589124Z       {
+2026-03-31T21:46:49.0589394Z         "brief_title": "Medical Bulletin 31/March/2026",
+2026-03-31T21:46:49.0590064Z         "poolIdentityKey": "cluster:evt-2026-03-31-news-general-global-meta",
+2026-03-31T21:46:49.0590453Z         "reasons": [
+2026-03-31T21:46:49.0590755Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0591217Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0591844Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0592291Z         ]
+2026-03-31T21:46:49.0592467Z       },
+2026-03-31T21:46:49.0592644Z       {
+2026-03-31T21:46:49.0593083Z         "brief_title": "Why Businesses Are Paying Closer Attention to Crypto Infrastructure",
+2026-03-31T21:46:49.0593702Z         "poolIdentityKey": "cluster:evt-2026-03-31-crypto-bitcoin-general-global",
+2026-03-31T21:46:49.0594227Z         "reasons": [
+2026-03-31T21:46:49.0594511Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0594977Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0595618Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0596061Z         ]
+2026-03-31T21:46:49.0596235Z       },
+2026-03-31T21:46:49.0596410Z       {
+2026-03-31T21:46:49.0596949Z         "brief_title": "Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms",
+2026-03-31T21:46:49.0597692Z         "poolIdentityKey": "cluster:evt-2026-03-31-mental-health-general-global-fda",
+2026-03-31T21:46:49.0598113Z         "reasons": [
+2026-03-31T21:46:49.0598400Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0599114Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0599747Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0600200Z         ]
+2026-03-31T21:46:49.0600375Z       },
+2026-03-31T21:46:49.0600551Z       {
+2026-03-31T21:46:49.0600866Z         "brief_title": "AI: The Cybersecurity Crisis That Vendors Love",
+2026-03-31T21:46:49.0601413Z         "poolIdentityKey": "cluster:evt-2026-03-31-cybersecurity-general-global",
+2026-03-31T21:46:49.0601806Z         "reasons": [
+2026-03-31T21:46:49.0602170Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0602789Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0603234Z         ]
+2026-03-31T21:46:49.0603410Z       },
+2026-03-31T21:46:49.0603583Z       {
+2026-03-31T21:46:49.0604311Z         "brief_title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+2026-03-31T21:46:49.0605072Z         "poolIdentityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
+2026-03-31T21:46:49.0605474Z         "reasons": [
+2026-03-31T21:46:49.0605769Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0606229Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0606857Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0607317Z         ]
+2026-03-31T21:46:49.0607498Z       },
+2026-03-31T21:46:49.0607678Z       {
+2026-03-31T21:46:49.0608087Z         "brief_title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+2026-03-31T21:46:49.0608951Z         "poolIdentityKey": "cluster:evt-2026-03-30-transfers-business-general-global-nba",
+2026-03-31T21:46:49.0609397Z         "reasons": [
+2026-03-31T21:46:49.0609772Z           "Need at least 2 different domains among publishable sources, found 1",
+2026-03-31T21:46:49.0610400Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0611033Z         ]
+2026-03-31T21:46:49.0611214Z       },
+2026-03-31T21:46:49.0611393Z       {
+2026-03-31T21:46:49.0611638Z         "brief_title": "Hard truths, soft metals",
+2026-03-31T21:46:49.0612148Z         "poolIdentityKey": "cluster:evt-2026-03-30-climate-extreme-weather-general-global",
+2026-03-31T21:46:49.0612595Z         "reasons": [
+2026-03-31T21:46:49.0612883Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0613429Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0613878Z         ]
+2026-03-31T21:46:49.0614053Z       },
+2026-03-31T21:46:49.0614229Z       {
+2026-03-31T21:46:49.0614633Z         "brief_title": "Sydney Chandler Talks Anima, SXSW, and Alien: Earth Season 2 [INTERVIEW]",
+2026-03-31T21:46:49.0615227Z         "poolIdentityKey": "cluster:evt-2026-03-31-film-tv-general-global",
+2026-03-31T21:46:49.0615725Z         "reasons": [
+2026-03-31T21:46:49.0616014Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0616485Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0617107Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0617561Z         ]
+2026-03-31T21:46:49.0617739Z       },
+2026-03-31T21:46:49.0617913Z       {
+2026-03-31T21:46:49.0618299Z         "brief_title": "Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...",
+2026-03-31T21:46:49.0619173Z         "poolIdentityKey": "cluster:evt-2026-03-31-companies-deals-earnings-global",
+2026-03-31T21:46:49.0619582Z         "reasons": [
+2026-03-31T21:46:49.0619864Z           "Need at least 2 publishable sources, found 1"
+2026-03-31T21:46:49.0620159Z         ]
+2026-03-31T21:46:49.0620330Z       },
+2026-03-31T21:46:49.0620510Z       {
+2026-03-31T21:46:49.0620767Z         "brief_title": "Medical Bulletin 31/March/2026",
+2026-03-31T21:46:49.0621225Z         "poolIdentityKey": "cluster:evt-2026-03-31-news-general-global-meta",
+2026-03-31T21:46:49.0621610Z         "reasons": [
+2026-03-31T21:46:49.0621894Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0622356Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0622982Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0623433Z         ]
+2026-03-31T21:46:49.0623611Z       },
+2026-03-31T21:46:49.0623784Z       {
+2026-03-31T21:46:49.0624133Z         "brief_title": "XRP Market Trends & Ripple's Regulatory Milestones in 2026",
+2026-03-31T21:46:49.0624683Z         "poolIdentityKey": "cluster:evt-2026-03-30-news-general-global-sec",
+2026-03-31T21:46:49.0625070Z         "reasons": [
+2026-03-31T21:46:49.0625356Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0625823Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0626447Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0626894Z         ]
+2026-03-31T21:46:49.0627069Z       },
+2026-03-31T21:46:49.0627247Z       {
+2026-03-31T21:46:49.0627535Z         "brief_title": "10 TV Shows That Changed Fandom Culture",
+2026-03-31T21:46:49.0628013Z         "poolIdentityKey": "cluster:evt-2026-03-30-film-tv-general-global",
+2026-03-31T21:46:49.0628388Z         "reasons": [
+2026-03-31T21:46:49.0628884Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0629355Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0629990Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0630450Z         ]
+2026-03-31T21:46:49.0630638Z       },
+2026-03-31T21:46:49.0630821Z       {
+2026-03-31T21:46:49.0631207Z         "brief_title": "Tech company climate goals under pressure due to AI energy demand",
+2026-03-31T21:46:49.0632019Z         "poolIdentityKey": "cluster:evt-2026-03-30-ai-big-tech-general-global-tsa",
+2026-03-31T21:46:49.0632425Z         "reasons": [
+2026-03-31T21:46:49.0632731Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0633282Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0633735Z         ]
+2026-03-31T21:46:49.0633918Z       },
+2026-03-31T21:46:49.0634097Z       {
+2026-03-31T21:46:49.0634619Z         "brief_title": "Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms",
+2026-03-31T21:46:49.0635356Z         "poolIdentityKey": "cluster:evt-2026-03-31-mental-health-general-global-fda",
+2026-03-31T21:46:49.0635781Z         "reasons": [
+2026-03-31T21:46:49.0636242Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0636703Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0637334Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0637781Z         ]
+2026-03-31T21:46:49.0637957Z       },
+2026-03-31T21:46:49.0638147Z       {
+2026-03-31T21:46:49.0638720Z         "brief_title": "AI: The Cybersecurity Crisis That Vendors Love",
+2026-03-31T21:46:49.0639278Z         "poolIdentityKey": "cluster:evt-2026-03-31-cybersecurity-general-global",
+2026-03-31T21:46:49.0639685Z         "reasons": [
+2026-03-31T21:46:49.0640058Z           "Need at least one trusted reporting source or official primary source"
+2026-03-31T21:46:49.0640431Z         ]
+2026-03-31T21:46:49.0640614Z       },
+2026-03-31T21:46:49.0640801Z       {
+2026-03-31T21:46:49.0641063Z         "brief_title": "Climate law 'battle royale'",
+2026-03-31T21:46:49.0641528Z         "poolIdentityKey": "cluster:evt-2026-03-31-us-politics-general-us",
+2026-03-31T21:46:49.0641920Z         "reasons": [
+2026-03-31T21:46:49.0642235Z           "Need at least 2 publishable sources, found 1"
+2026-03-31T21:46:49.0642547Z         ]
+2026-03-31T21:46:49.0642727Z       },
+2026-03-31T21:46:49.0642913Z       {
+2026-03-31T21:46:49.0643220Z         "brief_title": "Constantino's sticky ad spending problem",
+2026-03-31T21:46:49.0643701Z         "poolIdentityKey": "cluster:evt-2026-03-31-news-general-global",
+2026-03-31T21:46:49.0644069Z         "reasons": [
+2026-03-31T21:46:49.0644343Z           "Need at least 1 core source, found 0",
+2026-03-31T21:46:49.0644715Z           "Need at least 2 publishable sources, found 0",
+2026-03-31T21:46:49.0645129Z           "Publish-ready source pack coherence too low (0.00)",
+2026-03-31T21:46:49.0645515Z           "Source consistency too weak (0)",
+2026-03-31T21:46:49.0645952Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0646593Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0647048Z         ]
+2026-03-31T21:46:49.0647231Z       },
+2026-03-31T21:46:49.0647410Z       {
+2026-03-31T21:46:49.0647813Z         "brief_title": "Why Businesses Are Paying Closer Attention to Crypto Infrastructure",
+2026-03-31T21:46:49.0648625Z         "poolIdentityKey": "cluster:evt-2026-03-31-crypto-bitcoin-general-global",
+2026-03-31T21:46:49.0649074Z         "reasons": [
+2026-03-31T21:46:49.0649368Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0649831Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0650457Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0650914Z         ]
+2026-03-31T21:46:49.0651092Z       },
+2026-03-31T21:46:49.0651268Z       {
+2026-03-31T21:46:49.0651563Z         "brief_title": "The Link Between Medicine and Psychology",
+2026-03-31T21:46:49.0652114Z         "poolIdentityKey": "cluster:evt-2026-03-30-mental-health-general-global-sec-fda",
+2026-03-31T21:46:49.0652701Z         "reasons": [
+2026-03-31T21:46:49.0652995Z           "Need at least 2 publishable sources, found 1",
+2026-03-31T21:46:49.0653469Z           "Need at least one trusted reporting source or official primary source",
+2026-03-31T21:46:49.0654099Z           "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+2026-03-31T21:46:49.0654553Z         ]
+2026-03-31T21:46:49.0654736Z       },
+2026-03-31T21:46:49.0654916Z       {
+2026-03-31T21:46:49.0655489Z         "brief_title": "UK-Registered AI Cybersecurity Patent Signals New Era of Intelligent Threat Management and Interdisciplinary I",
+2026-03-31T21:46:49.0656260Z         "poolIdentityKey": "cluster:evt-2026-03-30-cybersecurity-general-global",
+2026-03-31T21:46:49.0656661Z         "reasons": [
+2026-03-31T21:46:49.0657026Z           "Need at least one trusted reporting source or official primary source"
+2026-03-31T21:46:49.0657529Z         ]
+2026-03-31T21:46:49.0657711Z       }
+2026-03-31T21:46:49.0657895Z     ],
+2026-03-31T21:46:49.0658087Z     "source_pack": []
+2026-03-31T21:46:49.0658297Z   }
+2026-03-31T21:46:49.0658711Z }
+2026-03-31T21:46:49.0755839Z No publishable QnA article this run. Skipping build/commit/push.

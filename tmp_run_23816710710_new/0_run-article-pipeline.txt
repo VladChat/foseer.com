@@ -1,0 +1,1451 @@
+﻿2026-03-31T19:57:38.2092272Z Current runner version: '2.333.1'
+2026-03-31T19:57:38.2117537Z ##[group]Runner Image Provisioner
+2026-03-31T19:57:38.2118576Z Hosted Compute Agent
+2026-03-31T19:57:38.2119133Z Version: 20260213.493
+2026-03-31T19:57:38.2119819Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-31T19:57:38.2120546Z Build Date: 2026-02-13T00:28:41Z
+2026-03-31T19:57:38.2121260Z Worker ID: {bd9c16d0-2bf3-42d9-a9ad-ed4fee3ef7d5}
+2026-03-31T19:57:38.2122025Z Azure Region: eastus
+2026-03-31T19:57:38.2122589Z ##[endgroup]
+2026-03-31T19:57:38.2124054Z ##[group]Operating System
+2026-03-31T19:57:38.2124799Z Ubuntu
+2026-03-31T19:57:38.2125315Z 24.04.4
+2026-03-31T19:57:38.2125926Z LTS
+2026-03-31T19:57:38.2126468Z ##[endgroup]
+2026-03-31T19:57:38.2127095Z ##[group]Runner Image
+2026-03-31T19:57:38.2127951Z Image: ubuntu-24.04
+2026-03-31T19:57:38.2128742Z Version: 20260323.65.1
+2026-03-31T19:57:38.2130064Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260323.65/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-31T19:57:38.2131592Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260323.65
+2026-03-31T19:57:38.2132561Z ##[endgroup]
+2026-03-31T19:57:38.2133721Z ##[group]GITHUB_TOKEN Permissions
+2026-03-31T19:57:38.2135957Z Actions: write
+2026-03-31T19:57:38.2136588Z Contents: write
+2026-03-31T19:57:38.2137151Z Metadata: read
+2026-03-31T19:57:38.2137687Z ##[endgroup]
+2026-03-31T19:57:38.2140151Z Secret source: Actions
+2026-03-31T19:57:38.2141366Z Prepare workflow directory
+2026-03-31T19:57:38.2700032Z Prepare all required actions
+2026-03-31T19:57:38.2738800Z Getting action download info
+2026-03-31T19:57:38.5488722Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-31T19:57:38.6675367Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-03-31T19:57:38.8470192Z Complete job name: run-article-pipeline
+2026-03-31T19:57:38.9108653Z ##[group]Run actions/checkout@v4
+2026-03-31T19:57:38.9109663Z with:
+2026-03-31T19:57:38.9110082Z   fetch-depth: 0
+2026-03-31T19:57:38.9110528Z   repository: VladChat/foseer.com
+2026-03-31T19:57:38.9111211Z   token: ***
+2026-03-31T19:57:38.9111638Z   ssh-strict: true
+2026-03-31T19:57:38.9112063Z   ssh-user: git
+2026-03-31T19:57:38.9112500Z   persist-credentials: true
+2026-03-31T19:57:38.9112961Z   clean: true
+2026-03-31T19:57:38.9113393Z   sparse-checkout-cone-mode: true
+2026-03-31T19:57:38.9113906Z   fetch-tags: false
+2026-03-31T19:57:38.9114331Z   show-progress: true
+2026-03-31T19:57:38.9114758Z   lfs: false
+2026-03-31T19:57:38.9115158Z   submodules: false
+2026-03-31T19:57:38.9115588Z   set-safe-directory: true
+2026-03-31T19:57:38.9116251Z env:
+2026-03-31T19:57:38.9116750Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23816710710
+2026-03-31T19:57:38.9117377Z   QWEN_MAX_ARTICLES_PER_RUN: 4
+2026-03-31T19:57:38.9118148Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T19:57:38.9118771Z ##[endgroup]
+2026-03-31T19:57:39.0230228Z Syncing repository: VladChat/foseer.com
+2026-03-31T19:57:39.0232030Z ##[group]Getting Git version info
+2026-03-31T19:57:39.0232787Z Working directory is '/home/runner/work/foseer.com/foseer.com'
+2026-03-31T19:57:39.0233802Z [command]/usr/bin/git version
+2026-03-31T19:57:39.0263775Z git version 2.53.0
+2026-03-31T19:57:39.0291377Z ##[endgroup]
+2026-03-31T19:57:39.0306777Z Temporarily overriding HOME='/home/runner/work/_temp/e52a3218-fc1a-4946-a715-4c7e5e5b44e3' before making global git config changes
+2026-03-31T19:57:39.0309500Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-31T19:57:39.0321085Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/foseer.com/foseer.com
+2026-03-31T19:57:39.0354383Z Deleting the contents of '/home/runner/work/foseer.com/foseer.com'
+2026-03-31T19:57:39.0358503Z ##[group]Initializing the repository
+2026-03-31T19:57:39.0363492Z [command]/usr/bin/git init /home/runner/work/foseer.com/foseer.com
+2026-03-31T19:57:39.0443339Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-31T19:57:39.0445253Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-31T19:57:39.0446235Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-31T19:57:39.0447020Z hint: call:
+2026-03-31T19:57:39.0447656Z hint:
+2026-03-31T19:57:39.0448581Z hint: 	git config --global init.defaultBranch <name>
+2026-03-31T19:57:39.0449189Z hint:
+2026-03-31T19:57:39.0449820Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-31T19:57:39.0451145Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-31T19:57:39.0451895Z hint:
+2026-03-31T19:57:39.0452294Z hint: 	git branch -m <name>
+2026-03-31T19:57:39.0452755Z hint:
+2026-03-31T19:57:39.0453356Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-31T19:57:39.0454377Z Initialized empty Git repository in /home/runner/work/foseer.com/foseer.com/.git/
+2026-03-31T19:57:39.0456421Z [command]/usr/bin/git remote add origin https://github.com/VladChat/foseer.com
+2026-03-31T19:57:39.0485730Z ##[endgroup]
+2026-03-31T19:57:39.0486494Z ##[group]Disabling automatic garbage collection
+2026-03-31T19:57:39.0490178Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-31T19:57:39.0517405Z ##[endgroup]
+2026-03-31T19:57:39.0518492Z ##[group]Setting up auth
+2026-03-31T19:57:39.0524418Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-31T19:57:39.0553509Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-31T19:57:39.0825362Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-31T19:57:39.0853930Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-31T19:57:39.1064291Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-31T19:57:39.1092793Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-31T19:57:39.1316822Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-31T19:57:39.1350532Z ##[endgroup]
+2026-03-31T19:57:39.1351325Z ##[group]Fetching the repository
+2026-03-31T19:57:39.1359537Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-03-31T19:57:39.9883451Z From https://github.com/VladChat/foseer.com
+2026-03-31T19:57:39.9887203Z  * [new branch]      main            -> origin/main
+2026-03-31T19:57:39.9890052Z  * [new branch]      prep/github-push-readiness-2026-03-29 -> origin/prep/github-push-readiness-2026-03-29
+2026-03-31T19:57:39.9893451Z  * [new branch]      theme-astrowind -> origin/theme-astrowind
+2026-03-31T19:57:39.9895747Z  * [new branch]      theme-blog      -> origin/theme-blog
+2026-03-31T19:57:39.9897997Z  * [new branch]      theme-minimal   -> origin/theme-minimal
+2026-03-31T19:57:39.9923921Z [command]/usr/bin/git branch --list --remote origin/main
+2026-03-31T19:57:39.9947257Z   origin/main
+2026-03-31T19:57:39.9957025Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-03-31T19:57:39.9977188Z 282a5ce31f6caceb46c0923535aff60371a8acc9
+2026-03-31T19:57:39.9983679Z ##[endgroup]
+2026-03-31T19:57:39.9985768Z ##[group]Determining the checkout info
+2026-03-31T19:57:39.9988081Z ##[endgroup]
+2026-03-31T19:57:39.9989519Z [command]/usr/bin/git sparse-checkout disable
+2026-03-31T19:57:40.0022893Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-31T19:57:40.0049392Z ##[group]Checking out the ref
+2026-03-31T19:57:40.0052213Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-03-31T19:57:40.1650335Z Switched to a new branch 'main'
+2026-03-31T19:57:40.1652644Z branch 'main' set up to track 'origin/main'.
+2026-03-31T19:57:40.1669981Z ##[endgroup]
+2026-03-31T19:57:40.1706883Z [command]/usr/bin/git log -1 --format=%H
+2026-03-31T19:57:40.1730141Z 282a5ce31f6caceb46c0923535aff60371a8acc9
+2026-03-31T19:57:40.2037033Z ##[group]Run actions/setup-node@v4
+2026-03-31T19:57:40.2038464Z with:
+2026-03-31T19:57:40.2039299Z   node-version: 20
+2026-03-31T19:57:40.2040211Z   cache: npm
+2026-03-31T19:57:40.2041073Z   always-auth: false
+2026-03-31T19:57:40.2042024Z   check-latest: false
+2026-03-31T19:57:40.2043289Z   token: ***
+2026-03-31T19:57:40.2044138Z env:
+2026-03-31T19:57:40.2045199Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23816710710
+2026-03-31T19:57:40.2046674Z   QWEN_MAX_ARTICLES_PER_RUN: 4
+2026-03-31T19:57:40.2048126Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T19:57:40.2049548Z ##[endgroup]
+2026-03-31T19:57:40.3793774Z Found in cache @ /opt/hostedtoolcache/node/20.20.1/x64
+2026-03-31T19:57:40.3801033Z ##[group]Environment details
+2026-03-31T19:57:40.6732807Z node: v20.20.1
+2026-03-31T19:57:40.6733464Z npm: 10.8.2
+2026-03-31T19:57:40.6733923Z yarn: 1.22.22
+2026-03-31T19:57:40.6734914Z ##[endgroup]
+2026-03-31T19:57:40.6759848Z [command]/opt/hostedtoolcache/node/20.20.1/x64/bin/npm config get cache
+2026-03-31T19:57:40.8784355Z /home/runner/.npm
+2026-03-31T19:57:40.9727557Z Cache hit for: node-cache-Linux-x64-npm-92d60ddf14d49d621e750f1e8d8b6aa7fc5cc2ea92873665baa1bca1556f25fd
+2026-03-31T19:57:41.6294811Z Received 103730000 of 103730000 (100.0%), 163.5 MBs/sec
+2026-03-31T19:57:41.6295661Z Cache Size: ~99 MB (103730000 B)
+2026-03-31T19:57:41.6328050Z [command]/usr/bin/tar -xf /home/runner/work/_temp/85fad512-833a-4978-bc1d-34f503a2e986/cache.tzst -P -C /home/runner/work/foseer.com/foseer.com --use-compress-program unzstd
+2026-03-31T19:57:42.0010908Z Cache restored successfully
+2026-03-31T19:57:42.0060969Z Cache restored from key: node-cache-Linux-x64-npm-92d60ddf14d49d621e750f1e8d8b6aa7fc5cc2ea92873665baa1bca1556f25fd
+2026-03-31T19:57:42.0286199Z ##[group]Run npm ci
+2026-03-31T19:57:42.0286533Z [36;1mnpm ci[0m
+2026-03-31T19:57:42.0325400Z shell: /usr/bin/bash -e {0}
+2026-03-31T19:57:42.0325700Z env:
+2026-03-31T19:57:42.0325976Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23816710710
+2026-03-31T19:57:42.0326324Z   QWEN_MAX_ARTICLES_PER_RUN: 4
+2026-03-31T19:57:42.0326634Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T19:57:42.0326950Z ##[endgroup]
+2026-03-31T19:57:57.2300976Z 
+2026-03-31T19:57:57.2308170Z added 862 packages, and audited 863 packages in 15s
+2026-03-31T19:57:57.2308541Z 
+2026-03-31T19:57:57.2308764Z 303 packages are looking for funding
+2026-03-31T19:57:57.2309124Z   run `npm fund` for details
+2026-03-31T19:57:57.2646112Z 
+2026-03-31T19:57:57.2647009Z 20 vulnerabilities (1 low, 8 moderate, 11 high)
+2026-03-31T19:57:57.2647513Z 
+2026-03-31T19:57:57.2648181Z To address issues that do not require attention, run:
+2026-03-31T19:57:57.2648922Z   npm audit fix
+2026-03-31T19:57:57.2649176Z 
+2026-03-31T19:57:57.2649491Z To address all issues, run:
+2026-03-31T19:57:57.2649981Z   npm audit fix --force
+2026-03-31T19:57:57.2650263Z 
+2026-03-31T19:57:57.2650507Z Run `npm audit` for details.
+2026-03-31T19:57:57.3285274Z ##[group]Run set +e
+2026-03-31T19:57:57.3285585Z [36;1mset +e[0m
+2026-03-31T19:57:57.3285906Z [36;1mnpm run article:auto[0m
+2026-03-31T19:57:57.3286351Z [36;1mexit_code=$?[0m
+2026-03-31T19:57:57.3286730Z [36;1mecho "exit_code=$exit_code" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T19:57:57.3287053Z [36;1m[0m
+2026-03-31T19:57:57.3287262Z [36;1mif [ "$exit_code" -eq 0 ]; then[0m
+2026-03-31T19:57:57.3287609Z [36;1m  echo "result=success" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T19:57:57.3288399Z [36;1m  exit 0[0m
+2026-03-31T19:57:57.3288604Z [36;1mfi[0m
+2026-03-31T19:57:57.3288788Z [36;1m[0m
+2026-03-31T19:57:57.3289072Z [36;1mresult_file="qwen-data/events/pipeline-last-result.json"[0m
+2026-03-31T19:57:57.3289694Z [36;1mif [ -f "$result_file" ]; then[0m
+2026-03-31T19:57:57.3291476Z [36;1m  if node -e "const fs=require('node:fs');const p='qwen-data/events/pipeline-last-result.json';const data=JSON.parse(fs.readFileSync(p,'utf8'));const blocker=String(data?.hard_blocker||'').toLowerCase();const published=Number(data?.stats?.articles_published||0);const controlled=published===0 && /(no publishable candidate|source pack gate failed|no candidates discovered|no briefs normalized|pre-draft quality gate failed)/.test(blocker);process.exit(controlled?0:1);"; then[0m
+2026-03-31T19:57:57.3293312Z [36;1m    echo "result=no_article" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T19:57:57.3293753Z [36;1m    echo "No publishable article this run. Skipping build/commit/push."[0m
+2026-03-31T19:57:57.3294134Z [36;1m    exit 0[0m
+2026-03-31T19:57:57.3294334Z [36;1m  fi[0m
+2026-03-31T19:57:57.3294515Z [36;1mfi[0m
+2026-03-31T19:57:57.3294691Z [36;1m[0m
+2026-03-31T19:57:57.3294913Z [36;1mecho "result=failure" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T19:57:57.3295223Z [36;1mexit "$exit_code"[0m
+2026-03-31T19:57:57.3322657Z shell: /usr/bin/bash -e {0}
+2026-03-31T19:57:57.3322913Z env:
+2026-03-31T19:57:57.3323172Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23816710710
+2026-03-31T19:57:57.3323521Z   QWEN_MAX_ARTICLES_PER_RUN: 4
+2026-03-31T19:57:57.3323834Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T19:57:57.3324841Z   OPENAI_API_KEY: ***
+2026-03-31T19:57:57.3325082Z   OPENAI_WRITER_MODEL: gpt-5.1
+2026-03-31T19:57:57.3325397Z   BRAVE_SEARCH_API_KEY: ***
+2026-03-31T19:57:57.3325787Z   PEXELS_API_KEY: ***
+2026-03-31T19:57:57.3326064Z   PIXABAY_API_KEY: ***
+2026-03-31T19:57:57.3326361Z   SEARCH_WEB_API: ***
+2026-03-31T19:57:57.3326586Z   SEARCH_WEB_CX: ***
+2026-03-31T19:57:57.3326806Z   QWEN_API_RETRY_MAX_ATTEMPTS: 3
+2026-03-31T19:57:57.3327062Z   QWEN_API_RETRY_BASE_DELAY_MS: 700
+2026-03-31T19:57:57.3327324Z   QWEN_API_RETRY_MAX_DELAY_MS: 6000
+2026-03-31T19:57:57.3327569Z ##[endgroup]
+2026-03-31T19:57:57.4654634Z 
+2026-03-31T19:57:57.4655890Z > foseer@1.0.0 article:auto
+2026-03-31T19:57:57.4656689Z > node qwen-scripts/pipeline.js
+2026-03-31T19:57:57.4656953Z 
+2026-03-31T19:57:57.5302108Z [writer-selector] Loaded persistent rotation state
+2026-03-31T19:57:57.5350706Z [pipeline] Starting editorial pipeline...
+2026-03-31T19:57:57.5371996Z [pipeline] API keys loaded: {
+2026-03-31T19:57:57.5372528Z   brave: true,
+2026-03-31T19:57:57.5372921Z   openai: true,
+2026-03-31T19:57:57.5373291Z   pexels: true,
+2026-03-31T19:57:57.5373682Z   pixabay: true,
+2026-03-31T19:57:57.5374080Z   google: true
+2026-03-31T19:57:57.5374454Z }
+2026-03-31T19:57:57.5375593Z [pipeline] Max articles per run: 4
+2026-03-31T19:57:57.5376294Z [pipeline] Local verification enabled: false
+2026-03-31T19:57:57.5499617Z [pipeline] Stage 1: Discovery...
+2026-03-31T19:57:57.5503097Z [discovery] Starting taxonomy-driven signal discovery...
+2026-03-31T19:57:57.5528563Z [discovery] Channel 1: Brave core discovery...
+2026-03-31T19:57:57.5547564Z [brave] label=discovery_brave_news status=stale_cache_hit age_ms=248666958 ttl_hours=8 mode=stale_cache
+2026-03-31T19:57:57.5549578Z [discovery] Brave query status=stale_cache_hit items=5 lane=section:news query=breaking news public affairs law climate world events
+2026-03-31T19:57:57.6045122Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=1 live_quota=5
+2026-03-31T19:57:57.6059768Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+business+markets+consumer+companies+housing+crypto+travel&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T19:57:57.9704492Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 14521 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T19:57:57.9706805Z [discovery] Brave query status=called_success items=5 lane=section:business query=breaking business markets consumer companies housing crypto travel
+2026-03-31T19:57:57.9891187Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5616 min_interval_ms=6000
+2026-03-31T19:58:03.6076736Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=2 live_quota=5
+2026-03-31T19:58:03.6081714Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+technology+ai+cybersecurity+consumer+tech+mobility+space+enterprise+software&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T19:58:03.8298694Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 14515 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T19:58:03.8300412Z [discovery] Brave query status=called_success items=5 lane=section:tech query=breaking technology ai cybersecurity consumer tech mobility space enterprise software
+2026-03-31T19:58:03.8701512Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5738 min_interval_ms=6000
+2026-03-31T19:58:09.6107526Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=3 live_quota=5
+2026-03-31T19:58:09.6111551Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+health+public+health+medical+research+pharma+mental+health+wellness&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T19:58:09.8191260Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 14509 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T19:58:09.8193683Z [discovery] Brave query status=called_success items=5 lane=section:health query=breaking health public health medical research pharma mental health wellness
+2026-03-31T19:58:09.8356772Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5775 min_interval_ms=6000
+2026-03-31T19:58:15.6128729Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=4 live_quota=5
+2026-03-31T19:58:15.6133530Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+sports+leagues+tournaments+transfers+athlete+culture&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T19:58:15.8027573Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 14503 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T19:58:15.8030263Z [discovery] Brave query status=called_success items=5 lane=section:sports query=breaking sports leagues tournaments transfers athlete culture
+2026-03-31T19:58:15.8197192Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5793 min_interval_ms=6000
+2026-03-31T19:58:21.6149020Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=5 live_quota=5
+2026-03-31T19:58:21.6154406Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+culture+film+tv+music+celebrities+internet+creators+platforms&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T19:58:21.8803295Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 14497 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T19:58:21.8805968Z [discovery] Brave query status=called_success items=5 lane=section:culture query=breaking culture film tv music celebrities internet creators platforms
+2026-03-31T19:58:21.8981098Z [discovery] Brave core found 30 candidates across 6 lanes
+2026-03-31T19:58:21.8981951Z [discovery] Channel 2: Google trusted-source discovery...
+2026-03-31T19:58:21.8986947Z [google] label=discovery_google_trusted status=throttle_wait wait_ms=5716 min_interval_ms=6000
+2026-03-31T19:58:27.6161841Z [google] label=discovery_google_trusted status=live_slot_reserved live_used=1 live_quota=2
+2026-03-31T19:58:27.6172078Z [google] label=discovery_google_trusted status=calling cache_reason=missing url=https://customsearch.googleapis.com/customsearch/v1?key=REDACTED&cx=***&q=%28site%3Areuters.com+OR+site%3Aapnews.com+OR+site%3Abloomberg.com+OR+site%3Aft.com+OR+site%3Awsj.com+OR+site%3Anytimes.com+OR+site%3Abbc.com+OR+site%3Abbc.co.uk+OR+site%3Atheguardian.com+OR+site%3Awashingtonpost.com+OR+site%3Acnbc.com+OR+site%3Apolitico.com+OR+site%3Aaxios.com+OR+site%3Anpr.org+OR+site%3Aabcnews.go.com+OR+site%3Aabcnews.com%29+%28announced+OR+approved+OR+filed+OR+charged+OR+launched+OR+confirmed+OR+warns%29+%28breaking+news+public+affairs+law+climate+world+events%29&num=10&dateRestrict=d2
+2026-03-31T19:58:28.1652782Z [google] label=discovery_google_trusted status=called_success code=200 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T19:58:28.1653733Z [discovery] Google trusted query status=called_success items=10 lane=google:news
+2026-03-31T19:58:28.1946086Z [google] label=discovery_google_trusted status=stale_cache_hit age_ms=242720573 ttl_hours=8 mode=stale_cache
+2026-03-31T19:58:28.1947475Z [discovery] Google trusted query status=stale_cache_hit items=7 lane=google:business
+2026-03-31T19:58:28.2134126Z [discovery] Google trusted-source found 17 candidates
+2026-03-31T19:58:28.2158951Z [discovery] Channel 3: GDELT signal discovery...
+2026-03-31T19:58:28.2159886Z [gdelt] label=discovery_gdelt status=throttle_wait wait_ms=5402 min_interval_ms=10000
+2026-03-31T19:58:33.6182415Z [gdelt] label=discovery_gdelt status=live_slot_reserved live_used=1 live_quota=2
+2026-03-31T19:58:33.6186985Z [gdelt] label=discovery_gdelt status=calling cache_reason=missing url=https://api.gdeltproject.org/api/v2/doc/doc?query=%28breaking+OR+culture+OR+film+OR+music+OR+celebrities+OR+internet+OR+creators%29+AND+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=10&sort=DateDesc&timespan=2days
+2026-03-31T19:58:44.1131265Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=1 retry_in_ms=735 error=fetch failed
+2026-03-31T19:58:55.3446826Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=2 retry_in_ms=1441 error=fetch failed
+2026-03-31T19:59:07.2817652Z [gdelt] label=discovery_gdelt status=upstream_response_failure error=Network error: fetch failed
+2026-03-31T19:59:07.2820041Z [discovery] GDELT query status=upstream_response_failure items=0 lane=gdelt:culture query=(breaking OR culture OR film OR music OR celebrities OR internet OR creators) AND sourcelang:english
+2026-03-31T19:59:07.2821248Z [discovery] GDELT signal discovery found 0 candidates
+2026-03-31T19:59:07.2824414Z [discovery] Discovery complete: 34 candidates after filtering (24 viable)
+2026-03-31T19:59:07.2827275Z [pipeline] Discovery found 34 candidates
+2026-03-31T19:59:07.2886268Z [pipeline] Stage 2: Event clustering and brief normalization...
+2026-03-31T19:59:07.3085110Z [pipeline] Clustered 9 events and normalized 6 briefs
+2026-03-31T19:59:07.3466216Z [pipeline] News pool active: 50, total stored: 59
+2026-03-31T19:59:07.3466957Z [pipeline] Stage 3: Source pack assembly...
+2026-03-31T19:59:07.4762714Z [pipeline] Duplicate guard: skip published identity cluster:evt-2026-03-31-sports-general-global :: How NIL Is Reshaping the Future of College Football
+2026-03-31T19:59:07.5619483Z [pipeline] Source-pack candidates from merged current+pool+ready set: 16
+2026-03-31T19:59:07.5620818Z [pipeline] Duplicate guard removed 1 already published candidate(s) before source-pack assembly
+2026-03-31T19:59:07.5621588Z [pipeline] Ready backlog prioritized for selection: 1
+2026-03-31T19:59:07.5623045Z [source-pack] topic=Constantino's sticky ad spending problem
+2026-03-31T19:59:07.6068716Z [source-pack] topic=Climate law 'battle royale'
+2026-03-31T19:59:07.6401036Z [source-pack] topic=Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms
+2026-03-31T19:59:07.6588388Z [source-pack] topic=AI: The Cybersecurity Crisis That Vendors Love
+2026-03-31T19:59:07.6711338Z [source-pack] topic=Why Businesses Are Paying Closer Attention to Crypto Infrastructure
+2026-03-31T19:59:07.6846245Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T19:59:07.6993747Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T19:59:07.7107771Z [source-pack] topic=Why Is Horror TV So Complicated Right Now?
+2026-03-31T19:59:07.7210041Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T19:59:07.7426898Z [pipeline] Stage 3 placement repair queued :: Hard truths, soft metals :: Primary topic_id unsupported by source-pack evidence: us-politics
+2026-03-31T19:59:07.7428165Z [source-pack] topic=XRP Market Trends & Ripple's Regulatory Milestones in 2026
+2026-03-31T19:59:07.7620902Z [source-pack] topic=10 TV Shows That Changed Fandom Culture
+2026-03-31T19:59:07.7745968Z [source-pack] topic=Tech company climate goals under pressure due to AI energy demand
+2026-03-31T19:59:07.7858585Z [source-pack] topic=Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...
+2026-03-31T19:59:07.7963088Z [source-pack] topic=Medical Bulletin 31/March/2026
+2026-03-31T19:59:07.8105770Z [source-pack] topic=The Link Between Medicine and Psychology
+2026-03-31T19:59:07.8215167Z [source-pack] topic=Ofcom to investigate complaints of climate change denial
+2026-03-31T19:59:07.8382970Z [pipeline] Stage 3 near-miss retry :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: poolMatchLimit=24
+2026-03-31T19:59:07.8385278Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T19:59:07.8587633Z [pipeline] Stage 3 near-miss retry rejected :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: Need at least 2 publishable sources, found 1 | Need at least 2 direct-event sources for report, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T19:59:07.8590531Z [pipeline] Stage 3 near-miss retry :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: poolMatchLimit=24
+2026-03-31T19:59:07.8591616Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T19:59:07.8784943Z [pipeline] Stage 3 near-miss retry rejected :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: Need at least 2 different domains among publishable sources, found 1 | Need at least 2 independent direct-event domains for report, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T19:59:07.8789086Z [pipeline] Stage 3 near-miss retry :: Why Is Horror TV So Complicated Right Now? :: poolMatchLimit=24
+2026-03-31T19:59:07.8790289Z [source-pack] topic=Why Is Horror TV So Complicated Right Now?
+2026-03-31T19:59:07.8958942Z [pipeline] Stage 3 near-miss retry rejected :: Why Is Horror TV So Complicated Right Now? :: Need at least 2 publishable sources, found 1 | Need at least 2 direct-event sources for report, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T19:59:07.8962294Z [pipeline] Assembled 19 source packs, 0 publishable
+2026-03-31T19:59:07.9154585Z [pipeline] Stage 3 retry #1 (cheap_refresh): refresh discovery with cheaper channels first (google/gdelt, brave disabled)
+2026-03-31T19:59:07.9155879Z [discovery] Starting taxonomy-driven signal discovery...
+2026-03-31T19:59:07.9159125Z [discovery] Skipping Brave (disabled or no API key)
+2026-03-31T19:59:07.9159968Z [discovery] Channel 2: Google trusted-source discovery...
+2026-03-31T19:59:07.9166958Z [google] label=discovery_google_trusted status=stale_cache_hit age_ms=247846939 ttl_hours=8 mode=stale_cache
+2026-03-31T19:59:07.9168611Z [discovery] Google trusted query status=stale_cache_hit items=9 lane=google:tech
+2026-03-31T19:59:07.9434269Z [google] label=discovery_google_trusted status=stale_cache_hit age_ms=247841119 ttl_hours=8 mode=stale_cache
+2026-03-31T19:59:07.9435701Z [discovery] Google trusted query status=stale_cache_hit items=6 lane=google:health
+2026-03-31T19:59:07.9567915Z [discovery] Google trusted-source found 15 candidates
+2026-03-31T19:59:07.9568955Z [discovery] Channel 3: GDELT signal discovery...
+2026-03-31T19:59:07.9570075Z [gdelt] label=discovery_gdelt status=live_slot_reserved live_used=2 live_quota=2
+2026-03-31T19:59:07.9573320Z [gdelt] label=discovery_gdelt status=calling cache_reason=missing url=https://api.gdeltproject.org/api/v2/doc/doc?query=%28breaking+OR+news+OR+public+OR+affairs+OR+law+OR+climate+OR+world%29+AND+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=10&sort=DateDesc&timespan=2days
+2026-03-31T19:59:18.4516134Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=1 retry_in_ms=913 error=fetch failed
+2026-03-31T19:59:29.8619181Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=2 retry_in_ms=1461 error=fetch failed
+2026-03-31T19:59:41.8173535Z [gdelt] label=discovery_gdelt status=upstream_response_failure error=Network error: fetch failed
+2026-03-31T19:59:41.8175421Z [discovery] GDELT query status=upstream_response_failure items=0 lane=gdelt:news query=(breaking OR news OR public OR affairs OR law OR climate OR world) AND sourcelang:english
+2026-03-31T19:59:41.8176550Z [discovery] GDELT signal discovery found 0 candidates
+2026-03-31T19:59:41.8177213Z [discovery] Discovery complete: 6 candidates after filtering (2 viable)
+2026-03-31T19:59:41.9710515Z [pipeline] Duplicate guard: skip published identity cluster:evt-2026-03-31-sports-general-global :: How NIL Is Reshaping the Future of College Football
+2026-03-31T19:59:42.0899302Z [pipeline] Source-pack candidates from merged current+pool+ready set: 16
+2026-03-31T19:59:42.0900311Z [pipeline] Duplicate guard removed 1 already published candidate(s) before source-pack assembly
+2026-03-31T19:59:42.0901118Z [pipeline] Ready backlog prioritized for selection: 1
+2026-03-31T19:59:42.0901739Z [source-pack] topic=Constantino's sticky ad spending problem
+2026-03-31T19:59:42.1265958Z [source-pack] topic=Climate law 'battle royale'
+2026-03-31T19:59:42.1558860Z [source-pack] topic=Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms
+2026-03-31T19:59:42.1709559Z [source-pack] topic=AI: The Cybersecurity Crisis That Vendors Love
+2026-03-31T19:59:42.1938156Z [source-pack] topic=Why Businesses Are Paying Closer Attention to Crypto Infrastructure
+2026-03-31T19:59:42.2107820Z [source-pack] topic=House Appropriations Committee
+2026-03-31T19:59:42.2226511Z [source-pack] topic=Cue Biopharma Announces CEO Transition
+2026-03-31T19:59:42.2345803Z [source-pack] topic=NBC News Author Aria Bendix
+2026-03-31T19:59:42.2444307Z [source-pack] topic=Trump Signs Order to Pay TSA Workers
+2026-03-31T19:59:42.2709294Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T19:59:42.2909003Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T19:59:42.3129999Z [source-pack] topic=Why Is Horror TV So Complicated Right Now?
+2026-03-31T19:59:42.3310829Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T19:59:42.3513983Z [pipeline] Stage 3 placement repair queued :: Hard truths, soft metals :: Primary topic_id unsupported by source-pack evidence: us-politics
+2026-03-31T19:59:42.3514982Z [source-pack] topic=XRP Market Trends & Ripple's Regulatory Milestones in 2026
+2026-03-31T19:59:42.3752671Z [source-pack] topic=10 TV Shows That Changed Fandom Culture
+2026-03-31T19:59:42.3849728Z [source-pack] topic=Tech company climate goals under pressure due to AI energy demand
+2026-03-31T19:59:42.3959306Z [pipeline] Stage 3 near-miss retry :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: poolMatchLimit=24
+2026-03-31T19:59:42.4136658Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T19:59:42.4141403Z [pipeline] Stage 3 near-miss retry rejected :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: Need at least 2 publishable sources, found 1 | Need at least 2 direct-event sources for report, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T19:59:42.4143840Z [pipeline] Stage 3 near-miss retry :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: poolMatchLimit=24
+2026-03-31T19:59:42.4144735Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T19:59:42.4247306Z [pipeline] Stage 3 near-miss retry rejected :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: Need at least 2 different domains among publishable sources, found 1 | Need at least 2 independent direct-event domains for report, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T19:59:42.4249470Z [pipeline] Stage 3 near-miss retry :: Why Is Horror TV So Complicated Right Now? :: poolMatchLimit=24
+2026-03-31T19:59:42.4250188Z [source-pack] topic=Why Is Horror TV So Complicated Right Now?
+2026-03-31T19:59:42.4369860Z [pipeline] Stage 3 near-miss retry rejected :: Why Is Horror TV So Complicated Right Now? :: Need at least 2 publishable sources, found 1 | Need at least 2 direct-event sources for report, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T19:59:42.4371694Z [pipeline] Assembled 19 source packs, 1 publishable
+2026-03-31T19:59:42.4702696Z [pipeline] Additional ready article candidates: 2
+2026-03-31T19:59:42.4704456Z [pipeline]   backlog rank=2 score=62.3 section=sports topic=transfers-business title=International Olympics Committee Bans Trans Athletes from Women's Events
+2026-03-31T19:59:42.4706444Z [pipeline]   backlog rank=2 score=50.2 section=business topic=crypto-bitcoin title=MAHA fans want action Trump hasn't delivered
+2026-03-31T19:59:42.4708040Z [pipeline] Ready candidate backlog saved: /home/runner/work/foseer.com/foseer.com/qwen-data/events/ready-article-candidates.json
+2026-03-31T19:59:42.4709132Z [pipeline] SOURCE PACK GATE: PASS :: House Appropriations Committee
+2026-03-31T19:59:42.4709739Z [pipeline] Sources: 2, Domains: 2
+2026-03-31T19:59:42.4710297Z [pipeline] Stage 3.5: Pre-draft canonical placement and tag lock...
+2026-03-31T19:59:42.5436588Z [pipeline] PRE-DRAFT LOCK: PASS :: House Appropriations Committee :: section=news topic=us-politics tags=2
+2026-03-31T19:59:42.5700248Z [pipeline] === Article run start: House Appropriations Committee ===
+2026-03-31T19:59:42.5700937Z [pipeline] Stage 4: Claim map creation...
+2026-03-31T19:59:42.5701712Z [claim-map] topic=House Appropriations Committee sources=2
+2026-03-31T19:59:42.5711309Z [claim-map] quality=strong total_claims=2 supported=2 fallback=false
+2026-03-31T19:59:42.5712213Z [pipeline] Claim map: 2 claims, 2 supported
+2026-03-31T19:59:42.5712840Z [pipeline] CLAIM MAP GATE: PASS
+2026-03-31T19:59:42.5713253Z [pipeline] Stage 5: Article drafting...
+2026-03-31T19:59:42.5717235Z [drafter] Drafting article: House Appropriations Committee
+2026-03-31T19:59:42.5932197Z [drafter] Story classification: report / News / politics
+2026-03-31T19:59:42.5933133Z [drafter] Canonical tags: U.S. Politics & Policy, Congress
+2026-03-31T19:59:42.5943337Z [drafter] Selected department: Staff Reporter / author: Maya Collins (fit: 10/10)
+2026-03-31T19:59:42.5944490Z [drafter] Forecast inclusion: No (variant: report-watch)
+2026-03-31T19:59:42.5956530Z [drafter] Prompt assembled: 5 layers
+2026-03-31T19:59:42.5957139Z [drafter] Prompt size: 6050 chars
+2026-03-31T19:59:42.5961313Z [openai] label=article_drafting status=calling model=gpt-5.1 prompt_chars=6050 token_field=max_completion_tokens token_limit=4500 temperature=0.6
+2026-03-31T20:00:01.5323198Z [openai] label=article_drafting status=called_success model=gpt-5.1 code=200 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:01.5333147Z [drafter] Drafted 958 words, 2 sources cited
+2026-03-31T20:00:01.5333905Z [drafter] Type: report, Writer: Maya Collins, News Desk
+2026-03-31T20:00:01.5334651Z [drafter] Quality: strong, Safe for publishing: true
+2026-03-31T20:00:01.5349659Z [pipeline] Drafted: 958 words, type: report, quality: strong
+2026-03-31T20:00:01.5350393Z [pipeline] Stage 6: Image support...
+2026-03-31T20:00:01.5355660Z [image] Getting image for: House Appropriations Committee Posts New Legislative Activity
+2026-03-31T20:00:01.5728330Z [pexels] label=pexels_image_search status=calling query=House Appropriations Committee government photo
+2026-03-31T20:00:01.5749561Z [pixabay] label=pixabay_image_search status=calling query=House Appropriations Committee government photo video=false
+2026-03-31T20:00:01.8609397Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=99 rate_limit_reset=60 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:02.0380245Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:02.0500925Z [pexels] label=pexels_image_search status=calling query=House Appropriations Committee photo
+2026-03-31T20:00:02.0507620Z [pixabay] label=pixabay_image_search status=calling query=House Appropriations Committee photo video=false
+2026-03-31T20:00:02.2473062Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=98 rate_limit_reset=59 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:02.4591610Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:02.4644355Z [image] Rejecting recent duplicate asset=pixabay:7666143
+2026-03-31T20:00:02.4650894Z [image] Rejecting low-evidence generic candidate provider=pixabay query="House Appropriations Committee photo"
+2026-03-31T20:00:02.4659036Z [image] Rejecting low-evidence generic candidate provider=pixabay query="House Appropriations Committee photo"
+2026-03-31T20:00:02.4664501Z [image] Rejecting low-evidence generic candidate provider=pixabay query="House Appropriations Committee photo"
+2026-03-31T20:00:02.4673572Z [image] Rejecting recent duplicate asset=pixabay:7903435
+2026-03-31T20:00:02.4680917Z [image] Rejecting low-evidence generic candidate provider=pixabay query="House Appropriations Committee photo"
+2026-03-31T20:00:02.4684525Z [image] Rejecting low-evidence generic candidate provider=pixabay query="House Appropriations Committee photo"
+2026-03-31T20:00:02.4686067Z [pexels] label=pexels_image_search status=calling query=House Appropriations Committee portrait
+2026-03-31T20:00:02.4692832Z [pixabay] label=pixabay_image_search status=calling query=House Appropriations Committee portrait video=false
+2026-03-31T20:00:02.8144032Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=97 rate_limit_reset=59 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:02.8165656Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:02.8182966Z [image] Rejecting low-evidence generic candidate provider=pexels query="House Appropriations Committee portrait"
+2026-03-31T20:00:02.8260799Z [pexels] label=pexels_image_search status=calling query=us House Appropriations Committee photo
+2026-03-31T20:00:02.8265881Z [pixabay] label=pixabay_image_search status=calling query=us House Appropriations Committee photo video=false
+2026-03-31T20:00:03.0171039Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=96 rate_limit_reset=59 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:03.2168369Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:03.2175128Z [image] Rejecting low-evidence generic candidate provider=pexels query="us House Appropriations Committee photo"
+2026-03-31T20:00:03.2187226Z [image] Rejecting low-evidence generic candidate provider=pexels query="us House Appropriations Committee photo"
+2026-03-31T20:00:03.2203703Z [image] Rejecting low-evidence generic candidate provider=pexels query="us House Appropriations Committee photo"
+2026-03-31T20:00:03.2217697Z [image] Rejecting recent duplicate asset=pixabay:7666143
+2026-03-31T20:00:03.2222106Z [image] Rejecting low-evidence generic candidate provider=pixabay query="us House Appropriations Committee photo"
+2026-03-31T20:00:03.2226222Z [image] Rejecting low-evidence generic candidate provider=pixabay query="us House Appropriations Committee photo"
+2026-03-31T20:00:03.2234210Z [image] Rejecting recent duplicate asset=pixabay:499481
+2026-03-31T20:00:03.2238257Z [image] Rejecting low-evidence generic candidate provider=pixabay query="us House Appropriations Committee photo"
+2026-03-31T20:00:03.2239611Z [image] Rejecting recent duplicate asset=pixabay:7903435
+2026-03-31T20:00:03.2249498Z [image] Rejecting low-evidence generic candidate provider=pixabay query="us House Appropriations Committee photo"
+2026-03-31T20:00:03.2251028Z [pexels] label=pexels_image_search status=calling query=White House government photo
+2026-03-31T20:00:03.2255442Z [pixabay] label=pixabay_image_search status=calling query=White House government photo video=false
+2026-03-31T20:00:03.2636785Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:03.3958213Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=95 rate_limit_reset=58 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:03.4013169Z [image] Rejecting low-evidence generic candidate provider=pixabay query="White House government photo"
+2026-03-31T20:00:03.4019827Z [pexels] label=pexels_image_search status=calling query=White House photo
+2026-03-31T20:00:03.4026230Z [pixabay] label=pixabay_image_search status=calling query=White House photo video=false
+2026-03-31T20:00:03.5612338Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=94 rate_limit_reset=58 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:03.7741326Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:03.7755683Z [image] Rejecting low-evidence generic candidate provider=pexels query="White House photo"
+2026-03-31T20:00:03.7789819Z [image] Rejecting recent duplicate asset=pixabay:2930214
+2026-03-31T20:00:03.7806843Z [pexels] label=pexels_image_search status=calling query=White House portrait
+2026-03-31T20:00:03.7812619Z [pixabay] label=pixabay_image_search status=calling query=White House portrait video=false
+2026-03-31T20:00:03.8248050Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:04.0549820Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=93 rate_limit_reset=58 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:04.0558572Z [image] Rejecting low-evidence generic candidate provider=pexels query="White House portrait"
+2026-03-31T20:00:04.0593292Z [image] Rejecting low-evidence generic candidate provider=pixabay query="White House portrait"
+2026-03-31T20:00:04.0606618Z [pexels] label=pexels_image_search status=calling query=us White House photo
+2026-03-31T20:00:04.0611192Z [pixabay] label=pixabay_image_search status=calling query=us White House photo video=false
+2026-03-31T20:00:04.1068934Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:04.2723073Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=92 rate_limit_reset=57 retry_count=0 retry_delay_ms=0
+2026-03-31T20:00:04.2727144Z [image] Rejecting low-evidence generic candidate provider=pexels query="us White House photo"
+2026-03-31T20:00:04.2735686Z [image] Rejecting low-evidence generic candidate provider=pexels query="us White House photo"
+2026-03-31T20:00:04.2738155Z [image] Rejecting low-evidence generic candidate provider=pexels query="us White House photo"
+2026-03-31T20:00:04.2745388Z [image] Rejecting low-evidence generic candidate provider=pexels query="us White House photo"
+2026-03-31T20:00:04.2759929Z [image] Rejecting low-evidence generic candidate provider=pixabay query="us White House photo"
+2026-03-31T20:00:04.2767213Z [image] Rejecting low-evidence generic candidate provider=pixabay query="us White House photo"
+2026-03-31T20:00:04.2786284Z [image] Rejecting low-evidence generic candidate provider=pixabay query="us White House photo"
+2026-03-31T20:00:04.8129102Z [pipeline] Image: pixabay, path: ~/assets/images/library/pixabay/2920069/cover.jpg
+2026-03-31T20:00:04.8130020Z [pipeline] Stage 7: Publishing article...
+2026-03-31T20:00:04.8247189Z [publisher] Publishing article...
+2026-03-31T20:00:04.8315686Z [publisher] Published: 2026-03-31-house-appropriations-committee-posts-new-legislative-activit.mdx
+2026-03-31T20:00:04.8317318Z [publisher] Path: /home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-house-appropriations-committee-posts-new-legislative-activit.mdx
+2026-03-31T20:00:04.8318662Z [publisher] Related coverage links: 1
+2026-03-31T20:00:04.8327459Z [publisher] Inventory updated: inserted
+2026-03-31T20:00:04.8703514Z [pipeline] PUBLISH GATE: PASS
+2026-03-31T20:00:04.8704465Z [pipeline] Published: 2026-03-31-house-appropriations-committee-posts-new-legislative-activit.mdx
+2026-03-31T20:00:04.8705818Z [pipeline] Path: /home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-house-appropriations-committee-posts-new-legislative-activit.mdx
+2026-03-31T20:00:04.8706872Z [pipeline] Stage 8: skipped localhost verification in CI environment
+2026-03-31T20:00:04.8743308Z [pipeline] Pipeline completed in 127340ms
+2026-03-31T20:00:04.8744119Z [pipeline] Provider/cache stats: {
+2026-03-31T20:00:04.8744729Z   "mode": "cache_refresh_with_live_quota",
+2026-03-31T20:00:04.8745082Z   "retry_policy": {
+2026-03-31T20:00:04.8745344Z     "max_attempts": 3,
+2026-03-31T20:00:04.8745633Z     "base_delay_ms": 700,
+2026-03-31T20:00:04.8745921Z     "max_delay_ms": 6000,
+2026-03-31T20:00:04.8746194Z     "jitter_ms": 250
+2026-03-31T20:00:04.8746439Z   },
+2026-03-31T20:00:04.8746699Z   "search_network_enabled": true,
+2026-03-31T20:00:04.8747040Z   "min_search_interval_ms": 6000,
+2026-03-31T20:00:04.8747341Z   "live_quota": {
+2026-03-31T20:00:04.8747584Z     "brave": 5,
+2026-03-31T20:00:04.8748185Z     "gdelt": 2,
+2026-03-31T20:00:04.8748419Z     "google": 2
+2026-03-31T20:00:04.8748641Z   },
+2026-03-31T20:00:04.8748848Z   "live_usage": {
+2026-03-31T20:00:04.8749078Z     "brave": 5,
+2026-03-31T20:00:04.8749318Z     "gdelt": 2,
+2026-03-31T20:00:04.8749544Z     "google": 1
+2026-03-31T20:00:04.8749760Z   },
+2026-03-31T20:00:04.8749977Z   "cache": {
+2026-03-31T20:00:04.8750216Z     "ttl_hours": 8,
+2026-03-31T20:00:04.8750673Z     "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+2026-03-31T20:00:04.8751342Z     "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+2026-03-31T20:00:04.8752103Z     "runtime": {
+2026-03-31T20:00:04.8752404Z       "brave": {
+2026-03-31T20:00:04.8752642Z         "files": 5,
+2026-03-31T20:00:04.8752885Z         "fresh_files": 5,
+2026-03-31T20:00:04.8753157Z         "expired_files": 0,
+2026-03-31T20:00:04.8753439Z         "corrupt_files": 0,
+2026-03-31T20:00:04.8753708Z         "size_bytes": 73956
+2026-03-31T20:00:04.8753960Z       },
+2026-03-31T20:00:04.8754169Z       "gdelt": {
+2026-03-31T20:00:04.8754396Z         "files": 0,
+2026-03-31T20:00:04.8754637Z         "fresh_files": 0,
+2026-03-31T20:00:04.8754901Z         "expired_files": 0,
+2026-03-31T20:00:04.8755170Z         "corrupt_files": 0,
+2026-03-31T20:00:04.8755441Z         "size_bytes": 0
+2026-03-31T20:00:04.8755825Z       },
+2026-03-31T20:00:04.8756034Z       "google": {
+2026-03-31T20:00:04.8756263Z         "files": 1,
+2026-03-31T20:00:04.8756499Z         "fresh_files": 1,
+2026-03-31T20:00:04.8756762Z         "expired_files": 0,
+2026-03-31T20:00:04.8757030Z         "corrupt_files": 0,
+2026-03-31T20:00:04.8757302Z         "size_bytes": 45271
+2026-03-31T20:00:04.8757561Z       }
+2026-03-31T20:00:04.8758000Z     },
+2026-03-31T20:00:04.8758266Z     "seed": {
+2026-03-31T20:00:04.8758488Z       "brave": {
+2026-03-31T20:00:04.8758717Z         "files": 1,
+2026-03-31T20:00:04.8758960Z         "fresh_files": 0,
+2026-03-31T20:00:04.8759234Z         "expired_files": 1,
+2026-03-31T20:00:04.8759503Z         "corrupt_files": 0,
+2026-03-31T20:00:04.8759788Z         "size_bytes": 14135
+2026-03-31T20:00:04.8760119Z       },
+2026-03-31T20:00:04.8760329Z       "gdelt": {
+2026-03-31T20:00:04.8760555Z         "files": 1,
+2026-03-31T20:00:04.8760793Z         "fresh_files": 0,
+2026-03-31T20:00:04.8761147Z         "expired_files": 1,
+2026-03-31T20:00:04.8761622Z         "corrupt_files": 0,
+2026-03-31T20:00:04.8762127Z         "size_bytes": 6189
+2026-03-31T20:00:04.8762522Z       },
+2026-03-31T20:00:04.8762737Z       "google": {
+2026-03-31T20:00:04.8762968Z         "files": 9,
+2026-03-31T20:00:04.8763211Z         "fresh_files": 0,
+2026-03-31T20:00:04.8763496Z         "expired_files": 9,
+2026-03-31T20:00:04.8763733Z         "corrupt_files": 0,
+2026-03-31T20:00:04.8763974Z         "size_bytes": 285008
+2026-03-31T20:00:04.8764513Z       }
+2026-03-31T20:00:04.8764802Z     }
+2026-03-31T20:00:04.8765101Z   }
+2026-03-31T20:00:04.8765406Z }
+2026-03-31T20:00:04.8790405Z 
+2026-03-31T20:00:04.8790800Z [pipeline] === FINAL RESULT ===
+2026-03-31T20:00:04.8793766Z Success: true
+2026-03-31T20:00:04.8795177Z Published Path: /home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-house-appropriations-committee-posts-new-legislative-activit.mdx
+2026-03-31T20:00:04.8796951Z Verified URL: /article/2026-03-31-house-appropriations-committee-posts-new-legislative-activit
+2026-03-31T20:00:04.8797930Z Stage Results:
+2026-03-31T20:00:04.8798327Z   discovery: PASS
+2026-03-31T20:00:04.8798707Z   briefNormalization: PASS
+2026-03-31T20:00:04.8799133Z   sourcePackAssembly: PASS
+2026-03-31T20:00:04.8799391Z   preDraftPreparation: PASS
+2026-03-31T20:00:04.8799650Z   claimMapCreation: PASS
+2026-03-31T20:00:04.8799885Z   articleDrafting: PASS
+2026-03-31T20:00:04.8800108Z   imageSupport: PASS
+2026-03-31T20:00:04.8800322Z   publishing: PASS
+2026-03-31T20:00:04.8800535Z   localVerification: PASS
+2026-03-31T20:00:04.8800875Z Selected topic: House Appropriations Committee
+2026-03-31T20:00:04.8801193Z Draft word count: 958
+2026-03-31T20:00:04.8801429Z Image provider: pixabay
+2026-03-31T20:00:04.8801646Z Stats: {
+2026-03-31T20:00:04.8801845Z   "discovery_candidates": 34,
+2026-03-31T20:00:04.8802093Z   "event_clusters": 9,
+2026-03-31T20:00:04.8802315Z   "briefs_normalized": 10,
+2026-03-31T20:00:04.8802574Z   "source_packs_assembled": 38,
+2026-03-31T20:00:04.8802947Z   "publishable_candidates": 1,
+2026-03-31T20:00:04.8803514Z   "selected_topic": "House Appropriations Committee",
+2026-03-31T20:00:04.8804040Z   "selected_topics": [
+2026-03-31T20:00:04.8804301Z     "House Appropriations Committee"
+2026-03-31T20:00:04.8804608Z   ],
+2026-03-31T20:00:04.8805133Z   "articles_attempted": 1,
+2026-03-31T20:00:04.8805550Z   "articles_published": 1,
+2026-03-31T20:00:04.8805793Z   "news_pool": {
+2026-03-31T20:00:04.8805989Z     "total": 61,
+2026-03-31T20:00:04.8806373Z     "active": 51,
+2026-03-31T20:00:04.8806736Z     "published": 10,
+2026-03-31T20:00:04.8807138Z     "ready_candidates": 2
+2026-03-31T20:00:04.8807560Z   },
+2026-03-31T20:00:04.8808142Z   "cache_stats": {
+2026-03-31T20:00:04.8808610Z     "mode": "cache_refresh_with_live_quota",
+2026-03-31T20:00:04.8808976Z     "retry_policy": {
+2026-03-31T20:00:04.8809231Z       "max_attempts": 3,
+2026-03-31T20:00:04.8809460Z       "base_delay_ms": 700,
+2026-03-31T20:00:04.8809688Z       "max_delay_ms": 6000,
+2026-03-31T20:00:04.8810099Z       "jitter_ms": 250
+2026-03-31T20:00:04.8810300Z     },
+2026-03-31T20:00:04.8810518Z     "search_network_enabled": true,
+2026-03-31T20:00:04.8810807Z     "min_search_interval_ms": 6000,
+2026-03-31T20:00:04.8811060Z     "live_quota": {
+2026-03-31T20:00:04.8811260Z       "brave": 5,
+2026-03-31T20:00:04.8811456Z       "gdelt": 2,
+2026-03-31T20:00:04.8811644Z       "google": 2
+2026-03-31T20:00:04.8811823Z     },
+2026-03-31T20:00:04.8812000Z     "live_usage": {
+2026-03-31T20:00:04.8812191Z       "brave": 5,
+2026-03-31T20:00:04.8812376Z       "gdelt": 2,
+2026-03-31T20:00:04.8812568Z       "google": 1
+2026-03-31T20:00:04.8812751Z     },
+2026-03-31T20:00:04.8812918Z     "cache": {
+2026-03-31T20:00:04.8813110Z       "ttl_hours": 8,
+2026-03-31T20:00:04.8813471Z       "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+2026-03-31T20:00:04.8814011Z       "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+2026-03-31T20:00:04.8814589Z       "runtime": {
+2026-03-31T20:00:04.8814939Z         "brave": {
+2026-03-31T20:00:04.8815266Z           "files": 5,
+2026-03-31T20:00:04.8815624Z           "fresh_files": 5,
+2026-03-31T20:00:04.8816010Z           "expired_files": 0,
+2026-03-31T20:00:04.8816419Z           "corrupt_files": 0,
+2026-03-31T20:00:04.8816826Z           "size_bytes": 73956
+2026-03-31T20:00:04.8817206Z         },
+2026-03-31T20:00:04.8817505Z         "gdelt": {
+2026-03-31T20:00:04.8818056Z           "files": 0,
+2026-03-31T20:00:04.8818411Z           "fresh_files": 0,
+2026-03-31T20:00:04.8818802Z           "expired_files": 0,
+2026-03-31T20:00:04.8819203Z           "corrupt_files": 0,
+2026-03-31T20:00:04.8843369Z           "size_bytes": 0
+2026-03-31T20:00:04.8843812Z         },
+2026-03-31T20:00:04.8844120Z         "google": {
+2026-03-31T20:00:04.8844519Z           "files": 1,
+2026-03-31T20:00:04.8844892Z           "fresh_files": 1,
+2026-03-31T20:00:04.8845290Z           "expired_files": 0,
+2026-03-31T20:00:04.8845701Z           "corrupt_files": 0,
+2026-03-31T20:00:04.8846110Z           "size_bytes": 45271
+2026-03-31T20:00:04.8846472Z         }
+2026-03-31T20:00:04.8846750Z       },
+2026-03-31T20:00:04.8847025Z       "seed": {
+2026-03-31T20:00:04.8847340Z         "brave": {
+2026-03-31T20:00:04.8847671Z           "files": 1,
+2026-03-31T20:00:04.8848236Z           "fresh_files": 0,
+2026-03-31T20:00:04.8848633Z           "expired_files": 1,
+2026-03-31T20:00:04.8849032Z           "corrupt_files": 0,
+2026-03-31T20:00:04.8849429Z           "size_bytes": 14135
+2026-03-31T20:00:04.8849796Z         },
+2026-03-31T20:00:04.8850092Z         "gdelt": {
+2026-03-31T20:00:04.8850417Z           "files": 1,
+2026-03-31T20:00:04.8850742Z           "fresh_files": 0,
+2026-03-31T20:00:04.8851102Z           "expired_files": 1,
+2026-03-31T20:00:04.8851477Z           "corrupt_files": 0,
+2026-03-31T20:00:04.8851872Z           "size_bytes": 6189
+2026-03-31T20:00:04.8852254Z         },
+2026-03-31T20:00:04.8852554Z         "google": {
+2026-03-31T20:00:04.8852888Z           "files": 9,
+2026-03-31T20:00:04.8853242Z           "fresh_files": 0,
+2026-03-31T20:00:04.8853630Z           "expired_files": 9,
+2026-03-31T20:00:04.8854028Z           "corrupt_files": 0,
+2026-03-31T20:00:04.8854458Z           "size_bytes": 285008
+2026-03-31T20:00:04.8854840Z         }
+2026-03-31T20:00:04.8855141Z       }
+2026-03-31T20:00:04.8855633Z     }
+2026-03-31T20:00:04.8855917Z   },
+2026-03-31T20:00:04.8856212Z   "duration_ms": 127342,
+2026-03-31T20:00:04.8856595Z   "ready_candidates": 2,
+2026-03-31T20:00:04.8857059Z   "additional_ready_candidates": 2,
+2026-03-31T20:00:04.8857528Z   "source_pack_attempts": 2,
+2026-03-31T20:00:04.8858199Z   "source_pack_retry_external_queries": 3,
+2026-03-31T20:00:04.8858746Z   "source_pack_retry_brave_queries": 0,
+2026-03-31T20:00:04.8859304Z   "source_pack_retry_estimated_tokens": 3600,
+2026-03-31T20:00:04.8859802Z   "pre_draft_rejected": 0,
+2026-03-31T20:00:04.8860898Z   "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T19-57-57-535Z.json"
+2026-03-31T20:00:04.8862029Z }
+2026-03-31T20:00:04.8863013Z [pipeline] Result saved to: /home/runner/work/foseer.com/foseer.com/qwen-data/events/pipeline-last-result.json
+2026-03-31T20:00:04.8863975Z [pipeline] FINAL STATUS: PASS
+2026-03-31T20:00:04.8983121Z ##[group]Run npm run build
+2026-03-31T20:00:04.8983480Z [36;1mnpm run build[0m
+2026-03-31T20:00:04.9010534Z shell: /usr/bin/bash -e {0}
+2026-03-31T20:00:04.9010784Z env:
+2026-03-31T20:00:04.9011051Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23816710710
+2026-03-31T20:00:04.9011388Z   QWEN_MAX_ARTICLES_PER_RUN: 4
+2026-03-31T20:00:04.9011689Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T20:00:04.9011995Z ##[endgroup]
+2026-03-31T20:00:05.0140218Z 
+2026-03-31T20:00:05.0140881Z > foseer@1.0.0 build
+2026-03-31T20:00:05.0141783Z > node qwen-scripts/repair-content-posts.js && astro build
+2026-03-31T20:00:05.0142361Z 
+2026-03-31T20:00:05.0525411Z [repair-posts] scanned=56 changed=0 removed_sources=0
+2026-03-31T20:00:06.8620581Z [2m20:00:06[22m [34m[astrowind][39m Astrowind `./src/config.yaml` has been loaded.
+2026-03-31T20:00:07.3319302Z [2m20:00:07[22m [34m[content][39m Syncing content
+2026-03-31T20:00:07.4263112Z [2m20:00:07[22m [34m[content][39m Synced content
+2026-03-31T20:00:07.4268238Z [2m20:00:07[22m [34m[types][39m Generated [2m514ms[22m
+2026-03-31T20:00:07.4272414Z [2m20:00:07[22m [34m[build][39m output: [34m"static"[39m
+2026-03-31T20:00:07.4273200Z [2m20:00:07[22m [34m[build][39m mode: [34m"static"[39m
+2026-03-31T20:00:07.4274018Z [2m20:00:07[22m [34m[build][39m directory: [34m/home/runner/work/foseer.com/foseer.com/dist/[39m
+2026-03-31T20:00:07.4274771Z [2m20:00:07[22m [34m[build][39m Collecting build info...
+2026-03-31T20:00:07.4280581Z [2m20:00:07[22m [34m[build][39m [32m✓ Completed in 600ms.[39m
+2026-03-31T20:00:07.4292478Z [2m20:00:07[22m [34m[build][39m Building static entrypoints...
+2026-03-31T20:00:10.7340457Z Browserslist: caniuse-lite is outdated. Please run:
+2026-03-31T20:00:10.7341040Z   npx update-browserslist-db@latest
+2026-03-31T20:00:10.7341550Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2026-03-31T20:00:13.2589980Z [33m[1m20:00:13[22m [WARN] [vite][39m [33m"matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".[39m
+2026-03-31T20:00:13.6381805Z [2m20:00:13[22m [34m[vite][39m [32m✓ built in 6.18s[39m
+2026-03-31T20:00:13.6382869Z [2m20:00:13[22m [34m[build][39m [32m✓ Completed in 6.21s.[39m
+2026-03-31T20:00:13.6386325Z 
+2026-03-31T20:00:13.6386799Z [42m[30m building client (vite) [39m[49m
+2026-03-31T20:00:13.6524212Z [2m20:00:13[22m [34m[vite][39m transforming...
+2026-03-31T20:00:13.8792199Z [2m20:00:13[22m [34m[vite][39m [32m✓[39m 57 modules transformed.
+2026-03-31T20:00:13.8914445Z [2m20:00:13[22m [34m[vite][39m rendering chunks...
+2026-03-31T20:00:13.8953237Z [2m20:00:13[22m [34m[vite][39m computing gzip size...
+2026-03-31T20:00:13.8971572Z [2m20:00:13[22m [34m[vite][39m [2mdist/[22m[2m_astro/[22m[36msupabase.DBHhs-7X.js                                           [39m[1m[2m 0.43 kB[22m[1m[22m[2m │ gzip: 0.26 kB[22m
+2026-03-31T20:00:13.8974348Z [2m20:00:13[22m [34m[vite][39m [2mdist/[22m[2m_astro/[22m[36mRelatedPosts.astro_astro_type_script_index_0_lang.DOYPsnqg.js  [39m[1m[2m 2.50 kB[22m[1m[22m[2m │ gzip: 1.17 kB[22m
+2026-03-31T20:00:13.8977233Z [2m20:00:13[22m [34m[vite][39m [2mdist/[22m[2m_astro/[22m[36mClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js  [39m[1m[2m15.33 kB[22m[1m[22m[2m │ gzip: 5.27 kB[22m
+2026-03-31T20:00:13.8979270Z [2m20:00:13[22m [34m[vite][39m [32m✓ built in 256ms[39m
+2026-03-31T20:00:13.9326261Z 
+2026-03-31T20:00:13.9327078Z [42m[30m generating static routes [39m[49m
+2026-03-31T20:00:13.9897137Z [2m20:00:13[22m [32m▶[39m src/pages/404.astro
+2026-03-31T20:00:14.0030347Z [2m20:00:13[22m   [34m└─[39m [2m/404.html[22m [2m(+13ms)[22m 
+2026-03-31T20:00:14.0279121Z [navigation] Header sections: News, Business, Tech, Health, Sports, Culture
+2026-03-31T20:00:14.0280741Z [navigation] Footer coverage: 6 links
+2026-03-31T20:00:14.0281285Z [navigation] Footer browse: 1 links
+2026-03-31T20:00:14.0281961Z [navigation] Footer legal: 5 links
+2026-03-31T20:00:14.0285781Z [2m20:00:14[22m [32m▶[39m src/pages/about.astro
+2026-03-31T20:00:14.0436716Z [2m20:00:14[22m   [34m└─[39m [2m/about/index.html[22m [2m(+15ms)[22m 
+2026-03-31T20:00:14.0487680Z [2m20:00:14[22m [32m▶[39m src/pages/article/[slug].astro
+2026-03-31T20:00:14.1478933Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-31-house-appropriations-committee-posts-new-legislative-activit/index.html[22m [2m(+17ms)[22m 
+2026-03-31T20:00:14.1575657Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi/index.html[22m [2m(+10ms)[22m 
+2026-03-31T20:00:14.1660632Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in/index.html[22m [2m(+8ms)[22m 
+2026-03-31T20:00:14.1759618Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-31-nfl-urges-prediction-markets-to-avoid-objectionable-football/index.html[22m [2m(+10ms)[22m 
+2026-03-31T20:00:14.1867556Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng/index.html[22m [2m(+11ms)[22m 
+2026-03-31T20:00:14.1939696Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-30-what-the-white-house-s-new-iran-claim-could-mean-on-capitol/index.html[22m [2m(+7ms)[22m 
+2026-03-31T20:00:14.2035189Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-30-trans-day-of-visibility-tournament-offers-court-time-as-bans/index.html[22m [2m(+10ms)[22m 
+2026-03-31T20:00:14.2108614Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-30-how-democrats-affordability-pivot-sets-up-a-climate-law-batt/index.html[22m [2m(+7ms)[22m 
+2026-03-31T20:00:14.2209496Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-30-why-trump-s-maha-base-is-restless-over-undelivered-pharma-cr/index.html[22m [2m(+10ms)[22m 
+2026-03-31T20:00:14.2277983Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-29-why-maha-loyalists-say-trump-hasn-t-delivered-on-big-pharma/index.html[22m [2m(+7ms)[22m 
+2026-03-31T20:00:14.2360644Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-29-ai-s-soaring-power-use-puts-tech-climate-pledges-under-strai/index.html[22m [2m(+8ms)[22m 
+2026-03-31T20:00:14.2458382Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-29-olympic-committee-adopts-new-policy-banning-trans-athletes-f/index.html[22m [2m(+10ms)[22m 
+2026-03-31T20:00:14.2525444Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-29-how-every-cure-s-drug-search-aims-to-rewrite-rare-disease-tr/index.html[22m [2m(+7ms)[22m 
+2026-03-31T20:00:14.2582319Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-29-ioc-moves-to-restrict-women-s-olympic-events-to-biological-f/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.2703638Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-29-why-millions-of-seniors-are-suddenly-losing-health-coverage/index.html[22m [2m(+12ms)[22m 
+2026-03-31T20:00:14.2766683Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-29-tiger-woods-arrested-on-dui-charge-after-rollover-crash-in-f/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.2859983Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-29-uk-regulator-ofcom-to-probe-complaints-over-climate-change-d/index.html[22m [2m(+9ms)[22m 
+2026-03-31T20:00:14.2909508Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-29-ioc-to-require-genetic-tests-bar-trans-athletes-from-women-s/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.3004000Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-29-has-mlb-quietly-slipped-past-the-nba-as-america-s-no-2-leagu/index.html[22m [2m(+9ms)[22m 
+2026-03-31T20:00:14.3066719Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-29-popcast-invites-listeners-to-settle-their-biggest-music-deba/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.3116738Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-29-5-things-to-watch-before-markets-open-friday/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.3173093Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-28-study-links-us-emissions-to-10tn-in-global-climate-damage-si/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.3226931Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-28-why-millions-of-seniors-are-suddenly-losing-health-coverage/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.3309343Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-28-popcast-invites-listeners-to-bring-their-biggest-music-argum/index.html[22m [2m(+8ms)[22m 
+2026-03-31T20:00:14.3387357Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-28-new-research-outlines-ways-to-make-social-media-less-addicti/index.html[22m [2m(+8ms)[22m 
+2026-03-31T20:00:14.3482287Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-28-strategy-ramps-up-bitcoin-buying-as-corporate-rivals-hold-ba/index.html[22m [2m(+9ms)[22m 
+2026-03-31T20:00:14.3550148Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-28-alexander-kluge-lodestar-of-new-german-cinema-is-dead/index.html[22m [2m(+7ms)[22m 
+2026-03-31T20:00:14.3620722Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-28-tiger-woods-arrested-on-dui-charge-after-rollover-crash-in-f/index.html[22m [2m(+7ms)[22m 
+2026-03-31T20:00:14.3682412Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-28-is-mlb-now-america-s-no-2-league-behind-the-nfl/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.3742256Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-28-fannie-mae-to-back-first-u-s-mortgages-using-crypto-as-colla/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.3809770Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-28-is-mlb-really-passing-the-nba-as-america-s-no-2-league/index.html[22m [2m(+7ms)[22m 
+2026-03-31T20:00:14.3880780Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-28-what-makes-a-diva-parsing-a-slippery-cultural-category/index.html[22m [2m(+7ms)[22m 
+2026-03-31T20:00:14.3945010Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-28-tether-hires-kpmg-as-auditor-as-it-prepares-push-into-us-mar/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.4020188Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-fannie-mae-to-back-first-u-s-mortgages-using-crypto-as-colla/index.html[22m [2m(+8ms)[22m 
+2026-03-31T20:00:14.4066639Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-ioc-bars-transgender-athletes-from-women-s-olympic-events/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.4117171Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-ioc-to-limit-women-s-olympic-events-to-biological-females/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.4162782Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-has-mlb-quietly-slipped-past-the-nba-as-america-s-no-2-leagu/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.4205633Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-coinbase-tests-crypto-backed-down-payments-for-u-s-homebuyer/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.4253320Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-fannie-mae-takes-first-step-into-crypto-backed-mortgages/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.4309259Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-is-mlb-now-america-s-no-2-league-behind-the-nfl/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.4355944Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-coinbase-tests-crypto-backed-down-payments-in-u-s-housing-ma/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.4429711Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-inside-pro-rata-premium-what-the-first-look-signals/index.html[22m [2m(+7ms)[22m 
+2026-03-31T20:00:14.4473514Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-uk-regulator-ofcom-to-probe-complaints-over-climate-change-d/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.4529263Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-supreme-court-sides-with-cox-in-key-pirated-music-case/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.4595196Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-maryland-s-top-court-blocks-local-climate-lawsuits-against-o/index.html[22m [2m(+7ms)[22m 
+2026-03-31T20:00:14.4640082Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-supreme-court-sides-with-cox-tossing-1-billion-music-piracy/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.4702373Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-supreme-court-ruling-narrows-path-to-sue-internet-providers/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.4776099Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-trump-news-at-a-glance-administration-official-warns-of-dire/index.html[22m [2m(+7ms)[22m 
+2026-03-31T20:00:14.4821686Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-pharmalittle-we-re-reading-about-an-fda-ok-for-a-rare-diseas/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.4901698Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-27-high-court-makes-it-harder-to-sue-internet-providers-for-onl/index.html[22m [2m(+8ms)[22m 
+2026-03-31T20:00:14.4951859Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-26-has-mlb-overtaken-the-nba-as-america-s-no-2-league/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.5013168Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-26-trump-news-at-a-glance-administration-official-warns-of-dire/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.5070370Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-26-ficci-director-general-india-must-act-now-to-create-a-resili/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.5124651Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-26-who-warns-of-health-crisis-unfolding-in-real-time-across-mid/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.5172067Z [2m20:00:14[22m   [34m├─[39m [2m/article/2026-03-26-major-player-in-alleged-mistaken-identity-kidnap-of-sydney/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.5212168Z [2m20:00:14[22m   [34m└─[39m [2m/article/2026-03-25-latest-updates-and-breaking-news-from-india/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.5229114Z [2m20:00:14[22m [32m▶[39m src/pages/category/[category].astro
+2026-03-31T20:00:14.5262125Z [2m20:00:14[22m   [34m└─[39m [2m/category/news/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.5274482Z [2m20:00:14[22m [32m▶[39m src/pages/contact.astro
+2026-03-31T20:00:14.5318175Z [2m20:00:14[22m   [34m└─[39m [2m/contact/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.5331850Z [2m20:00:14[22m [32m▶[39m src/pages/cookies.astro
+2026-03-31T20:00:14.5354839Z [2m20:00:14[22m   [34m└─[39m [2m/cookies/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.5364869Z [2m20:00:14[22m [32m▶[39m src/pages/copyright.astro
+2026-03-31T20:00:14.5394131Z [2m20:00:14[22m   [34m└─[39m [2m/copyright/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.5405450Z [2m20:00:14[22m [32m▶[39m src/pages/disclaimer.astro
+2026-03-31T20:00:14.5432880Z [2m20:00:14[22m   [34m└─[39m [2m/disclaimer/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.5444569Z [2m20:00:14[22m [32m▶[39m src/pages/latest/index.astro
+2026-03-31T20:00:14.5545726Z [2m20:00:14[22m   [34m└─[39m [2m/latest/index.html[22m [2m(+10ms)[22m 
+2026-03-31T20:00:14.5556983Z [2m20:00:14[22m [32m▶[39m src/pages/preview/article/[slug].astro
+2026-03-31T20:00:14.5787174Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-20-big-tech-and-the-us-digital-military-industrial-co-preview/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.5826610Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-20-us-x-iran-ceasefire-by-predictions-odds-preview/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.5862888Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-20-world-news-in-brief-afghan-quake-update-diplomacy--preview/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.5901024Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-21-7-social-media-trends-you-need-to-know-in-2026-preview/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.5938515Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-20-twenty-questions-and-expert-answers-about-the-iran-preview/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.5973648Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-21-after-the-strike-the-danger-of-war-in-iran-preview/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.6009866Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-21-big-tech-and-the-us-digital-military-industrial-co-preview/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.6050020Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-21-body-perceptions-and-psychological-well-being-a-re-preview/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.6083702Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-21-dow-closes-down-nearly-300-points-as-oil-prices-cl-preview/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.6138602Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-21-century-s-new-democracy-meter-shows-america-took-a-preview/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.6175080Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-21-russian-linked-hackers-phishing-signal-users-other-preview/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.6211453Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-21-super-micro-computer-shares-crash-29-after-co-foun-preview/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.6246747Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-21-trump-has-damaged-democracy-at-remarkable-speed-re-preview/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.6280988Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-21-trump-is-dismantling-democracy-at-unprecedented-sp-preview/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.6315559Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-21-what-is-he-doing-new-threats-emerge-for-trump-s-ec-preview/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.6350149Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-21-super-micro-plunges-25-after-co-founder-charged-in-preview/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.6409046Z [2m20:00:14[22m   [34m├─[39m [2m/preview/article/2026-03-22-coaches-in-elite-company-clash-when-kansas-faces-s-preview/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.6442889Z [2m20:00:14[22m   [34m└─[39m [2m/preview/article/2026-03-22-liquid-gold-heating-oil-thefts-rise-in-northern-ir-preview/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.6456277Z [2m20:00:14[22m [32m▶[39m src/pages/privacy.md
+2026-03-31T20:00:14.6476829Z [2m20:00:14[22m   [34m└─[39m [2m/privacy/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.6627485Z [2m20:00:14[22m [35mλ[39m src/pages/rss.xml.ts
+2026-03-31T20:00:14.6825720Z [2m20:00:14[22m   [34m└─[39m [2m/rss.xml[22m [2m(+20ms)[22m 
+2026-03-31T20:00:14.6836377Z [2m20:00:14[22m [32m▶[39m src/pages/sections/[section]/[topic]/index.astro
+2026-03-31T20:00:14.6976051Z [2m20:00:14[22m   [34m├─[39m [2m/sections/news/us-politics/index.html[22m [2m(+12ms)[22m 
+2026-03-31T20:00:14.7042510Z [2m20:00:14[22m   [34m├─[39m [2m/sections/news/world-geopolitics/index.html[22m [2m(+8ms)[22m 
+2026-03-31T20:00:14.7139842Z [2m20:00:14[22m   [34m├─[39m [2m/sections/news/law-crime/index.html[22m [2m(+10ms)[22m 
+2026-03-31T20:00:14.7177146Z [2m20:00:14[22m   [34m├─[39m [2m/sections/news/climate-extreme-weather/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.7208273Z [2m20:00:14[22m   [34m├─[39m [2m/sections/news/society-social-trends/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7252082Z [2m20:00:14[22m   [34m├─[39m [2m/sections/business/economy-markets/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.7285247Z [2m20:00:14[22m   [34m├─[39m [2m/sections/business/companies-deals/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7328301Z [2m20:00:14[22m   [34m├─[39m [2m/sections/business/consumer-money/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.7356564Z [2m20:00:14[22m   [34m├─[39m [2m/sections/business/housing-real-estate/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7392978Z [2m20:00:14[22m   [34m├─[39m [2m/sections/business/crypto-bitcoin/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.7449995Z [2m20:00:14[22m   [34m├─[39m [2m/sections/business/travel-consumer-issues/index.html[22m [2m(+6ms)[22m 
+2026-03-31T20:00:14.7481844Z [2m20:00:14[22m   [34m├─[39m [2m/sections/tech/ai-big-tech/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7523448Z [2m20:00:14[22m   [34m├─[39m [2m/sections/tech/consumer-tech/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.7552061Z [2m20:00:14[22m   [34m├─[39m [2m/sections/tech/cybersecurity/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7579024Z [2m20:00:14[22m   [34m├─[39m [2m/sections/tech/mobility-evs/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7605265Z [2m20:00:14[22m   [34m├─[39m [2m/sections/tech/space-astronomy/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7631938Z [2m20:00:14[22m   [34m├─[39m [2m/sections/tech/enterprise-platforms/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7675106Z [2m20:00:14[22m   [34m├─[39m [2m/sections/health/public-health/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.7702264Z [2m20:00:14[22m   [34m├─[39m [2m/sections/health/medical-research/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7731451Z [2m20:00:14[22m   [34m├─[39m [2m/sections/health/pharma-fda/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7759478Z [2m20:00:14[22m   [34m├─[39m [2m/sections/health/mental-health/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7788040Z [2m20:00:14[22m   [34m├─[39m [2m/sections/health/wellness-fitness/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7837630Z [2m20:00:14[22m   [34m├─[39m [2m/sections/sports/major-leagues/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.7873060Z [2m20:00:14[22m   [34m├─[39m [2m/sections/sports/events-tournaments/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7902158Z [2m20:00:14[22m   [34m├─[39m [2m/sections/sports/transfers-business/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.7945665Z [2m20:00:14[22m   [34m├─[39m [2m/sections/sports/athletes-culture/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.7982872Z [2m20:00:14[22m   [34m├─[39m [2m/sections/culture/film-tv/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.8031807Z [2m20:00:14[22m   [34m├─[39m [2m/sections/culture/music-celebrities/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.8077103Z [2m20:00:14[22m   [34m├─[39m [2m/sections/culture/internet-culture/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.8106968Z [2m20:00:14[22m   [34m└─[39m [2m/sections/culture/creators-platforms/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.8118734Z [2m20:00:14[22m [32m▶[39m src/pages/sections/[section]/index.astro
+2026-03-31T20:00:14.8145269Z [2m20:00:14[22m   [34m├─[39m [2m/sections/news/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8169788Z [2m20:00:14[22m   [34m├─[39m [2m/sections/business/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8197332Z [2m20:00:14[22m   [34m├─[39m [2m/sections/tech/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.8224540Z [2m20:00:14[22m   [34m├─[39m [2m/sections/health/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.8257976Z [2m20:00:14[22m   [34m├─[39m [2m/sections/sports/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.8280427Z [2m20:00:14[22m   [34m└─[39m [2m/sections/culture/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.8300515Z [2m20:00:14[22m [32m▶[39m src/pages/tag/[tag]/index.astro
+2026-03-31T20:00:14.8339865Z [2m20:00:14[22m   [34m├─[39m [2m/tag/u-s-politics-and-policy/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.8386707Z [2m20:00:14[22m   [34m├─[39m [2m/tag/congress/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.8423835Z [2m20:00:14[22m   [34m├─[39m [2m/tag/world-and-geopolitics/index.html[22m [2m(+4ms)[22m 
+2026-03-31T20:00:14.8452314Z [2m20:00:14[22m   [34m├─[39m [2m/tag/diplomacy/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.8475888Z [2m20:00:14[22m   [34m├─[39m [2m/tag/israel/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8502120Z [2m20:00:14[22m   [34m├─[39m [2m/tag/athletes-and-culture/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.8524626Z [2m20:00:14[22m   [34m├─[39m [2m/tag/trans-athlete-policy/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8549358Z [2m20:00:14[22m   [34m├─[39m [2m/tag/economy-and-markets/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8573710Z [2m20:00:14[22m   [34m├─[39m [2m/tag/nfl/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8602913Z [2m20:00:14[22m   [34m├─[39m [2m/tag/climate-and-extreme-weather/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.8625323Z [2m20:00:14[22m   [34m├─[39m [2m/tag/white-house/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8680127Z [2m20:00:14[22m   [34m├─[39m [2m/tag/united-states/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.8709603Z [2m20:00:14[22m   [34m├─[39m [2m/tag/basketball/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.8735768Z [2m20:00:14[22m   [34m├─[39m [2m/tag/events-and-tournaments/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.8788647Z [2m20:00:14[22m   [34m├─[39m [2m/tag/olympics/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.8811332Z [2m20:00:14[22m   [34m├─[39m [2m/tag/companies-and-deals/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8836754Z [2m20:00:14[22m   [34m├─[39m [2m/tag/pharma-and-fda/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.8858960Z [2m20:00:14[22m   [34m├─[39m [2m/tag/ai-and-big-tech/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8880216Z [2m20:00:14[22m   [34m├─[39m [2m/tag/artificial-intelligence/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8904650Z [2m20:00:14[22m   [34m├─[39m [2m/tag/rare-disease/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8927440Z [2m20:00:14[22m   [34m├─[39m [2m/tag/public-health/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8947815Z [2m20:00:14[22m   [34m├─[39m [2m/tag/health-insurance/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8968025Z [2m20:00:14[22m   [34m├─[39m [2m/tag/medicare/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.8991175Z [2m20:00:14[22m   [34m├─[39m [2m/tag/law-and-crime/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9014836Z [2m20:00:14[22m   [34m├─[39m [2m/tag/major-leagues/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9038808Z [2m20:00:14[22m   [34m├─[39m [2m/tag/creators-and-platforms/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9060728Z [2m20:00:14[22m   [34m├─[39m [2m/tag/influencer-economy/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9106286Z [2m20:00:14[22m   [34m├─[39m [2m/tag/film-and-tv/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.9127383Z [2m20:00:14[22m   [34m├─[39m [2m/tag/new-york/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9154469Z [2m20:00:14[22m   [34m├─[39m [2m/tag/crypto/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.9174815Z [2m20:00:14[22m   [34m├─[39m [2m/tag/florida/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9197171Z [2m20:00:14[22m   [34m├─[39m [2m/tag/transfers-and-business/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9218295Z [2m20:00:14[22m   [34m├─[39m [2m/tag/nba/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9238831Z [2m20:00:14[22m   [34m├─[39m [2m/tag/mlb/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9259096Z [2m20:00:14[22m   [34m├─[39m [2m/tag/cybersecurity/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9287638Z [2m20:00:14[22m   [34m├─[39m [2m/tag/meta/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.9319546Z [2m20:00:14[22m   [34m├─[39m [2m/tag/sec/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.9347022Z [2m20:00:14[22m   [34m├─[39m [2m/tag/united-kingdom/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.9382919Z [2m20:00:14[22m   [34m├─[39m [2m/tag/supreme-court/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.9411472Z [2m20:00:14[22m   [34m├─[39m [2m/tag/flooding/index.html[22m [2m(+3ms)[22m 
+2026-03-31T20:00:14.9462114Z [2m20:00:14[22m   [34m├─[39m [2m/tag/drug-approval/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.9483014Z [2m20:00:14[22m   [34m├─[39m [2m/tag/washington/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9503788Z [2m20:00:14[22m   [34m├─[39m [2m/tag/mental-health/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9525592Z [2m20:00:14[22m   [34m└─[39m [2m/tag/consumer-tech/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9536879Z [2m20:00:14[22m [32m▶[39m src/pages/tag/[tag].astro
+2026-03-31T20:00:14.9546007Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/u-s-politics-and-policy` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9548910Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/congress` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9551569Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/world-and-geopolitics` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9553745Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/diplomacy` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9555034Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/israel` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9556838Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/athletes-and-culture` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9558382Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/trans-athlete-policy` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9559730Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/economy-and-markets` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9560969Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/nfl` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9562307Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/climate-and-extreme-weather` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9563943Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/white-house` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9565372Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/united-states` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9566578Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/basketball` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9568025Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/events-and-tournaments` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9569275Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/olympics` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9570858Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/companies-and-deals` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9572126Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/pharma-and-fda` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9573355Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/ai-and-big-tech` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9574649Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/artificial-intelligence` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9575902Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/rare-disease` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9577120Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/public-health` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9578511Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/health-insurance` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9579718Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/medicare` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9580909Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/law-and-crime` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9582118Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/major-leagues` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9583386Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/creators-and-platforms` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9584737Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/influencer-economy` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9586871Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/film-and-tv` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9588528Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/new-york` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9590211Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/crypto` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9591405Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/florida` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9592687Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/transfers-and-business` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9593899Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/nba` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9595034Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/mlb` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9596212Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/cybersecurity` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9597382Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/meta` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9598746Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/sec` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9600580Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/united-kingdom` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9601841Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/supreme-court` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9603047Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/flooding` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9604240Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/drug-approval` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9605448Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/washington` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9606656Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/mental-health` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9608070Z [33m[1m20:00:14[22m [WARN] [build][39m Could not render `/tag/consumer-tech` from route `/tag/[tag]` as it conflicts with higher priority route `/tag/[tag]`.
+2026-03-31T20:00:14.9608868Z [2m20:00:14[22m [32m▶[39m src/pages/terms.md
+2026-03-31T20:00:14.9609431Z [2m20:00:14[22m   [34m└─[39m [2m/terms/index.html[22m [2m(+2ms)[22m 
+2026-03-31T20:00:14.9609941Z [2m20:00:14[22m [32m▶[39m src/pages/index.astro
+2026-03-31T20:00:14.9652893Z [2m20:00:14[22m   [34m└─[39m [2m/index.html[22m [2m(+5ms)[22m 
+2026-03-31T20:00:14.9653769Z [2m20:00:14[22m [32m✓ Completed in 1.04s.
+2026-03-31T20:00:14.9654279Z [39m
+2026-03-31T20:00:14.9654847Z [42m[30m generating optimized images [39m[49m
+2026-03-31T20:00:15.0180158Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.Dk9xfoly_Z1keM1J.webp [2m(before: 97kB, after: 8kB)[22m [2m(+47ms)[22m [2m(1/456)[22m
+2026-03-31T20:00:15.0337233Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.1VARHEkv_Z2jmRDh.jpg [2m(before: 451kB, after: 243kB)[22m [2m(+67ms)[22m [2m(2/456)[22m
+2026-03-31T20:00:15.0394339Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.CgEBW6AH_Z1RxMDA.webp [2m(before: 410kB, after: 25kB)[22m [2m(+73ms)[22m [2m(3/456)[22m
+2026-03-31T20:00:15.0713295Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.1VARHEkv_2kSSbx.webp [2m(before: 451kB, after: 28kB)[22m [2m(+37ms)[22m [2m(4/456)[22m
+2026-03-31T20:00:15.0773877Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.Dk9xfoly_1TyPkj.webp [2m(before: 97kB, after: 21kB)[22m [2m(+64ms)[22m [2m(5/456)[22m
+2026-03-31T20:00:15.1007249Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.Dk9xfoly_2b1zJr.jpg [2m(before: 97kB, after: 55kB)[22m [2m(+23ms)[22m [2m(6/456)[22m
+2026-03-31T20:00:15.1512346Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.Dk9xfoly_ZPFSHd.webp [2m(before: 97kB, after: 18kB)[22m [2m(+50ms)[22m [2m(7/456)[22m
+2026-03-31T20:00:15.1597549Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.CgEBW6AH_b3mrK.webp [2m(before: 410kB, after: 115kB)[22m [2m(+120ms)[22m [2m(8/456)[22m
+2026-03-31T20:00:15.1824123Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.1VARHEkv_XrbrD.webp [2m(before: 451kB, after: 103kB)[22m [2m(+111ms)[22m [2m(9/456)[22m
+2026-03-31T20:00:15.2020686Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.CgEBW6AH_1YRRv1.jpg [2m(before: 410kB, after: 223kB)[22m [2m(+42ms)[22m [2m(10/456)[22m
+2026-03-31T20:00:15.2174217Z [2m20:00:15[22m   [32m▶[39m /_astro/default.CZ816Hke_2bosb5.jpg [2m(before: 395kB, after: 63kB)[22m [2m(+251ms)[22m [2m(11/456)[22m
+2026-03-31T20:00:15.2341625Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.Dk9xfoly_2dnWsQ.webp [2m(before: 97kB, after: 31kB)[22m [2m(+83ms)[22m [2m(12/456)[22m
+2026-03-31T20:00:15.2864380Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.QaTVIVez_Z1CN06k.webp [2m(before: 254kB, after: 19kB)[22m [2m(+69ms)[22m [2m(13/456)[22m
+2026-03-31T20:00:15.3013511Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.CgEBW6AH_1T20K5.webp [2m(before: 410kB, after: 93kB)[22m [2m(+99ms)[22m [2m(14/456)[22m
+2026-03-31T20:00:15.3901890Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.1VARHEkv_Z2h0uTR.webp [2m(before: 451kB, after: 207kB)[22m [2m(+207ms)[22m [2m(15/456)[22m
+2026-03-31T20:00:15.4881542Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.QaTVIVez_cXGt2.webp [2m(before: 254kB, after: 79kB)[22m [2m(+202ms)[22m [2m(16/456)[22m
+2026-03-31T20:00:15.4962724Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.CgEBW6AH_22ffeq.webp [2m(before: 410kB, after: 188kB)[22m [2m(+194ms)[22m [2m(17/456)[22m
+2026-03-31T20:00:15.5943047Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.Dk9xfoly_nJAyE.webp [2m(before: 97kB, after: 68kB)[22m [2m(+360ms)[22m [2m(18/456)[22m
+2026-03-31T20:00:15.6221254Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.QaTVIVez_Z12aYxp.jpg [2m(before: 254kB, after: 151kB)[22m [2m(+134ms)[22m [2m(19/456)[22m
+2026-03-31T20:00:15.6776673Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.Dk9xfoly_1X9YRL.webp [2m(before: 97kB, after: 35kB)[22m [2m(+83ms)[22m [2m(20/456)[22m
+2026-03-31T20:00:15.7430305Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.CDCQOSHO_1ERikU.webp [2m(before: 177kB, after: 14kB)[22m [2m(+65ms)[22m [2m(21/456)[22m
+2026-03-31T20:00:15.8109988Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.QaTVIVez_j4GQ3.webp [2m(before: 254kB, after: 65kB)[22m [2m(+189ms)[22m [2m(22/456)[22m
+2026-03-31T20:00:15.9326264Z [2m20:00:15[22m   [32m▶[39m /_astro/cover.CDCQOSHO_Z1yx8SE.webp [2m(before: 177kB, after: 43kB)[22m [2m(+190ms)[22m [2m(23/456)[22m
+2026-03-31T20:00:16.0570313Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.CDCQOSHO_Zfav4t.jpg [2m(before: 177kB, after: 107kB)[22m [2m(+124ms)[22m [2m(24/456)[22m
+2026-03-31T20:00:16.0817388Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.QaTVIVez_aby1i.webp [2m(before: 254kB, after: 119kB)[22m [2m(+271ms)[22m [2m(25/456)[22m
+2026-03-31T20:00:16.2281433Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.CDCQOSHO_Z1sr8vD.webp [2m(before: 177kB, after: 36kB)[22m [2m(+169ms)[22m [2m(26/456)[22m
+2026-03-31T20:00:16.2372316Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.1VARHEkv_231Ppz.webp [2m(before: 451kB, after: 448kB)[22m [2m(+847ms)[22m [2m(27/456)[22m
+2026-03-31T20:00:16.2878350Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.CgEBW6AH_1j1vPN.webp [2m(before: 410kB, after: 422kB)[22m [2m(+791ms)[22m [2m(28/456)[22m
+2026-03-31T20:00:16.3583421Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.1VARHEkv_Z1rQ8cj.webp [2m(before: 451kB, after: 127kB)[22m [2m(+121ms)[22m [2m(29/456)[22m
+2026-03-31T20:00:16.4791774Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.CDCQOSHO_Wc2ue.webp [2m(before: 177kB, after: 64kB)[22m [2m(+253ms)[22m [2m(30/456)[22m
+2026-03-31T20:00:16.4946801Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.CgEBW6AH_Z8w24U.webp [2m(before: 410kB, after: 219kB)[22m [2m(+207ms)[22m [2m(31/456)[22m
+2026-03-31T20:00:16.5278208Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.Cc5S7K1q_Z28Ufor.jpg [2m(before: 248kB, after: 134kB)[22m [2m(+33ms)[22m [2m(32/456)[22m
+2026-03-31T20:00:16.5601257Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.Cc5S7K1q_Z2bq4O.webp [2m(before: 248kB, after: 14kB)[22m [2m(+32ms)[22m [2m(33/456)[22m
+2026-03-31T20:00:16.5704620Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.1VARHEkv_26icsV.webp [2m(before: 451kB, after: 242kB)[22m [2m(+212ms)[22m [2m(34/456)[22m
+2026-03-31T20:00:16.6396572Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.B4bncJLs_hSGNo.webp [2m(before: 184kB, after: 11kB)[22m [2m(+69ms)[22m [2m(35/456)[22m
+2026-03-31T20:00:16.6438035Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.Cc5S7K1q_18E43B.webp [2m(before: 248kB, after: 49kB)[22m [2m(+82ms)[22m [2m(36/456)[22m
+2026-03-31T20:00:16.8032756Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.Cc5S7K1q_Z26xRF2.webp [2m(before: 248kB, after: 98kB)[22m [2m(+161ms)[22m [2m(37/456)[22m
+2026-03-31T20:00:16.8271111Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.B4bncJLs_28FonK.webp [2m(before: 184kB, after: 42kB)[22m [2m(+187ms)[22m [2m(38/456)[22m
+2026-03-31T20:00:16.9451467Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.QaTVIVez_Z23QR6a.webp [2m(before: 254kB, after: 272kB)[22m [2m(+863ms)[22m [2m(39/456)[22m
+2026-03-31T20:00:16.9569133Z [2m20:00:16[22m   [32m▶[39m /_astro/cover.B4bncJLs_Z2eQU3g.jpg [2m(before: 184kB, after: 108kB)[22m [2m(+130ms)[22m [2m(40/456)[22m
+2026-03-31T20:00:17.1274242Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.B4bncJLs_2eLoKL.webp [2m(before: 184kB, after: 35kB)[22m [2m(+171ms)[22m [2m(41/456)[22m
+2026-03-31T20:00:17.2658211Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.CDCQOSHO_Z1gQnCe.webp [2m(before: 177kB, after: 155kB)[22m [2m(+787ms)[22m [2m(42/456)[22m
+2026-03-31T20:00:17.3615076Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.QaTVIVez_Z2ujbtc.webp [2m(before: 254kB, after: 215kB)[22m [2m(+416ms)[22m [2m(43/456)[22m
+2026-03-31T20:00:17.3723534Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.B4bncJLs_Z12umty.webp [2m(before: 184kB, after: 67kB)[22m [2m(+245ms)[22m [2m(44/456)[22m
+2026-03-31T20:00:17.4290854Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.j3LjM68P_Z1mnzyH.webp [2m(before: 198kB, after: 10kB)[22m [2m(+68ms)[22m [2m(45/456)[22m
+2026-03-31T20:00:17.5309669Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.Cc5S7K1q_Z295Rnq.webp [2m(before: 248kB, after: 209kB)[22m [2m(+728ms)[22m [2m(46/456)[22m
+2026-03-31T20:00:17.6264374Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.j3LjM68P_Z2jCOBC.webp [2m(before: 198kB, after: 35kB)[22m [2m(+197ms)[22m [2m(47/456)[22m
+2026-03-31T20:00:17.6340324Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.Cc5S7K1q_Z1hDfAl.webp [2m(before: 248kB, after: 60kB)[22m [2m(+102ms)[22m [2m(48/456)[22m
+2026-03-31T20:00:17.6432224Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.CDCQOSHO_Z1HiH0g.webp [2m(before: 177kB, after: 125kB)[22m [2m(+377ms)[22m [2m(49/456)[22m
+2026-03-31T20:00:17.7032955Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.DhfO7n0X_ZvPsF3.webp [2m(before: 183kB, after: 9kB)[22m [2m(+60ms)[22m [2m(50/456)[22m
+2026-03-31T20:00:17.7551497Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.j3LjM68P_1JV0Fd.jpg [2m(before: 198kB, after: 108kB)[22m [2m(+128ms)[22m [2m(51/456)[22m
+2026-03-31T20:00:17.8155519Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.Cc5S7K1q_Z24gu4v.webp [2m(before: 248kB, after: 113kB)[22m [2m(+182ms)[22m [2m(52/456)[22m
+2026-03-31T20:00:17.8793945Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.DhfO7n0X_1jVdTj.webp [2m(before: 183kB, after: 48kB)[22m [2m(+176ms)[22m [2m(53/456)[22m
+2026-03-31T20:00:17.9332635Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.j3LjM68P_Z1YEd9G.webp [2m(before: 198kB, after: 30kB)[22m [2m(+178ms)[22m [2m(54/456)[22m
+2026-03-31T20:00:17.9423301Z [2m20:00:17[22m   [32m▶[39m /_astro/cover.DRRLIZ_T_Z2jK7DL.jpg [2m(before: 179kB, after: 132kB)[22m [2m(+127ms)[22m [2m(55/456)[22m
+2026-03-31T20:00:18.0138457Z [2m20:00:18[22m   [32m▶[39m /_astro/cover.DRRLIZ_T_Z1ecDXx.webp [2m(before: 179kB, after: 15kB)[22m [2m(+71ms)[22m [2m(56/456)[22m
+2026-03-31T20:00:18.0142285Z [2m20:00:18[22m   [32m▶[39m /_astro/cover.DhfO7n0X_Z25OvUj.jpg [2m(before: 183kB, after: 104kB)[22m [2m(+135ms)[22m [2m(57/456)[22m
+2026-03-31T20:00:18.1516407Z [2m20:00:18[22m   [32m▶[39m /_astro/cover.B4bncJLs_1NDlcU.webp [2m(before: 184kB, after: 172kB)[22m [2m(+779ms)[22m [2m(58/456)[22m
+2026-03-31T20:00:18.1791786Z [2m20:00:18[22m   [32m▶[39m /_astro/cover.DhfO7n0X_1q2ehk.webp [2m(before: 183kB, after: 39kB)[22m [2m(+165ms)[22m [2m(59/456)[22m
+2026-03-31T20:00:18.1899544Z [2m20:00:18[22m   [32m▶[39m /_astro/cover.DRRLIZ_T_h5Nef.webp [2m(before: 179kB, after: 46kB)[22m [2m(+176ms)[22m [2m(60/456)[22m
+2026-03-31T20:00:18.2019565Z [2m20:00:18[22m   [32m▶[39m /_astro/cover.j3LjM68P_Z27Szz1.webp [2m(before: 198kB, after: 58kB)[22m [2m(+269ms)[22m [2m(61/456)[22m
+2026-03-31T20:00:18.4193208Z [2m20:00:18[22m   [32m▶[39m /_astro/cover.DhfO7n0X_ZSrXlB.webp [2m(before: 183kB, after: 76kB)[22m [2m(+240ms)[22m [2m(62/456)[22m
+2026-03-31T20:00:18.4679526Z [2m20:00:18[22m   [32m▶[39m /_astro/cover.DRRLIZ_T_Z17nz54.webp [2m(before: 179kB, after: 89kB)[22m [2m(+278ms)[22m [2m(63/456)[22m
+2026-03-31T20:00:18.5316564Z [2m20:00:18[22m   [32m▶[39m /_astro/cover.B4bncJLs_1nc1OS.webp [2m(before: 184kB, after: 135kB)[22m [2m(+379ms)[22m [2m(64/456)[22m
+2026-03-31T20:00:18.6033905Z [2m20:00:18[22m   [32m▶[39m /_astro/cover.CFj0p9uX_Z2tcuPh.webp [2m(before: 208kB, after: 13kB)[22m [2m(+72ms)[22m [2m(65/456)[22m
+2026-03-31T20:00:18.7990844Z [2m20:00:18[22m   [32m▶[39m /_astro/cover.CFj0p9uX_ZCpNfU.webp [2m(before: 208kB, after: 49kB)[22m [2m(+196ms)[22m [2m(66/456)[22m
+2026-03-31T20:00:18.9430218Z [2m20:00:18[22m   [32m▶[39m /_astro/cover.CFj0p9uX_Z1ICSid.jpg [2m(before: 208kB, after: 113kB)[22m [2m(+144ms)[22m [2m(67/456)[22m
+2026-03-31T20:00:19.0118353Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.j3LjM68P_ZLbJ1j.webp [2m(before: 198kB, after: 169kB)[22m [2m(+810ms)[22m [2m(68/456)[22m
+2026-03-31T20:00:19.1250054Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.CFj0p9uX_ZwjMRT.webp [2m(before: 208kB, after: 41kB)[22m [2m(+181ms)[22m [2m(69/456)[22m
+2026-03-31T20:00:19.1819202Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.DhfO7n0X_1WFJkR.webp [2m(before: 183kB, after: 209kB)[22m [2m(+763ms)[22m [2m(70/456)[22m
+2026-03-31T20:00:19.3801173Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.CFj0p9uX_ZwgkIv.webp [2m(before: 208kB, after: 75kB)[22m [2m(+255ms)[22m [2m(71/456)[22m
+2026-03-31T20:00:19.3981563Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.DRRLIZ_T_1Ug7Xm.webp [2m(before: 179kB, after: 217kB)[22m [2m(+930ms)[22m [2m(72/456)[22m
+2026-03-31T20:00:19.4099389Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.j3LjM68P_KoDhb.webp [2m(before: 198kB, after: 136kB)[22m [2m(+398ms)[22m [2m(73/456)[22m
+2026-03-31T20:00:19.4287941Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.DjOdennL_ZX5LzR.webp [2m(before: 108kB, after: 3kB)[22m [2m(+19ms)[22m [2m(74/456)[22m
+2026-03-31T20:00:19.4924785Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.DjOdennL_1WmVbp.webp [2m(before: 108kB, after: 16kB)[22m [2m(+64ms)[22m [2m(75/456)[22m
+2026-03-31T20:00:19.5149471Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.DjOdennL_4VKXN.jpg [2m(before: 108kB, after: 49kB)[22m [2m(+22ms)[22m [2m(76/456)[22m
+2026-03-31T20:00:19.5441468Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.DhfO7n0X_1wepWP.webp [2m(before: 183kB, after: 170kB)[22m [2m(+362ms)[22m [2m(77/456)[22m
+2026-03-31T20:00:19.5673248Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.DjOdennL_14RqaD.webp [2m(before: 108kB, after: 12kB)[22m [2m(+52ms)[22m [2m(78/456)[22m
+2026-03-31T20:00:19.6048554Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.DRRLIZ_T_Z1H00PN.webp [2m(before: 179kB, after: 56kB)[22m [2m(+207ms)[22m [2m(79/456)[22m
+2026-03-31T20:00:19.6070522Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.CmqNgx7E_uCrUx.webp [2m(before: 119kB, after: 5kB)[22m [2m(+63ms)[22m [2m(80/456)[22m
+2026-03-31T20:00:19.6754456Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.DjOdennL_7j8Hd.webp [2m(before: 108kB, after: 32kB)[22m [2m(+108ms)[22m [2m(81/456)[22m
+2026-03-31T20:00:19.7891817Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.CmqNgx7E_2lp9uT.webp [2m(before: 119kB, after: 23kB)[22m [2m(+181ms)[22m [2m(82/456)[22m
+2026-03-31T20:00:19.9235109Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.CmqNgx7E_ZQjCeC.jpg [2m(before: 119kB, after: 70kB)[22m [2m(+134ms)[22m [2m(83/456)[22m
+2026-03-31T20:00:19.9596956Z [2m20:00:19[22m   [32m▶[39m /_astro/cover.DRRLIZ_T_1PxMkK.webp [2m(before: 179kB, after: 143kB)[22m [2m(+355ms)[22m [2m(84/456)[22m
+2026-03-31T20:00:20.0200748Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.DNZT0l5T_2pszvk.webp [2m(before: 146kB, after: 10kB)[22m [2m(+60ms)[22m [2m(85/456)[22m
+2026-03-31T20:00:20.0848923Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.CmqNgx7E_2rv9RU.webp [2m(before: 119kB, after: 18kB)[22m [2m(+161ms)[22m [2m(86/456)[22m
+2026-03-31T20:00:20.1840356Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.CFj0p9uX_2jRmWX.webp [2m(before: 208kB, after: 192kB)[22m [2m(+804ms)[22m [2m(87/456)[22m
+2026-03-31T20:00:20.1927391Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.DjOdennL_Z1iLhKS.webp [2m(before: 108kB, after: 85kB)[22m [2m(+517ms)[22m [2m(88/456)[22m
+2026-03-31T20:00:20.1994893Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.DNZT0l5T_ZNVQIf.webp [2m(before: 146kB, after: 36kB)[22m [2m(+180ms)[22m [2m(89/456)[22m
+2026-03-31T20:00:20.3067369Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.DjOdennL_28fSx7.webp [2m(before: 108kB, after: 40kB)[22m [2m(+114ms)[22m [2m(90/456)[22m
+2026-03-31T20:00:20.3117313Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.CmqNgx7E_l2Uk5.webp [2m(before: 119kB, after: 37kB)[22m [2m(+227ms)[22m [2m(91/456)[22m
+2026-03-31T20:00:20.3219884Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.DNZT0l5T_Z2uIuRr.jpg [2m(before: 146kB, after: 86kB)[22m [2m(+122ms)[22m [2m(92/456)[22m
+2026-03-31T20:00:20.3858868Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.BOpMkHZb_fmmxx.webp [2m(before: 254kB, after: 18kB)[22m [2m(+79ms)[22m [2m(93/456)[22m
+2026-03-31T20:00:20.4899397Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.DNZT0l5T_ZHPQle.webp [2m(before: 146kB, after: 30kB)[22m [2m(+168ms)[22m [2m(94/456)[22m
+2026-03-31T20:00:20.5799315Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.CFj0p9uX_1Sq3zV.webp [2m(before: 208kB, after: 151kB)[22m [2m(+395ms)[22m [2m(95/456)[22m
+2026-03-31T20:00:20.5899508Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.BOpMkHZb_26947T.webp [2m(before: 254kB, after: 80kB)[22m [2m(+204ms)[22m [2m(96/456)[22m
+2026-03-31T20:00:20.6366969Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.BVrckhbc_I87R.webp [2m(before: 148kB, after: 14kB)[22m [2m(+59ms)[22m [2m(97/456)[22m
+2026-03-31T20:00:20.7276806Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.BOpMkHZb_1xSUHf.jpg [2m(before: 254kB, after: 150kB)[22m [2m(+138ms)[22m [2m(98/456)[22m
+2026-03-31T20:00:20.7327667Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.DNZT0l5T_Z1ilWiJ.webp [2m(before: 146kB, after: 54kB)[22m [2m(+243ms)[22m [2m(99/456)[22m
+2026-03-31T20:00:20.8152543Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.BVrckhbc_ZVw6U3.webp [2m(before: 148kB, after: 39kB)[22m [2m(+179ms)[22m [2m(100/456)[22m
+2026-03-31T20:00:20.9218757Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.BOpMkHZb_2cf4uU.webp [2m(before: 254kB, after: 66kB)[22m [2m(+194ms)[22m [2m(101/456)[22m
+2026-03-31T20:00:20.9388720Z [2m20:00:20[22m   [32m▶[39m /_astro/cover.BVrckhbc_Z1gr53p.jpg [2m(before: 148kB, after: 94kB)[22m [2m(+123ms)[22m [2m(102/456)[22m
+2026-03-31T20:00:21.0346897Z [2m20:00:21[22m   [32m▶[39m /_astro/cover.CmqNgx7E_Z1S0uMn.webp [2m(before: 119kB, after: 96kB)[22m [2m(+723ms)[22m [2m(103/456)[22m
+2026-03-31T20:00:21.1092611Z [2m20:00:21[22m   [32m▶[39m /_astro/cover.BVrckhbc_1WAP5f.webp [2m(before: 148kB, after: 34kB)[22m [2m(+170ms)[22m [2m(104/456)[22m
+2026-03-31T20:00:21.1918923Z [2m20:00:21[22m   [32m▶[39m /_astro/cover.BOpMkHZb_Z2jUEwY.webp [2m(before: 254kB, after: 123kB)[22m [2m(+270ms)[22m [2m(105/456)[22m
+2026-03-31T20:00:21.3417166Z [2m20:00:21[22m   [32m▶[39m /_astro/cover.BVrckhbc_Z44wtH.webp [2m(before: 148kB, after: 55kB)[22m [2m(+232ms)[22m [2m(106/456)[22m
+2026-03-31T20:00:21.3685270Z [2m20:00:21[22m   [32m▶[39m /_astro/cover.CmqNgx7E_Z2jrOap.webp [2m(before: 119kB, after: 76kB)[22m [2m(+334ms)[22m [2m(107/456)[22m
+2026-03-31T20:00:21.4089124Z [2m20:00:21[22m   [32m▶[39m /_astro/cover.h_qBepxE_ZoWt2t.jpg [2m(before: 95kB, after: 52kB)[22m [2m(+40ms)[22m [2m(108/456)[22m
+2026-03-31T20:00:21.4350210Z [2m20:00:21[22m   [32m▶[39m /_astro/cover.h_qBepxE_ZAT5Ds.webp [2m(before: 95kB, after: 4kB)[22m [2m(+26ms)[22m [2m(109/456)[22m
+2026-03-31T20:00:21.4904390Z [2m20:00:21[22m   [32m▶[39m /_astro/cover.DNZT0l5T_1xLKnJ.webp [2m(before: 146kB, after: 134kB)[22m [2m(+757ms)[22m [2m(110/456)[22m
+2026-03-31T20:00:21.5125759Z [2m20:00:21[22m   [32m▶[39m /_astro/cover.h_qBepxE_1jJIsc.webp [2m(before: 95kB, after: 12kB)[22m [2m(+77ms)[22m [2m(111/456)[22m
+2026-03-31T20:00:21.6685757Z [2m20:00:21[22m   [32m▶[39m /_astro/cover.h_qBepxE_1h6yQP.webp [2m(before: 95kB, after: 24kB)[22m [2m(+156ms)[22m [2m(112/456)[22m
+2026-03-31T20:00:21.8410262Z [2m20:00:21[22m   [32m▶[39m /_astro/cover.DNZT0l5T_17kr0H.webp [2m(before: 146kB, after: 103kB)[22m [2m(+350ms)[22m [2m(113/456)[22m
+2026-03-31T20:00:21.9047633Z [2m20:00:21[22m   [32m▶[39m /_astro/cover.CS8zkMLQ_EAAwX.webp [2m(before: 228kB, after: 11kB)[22m [2m(+63ms)[22m [2m(114/456)[22m
+2026-03-31T20:00:22.0231171Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.BOpMkHZb_wd39u.webp [2m(before: 254kB, after: 290kB)[22m [2m(+831ms)[22m [2m(115/456)[22m
+2026-03-31T20:00:22.0843037Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.BVrckhbc_ZcNy4L.webp [2m(before: 148kB, after: 122kB)[22m [2m(+742ms)[22m [2m(116/456)[22m
+2026-03-31T20:00:22.0927942Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.CS8zkMLQ_2vni7k.webp [2m(before: 228kB, after: 52kB)[22m [2m(+188ms)[22m [2m(117/456)[22m
+2026-03-31T20:00:22.2191578Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.CS8zkMLQ_ZRso2l.jpg [2m(before: 228kB, after: 124kB)[22m [2m(+126ms)[22m [2m(118/456)[22m
+2026-03-31T20:00:22.3935176Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.CS8zkMLQ_Z2sHPjA.webp [2m(before: 228kB, after: 42kB)[22m [2m(+174ms)[22m [2m(119/456)[22m
+2026-03-31T20:00:22.4256422Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.BVrckhbc_1jLOdI.webp [2m(before: 148kB, after: 94kB)[22m [2m(+341ms)[22m [2m(120/456)[22m
+2026-03-31T20:00:22.4288091Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.BOpMkHZb_5KILs.webp [2m(before: 254kB, after: 228kB)[22m [2m(+406ms)[22m [2m(121/456)[22m
+2026-03-31T20:00:22.4541626Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.Gau-wc5P_1IE4Jx.webp [2m(before: 210kB, after: 13kB)[22m [2m(+28ms)[22m [2m(122/456)[22m
+2026-03-31T20:00:22.4811943Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.h_qBepxE_2bNXe4.webp [2m(before: 95kB, after: 58kB)[22m [2m(+812ms)[22m [2m(123/456)[22m
+2026-03-31T20:00:22.4894194Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.CglpyWHi_Z6XYpW.webp [2m(before: 111kB, after: 12kB)[22m [2m(+61ms)[22m [2m(124/456)[22m
+2026-03-31T20:00:22.5489942Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.Gau-wc5P_tcfe1.webp [2m(before: 210kB, after: 42kB)[22m [2m(+95ms)[22m [2m(125/456)[22m
+2026-03-31T20:00:22.5752798Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.h_qBepxE_Z20tF7A.webp [2m(before: 95kB, after: 15kB)[22m [2m(+94ms)[22m [2m(126/456)[22m
+2026-03-31T20:00:22.5833836Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.Gau-wc5P_ZKSmwX.jpg [2m(before: 210kB, after: 110kB)[22m [2m(+34ms)[22m [2m(127/456)[22m
+2026-03-31T20:00:22.6489998Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.CS8zkMLQ_jT9wm.webp [2m(before: 228kB, after: 89kB)[22m [2m(+255ms)[22m [2m(128/456)[22m
+2026-03-31T20:00:22.6593621Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.CglpyWHi_Z14eesR.webp [2m(before: 111kB, after: 30kB)[22m [2m(+170ms)[22m [2m(129/456)[22m
+2026-03-31T20:00:22.6631705Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.Gau-wc5P_mkrYd.webp [2m(before: 210kB, after: 36kB)[22m [2m(+80ms)[22m [2m(130/456)[22m
+2026-03-31T20:00:22.7321770Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.h_qBepxE_25m7hs.webp [2m(before: 95kB, after: 28kB)[22m [2m(+157ms)[22m [2m(131/456)[22m
+2026-03-31T20:00:22.7668115Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.BLQOrAvY_1DTQIo.webp [2m(before: 448kB, after: 22kB)[22m [2m(+34ms)[22m [2m(132/456)[22m
+2026-03-31T20:00:22.7820346Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.CglpyWHi_Z69LpS.jpg [2m(before: 111kB, after: 77kB)[22m [2m(+120ms)[22m [2m(133/456)[22m
+2026-03-31T20:00:22.8186003Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.Gau-wc5P_ZIvYNy.webp [2m(before: 210kB, after: 64kB)[22m [2m(+155ms)[22m [2m(134/456)[22m
+2026-03-31T20:00:22.9025797Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.BLQOrAvY_os2cR.webp [2m(before: 448kB, after: 123kB)[22m [2m(+136ms)[22m [2m(135/456)[22m
+2026-03-31T20:00:22.9410991Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.BLQOrAvY_ZAHDzb.jpg [2m(before: 448kB, after: 243kB)[22m [2m(+38ms)[22m [2m(136/456)[22m
+2026-03-31T20:00:22.9538374Z [2m20:00:22[22m   [32m▶[39m /_astro/cover.CglpyWHi_1OSHwq.webp [2m(before: 111kB, after: 26kB)[22m [2m(+174ms)[22m [2m(137/456)[22m
+2026-03-31T20:00:23.0408219Z [2m20:00:23[22m   [32m▶[39m /_astro/cover.BLQOrAvY_Z2fqLW7.webp [2m(before: 448kB, after: 96kB)[22m [2m(+100ms)[22m [2m(138/456)[22m
+2026-03-31T20:00:23.1766439Z [2m20:00:23[22m   [32m▶[39m /_astro/cover.CglpyWHi_16cL8O.webp [2m(before: 111kB, after: 42kB)[22m [2m(+223ms)[22m [2m(139/456)[22m
+2026-03-31T20:00:23.2420478Z [2m20:00:23[22m   [32m▶[39m /_astro/cover.BLQOrAvY_ZylgPL.webp [2m(before: 448kB, after: 217kB)[22m [2m(+201ms)[22m [2m(140/456)[22m
+2026-03-31T20:00:23.4465333Z [2m20:00:23[22m   [32m▶[39m /_astro/cover.CS8zkMLQ_Z1T9gA6.webp [2m(before: 228kB, after: 236kB)[22m [2m(+797ms)[22m [2m(141/456)[22m
+2026-03-31T20:00:23.5250572Z [2m20:00:23[22m   [32m▶[39m /_astro/cover.Gau-wc5P_Zxbnr2.webp [2m(before: 210kB, after: 139kB)[22m [2m(+706ms)[22m [2m(142/456)[22m
+2026-03-31T20:00:23.6898798Z [2m20:00:23[22m   [32m▶[39m /_astro/cover.Gau-wc5P_ZGeBd2.webp [2m(before: 210kB, after: 72kB)[22m [2m(+165ms)[22m [2m(143/456)[22m
+2026-03-31T20:00:23.7614753Z [2m20:00:23[22m   [32m▶[39m /_astro/cover.CYEkyRri_ZbyX1s.webp [2m(before: 144kB, after: 12kB)[22m [2m(+71ms)[22m [2m(144/456)[22m
+2026-03-31T20:00:23.8457465Z [2m20:00:23[22m   [32m▶[39m /_astro/cover.CS8zkMLQ_Z2kAzX8.webp [2m(before: 228kB, after: 194kB)[22m [2m(+398ms)[22m [2m(145/456)[22m
+2026-03-31T20:00:23.8818536Z [2m20:00:23[22m   [32m▶[39m /_astro/cover.C-Jt1_3r_DfDb6.webp [2m(before: 431kB, after: 25kB)[22m [2m(+35ms)[22m [2m(146/456)[22m
+2026-03-31T20:00:23.8864753Z [2m20:00:23[22m   [32m▶[39m /_astro/cover.CglpyWHi_WsJxK.webp [2m(before: 111kB, after: 97kB)[22m [2m(+710ms)[22m [2m(147/456)[22m
+2026-03-31T20:00:23.9500520Z [2m20:00:23[22m   [32m▶[39m /_astro/cover.CYEkyRri_1EcIxT.webp [2m(before: 144kB, after: 36kB)[22m [2m(+188ms)[22m [2m(148/456)[22m
+2026-03-31T20:00:24.0075766Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.C-Jt1_3r_ZBcbkq.webp [2m(before: 431kB, after: 123kB)[22m [2m(+127ms)[22m [2m(149/456)[22m
+2026-03-31T20:00:24.0477553Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.C-Jt1_3r_Z1pWEzI.jpg [2m(before: 431kB, after: 237kB)[22m [2m(+40ms)[22m [2m(150/456)[22m
+2026-03-31T20:00:24.0760760Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.BLQOrAvY_ZASgya.webp [2m(before: 448kB, after: 536kB)[22m [2m(+834ms)[22m [2m(151/456)[22m
+2026-03-31T20:00:24.0774743Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.CYEkyRri_Z1WPeqS.jpg [2m(before: 144kB, after: 92kB)[22m [2m(+127ms)[22m [2m(152/456)[22m
+2026-03-31T20:00:24.1448097Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.C-Jt1_3r_1O68jw.webp [2m(before: 431kB, after: 99kB)[22m [2m(+97ms)[22m [2m(153/456)[22m
+2026-03-31T20:00:24.2066482Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.CglpyWHi_2u47Qf.webp [2m(before: 111kB, after: 74kB)[22m [2m(+319ms)[22m [2m(154/456)[22m
+2026-03-31T20:00:24.2393094Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.DtHXNTeU_Z13FzKO.webp [2m(before: 277kB, after: 13kB)[22m [2m(+33ms)[22m [2m(155/456)[22m
+2026-03-31T20:00:24.2531307Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.CYEkyRri_ZNPABr.webp [2m(before: 144kB, after: 31kB)[22m [2m(+173ms)[22m [2m(156/456)[22m
+2026-03-31T20:00:24.2929497Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.BLQOrAvY_Zw3Sff.webp [2m(before: 448kB, after: 257kB)[22m [2m(+217ms)[22m [2m(157/456)[22m
+2026-03-31T20:00:24.3423359Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.C-Jt1_3r_Z1nAhQj.webp [2m(before: 431kB, after: 203kB)[22m [2m(+196ms)[22m [2m(158/456)[22m
+2026-03-31T20:00:24.3555186Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.DtHXNTeU_ZvR0vh.webp [2m(before: 277kB, after: 57kB)[22m [2m(+116ms)[22m [2m(159/456)[22m
+2026-03-31T20:00:24.3697153Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.C4Rzx5uw_19gVPY.webp [2m(before: 206kB, after: 13kB)[22m [2m(+77ms)[22m [2m(160/456)[22m
+2026-03-31T20:00:24.3912428Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.DtHXNTeU_1p6WWX.jpg [2m(before: 277kB, after: 139kB)[22m [2m(+35ms)[22m [2m(161/456)[22m
+2026-03-31T20:00:24.4867550Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.DtHXNTeU_I2Yx7.webp [2m(before: 277kB, after: 46kB)[22m [2m(+96ms)[22m [2m(162/456)[22m
+2026-03-31T20:00:24.5048700Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.CYEkyRri_ZKsFRb.webp [2m(before: 144kB, after: 50kB)[22m [2m(+251ms)[22m [2m(163/456)[22m
+2026-03-31T20:00:24.5652056Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.C4Rzx5uw_Z258unA.webp [2m(before: 206kB, after: 49kB)[22m [2m(+195ms)[22m [2m(164/456)[22m
+2026-03-31T20:00:24.6803739Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.DtHXNTeU_Z2sHChg.webp [2m(before: 277kB, after: 98kB)[22m [2m(+193ms)[22m [2m(165/456)[22m
+2026-03-31T20:00:24.6941413Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.C4Rzx5uw_Z132YOD.jpg [2m(before: 206kB, after: 123kB)[22m [2m(+129ms)[22m [2m(166/456)[22m
+2026-03-31T20:00:24.8783197Z [2m20:00:24[22m   [32m▶[39m /_astro/cover.C4Rzx5uw_Z1Y2u0z.webp [2m(before: 206kB, after: 40kB)[22m [2m(+184ms)[22m [2m(167/456)[22m
+2026-03-31T20:00:25.1409642Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.C4Rzx5uw_9jxJ4.webp [2m(before: 206kB, after: 76kB)[22m [2m(+263ms)[22m [2m(168/456)[22m
+2026-03-31T20:00:25.1630228Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.C-Jt1_3r_Z1q8hyH.webp [2m(before: 431kB, after: 467kB)[22m [2m(+820ms)[22m [2m(169/456)[22m
+2026-03-31T20:00:25.2802792Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.CYEkyRri_Z1u5ePR.webp [2m(before: 144kB, after: 114kB)[22m [2m(+775ms)[22m [2m(170/456)[22m
+2026-03-31T20:00:25.3751276Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.C-Jt1_3r_Z1liTfM.webp [2m(before: 431kB, after: 236kB)[22m [2m(+211ms)[22m [2m(171/456)[22m
+2026-03-31T20:00:25.4042958Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.Dcee1eUL_Z1a80t7.webp [2m(before: 213kB, after: 10kB)[22m [2m(+29ms)[22m [2m(172/456)[22m
+2026-03-31T20:00:25.5035009Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.Dcee1eUL_4Myo4.webp [2m(before: 213kB, after: 42kB)[22m [2m(+99ms)[22m [2m(173/456)[22m
+2026-03-31T20:00:25.5348892Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.Dcee1eUL_10rkBL.jpg [2m(before: 213kB, after: 105kB)[22m [2m(+31ms)[22m [2m(174/456)[22m
+2026-03-31T20:00:25.5457489Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.DtHXNTeU_1fw47B.webp [2m(before: 277kB, after: 235kB)[22m [2m(+865ms)[22m [2m(175/456)[22m
+2026-03-31T20:00:25.6176503Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.Dcee1eUL_Z1N3SA.webp [2m(before: 213kB, after: 33kB)[22m [2m(+83ms)[22m [2m(176/456)[22m
+2026-03-31T20:00:25.6535440Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.CYEkyRri_Z1UwydT.webp [2m(before: 144kB, after: 89kB)[22m [2m(+373ms)[22m [2m(177/456)[22m
+2026-03-31T20:00:25.6874646Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.vXsjKTFW_Z1Po7xC.webp [2m(before: 322kB, after: 29kB)[22m [2m(+34ms)[22m [2m(178/456)[22m
+2026-03-31T20:00:25.7481577Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.DtHXNTeU_Z1JKjGk.webp [2m(before: 277kB, after: 115kB)[22m [2m(+202ms)[22m [2m(179/456)[22m
+2026-03-31T20:00:25.7774830Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.Dcee1eUL_12NHlb.webp [2m(before: 213kB, after: 73kB)[22m [2m(+160ms)[22m [2m(180/456)[22m
+2026-03-31T20:00:25.8062714Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.vXsjKTFW_Z2mkwUm.webp [2m(before: 322kB, after: 91kB)[22m [2m(+119ms)[22m [2m(181/456)[22m
+2026-03-31T20:00:25.8490982Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.vXsjKTFW_3XW9A.jpg [2m(before: 322kB, after: 184kB)[22m [2m(+42ms)[22m [2m(182/456)[22m
+2026-03-31T20:00:25.8830080Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.LtBLbuSD_Er1Pc.jpg [2m(before: 185kB, after: 109kB)[22m [2m(+135ms)[22m [2m(183/456)[22m
+2026-03-31T20:00:25.9469334Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.vXsjKTFW_1RtouY.webp [2m(before: 322kB, after: 77kB)[22m [2m(+98ms)[22m [2m(184/456)[22m
+2026-03-31T20:00:25.9509548Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.LtBLbuSD_dBcTr.webp [2m(before: 185kB, after: 13kB)[22m [2m(+68ms)[22m [2m(185/456)[22m
+2026-03-31T20:00:25.9523074Z [2m20:00:25[22m   [32m▶[39m /_astro/cover.C4Rzx5uw_Z24IRno.webp [2m(before: 206kB, after: 188kB)[22m [2m(+811ms)[22m [2m(186/456)[22m
+2026-03-31T20:00:26.1256647Z [2m20:00:26[22m   [32m▶[39m /_astro/cover.vXsjKTFW_6ljS0.webp [2m(before: 322kB, after: 131kB)[22m [2m(+178ms)[22m [2m(187/456)[22m
+2026-03-31T20:00:26.1299729Z [2m20:00:26[22m   [32m▶[39m /_astro/cover.LtBLbuSD_2atTQO.webp [2m(before: 185kB, after: 37kB)[22m [2m(+176ms)[22m [2m(188/456)[22m
+2026-03-31T20:00:26.3610578Z [2m20:00:26[22m   [32m▶[39m /_astro/cover.C4Rzx5uw_Z2vbbKq.webp [2m(before: 206kB, after: 141kB)[22m [2m(+409ms)[22m [2m(189/456)[22m
+2026-03-31T20:00:26.3765283Z [2m20:00:26[22m   [32m▶[39m /_astro/cover.LtBLbuSD_1QNzoT.webp [2m(before: 185kB, after: 66kB)[22m [2m(+249ms)[22m [2m(190/456)[22m
+2026-03-31T20:00:26.4263822Z [2m20:00:26[22m   [32m▶[39m /_astro/cover.CKU0H2b7_Z2lUnAy.webp [2m(before: 99kB, after: 3kB)[22m [2m(+65ms)[22m [2m(191/456)[22m
+2026-03-31T20:00:26.5266740Z [2m20:00:26[22m   [32m▶[39m /_astro/cover.Dcee1eUL_186Il3.webp [2m(before: 213kB, after: 181kB)[22m [2m(+749ms)[22m [2m(192/456)[22m
+2026-03-31T20:00:26.6071321Z [2m20:00:26[22m   [32m▶[39m /_astro/cover.CKU0H2b7_Zv8G1c.webp [2m(before: 99kB, after: 14kB)[22m [2m(+180ms)[22m [2m(193/456)[22m
+2026-03-31T20:00:26.7001477Z [2m20:00:26[22m   [32m▶[39m /_astro/cover.Dcee1eUL_Z1kh9Mw.webp [2m(before: 213kB, after: 88kB)[22m [2m(+174ms)[22m [2m(194/456)[22m
+2026-03-31T20:00:26.7275748Z [2m20:00:26[22m   [32m▶[39m /_astro/cover.CKU0H2b7_1X3Mb9.jpg [2m(before: 99kB, after: 59kB)[22m [2m(+121ms)[22m [2m(195/456)[22m
+2026-03-31T20:00:26.8357515Z [2m20:00:26[22m   [32m▶[39m /_astro/cover.DCT4fdUd_1MAeaF.jpg [2m(before: 205kB, after: 110kB)[22m [2m(+135ms)[22m [2m(196/456)[22m
+2026-03-31T20:00:26.8869510Z [2m20:00:26[22m   [32m▶[39m /_astro/cover.vXsjKTFW_Z2dlR13.webp [2m(before: 322kB, after: 273kB)[22m [2m(+761ms)[22m [2m(197/456)[22m
+2026-03-31T20:00:26.8893579Z [2m20:00:26[22m   [32m▶[39m /_astro/cover.CKU0H2b7_Zp2FDb.webp [2m(before: 99kB, after: 11kB)[22m [2m(+162ms)[22m [2m(198/456)[22m
+2026-03-31T20:00:26.9058839Z [2m20:00:26[22m   [32m▶[39m /_astro/cover.DCT4fdUd_Z2i2zwR.webp [2m(before: 205kB, after: 9kB)[22m [2m(+70ms)[22m [2m(199/456)[22m
+2026-03-31T20:00:27.0764169Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.vXsjKTFW_Z28wtH8.webp [2m(before: 322kB, after: 147kB)[22m [2m(+189ms)[22m [2m(200/456)[22m
+2026-03-31T20:00:27.0807294Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.DCT4fdUd_ZtmV84.webp [2m(before: 205kB, after: 34kB)[22m [2m(+175ms)[22m [2m(201/456)[22m
+2026-03-31T20:00:27.0987956Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.MiKU339x_1fvDsq.webp [2m(before: 73kB, after: 4kB)[22m [2m(+22ms)[22m [2m(202/456)[22m
+2026-03-31T20:00:27.1202785Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.CKU0H2b7_Z1TKN45.webp [2m(before: 99kB, after: 23kB)[22m [2m(+231ms)[22m [2m(203/456)[22m
+2026-03-31T20:00:27.1642245Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.LtBLbuSD_ZmePHy.webp [2m(before: 185kB, after: 164kB)[22m [2m(+787ms)[22m [2m(204/456)[22m
+2026-03-31T20:00:27.1728784Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.MiKU339x_KWGF1.webp [2m(before: 73kB, after: 12kB)[22m [2m(+74ms)[22m [2m(205/456)[22m
+2026-03-31T20:00:27.2005057Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.MiKU339x_ZOXf3f.jpg [2m(before: 73kB, after: 37kB)[22m [2m(+27ms)[22m [2m(206/456)[22m
+2026-03-31T20:00:27.2639194Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.MiKU339x_2tVkXl.webp [2m(before: 73kB, after: 10kB)[22m [2m(+63ms)[22m [2m(207/456)[22m
+2026-03-31T20:00:27.3409526Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.DCT4fdUd_Z25em4y.webp [2m(before: 205kB, after: 77kB)[22m [2m(+260ms)[22m [2m(208/456)[22m
+2026-03-31T20:00:27.3829568Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.MiKU339x_ZMARjP.webp [2m(before: 73kB, after: 16kB)[22m [2m(+119ms)[22m [2m(209/456)[22m
+2026-03-31T20:00:27.5532176Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.LtBLbuSD_ZMGa5A.webp [2m(before: 185kB, after: 129kB)[22m [2m(+389ms)[22m [2m(210/456)[22m
+2026-03-31T20:00:27.7065210Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.DYzDUHTN_1otCVQ.jpg [2m(before: 447kB, after: 246kB)[22m [2m(+153ms)[22m [2m(211/456)[22m
+2026-03-31T20:00:27.7933053Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.DYzDUHTN_Z1S1fax.webp [2m(before: 447kB, after: 27kB)[22m [2m(+87ms)[22m [2m(212/456)[22m
+2026-03-31T20:00:27.8670278Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.CKU0H2b7_VmTCo.webp [2m(before: 99kB, after: 70kB)[22m [2m(+747ms)[22m [2m(213/456)[22m
+2026-03-31T20:00:27.9735255Z [2m20:00:27[22m   [32m▶[39m /_astro/cover.MiKU339x_Z1zV7Yf.webp [2m(before: 73kB, after: 39kB)[22m [2m(+590ms)[22m [2m(214/456)[22m
+2026-03-31T20:00:28.0045076Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.DYzDUHTN_3QrLP.webp [2m(before: 447kB, after: 103kB)[22m [2m(+211ms)[22m [2m(215/456)[22m
+2026-03-31T20:00:28.0943726Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.MiKU339x_gPsE3.webp [2m(before: 73kB, after: 18kB)[22m [2m(+121ms)[22m [2m(216/456)[22m
+2026-03-31T20:00:28.1537045Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.DCT4fdUd_1sL3Ho.webp [2m(before: 205kB, after: 205kB)[22m [2m(+813ms)[22m [2m(217/456)[22m
+2026-03-31T20:00:28.1727284Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.TgEFeM-P_1RheRr.webp [2m(before: 268kB, after: 15kB)[22m [2m(+78ms)[22m [2m(218/456)[22m
+2026-03-31T20:00:28.2134401Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.CKU0H2b7_uUAfm.webp [2m(before: 99kB, after: 54kB)[22m [2m(+346ms)[22m [2m(219/456)[22m
+2026-03-31T20:00:28.2508167Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.C4q5ljst_1jk24M.jpg [2m(before: 351kB, after: 192kB)[22m [2m(+37ms)[22m [2m(220/456)[22m
+2026-03-31T20:00:28.2844314Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.C4q5ljst_ZpnTRX.webp [2m(before: 351kB, after: 22kB)[22m [2m(+33ms)[22m [2m(221/456)[22m
+2026-03-31T20:00:28.3204171Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.DYzDUHTN_Z2tkWin.webp [2m(before: 447kB, after: 217kB)[22m [2m(+316ms)[22m [2m(222/456)[22m
+2026-03-31T20:00:28.3500589Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.DCT4fdUd_Z2prs1M.webp [2m(before: 205kB, after: 44kB)[22m [2m(+196ms)[22m [2m(223/456)[22m
+2026-03-31T20:00:28.3805450Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.C4q5ljst_Krzfs.webp [2m(before: 351kB, after: 82kB)[22m [2m(+96ms)[22m [2m(224/456)[22m
+2026-03-31T20:00:28.3851195Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.TgEFeM-P_Z1m8cm8.webp [2m(before: 268kB, after: 68kB)[22m [2m(+212ms)[22m [2m(225/456)[22m
+2026-03-31T20:00:28.5299955Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.TgEFeM-P_XizCQ.jpg [2m(before: 268kB, after: 147kB)[22m [2m(+145ms)[22m [2m(226/456)[22m
+2026-03-31T20:00:28.5707419Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.C4q5ljst_1lGoNc.webp [2m(before: 351kB, after: 162kB)[22m [2m(+189ms)[22m [2m(227/456)[22m
+2026-03-31T20:00:28.7282851Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.TgEFeM-P_Z1g2bY7.webp [2m(before: 268kB, after: 54kB)[22m [2m(+198ms)[22m [2m(228/456)[22m
+2026-03-31T20:00:28.7399611Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.DCT4fdUd_7Kozd.webp [2m(before: 205kB, after: 167kB)[22m [2m(+390ms)[22m [2m(229/456)[22m
+2026-03-31T20:00:28.8044374Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.D8xTGG4H_Z2054UE.webp [2m(before: 279kB, after: 25kB)[22m [2m(+64ms)[22m [2m(230/456)[22m
+2026-03-31T20:00:28.9730016Z [2m20:00:28[22m   [32m▶[39m /_astro/cover.D8xTGG4H_Z1zw5rn.webp [2m(before: 279kB, after: 82kB)[22m [2m(+168ms)[22m [2m(231/456)[22m
+2026-03-31T20:00:29.0050862Z [2m20:00:29[22m   [32m▶[39m /_astro/cover.TgEFeM-P_2aF8cy.webp [2m(before: 268kB, after: 113kB)[22m [2m(+276ms)[22m [2m(232/456)[22m
+2026-03-31T20:00:29.0814199Z [2m20:00:29[22m   [32m▶[39m /_astro/cover.D8xTGG4H_AHbzC.jpg [2m(before: 279kB, after: 162kB)[22m [2m(+108ms)[22m [2m(233/456)[22m
+2026-03-31T20:00:29.2359930Z [2m20:00:29[22m   [32m▶[39m /_astro/cover.D8xTGG4H_4Rlts.webp [2m(before: 279kB, after: 70kB)[22m [2m(+154ms)[22m [2m(234/456)[22m
+2026-03-31T20:00:29.2894246Z [2m20:00:29[22m   [32m▶[39m /_astro/cover.DYzDUHTN_mMKo6.webp [2m(before: 447kB, after: 548kB)[22m [2m(+969ms)[22m [2m(235/456)[22m
+2026-03-31T20:00:29.3297686Z [2m20:00:29[22m   [32m▶[39m /_astro/cover.C4q5ljst_1j9p5N.webp [2m(before: 351kB, after: 367kB)[22m [2m(+760ms)[22m [2m(236/456)[22m
+2026-03-31T20:00:29.4441686Z [2m20:00:29[22m   [32m▶[39m /_astro/cover.C4q5ljst_Z1EPJou.webp [2m(before: 351kB, after: 101kB)[22m [2m(+114ms)[22m [2m(237/456)[22m
+2026-03-31T20:00:29.4676215Z [2m20:00:29[22m   [32m▶[39m /_astro/cover.D8xTGG4H_D4yj2.webp [2m(before: 279kB, after: 123kB)[22m [2m(+232ms)[22m [2m(238/456)[22m
+2026-03-31T20:00:29.5241789Z [2m20:00:29[22m   [32m▶[39m /_astro/cover.DYzDUHTN_Z2exAb.webp [2m(before: 447kB, after: 130kB)[22m [2m(+235ms)[22m [2m(239/456)[22m
+2026-03-31T20:00:29.6369409Z [2m20:00:29[22m   [32m▶[39m /_astro/cover.C4q5ljst_1nXMoI.webp [2m(before: 351kB, after: 187kB)[22m [2m(+192ms)[22m [2m(240/456)[22m
+2026-03-31T20:00:29.7675304Z [2m20:00:29[22m   [32m▶[39m /_astro/cover.Sibfms-Q_ZfAp3U.jpg [2m(before: 121kB, after: 65kB)[22m [2m(+130ms)[22m [2m(241/456)[22m
+2026-03-31T20:00:29.8330064Z [2m20:00:29[22m   [32m▶[39m /_astro/cover.Sibfms-Q_1uQ4ta.webp [2m(before: 121kB, after: 6kB)[22m [2m(+65ms)[22m [2m(242/456)[22m
+2026-03-31T20:00:29.8556095Z [2m20:00:29[22m   [32m▶[39m /_astro/cover.TgEFeM-P_Z3nhTT.webp [2m(before: 268kB, after: 296kB)[22m [2m(+850ms)[22m [2m(243/456)[22m
+2026-03-31T20:00:29.9986520Z [2m20:00:29[22m   [32m▶[39m /_astro/cover.Sibfms-Q_Z1Csmno.webp [2m(before: 121kB, after: 15kB)[22m [2m(+165ms)[22m [2m(244/456)[22m
+2026-03-31T20:00:30.0402135Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.DYzDUHTN_Z3DxXV.webp [2m(before: 447kB, after: 435kB)[22m [2m(+516ms)[22m [2m(245/456)[22m
+2026-03-31T20:00:30.1089312Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.CKgSIbBr_ZKRQW4.webp [2m(before: 166kB, after: 9kB)[22m [2m(+69ms)[22m [2m(246/456)[22m
+2026-03-31T20:00:30.1732178Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.D8xTGG4H_Z1eii9N.webp [2m(before: 279kB, after: 292kB)[22m [2m(+705ms)[22m [2m(247/456)[22m
+2026-03-31T20:00:30.2301193Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.Sibfms-Q_VL8uM.webp [2m(before: 121kB, after: 28kB)[22m [2m(+231ms)[22m [2m(248/456)[22m
+2026-03-31T20:00:30.2831138Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.TgEFeM-P_ZtOBhV.webp [2m(before: 268kB, after: 235kB)[22m [2m(+427ms)[22m [2m(249/456)[22m
+2026-03-31T20:00:30.2962136Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.CKgSIbBr_14SOCi.webp [2m(before: 166kB, after: 43kB)[22m [2m(+187ms)[22m [2m(250/456)[22m
+2026-03-31T20:00:30.3619045Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.DYtn0gqP_SIJTC.webp [2m(before: 424kB, after: 28kB)[22m [2m(+79ms)[22m [2m(251/456)[22m
+2026-03-31T20:00:30.4265709Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.CKgSIbBr_qlq43.jpg [2m(before: 166kB, after: 96kB)[22m [2m(+130ms)[22m [2m(252/456)[22m
+2026-03-31T20:00:30.5336923Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.D8xTGG4H_Z1WeSb5.webp [2m(before: 279kB, after: 231kB)[22m [2m(+360ms)[22m [2m(253/456)[22m
+2026-03-31T20:00:30.5682746Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.DYtn0gqP_Z2opaKq.webp [2m(before: 424kB, after: 123kB)[22m [2m(+206ms)[22m [2m(254/456)[22m
+2026-03-31T20:00:30.5960474Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.CKgSIbBr_1aYP0j.webp [2m(before: 166kB, after: 35kB)[22m [2m(+169ms)[22m [2m(255/456)[22m
+2026-03-31T20:00:30.6614293Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.CRSqOz3n_Z2lLKoO.jpg [2m(before: 144kB, after: 90kB)[22m [2m(+128ms)[22m [2m(256/456)[22m
+2026-03-31T20:00:30.6994267Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.DYtn0gqP_1iu1aR.jpg [2m(before: 424kB, after: 233kB)[22m [2m(+131ms)[22m [2m(257/456)[22m
+2026-03-31T20:00:30.7245316Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.CRSqOz3n_ZmlsQc.webp [2m(before: 144kB, after: 12kB)[22m [2m(+60ms)[22m [2m(258/456)[22m
+2026-03-31T20:00:30.8484932Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.CKgSIbBr_1CHXCK.webp [2m(before: 166kB, after: 69kB)[22m [2m(+252ms)[22m [2m(259/456)[22m
+2026-03-31T20:00:30.8804174Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.CRSqOz3n_1zwe6b.webp [2m(before: 144kB, after: 33kB)[22m [2m(+158ms)[22m [2m(260/456)[22m
+2026-03-31T20:00:30.8824205Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.DYtn0gqP_Z1x37gi.webp [2m(before: 424kB, after: 99kB)[22m [2m(+183ms)[22m [2m(261/456)[22m
+2026-03-31T20:00:30.9668142Z [2m20:00:30[22m   [32m▶[39m /_astro/cover.Sibfms-Q_Z1hhhBF.webp [2m(before: 121kB, after: 82kB)[22m [2m(+736ms)[22m [2m(262/456)[22m
+2026-03-31T20:00:31.1119116Z [2m20:00:31[22m   [32m▶[39m /_astro/cover.CRSqOz3n_Z19pcP7.webp [2m(before: 144kB, after: 56kB)[22m [2m(+231ms)[22m [2m(263/456)[22m
+2026-03-31T20:00:31.1442964Z [2m20:00:31[22m   [32m▶[39m /_astro/cover.Sibfms-Q_Z1IymKp.webp [2m(before: 121kB, after: 18kB)[22m [2m(+177ms)[22m [2m(264/456)[22m
+2026-03-31T20:00:31.1660527Z [2m20:00:31[22m   [32m▶[39m /_astro/cover.DYtn0gqP_2uQyJz.webp [2m(before: 424kB, after: 200kB)[22m [2m(+283ms)[22m [2m(265/456)[22m
+2026-03-31T20:00:31.4985806Z [2m20:00:31[22m   [32m▶[39m /_astro/cover.Sibfms-Q_Z1HIAYH.webp [2m(before: 121kB, after: 60kB)[22m [2m(+354ms)[22m [2m(266/456)[22m
+2026-03-31T20:00:31.5672289Z [2m20:00:31[22m   [32m▶[39m /_astro/cover.IIXkwVss_Z1ScGRN.webp [2m(before: 162kB, after: 11kB)[22m [2m(+69ms)[22m [2m(267/456)[22m
+2026-03-31T20:00:31.6162915Z [2m20:00:31[22m   [32m▶[39m /_astro/cover.CKgSIbBr_ZAkrtH.webp [2m(before: 166kB, after: 171kB)[22m [2m(+768ms)[22m [2m(268/456)[22m
+2026-03-31T20:00:31.7562453Z [2m20:00:31[22m   [32m▶[39m /_astro/cover.IIXkwVss_Z2q0ir.webp [2m(before: 162kB, after: 38kB)[22m [2m(+189ms)[22m [2m(269/456)[22m
+2026-03-31T20:00:31.8461799Z [2m20:00:31[22m   [32m▶[39m /_astro/cover.CRSqOz3n_1GIuQm.webp [2m(before: 144kB, after: 128kB)[22m [2m(+734ms)[22m [2m(270/456)[22m
+2026-03-31T20:00:31.8823317Z [2m20:00:31[22m   [32m▶[39m /_astro/cover.IIXkwVss_1iExWI.jpg [2m(before: 162kB, after: 97kB)[22m [2m(+126ms)[22m [2m(271/456)[22m
+2026-03-31T20:00:31.9823717Z [2m20:00:31[22m   [32m▶[39m /_astro/cover.CKgSIbBr_Z11LKQJ.webp [2m(before: 166kB, after: 131kB)[22m [2m(+366ms)[22m [2m(272/456)[22m
+2026-03-31T20:00:31.9926779Z [2m20:00:31[22m   [32m▶[39m /_astro/cover.DYtn0gqP_1AIcYW.webp [2m(before: 424kB, after: 521kB)[22m [2m(+827ms)[22m [2m(273/456)[22m
+2026-03-31T20:00:32.0176320Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.DLy4OtNV_Z1zJcFk.jpg [2m(before: 92kB, after: 54kB)[22m [2m(+35ms)[22m [2m(274/456)[22m
+2026-03-31T20:00:32.0231530Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.CRSqOz3n_1tqdIa.webp [2m(before: 144kB, after: 38kB)[22m [2m(+177ms)[22m [2m(275/456)[22m
+2026-03-31T20:00:32.0438750Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.DLy4OtNV_aNBCb.webp [2m(before: 92kB, after: 6kB)[22m [2m(+26ms)[22m [2m(276/456)[22m
+2026-03-31T20:00:32.0577361Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.IIXkwVss_Z2vtksM.webp [2m(before: 162kB, after: 32kB)[22m [2m(+175ms)[22m [2m(277/456)[22m
+2026-03-31T20:00:32.1226447Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.DLy4OtNV_26sqIP.webp [2m(before: 92kB, after: 16kB)[22m [2m(+79ms)[22m [2m(278/456)[22m
+2026-03-31T20:00:32.2791741Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.DLy4OtNV_6jPdY.webp [2m(before: 92kB, after: 28kB)[22m [2m(+156ms)[22m [2m(279/456)[22m
+2026-03-31T20:00:32.2999576Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.IIXkwVss_2v26wq.webp [2m(before: 162kB, after: 56kB)[22m [2m(+242ms)[22m [2m(280/456)[22m
+2026-03-31T20:00:32.3540377Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.CRSqOz3n_1ghbtk.webp [2m(before: 144kB, after: 101kB)[22m [2m(+331ms)[22m [2m(281/456)[22m
+2026-03-31T20:00:32.4219505Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.BjQoDf64_h3hIL.webp [2m(before: 117kB, after: 8kB)[22m [2m(+67ms)[22m [2m(282/456)[22m
+2026-03-31T20:00:32.4426878Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.DYtn0gqP_v1qG.webp [2m(before: 424kB, after: 414kB)[22m [2m(+450ms)[22m [2m(283/456)[22m
+2026-03-31T20:00:32.5050710Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.KQz4IE46_Z2j28E9.webp [2m(before: 166kB, after: 14kB)[22m [2m(+62ms)[22m [2m(284/456)[22m
+2026-03-31T20:00:32.6105832Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.BjQoDf64_Z22MNJE.webp [2m(before: 117kB, after: 28kB)[22m [2m(+189ms)[22m [2m(285/456)[22m
+2026-03-31T20:00:32.6932747Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.KQz4IE46_Zsfr4M.webp [2m(before: 166kB, after: 41kB)[22m [2m(+188ms)[22m [2m(286/456)[22m
+2026-03-31T20:00:32.7390616Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.BjQoDf64_Wj2JE.jpg [2m(before: 117kB, after: 79kB)[22m [2m(+128ms)[22m [2m(287/456)[22m
+2026-03-31T20:00:32.8151414Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.KQz4IE46_Z1DyKs5.jpg [2m(before: 166kB, after: 103kB)[22m [2m(+122ms)[22m [2m(288/456)[22m
+2026-03-31T20:00:32.9096708Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.BjQoDf64_1yVV1J.webp [2m(before: 117kB, after: 24kB)[22m [2m(+170ms)[22m [2m(289/456)[22m
+2026-03-31T20:00:32.9810534Z [2m20:00:32[22m   [32m▶[39m /_astro/cover.KQz4IE46_Zm9qGL.webp [2m(before: 166kB, after: 36kB)[22m [2m(+166ms)[22m [2m(290/456)[22m
+2026-03-31T20:00:33.0561984Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.IIXkwVss_1LpxxJ.webp [2m(before: 162kB, after: 132kB)[22m [2m(+756ms)[22m [2m(291/456)[22m
+2026-03-31T20:00:33.1033452Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.DLy4OtNV_112eAd.webp [2m(before: 92kB, after: 61kB)[22m [2m(+824ms)[22m [2m(292/456)[22m
+2026-03-31T20:00:33.1512377Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.BjQoDf64_29FAjm.webp [2m(before: 117kB, after: 46kB)[22m [2m(+241ms)[22m [2m(293/456)[22m
+2026-03-31T20:00:33.1984553Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.DLy4OtNV_Z1dKWPW.webp [2m(before: 92kB, after: 19kB)[22m [2m(+95ms)[22m [2m(294/456)[22m
+2026-03-31T20:00:33.2885212Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.KQz4IE46_ZrccSn.webp [2m(before: 166kB, after: 60kB)[22m [2m(+307ms)[22m [2m(295/456)[22m
+2026-03-31T20:00:33.3821917Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.DLy4OtNV_TznDB.webp [2m(before: 92kB, after: 32kB)[22m [2m(+184ms)[22m [2m(296/456)[22m
+2026-03-31T20:00:33.4203079Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.IIXkwVss_1kXeaH.webp [2m(before: 162kB, after: 107kB)[22m [2m(+364ms)[22m [2m(297/456)[22m
+2026-03-31T20:00:33.4321813Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.Bs-pkoGI_80UKE.webp [2m(before: 54kB, after: 3kB)[22m [2m(+50ms)[22m [2m(298/456)[22m
+2026-03-31T20:00:33.4909242Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.CADmqcG2_ZCVQoJ.webp [2m(before: 237kB, after: 16kB)[22m [2m(+70ms)[22m [2m(299/456)[22m
+2026-03-31T20:00:33.5965380Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.Bs-pkoGI_ZAlHcl.webp [2m(before: 54kB, after: 9kB)[22m [2m(+164ms)[22m [2m(300/456)[22m
+2026-03-31T20:00:33.6776876Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.CADmqcG2_XWe5H.webp [2m(before: 237kB, after: 69kB)[22m [2m(+187ms)[22m [2m(301/456)[22m
+2026-03-31T20:00:33.7050260Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.Bs-pkoGI_ZFxNtq.jpg [2m(before: 54kB, after: 38kB)[22m [2m(+108ms)[22m [2m(302/456)[22m
+2026-03-31T20:00:33.8025475Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.CADmqcG2_2uh0jG.jpg [2m(before: 237kB, after: 148kB)[22m [2m(+125ms)[22m [2m(303/456)[22m
+2026-03-31T20:00:33.8573544Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.Bs-pkoGI_ZufGOk.webp [2m(before: 54kB, after: 8kB)[22m [2m(+152ms)[22m [2m(304/456)[22m
+2026-03-31T20:00:33.9285059Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.BjQoDf64_Z20r9iA.webp [2m(before: 117kB, after: 119kB)[22m [2m(+777ms)[22m [2m(305/456)[22m
+2026-03-31T20:00:33.9768188Z [2m20:00:33[22m   [32m▶[39m /_astro/cover.CADmqcG2_1iUPxD.webp [2m(before: 237kB, after: 57kB)[22m [2m(+174ms)[22m [2m(306/456)[22m
+2026-03-31T20:00:34.0569535Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.KQz4IE46_2oVuN6.webp [2m(before: 166kB, after: 144kB)[22m [2m(+768ms)[22m [2m(307/456)[22m
+2026-03-31T20:00:34.0633865Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.Bs-pkoGI_vNJ5h.webp [2m(before: 54kB, after: 14kB)[22m [2m(+206ms)[22m [2m(308/456)[22m
+2026-03-31T20:00:34.2227241Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.CADmqcG2_Z1nxzUx.webp [2m(before: 237kB, after: 111kB)[22m [2m(+246ms)[22m [2m(309/456)[22m
+2026-03-31T20:00:34.2403721Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.BjQoDf64_ZejvMJ.webp [2m(before: 117kB, after: 85kB)[22m [2m(+311ms)[22m [2m(310/456)[22m
+2026-03-31T20:00:34.3083322Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.KtvkCnPa_VATLH.webp [2m(before: 153kB, after: 15kB)[22m [2m(+68ms)[22m [2m(311/456)[22m
+2026-03-31T20:00:34.4231573Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.KQz4IE46_1Xubq4.webp [2m(before: 166kB, after: 110kB)[22m [2m(+366ms)[22m [2m(312/456)[22m
+2026-03-31T20:00:34.4811110Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.BPx11g4A_187sNH.webp [2m(before: 102kB, after: 9kB)[22m [2m(+57ms)[22m [2m(313/456)[22m
+2026-03-31T20:00:34.5033581Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.KtvkCnPa_Z19PmLT.webp [2m(before: 153kB, after: 47kB)[22m [2m(+195ms)[22m [2m(314/456)[22m
+2026-03-31T20:00:34.6273070Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.KtvkCnPa_Z8zaJ0.jpg [2m(before: 153kB, after: 114kB)[22m [2m(+124ms)[22m [2m(315/456)[22m
+2026-03-31T20:00:34.6503458Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.BPx11g4A_Z26hXpR.webp [2m(before: 102kB, after: 29kB)[22m [2m(+169ms)[22m [2m(316/456)[22m
+2026-03-31T20:00:34.7434497Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.Bs-pkoGI_ZcMNSp.webp [2m(before: 54kB, after: 36kB)[22m [2m(+680ms)[22m [2m(317/456)[22m
+2026-03-31T20:00:34.7693666Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.BPx11g4A_Z1CQJYh.jpg [2m(before: 102kB, after: 68kB)[22m [2m(+119ms)[22m [2m(318/456)[22m
+2026-03-31T20:00:34.7989795Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.KtvkCnPa_54Cgu.webp [2m(before: 153kB, after: 40kB)[22m [2m(+172ms)[22m [2m(319/456)[22m
+2026-03-31T20:00:34.9245611Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.BPx11g4A_Z20bX2Q.webp [2m(before: 102kB, after: 25kB)[22m [2m(+155ms)[22m [2m(320/456)[22m
+2026-03-31T20:00:34.9730255Z [2m20:00:34[22m   [32m▶[39m /_astro/cover.CADmqcG2_Z1whBvB.webp [2m(before: 237kB, after: 266kB)[22m [2m(+750ms)[22m [2m(321/456)[22m
+2026-03-31T20:00:35.0412934Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.Bs-pkoGI_ZDf8gr.webp [2m(before: 54kB, after: 27kB)[22m [2m(+298ms)[22m [2m(322/456)[22m
+2026-03-31T20:00:35.0636395Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.KtvkCnPa_13MmOH.webp [2m(before: 153kB, after: 70kB)[22m [2m(+264ms)[22m [2m(323/456)[22m
+2026-03-31T20:00:35.0675051Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.BEj9DRF6_Z28QixL.jpg [2m(before: 240kB, after: 131kB)[22m [2m(+26ms)[22m [2m(324/456)[22m
+2026-03-31T20:00:35.0972005Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.BEj9DRF6_GTuHI.webp [2m(before: 240kB, after: 17kB)[22m [2m(+29ms)[22m [2m(325/456)[22m
+2026-03-31T20:00:35.1483805Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.BPx11g4A_Zqucpz.webp [2m(before: 102kB, after: 41kB)[22m [2m(+224ms)[22m [2m(326/456)[22m
+2026-03-31T20:00:35.1824839Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.BEj9DRF6_ZEp72B.webp [2m(before: 240kB, after: 49kB)[22m [2m(+85ms)[22m [2m(327/456)[22m
+2026-03-31T20:00:35.3367269Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.CADmqcG2_iKLS.webp [2m(before: 237kB, after: 213kB)[22m [2m(+363ms)[22m [2m(328/456)[22m
+2026-03-31T20:00:35.3485517Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.BEj9DRF6_Z26tUOm.webp [2m(before: 240kB, after: 88kB)[22m [2m(+166ms)[22m [2m(329/456)[22m
+2026-03-31T20:00:35.4659723Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.CEgG2c9G_Z1uAEW7.jpg [2m(before: 100kB, after: 64kB)[22m [2m(+128ms)[22m [2m(330/456)[22m
+2026-03-31T20:00:35.5302740Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.CEgG2c9G_ZkEMlM.webp [2m(before: 100kB, after: 7kB)[22m [2m(+65ms)[22m [2m(331/456)[22m
+2026-03-31T20:00:35.6962359Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.CEgG2c9G_1BcTAA.webp [2m(before: 100kB, after: 18kB)[22m [2m(+166ms)[22m [2m(332/456)[22m
+2026-03-31T20:00:35.8508282Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.BPx11g4A_2pDvgT.webp [2m(before: 102kB, after: 93kB)[22m [2m(+702ms)[22m [2m(333/456)[22m
+2026-03-31T20:00:35.9315495Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.CEgG2c9G_Zie7np.webp [2m(before: 100kB, after: 31kB)[22m [2m(+235ms)[22m [2m(334/456)[22m
+2026-03-31T20:00:35.9404527Z [2m20:00:35[22m   [32m▶[39m /_astro/cover.KtvkCnPa_Z15JeCE.webp [2m(before: 153kB, after: 167kB)[22m [2m(+876ms)[22m [2m(335/456)[22m
+2026-03-31T20:00:36.0926294Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.BEj9DRF6_Z1U9jrP.webp [2m(before: 240kB, after: 196kB)[22m [2m(+744ms)[22m [2m(336/456)[22m
+2026-03-31T20:00:36.1663271Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.BPx11g4A_1YcbSR.webp [2m(before: 102kB, after: 73kB)[22m [2m(+315ms)[22m [2m(337/456)[22m
+2026-03-31T20:00:36.1980913Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.BEj9DRF6_ZxxjMN.webp [2m(before: 240kB, after: 58kB)[22m [2m(+106ms)[22m [2m(338/456)[22m
+2026-03-31T20:00:36.2627353Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.KtvkCnPa_ZRcOAu.webp [2m(before: 153kB, after: 112kB)[22m [2m(+322ms)[22m [2m(339/456)[22m
+2026-03-31T20:00:36.2978244Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.CqGQ_GY3_6pACi.jpg [2m(before: 219kB, after: 124kB)[22m [2m(+131ms)[22m [2m(340/456)[22m
+2026-03-31T20:00:36.3340416Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.jgNi6T0S_1UaEUA.webp [2m(before: 190kB, after: 12kB)[22m [2m(+71ms)[22m [2m(341/456)[22m
+2026-03-31T20:00:36.3611366Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.CqGQ_GY3_1PzaXk.webp [2m(before: 219kB, after: 13kB)[22m [2m(+63ms)[22m [2m(342/456)[22m
+2026-03-31T20:00:36.3701452Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.BEj9DRF6_Z24cxdP.webp [2m(before: 240kB, after: 98kB)[22m [2m(+172ms)[22m [2m(343/456)[22m
+2026-03-31T20:00:36.4248640Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.CRzdcZiR_Z9tfiG.webp [2m(before: 52kB, after: 3kB)[22m [2m(+54ms)[22m [2m(344/456)[22m
+2026-03-31T20:00:36.5294231Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.jgNi6T0S_Z1jeLiY.webp [2m(before: 190kB, after: 39kB)[22m [2m(+195ms)[22m [2m(345/456)[22m
+2026-03-31T20:00:36.5374546Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.CqGQ_GY3_Z1hJfSe.webp [2m(before: 219kB, after: 45kB)[22m [2m(+176ms)[22m [2m(346/456)[22m
+2026-03-31T20:00:36.5819896Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.CRzdcZiR_1GirgF.webp [2m(before: 52kB, after: 7kB)[22m [2m(+155ms)[22m [2m(347/456)[22m
+2026-03-31T20:00:36.6561863Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.CEgG2c9G_Z2whxuR.webp [2m(before: 100kB, after: 75kB)[22m [2m(+725ms)[22m [2m(348/456)[22m
+2026-03-31T20:00:36.6615517Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.jgNi6T0S_2qWOeq.jpg [2m(before: 190kB, after: 108kB)[22m [2m(+132ms)[22m [2m(349/456)[22m
+2026-03-31T20:00:36.7011354Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.CRzdcZiR_ZSV1c0.jpg [2m(before: 52kB, after: 34kB)[22m [2m(+121ms)[22m [2m(350/456)[22m
+2026-03-31T20:00:36.7888986Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.CqGQ_GY3_1iM9c0.webp [2m(before: 219kB, after: 89kB)[22m [2m(+251ms)[22m [2m(351/456)[22m
+2026-03-31T20:00:36.8437417Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.jgNi6T0S_Z1d8KUX.webp [2m(before: 190kB, after: 32kB)[22m [2m(+182ms)[22m [2m(352/456)[22m
+2026-03-31T20:00:36.8464239Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.CRzdcZiR_1MorDG.webp [2m(before: 52kB, after: 6kB)[22m [2m(+145ms)[22m [2m(353/456)[22m
+2026-03-31T20:00:36.9985165Z [2m20:00:36[22m   [32m▶[39m /_astro/cover.CEgG2c9G_27sgV2.webp [2m(before: 100kB, after: 57kB)[22m [2m(+342ms)[22m [2m(354/456)[22m
+2026-03-31T20:00:37.0543510Z [2m20:00:37[22m   [32m▶[39m /_astro/cover.CRzdcZiR_iqwmH.webp [2m(before: 52kB, after: 10kB)[22m [2m(+207ms)[22m [2m(355/456)[22m
+2026-03-31T20:00:37.1106382Z [2m20:00:37[22m   [32m▶[39m /_astro/cover.jgNi6T0S_Z1qQL0N.webp [2m(before: 190kB, after: 60kB)[22m [2m(+267ms)[22m [2m(356/456)[22m
+2026-03-31T20:00:37.1182376Z [2m20:00:37[22m   [32m▶[39m /_astro/cover.4q0xtsQ-_Z71LDq.jpg [2m(before: 278kB, after: 186kB)[22m [2m(+120ms)[22m [2m(357/456)[22m
+2026-03-31T20:00:37.1882845Z [2m20:00:37[22m   [32m▶[39m /_astro/cover.4q0xtsQ-_Z1zTUyf.webp [2m(before: 278kB, after: 24kB)[22m [2m(+70ms)[22m [2m(358/456)[22m
+2026-03-31T20:00:37.3797943Z [2m20:00:37[22m   [32m▶[39m /_astro/cover.4q0xtsQ-_Zm7Nx4.webp [2m(before: 278kB, after: 76kB)[22m [2m(+191ms)[22m [2m(359/456)[22m
+2026-03-31T20:00:37.5883918Z [2m20:00:37[22m   [32m▶[39m /_astro/cover.CqGQ_GY3_ZUggUs.webp [2m(before: 219kB, after: 231kB)[22m [2m(+799ms)[22m [2m(360/456)[22m
+2026-03-31T20:00:37.6646241Z [2m20:00:37[22m   [32m▶[39m /_astro/cover.4q0xtsQ-_15kKUh.webp [2m(before: 278kB, after: 141kB)[22m [2m(+285ms)[22m [2m(361/456)[22m
+2026-03-31T20:00:37.7336965Z [2m20:00:37[22m   [32m▶[39m /_astro/cover.CRzdcZiR_Z1UBSJK.webp [2m(before: 52kB, after: 28kB)[22m [2m(+679ms)[22m [2m(362/456)[22m
+2026-03-31T20:00:37.9805593Z [2m20:00:37[22m   [32m▶[39m /_astro/cover.jgNi6T0S_1pgVFF.webp [2m(before: 190kB, after: 160kB)[22m [2m(+870ms)[22m [2m(363/456)[22m
+2026-03-31T20:00:38.0239948Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.CqGQ_GY3_Z1lHAiu.webp [2m(before: 219kB, after: 182kB)[22m [2m(+430ms)[22m [2m(364/456)[22m
+2026-03-31T20:00:38.1167179Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.CRzdcZiR_Z2m4d7M.webp [2m(before: 52kB, after: 21kB)[22m [2m(+383ms)[22m [2m(365/456)[22m
+2026-03-31T20:00:38.1489644Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.Dd_woNhy_1CyFj4.jpg [2m(before: 39kB, after: 26kB)[22m [2m(+130ms)[22m [2m(366/456)[22m
+2026-03-31T20:00:38.2014195Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.Dd_woNhy_zwkDU.webp [2m(before: 39kB, after: 3kB)[22m [2m(+52ms)[22m [2m(367/456)[22m
+2026-03-31T20:00:38.2421319Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.BhqmEIxY_Z1BBs74.jpg [2m(before: 206kB, after: 119kB)[22m [2m(+125ms)[22m [2m(368/456)[22m
+2026-03-31T20:00:38.3062505Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.BhqmEIxY_Z19UxC2.webp [2m(before: 206kB, after: 17kB)[22m [2m(+64ms)[22m [2m(369/456)[22m
+2026-03-31T20:00:38.3455091Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.Dd_woNhy_2wp2Bi.webp [2m(before: 39kB, after: 7kB)[22m [2m(+144ms)[22m [2m(370/456)[22m
+2026-03-31T20:00:38.4224107Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.jgNi6T0S_XOCiD.webp [2m(before: 190kB, after: 125kB)[22m [2m(+442ms)[22m [2m(371/456)[22m
+2026-03-31T20:00:38.4773529Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.BhqmEIxY_LW9kl.webp [2m(before: 206kB, after: 43kB)[22m [2m(+171ms)[22m [2m(372/456)[22m
+2026-03-31T20:00:38.4939828Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.Cd80vQ9G_Z2eTqPC.webp [2m(before: 246kB, after: 12kB)[22m [2m(+69ms)[22m [2m(373/456)[22m
+2026-03-31T20:00:38.5501762Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.Dd_woNhy_Z2ffTVa.webp [2m(before: 39kB, after: 12kB)[22m [2m(+204ms)[22m [2m(374/456)[22m
+2026-03-31T20:00:38.7543898Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.Cd80vQ9G_Z2lGRpb.webp [2m(before: 246kB, after: 64kB)[22m [2m(+263ms)[22m [2m(375/456)[22m
+2026-03-31T20:00:38.7693725Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.BhqmEIxY_ZpeTxm.webp [2m(before: 206kB, after: 72kB)[22m [2m(+292ms)[22m [2m(376/456)[22m
+2026-03-31T20:00:38.7991021Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.4q0xtsQ-_igEiO.webp [2m(before: 278kB, after: 323kB)[22m [2m(+1.13s)[22m [2m(377/456)[22m
+2026-03-31T20:00:38.8734856Z [2m20:00:38[22m   [32m▶[39m /_astro/cover.Cd80vQ9G_Z5Y6cn.jpg [2m(before: 246kB, after: 155kB)[22m [2m(+119ms)[22m [2m(378/456)[22m
+2026-03-31T20:00:39.0582599Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.Cd80vQ9G_Z117jOr.webp [2m(before: 246kB, after: 51kB)[22m [2m(+184ms)[22m [2m(379/456)[22m
+2026-03-31T20:00:39.2200483Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.4q0xtsQ-_ZCDj5m.webp [2m(before: 278kB, after: 237kB)[22m [2m(+421ms)[22m [2m(380/456)[22m
+2026-03-31T20:00:39.2470723Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.JSCJqv4X_ZDuNNu.webp [2m(before: 36kB, after: 3kB)[22m [2m(+27ms)[22m [2m(381/456)[22m
+2026-03-31T20:00:39.3056831Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.Dd_woNhy_ARMKj.webp [2m(before: 39kB, after: 34kB)[22m [2m(+755ms)[22m [2m(382/456)[22m
+2026-03-31T20:00:39.3318061Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.JSCJqv4X_1mJkfy.webp [2m(before: 36kB, after: 6kB)[22m [2m(+85ms)[22m [2m(383/456)[22m
+2026-03-31T20:00:39.4250058Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.Cd80vQ9G_16nrmk.webp [2m(before: 246kB, after: 109kB)[22m [2m(+367ms)[22m [2m(384/456)[22m
+2026-03-31T20:00:39.4793785Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.JSCJqv4X_1oCAhN.webp [2m(before: 36kB, after: 10kB)[22m [2m(+147ms)[22m [2m(385/456)[22m
+2026-03-31T20:00:39.6022536Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.BhqmEIxY_2qSN97.webp [2m(before: 206kB, after: 180kB)[22m [2m(+832ms)[22m [2m(386/456)[22m
+2026-03-31T20:00:39.6347458Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.Dd_woNhy_aqtnh.webp [2m(before: 39kB, after: 26kB)[22m [2m(+329ms)[22m [2m(387/456)[22m
+2026-03-31T20:00:39.6683887Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.9skQyr3r_Zrwo7A.webp [2m(before: 121kB, after: 8kB)[22m [2m(+34ms)[22m [2m(388/456)[22m
+2026-03-31T20:00:39.7424079Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.9skQyr3r_1yHJVs.webp [2m(before: 121kB, after: 19kB)[22m [2m(+74ms)[22m [2m(389/456)[22m
+2026-03-31T20:00:39.7909783Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.BhqmEIxY_FQ8Wk.webp [2m(before: 206kB, after: 50kB)[22m [2m(+189ms)[22m [2m(390/456)[22m
+2026-03-31T20:00:39.8764257Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.9skQyr3r_2oCuKO.webp [2m(before: 121kB, after: 32kB)[22m [2m(+134ms)[22m [2m(391/456)[22m
+2026-03-31T20:00:39.9489274Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.JSCJqv4X_AA9nf.webp [2m(before: 36kB, after: 20kB)[22m [2m(+469ms)[22m [2m(392/456)[22m
+2026-03-31T20:00:39.9975816Z [2m20:00:39[22m   [32m▶[39m /_astro/cover.CNs-P1WG_Z1NTTYU.webp [2m(before: 289kB, after: 27kB)[22m [2m(+49ms)[22m [2m(393/456)[22m
+2026-03-31T20:00:40.1039265Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.CNs-P1WG_cke48.webp [2m(before: 289kB, after: 86kB)[22m [2m(+106ms)[22m [2m(394/456)[22m
+2026-03-31T20:00:40.1844861Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.BhqmEIxY_20rtL5.webp [2m(before: 206kB, after: 142kB)[22m [2m(+393ms)[22m [2m(395/456)[22m
+2026-03-31T20:00:40.2210929Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.sZ7CBdo4_23qRkw.webp [2m(before: 125kB, after: 11kB)[22m [2m(+37ms)[22m [2m(396/456)[22m
+2026-03-31T20:00:40.2910879Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.CNs-P1WG_Hgsd8.webp [2m(before: 289kB, after: 142kB)[22m [2m(+187ms)[22m [2m(397/456)[22m
+2026-03-31T20:00:40.3079844Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.sZ7CBdo4_Z10v7pm.webp [2m(before: 125kB, after: 24kB)[22m [2m(+85ms)[22m [2m(398/456)[22m
+2026-03-31T20:00:40.3694509Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.Cd80vQ9G_jjkJR.webp [2m(before: 246kB, after: 277kB)[22m [2m(+944ms)[22m [2m(399/456)[22m
+2026-03-31T20:00:40.4374738Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.9skQyr3r_1AA3Qg.webp [2m(before: 121kB, after: 80kB)[22m [2m(+561ms)[22m [2m(400/456)[22m
+2026-03-31T20:00:40.4422272Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.sZ7CBdo4_Z1dqr2z.webp [2m(before: 125kB, after: 36kB)[22m [2m(+136ms)[22m [2m(401/456)[22m
+2026-03-31T20:00:40.4730489Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.DJQYyVQk_ZPXSiH.webp [2m(before: 84kB, after: 5kB)[22m [2m(+35ms)[22m [2m(402/456)[22m
+2026-03-31T20:00:40.5421533Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.DJQYyVQk_1agfKl.webp [2m(before: 84kB, after: 13kB)[22m [2m(+70ms)[22m [2m(403/456)[22m
+2026-03-31T20:00:40.6693704Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.DJQYyVQk_93rK8.webp [2m(before: 84kB, after: 22kB)[22m [2m(+127ms)[22m [2m(404/456)[22m
+2026-03-31T20:00:40.7885897Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.Cd80vQ9G_ZBACDj.webp [2m(before: 246kB, after: 198kB)[22m [2m(+419ms)[22m [2m(405/456)[22m
+2026-03-31T20:00:40.8342519Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.BoG9LtiW_ZUvM0i.webp [2m(before: 228kB, after: 20kB)[22m [2m(+45ms)[22m [2m(406/456)[22m
+2026-03-31T20:00:40.9296810Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.BoG9LtiW_15Im3K.webp [2m(before: 228kB, after: 52kB)[22m [2m(+95ms)[22m [2m(407/456)[22m
+2026-03-31T20:00:40.9831782Z [2m20:00:40[22m   [32m▶[39m /_astro/cover.CNs-P1WG_Z5KXGq.webp [2m(before: 289kB, after: 286kB)[22m [2m(+692ms)[22m [2m(408/456)[22m
+2026-03-31T20:00:41.0069739Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.sZ7CBdo4_Z21sRW8.webp [2m(before: 125kB, after: 79kB)[22m [2m(+565ms)[22m [2m(409/456)[22m
+2026-03-31T20:00:41.0232463Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.DnxXLg5I_3ztFz.webp [2m(before: 194kB, after: 18kB)[22m [2m(+40ms)[22m [2m(410/456)[22m
+2026-03-31T20:00:41.0457590Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.JES4K5sM_Z1j9VSK.webp [2m(before: 153kB, after: 11kB)[22m [2m(+39ms)[22m [2m(411/456)[22m
+2026-03-31T20:00:41.0965066Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.BoG9LtiW_Z29EkSa.webp [2m(before: 228kB, after: 88kB)[22m [2m(+166ms)[22m [2m(412/456)[22m
+2026-03-31T20:00:41.1086337Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.DnxXLg5I_24OCJC.webp [2m(before: 194kB, after: 46kB)[22m [2m(+85ms)[22m [2m(413/456)[22m
+2026-03-31T20:00:41.1317062Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.JES4K5sM_H5cai.webp [2m(before: 153kB, after: 27kB)[22m [2m(+85ms)[22m [2m(414/456)[22m
+2026-03-31T20:00:41.2055056Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.DJQYyVQk_ZDXY9q.webp [2m(before: 84kB, after: 51kB)[22m [2m(+536ms)[22m [2m(415/456)[22m
+2026-03-31T20:00:41.2529361Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.DpbSRCWC_ZG3sjk.webp [2m(before: 321kB, after: 17kB)[22m [2m(+47ms)[22m [2m(416/456)[22m
+2026-03-31T20:00:41.2541966Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.DnxXLg5I_Z27EIvP.webp [2m(before: 194kB, after: 74kB)[22m [2m(+145ms)[22m [2m(417/456)[22m
+2026-03-31T20:00:41.2815823Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.JES4K5sM_1523Sp.webp [2m(before: 153kB, after: 44kB)[22m [2m(+149ms)[22m [2m(418/456)[22m
+2026-03-31T20:00:41.3565914Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.DpbSRCWC_1kbFJI.webp [2m(before: 321kB, after: 67kB)[22m [2m(+104ms)[22m [2m(419/456)[22m
+2026-03-31T20:00:41.5363851Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.DpbSRCWC_6wvBS.webp [2m(before: 321kB, after: 141kB)[22m [2m(+179ms)[22m [2m(420/456)[22m
+2026-03-31T20:00:41.7436390Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.BoG9LtiW_27um1d.webp [2m(before: 228kB, after: 181kB)[22m [2m(+647ms)[22m [2m(421/456)[22m
+2026-03-31T20:00:41.7815333Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.Ke294tI0_Zr99EN.webp [2m(before: 147kB, after: 10kB)[22m [2m(+37ms)[22m [2m(422/456)[22m
+2026-03-31T20:00:41.8424505Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.DnxXLg5I_29tXnx.webp [2m(before: 194kB, after: 155kB)[22m [2m(+588ms)[22m [2m(423/456)[22m
+2026-03-31T20:00:41.8626803Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.Ke294tI0_1z5Yof.webp [2m(before: 147kB, after: 23kB)[22m [2m(+81ms)[22m [2m(424/456)[22m
+2026-03-31T20:00:41.8882140Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.B4MkRQu2_2c83fC.webp [2m(before: 233kB, after: 20kB)[22m [2m(+45ms)[22m [2m(425/456)[22m
+2026-03-31T20:00:41.8924805Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.JES4K5sM_gYBXQ.webp [2m(before: 153kB, after: 111kB)[22m [2m(+611ms)[22m [2m(426/456)[22m
+2026-03-31T20:00:41.9343194Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.D8lChspf_Xh1BE.webp [2m(before: 182kB, after: 17kB)[22m [2m(+42ms)[22m [2m(427/456)[22m
+2026-03-31T20:00:41.9875479Z [2m20:00:41[22m   [32m▶[39m /_astro/cover.B4MkRQu2_ZQNVug.webp [2m(before: 233kB, after: 53kB)[22m [2m(+99ms)[22m [2m(428/456)[22m
+2026-03-31T20:00:42.0116339Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.Ke294tI0_Z2tKhUI.webp [2m(before: 147kB, after: 41kB)[22m [2m(+147ms)[22m [2m(429/456)[22m
+2026-03-31T20:00:42.0233457Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.D8lChspf_Z25EX8e.webp [2m(before: 182kB, after: 43kB)[22m [2m(+89ms)[22m [2m(430/456)[22m
+2026-03-31T20:00:42.1526068Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.B4MkRQu2_Z1Sc2ls.webp [2m(before: 233kB, after: 88kB)[22m [2m(+165ms)[22m [2m(431/456)[22m
+2026-03-31T20:00:42.1743629Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.D8lChspf_JWho2.webp [2m(before: 182kB, after: 68kB)[22m [2m(+151ms)[22m [2m(432/456)[22m
+2026-03-31T20:00:42.2256102Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.DpbSRCWC_ZGuUhF.webp [2m(before: 321kB, after: 351kB)[22m [2m(+689ms)[22m [2m(433/456)[22m
+2026-03-31T20:00:42.2649931Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.DzdvKGao_Z1pq3BQ.webp [2m(before: 189kB, after: 12kB)[22m [2m(+39ms)[22m [2m(434/456)[22m
+2026-03-31T20:00:42.3494582Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.DzdvKGao_AO5rc.webp [2m(before: 189kB, after: 32kB)[22m [2m(+84ms)[22m [2m(435/456)[22m
+2026-03-31T20:00:42.4985417Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.DzdvKGao_Z269lvD.webp [2m(before: 189kB, after: 58kB)[22m [2m(+149ms)[22m [2m(436/456)[22m
+2026-03-31T20:00:42.6074282Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.Ke294tI0_1MooXE.webp [2m(before: 147kB, after: 104kB)[22m [2m(+597ms)[22m [2m(437/456)[22m
+2026-03-31T20:00:42.6513209Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.DAZ3fZBt_Z1mbNDg.webp [2m(before: 273kB, after: 17kB)[22m [2m(+44ms)[22m [2m(438/456)[22m
+2026-03-31T20:00:42.7496561Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.DAZ3fZBt_E3kpM.webp [2m(before: 273kB, after: 58kB)[22m [2m(+98ms)[22m [2m(439/456)[22m
+2026-03-31T20:00:42.8046917Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.D8lChspf_Z359vw.webp [2m(before: 182kB, after: 142kB)[22m [2m(+630ms)[22m [2m(440/456)[22m
+2026-03-31T20:00:42.8244724Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.B4MkRQu2_2nWExU.webp [2m(before: 233kB, after: 187kB)[22m [2m(+672ms)[22m [2m(441/456)[22m
+2026-03-31T20:00:42.8470409Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.V7lbr5l3_2tAvIF.webp [2m(before: 223kB, after: 17kB)[22m [2m(+42ms)[22m [2m(442/456)[22m
+2026-03-31T20:00:42.8660284Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.4XOAbwF8_2kHnrM.webp [2m(before: 192kB, after: 13kB)[22m [2m(+42ms)[22m [2m(443/456)[22m
+2026-03-31T20:00:42.9256815Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.DAZ3fZBt_ZrTJel.webp [2m(before: 273kB, after: 106kB)[22m [2m(+176ms)[22m [2m(444/456)[22m
+2026-03-31T20:00:42.9373808Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.V7lbr5l3_Zzlt1d.webp [2m(before: 223kB, after: 46kB)[22m [2m(+90ms)[22m [2m(445/456)[22m
+2026-03-31T20:00:42.9530245Z [2m20:00:42[22m   [32m▶[39m /_astro/cover.4XOAbwF8_ZIeBi6.webp [2m(before: 192kB, after: 33kB)[22m [2m(+87ms)[22m [2m(446/456)[22m
+2026-03-31T20:00:43.0973550Z [2m20:00:43[22m   [32m▶[39m /_astro/cover.V7lbr5l3_1T4hA8.webp [2m(before: 223kB, after: 82kB)[22m [2m(+158ms)[22m [2m(447/456)[22m
+2026-03-31T20:00:43.0980711Z [2m20:00:43[22m   [32m▶[39m /_astro/cover.DzdvKGao_2b0lnJ.webp [2m(before: 189kB, after: 135kB)[22m [2m(+600ms)[22m [2m(448/456)[22m
+2026-03-31T20:00:43.1023783Z [2m20:00:43[22m   [32m▶[39m /_astro/cover.4XOAbwF8_2sKdOC.webp [2m(before: 192kB, after: 56kB)[22m [2m(+149ms)[22m [2m(449/456)[22m
+2026-03-31T20:00:43.1331656Z [2m20:00:43[22m   [32m▶[39m /_astro/cover.BiS-393c_Zrpffh.webp [2m(before: 135kB, after: 4kB)[22m [2m(+35ms)[22m [2m(450/456)[22m
+2026-03-31T20:00:43.2126811Z [2m20:00:43[22m   [32m▶[39m /_astro/cover.BiS-393c_1yOSNL.webp [2m(before: 135kB, after: 17kB)[22m [2m(+79ms)[22m [2m(451/456)[22m
+2026-03-31T20:00:43.3527010Z [2m20:00:43[22m   [32m▶[39m /_astro/cover.BiS-393c_2sg0Qt.webp [2m(before: 135kB, after: 34kB)[22m [2m(+140ms)[22m [2m(452/456)[22m
+2026-03-31T20:00:43.5946421Z [2m20:00:43[22m   [32m▶[39m /_astro/cover.DAZ3fZBt_Z1fWb8T.webp [2m(before: 273kB, after: 236kB)[22m [2m(+669ms)[22m [2m(453/456)[22m
+2026-03-31T20:00:43.7417297Z [2m20:00:43[22m   [32m▶[39m /_astro/cover.4XOAbwF8_1EHLU4.webp [2m(before: 192kB, after: 137kB)[22m [2m(+639ms)[22m [2m(454/456)[22m
+2026-03-31T20:00:43.7493071Z [2m20:00:43[22m   [32m▶[39m /_astro/cover.V7lbr5l3_161PFz.webp [2m(before: 223kB, after: 171kB)[22m [2m(+654ms)[22m [2m(455/456)[22m
+2026-03-31T20:00:43.8248999Z [2m20:00:43[22m   [32m▶[39m /_astro/cover.BiS-393c_1EdyVU.webp [2m(before: 135kB, after: 87kB)[22m [2m(+472ms)[22m [2m(456/456)[22m
+2026-03-31T20:00:43.8250548Z [2m20:00:43[22m [32m✓ Completed in 28.86s.
+2026-03-31T20:00:43.8251034Z [39m
+2026-03-31T20:00:43.9193364Z [2m20:00:43[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist`
+2026-03-31T20:00:44.0710195Z ✓ Successfully compressed a total of 1 CSS file for 760 Bytes.
+2026-03-31T20:00:55.7515680Z [2m20:00:55[22m [34m[build][39m Waiting for integration [1m"astro-compress"[22m, hook [1m"astro:build:done"[22m...
+2026-03-31T20:00:55.7853984Z ✓ Successfully compressed a total of 166 HTML files for 1.2 MB.
+2026-03-31T20:00:55.9153456Z ✓ Successfully compressed a total of 1 JavaScript file for 1 Bytes.
+2026-03-31T20:00:55.9224521Z [2m20:00:55[22m [34m[astrowind][39m Updating `robots.txt` with `sitemap-index.xml` ...
+2026-03-31T20:00:55.9230549Z [2m20:00:55[22m [34m[build][39m 165 page(s) built in [1m49.09s[22m
+2026-03-31T20:00:55.9231594Z [2m20:00:55[22m [34m[build][39m [1mComplete![22m
+2026-03-31T20:00:56.0130553Z ##[group]Run git config user.name "github-actions[bot]"
+2026-03-31T20:00:56.0131162Z [36;1mgit config user.name "github-actions[bot]"[0m
+2026-03-31T20:00:56.0131629Z [36;1mgit config user.email "41898282+github-actions[bot]@users.noreply.github.com"[0m
+2026-03-31T20:00:56.0132066Z [36;1m[0m
+2026-03-31T20:00:56.0132853Z [36;1mgit add -A src/data/post src/assets/images/posts src/assets/images/library qwen-data/images qwen-data/publish-manifests qwen-data/events qwen-data/quality-audits qwen-data/writer-rotation-state.json[0m
+2026-03-31T20:00:56.0133712Z [36;1m[0m
+2026-03-31T20:00:56.0133920Z [36;1mif git diff --cached --quiet; then[0m
+2026-03-31T20:00:56.0134259Z [36;1m  echo "No generated article changes to commit."[0m
+2026-03-31T20:00:56.0134611Z [36;1m  echo "committed=false" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T20:00:56.0134897Z [36;1m  exit 0[0m
+2026-03-31T20:00:56.0135080Z [36;1mfi[0m
+2026-03-31T20:00:56.0135253Z [36;1m[0m
+2026-03-31T20:00:56.0135542Z [36;1mgit commit -m "chore(content): auto-generate article"[0m
+2026-03-31T20:00:56.0135869Z [36;1mgit push[0m
+2026-03-31T20:00:56.0136112Z [36;1mecho "committed=true" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T20:00:56.0163328Z shell: /usr/bin/bash -e {0}
+2026-03-31T20:00:56.0163571Z env:
+2026-03-31T20:00:56.0163828Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23816710710
+2026-03-31T20:00:56.0164163Z   QWEN_MAX_ARTICLES_PER_RUN: 4
+2026-03-31T20:00:56.0164459Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T20:00:56.0164767Z ##[endgroup]
+2026-03-31T20:00:56.2288260Z [main 03961a3] chore(content): auto-generate article
+2026-03-31T20:00:56.2289055Z  12 files changed, 7541 insertions(+), 2642 deletions(-)
+2026-03-31T20:00:56.2290315Z  create mode 100644 qwen-data/publish-manifests/house-appropriations-committee-posts-new-legislative-activit.json
+2026-03-31T20:00:56.2291414Z  create mode 100644 qwen-data/quality-audits/pipeline-2026-03-31T19-57-57-535Z.json
+2026-03-31T20:00:56.2292079Z  create mode 100644 src/assets/images/library/pixabay/2920069/cover.jpg
+2026-03-31T20:00:56.2292745Z  create mode 100644 src/assets/images/library/pixabay/2920069/metadata.json
+2026-03-31T20:00:56.2294090Z  create mode 100644 src/data/post/2026-03-31-house-appropriations-committee-posts-new-legislative-activit.mdx
+2026-03-31T20:00:57.3230200Z To https://github.com/VladChat/foseer.com
+2026-03-31T20:00:57.3230847Z    282a5ce..03961a3  main -> main
+2026-03-31T20:00:57.3311339Z ##[group]Run curl --fail --show-error --silent \
+2026-03-31T20:00:57.3311730Z [36;1mcurl --fail --show-error --silent \[0m
+2026-03-31T20:00:57.3312019Z [36;1m  -X POST \[0m
+2026-03-31T20:00:57.3312564Z [36;1m  -H "Authorization: ***" \[0m
+2026-03-31T20:00:57.3312887Z [36;1m  -H "Accept: application/vnd.github+json" \[0m
+2026-03-31T20:00:57.3313415Z [36;1m  https://api.github.com/repos/VladChat/foseer.com/actions/workflows/deploy.yml/dispatches \[0m
+2026-03-31T20:00:57.3313908Z [36;1m  -d '{"ref":"main"}'[0m
+2026-03-31T20:00:57.3340397Z shell: /usr/bin/bash -e {0}
+2026-03-31T20:00:57.3340639Z env:
+2026-03-31T20:00:57.3340892Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23816710710
+2026-03-31T20:00:57.3341237Z   QWEN_MAX_ARTICLES_PER_RUN: 4
+2026-03-31T20:00:57.3341538Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T20:00:57.3341843Z ##[endgroup]
+2026-03-31T20:00:58.5398522Z Post job cleanup.
+2026-03-31T20:00:58.7050031Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-92d60ddf14d49d621e750f1e8d8b6aa7fc5cc2ea92873665baa1bca1556f25fd, not saving cache.
+2026-03-31T20:00:58.7176136Z Post job cleanup.
+2026-03-31T20:00:58.8100862Z [command]/usr/bin/git version
+2026-03-31T20:00:58.8136801Z git version 2.53.0
+2026-03-31T20:00:58.8179237Z Temporarily overriding HOME='/home/runner/work/_temp/4c6ccd09-ef1d-48d6-8fe1-ac9c31eeb90d' before making global git config changes
+2026-03-31T20:00:58.8180214Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-31T20:00:58.8184691Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/foseer.com/foseer.com
+2026-03-31T20:00:58.8221177Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-31T20:00:58.8253671Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-31T20:00:58.8478034Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-31T20:00:58.8498746Z http.https://github.com/.extraheader
+2026-03-31T20:00:58.8511137Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-31T20:00:58.8541469Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-31T20:00:58.8761716Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-31T20:00:58.8792833Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-31T20:00:58.9120814Z Cleaning up orphan processes
+2026-03-31T20:00:58.9420952Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-node@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

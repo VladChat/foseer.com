@@ -1,0 +1,643 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-03-31T17-49-10-827Z",
+  "started_at": "2026-03-31T17:49:10.827Z",
+  "generated_at": "2026-03-31T17:49:47.222Z",
+  "success": false,
+  "hard_blocker": "Canonical tags invalid: Fewer than 3 canonical tags",
+  "stats": {
+    "discovery_candidates": 42,
+    "event_clusters": 8,
+    "briefs_normalized": 6,
+    "source_packs_assembled": 12,
+    "publishable_candidates": 2,
+    "selected_topic": "Strategy is accelerating its crypto purchases as rivals sit on the sidelines",
+    "selected_topics": [
+      "Strategy is accelerating its crypto purchases as rivals sit on the sidelines"
+    ],
+    "articles_attempted": 1,
+    "articles_published": 0,
+    "news_pool": {
+      "total": 59,
+      "active": 52,
+      "published": 7,
+      "ready_candidates": 4
+    },
+    "cache_stats": {
+      "mode": "cache_only",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": false,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 0,
+        "gdelt": 0,
+        "google": 0
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-cache",
+        "seed_root": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-data\\cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 72,
+            "fresh_files": 0,
+            "expired_files": 72,
+            "corrupt_files": 0,
+            "size_bytes": 1539591
+          },
+          "gdelt": {
+            "files": 7,
+            "fresh_files": 0,
+            "expired_files": 7,
+            "corrupt_files": 0,
+            "size_bytes": 34432
+          },
+          "google": {
+            "files": 63,
+            "fresh_files": 0,
+            "expired_files": 63,
+            "corrupt_files": 0,
+            "size_bytes": 1508804
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14290
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6298
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 289351
+          }
+        }
+      }
+    },
+    "duration_ms": 36281,
+    "ready_candidates": 2,
+    "additional_ready_candidates": 2,
+    "source_pack_attempts": 1,
+    "source_pack_retry_external_queries": 0,
+    "source_pack_retry_brave_queries": 0,
+    "source_pack_retry_estimated_tokens": 0,
+    "pre_draft_rejected": 1
+  },
+  "provider_stats": {
+    "mode": "cache_only",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": false,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 0,
+      "gdelt": 0,
+      "google": 0
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "runtime_root": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-cache",
+      "seed_root": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-data\\cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 72,
+          "fresh_files": 0,
+          "expired_files": 72,
+          "corrupt_files": 0,
+          "size_bytes": 1539591
+        },
+        "gdelt": {
+          "files": 7,
+          "fresh_files": 0,
+          "expired_files": 7,
+          "corrupt_files": 0,
+          "size_bytes": 34432
+        },
+        "google": {
+          "files": 63,
+          "fresh_files": 0,
+          "expired_files": 63,
+          "corrupt_files": 0,
+          "size_bytes": 1508804
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14290
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6298
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 289351
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "preDraftPreparation": {
+      "success": true,
+      "error": null,
+      "total": 2,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claimMapCreation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "articleDrafting": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "imageSupport": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "publishing": {
+      "success": false,
+      "error": "Strategy is accelerating its crypto purchases as rivals sit on the sidelines: Canonical tags invalid: Fewer than 3 canonical tags",
+      "total": 1,
+      "success_count": 0,
+      "failure_count": 1
+    },
+    "localVerification": {
+      "success": false,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 1,
+    "editorial_pass_count": 1,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "Strategy Ramps Up Bitcoin Buying as Corporate Rivals Hold Back",
+      "slug": "strategy-ramps-up-bitcoin-buying-as-corporate-rivals-hold-ba",
+      "published": false,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 2,
+          "unique_domains": 2,
+          "direct_event_source_count": 2,
+          "independent_event_domains": 2,
+          "source_consistency_score": 8.8,
+          "strong_match_count": 1,
+          "core_source_count": 2,
+          "supporting_source_count": 0,
+          "background_source_count": 4,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 9,
+          "background": 4
+        },
+        "publish_ready_sources": [
+          {
+            "title": "Strategy is accelerating its crypto purchases as rivals sit on the sidelines",
+            "domain": "cnbc.com",
+            "url": "https://cnbc.com/2026/03/27/strategy-is-accelerating-its-crypto-purchases-as-rivals-sit-on-the-sidelines.html",
+            "page_kind": "article",
+            "topic_id": "crypto-bitcoin",
+            "section_id": "business"
+          },
+          {
+            "title": "Fannie Mae opens door to crypto",
+            "domain": "therealdeal.com",
+            "url": "https://therealdeal.com/national/2026/03/27/fannie-mae-opens-door-to-crypto-backed-mortgages",
+            "page_kind": "article",
+            "topic_id": "crypto-bitcoin",
+            "section_id": "business"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "Strategy is accelerating its crypto purchases as rivals sit on the sidelines",
+            "domain": "cnbc.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": 8,
+            "source_quality_score": 46.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Crypto Market Update: ETF Outflows Cap Bitcoin Price Rebound",
+            "domain": "investingnews.com",
+            "page_kind": "article",
+            "same_event_score": 4,
+            "topic_fit_score": 7,
+            "source_quality_score": 18,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Fannie Mae opens door to crypto",
+            "domain": "therealdeal.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 7,
+            "source_quality_score": 18,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Mortgage giant Fannie Mae will soon accept crypto",
+            "domain": "finance.yahoo.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 8,
+            "source_quality_score": 16.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Coinbase Powers Crypto-Backed Fannie Mae Mortgages With New Partnership",
+            "domain": "finance.yahoo.com",
+            "page_kind": "official_release",
+            "same_event_score": 3,
+            "topic_fit_score": 7,
+            "source_quality_score": 16,
+            "article_likelihood": 8,
+            "genericity_score": 1
+          },
+          {
+            "role": "core",
+            "title": "Homebuyers can now use crypto as collateral for mortgage loans without selling their tokens",
+            "domain": "nbcconnecticut.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 8,
+            "source_quality_score": 14,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Crypto Stocks Near A Bottom After 60% Selloff: Analyst",
+            "domain": "bitcoinmagazine.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 7,
+            "source_quality_score": 14,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+            "domain": "economictimes.indiatimes.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 7,
+            "source_quality_score": 13,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Fannie Mae to Accept Crypto-backed Mortgages for the First Time",
+            "domain": "pymnts.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 6,
+            "source_quality_score": 12,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Blackstone-backed EPL and Indorama Ventures backed Indovida to merge",
+            "domain": "moneycontrol.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 9,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Intellectia",
+            "domain": "intellectia.ai",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 7,
+            "source_quality_score": 16.5,
+            "article_likelihood": 8,
+            "genericity_score": 2
+          },
+          {
+            "role": "background",
+            "title": "MAHA fans want action Trump hasn't delivered",
+            "domain": "politico.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 2,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "Fannie Mae opens door to crypto",
+              "url": "https://therealdeal.com/national/2026/03/27/fannie-mae-opens-door-to-crypto-backed-mortgages",
+              "overlap_ratio": 0,
+              "shared_tokens": []
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "Crypto",
+          "Bitcoin"
+        ],
+        "tag_slugs": [
+          "crypto-bitcoin",
+          "bitcoin"
+        ],
+        "primary_topic_tag": "Crypto",
+        "primary_topic_slug": "crypto-bitcoin",
+        "warnings": [
+          "Canonical tag set is thin (2)"
+        ],
+        "diagnostics": {
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "article_type": "report",
+          "source_entity_count": 0,
+          "source_title_count": 4,
+          "direct_source_title_count": 4,
+          "background_source_title_count": 0
+        },
+        "selected": [
+          {
+            "label": "Crypto",
+            "slug": "crypto-bitcoin",
+            "score": 40,
+            "reason": "Primary topic tag validated from topic_id=crypto-bitcoin",
+            "fallback": false
+          },
+          {
+            "label": "Bitcoin",
+            "slug": "bitcoin",
+            "score": 11,
+            "reason": "Theme match score 11",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": false,
+          "errors": [
+            "Fewer than 3 canonical tags"
+          ],
+          "warnings": []
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "crypto-bitcoin",
+              "label": "Crypto",
+              "type": "topic"
+            },
+            {
+              "slug": "bitcoin",
+              "label": "Bitcoin",
+              "type": "theme"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "crypto-bitcoin",
+            "topic_label": "Crypto",
+            "supported": true,
+            "matched_aliases": [
+              "Crypto",
+              "bitcoin"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pixabay",
+        "image_path": "~/assets/images/library/pixabay/6555612/cover.jpg",
+        "source_url": "https://pixabay.com/photos/bitcoin-cryptocurrency-finance-6555612/",
+        "selection_mode": "provider_download_new:pixabay:strong",
+        "query_used": "Bitcoin Buying crypto photo",
+        "relevance_tier": "strong",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "office",
+        "visual_type": "photo",
+        "entity_hints": [
+          "bitcoin",
+          "cryptocurrency",
+          "finance",
+          "blockchain",
+          "money",
+          "currency",
+          "crypto",
+          "coin"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "Strategy mortgage photo",
+          "Strategy crypto photo",
+          "Strategy photo",
+          "global Strategy photo",
+          "Bitcoin Buying mortgage photo",
+          "Bitcoin Buying crypto photo",
+          "Bitcoin Buying photo",
+          "global Bitcoin Buying photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Strategy mortgage photo",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "Strategy crypto photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "8370349",
+            "finalScore": 53,
+            "articleRelevanceScore": 35,
+            "assetQualityScore": 100,
+            "tier": "usable"
+          },
+          {
+            "query": "Strategy photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "34669961",
+            "finalScore": 44,
+            "articleRelevanceScore": 22,
+            "assetQualityScore": 100,
+            "tier": "weak"
+          },
+          {
+            "query": "global Strategy photo",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "Bitcoin Buying mortgage photo",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "Bitcoin Buying crypto photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "6555612",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Bitcoin Buying crypto photo",
+          "provider": "pixabay",
+          "providerAssetId": "6555612",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pixabay",
+          "query_used": "Bitcoin Buying crypto photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "strong",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "bitcoin",
+            "buying",
+            "crypto"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": null,
+        "file_path": null,
+        "expected_url": null,
+        "verified_url": null
+      }
+    }
+  ]
+}

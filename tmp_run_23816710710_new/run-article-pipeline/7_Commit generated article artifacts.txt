@@ -1,0 +1,30 @@
+﻿2026-03-31T20:00:56.0130542Z ##[group]Run git config user.name "github-actions[bot]"
+2026-03-31T20:00:56.0131159Z [36;1mgit config user.name "github-actions[bot]"[0m
+2026-03-31T20:00:56.0131626Z [36;1mgit config user.email "41898282+github-actions[bot]@users.noreply.github.com"[0m
+2026-03-31T20:00:56.0132059Z [36;1m[0m
+2026-03-31T20:00:56.0132850Z [36;1mgit add -A src/data/post src/assets/images/posts src/assets/images/library qwen-data/images qwen-data/publish-manifests qwen-data/events qwen-data/quality-audits qwen-data/writer-rotation-state.json[0m
+2026-03-31T20:00:56.0133710Z [36;1m[0m
+2026-03-31T20:00:56.0133917Z [36;1mif git diff --cached --quiet; then[0m
+2026-03-31T20:00:56.0134256Z [36;1m  echo "No generated article changes to commit."[0m
+2026-03-31T20:00:56.0134610Z [36;1m  echo "committed=false" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T20:00:56.0134894Z [36;1m  exit 0[0m
+2026-03-31T20:00:56.0135078Z [36;1mfi[0m
+2026-03-31T20:00:56.0135252Z [36;1m[0m
+2026-03-31T20:00:56.0135507Z [36;1mgit commit -m "chore(content): auto-generate article"[0m
+2026-03-31T20:00:56.0135867Z [36;1mgit push[0m
+2026-03-31T20:00:56.0136109Z [36;1mecho "committed=true" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T20:00:56.0163321Z shell: /usr/bin/bash -e {0}
+2026-03-31T20:00:56.0163569Z env:
+2026-03-31T20:00:56.0163826Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23816710710
+2026-03-31T20:00:56.0164161Z   QWEN_MAX_ARTICLES_PER_RUN: 4
+2026-03-31T20:00:56.0164457Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T20:00:56.0164764Z ##[endgroup]
+2026-03-31T20:00:56.2288225Z [main 03961a3] chore(content): auto-generate article
+2026-03-31T20:00:56.2289051Z  12 files changed, 7541 insertions(+), 2642 deletions(-)
+2026-03-31T20:00:56.2290310Z  create mode 100644 qwen-data/publish-manifests/house-appropriations-committee-posts-new-legislative-activit.json
+2026-03-31T20:00:56.2291411Z  create mode 100644 qwen-data/quality-audits/pipeline-2026-03-31T19-57-57-535Z.json
+2026-03-31T20:00:56.2292053Z  create mode 100644 src/assets/images/library/pixabay/2920069/cover.jpg
+2026-03-31T20:00:56.2292741Z  create mode 100644 src/assets/images/library/pixabay/2920069/metadata.json
+2026-03-31T20:00:56.2294082Z  create mode 100644 src/data/post/2026-03-31-house-appropriations-committee-posts-new-legislative-activit.mdx
+2026-03-31T20:00:57.3230160Z To https://github.com/VladChat/foseer.com
+2026-03-31T20:00:57.3230843Z    282a5ce..03961a3  main -> main

@@ -1,0 +1,27 @@
+{
+  "run_id": "qna-pipeline-2026-03-30T19-41-15-412Z",
+  "generated_at": "2026-03-30T19:41:22.767Z",
+  "items": [
+    {
+      "brief_title": "Olympic committee bans trans athletes from women's events",
+      "question": "How likely is the IOC’s new requirement for genetic testing in women’s events to be blocked, modified, or upheld before the next Olympic Games, and what concrete legal and institutional challenges could change its implementation timeline?",
+      "question_type": "how_likely",
+      "score": 9,
+      "selection_score": 40,
+      "uncertainty": "It is unclear whether this policy will withstand legal, political, and institutional challenges from athletes, national committees, and human-rights bodies before the next Olympic Games.",
+      "stakes": "The policy could immediately determine who is allowed to compete in women's Olympic events, reshape global standards for trans inclusion in sports, trigger legal and human-rights challenges, and influence how other sports bodies and public institutions handle gender verification and privacy.",
+      "time_horizon": "near_term",
+      "valid": false,
+      "selection_eligible": false,
+      "invalid_reason": "Question is not anchored to concrete entities",
+      "rejection_reasons": [
+        "Question is not anchored to concrete entities"
+      ],
+      "provider": "openai",
+      "model": "gpt-5.1",
+      "note": null,
+      "poolIdentityKey": "cluster:evt-2026-03-30-sports-general-global",
+      "source_pack_gate": null
+    }
+  ]
+}

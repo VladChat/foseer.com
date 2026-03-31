@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-31T17:57:52.064Z",
+  "event_id": "evt-2026-03-31-crypto-bitcoin-general-global",
+  "cluster_id": "evt-2026-03-31-crypto-bitcoin-general-global",
+  "article_type": "report",
+  "title": "Strategy Steps Up Bitcoin Buying as Corporate Rivals Hold Back",
+  "slug": "strategy-steps-up-bitcoin-buying-as-corporate-rivals-hold-ba",
+  "canonical_slug": "2026-03-31-strategy-steps-up-bitcoin-buying-as-corporate-rivals-hold-ba",
+  "expected_url": "/article/2026-03-31-strategy-steps-up-bitcoin-buying-as-corporate-rivals-hold-ba",
+  "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-31-strategy-steps-up-bitcoin-buying-as-corporate-rivals-hold-ba.mdx",
+  "published_at": "2026-03-31T17:57:52.021Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "crypto-bitcoin",
+  "topic_label": "Crypto",
+  "subsection": "Crypto",
+  "topics": [
+    "Strategy is accelerating its crypto purchases as rivals sit on the sidelines",
+    "Crypto"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/6537382/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/6537382/cover.jpg",
+    "source_url": "https://pixabay.com/photos/bitcoin-crypto-stock-chart-trading-6537382/",
+    "asset_key": "pixabay:6537382",
+    "alt_text": "bitcoin, crypto, stock, chart, trading, investing, analysis, iphone, finance, growth, nasdaq, options, futures, derivatives, dow, market, crash, electric, business, economy, innovative, blockchain, technology, innovation, strategy, crypto, crypto, crypto, crypto, crypto",
+    "selection_mode": "provider_download_new:pixabay:strong",
+    "query_used": "Strategy crypto photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Crypto",
+    "Bitcoin"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Strategy is accelerating its crypto purchases as rivals sit on the sidelines",
+        "url": "https://cnbc.com/2026/03/27/strategy-is-accelerating-its-crypto-purchases-as-rivals-sit-on-the-sidelines.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "Fannie Mae opens door to crypto",
+        "url": "https://therealdeal.com/national/2026/03/27/fannie-mae-opens-door-to-crypto-backed-mortgages",
+        "domain": "therealdeal.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Fannie Mae opens door to crypto",
+          "url": "https://therealdeal.com/national/2026/03/27/fannie-mae-opens-door-to-crypto-backed-mortgages",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "crypto-bitcoin",
+          "label": "Crypto",
+          "type": "topic"
+        },
+        {
+          "slug": "bitcoin",
+          "label": "Bitcoin",
+          "type": "theme"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "crypto-bitcoin",
+        "topic_label": "Crypto",
+        "supported": true,
+        "matched_aliases": [
+          "Crypto",
+          "bitcoin"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Strategy crypto photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "strategy",
+        "crypto"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

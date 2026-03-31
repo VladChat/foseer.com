@@ -1,0 +1,22 @@
+﻿2026-03-31T21:40:28.5843029Z ##[group]Run npm ci
+2026-03-31T21:40:28.5843415Z [36;1mnpm ci[0m
+2026-03-31T21:40:28.5882708Z shell: /usr/bin/bash -e {0}
+2026-03-31T21:40:28.5883010Z env:
+2026-03-31T21:40:28.5883298Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23820712463
+2026-03-31T21:40:28.5883762Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T21:40:28.5884087Z ##[endgroup]
+2026-03-31T21:40:40.1830181Z 
+2026-03-31T21:40:40.1838962Z added 862 packages, and audited 863 packages in 12s
+2026-03-31T21:40:40.1839573Z 
+2026-03-31T21:40:40.1839814Z 303 packages are looking for funding
+2026-03-31T21:40:40.1840164Z   run `npm fund` for details
+2026-03-31T21:40:40.2162792Z 
+2026-03-31T21:40:40.2163696Z 20 vulnerabilities (1 low, 8 moderate, 11 high)
+2026-03-31T21:40:40.2164184Z 
+2026-03-31T21:40:40.2164517Z To address issues that do not require attention, run:
+2026-03-31T21:40:40.2165004Z   npm audit fix
+2026-03-31T21:40:40.2165191Z 
+2026-03-31T21:40:40.2165368Z To address all issues, run:
+2026-03-31T21:40:40.2165773Z   npm audit fix --force
+2026-03-31T21:40:40.2166049Z 
+2026-03-31T21:40:40.2166221Z Run `npm audit` for details.

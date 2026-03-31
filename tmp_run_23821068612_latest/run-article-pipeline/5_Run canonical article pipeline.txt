@@ -1,0 +1,349 @@
+﻿2026-03-31T21:50:31.0005502Z ##[group]Run set +e
+2026-03-31T21:50:31.0005827Z [36;1mset +e[0m
+2026-03-31T21:50:31.0006049Z [36;1mnpm run article:auto[0m
+2026-03-31T21:50:31.0006308Z [36;1mexit_code=$?[0m
+2026-03-31T21:50:31.0006620Z [36;1mecho "exit_code=$exit_code" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T21:50:31.0006950Z [36;1m[0m
+2026-03-31T21:50:31.0007162Z [36;1mif [ "$exit_code" -eq 0 ]; then[0m
+2026-03-31T21:50:31.0007484Z [36;1m  echo "result=success" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T21:50:31.0007788Z [36;1m  exit 0[0m
+2026-03-31T21:50:31.0007989Z [36;1mfi[0m
+2026-03-31T21:50:31.0008175Z [36;1m[0m
+2026-03-31T21:50:31.0008711Z [36;1mresult_file="qwen-data/events/pipeline-last-result.json"[0m
+2026-03-31T21:50:31.0009103Z [36;1mif [ -f "$result_file" ]; then[0m
+2026-03-31T21:50:31.0010881Z [36;1m  if node -e "const fs=require('node:fs');const p='qwen-data/events/pipeline-last-result.json';const data=JSON.parse(fs.readFileSync(p,'utf8'));const blocker=String(data?.hard_blocker||'').toLowerCase();const published=Number(data?.stats?.articles_published||0);const controlled=published===0 && /(no publishable candidate|source pack gate failed|no candidates discovered|no briefs normalized|pre-draft quality gate failed)/.test(blocker);process.exit(controlled?0:1);"; then[0m
+2026-03-31T21:50:31.0012736Z [36;1m    echo "result=no_article" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T21:50:31.0013168Z [36;1m    echo "No publishable article this run. Skipping build/commit/push."[0m
+2026-03-31T21:50:31.0013555Z [36;1m    exit 0[0m
+2026-03-31T21:50:31.0014025Z [36;1m  fi[0m
+2026-03-31T21:50:31.0014346Z [36;1mfi[0m
+2026-03-31T21:50:31.0014550Z [36;1m[0m
+2026-03-31T21:50:31.0014780Z [36;1mecho "result=failure" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T21:50:31.0015085Z [36;1mexit "$exit_code"[0m
+2026-03-31T21:50:31.0042895Z shell: /usr/bin/bash -e {0}
+2026-03-31T21:50:31.0043151Z env:
+2026-03-31T21:50:31.0043416Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23821068612
+2026-03-31T21:50:31.0043897Z   QWEN_MAX_ARTICLES_PER_RUN: 1
+2026-03-31T21:50:31.0044223Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T21:50:31.0045356Z   OPENAI_API_KEY: ***
+2026-03-31T21:50:31.0045596Z   OPENAI_WRITER_MODEL: gpt-5.1
+2026-03-31T21:50:31.0045917Z   BRAVE_SEARCH_API_KEY: ***
+2026-03-31T21:50:31.0046321Z   PEXELS_API_KEY: ***
+2026-03-31T21:50:31.0046580Z   PIXABAY_API_KEY: ***
+2026-03-31T21:50:31.0046870Z   SEARCH_WEB_API: ***
+2026-03-31T21:50:31.0047093Z   SEARCH_WEB_CX: ***
+2026-03-31T21:50:31.0047308Z   QWEN_API_RETRY_MAX_ATTEMPTS: 3
+2026-03-31T21:50:31.0047557Z   QWEN_API_RETRY_BASE_DELAY_MS: 700
+2026-03-31T21:50:31.0047826Z   QWEN_API_RETRY_MAX_DELAY_MS: 6000
+2026-03-31T21:50:31.0048066Z ##[endgroup]
+2026-03-31T21:50:31.1279605Z 
+2026-03-31T21:50:31.1280460Z > foseer@1.0.0 article:auto
+2026-03-31T21:50:31.1281224Z > node qwen-scripts/pipeline.js
+2026-03-31T21:50:31.1281636Z 
+2026-03-31T21:50:31.2033244Z [writer-selector] Loaded persistent rotation state
+2026-03-31T21:50:31.2071921Z [pipeline] Starting editorial pipeline...
+2026-03-31T21:50:31.2086410Z [pipeline] API keys loaded: {
+2026-03-31T21:50:31.2087220Z   brave: true,
+2026-03-31T21:50:31.2087665Z   openai: true,
+2026-03-31T21:50:31.2088096Z   pexels: true,
+2026-03-31T21:50:31.2088469Z   pixabay: true,
+2026-03-31T21:50:31.2088865Z   google: true
+2026-03-31T21:50:31.2089275Z }
+2026-03-31T21:50:31.2089770Z [pipeline] Max articles per run: 1
+2026-03-31T21:50:31.2090428Z [pipeline] Local verification enabled: false
+2026-03-31T21:50:31.2169759Z [pipeline] Stage 1: Discovery...
+2026-03-31T21:50:31.2173522Z [discovery] Starting taxonomy-driven signal discovery...
+2026-03-31T21:50:31.2191010Z [discovery] Channel 1: Brave core discovery...
+2026-03-31T21:50:31.2203282Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=1 live_quota=5
+2026-03-31T21:50:31.2215200Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+culture+film+tv+music+celebrities+internet+creators+platforms&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T21:50:31.4687193Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 7767 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T21:50:31.4692649Z [discovery] Brave query status=called_success items=5 lane=section:culture query=breaking culture film tv music celebrities internet creators platforms
+2026-03-31T21:50:31.5173080Z [brave] label=discovery_brave_news status=stale_cache_hit age_ms=255420920 ttl_hours=8 mode=stale_cache
+2026-03-31T21:50:31.5178702Z [discovery] Brave query status=stale_cache_hit items=5 lane=section:news query=breaking news public affairs law climate world events
+2026-03-31T21:50:31.5325705Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5687 min_interval_ms=6000
+2026-03-31T21:50:37.2221114Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=2 live_quota=5
+2026-03-31T21:50:37.2226334Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+business+markets+consumer+companies+housing+crypto+travel&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T21:50:37.3900225Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 7761 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T21:50:37.3902847Z [discovery] Brave query status=called_success items=5 lane=section:business query=breaking business markets consumer companies housing crypto travel
+2026-03-31T21:50:37.4303424Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5792 min_interval_ms=6000
+2026-03-31T21:50:43.2241496Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=3 live_quota=5
+2026-03-31T21:50:43.2245141Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+technology+ai+cybersecurity+consumer+tech+mobility+space+enterprise+software&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T21:50:43.3928354Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 7755 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T21:50:43.3930204Z [discovery] Brave query status=called_success items=5 lane=section:tech query=breaking technology ai cybersecurity consumer tech mobility space enterprise software
+2026-03-31T21:50:43.4103567Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5814 min_interval_ms=6000
+2026-03-31T21:50:49.2259708Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=4 live_quota=5
+2026-03-31T21:50:49.2263185Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+health+public+health+medical+research+pharma+mental+health+wellness&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T21:50:49.4255176Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 7749 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T21:50:49.4257141Z [discovery] Brave query status=called_success items=5 lane=section:health query=breaking health public health medical research pharma mental health wellness
+2026-03-31T21:50:49.4452215Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5781 min_interval_ms=6000
+2026-03-31T21:50:55.2287413Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=5 live_quota=5
+2026-03-31T21:50:55.2290479Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+sports+leagues+tournaments+transfers+athlete+culture&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T21:50:55.3997883Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 7743 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T21:50:55.3999906Z [discovery] Brave query status=called_success items=5 lane=section:sports query=breaking sports leagues tournaments transfers athlete culture
+2026-03-31T21:50:55.4176622Z [discovery] Brave core found 30 candidates across 6 lanes
+2026-03-31T21:50:55.4177707Z [discovery] Channel 2: Google trusted-source discovery...
+2026-03-31T21:50:55.4187610Z [google] label=discovery_google_trusted status=stale_cache_hit age_ms=249473305 ttl_hours=8 mode=stale_cache
+2026-03-31T21:50:55.4189051Z [discovery] Google trusted query status=stale_cache_hit items=10 lane=google:sports
+2026-03-31T21:50:55.4506158Z [google] label=discovery_google_trusted status=stale_cache_hit age_ms=252843907 ttl_hours=8 mode=stale_cache
+2026-03-31T21:50:55.4508406Z [discovery] Google trusted query status=stale_cache_hit items=0 lane=google:culture
+2026-03-31T21:50:55.4509645Z [discovery] Google trusted-source found 10 candidates
+2026-03-31T21:50:55.4510636Z [discovery] Channel 3: GDELT signal discovery...
+2026-03-31T21:50:55.4512969Z [gdelt] label=discovery_gdelt status=stale_cache_hit age_ms=247660800 ttl_hours=8 mode=stale_cache
+2026-03-31T21:50:55.4516329Z [discovery] GDELT query status=stale_cache_hit items=10 lane=gdelt:sports query=(breaking OR sports OR leagues OR tournaments OR transfers OR athlete OR culture) AND sourcelang:english
+2026-03-31T21:50:55.4723602Z [discovery] GDELT signal discovery found 10 candidates
+2026-03-31T21:50:55.4860414Z [discovery] Targeted coverage pass: section=health topic=public-health
+2026-03-31T21:50:55.4861823Z [brave] label=discovery_brave_news_targeted status=live_quota_exhausted live_used=5 live_quota=5
+2026-03-31T21:50:55.4864330Z [discovery] Brave query status=live_quota_exhausted items=0 lane=targeted:section:health:topic:public-health query=outbreak hospital system cdc who disease surveillance
+2026-03-31T21:50:55.4866298Z [discovery] Targeted coverage applied: section=health topic=public-health fetched=0
+2026-03-31T21:50:55.4867576Z [discovery] Discovery complete: 39 candidates after filtering (18 viable)
+2026-03-31T21:50:55.4868509Z [pipeline] Discovery found 39 candidates
+2026-03-31T21:50:55.4918899Z [pipeline] Stage 2: Event clustering and brief normalization...
+2026-03-31T21:50:55.5101290Z [pipeline] Clustered 7 events and normalized 6 briefs
+2026-03-31T21:50:55.5558205Z [pipeline] News pool active: 53, total stored: 64
+2026-03-31T21:50:55.5559283Z [pipeline] Stage 3: Source pack assembly...
+2026-03-31T21:50:55.7892817Z [pipeline] Source-pack candidates from merged current+pool+ready set: 12
+2026-03-31T21:50:55.7893993Z [pipeline] Ready backlog prioritized for selection: 1
+2026-03-31T21:50:55.7895190Z [pipeline] Top ranked brief score=11.023527777777778 origin=pool title=Medical Bulletin 31/March/2026
+2026-03-31T21:50:55.7896639Z [source-pack] topic=Medical Bulletin 31/March/2026
+2026-03-31T21:50:55.8265394Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T21:50:55.8467140Z [source-pack] topic=Why Businesses Are Paying Closer Attention to Crypto Infrastructure
+2026-03-31T21:50:55.8660960Z [source-pack] topic=Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms
+2026-03-31T21:50:55.8822804Z [source-pack] topic=Why Is Horror TV So Complicated Right Now?
+2026-03-31T21:50:55.8948314Z [source-pack] topic=AI: The Cybersecurity Crisis That Vendors Love
+2026-03-31T21:50:55.9077218Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T21:50:55.9245221Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T21:50:55.9508623Z [pipeline] Stage 3 placement repair queued :: Hard truths, soft metals :: Primary topic_id unsupported by source-pack evidence: us-politics
+2026-03-31T21:50:55.9510431Z [source-pack] topic=Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...
+2026-03-31T21:50:55.9632424Z [source-pack] topic=XRP Market Trends & Ripple's Regulatory Milestones in 2026
+2026-03-31T21:50:55.9906365Z [source-pack] topic=10 TV Shows That Changed Fandom Culture
+2026-03-31T21:50:56.0018880Z [source-pack] topic=Tech company climate goals under pressure due to AI energy demand
+2026-03-31T21:50:56.0157235Z [pipeline] Stage 3 near-miss retry :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: poolMatchLimit=24
+2026-03-31T21:50:56.0159680Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T21:50:56.0339763Z [pipeline] Stage 3 near-miss retry rejected :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: Need at least 2 publishable sources, found 1 | Need at least 2 direct-event sources for report, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:50:56.0344359Z [pipeline] Stage 3 near-miss retry :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: poolMatchLimit=24
+2026-03-31T21:50:56.0345936Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T21:50:56.0476939Z [pipeline] Stage 3 near-miss retry rejected :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: Need at least 2 different domains among publishable sources, found 1 | Need at least 2 independent direct-event domains for report, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:50:56.0480121Z [pipeline] Stage 3 near-miss retry :: Hard truths, soft metals :: poolMatchLimit=24
+2026-03-31T21:50:56.0481011Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T21:50:56.0730518Z [pipeline] Stage 3 near-miss retry rejected :: Hard truths, soft metals :: Need at least 2 publishable sources, found 1 | Need at least 2 direct-event sources for report, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:50:56.0732781Z [pipeline] Assembled 15 source packs, 0 publishable
+2026-03-31T21:50:56.0959806Z [pipeline] Stage 3 retry #1 (cheap_refresh): refresh discovery with cheaper channels first (google/gdelt, brave disabled)
+2026-03-31T21:50:56.0961174Z [discovery] Starting taxonomy-driven signal discovery...
+2026-03-31T21:50:56.0964487Z [discovery] Skipping Brave (disabled or no API key)
+2026-03-31T21:50:56.0965597Z [discovery] Channel 2: Google trusted-source discovery...
+2026-03-31T21:50:56.0967165Z [google] label=discovery_google_trusted status=throttle_wait wait_ms=5132 min_interval_ms=6000
+2026-03-31T21:51:01.2314741Z [google] label=discovery_google_trusted status=live_slot_reserved live_used=1 live_quota=2
+2026-03-31T21:51:01.2326199Z [google] label=discovery_google_trusted status=calling cache_reason=missing url=https://customsearch.googleapis.com/customsearch/v1?key=REDACTED&cx=***&q=%28site%3Areuters.com+OR+site%3Aapnews.com+OR+site%3Abloomberg.com+OR+site%3Aft.com+OR+site%3Awsj.com+OR+site%3Anytimes.com+OR+site%3Abbc.com+OR+site%3Abbc.co.uk+OR+site%3Atheguardian.com+OR+site%3Awashingtonpost.com+OR+site%3Acnbc.com+OR+site%3Apolitico.com+OR+site%3Aaxios.com+OR+site%3Anpr.org+OR+site%3Aabcnews.go.com+OR+site%3Aabcnews.com%29+%28announced+OR+approved+OR+filed+OR+charged+OR+launched+OR+confirmed+OR+warns%29+%28breaking+news+public+affairs+law+climate+world+events%29&num=10&dateRestrict=d2
+2026-03-31T21:51:01.8033631Z [google] label=discovery_google_trusted status=called_success code=200 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T21:51:01.8035192Z [discovery] Google trusted query status=called_success items=10 lane=google:news
+2026-03-31T21:51:01.8345291Z [google] label=discovery_google_trusted status=stale_cache_hit age_ms=249474213 ttl_hours=8 mode=stale_cache
+2026-03-31T21:51:01.8346806Z [discovery] Google trusted query status=stale_cache_hit items=7 lane=google:business
+2026-03-31T21:51:01.8528867Z [discovery] Google trusted-source found 17 candidates
+2026-03-31T21:51:01.8530438Z [discovery] Channel 3: GDELT signal discovery...
+2026-03-31T21:51:01.8531346Z [gdelt] label=discovery_gdelt status=throttle_wait wait_ms=5378 min_interval_ms=10000
+2026-03-31T21:51:07.2334363Z [gdelt] label=discovery_gdelt status=live_slot_reserved live_used=1 live_quota=2
+2026-03-31T21:51:07.2339471Z [gdelt] label=discovery_gdelt status=calling cache_reason=missing url=https://api.gdeltproject.org/api/v2/doc/doc?query=%28breaking+OR+culture+OR+film+OR+music+OR+celebrities+OR+internet+OR+creators%29+AND+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=10&sort=DateDesc&timespan=2days
+2026-03-31T21:51:17.7296288Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=1 retry_in_ms=756 error=fetch failed
+2026-03-31T21:51:28.9832282Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=2 retry_in_ms=1438 error=fetch failed
+2026-03-31T21:51:40.9184175Z [gdelt] label=discovery_gdelt status=upstream_response_failure error=Network error: fetch failed
+2026-03-31T21:51:40.9186619Z [discovery] GDELT query status=upstream_response_failure items=0 lane=gdelt:culture query=(breaking OR culture OR film OR music OR celebrities OR internet OR creators) AND sourcelang:english
+2026-03-31T21:51:40.9187788Z [discovery] GDELT signal discovery found 0 candidates
+2026-03-31T21:51:40.9188358Z [discovery] Targeted coverage skipped: no_clear_recent_imbalance
+2026-03-31T21:51:40.9190650Z [discovery] Discovery complete: 9 candidates after filtering (7 viable)
+2026-03-31T21:51:41.1702394Z [pipeline] Duplicate guard: skip published identity cluster:evt-2026-03-31-news-general-israel-israel :: Israel passes law to give death penalty to Palestinians convicted of ...
+2026-03-31T21:51:41.2204484Z [pipeline] Source-pack candidates from merged current+pool+ready set: 12
+2026-03-31T21:51:41.2205974Z [pipeline] Duplicate guard removed 1 already published candidate(s) before source-pack assembly
+2026-03-31T21:51:41.2207022Z [pipeline] Ready backlog prioritized for selection: 1
+2026-03-31T21:51:41.2208192Z [pipeline] Top ranked brief score=11.020374027777779 origin=pool title=Medical Bulletin 31/March/2026
+2026-03-31T21:51:41.2209197Z [source-pack] topic=Medical Bulletin 31/March/2026
+2026-03-31T21:51:41.2508047Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T21:51:41.2652246Z [source-pack] topic=Why Businesses Are Paying Closer Attention to Crypto Infrastructure
+2026-03-31T21:51:41.2836426Z [source-pack] topic=Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms
+2026-03-31T21:51:41.2972184Z [source-pack] topic=Why Is Horror TV So Complicated Right Now?
+2026-03-31T21:51:41.3082816Z [source-pack] topic=AI: The Cybersecurity Crisis That Vendors Love
+2026-03-31T21:51:41.3210660Z [source-pack] topic=Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...
+2026-03-31T21:51:41.3343124Z [source-pack] topic=Constantino's sticky ad spending problem
+2026-03-31T21:51:41.3551925Z [source-pack] topic=Climate law 'battle royale'
+2026-03-31T21:51:41.3747118Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T21:51:41.3894918Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T21:51:41.4138052Z [pipeline] Stage 3 placement repair queued :: Hard truths, soft metals :: Primary topic_id unsupported by source-pack evidence: us-politics
+2026-03-31T21:51:41.4139726Z [source-pack] topic=XRP Market Trends & Ripple's Regulatory Milestones in 2026
+2026-03-31T21:51:41.4363121Z [pipeline] Stage 3 near-miss retry :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: poolMatchLimit=24
+2026-03-31T21:51:41.4366996Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T21:51:41.4568503Z [pipeline] Stage 3 near-miss retry rejected :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: Need at least 2 publishable sources, found 1 | Need at least 2 direct-event sources for report, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:51:41.4572947Z [pipeline] Stage 3 near-miss retry :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: poolMatchLimit=24
+2026-03-31T21:51:41.4575007Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T21:51:41.4724302Z [pipeline] Stage 3 near-miss retry rejected :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: Need at least 2 different domains among publishable sources, found 1 | Need at least 2 independent direct-event domains for report, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:51:41.4727278Z [pipeline] Stage 3 near-miss retry :: Hard truths, soft metals :: poolMatchLimit=24
+2026-03-31T21:51:41.4728148Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T21:51:41.4947460Z [pipeline] Stage 3 near-miss retry rejected :: Hard truths, soft metals :: Need at least 2 publishable sources, found 1 | Need at least 2 direct-event sources for report, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:51:41.4951052Z [pipeline] Assembled 15 source packs, 0 publishable
+2026-03-31T21:51:41.5174770Z [pipeline] Stage 3 retry #2 (limited_brave_refresh): single constrained brave retry after cheap refresh
+2026-03-31T21:51:41.5175893Z [discovery] Starting taxonomy-driven signal discovery...
+2026-03-31T21:51:41.5179757Z [discovery] Channel 1: Brave core discovery...
+2026-03-31T21:51:41.5183005Z [brave] label=discovery_brave_news status=cache_hit age_ms=64129 ttl_hours=8 mode=fresh_cache
+2026-03-31T21:51:41.5185108Z [discovery] Brave query status=cache_hit items=5 lane=section:business query=breaking business markets consumer companies housing crypto travel
+2026-03-31T21:51:41.5359342Z [discovery] Brave core found 5 candidates across 1 lanes
+2026-03-31T21:51:41.5360256Z [discovery] Channel 2: Google trusted-source discovery...
+2026-03-31T21:51:41.5367864Z [google] label=discovery_google_trusted status=stale_cache_hit age_ms=254600559 ttl_hours=8 mode=stale_cache
+2026-03-31T21:51:41.5369234Z [discovery] Google trusted query status=stale_cache_hit items=9 lane=google:tech
+2026-03-31T21:51:41.5600357Z [discovery] Google trusted-source found 9 candidates
+2026-03-31T21:51:41.5601310Z [discovery] Channel 3: GDELT signal discovery...
+2026-03-31T21:51:41.5603682Z [gdelt] label=discovery_gdelt status=live_slot_reserved live_used=2 live_quota=2
+2026-03-31T21:51:41.5607346Z [gdelt] label=discovery_gdelt status=calling cache_reason=missing url=https://api.gdeltproject.org/api/v2/doc/doc?query=%28breaking+OR+technology+OR+cybersecurity+OR+consumer+OR+tech+OR+mobility+OR+space%29+AND+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=10&sort=DateDesc&timespan=2days
+2026-03-31T21:51:52.0552374Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=1 retry_in_ms=853 error=fetch failed
+2026-03-31T21:52:03.4045899Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=2 retry_in_ms=1572 error=fetch failed
+2026-03-31T21:52:15.4722066Z [gdelt] label=discovery_gdelt status=upstream_response_failure error=Network error: fetch failed
+2026-03-31T21:52:15.4725084Z [discovery] GDELT query status=upstream_response_failure items=0 lane=gdelt:tech query=(breaking OR technology OR cybersecurity OR consumer OR tech OR mobility OR space) AND sourcelang:english
+2026-03-31T21:52:15.4727252Z [discovery] GDELT signal discovery found 0 candidates
+2026-03-31T21:52:15.4728352Z [discovery] Targeted coverage skipped: no_clear_recent_imbalance
+2026-03-31T21:52:15.4729136Z [discovery] Discovery complete: 6 candidates after filtering (4 viable)
+2026-03-31T21:52:15.7365672Z [pipeline] Duplicate guard: skip published identity cluster:evt-2026-03-31-news-general-israel-israel :: Israel passes law to give death penalty to Palestinians convicted of ...
+2026-03-31T21:52:15.8100040Z [pipeline] Source-pack candidates from merged current+pool+ready set: 12
+2026-03-31T21:52:15.8101482Z [pipeline] Duplicate guard removed 1 already published candidate(s) before source-pack assembly
+2026-03-31T21:52:15.8102499Z [pipeline] Ready backlog prioritized for selection: 1
+2026-03-31T21:52:15.8103593Z [pipeline] Top ranked brief score=11.017973611111112 origin=pool title=Medical Bulletin 31/March/2026
+2026-03-31T21:52:15.8105294Z [source-pack] topic=Medical Bulletin 31/March/2026
+2026-03-31T21:52:15.8365787Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T21:52:15.8523254Z [source-pack] topic=Why Businesses Are Paying Closer Attention to Crypto Infrastructure
+2026-03-31T21:52:15.8759046Z [source-pack] topic=Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms
+2026-03-31T21:52:15.8892936Z [source-pack] topic=Why Is Horror TV So Complicated Right Now?
+2026-03-31T21:52:15.9025577Z [source-pack] topic=AI: The Cybersecurity Crisis That Vendors Love
+2026-03-31T21:52:15.9147021Z [source-pack] topic=Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...
+2026-03-31T21:52:15.9332159Z [source-pack] topic=Constantino's sticky ad spending problem
+2026-03-31T21:52:15.9564148Z [source-pack] topic=Climate law 'battle royale'
+2026-03-31T21:52:15.9779643Z [source-pack] topic=Trump Signs Order to Pay TSA Workers
+2026-03-31T21:52:15.9923248Z [source-pack] topic=OpenAI News
+2026-03-31T21:52:16.0066471Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T21:52:16.0232676Z [pipeline] Stage 3 near-miss retry :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: poolMatchLimit=24
+2026-03-31T21:52:16.0235457Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T21:52:16.0405556Z [pipeline] Stage 3 near-miss retry rejected :: Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move :: Need at least 2 publishable sources, found 1 | Need at least 2 direct-event sources for report, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:52:16.0409273Z [pipeline] Stage 3 near-miss retry :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: poolMatchLimit=24
+2026-03-31T21:52:16.0410668Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T21:52:16.0535844Z [pipeline] Stage 3 near-miss retry rejected :: Manchester United transfers: Zirkzee, Rashford, and should the club ... :: Need at least 2 different domains among publishable sources, found 1 | Need at least 2 independent direct-event domains for report, found 1 | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:52:16.0538121Z [pipeline] Stage 3 near-miss retry :: Why Is Horror TV So Complicated Right Now? :: poolMatchLimit=24
+2026-03-31T21:52:16.0538884Z [source-pack] topic=Why Is Horror TV So Complicated Right Now?
+2026-03-31T21:52:16.0639338Z [pipeline] Stage 3 near-miss retry rejected :: Why Is Horror TV So Complicated Right Now? :: Need at least 2 publishable sources, found 1 | Need at least 2 direct-event sources for report, found 1 | Need at least one trusted reporting source or official primary source | Large cluster retained extra materials as background/signal; publishable pack remains thin
+2026-03-31T21:52:16.0641768Z [pipeline] Assembled 15 source packs, 0 publishable
+2026-03-31T21:52:16.0864227Z [pipeline] Additional ready article candidates: 2
+2026-03-31T21:52:16.0865854Z [pipeline]   backlog rank=2 score=62.3 section=sports topic=transfers-business title=International Olympics Committee Bans Trans Athletes from Women's Events
+2026-03-31T21:52:16.0867494Z [pipeline]   backlog rank=2 score=50.2 section=business topic=crypto-bitcoin title=MAHA fans want action Trump hasn't delivered
+2026-03-31T21:52:16.0868996Z [pipeline] Ready candidate backlog saved: /home/runner/work/foseer.com/foseer.com/qwen-data/events/ready-article-candidates.json
+2026-03-31T21:52:16.0870477Z [pipeline] SOURCE PACK GATE: FAIL - No publishable candidate after 3 attempt(s)
+2026-03-31T21:52:16.0911609Z 
+2026-03-31T21:52:16.0912124Z [pipeline] === FINAL RESULT ===
+2026-03-31T21:52:16.0915423Z Success: false
+2026-03-31T21:52:16.0916430Z Hard Blocker: Source pack gate failed: No publishable candidate after 3 attempt(s)
+2026-03-31T21:52:16.0917326Z Stage Results:
+2026-03-31T21:52:16.0917766Z   discovery: PASS
+2026-03-31T21:52:16.0918272Z   briefNormalization: PASS
+2026-03-31T21:52:16.0919071Z   sourcePackAssembly: FAIL - No publishable candidates selected
+2026-03-31T21:52:16.0919962Z   preDraftPreparation: NOT RUN
+2026-03-31T21:52:16.0920509Z   claimMapCreation: NOT RUN
+2026-03-31T21:52:16.0921025Z   articleDrafting: NOT RUN
+2026-03-31T21:52:16.0921533Z   imageSupport: NOT RUN
+2026-03-31T21:52:16.0922018Z   publishing: NOT RUN
+2026-03-31T21:52:16.0922512Z   localVerification: NOT RUN
+2026-03-31T21:52:16.0923006Z Stats: {
+2026-03-31T21:52:16.0923424Z   "discovery_candidates": 39,
+2026-03-31T21:52:16.0924302Z   "event_clusters": 7,
+2026-03-31T21:52:16.0924759Z   "briefs_normalized": 13,
+2026-03-31T21:52:16.0925297Z   "source_packs_assembled": 45,
+2026-03-31T21:52:16.0925862Z   "publishable_candidates": 0,
+2026-03-31T21:52:16.0926374Z   "selected_topic": null,
+2026-03-31T21:52:16.0926854Z   "selected_topics": [],
+2026-03-31T21:52:16.0927322Z   "articles_attempted": 0,
+2026-03-31T21:52:16.0927803Z   "articles_published": 0,
+2026-03-31T21:52:16.0928274Z   "news_pool": {
+2026-03-31T21:52:16.0928662Z     "total": 64,
+2026-03-31T21:52:16.0929080Z     "active": 53,
+2026-03-31T21:52:16.0929532Z     "published": 11,
+2026-03-31T21:52:16.0929954Z     "ready_candidates": 2
+2026-03-31T21:52:16.0930345Z   },
+2026-03-31T21:52:16.0930706Z   "cache_stats": {
+2026-03-31T21:52:16.0931119Z     "mode": "cache_refresh_with_live_quota",
+2026-03-31T21:52:16.0931539Z     "retry_policy": {
+2026-03-31T21:52:16.0931828Z       "max_attempts": 3,
+2026-03-31T21:52:16.0932122Z       "base_delay_ms": 700,
+2026-03-31T21:52:16.0932439Z       "max_delay_ms": 6000,
+2026-03-31T21:52:16.0932731Z       "jitter_ms": 250
+2026-03-31T21:52:16.0932998Z     },
+2026-03-31T21:52:16.0933280Z     "search_network_enabled": true,
+2026-03-31T21:52:16.0933661Z     "min_search_interval_ms": 6000,
+2026-03-31T21:52:16.0934320Z     "live_quota": {
+2026-03-31T21:52:16.0934585Z       "brave": 5,
+2026-03-31T21:52:16.0934802Z       "gdelt": 2,
+2026-03-31T21:52:16.0934999Z       "google": 2
+2026-03-31T21:52:16.0935180Z     },
+2026-03-31T21:52:16.0935355Z     "live_usage": {
+2026-03-31T21:52:16.0935552Z       "brave": 5,
+2026-03-31T21:52:16.0935778Z       "gdelt": 2,
+2026-03-31T21:52:16.0936084Z       "google": 1
+2026-03-31T21:52:16.0936265Z     },
+2026-03-31T21:52:16.0936435Z     "cache": {
+2026-03-31T21:52:16.0936629Z       "ttl_hours": 8,
+2026-03-31T21:52:16.0936994Z       "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+2026-03-31T21:52:16.0937668Z       "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+2026-03-31T21:52:16.0938267Z       "runtime": {
+2026-03-31T21:52:16.0938600Z         "brave": {
+2026-03-31T21:52:16.0938923Z           "files": 5,
+2026-03-31T21:52:16.0939279Z           "fresh_files": 5,
+2026-03-31T21:52:16.0939672Z           "expired_files": 0,
+2026-03-31T21:52:16.0940084Z           "corrupt_files": 0,
+2026-03-31T21:52:16.0940479Z           "size_bytes": 73993
+2026-03-31T21:52:16.0940854Z         },
+2026-03-31T21:52:16.0941647Z         "gdelt": {
+2026-03-31T21:52:16.0941985Z           "files": 0,
+2026-03-31T21:52:16.0942349Z           "fresh_files": 0,
+2026-03-31T21:52:16.0942740Z           "expired_files": 0,
+2026-03-31T21:52:16.0943150Z           "corrupt_files": 0,
+2026-03-31T21:52:16.0943547Z           "size_bytes": 0
+2026-03-31T21:52:16.0944122Z         },
+2026-03-31T21:52:16.0944430Z         "google": {
+2026-03-31T21:52:16.0944771Z           "files": 1,
+2026-03-31T21:52:16.0945131Z           "fresh_files": 1,
+2026-03-31T21:52:16.0945521Z           "expired_files": 0,
+2026-03-31T21:52:16.0946289Z           "corrupt_files": 0,
+2026-03-31T21:52:16.0946698Z           "size_bytes": 46705
+2026-03-31T21:52:16.0947075Z         }
+2026-03-31T21:52:16.0947349Z       },
+2026-03-31T21:52:16.0947641Z       "seed": {
+2026-03-31T21:52:16.0947959Z         "brave": {
+2026-03-31T21:52:16.0948297Z           "files": 1,
+2026-03-31T21:52:16.0948703Z           "fresh_files": 0,
+2026-03-31T21:52:16.0949094Z           "expired_files": 1,
+2026-03-31T21:52:16.0949516Z           "corrupt_files": 0,
+2026-03-31T21:52:16.0949916Z           "size_bytes": 14135
+2026-03-31T21:52:16.0950294Z         },
+2026-03-31T21:52:16.0950594Z         "gdelt": {
+2026-03-31T21:52:16.0950922Z           "files": 1,
+2026-03-31T21:52:16.0951253Z           "fresh_files": 0,
+2026-03-31T21:52:16.0951606Z           "expired_files": 1,
+2026-03-31T21:52:16.0951974Z           "corrupt_files": 0,
+2026-03-31T21:52:16.0952350Z           "size_bytes": 6189
+2026-03-31T21:52:16.0952696Z         },
+2026-03-31T21:52:16.0952980Z         "google": {
+2026-03-31T21:52:16.0953305Z           "files": 9,
+2026-03-31T21:52:16.0953635Z           "fresh_files": 0,
+2026-03-31T21:52:16.0954220Z           "expired_files": 9,
+2026-03-31T21:52:16.0954596Z           "corrupt_files": 0,
+2026-03-31T21:52:16.0954992Z           "size_bytes": 285008
+2026-03-31T21:52:16.0955338Z         }
+2026-03-31T21:52:16.0955607Z       }
+2026-03-31T21:52:16.0955875Z     }
+2026-03-31T21:52:16.0956136Z   },
+2026-03-31T21:52:16.0956439Z   "duration_ms": 104883,
+2026-03-31T21:52:16.0956799Z   "ready_candidates": 2,
+2026-03-31T21:52:16.0957210Z   "additional_ready_candidates": 2,
+2026-03-31T21:52:16.0957643Z   "source_pack_attempts": 3,
+2026-03-31T21:52:16.0958100Z   "source_pack_retry_external_queries": 6,
+2026-03-31T21:52:16.0958601Z   "source_pack_retry_brave_queries": 1,
+2026-03-31T21:52:16.0959108Z   "source_pack_retry_estimated_tokens": 6300,
+2026-03-31T21:52:16.0959577Z   "pre_draft_rejected": 0,
+2026-03-31T21:52:16.0960570Z   "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T21-50-31-207Z.json"
+2026-03-31T21:52:16.0961482Z }
+2026-03-31T21:52:16.0961909Z [pipeline] FINAL STATUS: FAIL
+2026-03-31T21:52:16.0964181Z [pipeline] Exit reason(s): final Success is false | hard blocker exists: Source pack gate failed: No publishable candidate after 3 attempt(s) | articles_published is 0 | no publishable candidate | articleDrafting stage was not run | publishing stage was not run
+2026-03-31T21:52:16.0966054Z [pipeline] EXIT CLASS: controlled_no_article_failure
+2026-03-31T21:52:16.0967172Z [pipeline] Result saved to: /home/runner/work/foseer.com/foseer.com/qwen-data/events/pipeline-last-result.json
+2026-03-31T21:52:16.1332422Z No publishable article this run. Skipping build/commit/push.

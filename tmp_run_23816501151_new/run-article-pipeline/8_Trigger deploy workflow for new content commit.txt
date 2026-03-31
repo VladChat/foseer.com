@@ -1,0 +1,13 @@
+﻿2026-03-31T19:55:53.6645284Z ##[group]Run curl --fail --show-error --silent \
+2026-03-31T19:55:53.6645702Z [36;1mcurl --fail --show-error --silent \[0m
+2026-03-31T19:55:53.6645984Z [36;1m  -X POST \[0m
+2026-03-31T19:55:53.6646507Z [36;1m  -H "Authorization: ***" \[0m
+2026-03-31T19:55:53.6646823Z [36;1m  -H "Accept: application/vnd.github+json" \[0m
+2026-03-31T19:55:53.6647336Z [36;1m  https://api.github.com/repos/VladChat/foseer.com/actions/workflows/deploy.yml/dispatches \[0m
+2026-03-31T19:55:53.6647811Z [36;1m  -d '{"ref":"main"}'[0m
+2026-03-31T19:55:53.6673676Z shell: /usr/bin/bash -e {0}
+2026-03-31T19:55:53.6673925Z env:
+2026-03-31T19:55:53.6674176Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23816501151
+2026-03-31T19:55:53.6674512Z   QWEN_MAX_ARTICLES_PER_RUN: 4
+2026-03-31T19:55:53.6675040Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T19:55:53.6675346Z ##[endgroup]

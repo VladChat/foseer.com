@@ -1,0 +1,32 @@
+﻿2026-03-31T21:50:13.8999455Z Current runner version: '2.333.1'
+2026-03-31T21:50:13.9034404Z ##[group]Runner Image Provisioner
+2026-03-31T21:50:13.9035733Z Hosted Compute Agent
+2026-03-31T21:50:13.9036805Z Version: 20260213.493
+2026-03-31T21:50:13.9037822Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-31T21:50:13.9038933Z Build Date: 2026-02-13T00:28:41Z
+2026-03-31T21:50:13.9039941Z Worker ID: {3a56c8af-dacd-43f3-8401-031674fb8e16}
+2026-03-31T21:50:13.9041081Z Azure Region: northcentralus
+2026-03-31T21:50:13.9042020Z ##[endgroup]
+2026-03-31T21:50:13.9043934Z ##[group]Operating System
+2026-03-31T21:50:13.9044912Z Ubuntu
+2026-03-31T21:50:13.9045659Z 24.04.4
+2026-03-31T21:50:13.9046616Z LTS
+2026-03-31T21:50:13.9047581Z ##[endgroup]
+2026-03-31T21:50:13.9048384Z ##[group]Runner Image
+2026-03-31T21:50:13.9049293Z Image: ubuntu-24.04
+2026-03-31T21:50:13.9050111Z Version: 20260323.65.1
+2026-03-31T21:50:13.9051660Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260323.65/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-31T21:50:13.9054285Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260323.65
+2026-03-31T21:50:13.9055712Z ##[endgroup]
+2026-03-31T21:50:13.9057817Z ##[group]GITHUB_TOKEN Permissions
+2026-03-31T21:50:13.9060578Z Actions: write
+2026-03-31T21:50:13.9061585Z Contents: write
+2026-03-31T21:50:13.9062382Z Metadata: read
+2026-03-31T21:50:13.9063176Z ##[endgroup]
+2026-03-31T21:50:13.9066406Z Secret source: Actions
+2026-03-31T21:50:13.9068376Z Prepare workflow directory
+2026-03-31T21:50:13.9821444Z Prepare all required actions
+2026-03-31T21:50:13.9877344Z Getting action download info
+2026-03-31T21:50:14.2820167Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-31T21:50:14.4310616Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-03-31T21:50:14.5739635Z Complete job name: run-qna-pipeline

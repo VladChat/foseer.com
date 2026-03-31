@@ -1,0 +1,299 @@
+﻿2026-03-31T18:12:46.7036979Z ##[group]Run set +e
+2026-03-31T18:12:46.7037314Z [36;1mset +e[0m
+2026-03-31T18:12:46.7037835Z [36;1mnpm run article:auto[0m
+2026-03-31T18:12:46.7038088Z [36;1mexit_code=$?[0m
+2026-03-31T18:12:46.7038392Z [36;1mecho "exit_code=$exit_code" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T18:12:46.7038705Z [36;1m[0m
+2026-03-31T18:12:46.7038918Z [36;1mif [ "$exit_code" -eq 0 ]; then[0m
+2026-03-31T18:12:46.7039227Z [36;1m  echo "result=success" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T18:12:46.7039540Z [36;1m  exit 0[0m
+2026-03-31T18:12:46.7039736Z [36;1mfi[0m
+2026-03-31T18:12:46.7039916Z [36;1m[0m
+2026-03-31T18:12:46.7040214Z [36;1mresult_file="qwen-data/events/pipeline-last-result.json"[0m
+2026-03-31T18:12:46.7040817Z [36;1mif [ -f "$result_file" ]; then[0m
+2026-03-31T18:12:46.7042545Z [36;1m  if node -e "const fs=require('node:fs');const p='qwen-data/events/pipeline-last-result.json';const data=JSON.parse(fs.readFileSync(p,'utf8'));const blocker=String(data?.hard_blocker||'').toLowerCase();const published=Number(data?.stats?.articles_published||0);const controlled=published===0 && /(no publishable candidate|source pack gate failed|no candidates discovered|no briefs normalized|pre-draft quality gate failed)/.test(blocker);process.exit(controlled?0:1);"; then[0m
+2026-03-31T18:12:46.7044335Z [36;1m    echo "result=no_article" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T18:12:46.7044765Z [36;1m    echo "No publishable article this run. Skipping build/commit/push."[0m
+2026-03-31T18:12:46.7045158Z [36;1m    exit 0[0m
+2026-03-31T18:12:46.7045364Z [36;1m  fi[0m
+2026-03-31T18:12:46.7045557Z [36;1mfi[0m
+2026-03-31T18:12:46.7045736Z [36;1m[0m
+2026-03-31T18:12:46.7045962Z [36;1mecho "result=failure" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T18:12:46.7046276Z [36;1mexit "$exit_code"[0m
+2026-03-31T18:12:46.7075946Z shell: /usr/bin/bash -e {0}
+2026-03-31T18:12:46.7076210Z env:
+2026-03-31T18:12:46.7076473Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23812559003
+2026-03-31T18:12:46.7076816Z   QWEN_MAX_ARTICLES_PER_RUN: 1
+2026-03-31T18:12:46.7077131Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T18:12:46.7078319Z   OPENAI_API_KEY: ***
+2026-03-31T18:12:46.7078569Z   OPENAI_WRITER_MODEL: gpt-5.1
+2026-03-31T18:12:46.7078885Z   BRAVE_SEARCH_API_KEY: ***
+2026-03-31T18:12:46.7079281Z   PEXELS_API_KEY: ***
+2026-03-31T18:12:46.7079556Z   PIXABAY_API_KEY: ***
+2026-03-31T18:12:46.7079858Z   SEARCH_WEB_API: ***
+2026-03-31T18:12:46.7080085Z   SEARCH_WEB_CX: ***
+2026-03-31T18:12:46.7080310Z   QWEN_API_RETRY_MAX_ATTEMPTS: 3
+2026-03-31T18:12:46.7080569Z   QWEN_API_RETRY_BASE_DELAY_MS: 700
+2026-03-31T18:12:46.7080830Z   QWEN_API_RETRY_MAX_DELAY_MS: 6000
+2026-03-31T18:12:46.7081080Z ##[endgroup]
+2026-03-31T18:12:46.8160463Z 
+2026-03-31T18:12:46.8160964Z > foseer@1.0.0 article:auto
+2026-03-31T18:12:46.8161527Z > node qwen-scripts/pipeline.js
+2026-03-31T18:12:46.8161732Z 
+2026-03-31T18:12:46.8858859Z [writer-selector] Loaded persistent rotation state
+2026-03-31T18:12:46.8891844Z [pipeline] Starting editorial pipeline...
+2026-03-31T18:12:46.8905378Z [pipeline] API keys loaded: {
+2026-03-31T18:12:46.8905955Z   brave: true,
+2026-03-31T18:12:46.8906407Z   openai: true,
+2026-03-31T18:12:46.8906813Z   pexels: true,
+2026-03-31T18:12:46.8907197Z   pixabay: true,
+2026-03-31T18:12:46.8907876Z   google: true
+2026-03-31T18:12:46.8908264Z }
+2026-03-31T18:12:46.8908761Z [pipeline] Max articles per run: 1
+2026-03-31T18:12:46.8909530Z [pipeline] Local verification enabled: false
+2026-03-31T18:12:46.8985244Z [pipeline] Stage 1: Discovery...
+2026-03-31T18:12:46.8988004Z [discovery] Starting taxonomy-driven signal discovery...
+2026-03-31T18:12:46.9003961Z [discovery] Channel 1: Brave core discovery...
+2026-03-31T18:12:46.9016507Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=1 live_quota=5
+2026-03-31T18:12:46.9027258Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+technology+ai+cybersecurity+consumer+tech+mobility+space+enterprise+software&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T18:12:47.5800315Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 20831 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T18:12:47.5802791Z [discovery] Brave query status=called_success items=5 lane=section:tech query=breaking technology ai cybersecurity consumer tech mobility space enterprise software
+2026-03-31T18:12:47.6169364Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5285 min_interval_ms=6000
+2026-03-31T18:12:52.9036421Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=2 live_quota=5
+2026-03-31T18:12:52.9042909Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+health+public+health+medical+research+pharma+mental+health+wellness&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T18:12:53.5504824Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 20825 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T18:12:53.5506416Z [discovery] Brave query status=called_success items=5 lane=section:health query=breaking health public health medical research pharma mental health wellness
+2026-03-31T18:12:53.5734290Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5330 min_interval_ms=6000
+2026-03-31T18:12:58.9053433Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=3 live_quota=5
+2026-03-31T18:12:58.9055975Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+sports+leagues+tournaments+transfers+athlete+culture&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T18:12:59.6543410Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 20819 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T18:12:59.6545865Z [discovery] Brave query status=called_success items=5 lane=section:sports query=breaking sports leagues tournaments transfers athlete culture
+2026-03-31T18:12:59.6711856Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5234 min_interval_ms=6000
+2026-03-31T18:13:04.9070657Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=4 live_quota=5
+2026-03-31T18:13:04.9075320Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+culture+film+tv+music+celebrities+internet+creators+platforms&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T18:13:05.6220324Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 20813 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T18:13:05.6221940Z [discovery] Brave query status=called_success items=5 lane=section:culture query=breaking culture film tv music celebrities internet creators platforms
+2026-03-31T18:13:05.6392199Z [brave] label=discovery_brave_news status=stale_cache_hit age_ms=242375043 ttl_hours=8 mode=stale_cache
+2026-03-31T18:13:05.6393804Z [discovery] Brave query status=stale_cache_hit items=5 lane=section:news query=breaking news public affairs law climate world events
+2026-03-31T18:13:05.6517946Z [discovery] Brave core found 25 candidates across 5 lanes
+2026-03-31T18:13:05.6518835Z [discovery] Channel 2: Google trusted-source discovery...
+2026-03-31T18:13:05.6528291Z [google] label=discovery_google_trusted status=stale_cache_hit age_ms=242369165 ttl_hours=8 mode=stale_cache
+2026-03-31T18:13:05.6529175Z [discovery] Google trusted query status=stale_cache_hit items=10 lane=google:business
+2026-03-31T18:13:05.6790982Z [google] label=discovery_google_trusted status=throttle_wait wait_ms=5228 min_interval_ms=6000
+2026-03-31T18:13:10.9090834Z [google] label=discovery_google_trusted status=live_slot_reserved live_used=1 live_quota=2
+2026-03-31T18:13:10.9102655Z [google] label=discovery_google_trusted status=calling cache_reason=missing url=https://customsearch.googleapis.com/customsearch/v1?key=REDACTED&cx=***&q=%28site%3Acbsnews.com+OR+site%3Anbcnews.com+OR+site%3Acnn.com+OR+site%3Anikkei.com+OR+site%3Aasia.nikkei.com+OR+site%3Atheglobeandmail.com+OR+site%3Aeconomist.com+OR+site%3Asec.gov+OR+site%3Afda.gov+OR+site%3Awhitehouse.gov+OR+site%3Ajustice.gov+OR+site%3Auscourts.gov+OR+site%3Asupremecourt.gov+OR+site%3Acongress.gov+OR+site%3Afederalregister.gov+OR+site%3Agovinfo.gov%29+%28markets+OR+economy+OR+policy+OR+ai+OR+cybersecurity+OR+health+OR+conflict%29+%28breaking+sports+leagues+tournaments+transfers+athlete+culture%29&num=10&dateRestrict=d2
+2026-03-31T18:13:11.2414372Z [google] label=discovery_google_trusted status=called_success code=200 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T18:13:11.2415892Z [discovery] Google trusted query status=called_success items=0 lane=google:sports
+2026-03-31T18:13:11.2416889Z [discovery] Google trusted-source found 10 candidates
+2026-03-31T18:13:11.2418170Z [discovery] Channel 3: GDELT signal discovery...
+2026-03-31T18:13:11.2419525Z [gdelt] label=discovery_gdelt status=throttle_wait wait_ms=5667 min_interval_ms=10000
+2026-03-31T18:13:16.9109877Z [gdelt] label=discovery_gdelt status=live_slot_reserved live_used=1 live_quota=2
+2026-03-31T18:13:16.9114603Z [gdelt] label=discovery_gdelt status=calling cache_reason=missing url=https://api.gdeltproject.org/api/v2/doc/doc?query=%28breaking+OR+business+OR+markets+OR+consumer+OR+companies+OR+housing+OR+crypto%29+AND+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=10&sort=DateDesc&timespan=2days
+2026-03-31T18:13:27.4063096Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=1 retry_in_ms=864 error=fetch failed
+2026-03-31T18:13:38.7648219Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=2 retry_in_ms=1587 error=fetch failed
+2026-03-31T18:13:50.8484928Z [gdelt] label=discovery_gdelt status=upstream_response_failure error=Network error: fetch failed
+2026-03-31T18:13:50.8487718Z [discovery] GDELT query status=upstream_response_failure items=0 lane=gdelt:business query=(breaking OR business OR markets OR consumer OR companies OR housing OR crypto) AND sourcelang:english
+2026-03-31T18:13:50.8489598Z [gdelt] label=discovery_gdelt status=live_slot_reserved live_used=2 live_quota=2
+2026-03-31T18:13:50.8492915Z [gdelt] label=discovery_gdelt status=calling cache_reason=missing url=https://api.gdeltproject.org/api/v2/doc/doc?query=%28breaking+OR+news+OR+public+OR+affairs+OR+law+OR+climate+OR+world%29+AND+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=10&sort=DateDesc&timespan=2days
+2026-03-31T18:14:01.3428950Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=1 retry_in_ms=822 error=fetch failed
+2026-03-31T18:14:12.6591008Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=2 retry_in_ms=1452 error=fetch failed
+2026-03-31T18:14:24.6080548Z [gdelt] label=discovery_gdelt status=upstream_response_failure error=Network error: fetch failed
+2026-03-31T18:14:24.6082215Z [discovery] GDELT query status=upstream_response_failure items=0 lane=gdelt:news query=(breaking OR news OR public OR affairs OR law OR climate OR world) AND sourcelang:english
+2026-03-31T18:14:24.6083175Z [discovery] GDELT signal discovery found 0 candidates
+2026-03-31T18:14:24.6085122Z [discovery] Discovery complete: 22 candidates after filtering
+2026-03-31T18:14:24.6085613Z [pipeline] Discovery found 22 candidates
+2026-03-31T18:14:24.6153054Z [pipeline] Stage 2: Event clustering and brief normalization...
+2026-03-31T18:14:24.6311410Z [pipeline] Clustered 6 events and normalized 6 briefs
+2026-03-31T18:14:24.6628621Z [pipeline] News pool active: 43, total stored: 50
+2026-03-31T18:14:24.6629452Z [pipeline] Stage 3: Source pack assembly...
+2026-03-31T18:14:24.8235687Z [pipeline] Source-pack candidates from merged current+pool+ready set: 12
+2026-03-31T18:14:24.8236386Z [pipeline] Ready backlog prioritized for selection: 1
+2026-03-31T18:14:24.8239075Z [pipeline] Top ranked brief score=13.627705069444445 origin=pool title=Trump administration sues Minnesota for allowing trans athletes in girls’ sports
+2026-03-31T18:14:24.8240456Z [source-pack] topic=Trump administration sues Minnesota for allowing trans athletes in girls’ sports
+2026-03-31T18:14:24.8798301Z [source-pack] topic=Why Is Horror TV So Complicated Right Now?
+2026-03-31T18:14:24.8952362Z [source-pack] topic=AI: The Cybersecurity Crisis That Vendors Love
+2026-03-31T18:14:24.9075197Z [source-pack] topic=Medical Bulletin 31/March/2026
+2026-03-31T18:14:24.9205727Z [source-pack] topic=Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms
+2026-03-31T18:14:24.9369794Z [source-pack] topic=Erin Griffith
+2026-03-31T18:14:24.9630235Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T18:14:24.9775692Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T18:14:24.9897099Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T18:14:25.0105114Z [pipeline] Stage 3 placement repair queued :: Hard truths, soft metals :: Primary topic_id unsupported by source-pack evidence: us-politics
+2026-03-31T18:14:25.0106065Z [source-pack] topic=Tech company climate goals under pressure due to AI energy demand
+2026-03-31T18:14:25.0221529Z [source-pack] topic=XRP Market Trends & Ripple's Regulatory Milestones in 2026
+2026-03-31T18:14:25.0405627Z [source-pack] topic=10 TV Shows That Changed Fandom Culture
+2026-03-31T18:14:25.0512711Z [pipeline] Assembled 12 source packs, 1 publishable
+2026-03-31T18:14:25.0829870Z [pipeline] Additional ready article candidates: 2
+2026-03-31T18:14:25.0831546Z [pipeline]   backlog rank=2 score=62.3 section=sports topic=transfers-business title=International Olympics Committee Bans Trans Athletes from Women's Events
+2026-03-31T18:14:25.0832903Z [pipeline]   backlog rank=2 score=50.2 section=business topic=crypto-bitcoin title=MAHA fans want action Trump hasn't delivered
+2026-03-31T18:14:25.0834107Z [pipeline] Ready candidate backlog saved: /home/runner/work/foseer.com/foseer.com/qwen-data/events/ready-article-candidates.json
+2026-03-31T18:14:25.0835667Z [pipeline] SOURCE PACK GATE: PASS :: Trump administration sues Minnesota for allowing trans athletes in girls’ sports
+2026-03-31T18:14:25.0836471Z [pipeline] Sources: 2, Domains: 2
+2026-03-31T18:14:25.0837002Z [pipeline] Stage 3.5: Pre-draft canonical placement and tag lock...
+2026-03-31T18:14:25.1956842Z [pipeline] PRE-DRAFT LOCK: WARN :: Trump administration sues Minnesota for allowing trans athletes in girls’ sports :: Fewer than 2 canonical tags; Canonical tag set is missing required non-topic evidence tag (will re-validate after draft)
+2026-03-31T18:14:25.1959172Z [pipeline] PRE-DRAFT LOCK: PASS :: Trump administration sues Minnesota for allowing trans athletes in girls’ sports :: section=sports topic=athletes-culture tags=1
+2026-03-31T18:14:25.2201953Z [pipeline] === Article run start: Trump administration sues Minnesota for allowing trans athletes in girls’ sports ===
+2026-03-31T18:14:25.2203243Z [pipeline] Stage 4: Claim map creation...
+2026-03-31T18:14:25.2204850Z [claim-map] topic=Trump administration sues Minnesota for allowing trans athletes in girls’ sports sources=2
+2026-03-31T18:14:25.2215078Z [claim-map] quality=strong total_claims=3 supported=3 fallback=false
+2026-03-31T18:14:25.2215963Z [pipeline] Claim map: 3 claims, 3 supported
+2026-03-31T18:14:25.2216587Z [pipeline] CLAIM MAP GATE: PASS
+2026-03-31T18:14:25.2217169Z [pipeline] Stage 5: Article drafting...
+2026-03-31T18:14:25.2221149Z [drafter] Drafting article: Trump administration sues Minnesota for allowing trans athletes in girls’ sports
+2026-03-31T18:14:25.2622701Z [drafter] Story classification: report / Sports / sports culture
+2026-03-31T18:14:25.2623549Z [drafter] Canonical tags: Athletes & Culture
+2026-03-31T18:14:25.2633306Z [drafter] Selected department: Features Writer / author: Owen Foster (fit: 10/10)
+2026-03-31T18:14:25.2634397Z [drafter] Forecast inclusion: Yes (variant: report-watch)
+2026-03-31T18:14:25.2647196Z [drafter] Prompt assembled: 6 layers
+2026-03-31T18:14:25.2647758Z [drafter] Prompt size: 7241 chars
+2026-03-31T18:14:25.2651405Z [openai] label=article_drafting status=calling model=gpt-5.1 prompt_chars=7241 token_field=max_completion_tokens token_limit=4500 temperature=0.6
+2026-03-31T18:14:53.5563610Z [openai] label=article_drafting status=called_success model=gpt-5.1 code=200 retry_count=0 retry_delay_ms=0
+2026-03-31T18:14:53.5574504Z [drafter] Drafted 1122 words, 2 sources cited
+2026-03-31T18:14:53.5575205Z [drafter] Type: report, Writer: Owen Foster, Features Desk
+2026-03-31T18:14:53.5576140Z [drafter] Quality: strong, Safe for publishing: true
+2026-03-31T18:14:53.5576570Z [drafter] Forecast: Included
+2026-03-31T18:14:53.5591192Z [pipeline] Drafted: 1122 words, type: report, quality: strong
+2026-03-31T18:14:53.5591985Z [pipeline] Stage 6: Image support...
+2026-03-31T18:14:53.5595831Z [image] Getting image for: Trump administration sues Minnesota over trans girls in school sports
+2026-03-31T18:14:53.6011152Z [pexels] label=pexels_image_search status=calling query=Minnesota basketball photo
+2026-03-31T18:14:53.6036788Z [pixabay] label=pixabay_image_search status=calling query=Minnesota basketball photo video=false
+2026-03-31T18:14:53.6598350Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T18:14:53.8608922Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=99 rate_limit_reset=60 retry_count=0 retry_delay_ms=0
+2026-03-31T18:14:53.8689221Z [image] Rejecting recent duplicate asset=pixabay:6554286
+2026-03-31T18:14:53.8729349Z [pexels] label=pexels_image_search status=calling query=Minnesota courtroom photo
+2026-03-31T18:14:53.8736489Z [pixabay] label=pixabay_image_search status=calling query=Minnesota courtroom photo video=false
+2026-03-31T18:14:53.9008029Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T18:14:54.0408805Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=98 rate_limit_reset=60 retry_count=0 retry_delay_ms=0
+2026-03-31T18:14:54.0474829Z [image] Rejecting recent duplicate asset=pixabay:7666143
+2026-03-31T18:14:54.0506006Z [image] Rejecting recent duplicate asset=pixabay:7903435
+2026-03-31T18:14:54.0510994Z [pexels] label=pexels_image_search status=calling query=Minnesota photo
+2026-03-31T18:14:54.0516545Z [pixabay] label=pixabay_image_search status=calling query=Minnesota photo video=false
+2026-03-31T18:14:54.0748479Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T18:14:54.1847774Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=97 rate_limit_reset=59 retry_count=0 retry_delay_ms=0
+2026-03-31T18:14:54.1891077Z [image] Rejecting recent duplicate asset=pixabay:7666143
+2026-03-31T18:14:54.1914525Z [image] Rejecting recent duplicate asset=pixabay:7903435
+2026-03-31T18:14:54.1922754Z [image] Early stop with context-confirmed strong match query="Minnesota photo" provider=pexels score=100
+2026-03-31T18:14:54.4129088Z [pipeline] Image: pexels, path: ~/assets/images/library/pexels/29248101/cover.jpg
+2026-03-31T18:14:54.4130021Z [pipeline] Stage 7: Publishing article...
+2026-03-31T18:14:54.6357293Z 
+2026-03-31T18:14:54.6358182Z [pipeline] === FINAL RESULT ===
+2026-03-31T18:14:54.6360906Z Success: false
+2026-03-31T18:14:54.6362152Z Hard Blocker: Canonical tags invalid: Fewer than 2 canonical tags; Canonical tag set is missing required non-topic evidence tag
+2026-03-31T18:14:54.6363101Z Stage Results:
+2026-03-31T18:14:54.6363482Z   discovery: PASS
+2026-03-31T18:14:54.6363855Z   briefNormalization: PASS
+2026-03-31T18:14:54.6364280Z   sourcePackAssembly: PASS
+2026-03-31T18:14:54.6364707Z   preDraftPreparation: PASS
+2026-03-31T18:14:54.6365520Z   claimMapCreation: PASS
+2026-03-31T18:14:54.6365995Z   articleDrafting: PASS
+2026-03-31T18:14:54.6366431Z   imageSupport: PASS
+2026-03-31T18:14:54.6368468Z   publishing: FAIL - Trump administration sues Minnesota for allowing trans athletes in girls’ sports: Canonical tags invalid: Fewer than 2 canonical tags; Canonical tag set is missing required non-topic evidence tag
+2026-03-31T18:14:54.6370338Z   localVerification: FAIL
+2026-03-31T18:14:54.6371242Z Selected topic: Trump administration sues Minnesota for allowing trans athletes in girls’ sports
+2026-03-31T18:14:54.6371902Z Draft word count: 1122
+2026-03-31T18:14:54.6372232Z Image provider: pexels
+2026-03-31T18:14:54.6372713Z Stats: {
+2026-03-31T18:14:54.6372985Z   "discovery_candidates": 22,
+2026-03-31T18:14:54.6373321Z   "event_clusters": 6,
+2026-03-31T18:14:54.6373622Z   "briefs_normalized": 6,
+2026-03-31T18:14:54.6373975Z   "source_packs_assembled": 12,
+2026-03-31T18:14:54.6374346Z   "publishable_candidates": 1,
+2026-03-31T18:14:54.6375409Z   "selected_topic": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+2026-03-31T18:14:54.6376410Z   "selected_topics": [
+2026-03-31T18:14:54.6377088Z     "Trump administration sues Minnesota for allowing trans athletes in girls’ sports"
+2026-03-31T18:14:54.6377868Z   ],
+2026-03-31T18:14:54.6378229Z   "articles_attempted": 1,
+2026-03-31T18:14:54.6378659Z   "articles_published": 0,
+2026-03-31T18:14:54.6379055Z   "news_pool": {
+2026-03-31T18:14:54.6379412Z     "total": 50,
+2026-03-31T18:14:54.6379674Z     "active": 43,
+2026-03-31T18:14:54.6380049Z     "published": 7,
+2026-03-31T18:14:54.6380422Z     "ready_candidates": 2
+2026-03-31T18:14:54.6380804Z   },
+2026-03-31T18:14:54.6381139Z   "cache_stats": {
+2026-03-31T18:14:54.6381634Z     "mode": "cache_refresh_with_live_quota",
+2026-03-31T18:14:54.6382018Z     "retry_policy": {
+2026-03-31T18:14:54.6382487Z       "max_attempts": 3,
+2026-03-31T18:14:54.6383017Z       "base_delay_ms": 700,
+2026-03-31T18:14:54.6383458Z       "max_delay_ms": 6000,
+2026-03-31T18:14:54.6383837Z       "jitter_ms": 250
+2026-03-31T18:14:54.6384156Z     },
+2026-03-31T18:14:54.6384493Z     "search_network_enabled": true,
+2026-03-31T18:14:54.6384946Z     "min_search_interval_ms": 6000,
+2026-03-31T18:14:54.6385345Z     "live_quota": {
+2026-03-31T18:14:54.6385699Z       "brave": 5,
+2026-03-31T18:14:54.6386005Z       "gdelt": 2,
+2026-03-31T18:14:54.6386316Z       "google": 2
+2026-03-31T18:14:54.6386638Z     },
+2026-03-31T18:14:54.6386948Z     "live_usage": {
+2026-03-31T18:14:54.6387249Z       "brave": 4,
+2026-03-31T18:14:54.6387764Z       "gdelt": 2,
+2026-03-31T18:14:54.6388080Z       "google": 1
+2026-03-31T18:14:54.6388409Z     },
+2026-03-31T18:14:54.6388697Z     "cache": {
+2026-03-31T18:14:54.6389007Z       "ttl_hours": 8,
+2026-03-31T18:14:54.6389571Z       "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+2026-03-31T18:14:54.6390479Z       "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+2026-03-31T18:14:54.6390904Z       "runtime": {
+2026-03-31T18:14:54.6391136Z         "brave": {
+2026-03-31T18:14:54.6391357Z           "files": 4,
+2026-03-31T18:14:54.6391601Z           "fresh_files": 4,
+2026-03-31T18:14:54.6391892Z           "expired_files": 0,
+2026-03-31T18:14:54.6392170Z           "corrupt_files": 0,
+2026-03-31T18:14:54.6392512Z           "size_bytes": 59306
+2026-03-31T18:14:54.6392750Z         },
+2026-03-31T18:14:54.6392962Z         "gdelt": {
+2026-03-31T18:14:54.6393179Z           "files": 0,
+2026-03-31T18:14:54.6393417Z           "fresh_files": 0,
+2026-03-31T18:14:54.6393668Z           "expired_files": 0,
+2026-03-31T18:14:54.6393925Z           "corrupt_files": 0,
+2026-03-31T18:14:54.6394180Z           "size_bytes": 0
+2026-03-31T18:14:54.6394419Z         },
+2026-03-31T18:14:54.6394638Z         "google": {
+2026-03-31T18:14:54.6394860Z           "files": 1,
+2026-03-31T18:14:54.6395094Z           "fresh_files": 1,
+2026-03-31T18:14:54.6395341Z           "expired_files": 0,
+2026-03-31T18:14:54.6395604Z           "corrupt_files": 0,
+2026-03-31T18:14:54.6396328Z           "size_bytes": 2427
+2026-03-31T18:14:54.6396734Z         }
+2026-03-31T18:14:54.6397070Z       },
+2026-03-31T18:14:54.6397626Z       "seed": {
+2026-03-31T18:14:54.6398007Z         "brave": {
+2026-03-31T18:14:54.6398372Z           "files": 1,
+2026-03-31T18:14:54.6398763Z           "fresh_files": 0,
+2026-03-31T18:14:54.6399022Z           "expired_files": 1,
+2026-03-31T18:14:54.6399276Z           "corrupt_files": 0,
+2026-03-31T18:14:54.6399529Z           "size_bytes": 14135
+2026-03-31T18:14:54.6399773Z         },
+2026-03-31T18:14:54.6399984Z         "gdelt": {
+2026-03-31T18:14:54.6400209Z           "files": 1,
+2026-03-31T18:14:54.6400638Z           "fresh_files": 0,
+2026-03-31T18:14:54.6400891Z           "expired_files": 1,
+2026-03-31T18:14:54.6401138Z           "corrupt_files": 0,
+2026-03-31T18:14:54.6401393Z           "size_bytes": 6189
+2026-03-31T18:14:54.6401638Z         },
+2026-03-31T18:14:54.6401847Z         "google": {
+2026-03-31T18:14:54.6402075Z           "files": 9,
+2026-03-31T18:14:54.6402308Z           "fresh_files": 0,
+2026-03-31T18:14:54.6402559Z           "expired_files": 9,
+2026-03-31T18:14:54.6402813Z           "corrupt_files": 0,
+2026-03-31T18:14:54.6403086Z           "size_bytes": 285008
+2026-03-31T18:14:54.6403337Z         }
+2026-03-31T18:14:54.6403543Z       }
+2026-03-31T18:14:54.6403738Z     }
+2026-03-31T18:14:54.6403937Z   },
+2026-03-31T18:14:54.6404166Z   "duration_ms": 127653,
+2026-03-31T18:14:54.6404415Z   "ready_candidates": 2,
+2026-03-31T18:14:54.6404699Z   "additional_ready_candidates": 2,
+2026-03-31T18:14:54.6404990Z   "source_pack_attempts": 1,
+2026-03-31T18:14:54.6405291Z   "source_pack_retry_external_queries": 0,
+2026-03-31T18:14:54.6405647Z   "source_pack_retry_brave_queries": 0,
+2026-03-31T18:14:54.6405974Z   "source_pack_retry_estimated_tokens": 0,
+2026-03-31T18:14:54.6406273Z   "pre_draft_rejected": 0,
+2026-03-31T18:14:54.6406894Z   "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T18-12-46-889Z.json"
+2026-03-31T18:14:54.6407714Z }
+2026-03-31T18:14:54.6408017Z [pipeline] FINAL STATUS: FAIL
+2026-03-31T18:14:54.6409096Z [pipeline] Exit reason(s): final Success is false | hard blocker exists: Canonical tags invalid: Fewer than 2 canonical tags; Canonical tag set is missing required non-topic evidence tag | articles_published is 0
+2026-03-31T18:14:54.6410015Z [pipeline] EXIT CLASS: unexpected_failure
+2026-03-31T18:14:54.6410672Z [pipeline] Result saved to: /home/runner/work/foseer.com/foseer.com/qwen-data/events/pipeline-last-result.json
+2026-03-31T18:14:54.6730026Z ##[error]Process completed with exit code 2.

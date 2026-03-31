@@ -1,0 +1,657 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-03-31T17-51-09-733Z",
+  "started_at": "2026-03-31T17:51:09.733Z",
+  "generated_at": "2026-03-31T17:51:44.012Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "discovery_candidates": 37,
+    "event_clusters": 8,
+    "briefs_normalized": 6,
+    "source_packs_assembled": 12,
+    "publishable_candidates": 3,
+    "selected_topic": "Olympic committee bans trans athletes from women's events",
+    "selected_topics": [
+      "Olympic committee bans trans athletes from women's events"
+    ],
+    "articles_attempted": 1,
+    "articles_published": 1,
+    "news_pool": {
+      "total": 61,
+      "active": 53,
+      "published": 8,
+      "ready_candidates": 4
+    },
+    "cache_stats": {
+      "mode": "cache_only",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": false,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 0,
+        "gdelt": 0,
+        "google": 0
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-cache",
+        "seed_root": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-data\\cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 72,
+            "fresh_files": 0,
+            "expired_files": 72,
+            "corrupt_files": 0,
+            "size_bytes": 1539591
+          },
+          "gdelt": {
+            "files": 7,
+            "fresh_files": 0,
+            "expired_files": 7,
+            "corrupt_files": 0,
+            "size_bytes": 34432
+          },
+          "google": {
+            "files": 63,
+            "fresh_files": 0,
+            "expired_files": 63,
+            "corrupt_files": 0,
+            "size_bytes": 1508804
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14290
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6298
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 289351
+          }
+        }
+      }
+    },
+    "duration_ms": 34242,
+    "ready_candidates": 2,
+    "additional_ready_candidates": 2,
+    "source_pack_attempts": 1,
+    "source_pack_retry_external_queries": 0,
+    "source_pack_retry_brave_queries": 0,
+    "source_pack_retry_estimated_tokens": 0,
+    "pre_draft_rejected": 1
+  },
+  "provider_stats": {
+    "mode": "cache_only",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": false,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 0,
+      "gdelt": 0,
+      "google": 0
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "runtime_root": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-cache",
+      "seed_root": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-data\\cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 72,
+          "fresh_files": 0,
+          "expired_files": 72,
+          "corrupt_files": 0,
+          "size_bytes": 1539591
+        },
+        "gdelt": {
+          "files": 7,
+          "fresh_files": 0,
+          "expired_files": 7,
+          "corrupt_files": 0,
+          "size_bytes": 34432
+        },
+        "google": {
+          "files": 63,
+          "fresh_files": 0,
+          "expired_files": 63,
+          "corrupt_files": 0,
+          "size_bytes": 1508804
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14290
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6298
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 289351
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "preDraftPreparation": {
+      "success": true,
+      "error": null,
+      "total": 3,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claimMapCreation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "articleDrafting": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "imageSupport": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "publishing": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "localVerification": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 1,
+    "editorial_pass_count": 1,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "IOC to Require Genetic Testing, Bans Trans Athletes From Women’s Events",
+      "slug": "ioc-to-require-genetic-testing-bans-trans-athletes-from-wome",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "sports",
+          "topic_id": "events-tournaments",
+          "placement_confidence": "medium",
+          "placement_reason": []
+        },
+        "metrics": {
+          "total_sources": 4,
+          "unique_domains": 4,
+          "direct_event_source_count": 4,
+          "independent_event_domains": 4,
+          "source_consistency_score": 8.8,
+          "strong_match_count": 4,
+          "core_source_count": 3,
+          "supporting_source_count": 1,
+          "background_source_count": 4,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 3,
+          "supporting": 2,
+          "background": 8
+        },
+        "publish_ready_sources": [
+          {
+            "title": "Olympic committee bans trans athletes from women's events",
+            "domain": "npr.org",
+            "url": "https://www.npr.org/2026/03/26/nx-s1-5762579/ioc-bans-trans-women-events-genetic-testing",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          },
+          {
+            "title": "Alert: Olympic Committee Steps up to Protect Women, Bans Trans Athletes from Female Events",
+            "domain": "thegatewaypundit.com",
+            "url": "https://www.thegatewaypundit.com/2026/03/alert-olympic-committee-steps-protect-women-bans-trans/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          },
+          {
+            "title": "Trans Day of Visibility basketball tournament creates space for trans athletes amid international sports bans",
+            "domain": "chicago.suntimes.com",
+            "url": "https://chicago.suntimes.com/lgbtq/2026/03/29/basketball-tournament-makes-space-for-trans-athletes-amid-international-sports-bans",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          },
+          {
+            "title": "Trump administration sues Minnesota for allowing trans athletes in ...",
+            "domain": "theguardian.com",
+            "url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "news"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "Olympic committee bans trans athletes from women's events",
+            "domain": "npr.org",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": 4,
+            "source_quality_score": 41.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Alert: Olympic Committee Steps up to Protect Women, Bans Trans Athletes from Female Events",
+            "domain": "thegatewaypundit.com",
+            "page_kind": "article",
+            "same_event_score": 11,
+            "topic_fit_score": 4,
+            "source_quality_score": 30,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Trans Day of Visibility basketball tournament creates space for trans athletes amid international sports bans",
+            "domain": "chicago.suntimes.com",
+            "page_kind": "article",
+            "same_event_score": 10,
+            "topic_fit_score": 3,
+            "source_quality_score": 30,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "Trump administration sues Minnesota for allowing trans athletes in ...",
+            "domain": "theguardian.com",
+            "page_kind": "article",
+            "same_event_score": 9,
+            "topic_fit_score": -2,
+            "source_quality_score": 15,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "In NCAA athletics, student-athletes are often choosing deal over degree",
+            "domain": "andscape.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 3,
+            "source_quality_score": 12.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "How NIL Is Reshaping the Future of College Football",
+            "domain": "vocal.media",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 11.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Washington Drivers Will Soon Carry Blue Envelopes Here Why",
+            "domain": "mega993online.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 9,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Nebrasketball Transfer Portal Tracker: Additions, Departures & Updated Roster for 2026",
+            "domain": "si.com",
+            "page_kind": "official_release",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 13,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "What's next for Duke, Tennessee after Elite Eight: Recruits, transfer portal, more",
+            "domain": "espn.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 10,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Fantasy Baseball Waiver Wire: 5 players who should've been drafted in more leagues, but weren't",
+            "domain": "sports.yahoo.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "The Leftist No Kings Protest Is in Several Cities Today",
+            "domain": "independentsentinel.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Youre a presenter now , not a Labour minister Ed Balls is told after on - air dust - up with young Jewish campaigner ove",
+            "domain": "dailymail.co.uk",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 4,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": []
+        }
+      },
+      "tags": {
+        "tags": [
+          "Events & Tournaments",
+          "Olympics"
+        ],
+        "tag_slugs": [
+          "events-tournaments",
+          "olympics"
+        ],
+        "primary_topic_tag": "Events & Tournaments",
+        "primary_topic_slug": "events-tournaments",
+        "warnings": [
+          "Canonical tag set is thin (2)"
+        ],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "Events & Tournaments",
+            "slug": "events-tournaments",
+            "score": 40,
+            "reason": "Primary topic tag validated from topic_id=events-tournaments",
+            "fallback": false
+          },
+          {
+            "label": "Olympics",
+            "slug": "olympics",
+            "score": 35,
+            "reason": "Theme match score 35",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "Canonical tag set is below target floor (3), accepted due sparse evidence"
+          ]
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "events-tournaments",
+              "label": "Events & Tournaments",
+              "type": "topic"
+            },
+            {
+              "slug": "olympics",
+              "label": "Olympics",
+              "type": "theme"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "events-tournaments",
+            "topic_label": "Events & Tournaments",
+            "supported": true,
+            "matched_aliases": [
+              "events",
+              "olympic",
+              "ioc"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pixabay",
+        "image_path": "~/assets/images/library/pixabay/498256/cover.jpg",
+        "source_url": "https://pixabay.com/photos/stretching-sports-woman-athlete-498256/",
+        "selection_mode": "provider_download_new:pixabay:acceptable",
+        "query_used": "Trans Athletes portrait",
+        "relevance_tier": "acceptable",
+        "article_relevance_score": 64,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 74,
+        "scene_type": "stadium",
+        "visual_type": "photo",
+        "entity_hints": [
+          "stretching",
+          "sports",
+          "woman",
+          "nature",
+          "athlete",
+          "fitness",
+          "sport",
+          "healthy"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "Trans Athletes basketball photo",
+          "Trans Athletes courtroom photo",
+          "Trans Athletes photo",
+          "Trans Athletes portrait",
+          "global Trans Athletes photo",
+          "Bans Trans Athletes basketball photo",
+          "Bans Trans Athletes courtroom photo",
+          "Bans Trans Athletes photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Trans Athletes basketball photo",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "Trans Athletes courtroom photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "34817109",
+            "finalScore": 62,
+            "articleRelevanceScore": 49,
+            "assetQualityScore": 97,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Trans Athletes photo",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "Trans Athletes portrait",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "498256",
+            "finalScore": 68,
+            "articleRelevanceScore": 56,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "global Trans Athletes photo",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "Bans Trans Athletes basketball photo",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "Bans Trans Athletes courtroom photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "34817109",
+            "finalScore": 62,
+            "articleRelevanceScore": 49,
+            "assetQualityScore": 97,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Bans Trans Athletes photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "3380613",
+            "finalScore": 59,
+            "articleRelevanceScore": 43,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Trans Athletes portrait",
+          "provider": "pixabay",
+          "providerAssetId": "498256",
+          "finalScore": 68,
+          "articleRelevanceScore": 56,
+          "assetQualityScore": 100,
+          "tier": "acceptable"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pixabay",
+          "query_used": "Trans Athletes portrait",
+          "article_relevance_score": 64,
+          "relevance_tier": "acceptable",
+          "overlap_ratio": 0.67,
+          "shared_tokens": [
+            "trans",
+            "athletes"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\qwen-data\\publish-manifests\\ioc-to-require-genetic-testing-bans-trans-athletes-from-wome.json",
+        "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-03-31-ioc-to-require-genetic-testing-bans-trans-athletes-from-wome.mdx",
+        "expected_url": "/article/2026-03-31-ioc-to-require-genetic-testing-bans-trans-athletes-from-wome",
+        "verified_url": null
+      }
+    }
+  ]
+}

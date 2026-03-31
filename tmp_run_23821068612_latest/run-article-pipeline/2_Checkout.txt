@@ -1,0 +1,84 @@
+﻿2026-03-31T21:50:14.0844775Z ##[group]Run actions/checkout@v4
+2026-03-31T21:50:14.0845819Z with:
+2026-03-31T21:50:14.0846248Z   fetch-depth: 0
+2026-03-31T21:50:14.0846716Z   repository: VladChat/foseer.com
+2026-03-31T21:50:14.0847491Z   token: ***
+2026-03-31T21:50:14.0847923Z   ssh-strict: true
+2026-03-31T21:50:14.0848354Z   ssh-user: git
+2026-03-31T21:50:14.0848795Z   persist-credentials: true
+2026-03-31T21:50:14.0849287Z   clean: true
+2026-03-31T21:50:14.0849733Z   sparse-checkout-cone-mode: true
+2026-03-31T21:50:14.0850251Z   fetch-tags: false
+2026-03-31T21:50:14.0850690Z   show-progress: true
+2026-03-31T21:50:14.0851145Z   lfs: false
+2026-03-31T21:50:14.0851562Z   submodules: false
+2026-03-31T21:50:14.0852016Z   set-safe-directory: true
+2026-03-31T21:50:14.0852696Z env:
+2026-03-31T21:50:14.0853221Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23821068612
+2026-03-31T21:50:14.0854096Z   QWEN_MAX_ARTICLES_PER_RUN: 1
+2026-03-31T21:50:14.0854694Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T21:50:14.0855306Z ##[endgroup]
+2026-03-31T21:50:14.1984246Z Syncing repository: VladChat/foseer.com
+2026-03-31T21:50:14.1986679Z ##[group]Getting Git version info
+2026-03-31T21:50:14.1987472Z Working directory is '/home/runner/work/foseer.com/foseer.com'
+2026-03-31T21:50:14.1988511Z [command]/usr/bin/git version
+2026-03-31T21:50:14.2042198Z git version 2.53.0
+2026-03-31T21:50:14.2070009Z ##[endgroup]
+2026-03-31T21:50:14.2085829Z Temporarily overriding HOME='/home/runner/work/_temp/15b90eda-eaff-4195-888e-f4f7e7fc2061' before making global git config changes
+2026-03-31T21:50:14.2087318Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-31T21:50:14.2100168Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/foseer.com/foseer.com
+2026-03-31T21:50:14.2135689Z Deleting the contents of '/home/runner/work/foseer.com/foseer.com'
+2026-03-31T21:50:14.2139518Z ##[group]Initializing the repository
+2026-03-31T21:50:14.2143695Z [command]/usr/bin/git init /home/runner/work/foseer.com/foseer.com
+2026-03-31T21:50:14.2230614Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-31T21:50:14.2232868Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-31T21:50:14.2234559Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-31T21:50:14.2235376Z hint: call:
+2026-03-31T21:50:14.2235789Z hint:
+2026-03-31T21:50:14.2236347Z hint: 	git config --global init.defaultBranch <name>
+2026-03-31T21:50:14.2236995Z hint:
+2026-03-31T21:50:14.2237722Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-31T21:50:14.2238765Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-31T21:50:14.2239530Z hint:
+2026-03-31T21:50:14.2239955Z hint: 	git branch -m <name>
+2026-03-31T21:50:14.2240454Z hint:
+2026-03-31T21:50:14.2241100Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-31T21:50:14.2242185Z Initialized empty Git repository in /home/runner/work/foseer.com/foseer.com/.git/
+2026-03-31T21:50:14.2245824Z [command]/usr/bin/git remote add origin https://github.com/VladChat/foseer.com
+2026-03-31T21:50:14.2279223Z ##[endgroup]
+2026-03-31T21:50:14.2280029Z ##[group]Disabling automatic garbage collection
+2026-03-31T21:50:14.2284176Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-31T21:50:14.2312820Z ##[endgroup]
+2026-03-31T21:50:14.2313636Z ##[group]Setting up auth
+2026-03-31T21:50:14.2320753Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-31T21:50:14.2351821Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-31T21:50:14.2648237Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-31T21:50:14.2683074Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-31T21:50:14.2908502Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-31T21:50:14.2942349Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-31T21:50:14.3208088Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-31T21:50:14.3251045Z ##[endgroup]
+2026-03-31T21:50:14.3251962Z ##[group]Fetching the repository
+2026-03-31T21:50:14.3265295Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-03-31T21:50:15.9292215Z From https://github.com/VladChat/foseer.com
+2026-03-31T21:50:15.9307186Z  * [new branch]      main            -> origin/main
+2026-03-31T21:50:15.9308933Z  * [new branch]      prep/github-push-readiness-2026-03-29 -> origin/prep/github-push-readiness-2026-03-29
+2026-03-31T21:50:15.9311158Z  * [new branch]      theme-astrowind -> origin/theme-astrowind
+2026-03-31T21:50:15.9312767Z  * [new branch]      theme-blog      -> origin/theme-blog
+2026-03-31T21:50:15.9314381Z  * [new branch]      theme-minimal   -> origin/theme-minimal
+2026-03-31T21:50:15.9343220Z [command]/usr/bin/git branch --list --remote origin/main
+2026-03-31T21:50:15.9368745Z   origin/main
+2026-03-31T21:50:15.9380881Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-03-31T21:50:15.9402226Z 1cd3bf6a7fcc405bc610d0664bc76788c1da11a2
+2026-03-31T21:50:15.9408447Z ##[endgroup]
+2026-03-31T21:50:15.9410054Z ##[group]Determining the checkout info
+2026-03-31T21:50:15.9411769Z ##[endgroup]
+2026-03-31T21:50:15.9415504Z [command]/usr/bin/git sparse-checkout disable
+2026-03-31T21:50:15.9455568Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-31T21:50:15.9485056Z ##[group]Checking out the ref
+2026-03-31T21:50:15.9490413Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-03-31T21:50:16.1149319Z Switched to a new branch 'main'
+2026-03-31T21:50:16.1150726Z branch 'main' set up to track 'origin/main'.
+2026-03-31T21:50:16.1172535Z ##[endgroup]
+2026-03-31T21:50:16.1212459Z [command]/usr/bin/git log -1 --format=%H
+2026-03-31T21:50:16.1234604Z 1cd3bf6a7fcc405bc610d0664bc76788c1da11a2

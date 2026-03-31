@@ -1,0 +1,588 @@
+﻿2026-03-31T19:17:31.2025837Z Current runner version: '2.333.1'
+2026-03-31T19:17:31.2050490Z ##[group]Runner Image Provisioner
+2026-03-31T19:17:31.2051359Z Hosted Compute Agent
+2026-03-31T19:17:31.2051949Z Version: 20260213.493
+2026-03-31T19:17:31.2052593Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-31T19:17:31.2053359Z Build Date: 2026-02-13T00:28:41Z
+2026-03-31T19:17:31.2054045Z Worker ID: {823e1c2d-3939-4bca-80be-19ddd1ab8fcf}
+2026-03-31T19:17:31.2054734Z Azure Region: eastus
+2026-03-31T19:17:31.2055350Z ##[endgroup]
+2026-03-31T19:17:31.2056803Z ##[group]Operating System
+2026-03-31T19:17:31.2057786Z Ubuntu
+2026-03-31T19:17:31.2058417Z 24.04.4
+2026-03-31T19:17:31.2058905Z LTS
+2026-03-31T19:17:31.2059432Z ##[endgroup]
+2026-03-31T19:17:31.2060033Z ##[group]Runner Image
+2026-03-31T19:17:31.2060655Z Image: ubuntu-24.04
+2026-03-31T19:17:31.2061266Z Version: 20260323.65.1
+2026-03-31T19:17:31.2062502Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260323.65/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-31T19:17:31.2064109Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260323.65
+2026-03-31T19:17:31.2065050Z ##[endgroup]
+2026-03-31T19:17:31.2066257Z ##[group]GITHUB_TOKEN Permissions
+2026-03-31T19:17:31.2068626Z Actions: write
+2026-03-31T19:17:31.2069287Z Contents: write
+2026-03-31T19:17:31.2069900Z Metadata: read
+2026-03-31T19:17:31.2070433Z ##[endgroup]
+2026-03-31T19:17:31.2072535Z Secret source: Actions
+2026-03-31T19:17:31.2073568Z Prepare workflow directory
+2026-03-31T19:17:31.2632723Z Prepare all required actions
+2026-03-31T19:17:31.2670447Z Getting action download info
+2026-03-31T19:17:31.5744491Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-31T19:17:31.6729896Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-03-31T19:17:31.9801924Z Complete job name: run-article-pipeline
+2026-03-31T19:17:32.0441670Z ##[group]Run actions/checkout@v4
+2026-03-31T19:17:32.0442736Z with:
+2026-03-31T19:17:32.0443150Z   fetch-depth: 0
+2026-03-31T19:17:32.0443608Z   repository: VladChat/foseer.com
+2026-03-31T19:17:32.0444296Z   token: ***
+2026-03-31T19:17:32.0444705Z   ssh-strict: true
+2026-03-31T19:17:32.0445130Z   ssh-user: git
+2026-03-31T19:17:32.0445570Z   persist-credentials: true
+2026-03-31T19:17:32.0446036Z   clean: true
+2026-03-31T19:17:32.0446469Z   sparse-checkout-cone-mode: true
+2026-03-31T19:17:32.0446978Z   fetch-tags: false
+2026-03-31T19:17:32.0447638Z   show-progress: true
+2026-03-31T19:17:32.0448081Z   lfs: false
+2026-03-31T19:17:32.0448485Z   submodules: false
+2026-03-31T19:17:32.0448928Z   set-safe-directory: true
+2026-03-31T19:17:32.0449650Z env:
+2026-03-31T19:17:32.0450151Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23815121070
+2026-03-31T19:17:32.0450928Z   QWEN_MAX_ARTICLES_PER_RUN: 4
+2026-03-31T19:17:32.0451622Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T19:17:32.0452264Z ##[endgroup]
+2026-03-31T19:17:32.1523476Z Syncing repository: VladChat/foseer.com
+2026-03-31T19:17:32.1525331Z ##[group]Getting Git version info
+2026-03-31T19:17:32.1526077Z Working directory is '/home/runner/work/foseer.com/foseer.com'
+2026-03-31T19:17:32.1527084Z [command]/usr/bin/git version
+2026-03-31T19:17:32.1561177Z git version 2.53.0
+2026-03-31T19:17:32.1586533Z ##[endgroup]
+2026-03-31T19:17:32.1600313Z Temporarily overriding HOME='/home/runner/work/_temp/bc253686-d135-4c0b-96b8-1a9fa25135c1' before making global git config changes
+2026-03-31T19:17:32.1612301Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-31T19:17:32.1613579Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/foseer.com/foseer.com
+2026-03-31T19:17:32.1642592Z Deleting the contents of '/home/runner/work/foseer.com/foseer.com'
+2026-03-31T19:17:32.1645988Z ##[group]Initializing the repository
+2026-03-31T19:17:32.1650191Z [command]/usr/bin/git init /home/runner/work/foseer.com/foseer.com
+2026-03-31T19:17:32.1724653Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-31T19:17:32.1727043Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-31T19:17:32.1728903Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-31T19:17:32.1729943Z hint: call:
+2026-03-31T19:17:32.1730328Z hint:
+2026-03-31T19:17:32.1730849Z hint: 	git config --global init.defaultBranch <name>
+2026-03-31T19:17:32.1731446Z hint:
+2026-03-31T19:17:32.1732010Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-31T19:17:32.1733097Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-31T19:17:32.1733803Z hint:
+2026-03-31T19:17:32.1734213Z hint: 	git branch -m <name>
+2026-03-31T19:17:32.1734677Z hint:
+2026-03-31T19:17:32.1735287Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-31T19:17:32.1736404Z Initialized empty Git repository in /home/runner/work/foseer.com/foseer.com/.git/
+2026-03-31T19:17:32.1741324Z [command]/usr/bin/git remote add origin https://github.com/VladChat/foseer.com
+2026-03-31T19:17:32.1778865Z ##[endgroup]
+2026-03-31T19:17:32.1779666Z ##[group]Disabling automatic garbage collection
+2026-03-31T19:17:32.1784154Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-31T19:17:32.1815999Z ##[endgroup]
+2026-03-31T19:17:32.1829049Z ##[group]Setting up auth
+2026-03-31T19:17:32.1830041Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-31T19:17:32.1860714Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-31T19:17:32.2151061Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-31T19:17:32.2184942Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-31T19:17:32.2426170Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-31T19:17:32.2464578Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-31T19:17:32.2704352Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-31T19:17:32.2736990Z ##[endgroup]
+2026-03-31T19:17:32.2745261Z ##[group]Fetching the repository
+2026-03-31T19:17:32.2746505Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-03-31T19:17:33.0837223Z From https://github.com/VladChat/foseer.com
+2026-03-31T19:17:33.0841515Z  * [new branch]      main            -> origin/main
+2026-03-31T19:17:33.0844820Z  * [new branch]      prep/github-push-readiness-2026-03-29 -> origin/prep/github-push-readiness-2026-03-29
+2026-03-31T19:17:33.0846907Z  * [new branch]      theme-astrowind -> origin/theme-astrowind
+2026-03-31T19:17:33.0848494Z  * [new branch]      theme-blog      -> origin/theme-blog
+2026-03-31T19:17:33.0849265Z  * [new branch]      theme-minimal   -> origin/theme-minimal
+2026-03-31T19:17:33.0886527Z [command]/usr/bin/git branch --list --remote origin/main
+2026-03-31T19:17:33.0911822Z   origin/main
+2026-03-31T19:17:33.0922942Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-03-31T19:17:33.0943384Z b77309a610ebe6f69ebdbe23aec558794d169ca3
+2026-03-31T19:17:33.0951787Z ##[endgroup]
+2026-03-31T19:17:33.0953197Z ##[group]Determining the checkout info
+2026-03-31T19:17:33.0954853Z ##[endgroup]
+2026-03-31T19:17:33.0955820Z [command]/usr/bin/git sparse-checkout disable
+2026-03-31T19:17:33.0993573Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-31T19:17:33.1020927Z ##[group]Checking out the ref
+2026-03-31T19:17:33.1025902Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-03-31T19:17:33.2633359Z Switched to a new branch 'main'
+2026-03-31T19:17:33.2634965Z branch 'main' set up to track 'origin/main'.
+2026-03-31T19:17:33.2652795Z ##[endgroup]
+2026-03-31T19:17:33.2692135Z [command]/usr/bin/git log -1 --format=%H
+2026-03-31T19:17:33.2714170Z b77309a610ebe6f69ebdbe23aec558794d169ca3
+2026-03-31T19:17:33.3003047Z ##[group]Run actions/setup-node@v4
+2026-03-31T19:17:33.3004241Z with:
+2026-03-31T19:17:33.3005109Z   node-version: 20
+2026-03-31T19:17:33.3006065Z   cache: npm
+2026-03-31T19:17:33.3006980Z   always-auth: false
+2026-03-31T19:17:33.3008225Z   check-latest: false
+2026-03-31T19:17:33.3009507Z   token: ***
+2026-03-31T19:17:33.3010421Z env:
+2026-03-31T19:17:33.3011536Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23815121070
+2026-03-31T19:17:33.3012984Z   QWEN_MAX_ARTICLES_PER_RUN: 4
+2026-03-31T19:17:33.3014301Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T19:17:33.3015669Z ##[endgroup]
+2026-03-31T19:17:33.4764279Z Found in cache @ /opt/hostedtoolcache/node/20.20.1/x64
+2026-03-31T19:17:33.4769332Z ##[group]Environment details
+2026-03-31T19:17:33.7322639Z node: v20.20.1
+2026-03-31T19:17:33.7323224Z npm: 10.8.2
+2026-03-31T19:17:33.7323648Z yarn: 1.22.22
+2026-03-31T19:17:33.7324645Z ##[endgroup]
+2026-03-31T19:17:33.7347837Z [command]/opt/hostedtoolcache/node/20.20.1/x64/bin/npm config get cache
+2026-03-31T19:17:33.8818290Z /home/runner/.npm
+2026-03-31T19:17:33.9790250Z Cache hit for: node-cache-Linux-x64-npm-92d60ddf14d49d621e750f1e8d8b6aa7fc5cc2ea92873665baa1bca1556f25fd
+2026-03-31T19:17:34.6171694Z Received 103730000 of 103730000 (100.0%), 173.6 MBs/sec
+2026-03-31T19:17:34.6172420Z Cache Size: ~99 MB (103730000 B)
+2026-03-31T19:17:34.6201215Z [command]/usr/bin/tar -xf /home/runner/work/_temp/170898ff-1930-45e5-bb21-84fc38eca042/cache.tzst -P -C /home/runner/work/foseer.com/foseer.com --use-compress-program unzstd
+2026-03-31T19:17:34.9593488Z Cache restored successfully
+2026-03-31T19:17:34.9642253Z Cache restored from key: node-cache-Linux-x64-npm-92d60ddf14d49d621e750f1e8d8b6aa7fc5cc2ea92873665baa1bca1556f25fd
+2026-03-31T19:17:34.9866755Z ##[group]Run npm ci
+2026-03-31T19:17:34.9867072Z [36;1mnpm ci[0m
+2026-03-31T19:17:34.9903568Z shell: /usr/bin/bash -e {0}
+2026-03-31T19:17:34.9903853Z env:
+2026-03-31T19:17:34.9904128Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23815121070
+2026-03-31T19:17:34.9904477Z   QWEN_MAX_ARTICLES_PER_RUN: 4
+2026-03-31T19:17:34.9904790Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T19:17:34.9905108Z ##[endgroup]
+2026-03-31T19:17:47.8516225Z 
+2026-03-31T19:17:47.8523330Z added 862 packages, and audited 863 packages in 13s
+2026-03-31T19:17:47.8523681Z 
+2026-03-31T19:17:47.8523894Z 303 packages are looking for funding
+2026-03-31T19:17:47.8524219Z   run `npm fund` for details
+2026-03-31T19:17:47.8864590Z 
+2026-03-31T19:17:47.8865304Z 20 vulnerabilities (1 low, 8 moderate, 11 high)
+2026-03-31T19:17:47.8865659Z 
+2026-03-31T19:17:47.8865989Z To address issues that do not require attention, run:
+2026-03-31T19:17:47.8866453Z   npm audit fix
+2026-03-31T19:17:47.8866628Z 
+2026-03-31T19:17:47.8866868Z To address all issues, run:
+2026-03-31T19:17:47.8867207Z   npm audit fix --force
+2026-03-31T19:17:47.8867699Z 
+2026-03-31T19:17:47.8867900Z Run `npm audit` for details.
+2026-03-31T19:17:47.9481580Z ##[group]Run set +e
+2026-03-31T19:17:47.9481875Z [36;1mset +e[0m
+2026-03-31T19:17:47.9482094Z [36;1mnpm run article:auto[0m
+2026-03-31T19:17:47.9482339Z [36;1mexit_code=$?[0m
+2026-03-31T19:17:47.9482648Z [36;1mecho "exit_code=$exit_code" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T19:17:47.9482968Z [36;1m[0m
+2026-03-31T19:17:47.9483305Z [36;1mif [ "$exit_code" -eq 0 ]; then[0m
+2026-03-31T19:17:47.9483680Z [36;1m  echo "result=success" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T19:17:47.9483979Z [36;1m  exit 0[0m
+2026-03-31T19:17:47.9484174Z [36;1mfi[0m
+2026-03-31T19:17:47.9484372Z [36;1m[0m
+2026-03-31T19:17:47.9484659Z [36;1mresult_file="qwen-data/events/pipeline-last-result.json"[0m
+2026-03-31T19:17:47.9485285Z [36;1mif [ -f "$result_file" ]; then[0m
+2026-03-31T19:17:47.9487078Z [36;1m  if node -e "const fs=require('node:fs');const p='qwen-data/events/pipeline-last-result.json';const data=JSON.parse(fs.readFileSync(p,'utf8'));const blocker=String(data?.hard_blocker||'').toLowerCase();const published=Number(data?.stats?.articles_published||0);const controlled=published===0 && /(no publishable candidate|source pack gate failed|no candidates discovered|no briefs normalized|pre-draft quality gate failed)/.test(blocker);process.exit(controlled?0:1);"; then[0m
+2026-03-31T19:17:47.9490538Z [36;1m    echo "result=no_article" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T19:17:47.9491254Z [36;1m    echo "No publishable article this run. Skipping build/commit/push."[0m
+2026-03-31T19:17:47.9491891Z [36;1m    exit 0[0m
+2026-03-31T19:17:47.9492224Z [36;1m  fi[0m
+2026-03-31T19:17:47.9492526Z [36;1mfi[0m
+2026-03-31T19:17:47.9492829Z [36;1m[0m
+2026-03-31T19:17:47.9493194Z [36;1mecho "result=failure" >> "$GITHUB_OUTPUT"[0m
+2026-03-31T19:17:47.9493707Z [36;1mexit "$exit_code"[0m
+2026-03-31T19:17:47.9522715Z shell: /usr/bin/bash -e {0}
+2026-03-31T19:17:47.9522979Z env:
+2026-03-31T19:17:47.9523241Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23815121070
+2026-03-31T19:17:47.9523623Z   QWEN_MAX_ARTICLES_PER_RUN: 4
+2026-03-31T19:17:47.9523969Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T19:17:47.9525075Z   OPENAI_API_KEY: ***
+2026-03-31T19:17:47.9525326Z   OPENAI_WRITER_MODEL: gpt-5.1
+2026-03-31T19:17:47.9525650Z   BRAVE_SEARCH_API_KEY: ***
+2026-03-31T19:17:47.9526083Z   PEXELS_API_KEY: ***
+2026-03-31T19:17:47.9526359Z   PIXABAY_API_KEY: ***
+2026-03-31T19:17:47.9526651Z   SEARCH_WEB_API: ***
+2026-03-31T19:17:47.9526887Z   SEARCH_WEB_CX: ***
+2026-03-31T19:17:47.9527125Z   QWEN_API_RETRY_MAX_ATTEMPTS: 3
+2026-03-31T19:17:47.9527672Z   QWEN_API_RETRY_BASE_DELAY_MS: 700
+2026-03-31T19:17:47.9527944Z   QWEN_API_RETRY_MAX_DELAY_MS: 6000
+2026-03-31T19:17:47.9528193Z ##[endgroup]
+2026-03-31T19:17:48.0605043Z 
+2026-03-31T19:17:48.0605728Z > foseer@1.0.0 article:auto
+2026-03-31T19:17:48.0606280Z > node qwen-scripts/pipeline.js
+2026-03-31T19:17:48.0606482Z 
+2026-03-31T19:17:48.1217684Z [writer-selector] Loaded persistent rotation state
+2026-03-31T19:17:48.1250142Z [pipeline] Starting editorial pipeline...
+2026-03-31T19:17:48.1264431Z [pipeline] API keys loaded: {
+2026-03-31T19:17:48.1265271Z   brave: true,
+2026-03-31T19:17:48.1265687Z   openai: true,
+2026-03-31T19:17:48.1266098Z   pexels: true,
+2026-03-31T19:17:48.1266496Z   pixabay: true,
+2026-03-31T19:17:48.1266901Z   google: true
+2026-03-31T19:17:48.1267283Z }
+2026-03-31T19:17:48.1268086Z [pipeline] Max articles per run: 4
+2026-03-31T19:17:48.1268764Z [pipeline] Local verification enabled: false
+2026-03-31T19:17:48.1337888Z [pipeline] Stage 1: Discovery...
+2026-03-31T19:17:48.1340956Z [discovery] Starting taxonomy-driven signal discovery...
+2026-03-31T19:17:48.1357715Z [discovery] Channel 1: Brave core discovery...
+2026-03-31T19:17:48.1370414Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=1 live_quota=5
+2026-03-31T19:17:48.1381455Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+health+public+health+medical+research+pharma+mental+health+wellness&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T19:17:48.8494804Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 16930 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T19:17:48.8497157Z [discovery] Brave query status=called_success items=5 lane=section:health query=breaking health public health medical research pharma mental health wellness
+2026-03-31T19:17:48.8961202Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5241 min_interval_ms=6000
+2026-03-31T19:17:54.1393587Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=2 live_quota=5
+2026-03-31T19:17:54.1397677Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+sports+leagues+tournaments+transfers+athlete+culture&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T19:17:54.7153377Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 16924 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T19:17:54.7155608Z [discovery] Brave query status=called_success items=5 lane=section:sports query=breaking sports leagues tournaments transfers athlete culture
+2026-03-31T19:17:54.7503057Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5389 min_interval_ms=6000
+2026-03-31T19:18:00.1413154Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=3 live_quota=5
+2026-03-31T19:18:00.1416773Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+culture+film+tv+music+celebrities+internet+creators+platforms&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T19:18:00.7742216Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 16918 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T19:18:00.7743718Z [discovery] Brave query status=called_success items=5 lane=section:culture query=breaking culture film tv music celebrities internet creators platforms
+2026-03-31T19:18:00.7980335Z [brave] label=discovery_brave_news status=stale_cache_hit age_ms=246270201 ttl_hours=8 mode=stale_cache
+2026-03-31T19:18:00.7981460Z [discovery] Brave query status=stale_cache_hit items=5 lane=section:news query=breaking news public affairs law climate world events
+2026-03-31T19:18:00.8173901Z [brave] label=discovery_brave_news status=throttle_wait wait_ms=5323 min_interval_ms=6000
+2026-03-31T19:18:06.1423878Z [brave] label=discovery_brave_news status=live_slot_reserved live_used=4 live_quota=5
+2026-03-31T19:18:06.1430313Z [brave] label=discovery_brave_news status=calling cache_reason=missing url=https://api.search.brave.com/res/v1/news/search?q=breaking+business+markets+consumer+companies+housing+crypto+travel&count=5&country=us&search_lang=en&freshness=pd
+2026-03-31T19:18:06.7552453Z [brave] label=discovery_brave_news status=called_success code=200 rate_limit_remaining=49, 0 rate_limit_reset=1, 16912 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T19:18:06.7553907Z [discovery] Brave query status=called_success items=5 lane=section:business query=breaking business markets consumer companies housing crypto travel
+2026-03-31T19:18:06.7718514Z [discovery] Brave core found 25 candidates across 5 lanes
+2026-03-31T19:18:06.7719087Z [discovery] Channel 2: Google trusted-source discovery...
+2026-03-31T19:18:06.7729799Z [google] label=discovery_google_trusted status=stale_cache_hit age_ms=245385795 ttl_hours=8 mode=stale_cache
+2026-03-31T19:18:06.7730656Z [discovery] Google trusted query status=stale_cache_hit items=9 lane=google:tech
+2026-03-31T19:18:06.7967244Z [google] label=discovery_google_trusted status=stale_cache_hit age_ms=246264172 ttl_hours=8 mode=stale_cache
+2026-03-31T19:18:06.7968812Z [discovery] Google trusted query status=stale_cache_hit items=10 lane=google:news
+2026-03-31T19:18:06.8247229Z [discovery] Google trusted-source found 19 candidates
+2026-03-31T19:18:06.8248331Z [discovery] Channel 3: GDELT signal discovery...
+2026-03-31T19:18:06.8252754Z [gdelt] label=discovery_gdelt status=throttle_wait wait_ms=5316 min_interval_ms=10000
+2026-03-31T19:18:12.1430996Z [gdelt] label=discovery_gdelt status=live_slot_reserved live_used=1 live_quota=2
+2026-03-31T19:18:12.1438795Z [gdelt] label=discovery_gdelt status=calling cache_reason=missing url=https://api.gdeltproject.org/api/v2/doc/doc?query=%28breaking+OR+technology+OR+cybersecurity+OR+consumer+OR+tech+OR+mobility+OR+space%29+AND+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=10&sort=DateDesc&timespan=2days
+2026-03-31T19:18:22.6370501Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=1 retry_in_ms=824 error=fetch failed
+2026-03-31T19:18:33.9570219Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=2 retry_in_ms=1585 error=fetch failed
+2026-03-31T19:18:46.0386408Z [gdelt] label=discovery_gdelt status=upstream_response_failure error=Network error: fetch failed
+2026-03-31T19:18:46.0391111Z [discovery] GDELT query status=upstream_response_failure items=0 lane=gdelt:tech query=(breaking OR technology OR cybersecurity OR consumer OR tech OR mobility OR space) AND sourcelang:english
+2026-03-31T19:18:46.0392957Z [gdelt] label=discovery_gdelt status=live_slot_reserved live_used=2 live_quota=2
+2026-03-31T19:18:46.0395451Z [gdelt] label=discovery_gdelt status=calling cache_reason=missing url=https://api.gdeltproject.org/api/v2/doc/doc?query=%28breaking+OR+business+OR+markets+OR+consumer+OR+companies+OR+housing+OR+crypto%29+AND+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=10&sort=DateDesc&timespan=2days
+2026-03-31T19:18:56.5326995Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=1 retry_in_ms=774 error=fetch failed
+2026-03-31T19:19:07.8015253Z [gdelt] label=discovery_gdelt status=retry_scheduled reason=network_error attempt=2 retry_in_ms=1581 error=fetch failed
+2026-03-31T19:19:19.8785429Z [gdelt] label=discovery_gdelt status=upstream_response_failure error=Network error: fetch failed
+2026-03-31T19:19:19.8787897Z [discovery] GDELT query status=upstream_response_failure items=0 lane=gdelt:business query=(breaking OR business OR markets OR consumer OR companies OR housing OR crypto) AND sourcelang:english
+2026-03-31T19:19:19.8789522Z [discovery] GDELT signal discovery found 0 candidates
+2026-03-31T19:19:19.8793175Z [discovery] Discovery complete: 22 candidates after filtering
+2026-03-31T19:19:19.8793971Z [pipeline] Discovery found 22 candidates
+2026-03-31T19:19:19.8852699Z [pipeline] Stage 2: Event clustering and brief normalization...
+2026-03-31T19:19:19.9010084Z [pipeline] Clustered 6 events and normalized 6 briefs
+2026-03-31T19:19:19.9363658Z [pipeline] News pool active: 46, total stored: 54
+2026-03-31T19:19:19.9364377Z [pipeline] Stage 3: Source pack assembly...
+2026-03-31T19:19:20.0363028Z [pipeline] Duplicate guard: skip published identity cluster:evt-2026-03-31-sports-general-global :: How NIL Is Reshaping the Future of College Football
+2026-03-31T19:19:20.1338796Z [pipeline] Source-pack candidates from merged current+pool+ready set: 16
+2026-03-31T19:19:20.1340029Z [pipeline] Duplicate guard removed 1 already published candidate(s) before source-pack assembly
+2026-03-31T19:19:20.1341091Z [pipeline] Ready backlog prioritized for selection: 1
+2026-03-31T19:19:20.1342220Z [source-pack] topic=Why Businesses Are Paying Closer Attention to Crypto Infrastructure
+2026-03-31T19:19:20.1698887Z [source-pack] topic=Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms
+2026-03-31T19:19:20.1883024Z [source-pack] topic=Medical Bulletin 31/March/2026
+2026-03-31T19:19:20.2204412Z [source-pack] topic=Why Is Horror TV So Complicated Right Now?
+2026-03-31T19:19:20.2330122Z [source-pack] topic=Trump Signs Order to Pay TSA Workers
+2026-03-31T19:19:20.2550363Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T19:19:20.2708690Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T19:19:20.2823254Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T19:19:20.3030080Z [pipeline] Stage 3 placement repair queued :: Hard truths, soft metals :: Primary topic_id unsupported by source-pack evidence: us-politics
+2026-03-31T19:19:20.3031610Z [source-pack] topic=XRP Market Trends & Ripple's Regulatory Milestones in 2026
+2026-03-31T19:19:20.3194128Z [source-pack] topic=10 TV Shows That Changed Fandom Culture
+2026-03-31T19:19:20.3303617Z [source-pack] topic=Tech company climate goals under pressure due to AI energy demand
+2026-03-31T19:19:20.3431796Z [source-pack] topic=Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...
+2026-03-31T19:19:20.3534899Z [source-pack] topic=AI: The Cybersecurity Crisis That Vendors Love
+2026-03-31T19:19:20.3652432Z [source-pack] topic=The Link Between Medicine and Psychology
+2026-03-31T19:19:20.3751692Z [source-pack] topic=Ofcom to investigate complaints of climate change denial
+2026-03-31T19:19:20.3921650Z [source-pack] topic=UK-Registered AI Cybersecurity Patent Signals New Era of Intelligent Threat Management and Interdisciplinary I
+2026-03-31T19:19:20.4064375Z [pipeline] Assembled 16 source packs, 0 publishable
+2026-03-31T19:19:20.4226384Z [pipeline] Stage 3 retry #1 (cheap_refresh): refresh discovery with cheaper channels first (google/gdelt, brave disabled)
+2026-03-31T19:19:20.4227128Z [discovery] Starting taxonomy-driven signal discovery...
+2026-03-31T19:19:20.4230437Z [discovery] Skipping Brave (disabled or no API key)
+2026-03-31T19:19:20.4231221Z [discovery] Channel 2: Google trusted-source discovery...
+2026-03-31T19:19:20.4236994Z [google] label=discovery_google_trusted status=stale_cache_hit age_ms=243754696 ttl_hours=8 mode=stale_cache
+2026-03-31T19:19:20.4238138Z [discovery] Google trusted query status=stale_cache_hit items=10 lane=google:health
+2026-03-31T19:19:20.4646660Z [google] label=discovery_google_trusted status=live_slot_reserved live_used=1 live_quota=2
+2026-03-31T19:19:20.4654066Z [google] label=discovery_google_trusted status=calling cache_reason=missing url=https://customsearch.googleapis.com/customsearch/v1?key=REDACTED&cx=***&q=%28site%3Acbsnews.com+OR+site%3Anbcnews.com+OR+site%3Acnn.com+OR+site%3Anikkei.com+OR+site%3Aasia.nikkei.com+OR+site%3Atheglobeandmail.com+OR+site%3Aeconomist.com+OR+site%3Asec.gov+OR+site%3Afda.gov+OR+site%3Awhitehouse.gov+OR+site%3Ajustice.gov+OR+site%3Auscourts.gov+OR+site%3Asupremecourt.gov+OR+site%3Acongress.gov+OR+site%3Afederalregister.gov+OR+site%3Agovinfo.gov%29+%28markets+OR+economy+OR+policy+OR+ai+OR+cybersecurity+OR+health+OR+conflict%29+%28breaking+technology+ai+cybersecurity+consumer+tech+mobility+space+enterprise+software%29&num=10&dateRestrict=d2
+2026-03-31T19:19:20.7989384Z [google] label=discovery_google_trusted status=called_success code=200 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T19:19:20.7990774Z [discovery] Google trusted query status=called_success items=1 lane=google:tech
+2026-03-31T19:19:20.8123724Z [discovery] Google trusted-source found 11 candidates
+2026-03-31T19:19:20.8124403Z [discovery] Channel 3: GDELT signal discovery...
+2026-03-31T19:19:20.8125374Z [gdelt] label=discovery_gdelt status=live_quota_exhausted live_used=2 live_quota=2
+2026-03-31T19:19:20.8127272Z [discovery] GDELT query status=live_quota_exhausted items=0 lane=gdelt:health query=(breaking OR health OR public OR medical OR research OR pharma OR mental) AND sourcelang:english
+2026-03-31T19:19:20.8129373Z [gdelt] label=discovery_gdelt status=live_quota_exhausted live_used=2 live_quota=2
+2026-03-31T19:19:20.8130762Z [discovery] GDELT query status=live_quota_exhausted items=0 lane=gdelt:tech query=(breaking OR technology OR cybersecurity OR consumer OR tech OR mobility OR space) AND sourcelang:english
+2026-03-31T19:19:20.8131867Z [discovery] GDELT signal discovery found 0 candidates
+2026-03-31T19:19:20.8132713Z [discovery] Discovery complete: 5 candidates after filtering
+2026-03-31T19:19:20.9196261Z [pipeline] Duplicate guard: skip published identity cluster:evt-2026-03-31-sports-general-global :: How NIL Is Reshaping the Future of College Football
+2026-03-31T19:19:21.0414989Z [pipeline] Source-pack candidates from merged current+pool+ready set: 16
+2026-03-31T19:19:21.0415758Z [pipeline] Duplicate guard removed 1 already published candidate(s) before source-pack assembly
+2026-03-31T19:19:21.0416384Z [pipeline] Ready backlog prioritized for selection: 1
+2026-03-31T19:19:21.0416976Z [source-pack] topic=Why Businesses Are Paying Closer Attention to Crypto Infrastructure
+2026-03-31T19:19:21.0615731Z [source-pack] topic=Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms
+2026-03-31T19:19:21.0833701Z [source-pack] topic=Medical Bulletin 31/March/2026
+2026-03-31T19:19:21.1104721Z [source-pack] topic=Why Is Horror TV So Complicated Right Now?
+2026-03-31T19:19:21.1199389Z [source-pack] topic=Trump Signs Order to Pay TSA Workers
+2026-03-31T19:19:21.1376629Z [source-pack] topic=MAHA fans want action Trump hasn't delivered
+2026-03-31T19:19:21.1534436Z [source-pack] topic=Can a Note-Taking AI Bracelet Really Make You More Productive?
+2026-03-31T19:19:21.1692476Z [source-pack] topic=The Timeless Fear of Corrupting the Youth
+2026-03-31T19:19:21.1810436Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T19:19:21.2017277Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T19:19:21.2147898Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T19:19:21.2347206Z [pipeline] Stage 3 placement repair queued :: Hard truths, soft metals :: Primary topic_id unsupported by source-pack evidence: us-politics
+2026-03-31T19:19:21.2348538Z [source-pack] topic=XRP Market Trends & Ripple's Regulatory Milestones in 2026
+2026-03-31T19:19:21.2497259Z [source-pack] topic=10 TV Shows That Changed Fandom Culture
+2026-03-31T19:19:21.2615025Z [source-pack] topic=Tech company climate goals under pressure due to AI energy demand
+2026-03-31T19:19:21.2777043Z [source-pack] topic=Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...
+2026-03-31T19:19:21.2884831Z [source-pack] topic=AI: The Cybersecurity Crisis That Vendors Love
+2026-03-31T19:19:21.2990041Z [pipeline] Assembled 16 source packs, 0 publishable
+2026-03-31T19:19:21.3146630Z [pipeline] Stage 3 retry #2 (limited_brave_refresh): single constrained brave retry after cheap refresh
+2026-03-31T19:19:21.3147801Z [discovery] Starting taxonomy-driven signal discovery...
+2026-03-31T19:19:21.3150802Z [discovery] Channel 1: Brave core discovery...
+2026-03-31T19:19:21.3154302Z [brave] label=discovery_brave_news status=cache_hit age_ms=80542 ttl_hours=8 mode=fresh_cache
+2026-03-31T19:19:21.3156107Z [discovery] Brave query status=cache_hit items=5 lane=section:culture query=breaking culture film tv music celebrities internet creators platforms
+2026-03-31T19:19:21.3302423Z [discovery] Brave core found 5 candidates across 1 lanes
+2026-03-31T19:19:21.3303306Z [discovery] Channel 2: Google trusted-source discovery...
+2026-03-31T19:19:21.3304371Z [google] label=discovery_google_trusted status=throttle_wait wait_ms=5134 min_interval_ms=6000
+2026-03-31T19:19:26.4668678Z [google] label=discovery_google_trusted status=live_slot_reserved live_used=2 live_quota=2
+2026-03-31T19:19:26.4679026Z [google] label=discovery_google_trusted status=calling cache_reason=missing url=https://customsearch.googleapis.com/customsearch/v1?key=REDACTED&cx=***&q=%28site%3Areuters.com+OR+site%3Aapnews.com+OR+site%3Abloomberg.com+OR+site%3Aft.com+OR+site%3Awsj.com+OR+site%3Anytimes.com+OR+site%3Abbc.com+OR+site%3Abbc.co.uk+OR+site%3Atheguardian.com+OR+site%3Awashingtonpost.com+OR+site%3Acnbc.com+OR+site%3Apolitico.com+OR+site%3Aaxios.com+OR+site%3Anpr.org+OR+site%3Aabcnews.go.com+OR+site%3Aabcnews.com%29+%28announced+OR+approved+OR+filed+OR+charged+OR+launched+OR+confirmed+OR+warns%29+%28breaking+news+public+affairs+law+climate+world+events%29&num=10&dateRestrict=d2
+2026-03-31T19:19:26.9316402Z [google] label=discovery_google_trusted status=called_success code=200 retry_count=0 retry_delay_ms=0 cache=written
+2026-03-31T19:19:26.9318125Z [discovery] Google trusted query status=called_success items=10 lane=google:news
+2026-03-31T19:19:26.9745764Z [discovery] Google trusted-source found 10 candidates
+2026-03-31T19:19:26.9746623Z [discovery] Channel 3: GDELT signal discovery...
+2026-03-31T19:19:26.9747896Z [gdelt] label=discovery_gdelt status=live_quota_exhausted live_used=2 live_quota=2
+2026-03-31T19:19:26.9749784Z [discovery] GDELT query status=live_quota_exhausted items=0 lane=gdelt:news query=(breaking OR news OR public OR affairs OR law OR climate OR world) AND sourcelang:english
+2026-03-31T19:19:26.9751846Z [gdelt] label=discovery_gdelt status=live_quota_exhausted live_used=2 live_quota=2
+2026-03-31T19:19:26.9753824Z [discovery] GDELT query status=live_quota_exhausted items=0 lane=gdelt:business query=(breaking OR business OR markets OR consumer OR companies OR housing OR crypto) AND sourcelang:english
+2026-03-31T19:19:26.9755363Z [discovery] GDELT signal discovery found 0 candidates
+2026-03-31T19:19:26.9756177Z [discovery] Discovery complete: 10 candidates after filtering
+2026-03-31T19:19:27.0837656Z [pipeline] Duplicate guard: skip published identity cluster:evt-2026-03-31-sports-general-global :: How NIL Is Reshaping the Future of College Football
+2026-03-31T19:19:27.2252572Z [pipeline] Source-pack candidates from merged current+pool+ready set: 16
+2026-03-31T19:19:27.2253846Z [pipeline] Duplicate guard removed 1 already published candidate(s) before source-pack assembly
+2026-03-31T19:19:27.2254967Z [pipeline] Ready backlog prioritized for selection: 1
+2026-03-31T19:19:27.2255982Z [source-pack] topic=Why Businesses Are Paying Closer Attention to Crypto Infrastructure
+2026-03-31T19:19:27.2392381Z [source-pack] topic=Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms
+2026-03-31T19:19:27.2524870Z [source-pack] topic=Medical Bulletin 31/March/2026
+2026-03-31T19:19:27.2746285Z [source-pack] topic=Why Is Horror TV So Complicated Right Now?
+2026-03-31T19:19:27.2842135Z [source-pack] topic=Trump Signs Order to Pay TSA Workers
+2026-03-31T19:19:27.3015260Z [source-pack] topic=MAHA fans want action Trump hasn't delivered
+2026-03-31T19:19:27.3178840Z [source-pack] topic=Can a Note-Taking AI Bracelet Really Make You More Productive?
+2026-03-31T19:19:27.3308667Z [source-pack] topic=The Timeless Fear of Corrupting the Youth
+2026-03-31T19:19:27.3448842Z [source-pack] topic=Climate law 'battle royale'
+2026-03-31T19:19:27.3674443Z [source-pack] topic=Constantino's sticky ad spending problem
+2026-03-31T19:19:27.3903440Z [source-pack] topic=Israel passes law to give death penalty to Palestinians convicted of ...
+2026-03-31T19:19:27.4087048Z [source-pack] topic=Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move
+2026-03-31T19:19:27.4248745Z [source-pack] topic=Manchester United transfers: Zirkzee, Rashford, and should the club ...
+2026-03-31T19:19:27.4353392Z [source-pack] topic=Hard truths, soft metals
+2026-03-31T19:19:27.4548460Z [pipeline] Stage 3 placement repair queued :: Hard truths, soft metals :: Primary topic_id unsupported by source-pack evidence: us-politics
+2026-03-31T19:19:27.4549586Z [source-pack] topic=XRP Market Trends & Ripple's Regulatory Milestones in 2026
+2026-03-31T19:19:27.4696501Z [source-pack] topic=10 TV Shows That Changed Fandom Culture
+2026-03-31T19:19:27.4786907Z [pipeline] Assembled 16 source packs, 1 publishable
+2026-03-31T19:19:27.5092021Z [pipeline] Additional ready article candidates: 2
+2026-03-31T19:19:27.5093299Z [pipeline]   backlog rank=2 score=62.3 section=sports topic=transfers-business title=International Olympics Committee Bans Trans Athletes from Women's Events
+2026-03-31T19:19:27.5095278Z [pipeline]   backlog rank=2 score=50.2 section=business topic=crypto-bitcoin title=MAHA fans want action Trump hasn't delivered
+2026-03-31T19:19:27.5096440Z [pipeline] Ready candidate backlog saved: /home/runner/work/foseer.com/foseer.com/qwen-data/events/ready-article-candidates.json
+2026-03-31T19:19:27.5097955Z [pipeline] SOURCE PACK GATE: PASS :: Israel passes law to give death penalty to Palestinians convicted of ...
+2026-03-31T19:19:27.5098594Z [pipeline] Sources: 3, Domains: 3
+2026-03-31T19:19:27.5099082Z [pipeline] Stage 3.5: Pre-draft canonical placement and tag lock...
+2026-03-31T19:19:27.5955519Z [pipeline] PRE-DRAFT LOCK: PASS :: Israel passes law to give death penalty to Palestinians convicted of ... :: section=business topic=economy-markets tags=2
+2026-03-31T19:19:27.6188832Z [pipeline] === Article run start: Israel passes law to give death penalty to Palestinians convicted of ... ===
+2026-03-31T19:19:27.6189975Z [pipeline] Stage 4: Claim map creation...
+2026-03-31T19:19:27.6190619Z [claim-map] topic=Israel passes law to give death penalty to Palestinians convicted of ... sources=3
+2026-03-31T19:19:27.6202385Z [claim-map] quality=strong total_claims=3 supported=3 fallback=false
+2026-03-31T19:19:27.6203172Z [pipeline] Claim map: 3 claims, 3 supported
+2026-03-31T19:19:27.6203742Z [pipeline] CLAIM MAP GATE: PASS
+2026-03-31T19:19:27.6204275Z [pipeline] Stage 5: Article drafting...
+2026-03-31T19:19:27.6207240Z [drafter] Drafting article: Israel passes law to give death penalty to Palestinians convicted of ...
+2026-03-31T19:19:27.6596173Z [drafter] Story classification: report / News / international affairs
+2026-03-31T19:19:27.6597185Z [drafter] Canonical tags: World & Geopolitics, Diplomacy, Israel
+2026-03-31T19:19:27.6606934Z [drafter] Selected department: Staff Reporter / author: Daniel Reed (fit: 10/10)
+2026-03-31T19:19:27.6608097Z [drafter] Forecast inclusion: Yes (variant: report-watch)
+2026-03-31T19:19:27.6620821Z [drafter] Prompt assembled: 6 layers
+2026-03-31T19:19:27.6621453Z [drafter] Prompt size: 7092 chars
+2026-03-31T19:19:27.6625145Z [openai] label=article_drafting status=calling model=gpt-5.1 prompt_chars=7092 token_field=max_completion_tokens token_limit=4500 temperature=0.6
+2026-03-31T19:19:46.8104467Z [openai] label=article_drafting status=called_success model=gpt-5.1 code=200 retry_count=0 retry_delay_ms=0
+2026-03-31T19:19:46.8115129Z [drafter] Drafted 951 words, 3 sources cited
+2026-03-31T19:19:46.8115927Z [drafter] Type: report, Writer: Daniel Reed, News Desk
+2026-03-31T19:19:46.8116714Z [drafter] Quality: strong, Safe for publishing: true
+2026-03-31T19:19:46.8117580Z [drafter] Forecast: Included
+2026-03-31T19:19:46.8133868Z [pipeline] Drafted: 951 words, type: report, quality: strong
+2026-03-31T19:19:46.8134404Z [pipeline] Stage 6: Image support...
+2026-03-31T19:19:46.8139339Z [image] Getting image for: Israel Approves Death Penalty Law for Some Palestinian Convicts
+2026-03-31T19:19:46.8499116Z [image-registry] Enriched metadata hints for 1 assets
+2026-03-31T19:19:46.8591423Z [pexels] label=pexels_image_search status=calling query=Israel Approves Death photo
+2026-03-31T19:19:46.8612484Z [pixabay] label=pixabay_image_search status=calling query=Israel Approves Death photo video=false
+2026-03-31T19:19:47.0200602Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=99 rate_limit_reset=60 retry_count=0 retry_delay_ms=0
+2026-03-31T19:19:47.2183317Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T19:19:47.2255096Z [image] Rejecting low-evidence generic candidate provider=pexels query="Israel Approves Death photo"
+2026-03-31T19:19:47.2299753Z [image] Rejecting recent duplicate asset=pixabay:7666143
+2026-03-31T19:19:47.2304677Z [image] Rejecting low-evidence generic candidate provider=pixabay query="Israel Approves Death photo"
+2026-03-31T19:19:47.2309454Z [image] Rejecting low-evidence generic candidate provider=pixabay query="Israel Approves Death photo"
+2026-03-31T19:19:47.2319559Z [image] No eligible fresh online candidate across providers for query="Israel Approves Death photo"
+2026-03-31T19:19:47.2321342Z [pexels] label=pexels_image_search status=calling query=Israel Approves Death portrait
+2026-03-31T19:19:47.2328590Z [pixabay] label=pixabay_image_search status=calling query=Israel Approves Death portrait video=false
+2026-03-31T19:19:47.3770721Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=98 rate_limit_reset=59 retry_count=0 retry_delay_ms=0
+2026-03-31T19:19:47.6091677Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T19:19:47.6097107Z [image] Rejecting low-evidence generic candidate provider=pexels query="Israel Approves Death portrait"
+2026-03-31T19:19:47.6107547Z [image] Rejecting low-evidence generic candidate provider=pexels query="Israel Approves Death portrait"
+2026-03-31T19:19:47.6121654Z [image] Rejecting low-evidence generic candidate provider=pexels query="Israel Approves Death portrait"
+2026-03-31T19:19:47.6124417Z [image] Rejecting low-evidence generic candidate provider=pexels query="Israel Approves Death portrait"
+2026-03-31T19:19:47.6126842Z [image] Rejecting low-evidence generic candidate provider=pexels query="Israel Approves Death portrait"
+2026-03-31T19:19:47.6129555Z [image] Rejecting low-evidence generic candidate provider=pexels query="Israel Approves Death portrait"
+2026-03-31T19:19:47.6164892Z [image] No eligible fresh online candidate across providers for query="Israel Approves Death portrait"
+2026-03-31T19:19:47.6165792Z [pexels] label=pexels_image_search status=calling query=israel Israel Approves Death photo
+2026-03-31T19:19:47.6171191Z [pixabay] label=pixabay_image_search status=calling query=israel Israel Approves Death photo video=false
+2026-03-31T19:19:47.7962935Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=97 rate_limit_reset=59 retry_count=0 retry_delay_ms=0
+2026-03-31T19:19:47.9802228Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T19:19:47.9905909Z [image] No eligible fresh online candidate across providers for query="israel Israel Approves Death photo"
+2026-03-31T19:19:47.9907547Z [pexels] label=pexels_image_search status=calling query=Penalty Law for Some photo
+2026-03-31T19:19:47.9908841Z [pixabay] label=pixabay_image_search status=calling query=Penalty Law for Some photo video=false
+2026-03-31T19:19:48.1010986Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=96 rate_limit_reset=58 retry_count=0 retry_delay_ms=0
+2026-03-31T19:19:48.4009463Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T19:19:48.4013933Z [image] Rejecting low-evidence generic candidate provider=pexels query="Penalty Law for Some photo"
+2026-03-31T19:19:48.4018236Z [image] Rejecting low-evidence generic candidate provider=pexels query="Penalty Law for Some photo"
+2026-03-31T19:19:48.4039617Z [image] Rejecting low-evidence generic candidate provider=pexels query="Penalty Law for Some photo"
+2026-03-31T19:19:48.4075453Z [pexels] label=pexels_image_search status=calling query=israel Penalty Law for Some photo
+2026-03-31T19:19:48.4080027Z [pixabay] label=pixabay_image_search status=calling query=israel Penalty Law for Some photo video=false
+2026-03-31T19:19:48.6229154Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=95 rate_limit_reset=58 retry_count=0 retry_delay_ms=0
+2026-03-31T19:19:48.9159349Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T19:19:48.9219528Z [pexels] label=pexels_image_search status=calling query=Israel Approves Death Penalty Law for Some photo
+2026-03-31T19:19:48.9225141Z [pixabay] label=pixabay_image_search status=calling query=Israel Approves Death Penalty Law for Some photo video=false
+2026-03-31T19:19:49.1878333Z [pixabay] label=pixabay_image_search status=called_success code=200 hits=15 rate_limit_remaining=94 rate_limit_reset=58 retry_count=0 retry_delay_ms=0
+2026-03-31T19:19:49.2735109Z [pexels] label=pexels_image_search status=called_success code=200 photos=15 retry_count=0 retry_delay_ms=0
+2026-03-31T19:19:49.2766927Z [image] Rejecting low-evidence generic candidate provider=pexels query="Israel Approves Death Penalty Law for Some photo"
+2026-03-31T19:19:49.2769421Z [image] Rejecting low-evidence generic candidate provider=pexels query="Israel Approves Death Penalty Law for Some photo"
+2026-03-31T19:19:49.9502723Z [pipeline] Image: pixabay, path: ~/assets/images/library/pixabay/5352999/cover.jpg
+2026-03-31T19:19:49.9503332Z [pipeline] Stage 7: Publishing article...
+2026-03-31T19:19:50.0334495Z [pipeline] FINAL STATUS: FAIL
+2026-03-31T19:19:50.0336295Z [pipeline] Exit reason(s): final Success is false | hard blocker exists: Primary topic tag unsupported by article evidence: World & Geopolitics | articles_published is 0
+2026-03-31T19:19:50.0338043Z [pipeline] EXIT CLASS: unexpected_failure
+2026-03-31T19:19:50.0348654Z 
+2026-03-31T19:19:50.0349037Z [pipeline] === FINAL RESULT ===
+2026-03-31T19:19:50.0349535Z Success: false
+2026-03-31T19:19:50.0350431Z Hard Blocker: Primary topic tag unsupported by article evidence: World & Geopolitics
+2026-03-31T19:19:50.0351156Z Stage Results:
+2026-03-31T19:19:50.0351501Z   discovery: PASS
+2026-03-31T19:19:50.0351873Z   briefNormalization: PASS
+2026-03-31T19:19:50.0352293Z   sourcePackAssembly: PASS
+2026-03-31T19:19:50.0352562Z   preDraftPreparation: PASS
+2026-03-31T19:19:50.0352818Z   claimMapCreation: PASS
+2026-03-31T19:19:50.0353061Z   articleDrafting: PASS
+2026-03-31T19:19:50.0353295Z   imageSupport: PASS
+2026-03-31T19:19:50.0354079Z   publishing: FAIL - Israel passes law to give death penalty to Palestinians convicted of ...: Primary topic tag unsupported by article evidence: World & Geopolitics
+2026-03-31T19:19:50.0354809Z   localVerification: FAIL
+2026-03-31T19:19:50.0355311Z Selected topic: Israel passes law to give death penalty to Palestinians convicted of ...
+2026-03-31T19:19:50.0356029Z Draft word count: 951
+2026-03-31T19:19:50.0356437Z Image provider: pixabay
+2026-03-31T19:19:50.0356802Z Stats: {
+2026-03-31T19:19:50.0357122Z   "discovery_candidates": 22,
+2026-03-31T19:19:50.0357742Z   "event_clusters": 6,
+2026-03-31T19:19:50.0358127Z   "briefs_normalized": 13,
+2026-03-31T19:19:50.0358575Z   "source_packs_assembled": 48,
+2026-03-31T19:19:50.0359095Z   "publishable_candidates": 1,
+2026-03-31T19:19:50.0359915Z   "selected_topic": "Israel passes law to give death penalty to Palestinians convicted of ...",
+2026-03-31T19:19:50.0360684Z   "selected_topics": [
+2026-03-31T19:19:50.0361322Z     "Israel passes law to give death penalty to Palestinians convicted of ..."
+2026-03-31T19:19:50.0361987Z   ],
+2026-03-31T19:19:50.0362316Z   "articles_attempted": 1,
+2026-03-31T19:19:50.0362726Z   "articles_published": 0,
+2026-03-31T19:19:50.0363106Z   "news_pool": {
+2026-03-31T19:19:50.0363445Z     "total": 54,
+2026-03-31T19:19:50.0363776Z     "active": 46,
+2026-03-31T19:19:50.0364124Z     "published": 8,
+2026-03-31T19:19:50.0364486Z     "ready_candidates": 2
+2026-03-31T19:19:50.0364855Z   },
+2026-03-31T19:19:50.0365160Z   "cache_stats": {
+2026-03-31T19:19:50.0365597Z     "mode": "cache_refresh_with_live_quota",
+2026-03-31T19:19:50.0366067Z     "retry_policy": {
+2026-03-31T19:19:50.0366431Z       "max_attempts": 3,
+2026-03-31T19:19:50.0366867Z       "base_delay_ms": 700,
+2026-03-31T19:19:50.0367276Z       "max_delay_ms": 6000,
+2026-03-31T19:19:50.0367851Z       "jitter_ms": 250
+2026-03-31T19:19:50.0368208Z     },
+2026-03-31T19:19:50.0368594Z     "search_network_enabled": true,
+2026-03-31T19:19:50.0369078Z     "min_search_interval_ms": 6000,
+2026-03-31T19:19:50.0369476Z     "live_quota": {
+2026-03-31T19:19:50.0369802Z       "brave": 5,
+2026-03-31T19:19:50.0370110Z       "gdelt": 2,
+2026-03-31T19:19:50.0370415Z       "google": 2
+2026-03-31T19:19:50.0370703Z     },
+2026-03-31T19:19:50.0370986Z     "live_usage": {
+2026-03-31T19:19:50.0371312Z       "brave": 4,
+2026-03-31T19:19:50.0372112Z       "gdelt": 2,
+2026-03-31T19:19:50.0372436Z       "google": 2
+2026-03-31T19:19:50.0372723Z     },
+2026-03-31T19:19:50.0372991Z     "cache": {
+2026-03-31T19:19:50.0373305Z       "ttl_hours": 8,
+2026-03-31T19:19:50.0373863Z       "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+2026-03-31T19:19:50.0374725Z       "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+2026-03-31T19:19:50.0375352Z       "runtime": {
+2026-03-31T19:19:50.0375667Z         "brave": {
+2026-03-31T19:19:50.0376001Z           "files": 4,
+2026-03-31T19:19:50.0376445Z           "fresh_files": 4,
+2026-03-31T19:19:50.0376819Z           "expired_files": 0,
+2026-03-31T19:19:50.0377209Z           "corrupt_files": 0,
+2026-03-31T19:19:50.0377968Z           "size_bytes": 61260
+2026-03-31T19:19:50.0378322Z         },
+2026-03-31T19:19:50.0378613Z         "gdelt": {
+2026-03-31T19:19:50.0378930Z           "files": 0,
+2026-03-31T19:19:50.0379262Z           "fresh_files": 0,
+2026-03-31T19:19:50.0379642Z           "expired_files": 0,
+2026-03-31T19:19:50.0380023Z           "corrupt_files": 0,
+2026-03-31T19:19:50.0380392Z           "size_bytes": 0
+2026-03-31T19:19:50.0380732Z         },
+2026-03-31T19:19:50.0381024Z         "google": {
+2026-03-31T19:19:50.0381341Z           "files": 2,
+2026-03-31T19:19:50.0381691Z           "fresh_files": 2,
+2026-03-31T19:19:50.0382057Z           "expired_files": 0,
+2026-03-31T19:19:50.0382449Z           "corrupt_files": 0,
+2026-03-31T19:19:50.0382839Z           "size_bytes": 51730
+2026-03-31T19:19:50.0383188Z         }
+2026-03-31T19:19:50.0383466Z       },
+2026-03-31T19:19:50.0383749Z       "seed": {
+2026-03-31T19:19:50.0384059Z         "brave": {
+2026-03-31T19:19:50.0384374Z           "files": 1,
+2026-03-31T19:19:50.0384706Z           "fresh_files": 0,
+2026-03-31T19:19:50.0385071Z           "expired_files": 1,
+2026-03-31T19:19:50.0385453Z           "corrupt_files": 0,
+2026-03-31T19:19:50.0385818Z           "size_bytes": 14135
+2026-03-31T19:19:50.0386165Z         },
+2026-03-31T19:19:50.0386466Z         "gdelt": {
+2026-03-31T19:19:50.0386817Z           "files": 1,
+2026-03-31T19:19:50.0387180Z           "fresh_files": 0,
+2026-03-31T19:19:50.0387730Z           "expired_files": 1,
+2026-03-31T19:19:50.0388129Z           "corrupt_files": 0,
+2026-03-31T19:19:50.0388500Z           "size_bytes": 6189
+2026-03-31T19:19:50.0388879Z         },
+2026-03-31T19:19:50.0389180Z         "google": {
+2026-03-31T19:19:50.0389504Z           "files": 9,
+2026-03-31T19:19:50.0389830Z           "fresh_files": 0,
+2026-03-31T19:19:50.0390196Z           "expired_files": 9,
+2026-03-31T19:19:50.0390596Z           "corrupt_files": 0,
+2026-03-31T19:19:50.0391037Z           "size_bytes": 285008
+2026-03-31T19:19:50.0391424Z         }
+2026-03-31T19:19:50.0391714Z       }
+2026-03-31T19:19:50.0391999Z     }
+2026-03-31T19:19:50.0392270Z   },
+2026-03-31T19:19:50.0392570Z   "duration_ms": 121904,
+2026-03-31T19:19:50.0392923Z   "ready_candidates": 2,
+2026-03-31T19:19:50.0393357Z   "additional_ready_candidates": 2,
+2026-03-31T19:19:50.0393833Z   "source_pack_attempts": 3,
+2026-03-31T19:19:50.0394318Z   "source_pack_retry_external_queries": 8,
+2026-03-31T19:19:50.0394864Z   "source_pack_retry_brave_queries": 1,
+2026-03-31T19:19:50.0395417Z   "source_pack_retry_estimated_tokens": 6300,
+2026-03-31T19:19:50.0395872Z   "pre_draft_rejected": 0,
+2026-03-31T19:19:50.0396860Z   "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T19-17-48-124Z.json"
+2026-03-31T19:19:50.0398005Z }
+2026-03-31T19:19:50.0398971Z [pipeline] Result saved to: /home/runner/work/foseer.com/foseer.com/qwen-data/events/pipeline-last-result.json
+2026-03-31T19:19:50.0717703Z ##[error]Process completed with exit code 2.
+2026-03-31T19:19:50.0879372Z Post job cleanup.
+2026-03-31T19:19:50.1823875Z [command]/usr/bin/git version
+2026-03-31T19:19:50.1861047Z git version 2.53.0
+2026-03-31T19:19:50.1906222Z Temporarily overriding HOME='/home/runner/work/_temp/237dc262-0e15-41b2-a78b-429004cf6938' before making global git config changes
+2026-03-31T19:19:50.1908036Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-31T19:19:50.1913254Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/foseer.com/foseer.com
+2026-03-31T19:19:50.1950549Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-31T19:19:50.1984621Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-31T19:19:50.2210028Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-31T19:19:50.2231319Z http.https://github.com/.extraheader
+2026-03-31T19:19:50.2243794Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-31T19:19:50.2274662Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-31T19:19:50.2505836Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-31T19:19:50.2543339Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-31T19:19:50.2910577Z Cleaning up orphan processes
+2026-03-31T19:19:50.3195998Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-node@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

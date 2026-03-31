@@ -1,0 +1,25 @@
+﻿2026-03-31T21:46:10.1943734Z ##[group]Run actions/setup-node@v4
+2026-03-31T21:46:10.1944963Z with:
+2026-03-31T21:46:10.1945802Z   node-version: 20
+2026-03-31T21:46:10.1946722Z   cache: npm
+2026-03-31T21:46:10.1947583Z   always-auth: false
+2026-03-31T21:46:10.1948861Z   check-latest: false
+2026-03-31T21:46:10.1950241Z   token: ***
+2026-03-31T21:46:10.1951145Z env:
+2026-03-31T21:46:10.1952250Z   PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/23820920262
+2026-03-31T21:46:10.1953941Z   QWEN_SEARCH_NETWORK_MODE: cache_refresh_with_live_quota
+2026-03-31T21:46:10.1955344Z ##[endgroup]
+2026-03-31T21:46:10.3803148Z Found in cache @ /opt/hostedtoolcache/node/20.20.1/x64
+2026-03-31T21:46:10.3812637Z ##[group]Environment details
+2026-03-31T21:46:10.6738367Z node: v20.20.1
+2026-03-31T21:46:10.6739993Z npm: 10.8.2
+2026-03-31T21:46:10.6740831Z yarn: 1.22.22
+2026-03-31T21:46:10.6742456Z ##[endgroup]
+2026-03-31T21:46:10.6763802Z [command]/opt/hostedtoolcache/node/20.20.1/x64/bin/npm config get cache
+2026-03-31T21:46:10.7961837Z /home/runner/.npm
+2026-03-31T21:46:10.9507283Z Cache hit for: node-cache-Linux-x64-npm-92d60ddf14d49d621e750f1e8d8b6aa7fc5cc2ea92873665baa1bca1556f25fd
+2026-03-31T21:46:11.9954245Z Received 103730000 of 103730000 (100.0%), 105.7 MBs/sec
+2026-03-31T21:46:11.9955052Z Cache Size: ~99 MB (103730000 B)
+2026-03-31T21:46:11.9984984Z [command]/usr/bin/tar -xf /home/runner/work/_temp/7871a322-be6a-4a1f-a634-94537588c50b/cache.tzst -P -C /home/runner/work/foseer.com/foseer.com --use-compress-program unzstd
+2026-03-31T21:46:12.3233564Z Cache restored successfully
+2026-03-31T21:46:12.3284055Z Cache restored from key: node-cache-Linux-x64-npm-92d60ddf14d49d621e750f1e8d8b6aa7fc5cc2ea92873665baa1bca1556f25fd
