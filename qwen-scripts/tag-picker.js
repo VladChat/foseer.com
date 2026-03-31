@@ -8,8 +8,8 @@ import { loadTaxonomyRegistry, resolveSectionId, resolveTopicId } from './utils/
 
 const PROJECT_ROOT = resolveProjectRoot(import.meta.url);
 const TAG_REGISTRY_PATH = path.resolve(PROJECT_ROOT, 'qwen-data/contracts/tag-registry.json');
-const MIN_CANONICAL_TAGS = 2;
-const MAX_CANONICAL_TAGS = 4;
+const MIN_CANONICAL_TAGS = 3;
+const MAX_CANONICAL_TAGS = 6;
 
 let cachedRegistry = null;
 
@@ -350,6 +350,28 @@ function dedupeSelections(items) {
     out.push(item);
   }
   return out;
+}
+
+function hasTagType(items, type) {
+  return Array.isArray(items) && items.some((item) => String(item?.type || '').toLowerCase() === String(type || '').toLowerCase());
+}
+
+function hasAnyNonTopicTag(items) {
+  return Array.isArray(items) && items.some((item) => String(item?.type || '').toLowerCase() !== 'topic');
+}
+
+function pushFirstMatchingSelection(target, pool, predicate) {
+  if (!Array.isArray(pool) || pool.length === 0) return false;
+  const existing = new Set((target || []).map((item) => `${normalizeText(item?.slug)}|${normalizeText(item?.label)}`));
+  for (const candidate of pool) {
+    if (!candidate) continue;
+    if (typeof predicate === 'function' && !predicate(candidate)) continue;
+    const key = `${normalizeText(candidate?.slug)}|${normalizeText(candidate?.label)}`;
+    if (existing.has(key)) continue;
+    target.push(candidate);
+    return true;
+  }
+  return false;
 }
 
 function buildFormatTagSelection(registry, articleType) {
@@ -697,10 +719,34 @@ export function pickArticleTags(context = {}) {
   if (formatSelection) selected.push(buildSelectionItem(formatSelection, formatSelection.score, formatSelection.reason));
 
   let deduped = dedupeSelections(selected);
+  const nonTopicFallbackPool = dedupeSelections([
+    ...themeSelections,
+    ...entitySelections,
+    ...geographySelections,
+    ...themeFallbackSelections,
+    ...entityFallbackSelections,
+    ...geographyFallbackSelections,
+    ...geographyParentFallbackSelections,
+    ...(formatSelection ? [buildSelectionItem(formatSelection, formatSelection.score, formatSelection.reason, null, true)] : []),
+  ]).sort((a, b) => (b.score || 0) - (a.score || 0));
+
+  if (!hasTagType(deduped, 'topic')) {
+    const inferredPrimary = inferPrimaryTopicFromSupportCandidates(registry, [...themeSelections, ...entitySelections, ...secondaryTopicSelections], sectionId);
+    if (inferredPrimary?.tag) {
+      deduped.push(buildSelectionItem(inferredPrimary.tag, inferredPrimary.score, inferredPrimary.reason, inferredPrimary.evidence, true));
+    }
+  }
+
+  if (!hasAnyNonTopicTag(deduped)) {
+    const added = pushFirstMatchingSelection(deduped, nonTopicFallbackPool, (item) => String(item?.type || '').toLowerCase() !== 'topic');
+    if (!added) warnings.push('Missing non-topic evidence tag (entity/theme/geography/format)');
+  }
 
   if (deduped.length < MIN_CANONICAL_TAGS) {
     const fallbackPool = dedupeSelections([
+      ...secondaryTopicFallbackSelections,
       ...themeFallbackSelections,
+      ...entityFallbackSelections,
       ...geographyFallbackSelections,
       ...geographyParentFallbackSelections,
       ...(formatSelection ? [buildSelectionItem(formatSelection, formatSelection.score, formatSelection.reason, null, true)] : []),
@@ -719,6 +765,8 @@ export function pickArticleTags(context = {}) {
 
   if (tags.length < MIN_CANONICAL_TAGS) warnings.push(`Canonical tag set is thin (${tags.length})`);
   if (tags.length > MAX_CANONICAL_TAGS) warnings.push(`Canonical tag set is too large (${tags.length})`);
+  if (!hasTagType(finalSelected, 'topic')) warnings.push('Canonical tag set is missing required topic tag');
+  if (!hasAnyNonTopicTag(finalSelected)) warnings.push('Canonical tag set is missing required non-topic evidence tag');
 
   return {
     tags,

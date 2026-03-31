@@ -201,6 +201,8 @@ function applySourcePackGate({ eventBrief, sources, coreSources, supportingSourc
   const notes = [];
   let passes = true;
   const articleType = String(eventBrief?.articleType || eventBrief?.article_type || 'report').toLowerCase();
+  const crossTopicMismatchCount = publishableRoleResults.filter((result) => isHardCrossTopicMismatch(result, eventBrief)).length;
+  const storyCoherenceScore = computePublishableStoryCoherence(eventBrief, publishableRoleResults);
 
   if (coreSources.length < 1) {
     passes = false;
@@ -219,6 +221,14 @@ function applySourcePackGate({ eventBrief, sources, coreSources, supportingSourc
   if (!hasStrongEventPack && sources.length >= 2) {
     passes = false;
     notes.push(`Need stronger same-event alignment among publishable sources, found ${strongMatchCount} strong / ${moderateMatchCount} moderate`);
+  }
+  if (crossTopicMismatchCount > 0) {
+    passes = false;
+    notes.push(`Publish-ready source pack has ${crossTopicMismatchCount} cross-topic mismatch source(s)`);
+  }
+  if (storyCoherenceScore < 0.45) {
+    passes = false;
+    notes.push(`Publish-ready source pack coherence too low (${storyCoherenceScore.toFixed(2)})`);
   }
   const directEventSourceCount = directEventRoleResults.length;
   const independentEventDomains = countUniqueDomains(directEventRoleResults.map((result) => result.source));
@@ -331,8 +341,10 @@ function isStrictPublishableRoleResult(result = {}, brief = {}, options = {}) {
   if (getPublishableIntegrityIssues(source).length > 0) return false;
   if (requireStrongEvent && Number(result.same_event_score || 0) < 4) return false;
   if (!requireStrongEvent && Number(result.same_event_score || 0) < 3) return false;
-  if (brief.topic_id && source.topic_id && brief.topic_id !== source.topic_id && Number(result.same_event_score || 0) < 5) return false;
+  if (brief.topic_id && source.topic_id && brief.topic_id !== source.topic_id && Number(result.same_event_score || 0) < 6) return false;
   if (brief.section_id && source.section_id && brief.section_id !== source.section_id && Number(result.same_event_score || 0) < 4) return false;
+  if (!hasBriefTitleAnchor(source, brief) && Number(result.same_event_score || 0) < 5) return false;
+  if (isHardCrossTopicMismatch(result, brief)) return false;
   return true;
 }
 
@@ -567,17 +579,10 @@ function finalizePublishableSources(roleResults = [], brief = {}) {
     4,
     2
   );
-  const broadFallback = limitSourcesPerDomain(
-    dedupeSourceList(safeKeepable.map((item) => item.source)),
-    4,
-    2
-  );
   const finalSources = dedupeSourceList(
     strong.length >= 2
       ? strong
-      : alignedFallback.length >= 2
-        ? alignedFallback
-        : broadFallback
+      : alignedFallback
   );
   const coreSources = [];
   const supportingSources = [];
@@ -611,6 +616,9 @@ function finalizePublishableSources(roleResults = [], brief = {}) {
 
   if (strong.length === 0 && safeDirectEventKeepable.length !== directEventKeepable.length) {
     notes.push('Dropped weak direct-event evidence during strict publishable filtering');
+  }
+  if (finalSources.length < 2) {
+    notes.push('Publishable evidence remained thin after strict one-story filtering');
   }
   if (finalSources.length > 0 && finalSources.some((source) => source.title_url_mismatch)) {
     notes.push('Dropped title/url mismatches from publishable evidence');
@@ -860,6 +868,54 @@ function sourceSetsLookLikeDuplicate(leftSet, rightSet) {
   }
   const shortest = Math.max(1, Math.min(leftSet.size, rightSet.size));
   return overlap >= 2 || (overlap >= 1 && (overlap / shortest) >= 0.6);
+}
+
+function titleTokensForCoherence(value) {
+  return new Set(
+    String(value || '')
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .map((token) => token.trim())
+      .filter((token) => token.length >= 4 && !GENERIC_TOPIC_TOKENS.has(token))
+  );
+}
+
+function hasBriefTitleAnchor(source = {}, brief = {}) {
+  const briefTokens = titleTokensForCoherence(brief?.title || '');
+  const sourceTokens = titleTokensForCoherence(source?.title || '');
+  if (briefTokens.size === 0 || sourceTokens.size === 0) return false;
+  let overlap = 0;
+  for (const token of sourceTokens) {
+    if (briefTokens.has(token)) overlap += 1;
+  }
+  return overlap >= 2 || (overlap >= 1 && sourceTokens.size <= 4);
+}
+
+function isHardCrossTopicMismatch(result = {}, brief = {}) {
+  const source = result?.source || {};
+  const briefTopic = String(brief?.topic_id || '').trim();
+  const sourceTopic = String(source?.topic_id || '').trim();
+  if (!briefTopic || !sourceTopic || briefTopic === sourceTopic) return false;
+  return Number(result?.same_event_score || 0) < 6 && !hasBriefTitleAnchor(source, brief);
+}
+
+function computePublishableStoryCoherence(brief = {}, publishableRoleResults = []) {
+  const briefTokens = titleTokensForCoherence(brief?.title || '');
+  if (briefTokens.size === 0) return 1;
+  if (!Array.isArray(publishableRoleResults) || publishableRoleResults.length === 0) return 0;
+
+  const scores = publishableRoleResults.map((result) => {
+    const sourceTokens = titleTokensForCoherence(result?.source?.title || '');
+    if (sourceTokens.size === 0) return 0;
+    let overlap = 0;
+    for (const token of sourceTokens) {
+      if (briefTokens.has(token)) overlap += 1;
+    }
+    return overlap / Math.max(briefTokens.size, sourceTokens.size, 1);
+  });
+
+  const avg = scores.reduce((sum, value) => sum + value, 0) / Math.max(scores.length, 1);
+  return Math.round(avg * 100) / 100;
 }
 
 function buildSelectionSeed(entries = []) {

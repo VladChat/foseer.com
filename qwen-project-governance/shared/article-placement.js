@@ -241,6 +241,11 @@ function findTopicMatch({ preferredSectionId, subsection, text }) {
 
 export function resolvePlacementMetadata(input = {}) {
   const classification = input.classification || {};
+  const lockCanonicalPlacement = Boolean(
+    input.lock_canonical_placement
+    || input.lockCanonicalPlacement
+    || classification.lock_canonical_placement
+  );
   const explicitSection = normalizeLabel(input.section || classification.section);
   const explicitSubsection = normalizeLabel(input.subsection || classification.subsection);
   const explicitArticleType = normalizeLabel(input.article_type || input.articleType || classification.articleType);
@@ -272,6 +277,8 @@ export function resolvePlacementMetadata(input = {}) {
       sectionId = match.section_id;
       ({ sectionId, topicId } = canonicalizePlacement(sectionId, topicId));
     }
+  } else if (lockCanonicalPlacement) {
+    ({ sectionId, topicId } = canonicalizePlacement(sectionId, topicId));
   }
 
   if (!sectionId && topicId) {
@@ -281,15 +288,19 @@ export function resolvePlacementMetadata(input = {}) {
 
   const genericSubsectionKeys = new Set(['news', 'business', 'tech', 'technology', 'health', 'sports', 'culture', 'politics', 'world']);
   const section = sectionId ? getSectionLabel(sectionId) : (explicitSection || 'News');
-  const subsection = (!genericSubsectionKeys.has(normalizeKey(explicitSubsection)) && explicitSubsection)
-    ? explicitSubsection
-    : (topicId ? getTopicLabel(topicId) : '');
+  const subsection = lockCanonicalPlacement && topicId
+    ? getTopicLabel(topicId)
+    : ((!genericSubsectionKeys.has(normalizeKey(explicitSubsection)) && explicitSubsection)
+      ? explicitSubsection
+      : (topicId ? getTopicLabel(topicId) : ''));
   const normalizedArticleType = explicitArticleType.toLowerCase();
   const article_type = ['report', 'analysis', 'explainer'].includes(normalizedArticleType)
     ? normalizedArticleType
     : 'report';
 
-  const finalTopics = uniqueStrings([...topics, subsection].filter(Boolean)).slice(0, 3);
+  const finalTopics = lockCanonicalPlacement && topicId
+    ? uniqueStrings([getTopicLabel(topicId)]).slice(0, 3)
+    : uniqueStrings([...topics, subsection].filter(Boolean)).slice(0, 3);
 
   return {
     section,

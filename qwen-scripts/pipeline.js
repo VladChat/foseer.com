@@ -14,6 +14,7 @@ import { draftArticle, hardenDraft } from './article-drafter.js';
 import { generateImagePackage } from './nodes/image-node.js';
 import { publishArticle } from './publisher.js';
 import { validatePrePublishGraph, buildCanonicalPublishPayload, buildPublishManifest, writePublishManifest, validatePublishedArtifact, evaluateSourcePackEditorialIntegrity } from './validate-publish-graph.js';
+import { validateTagSelection } from './validate-tags.js';
 import { repairContentPosts } from './repair-content-posts.js';
 import { verifyLocalVisibility, generateVerificationReport } from './local-verification.js';
 import { getProviderStats } from './utils/api-clients.js';
@@ -52,6 +53,7 @@ const RECENT_DUPLICATE_WINDOW_MS = 4 * 24 * 60 * 60 * 1000;
  *   1. Discovery
  *   2. Event Brief Normalization
  *   3. Source Pack Assembly (GATE: must pass)
+ *   3.5 Pre-draft Canonical Lock (taxonomy + tags, GATE: must pass)
  *   4. Claim Map Creation (GATE: must pass)
  *   5. Article Drafting
  *   6. Image Support
@@ -80,12 +82,18 @@ export async function runEditorialPipeline(options = {}) {
     duration_ms: 0,
     ready_candidates: 0,
     additional_ready_candidates: 0,
+    source_pack_attempts: 0,
+    source_pack_retry_external_queries: 0,
+    source_pack_retry_brave_queries: 0,
+    source_pack_retry_estimated_tokens: 0,
+    pre_draft_rejected: 0,
   };
 
   const stageResults = {
     discovery: null,
     briefNormalization: null,
     sourcePackAssembly: null,
+    preDraftPreparation: null,
     claimMapCreation: null,
     articleDrafting: null,
     imageSupport: null,
@@ -257,146 +265,189 @@ export async function runEditorialPipeline(options = {}) {
   // Stage 3: Source Pack Assembly (GATE)
   console.log('[pipeline] Stage 3: Source pack assembly...');
   try {
-    const candidatesWithSources = [];
-    const sourcePackCandidateLimit = Math.max(
-      Number(options.sourcePackCandidateLimit || 0) || 0,
-      Number(options.poolSelectionLimit || 0) || 0,
-      maxArticlesPerRun * 4,
-      12,
-    );
-    const readyBriefLimit = Math.max(
-      Number(options.readySelectionLimit || 0) || 0,
-      maxArticlesPerRun * 3,
-      maxArticlesPerRun,
-    );
-    const readyBriefs = getReadySelectableBriefs({ limit: readyBriefLimit, includeSelected: true });
-    const poolBriefs = getSelectableBriefs({
-      limit: sourcePackCandidateLimit,
-      prioritizeReady: true,
-      readyBoost: Number(options.readyPriorityBoost || 10),
-    });
+    const retryPolicy = resolveSourcePackRetryPolicy(options);
+    const retryDiagnostics = [];
     const duplicateRejectedAtSelection = [];
-    const mergedBriefs = dedupeBriefCandidates([
-      ...normalizedBriefs.map((brief) => ({ ...brief, _selectionOrigin: 'current_run' })),
-      ...readyBriefs,
-      ...poolBriefs.map((brief) => ({ ...brief, _selectionOrigin: brief._selectionOrigin || 'pool' })),
-    ]).filter((brief) => {
-      const identityKey = brief?.poolIdentityKey || getBriefIdentityKey(brief);
-      if (!identityKey) return true;
-      if (isIdentityAlreadyPublished(identityKey)) {
+    const stage3AttemptSummaries = [];
+    const retryUsage = {
+      external_queries: 0,
+      brave_queries: 0,
+      estimated_tokens: 0,
+    };
+    const ESTIMATED_TOKENS_PER_RETRY_BRIEF = 900;
+    const MIN_TOKENS_FOR_RETRY = 600;
+    let candidateSetForSelection = [];
+    let readyBacklog = {
+      readyCount: 0,
+      additionalReadyCandidates: [],
+      selectedCandidates: [],
+      filePath: null,
+    };
+    let seedBriefs = Array.isArray(normalizedBriefs) ? normalizedBriefs.slice() : [];
+
+    const runStage3Attempt = async (attemptLabel) => {
+      const attemptResult = await runSourcePackAssemblyAttempt({
+        briefsSeed: seedBriefs,
+        options,
+        maxArticlesPerRun,
+        braveApiKey,
+        googleApiKey,
+        googleCx,
+      });
+      stats.source_packs_assembled += Number(attemptResult.sourcePacksAssembled || 0);
+      stats.publishable_candidates += Number(attemptResult.publishableCandidates || 0);
+      stats.source_pack_attempts += 1;
+
+      candidateSetForSelection = Array.isArray(attemptResult.candidatesWithSources) ? attemptResult.candidatesWithSources : [];
+      readyBacklog = attemptResult.readyBacklog || readyBacklog;
+      selectedCandidates = Array.isArray(attemptResult.selectedCandidates) ? attemptResult.selectedCandidates : [];
+      selected = selectedCandidates[0] || null;
+
+      for (const entry of attemptResult.duplicateRejectedAtSelection || []) {
         duplicateRejectedAtSelection.push({
-          identityKey,
-          title: brief?.title || null,
-          origin: brief?._selectionOrigin || null,
-          reason: 'identity_already_published',
+          ...entry,
+          attempt: attemptLabel,
         });
-        console.log(`[pipeline] Duplicate guard: skip published identity ${identityKey} :: ${brief?.title || 'Untitled brief'}`);
-        return false;
       }
-      brief.poolIdentityKey = brief.poolIdentityKey || identityKey;
-      return true;
-    });
 
-    const briefsForSelection = mergedBriefs.slice(0, sourcePackCandidateLimit);
-    console.log(`[pipeline] Source-pack candidates from merged current+pool+ready set: ${briefsForSelection.length}`);
-    if (duplicateRejectedAtSelection.length > 0) {
-      console.log(`[pipeline] Duplicate guard removed ${duplicateRejectedAtSelection.length} already published candidate(s) before source-pack assembly`);
-    }
-    if (readyBriefs.length > 0) {
-      console.log(`[pipeline] Ready backlog prioritized for selection: ${readyBriefs.length}`);
-    }
-    if (briefsForSelection[0]?.selectionScore !== undefined) {
-      console.log(`[pipeline] Top ranked brief score=${briefsForSelection[0].selectionScore} origin=${briefsForSelection[0]._selectionOrigin} title=${briefsForSelection[0].title}`);
-    }
+      stage3AttemptSummaries.push({
+        attempt: attemptLabel,
+        source_packs_assembled: Number(attemptResult.sourcePacksAssembled || 0),
+        publishable_candidates: Number(attemptResult.publishableCandidates || 0),
+        selected_candidates: selectedCandidates.length,
+      });
+    };
 
-    for (const brief of briefsForSelection) {
-      try {
-        const sourcePack = await assembleSourcePack(brief, { ...options, braveApiKey, googleApiKey, googleCx });
-        const stage3EditorialGate = evaluateSourcePackEditorialIntegrity({ brief, sourcePack });
-        sourcePack.stage3EditorialGate = stage3EditorialGate;
-        const stage3BlockingErrors = Array.isArray(stage3EditorialGate.blocking_errors) ? stage3EditorialGate.blocking_errors : [];
-        const hardSourceIntegrityErrors = stage3BlockingErrors.filter((message) => !String(message).startsWith('Primary topic_id unsupported by source-pack evidence'));
-        const placementRepairErrors = stage3BlockingErrors.filter((message) => String(message).startsWith('Primary topic_id unsupported by source-pack evidence'));
+    await runStage3Attempt('initial');
 
-        if (hardSourceIntegrityErrors.length > 0) {
-          const existingNotes = Array.isArray(sourcePack.gateNotes) ? sourcePack.gateNotes : [];
-          sourcePack.passesGate = false;
-          sourcePack.gateDecision = 'FAIL';
-          sourcePack.gateNotes = Array.from(new Set([...existingNotes, ...hardSourceIntegrityErrors, ...stage3EditorialGate.warnings]));
-          console.log(`[pipeline] Stage 3 aligned gate blocked :: ${brief.title} :: ${hardSourceIntegrityErrors.join(' | ')}`);
-        } else {
-          const advisoryNotes = [
-            ...stage3EditorialGate.warnings,
-            ...placementRepairErrors.map((message) => `${message} (deferred to placement repair)`),
-          ];
-          if (advisoryNotes.length > 0) {
-            sourcePack.gateNotes = Array.from(new Set([...(Array.isArray(sourcePack.gateNotes) ? sourcePack.gateNotes : []), ...advisoryNotes]));
-          }
-          if (placementRepairErrors.length > 0) {
-            console.log(`[pipeline] Stage 3 placement repair queued :: ${brief.title} :: ${placementRepairErrors.join(' | ')}`);
-          }
-        }
+    for (let retryAttempt = 1; selectedCandidates.length === 0 && retryAttempt <= retryPolicy.maxAdditionalAttempts; retryAttempt++) {
+      const phase = resolveSourcePackRetryPhase(retryAttempt);
+      const remainingExternal = retryPolicy.maxExternalQueries > 0
+        ? Math.max(0, retryPolicy.maxExternalQueries - retryUsage.external_queries)
+        : 0;
+      const remainingBrave = retryPolicy.maxBraveQueries > 0
+        ? Math.max(0, retryPolicy.maxBraveQueries - retryUsage.brave_queries)
+        : 0;
+      const remainingTokens = retryPolicy.maxTokenBudget > 0
+        ? Math.max(0, retryPolicy.maxTokenBudget - retryUsage.estimated_tokens)
+        : Number.POSITIVE_INFINITY;
 
-        candidatesWithSources.push({ brief, sourcePack });
-        stats.source_packs_assembled++;
-
-        if (sourcePack.passesGate) {
-          stats.publishable_candidates++;
-        }
-      } catch (error) {
-        console.error(`[pipeline] Source pack assembly failed: ${error.message}`);
-      }
-    }
-
-    console.log(`[pipeline] Assembled ${stats.source_packs_assembled} source packs, ${stats.publishable_candidates} publishable`);
-
-    const candidateSetForSelection = candidatesWithSources;
-    selectedCandidates = selectPublishableCandidates(candidateSetForSelection, {
-      maxArticlesPerRun,
-      maxPerSection: Number(options.maxPerSection || 2),
-      maxPerTopic: Number(options.maxPerTopic || 2),
-      relaxedMaxPerSection: Number(options.relaxedMaxPerSection || 3),
-      relaxedMaxPerTopic: Number(options.relaxedMaxPerTopic || 3),
-    }).filter((candidate) => {
-      const identityKey = candidate?.brief?.poolIdentityKey || getBriefIdentityKey(candidate?.brief);
-      if (!identityKey) return true;
-      if (isIdentityAlreadyPublished(identityKey)) {
-        duplicateRejectedAtSelection.push({
-          identityKey,
-          title: candidate?.brief?.title || null,
-          origin: candidate?.brief?._selectionOrigin || null,
-          reason: 'identity_already_published_after_selection',
+      if (retryPolicy.maxExternalQueries === 0) {
+        retryDiagnostics.push({
+          attempt: retryAttempt,
+          phase: phase.phase,
+          status: 'skipped',
+          reason: 'Retry external-query budget is 0',
         });
-        console.log(`[pipeline] Duplicate guard: drop selected candidate with published identity ${identityKey} :: ${candidate?.brief?.title || 'Untitled brief'}`);
-        return false;
+        break;
       }
-      if (candidate?.brief) {
-        candidate.brief.poolIdentityKey = candidate.brief.poolIdentityKey || identityKey;
+      if (retryPolicy.maxExternalQueries > 0 && remainingExternal <= 0) {
+        retryDiagnostics.push({
+          attempt: retryAttempt,
+          phase: phase.phase,
+          status: 'skipped',
+          reason: 'Retry external-query budget exhausted',
+        });
+        break;
       }
-      return true;
-    });
-    selected = selectedCandidates[0] || null;
+      if (retryPolicy.maxTokenBudget > 0 && remainingTokens < MIN_TOKENS_FOR_RETRY) {
+        retryDiagnostics.push({
+          attempt: retryAttempt,
+          phase: phase.phase,
+          status: 'skipped',
+          reason: 'Retry token budget exhausted',
+        });
+        break;
+      }
+
+      const boundedRetryDiscovery = buildRetryDiscoveryOptions({
+        baseOptions: options,
+        phaseOptions: phase.discoveryOptions,
+        remainingExternalQueries: retryPolicy.maxExternalQueries > 0 ? remainingExternal : Number.POSITIVE_INFINITY,
+        remainingBraveQueries: retryPolicy.maxBraveQueries > 0 ? remainingBrave : Number.POSITIVE_INFINITY,
+      });
+      if (boundedRetryDiscovery.skip) {
+        retryDiagnostics.push({
+          attempt: retryAttempt,
+          phase: phase.phase,
+          status: 'skipped',
+          reason: boundedRetryDiscovery.reason,
+        });
+        break;
+      }
+
+      console.log(`[pipeline] Stage 3 retry #${retryAttempt} (${phase.phase}): ${phase.description}`);
+      const retryDiscovery = await runDiscovery({
+        ...boundedRetryDiscovery.options,
+        braveApiKey,
+        googleApiKey,
+        googleCx,
+      });
+      const retryQueryUsage = extractDiscoveryQueryUsage(retryDiscovery.stats);
+      retryUsage.external_queries += retryQueryUsage.total;
+      retryUsage.brave_queries += retryQueryUsage.brave;
+      stats.source_pack_retry_external_queries = retryUsage.external_queries;
+      stats.source_pack_retry_brave_queries = retryUsage.brave_queries;
+
+      if (Array.isArray(retryDiscovery.candidates) && retryDiscovery.candidates.length > 0) {
+        mergeDiscoveredNews(retryDiscovery.candidates);
+      }
+
+      const retryClusterLimitByTokens = retryPolicy.maxTokenBudget > 0
+        ? Math.max(1, Math.floor(remainingTokens / ESTIMATED_TOKENS_PER_RETRY_BRIEF))
+        : (options.clusterSelectionLimit || 6);
+      const retryNormalization = await normalizeDiscoveryCandidatesToBriefs(
+        retryDiscovery.candidates || [],
+        {
+          ...options,
+          clusterSelectionLimit: Math.max(1, Math.min(options.clusterSelectionLimit || 6, retryClusterLimitByTokens)),
+        },
+        openAiApiKey,
+      );
+      const retryBriefs = Array.isArray(retryNormalization.briefs) ? retryNormalization.briefs : [];
+      const retryEstimatedTokens = retryBriefs.length * ESTIMATED_TOKENS_PER_RETRY_BRIEF;
+      retryUsage.estimated_tokens += retryEstimatedTokens;
+      stats.source_pack_retry_estimated_tokens = retryUsage.estimated_tokens;
+      stats.briefs_normalized += retryBriefs.length;
+
+      if (retryBriefs.length > 0) {
+        mergeBriefsIntoPool(retryBriefs);
+        seedBriefs = dedupeBriefCandidates([...seedBriefs, ...retryBriefs]);
+      }
+
+      await runStage3Attempt(`retry_${retryAttempt}_${phase.phase}`);
+      retryDiagnostics.push({
+        attempt: retryAttempt,
+        phase: phase.phase,
+        status: 'ran',
+        discovery_candidates: Array.isArray(retryDiscovery.candidates) ? retryDiscovery.candidates.length : 0,
+        normalized_briefs: retryBriefs.length,
+        selected_candidates: selectedCandidates.length,
+        source_pack_attempt: stage3AttemptSummaries[stage3AttemptSummaries.length - 1] || null,
+        query_usage: retryQueryUsage,
+        estimated_tokens: retryEstimatedTokens,
+      });
+    }
 
     const selectedIdentityKeys = selectedCandidates
       .map((candidate) => candidate?.brief?.poolIdentityKey)
       .filter(Boolean);
-
-    const readyBacklog = recordReadyArticleCandidates(candidateSetForSelection, {
-      selectedIdentityKeys,
-      limit: options.readyCandidateLimit || 10,
-    });
-    stats.ready_candidates = readyBacklog.readyCount;
-    stats.additional_ready_candidates = readyBacklog.additionalReadyCandidates.length;
+    stats.ready_candidates = Number(readyBacklog.readyCount || 0);
+    stats.additional_ready_candidates = Array.isArray(readyBacklog.additionalReadyCandidates)
+      ? readyBacklog.additionalReadyCandidates.length
+      : 0;
     stats.articles_attempted = selectedCandidates.length;
     stats.selected_topic = selected?.brief?.title || null;
     stats.selected_topics = selectedCandidates.map((candidate) => candidate?.brief?.title).filter(Boolean);
 
-    if (readyBacklog.additionalReadyCandidates.length > 0) {
+    if (Array.isArray(readyBacklog.additionalReadyCandidates) && readyBacklog.additionalReadyCandidates.length > 0) {
       console.log(`[pipeline] Additional ready article candidates: ${readyBacklog.additionalReadyCandidates.length}`);
       for (const candidate of readyBacklog.additionalReadyCandidates.slice(0, 5)) {
         console.log(`[pipeline]   backlog rank=${candidate.rank} score=${candidate.score} section=${candidate.section_id || 'unassigned'} topic=${candidate.topic_id || 'unassigned'} title=${candidate.title}`);
       }
-      console.log(`[pipeline] Ready candidate backlog saved: ${readyBacklog.filePath}`);
+      if (readyBacklog.filePath) {
+        console.log(`[pipeline] Ready candidate backlog saved: ${readyBacklog.filePath}`);
+      }
     }
 
     stageResults.sourcePackAssembly = {
@@ -404,6 +455,10 @@ export async function runEditorialPipeline(options = {}) {
       success: selectedCandidates.length > 0,
       error: selectedCandidates.length === 0 ? 'No publishable candidates selected' : null,
       data: {
+        attempts: stage3AttemptSummaries,
+        retryPolicy,
+        retryDiagnostics,
+        retryUsage,
         selectedCount: selectedCandidates.length,
         selectedTopics: selectedCandidates.map((candidate) => ({
           title: candidate?.brief?.title || null,
@@ -424,14 +479,17 @@ export async function runEditorialPipeline(options = {}) {
           additionalReadyCandidates: readyBacklog.additionalReadyCandidates,
           selectedCandidates: readyBacklog.selectedCandidates,
           filePath: readyBacklog.filePath,
+          selectedIdentityKeys,
         },
         duplicateRejectedCandidates: duplicateRejectedAtSelection,
+        candidatesEvaluated: candidateSetForSelection.length,
       },
     };
 
     if (selectedCandidates.length === 0) {
-      console.log('[pipeline] SOURCE PACK GATE: FAIL - No publishable candidate');
-      return finalizePipelineResult(false, 'Source pack gate failed: No publishable candidate', null, {
+      const attemptCount = stage3AttemptSummaries.length;
+      console.log(`[pipeline] SOURCE PACK GATE: FAIL - No publishable candidate after ${attemptCount} attempt(s)`);
+      return finalizePipelineResult(false, `Source pack gate failed: No publishable candidate after ${attemptCount} attempt(s)`, null, {
         published_paths: [],
         verified_urls: [],
         selected_candidates: [],
@@ -455,6 +513,120 @@ export async function runEditorialPipeline(options = {}) {
       data: null,
     };
     return finalizePipelineResult(false, `Source pack assembly failed: ${error.message}`, null, {
+      published_paths: [],
+      verified_urls: [],
+      selected_candidates: [],
+      published_articles: [],
+    });
+  }
+
+  // Stage 3.5: Pre-draft canonical lock (taxonomy + tags before writing)
+  console.log('[pipeline] Stage 3.5: Pre-draft canonical placement and tag lock...');
+  const preDraftItems = [];
+  const preDraftRejected = [];
+  const preDraftPreparedCandidates = [];
+  for (const candidate of selectedCandidates) {
+    const articleLabel = candidate?.brief?.title || candidate?.sourcePack?.topic || 'Untitled candidate';
+    const basePlacement = {
+      section_id: candidate?.sourcePack?.section_id || candidate?.brief?.section_id || null,
+      topic_id: candidate?.sourcePack?.topic_id || candidate?.brief?.topic_id || null,
+      section: candidate?.sourcePack?.section || candidate?.brief?.section || null,
+      subsection: candidate?.sourcePack?.topic || candidate?.brief?.subsection || null,
+      topics: [candidate?.sourcePack?.topic || candidate?.brief?.subsection || null].filter(Boolean),
+    };
+    const preDraftSeed = {
+      title: candidate?.brief?.title || '',
+      excerpt: candidate?.brief?.summary || candidate?.brief?.whyItMatters || '',
+      content: `${candidate?.brief?.whatHappened || ''} ${candidate?.brief?.whyItMatters || ''}`.trim(),
+      section_id: basePlacement.section_id,
+      topic_id: basePlacement.topic_id,
+      article_type: candidate?.brief?.articleType || candidate?.brief?.article_type || 'report',
+      articleType: candidate?.brief?.articleType || candidate?.brief?.article_type || 'report',
+    };
+    const canonicalPayload = buildCanonicalPublishPayload({
+      ...candidate,
+      draft: preDraftSeed,
+      placement: basePlacement,
+    });
+    const tagValidation = validateTagSelection(canonicalPayload?.tagging || {});
+    const hasPlacementLock = Boolean(canonicalPayload?.placement?.section_id && canonicalPayload?.placement?.topic_id);
+
+    const rejectionReasons = [];
+    if (!hasPlacementLock) {
+      rejectionReasons.push('Missing canonical section/topic lock from source-pack evidence');
+    }
+    if (!tagValidation.valid) {
+      rejectionReasons.push(`Canonical tags invalid before writing: ${tagValidation.errors.join('; ')}`);
+    }
+
+    const canonicalTags = Array.isArray(canonicalPayload?.tagging?.tags) ? canonicalPayload.tagging.tags : [];
+    const canonicalSlugs = Array.isArray(canonicalPayload?.tagging?.tag_slugs) ? canonicalPayload.tagging.tag_slugs : [];
+    preDraftItems.push({
+      title: articleLabel,
+      success: rejectionReasons.length === 0,
+      error: rejectionReasons.length > 0 ? rejectionReasons.join(' | ') : null,
+      data: {
+        section_id: canonicalPayload?.placement?.section_id || null,
+        topic_id: canonicalPayload?.placement?.topic_id || null,
+        tags: canonicalTags,
+        tag_slugs: canonicalSlugs,
+        warnings: tagValidation.warnings || [],
+      },
+    });
+
+    if (rejectionReasons.length > 0) {
+      console.log(`[pipeline] PRE-DRAFT LOCK: FAIL :: ${articleLabel} :: ${rejectionReasons.join(' | ')}`);
+      preDraftRejected.push({ title: articleLabel, reasons: rejectionReasons });
+      continue;
+    }
+
+    candidate.preDraftCanonicalPayload = canonicalPayload;
+    candidate.canonicalPublishPayload = canonicalPayload;
+    candidate.placement = {
+      ...(candidate.placement || {}),
+      ...(canonicalPayload.placement || {}),
+    };
+    if (candidate.sourcePack) {
+      candidate.sourcePack.section_id = canonicalPayload?.placement?.section_id || candidate.sourcePack.section_id || null;
+      candidate.sourcePack.topic_id = canonicalPayload?.placement?.topic_id || candidate.sourcePack.topic_id || null;
+      candidate.sourcePack.section = canonicalPayload?.placement?.section || candidate.sourcePack.section || null;
+      candidate.sourcePack.topic = canonicalPayload?.placement?.subsection || canonicalPayload?.placement?.primaryTopic || candidate.sourcePack.topic || null;
+    }
+    if (candidate.brief) {
+      candidate.brief.section_id = canonicalPayload?.placement?.section_id || candidate.brief.section_id || null;
+      candidate.brief.topic_id = canonicalPayload?.placement?.topic_id || candidate.brief.topic_id || null;
+      candidate.brief.section = canonicalPayload?.placement?.section || candidate.brief.section || null;
+      candidate.brief.subsection = canonicalPayload?.placement?.subsection || candidate.brief.subsection || null;
+      candidate.brief.topics = Array.isArray(canonicalPayload?.placement?.topics)
+        ? canonicalPayload.placement.topics
+        : (candidate.brief.topics || []);
+    }
+
+    preDraftPreparedCandidates.push(candidate);
+    console.log(`[pipeline] PRE-DRAFT LOCK: PASS :: ${articleLabel} :: section=${canonicalPayload?.placement?.section_id} topic=${canonicalPayload?.placement?.topic_id} tags=${canonicalTags.length}`);
+  }
+
+  selectedCandidates = preDraftPreparedCandidates;
+  selected = selectedCandidates[0] || null;
+  stats.pre_draft_rejected = preDraftRejected.length;
+  stats.articles_attempted = selectedCandidates.length;
+  stats.selected_topic = selected?.brief?.title || null;
+  stats.selected_topics = selectedCandidates.map((candidate) => candidate?.brief?.title).filter(Boolean);
+
+  stageResults.preDraftPreparation = {
+    stage: 'preDraftPreparation',
+    success: selectedCandidates.length > 0,
+    error: selectedCandidates.length === 0 ? 'No candidates passed pre-draft canonical lock' : null,
+    data: {
+      total: preDraftItems.length,
+      passed: selectedCandidates.length,
+      rejected: preDraftRejected,
+      items: preDraftItems,
+    },
+  };
+
+  if (selectedCandidates.length === 0) {
+    return finalizePipelineResult(false, 'Pre-draft quality gate failed: no candidate passed canonical placement/tag lock', null, {
       published_paths: [],
       verified_urls: [],
       selected_candidates: [],
@@ -934,6 +1106,332 @@ function parseBooleanFlag(value) {
   if (['1', 'true', 'yes', 'y', 'on'].includes(normalized)) return true;
   if (['0', 'false', 'no', 'n', 'off'].includes(normalized)) return false;
   return null;
+}
+
+function resolveSourcePackRetryPolicy(options = {}) {
+  const parseNumber = (value, fallback) => {
+    const parsed = Number.parseInt(String(value ?? ''), 10);
+    return Number.isFinite(parsed) ? parsed : fallback;
+  };
+
+  const maxAdditionalAttempts = Math.max(
+    0,
+    Math.min(
+      3,
+      parseNumber(
+        options.sourcePackRetryMaxAdditionalAttempts
+          ?? options.source_pack_retry_max_additional_attempts
+          ?? process.env.QWEN_SOURCE_PACK_RETRY_MAX_ATTEMPTS,
+        2,
+      ),
+    ),
+  );
+  const maxExternalQueries = Math.max(
+    0,
+    parseNumber(
+      options.sourcePackRetryMaxExternalQueries
+        ?? options.source_pack_retry_max_external_queries
+        ?? process.env.QWEN_SOURCE_PACK_RETRY_MAX_EXTERNAL_QUERIES,
+      6,
+    ),
+  );
+  const maxBraveQueries = Math.max(
+    0,
+    parseNumber(
+      options.sourcePackRetryMaxBraveQueries
+        ?? options.source_pack_retry_max_brave_queries
+        ?? process.env.QWEN_SOURCE_PACK_RETRY_MAX_BRAVE_QUERIES,
+      1,
+    ),
+  );
+  const maxTokenBudget = Math.max(
+    0,
+    parseNumber(
+      options.sourcePackRetryMaxTokens
+        ?? options.source_pack_retry_max_tokens
+        ?? process.env.QWEN_SOURCE_PACK_RETRY_MAX_TOKENS,
+      0,
+    ),
+  );
+
+  return {
+    maxAdditionalAttempts,
+    maxExternalQueries,
+    maxBraveQueries,
+    maxTokenBudget,
+  };
+}
+
+function resolveSourcePackRetryPhase(attemptNumber = 1) {
+  if (attemptNumber <= 1) {
+    return {
+      phase: 'cheap_refresh',
+      description: 'refresh discovery with cheaper channels first (google/gdelt, brave disabled)',
+      discoveryOptions: {
+        disableBrave: true,
+        disableBraveExpansion: true,
+        disableGoogle: false,
+        disableGdelt: false,
+        googleLaneLimit: 2,
+        gdeltLaneLimit: 2,
+      },
+    };
+  }
+
+  return {
+    phase: 'limited_brave_refresh',
+    description: 'single constrained brave retry after cheap refresh',
+    discoveryOptions: {
+      disableBrave: false,
+      disableBraveExpansion: true,
+      disableGoogle: false,
+      disableGdelt: false,
+      coreSectionLimit: 1,
+      expansionTopicLimit: 0,
+      googleLaneLimit: 1,
+      gdeltLaneLimit: 1,
+    },
+  };
+}
+
+function buildRetryDiscoveryOptions({
+  baseOptions = {},
+  phaseOptions = {},
+  remainingExternalQueries = Number.POSITIVE_INFINITY,
+  remainingBraveQueries = Number.POSITIVE_INFINITY,
+} = {}) {
+  const bounded = {
+    ...(baseOptions || {}),
+    ...(phaseOptions || {}),
+  };
+  if (baseOptions?.disableBrave === true) bounded.disableBrave = true;
+  if (baseOptions?.disableGoogle === true) bounded.disableGoogle = true;
+  if (baseOptions?.disableGdelt === true) bounded.disableGdelt = true;
+
+  const isExternalBounded = Number.isFinite(remainingExternalQueries);
+  const isBraveBounded = Number.isFinite(remainingBraveQueries);
+  let externalBudget = isExternalBounded ? Math.max(0, Number(remainingExternalQueries || 0)) : Number.POSITIVE_INFINITY;
+
+  let braveRequests = bounded.disableBrave ? 0 : Math.max(0, Number(bounded.coreSectionLimit || 1));
+  if (isBraveBounded) {
+    braveRequests = Math.min(braveRequests, Math.max(0, Number(remainingBraveQueries || 0)));
+  }
+  if (isExternalBounded) {
+    braveRequests = Math.min(braveRequests, externalBudget);
+  }
+  if (braveRequests <= 0) {
+    bounded.disableBrave = true;
+    bounded.coreSectionLimit = 0;
+  } else {
+    bounded.disableBrave = false;
+    bounded.coreSectionLimit = braveRequests;
+    if (isExternalBounded) externalBudget -= braveRequests;
+  }
+
+  const requestedGoogle = bounded.disableGoogle ? 0 : Math.max(0, Number(bounded.googleLaneLimit || 0));
+  const boundedGoogle = isExternalBounded ? Math.min(requestedGoogle, externalBudget) : requestedGoogle;
+  if (isExternalBounded) externalBudget -= boundedGoogle;
+  bounded.googleLaneLimit = boundedGoogle;
+
+  const requestedGdelt = bounded.disableGdelt ? 0 : Math.max(0, Number(bounded.gdeltLaneLimit || 0));
+  const boundedGdelt = isExternalBounded ? Math.min(requestedGdelt, externalBudget) : requestedGdelt;
+  bounded.gdeltLaneLimit = boundedGdelt;
+
+  const projectedExternal = (bounded.disableBrave ? 0 : Number(bounded.coreSectionLimit || 0))
+    + Number(bounded.googleLaneLimit || 0)
+    + Number(bounded.gdeltLaneLimit || 0);
+
+  if (projectedExternal <= 0) {
+    return {
+      skip: true,
+      reason: 'No retry channels left after applying query budgets',
+      options: null,
+    };
+  }
+
+  return {
+    skip: false,
+    reason: null,
+    options: bounded,
+  };
+}
+
+function extractDiscoveryQueryUsage(discoveryStats = {}) {
+  const brave = Number(discoveryStats?.brave_queries || 0);
+  const google = Number(discoveryStats?.google_trusted_queries || 0);
+  const gdelt = Number(discoveryStats?.gdelt_queries || 0);
+  return {
+    brave,
+    google,
+    gdelt,
+    total: Math.max(0, brave) + Math.max(0, google) + Math.max(0, gdelt),
+  };
+}
+
+async function normalizeDiscoveryCandidatesToBriefs(candidates = [], options = {}, openAiApiKey = null) {
+  const normalizedBriefs = [];
+  if (!Array.isArray(candidates) || candidates.length === 0) {
+    return { briefs: normalizedBriefs, clusterCount: 0 };
+  }
+
+  const eventClusters = clusterDiscoveredCandidates(candidates, { threshold: options.clusterThreshold || 6 });
+  const topClusters = eventClusters.slice(0, options.clusterSelectionLimit || 6);
+
+  for (const cluster of topClusters) {
+    try {
+      const normalized = await normalizeClusteredBrief(cluster, openAiApiKey);
+      normalized.discoveryContext = cluster.candidates || [];
+      normalized.cluster_size = cluster.candidateCount;
+      normalizedBriefs.push(normalized);
+    } catch (error) {
+      console.error(`[pipeline] Retry brief normalization failed: ${error.message}`);
+    }
+  }
+
+  return { briefs: normalizedBriefs, clusterCount: eventClusters.length };
+}
+
+async function runSourcePackAssemblyAttempt({
+  briefsSeed = [],
+  options = {},
+  maxArticlesPerRun = 1,
+  braveApiKey,
+  googleApiKey,
+  googleCx,
+}) {
+  const candidatesWithSources = [];
+  const duplicateRejectedAtSelection = [];
+  const sourcePackCandidateLimit = Math.max(
+    Number(options.sourcePackCandidateLimit || 0) || 0,
+    Number(options.poolSelectionLimit || 0) || 0,
+    maxArticlesPerRun * 4,
+    12,
+  );
+  const readyBriefLimit = Math.max(
+    Number(options.readySelectionLimit || 0) || 0,
+    maxArticlesPerRun * 3,
+    maxArticlesPerRun,
+  );
+  const readyBriefs = getReadySelectableBriefs({ limit: readyBriefLimit, includeSelected: true });
+  const poolBriefs = getSelectableBriefs({
+    limit: sourcePackCandidateLimit,
+    prioritizeReady: true,
+    readyBoost: Number(options.readyPriorityBoost || 10),
+  });
+
+  const mergedBriefs = dedupeBriefCandidates([
+    ...(Array.isArray(briefsSeed) ? briefsSeed : []).map((brief) => ({ ...brief, _selectionOrigin: brief?._selectionOrigin || 'current_run' })),
+    ...readyBriefs,
+    ...poolBriefs.map((brief) => ({ ...brief, _selectionOrigin: brief?._selectionOrigin || 'pool' })),
+  ]).filter((brief) => {
+    const identityKey = brief?.poolIdentityKey || getBriefIdentityKey(brief);
+    if (!identityKey) return true;
+    if (isIdentityAlreadyPublished(identityKey)) {
+      duplicateRejectedAtSelection.push({
+        identityKey,
+        title: brief?.title || null,
+        origin: brief?._selectionOrigin || null,
+        reason: 'identity_already_published',
+      });
+      console.log(`[pipeline] Duplicate guard: skip published identity ${identityKey} :: ${brief?.title || 'Untitled brief'}`);
+      return false;
+    }
+    brief.poolIdentityKey = brief.poolIdentityKey || identityKey;
+    return true;
+  });
+
+  const briefsForSelection = mergedBriefs.slice(0, sourcePackCandidateLimit);
+  console.log(`[pipeline] Source-pack candidates from merged current+pool+ready set: ${briefsForSelection.length}`);
+  if (duplicateRejectedAtSelection.length > 0) {
+    console.log(`[pipeline] Duplicate guard removed ${duplicateRejectedAtSelection.length} already published candidate(s) before source-pack assembly`);
+  }
+  if (readyBriefs.length > 0) {
+    console.log(`[pipeline] Ready backlog prioritized for selection: ${readyBriefs.length}`);
+  }
+  if (briefsForSelection[0]?.selectionScore !== undefined) {
+    console.log(`[pipeline] Top ranked brief score=${briefsForSelection[0].selectionScore} origin=${briefsForSelection[0]._selectionOrigin} title=${briefsForSelection[0].title}`);
+  }
+
+  let sourcePacksAssembled = 0;
+  let publishableCandidates = 0;
+
+  for (const brief of briefsForSelection) {
+    try {
+      const sourcePack = await assembleSourcePack(brief, { ...options, braveApiKey, googleApiKey, googleCx });
+      const stage3EditorialGate = evaluateSourcePackEditorialIntegrity({ brief, sourcePack });
+      sourcePack.stage3EditorialGate = stage3EditorialGate;
+      const stage3BlockingErrors = Array.isArray(stage3EditorialGate.blocking_errors) ? stage3EditorialGate.blocking_errors : [];
+      const hardSourceIntegrityErrors = stage3BlockingErrors.filter((message) => !String(message).startsWith('Primary topic_id unsupported by source-pack evidence'));
+      const placementRepairErrors = stage3BlockingErrors.filter((message) => String(message).startsWith('Primary topic_id unsupported by source-pack evidence'));
+
+      if (hardSourceIntegrityErrors.length > 0) {
+        const existingNotes = Array.isArray(sourcePack.gateNotes) ? sourcePack.gateNotes : [];
+        sourcePack.passesGate = false;
+        sourcePack.gateDecision = 'FAIL';
+        sourcePack.gateNotes = Array.from(new Set([...existingNotes, ...hardSourceIntegrityErrors, ...stage3EditorialGate.warnings]));
+        console.log(`[pipeline] Stage 3 aligned gate blocked :: ${brief.title} :: ${hardSourceIntegrityErrors.join(' | ')}`);
+      } else {
+        const advisoryNotes = [
+          ...stage3EditorialGate.warnings,
+          ...placementRepairErrors.map((message) => `${message} (deferred to placement repair)`),
+        ];
+        if (advisoryNotes.length > 0) {
+          sourcePack.gateNotes = Array.from(new Set([...(Array.isArray(sourcePack.gateNotes) ? sourcePack.gateNotes : []), ...advisoryNotes]));
+        }
+        if (placementRepairErrors.length > 0) {
+          console.log(`[pipeline] Stage 3 placement repair queued :: ${brief.title} :: ${placementRepairErrors.join(' | ')}`);
+        }
+      }
+
+      candidatesWithSources.push({ brief, sourcePack });
+      sourcePacksAssembled++;
+      if (sourcePack.passesGate) publishableCandidates++;
+    } catch (error) {
+      console.error(`[pipeline] Source pack assembly failed: ${error.message}`);
+    }
+  }
+
+  console.log(`[pipeline] Assembled ${sourcePacksAssembled} source packs, ${publishableCandidates} publishable`);
+
+  const selectedCandidates = selectPublishableCandidates(candidatesWithSources, {
+    maxArticlesPerRun,
+    maxPerSection: Number(options.maxPerSection || 2),
+    maxPerTopic: Number(options.maxPerTopic || 2),
+    relaxedMaxPerSection: Number(options.relaxedMaxPerSection || 3),
+    relaxedMaxPerTopic: Number(options.relaxedMaxPerTopic || 3),
+  }).filter((candidate) => {
+    const identityKey = candidate?.brief?.poolIdentityKey || getBriefIdentityKey(candidate?.brief);
+    if (!identityKey) return true;
+    if (isIdentityAlreadyPublished(identityKey)) {
+      duplicateRejectedAtSelection.push({
+        identityKey,
+        title: candidate?.brief?.title || null,
+        origin: candidate?.brief?._selectionOrigin || null,
+        reason: 'identity_already_published_after_selection',
+      });
+      console.log(`[pipeline] Duplicate guard: drop selected candidate with published identity ${identityKey} :: ${candidate?.brief?.title || 'Untitled brief'}`);
+      return false;
+    }
+    if (candidate?.brief) {
+      candidate.brief.poolIdentityKey = candidate.brief.poolIdentityKey || identityKey;
+    }
+    return true;
+  });
+
+  const selectedIdentityKeys = selectedCandidates.map((candidate) => candidate?.brief?.poolIdentityKey).filter(Boolean);
+  const readyBacklog = recordReadyArticleCandidates(candidatesWithSources, {
+    selectedIdentityKeys,
+    limit: options.readyCandidateLimit || 10,
+  });
+
+  return {
+    candidatesWithSources,
+    selectedCandidates,
+    readyBacklog,
+    duplicateRejectedAtSelection,
+    sourcePacksAssembled,
+    publishableCandidates,
+  };
 }
 
 function buildAggregateStageResult(stage, items = [], articleErrors = [], { allowFailures = false } = {}) {

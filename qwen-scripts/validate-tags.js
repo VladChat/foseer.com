@@ -13,10 +13,17 @@ export function validateTagSelection(selection = {}) {
   const warnings = [];
   const tags = Array.isArray(selection.tags) ? selection.tags : [];
   const slugs = Array.isArray(selection.tag_slugs) ? selection.tag_slugs : [];
+  const tagRecords = slugs
+    .map((slug) => registry.bySlug?.[slug] || null)
+    .filter(Boolean);
+  const hasTopicTag = tagRecords.some((entry) => String(entry?.type || '').toLowerCase() === 'topic');
+  const hasNonTopicEvidenceTag = tagRecords.some((entry) => String(entry?.type || '').toLowerCase() !== 'topic');
 
-  if (tags.length < 2) warnings.push('Fewer than 2 canonical tags (target floor is 2)');
-  if (tags.length > 4) errors.push('More than 4 canonical tags');
+  if (tags.length < 3) errors.push('Fewer than 3 canonical tags');
+  if (tags.length > 6) errors.push('More than 6 canonical tags');
   if (!selection.primary_topic_slug) errors.push('Missing primary topic tag');
+  if (!hasTopicTag) errors.push('Canonical tag set is missing required topic tag');
+  if (!hasNonTopicEvidenceTag) errors.push('Canonical tag set is missing required non-topic evidence tag');
 
   const seen = new Set();
   for (const slug of slugs) {

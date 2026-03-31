@@ -13,6 +13,8 @@ const PROJECT_ROOT = resolveProjectRoot(import.meta.url);
 const CANDIDATE_FLOOR = 8;
 const CORE_BRAVE_SECTION_LIMIT = 5;
 const EXPANSION_TOPIC_LIMIT = 4;
+const GOOGLE_LANE_LIMIT = 2;
+const GDELT_LANE_LIMIT = 2;
 const DISCOVERY_STATE_PATH = path.resolve(PROJECT_ROOT, 'qwen-data', 'events', 'discovery-lane-state.json');
 
 const REGION_PATTERNS = [
@@ -150,7 +152,11 @@ export async function runDiscovery(options = {}) {
   const braveApiKey = options.braveApiKey || process.env.BRAVE_SEARCH_API_KEY || process.env.BRAVE_API_KEY;
   const googleApiKey = options.googleApiKey || process.env.SEARCH_WEB_API;
   const googleCx = options.googleCx || process.env.SEARCH_WEB_CX;
-  const plan = buildDiscoveryPlan();
+  const plan = buildDiscoveryPlan(options);
+  const enableBrave = !Boolean(options.disableBrave);
+  const enableGoogle = !Boolean(options.disableGoogle);
+  const enableGdelt = !Boolean(options.disableGdelt);
+  const allowExpansion = !Boolean(options.disableBraveExpansion);
 
   const stats = {
     candidate_floor: CANDIDATE_FLOOR,
@@ -162,6 +168,8 @@ export async function runDiscovery(options = {}) {
     rejected_stale: 0,
     rejected_duplicate: 0,
     rejected_generic: 0,
+    rejected_low_relevance: 0,
+    rejected_cross_topic: 0,
     lanes: plan.core.map((entry) => entry.lane),
     channels: {
       brave_core: 0,
@@ -173,7 +181,7 @@ export async function runDiscovery(options = {}) {
 
   const allCandidates = [];
 
-  if (braveApiKey) {
+  if (enableBrave && braveApiKey) {
     console.log('[discovery] Channel 1: Brave core discovery...');
     const braveCore = await discoverWithBrave(braveApiKey, plan.core, options);
     stats.brave_queries += plan.core.length;
@@ -181,10 +189,10 @@ export async function runDiscovery(options = {}) {
     allCandidates.push(...braveCore.briefs);
     console.log(`[discovery] Brave core found ${braveCore.briefs.length} candidates across ${plan.core.length} lanes`);
   } else {
-    console.log('[discovery] Skipping Brave (no API key)');
+    console.log('[discovery] Skipping Brave (disabled or no API key)');
   }
 
-  if (googleApiKey && googleCx) {
+  if (enableGoogle && googleApiKey && googleCx) {
     console.log('[discovery] Channel 2: Google trusted-source discovery...');
     const googlePlan = plan.google.length > 0 ? plan.google : buildFallbackGooglePlan();
     const googleTrusted = await discoverWithTrustedGoogle(googleApiKey, googleCx, googlePlan, options);
@@ -193,10 +201,10 @@ export async function runDiscovery(options = {}) {
     allCandidates.push(...googleTrusted.briefs);
     console.log(`[discovery] Google trusted-source found ${googleTrusted.briefs.length} candidates`);
   } else {
-    console.log('[discovery] Skipping Google trusted-source discovery (missing API key or CX)');
+    console.log('[discovery] Skipping Google trusted-source discovery (disabled or missing API key/CX)');
   }
 
-  if (plan.gdelt.length > 0) {
+  if (enableGdelt && plan.gdelt.length > 0) {
     console.log('[discovery] Channel 3: GDELT signal discovery...');
     const gdeltSignals = await discoverWithGdelt(plan.gdelt, options);
     stats.gdelt_queries += plan.gdelt.length;
@@ -207,7 +215,7 @@ export async function runDiscovery(options = {}) {
 
   let filteredCandidates = filterAndRankCandidates(allCandidates, stats);
 
-  if (filteredCandidates.length < CANDIDATE_FLOOR && braveApiKey && plan.expansion.length > 0) {
+  if (filteredCandidates.length < CANDIDATE_FLOOR && allowExpansion && enableBrave && braveApiKey && plan.expansion.length > 0) {
     console.log('[discovery] Candidate floor not met; running Brave expansion...');
     const braveExpansion = await discoverWithBrave(braveApiKey, plan.expansion.map((entry) => ({ ...entry, logLabel: 'discovery_brave_news_expansion' })), options);
     stats.brave_queries += plan.expansion.length;
@@ -222,15 +230,20 @@ export async function runDiscovery(options = {}) {
   return { candidates: filteredCandidates, stats, discoveryPlan: plan };
 }
 
-function buildDiscoveryPlan() {
+function buildDiscoveryPlan(options = {}) {
   const registry = loadTaxonomyRegistry();
   const state = readDiscoveryState();
   const sectionIds = registry.navigation?.coreSectionIds?.length
     ? registry.navigation.coreSectionIds.slice()
     : registry.sections.map((section) => section.id);
   const rotatedSections = rotate(sectionIds, state.sectionOffset || 0);
-  const coreSections = rotatedSections.slice(0, CORE_BRAVE_SECTION_LIMIT);
-  const omittedSections = rotatedSections.slice(CORE_BRAVE_SECTION_LIMIT);
+  const coreSectionLimit = Math.max(1, Number(options.coreSectionLimit || CORE_BRAVE_SECTION_LIMIT));
+  const expansionTopicLimit = Math.max(0, Number(options.expansionTopicLimit || EXPANSION_TOPIC_LIMIT));
+  const googleLaneLimit = Math.max(0, Number(options.googleLaneLimit || GOOGLE_LANE_LIMIT));
+  const gdeltLaneLimit = Math.max(0, Number(options.gdeltLaneLimit || GDELT_LANE_LIMIT));
+
+  const coreSections = rotatedSections.slice(0, coreSectionLimit);
+  const omittedSections = rotatedSections.slice(coreSectionLimit);
 
   const core = coreSections.flatMap((sectionId) => {
     const query = getSectionDiscoveryQueries(sectionId)[0];
@@ -265,28 +278,28 @@ function buildDiscoveryPlan() {
       idPrefix: 'brave-topic',
       count: 5,
     });
-    if (expansion.length >= EXPANSION_TOPIC_LIMIT) break;
+    if (expansion.length >= expansionTopicLimit) break;
   }
 
-  const gdelt = buildGdeltFallbackPlan(coreSections, omittedSections);
-  const google = buildGooglePlan(coreSections, omittedSections, state);
+  const gdelt = buildGdeltFallbackPlan(coreSections, omittedSections, gdeltLaneLimit);
+  const google = buildGooglePlan(coreSections, omittedSections, state, googleLaneLimit);
 
   writeDiscoveryState({
     sectionOffset: (state.sectionOffset || 0) + 1,
-    topicOffset: (state.topicOffset || 0) + EXPANSION_TOPIC_LIMIT,
+    topicOffset: (state.topicOffset || 0) + Math.max(1, expansionTopicLimit || 1),
     googleOffset: (state.googleOffset || 0) + 1,
   });
 
   return { core, expansion, gdelt, google };
 }
 
-function buildGooglePlan(coreSections, omittedSections, state = {}) {
+function buildGooglePlan(coreSections, omittedSections, state = {}, laneLimit = GOOGLE_LANE_LIMIT) {
   const fallbackQueries = buildGoogleTrustedQueries();
   const plan = [];
   const preferredSections = Array.from(new Set([
     ...omittedSections,
     ...rotate(coreSections, state.googleOffset || state.sectionOffset || 0),
-  ])).slice(0, Math.min(2, fallbackQueries.length));
+  ])).slice(0, Math.min(Math.max(0, laneLimit), fallbackQueries.length));
 
   preferredSections.forEach((sectionId, index) => {
     const sectionQuery = getSectionDiscoveryQueries(sectionId)[0];
@@ -313,9 +326,9 @@ function buildFallbackGooglePlan() {
   }));
 }
 
-function buildGdeltFallbackPlan(coreSections, omittedSections) {
+function buildGdeltFallbackPlan(coreSections, omittedSections, laneLimit = GDELT_LANE_LIMIT) {
   const fallbackSections = Array.from(new Set([...omittedSections, ...coreSections.slice(-1)]));
-  return fallbackSections.slice(0, 2).map((sectionId) => ({
+  return fallbackSections.slice(0, Math.max(0, laneLimit)).map((sectionId) => ({
     query: buildGdeltSectionQuery(sectionId),
     lane: `gdelt:${sectionId}`,
     sectionId,
@@ -355,6 +368,8 @@ function filterAndRankCandidates(candidates, stats, recompute = false) {
     stats.rejected_stale = 0;
     stats.rejected_duplicate = 0;
     stats.rejected_generic = 0;
+    stats.rejected_low_relevance = 0;
+    stats.rejected_cross_topic = 0;
   }
 
   const seenKeys = new Set();
@@ -378,6 +393,16 @@ function filterAndRankCandidates(candidates, stats, recompute = false) {
 
     if (brief.page_kind === 'homepage' || brief.page_kind === 'video' || brief.page_kind === 'audio') {
       stats.rejected_generic += 1;
+      continue;
+    }
+
+    if (brief.crossTopicRisk) {
+      stats.rejected_cross_topic += 1;
+      continue;
+    }
+
+    if ((brief.signalSpecificityScore || 0) < 4) {
+      stats.rejected_low_relevance += 1;
       continue;
     }
 
@@ -408,6 +433,14 @@ function buildBrief({ id, title, summary, when, url, provider, trustedSource, la
   const detectedSectionId = taxonomy.detectedSectionId || sectionHint || null;
   const detectedTopicId = taxonomy.detectedTopicId || topicHint || null;
   const normalizedTitle = cleanedTitle.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const signalQuality = assessSignalSpecificity({
+    title: cleanedTitle,
+    summary: summary || '',
+    sectionCandidates: taxonomy.sectionCandidates || [],
+    topicCandidates: taxonomy.topicCandidates || [],
+    pageKind,
+    articleLikelihood,
+  });
 
   return {
     id,
@@ -438,6 +471,9 @@ function buildBrief({ id, title, summary, when, url, provider, trustedSource, la
     canonicalUrl: canonicalizeUrl(url),
     discoveryScore: Math.round(discoveryScore * 10) / 10,
     eventKey: `${(detectedTopicId || detectedSectionId || 'general')}:${normalizedTitle.slice(0, 80)}`,
+    signalSpecificityScore: signalQuality.score,
+    signalSpecificityNotes: signalQuality.notes,
+    crossTopicRisk: signalQuality.crossTopicRisk,
   };
 }
 
@@ -477,6 +513,59 @@ function textContainsPattern(text, pattern) {
 function isNoise(brief) {
   const text = `${brief.title || ''} ${brief.summary || ''}`.toLowerCase();
   return /(podcast|newsletter|watch live|video:|audio:|photo gallery)/.test(text);
+}
+
+function assessSignalSpecificity({ title = '', summary = '', sectionCandidates = [], topicCandidates = [], pageKind = 'unknown', articleLikelihood = 0 } = {}) {
+  const text = `${title} ${summary}`.toLowerCase();
+  const notes = [];
+  let score = 0;
+
+  if (title.length >= 32) {
+    score += 2;
+    notes.push('title_specificity');
+  }
+
+  if (Number(articleLikelihood || 0) >= 6) {
+    score += 2;
+    notes.push('article_likelihood');
+  } else if (Number(articleLikelihood || 0) >= 4) {
+    score += 1;
+  }
+
+  if (topicCandidates.length > 0) {
+    score += 2;
+    notes.push('topic_hint');
+  } else if (sectionCandidates.length > 0) {
+    score += 1;
+  }
+
+  if (/(^|\b)(live updates?|latest news|at a glance|roundup|watch live|newsletter|digest)($|\b)/i.test(text)) {
+    score -= 3;
+    notes.push('generic_container_phrase');
+  }
+
+  if (['section', 'topic', 'homepage', 'live', 'roundup'].includes(String(pageKind || '').toLowerCase())) {
+    score -= 2;
+    notes.push(`container_kind:${pageKind}`);
+  }
+
+  const hasNamedEventMarker = /([A-Z][a-z]+\s+[A-Z][a-z]+|\b[A-Z]{2,5}\b|\b(nfl|nba|mlb|fda|sec|congress|white house|supreme court|olympic|trump|biden)\b)/i.test(title);
+  if (hasNamedEventMarker) {
+    score += 1;
+    notes.push('named_marker');
+  }
+
+  const crossTopicRisk = topicCandidates.length >= 2 && sectionCandidates.length >= 2;
+  if (crossTopicRisk) {
+    score -= 2;
+    notes.push('cross_topic_risk');
+  }
+
+  return {
+    score: Math.max(0, Math.min(10, score)),
+    notes,
+    crossTopicRisk,
+  };
 }
 
 function scoreFreshness(value) {

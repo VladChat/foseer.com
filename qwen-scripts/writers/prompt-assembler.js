@@ -7,6 +7,35 @@ import { getArticleTypeLayer } from './article-type-layers.js';
 import { getWriterById } from './writer-registry.js';
 import { getPublishReadySources } from '../utils/source-pack-access.js';
 
+const PROMPT_LEAK_PATTERNS = [
+  /\bprompt material\b/i,
+  /\bsystem prompt\b/i,
+  /\bdeveloper message\b/i,
+  /\buser prompt\b/i,
+  /\bas an ai\b/i,
+  /\bchatgpt\b/i,
+  /\bdo not reveal\b/i,
+  /\binstruction(?:s)?\b/i,
+];
+
+function sanitizeEditorialText(value, { allowNewLines = false } = {}) {
+  const raw = String(value || '');
+  if (!raw) return '';
+  let sanitized = raw
+    .replace(/\r/g, '')
+    .replace(/[^\S\n]+/g, ' ')
+    .replace(/\u0000/g, '')
+    .trim();
+
+  const lines = (allowNewLines ? sanitized.split('\n') : [sanitized])
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .filter((line) => !PROMPT_LEAK_PATTERNS.some((pattern) => pattern.test(line)));
+
+  sanitized = lines.join(allowNewLines ? '\n' : ' ');
+  return sanitized.replace(/\s{2,}/g, ' ').trim();
+}
+
 /**
  * Evidence Layer Builder
  * Formats claim map and source pack into usable evidence for the LLM
@@ -22,21 +51,22 @@ function buildEvidenceLayer(claimMap, sourcePack) {
 
   const claimsSection = claims.length > 0
     ? claims.map((c, i) => {
-        const claimText = String(c?.claimText || c?.text || c?.statement || 'Claim text unavailable');
-        const claimStatus = String(c?.status || 'unknown');
-        const sourceCount = Array.isArray(c?.supportingSources) ? c.supportingSources.length : 0;
-        return `[${i + 1}] (${claimStatus}) ${claimText.substring(0, 150)}${claimText.length > 150 ? '...' : ''} - ${sourceCount} sources`;
-      }).join('\n')
+      const claimText = String(c?.claimText || c?.text || c?.statement || 'Claim text unavailable');
+      const cleanClaimText = sanitizeEditorialText(claimText);
+      const claimStatus = String(c?.status || 'unknown');
+      const sourceCount = Array.isArray(c?.supportingSources) ? c.supportingSources.length : 0;
+      return `[${i + 1}] (${claimStatus}) ${cleanClaimText.substring(0, 150)}${cleanClaimText.length > 150 ? '...' : ''} - ${sourceCount} sources`;
+    }).join('\n')
     : 'No structured claims available.';
 
   const sourcesSection = sources.length > 0
     ? sources.map((s, i) => {
-        const sourceDomain = String(s?.domain || 'unknown');
-        const sourceCredibility = Number.isFinite(Number(s?.credibility)) ? Number(s.credibility) : 5;
-        const sourceTitle = String(s?.title || s?.headline || s?.name || 'Untitled source');
-        const role = describeSourceRole(s, sourcePack, i);
-        return `[${i + 1}] ${sourceDomain} (${sourceCredibility}/10, ${role}) - ${sourceTitle.substring(0, 80)}${sourceTitle.length > 80 ? '...' : ''}`;
-      }).join('\n')
+      const sourceDomain = String(s?.domain || 'unknown');
+      const sourceCredibility = Number.isFinite(Number(s?.credibility)) ? Number(s.credibility) : 5;
+      const sourceTitle = sanitizeEditorialText(String(s?.title || s?.headline || s?.name || 'Untitled source'));
+      const role = describeSourceRole(s, sourcePack, i);
+      return `[${i + 1}] ${sourceDomain} (${sourceCredibility}/10, ${role}) - ${sourceTitle.substring(0, 80)}${sourceTitle.length > 80 ? '...' : ''}`;
+    }).join('\n')
     : 'No sources provided.';
 
   return `EVIDENCE (factual grounding only):
@@ -120,15 +150,19 @@ ${evidencePosture}`;
  * @returns {string} Formatted context layer
  */
 function buildContextLayer(eventBrief) {
-  const involved = eventBrief?.whoIsInvolved
+  const involvedRaw = eventBrief?.whoIsInvolved
     || (Array.isArray(eventBrief?.involvedParties) ? eventBrief.involvedParties.join(', ') : '')
     || 'Not specified';
+  const involved = sanitizeEditorialText(involvedRaw);
+  const title = sanitizeEditorialText(eventBrief?.title || 'Untitled');
+  const happened = sanitizeEditorialText(eventBrief?.whatHappened || 'Not specified', { allowNewLines: true });
+  const matters = sanitizeEditorialText(eventBrief?.whyItMatters || 'Provide context', { allowNewLines: true });
 
   return `STORY CONTEXT:
 
-WHAT: ${eventBrief?.title || 'Untitled'}
-HAPPENED: ${eventBrief?.whatHappened || 'Not specified'}
-MATTERS: ${eventBrief?.whyItMatters || 'Provide context'}
+WHAT: ${title}
+HAPPENED: ${happened}
+MATTERS: ${matters}
 INVOLVED: ${involved}`;
 }
 

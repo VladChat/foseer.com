@@ -98,6 +98,7 @@ export async function draftArticle(eventBrief, sourcePack, claimMap, openAiApiKe
     topics: [rawClassification.topicLabel, rawClassification.topic_id].filter(Boolean),
     sources: sourcePack.publishReadySources || sourcePack.sources || [],
     classification: rawClassification,
+    lock_canonical_placement: Boolean(sourcePack?.topic_id || sourcePack?.section_id),
   });
   const classification = {
     ...rawClassification,
