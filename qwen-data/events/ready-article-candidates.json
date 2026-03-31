@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T20:00:04.851Z",
+  "updatedAt": "2026-03-31T21:42:27.576Z",
   "items": [
     {
       "identityKey": "cluster:evt-2026-03-28-sports-general-global",
@@ -429,6 +429,50 @@
       "lastSelectedAt": "2026-03-29T22:44:18.190Z",
       "lastPublishedAt": "2026-03-29T22:44:18.190Z",
       "publishedSlug": "2026-03-29-ai-s-soaring-power-use-puts-tech-climate-pledges-under-strai-2026-03-29-",
+      "selectedByWorkflow": null,
+      "selectedByRunId": null,
+      "selectedAt": null,
+      "selectionExpiresAt": null
+    },
+    {
+      "identityKey": "cluster:evt-2026-03-31-ai-big-tech-general-global",
+      "briefId": "evt-2026-03-31-ai-big-tech-general-global",
+      "title": "AI (artificial intelligence)",
+      "normalizedTitle": "ai artificial intelligence",
+      "section_id": "tech",
+      "topic_id": "ai-big-tech",
+      "articleType": "report",
+      "selectionOrigin": "current_run",
+      "poolIdentityKey": "cluster:evt-2026-03-31-ai-big-tech-general-global",
+      "rank": 1,
+      "score": 37.8,
+      "scoreNotes": [
+        "section_penalty:11",
+        "topic_penalty:7",
+        "region_penalty:54",
+        "angle_penalty:46",
+        "cluster_repeat:1",
+        "entity_penalty:35",
+        "domains:2",
+        "consistency:10",
+        "core:2",
+        "supporting:0"
+      ],
+      "sourceCount": 2,
+      "uniqueDomains": 2,
+      "directEventSourceCount": 2,
+      "independentEventDomains": 2,
+      "gateDecision": "PASS",
+      "gateNotes": [
+        "Role-aware one-event source-pack gate passed"
+      ],
+      "discoveredAt": "2026-03-31T21:42:07.999Z",
+      "firstQueuedAt": "2026-03-31T21:42:08.534Z",
+      "lastQueuedAt": "2026-03-31T21:42:27.561Z",
+      "status": "published",
+      "lastSelectedAt": "2026-03-31T21:42:27.561Z",
+      "lastPublishedAt": "2026-03-31T21:42:27.561Z",
+      "publishedSlug": "2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p",
       "selectedByWorkflow": null,
       "selectedByRunId": null,
       "selectedAt": null,

@@ -1,0 +1,593 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-03-31T21-40-40-864Z",
+  "started_at": "2026-03-31T21:40:40.864Z",
+  "generated_at": "2026-03-31T21:42:27.610Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "discovery_candidates": 40,
+    "event_clusters": 8,
+    "briefs_normalized": 13,
+    "source_packs_assembled": 45,
+    "publishable_candidates": 1,
+    "selected_topic": "AI (artificial intelligence)",
+    "selected_topics": [
+      "AI (artificial intelligence)"
+    ],
+    "articles_attempted": 1,
+    "articles_published": 1,
+    "news_pool": {
+      "total": 64,
+      "active": 53,
+      "published": 11,
+      "ready_candidates": 2
+    },
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 1
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 5,
+            "fresh_files": 5,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 74071
+          },
+          "gdelt": {
+            "files": 2,
+            "fresh_files": 2,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 10723
+          },
+          "google": {
+            "files": 1,
+            "fresh_files": 1,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 45643
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 106744,
+    "ready_candidates": 2,
+    "additional_ready_candidates": 2,
+    "source_pack_attempts": 3,
+    "source_pack_retry_external_queries": 6,
+    "source_pack_retry_brave_queries": 1,
+    "source_pack_retry_estimated_tokens": 6300,
+    "pre_draft_rejected": 0
+  },
+  "provider_stats": {
+    "mode": "cache_refresh_with_live_quota",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": true,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 1
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+      "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 5,
+          "fresh_files": 5,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 74071
+        },
+        "gdelt": {
+          "files": 2,
+          "fresh_files": 2,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 10723
+        },
+        "google": {
+          "files": 1,
+          "fresh_files": 1,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 45643
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14135
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6189
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 285008
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "preDraftPreparation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claimMapCreation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "articleDrafting": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "imageSupport": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "publishing": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "localVerification": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 1,
+    "editorial_pass_count": 1,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "Drug Giant Signs $2 Billion AI Deal, Marking Shift in Pharma Power",
+      "slug": "drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "tech",
+          "topic_id": "ai-big-tech",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 2,
+          "unique_domains": 2,
+          "direct_event_source_count": 2,
+          "independent_event_domains": 2,
+          "source_consistency_score": 10,
+          "strong_match_count": 2,
+          "core_source_count": 2,
+          "supporting_source_count": 0,
+          "background_source_count": 4,
+          "rejected_source_count": 1
+        },
+        "role_counts": {
+          "core": 2,
+          "background": 7,
+          "reject": 1
+        },
+        "publish_ready_sources": [
+          {
+            "title": "AI (artificial intelligence)",
+            "domain": "theguardian.com",
+            "url": "https://www.theguardian.com/technology/artificialintelligenceai",
+            "page_kind": "article",
+            "topic_id": "ai-big-tech",
+            "section_id": "tech"
+          },
+          {
+            "title": "Eli Lilly signs $2 billion deal to develop drugs using artificial intelligence",
+            "domain": "kulr8.com",
+            "url": "https://www.kulr8.com/national/eli-lilly-signs-2-billion-deal-to-develop-drugs-using-artificial-intelligence/article_2242bd55-470b-5eee-bb9d-005c6ac296be.html",
+            "page_kind": "article",
+            "topic_id": "ai-big-tech",
+            "section_id": "tech"
+          }
+        ],
+        "excluded_sources": [
+          {
+            "title": "McKinsey’s AI system hack should be a wake up call for leaders",
+            "domain": "managementtoday.co.uk",
+            "url": "https://managementtoday.co.uk/mckinseys-ai-system-hack-wake-call-leaders/opinion-and-analysis/article/1953187",
+            "page_kind": "article",
+            "topic_id": "cybersecurity",
+            "section_id": "tech"
+          }
+        ],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "AI (artificial intelligence)",
+            "domain": "theguardian.com",
+            "page_kind": "article",
+            "same_event_score": 15,
+            "topic_fit_score": 8,
+            "source_quality_score": 38.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Eli Lilly signs $2 billion deal to develop drugs using artificial intelligence",
+            "domain": "kulr8.com",
+            "page_kind": "article",
+            "same_event_score": 6,
+            "topic_fit_score": 8,
+            "source_quality_score": 17.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Tech News | Today's Latest Technology News",
+            "domain": "reuters.com",
+            "page_kind": "section",
+            "same_event_score": 2,
+            "topic_fit_score": 8,
+            "source_quality_score": 10,
+            "article_likelihood": 0,
+            "genericity_score": 9
+          },
+          {
+            "role": "background",
+            "title": "Tech company climate goals under pressure due to AI energy demand",
+            "domain": "apnews.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 8,
+            "source_quality_score": 16,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Trump Signs Order to Pay TSA Workers",
+            "domain": "wsj.com",
+            "page_kind": "official_release",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 12,
+            "article_likelihood": 8,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "Fleet Alliance to showcase award - winning tech and salary sacrifice expertise at GBFE 2026",
+            "domain": "evfleetworld.co.uk",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 11,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Chance AI Debuts Visual Agent Technology at Art Central Hong Kong",
+            "domain": "manilatimes.net",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 11,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Girl Scout cookie prices doubled since 2000 , analysis finds",
+            "domain": "wlky.com",
+            "page_kind": "analysis",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 10,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Can a Note-Taking AI Bracelet Really Make You More Productive?",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "reject",
+            "title": "McKinsey’s AI system hack should be a wake up call for leaders",
+            "domain": "managementtoday.co.uk",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": -1,
+            "source_quality_score": 10,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 2,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "AI (artificial intelligence)",
+              "url": "https://www.theguardian.com/technology/artificialintelligenceai",
+              "overlap_ratio": 0,
+              "shared_tokens": []
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "AI & Big Tech",
+          "Artificial Intelligence"
+        ],
+        "tag_slugs": [
+          "ai-big-tech",
+          "artificial-intelligence"
+        ],
+        "primary_topic_tag": "AI & Big Tech",
+        "primary_topic_slug": "ai-big-tech",
+        "warnings": [
+          "Canonical tag set is thin (2)"
+        ],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "AI & Big Tech",
+            "slug": "ai-big-tech",
+            "score": 40,
+            "reason": "Primary topic tag validated from topic_id=ai-big-tech",
+            "fallback": false
+          },
+          {
+            "label": "Artificial Intelligence",
+            "slug": "artificial-intelligence",
+            "score": 26,
+            "reason": "Theme match score 26",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "Canonical tag set is below target floor (3), accepted due sparse evidence"
+          ]
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "ai-big-tech",
+              "label": "AI & Big Tech",
+              "type": "topic"
+            },
+            {
+              "slug": "artificial-intelligence",
+              "label": "Artificial Intelligence",
+              "type": "theme"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "ai-big-tech",
+            "topic_label": "AI & Big Tech",
+            "supported": true,
+            "matched_aliases": [
+              "ai",
+              "artificial intelligence"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pexels",
+        "image_path": "~/assets/images/library/pexels/18069813/cover.png",
+        "source_url": "https://www.pexels.com/photo/an-artist-s-illustration-of-artificial-intelligence-ai-this-piece-explores-the-prediction-method-used-in-large-language-models-it-was-created-by-artist-wes-cockx-as-part-of-the-visuali-18069813/",
+        "selection_mode": "provider_download_new:pexels:strong",
+        "query_used": "AI technology photo",
+        "relevance_tier": "strong",
+        "article_relevance_score": 86,
+        "asset_quality_score": 95,
+        "editorial_fit_score": 89,
+        "scene_type": "abstract",
+        "visual_type": "photo",
+        "entity_hints": [
+          "render",
+          "showcasing",
+          "abstract",
+          "concept",
+          "artificial",
+          "intelligence",
+          "cube",
+          "manipulation"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "AI medical photo",
+          "AI technology photo",
+          "global AI photo",
+          "Billion AI Deal medical photo",
+          "Billion AI Deal technology photo",
+          "Billion AI Deal photo",
+          "global Billion AI Deal photo",
+          "AI Billion AI Deal photo"
+        ],
+        "decision_log": [
+          {
+            "query": "AI medical photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "1539191",
+            "finalScore": 65,
+            "articleRelevanceScore": 51,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "AI technology photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "18069813",
+            "finalScore": 83,
+            "articleRelevanceScore": 78,
+            "assetQualityScore": 95,
+            "tier": "strong"
+          }
+        ],
+        "best_online_decision": {
+          "query": "AI technology photo",
+          "provider": "pexels",
+          "providerAssetId": "18069813",
+          "finalScore": 83,
+          "articleRelevanceScore": 78,
+          "assetQualityScore": 95,
+          "tier": "strong"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pexels",
+          "query_used": "AI technology photo",
+          "article_relevance_score": 86,
+          "relevance_tier": "strong",
+          "overlap_ratio": 0,
+          "shared_tokens": [],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p.json",
+        "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p.mdx",
+        "expected_url": "/article/2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p",
+        "verified_url": null
+      }
+    }
+  ]
+}

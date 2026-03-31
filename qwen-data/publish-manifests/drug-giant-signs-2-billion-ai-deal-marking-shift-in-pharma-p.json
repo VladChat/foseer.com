@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-31T21:42:27.550Z",
+  "event_id": "evt-2026-03-31-ai-big-tech-general-global",
+  "cluster_id": "evt-2026-03-31-ai-big-tech-general-global",
+  "article_type": "report",
+  "title": "Drug Giant Signs $2 Billion AI Deal, Marking Shift in Pharma Power",
+  "slug": "drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p",
+  "canonical_slug": "2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p",
+  "expected_url": "/article/2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p.mdx",
+  "published_at": "2026-03-31T21:42:27.547Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "ai-big-tech",
+  "topic_label": "AI & Big Tech",
+  "subsection": "AI & Big Tech",
+  "topics": [
+    "AI (artificial intelligence)",
+    "AI & Big Tech"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/18069813/cover.png",
+    "file_relative_path": "src/assets/images/library/pexels/18069813/cover.png",
+    "source_url": "https://www.pexels.com/photo/an-artist-s-illustration-of-artificial-intelligence-ai-this-piece-explores-the-prediction-method-used-in-large-language-models-it-was-created-by-artist-wes-cockx-as-part-of-the-visuali-18069813/",
+    "asset_key": "pexels:18069813",
+    "alt_text": "Illustration for Drug Giant Signs $2 Billion AI Deal, Marking Shift in Pharma Power",
+    "selection_mode": "provider_download_new:pexels:strong",
+    "query_used": "AI technology photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 86,
+    "asset_quality_score": 95,
+    "editorial_fit_score": 89,
+    "is_fallback": false
+  },
+  "tags": [
+    "AI & Big Tech",
+    "Artificial Intelligence"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "AI (artificial intelligence)",
+        "url": "https://www.theguardian.com/technology/artificialintelligenceai",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Eli Lilly signs $2 billion deal to develop drugs using artificial intelligence",
+        "url": "https://www.kulr8.com/national/eli-lilly-signs-2-billion-deal-to-develop-drugs-using-artificial-intelligence/article_2242bd55-470b-5eee-bb9d-005c6ac296be.html",
+        "domain": "kulr8.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "AI (artificial intelligence)",
+          "url": "https://www.theguardian.com/technology/artificialintelligenceai",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "ai-big-tech",
+        "topic_label": "AI & Big Tech",
+        "supported": true,
+        "matched_aliases": [
+          "ai",
+          "artificial intelligence"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "AI technology photo",
+      "article_relevance_score": 86,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,20 +1,20 @@
 {
-  "totalArticles": 95,
+  "totalArticles": 96,
   "lastReset": null,
   "byWriter": {
     "reporter": {
       "count": 34,
       "lastAssigned": 1774987182593,
-      "streak": 2,
+      "streak": 0,
       "authorCursor": 0,
       "lastAuthorId": "maya_collins"
     },
     "explainer": {
-      "count": 13,
-      "lastAssigned": 1774824239511,
-      "streak": 0,
-      "authorCursor": 3,
-      "lastAuthorId": "mia_turner"
+      "count": 14,
+      "lastAssigned": 1774993328671,
+      "streak": 1,
+      "authorCursor": 0,
+      "lastAuthorId": "noah_bennett"
     },
     "analyst": {
       "count": 16,
@@ -32,14 +32,6 @@
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "analyst",
-      "timestamp": 1774639770944,
-      "articleType": "report",
-      "beat": "markets",
-      "section": "Business",
-      "topic_id": "crypto-bitcoin"
-    },
     {
       "writerId": "features",
       "timestamp": 1774639878204,
@@ -431,6 +423,14 @@
       "beat": "politics",
       "section": "News",
       "topic_id": "us-politics"
+    },
+    {
+      "writerId": "explainer",
+      "timestamp": 1774993328671,
+      "articleType": "report",
+      "beat": "technology",
+      "section": "Tech",
+      "topic_id": "ai-big-tech"
     }
   ]
 }

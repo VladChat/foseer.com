@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-03-31T20:00:04.806Z",
+  "updatedAt": "2026-03-31T21:42:27.520Z",
   "assets": [
     {
       "assetKey": "legacy:7-social-media-trends-you-need-to-know-in-2026",
@@ -7761,9 +7761,72 @@
       "useCount": 1,
       "status": "ready",
       "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pexels:18069813",
+      "provider": "pexels",
+      "providerAssetId": "18069813",
+      "sourcePageUrl": "https://www.pexels.com/photo/an-artist-s-illustration-of-artificial-intelligence-ai-this-piece-explores-the-prediction-method-used-in-large-language-models-it-was-created-by-artist-wes-cockx-as-part-of-the-visuali-18069813/",
+      "sourceDownloadUrl": "https://images.pexels.com/photos/18069813/pexels-photo-18069813.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "authorName": "Google DeepMind",
+      "authorUrl": "https://www.pexels.com/@googledeepmind",
+      "license": "Pexels License",
+      "altText": "3D render showcasing an abstract concept of artificial intelligence and technology with cube manipulation.",
+      "width": 3840,
+      "height": 2160,
+      "format": "png",
+      "localPath": "~/assets/images/library/pexels/18069813/cover.png",
+      "fileRelativePath": "src/assets/images/library/pexels/18069813/cover.png",
+      "metadataRelativePath": "src/assets/images/library/pexels/18069813/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "Tech"
+      ],
+      "queryHistory": [
+        "AI technology photo"
+      ],
+      "tags": [
+        "ai-big-tech",
+        "Unspecified",
+        "3D render showcasing an abstract concept of artificial intelligence and technology with cube manipulation."
+      ],
+      "topicHints": [
+        "ai-big-tech"
+      ],
+      "entityHints": [
+        "render",
+        "showcasing",
+        "abstract",
+        "concept",
+        "artificial",
+        "intelligence",
+        "cube",
+        "manipulation"
+      ],
+      "sceneType": "abstract",
+      "geoHints": [],
+      "visualType": "photo",
+      "editorialFitScore": 100,
+      "firstSeenAt": "2026-03-31T21:42:27.519Z",
+      "lastFetchedAt": "2026-03-31T21:42:27.519Z",
+      "lastUsedAt": "2026-03-31T21:42:27.519Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
     }
   ],
   "usage": [
+    {
+      "assetKey": "pexels:18069813",
+      "articleSlug": "drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p",
+      "articleTitle": "Drug Giant Signs $2 Billion AI Deal, Marking Shift in Pharma Power",
+      "section": "Tech",
+      "topicId": "ai-big-tech",
+      "query": "AI technology photo",
+      "usedAt": "2026-03-31T21:42:27.519Z",
+      "selectionMode": "provider_download_new:pexels:strong"
+    },
     {
       "assetKey": "pixabay:2920069",
       "articleSlug": "house-appropriations-committee-posts-new-legislative-activit",

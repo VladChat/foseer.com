@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T19:59:41.819Z",
+  "updatedAt": "2026-03-31T21:42:08.011Z",
   "items": [
     {
       "identityKey": "event:news:sustainable business news latest eco headlines reuters",
@@ -90,7 +90,7 @@
     {
       "identityKey": "event:ai-big-tech:ai artificial intelligence the guardian",
       "item": {
-        "id": "google-sec-1774914924272-5",
+        "id": "google-sec-1774993327997-5",
         "title": "AI (artificial intelligence) | The Guardian",
         "summary": "3 hours ago ... At last, David has landed a double punch on the tech Goliaths. Now to hit them even harder · Wikipedia bans AI-generated content in its online encyclopedia.",
         "whyItMatters": "",
@@ -102,7 +102,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:24.274Z",
+        "discoveredAt": "2026-03-31T21:42:07.999Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:culture",
@@ -124,11 +124,20 @@
         "normalizedTitle": "ai artificial intelligence the guardian",
         "canonicalUrl": "https://www.theguardian.com/technology/artificialintelligenceai",
         "discoveryScore": 14.4,
-        "eventKey": "ai-big-tech:ai artificial intelligence the guardian"
+        "targetedCoverage": false,
+        "eventKey": "ai-big-tech:ai artificial intelligence the guardian",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:55:24.274Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
+      "discoveredAt": "2026-03-31T21:42:07.999Z",
+      "lastSeenAt": "2026-03-31T21:42:08.011Z",
+      "expiresAt": "2026-04-02T21:42:08.010Z"
     },
     {
       "identityKey": "event:news:latest news sport and opinion from the guardian",
@@ -228,19 +237,19 @@
     {
       "identityKey": "event:news:ukhotviews latest tech news views",
       "item": {
-        "id": "brave-sec-1774987083856-3",
+        "id": "brave-sec-1774993241577-4",
         "title": "UKHotViews - Latest Tech News & Views",
         "summary": "Bringing you opinionated, authoritative research & analysis on the UK technology scene.",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "20 hours ago",
+        "when": "1 day ago",
         "sourceUrls": [
           "https://www.techmarketview.com/ukhotviews/"
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:03.858Z",
+        "discoveredAt": "2026-03-31T21:40:41.579Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -260,6 +269,7 @@
         "normalizedTitle": "ukhotviews latest tech news views",
         "canonicalUrl": "https://www.techmarketview.com/ukhotviews/",
         "discoveryScore": 12.8,
+        "targetedCoverage": false,
         "eventKey": "news:ukhotviews latest tech news views",
         "signalSpecificityScore": 6,
         "signalSpecificityNotes": [
@@ -269,9 +279,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:03.858Z",
-      "lastSeenAt": "2026-03-31T19:59:07.285Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:40:41.579Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:tech:5 things to know before the market opens friday cnbc",
@@ -316,7 +326,7 @@
     {
       "identityKey": "event:news:ofcom to investigate complaints of climate change denial watts up with that",
       "item": {
-        "id": "brave-sec-1774987077554-0",
+        "id": "brave-sec-1774993259516-0",
         "title": "Ofcom to investigate complaints of climate change denial – Watts Up With That?",
         "summary": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
         "whyItMatters": "",
@@ -328,7 +338,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:57:57.583Z",
+        "discoveredAt": "2026-03-31T21:40:59.520Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -349,6 +359,7 @@
         "normalizedTitle": "ofcom to investigate complaints of climate change denial watts up with that",
         "canonicalUrl": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
         "discoveryScore": 13,
+        "targetedCoverage": false,
         "eventKey": "news:ofcom to investigate complaints of climate change denial watts up with that",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -359,9 +370,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:57:57.583Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:40:59.520Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:medical-research:quantum biopharma s 2025 audited year end financial results",
@@ -453,7 +464,7 @@
     {
       "identityKey": "event:sports:casemiro not thinking about reversing manchester united decision",
       "item": {
-        "id": "google-sec-1774913092431-3",
+        "id": "google-sec-1774993265481-3",
         "title": "Casemiro not thinking about reversing Manchester United decision",
         "summary": "2 days ago ... The midfielder confirmed his intention to leave the club on January 22, but has seen a recent upturn in form under Michael Carrick.",
         "whyItMatters": "",
@@ -465,7 +476,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:24:52.433Z",
+        "discoveredAt": "2026-03-31T21:41:05.484Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -484,11 +495,19 @@
         "normalizedTitle": "casemiro not thinking about reversing manchester united decision",
         "canonicalUrl": "https://www.nytimes.com/athletic/7151400/2026/03/27/casemiro-manchester-united-stay-transfer/",
         "discoveryScore": 13.6,
-        "eventKey": "sports:casemiro not thinking about reversing manchester united decision"
+        "targetedCoverage": false,
+        "eventKey": "sports:casemiro not thinking about reversing manchester united decision",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:24:52.433Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
+      "discoveredAt": "2026-03-31T21:41:05.484Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:business:bloomberg businessweek",
@@ -641,7 +660,7 @@
     {
       "identityKey": "event:companies-deals:travel and vacation providers stocks q4 earnings hyatt hotels",
       "item": {
-        "id": "google-sec-1774987108196-1",
+        "id": "google-sec-1774993304325-1",
         "title": "Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...",
         "summary": "2 days ago ... The Consumer Discretionary sector, by definition, is made up of companies selling non-essential goods and services. When economic conditions deteriorate or ...",
         "whyItMatters": "",
@@ -653,7 +672,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T19:58:28.199Z",
+        "discoveredAt": "2026-03-31T21:41:44.328Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:business",
@@ -676,6 +695,7 @@
         "normalizedTitle": "travel and vacation providers stocks q4 earnings hyatt hotels",
         "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/h/pressreleases/1002532/reflecting-on-consumer-discretionary-travel-and-vacation-providers-stocks-q4-earnings-hyatt-hotels-nyseh/",
         "discoveryScore": 16.4,
+        "targetedCoverage": false,
         "eventKey": "companies-deals:travel and vacation providers stocks q4 earnings hyatt hotels",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -686,9 +706,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:28.199Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:41:44.328Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
     },
     {
       "identityKey": "event:business:q4 consumer discretionary casino operator earnings penn",
@@ -738,7 +758,7 @@
     {
       "identityKey": "event:business:spotting winners hilton nyse hlt and consumer discretionary",
       "item": {
-        "id": "google-sec-1774987108199-2",
+        "id": "google-sec-1774993304328-2",
         "title": "Spotting Winners: Hilton (NYSE:HLT) And Consumer Discretionary",
         "summary": "2 days ago ... The 19 consumer discretionary - travel and vacation providers stocks we track reported a mixed Q4. As a group, revenues beat analysts' consensus estimates by ...",
         "whyItMatters": "",
@@ -750,7 +770,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:28.203Z",
+        "discoveredAt": "2026-03-31T21:41:44.331Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:business",
@@ -772,6 +792,7 @@
         "normalizedTitle": "spotting winners hilton nyse hlt and consumer discretionary",
         "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/hlt/pressreleases/999257/spotting-winners-hilton-nysehlt-and-consumer-discretionary-travel-and-vacation-providers-stocks-in-q4/",
         "discoveryScore": 13.4,
+        "targetedCoverage": false,
         "eventKey": "business:spotting winners hilton nyse hlt and consumer discretionary",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -782,9 +803,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:28.203Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:41:44.331Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
     },
     {
       "identityKey": "event:business:finance economics latest news and analysis from the economist",
@@ -930,7 +951,7 @@
     {
       "identityKey": "event:sports:uswnt s catarina macario joins san diego wave from chelsea",
       "item": {
-        "id": "google-sec-1774913092444-8",
+        "id": "google-sec-1774993265495-8",
         "title": "USWNT's Catarina Macario joins San Diego Wave from Chelsea",
         "summary": "1 day ago ... San Diego Wave FC has announced the signing of U.S. women's national team striker Catarina Macario from Chelsea. Macario, who was the USWNT's top goal ...",
         "whyItMatters": "",
@@ -942,7 +963,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:24:52.446Z",
+        "discoveredAt": "2026-03-31T21:41:05.497Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -961,18 +982,26 @@
         "normalizedTitle": "uswnt s catarina macario joins san diego wave from chelsea",
         "canonicalUrl": "https://www.nytimes.com/athletic/7151314/2026/03/27/macario-san-diego-wave-chelsea-transfer/",
         "discoveryScore": 13.6,
-        "eventKey": "sports:uswnt s catarina macario joins san diego wave from chelsea"
+        "targetedCoverage": false,
+        "eventKey": "sports:uswnt s catarina macario joins san diego wave from chelsea",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:24:52.446Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
+      "discoveredAt": "2026-03-31T21:41:05.497Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:news:environmental climate news reuters",
       "item": {
-        "id": "google-sec-1774987108183-6",
+        "id": "google-sec-1774993304318-8",
         "title": "Environmental & Climate News | Reuters",
-        "summary": "6 hours ago ... Find latest environment news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
+        "summary": "7 hours ago ... Find latest environment news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
@@ -982,7 +1011,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T19:58:28.185Z",
+        "discoveredAt": "2026-03-31T21:41:44.320Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -1004,6 +1033,7 @@
         "normalizedTitle": "environmental climate news reuters",
         "canonicalUrl": "https://www.reuters.com/business/environment/",
         "discoveryScore": 13,
+        "targetedCoverage": false,
         "eventKey": "news:environmental climate news reuters",
         "signalSpecificityScore": 5,
         "signalSpecificityNotes": [
@@ -1013,9 +1043,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:28.185Z",
-      "lastSeenAt": "2026-03-31T19:59:07.285Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:41:44.320Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
     },
     {
       "identityKey": "event:news:law the guardian",
@@ -1277,7 +1307,7 @@
     {
       "identityKey": "event:news:in the age of misinformation climate literacy matters more than ever honolulu ci",
       "item": {
-        "id": "brave-sec-1774987077596-3",
+        "id": "brave-sec-1774993259524-3",
         "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever - Honolulu Civil Beat",
         "summary": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
         "whyItMatters": "",
@@ -1289,7 +1319,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:57:57.600Z",
+        "discoveredAt": "2026-03-31T21:40:59.527Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -1310,6 +1340,7 @@
         "normalizedTitle": "in the age of misinformation climate literacy matters more than ever honolulu civil beat",
         "canonicalUrl": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
         "discoveryScore": 12.4,
+        "targetedCoverage": false,
         "eventKey": "news:in the age of misinformation climate literacy matters more than ever honolulu ci",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -1320,9 +1351,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:57:57.600Z",
-      "lastSeenAt": "2026-03-31T19:59:07.285Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:40:59.527Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:news:science nbc news",
@@ -2216,7 +2247,7 @@
     {
       "identityKey": "event:sports:manchester united transfers zirkzee rashford and should the club",
       "item": {
-        "id": "google-sec-1774913092436-5",
+        "id": "google-sec-1774993265487-5",
         "title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
         "summary": "2 days ago ... They have much more attacking potency. I still think that when you then add in Champions League football, when you think of potentially Joshua Zirkzee departing ...",
         "whyItMatters": "",
@@ -2228,7 +2259,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-30T23:24:52.439Z",
+        "discoveredAt": "2026-03-31T21:41:05.489Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -2249,16 +2280,25 @@
         "normalizedTitle": "manchester united transfers zirkzee rashford and should the club",
         "canonicalUrl": "https://www.nytimes.com/athletic/7148954/2026/03/27/manchester-united-transfers-rashford-zirkzee-hojlund/",
         "discoveryScore": 16.6,
-        "eventKey": "sports:manchester united transfers zirkzee rashford and should the club"
+        "targetedCoverage": false,
+        "eventKey": "sports:manchester united transfers zirkzee rashford and should the club",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:24:52.439Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
+      "discoveredAt": "2026-03-31T21:41:05.489Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:sports:tiger woods history of car crashes and injuries what to know after",
       "item": {
-        "id": "google-sec-1774913092422-0",
+        "id": "google-sec-1774993265473-0",
         "title": "Tiger Woods' history of car crashes and injuries: What to know after ...",
         "summary": "1 day ago ... He was also charged with refusal to submit to a lawful test, Budensiek said. Both charges are misdemeanors. The crash is the fourth major incident involving ...",
         "whyItMatters": "",
@@ -2270,7 +2310,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-30T23:24:52.425Z",
+        "discoveredAt": "2026-03-31T21:41:05.476Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -2289,16 +2329,24 @@
         "normalizedTitle": "tiger woods history of car crashes and injuries what to know after",
         "canonicalUrl": "https://www.nytimes.com/athletic/7152847/2026/03/27/tiger-woods-dui-arrest-jupiter-island-accident-timeline/",
         "discoveryScore": 15.6,
-        "eventKey": "sports:tiger woods history of car crashes and injuries what to know after"
+        "targetedCoverage": false,
+        "eventKey": "sports:tiger woods history of car crashes and injuries what to know after",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:24:52.425Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
+      "discoveredAt": "2026-03-31T21:41:05.476Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:sports:tiger woods arrested charged with dui after rollover crash in florida",
       "item": {
-        "id": "google-sec-1774913092433-4",
+        "id": "google-sec-1774993265484-4",
         "title": "Tiger Woods arrested, charged with DUI after rollover crash in Florida",
         "summary": "12 hours ago ... But it doesn't matter who you are; if you break the law, we're going to follow the law. It's a really easy path to take. As far as being in the jail, we're ...",
         "whyItMatters": "",
@@ -2310,7 +2358,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-30T23:24:52.436Z",
+        "discoveredAt": "2026-03-31T21:41:05.487Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -2329,11 +2377,19 @@
         "normalizedTitle": "tiger woods arrested charged with dui after rollover crash in florida",
         "canonicalUrl": "https://www.nytimes.com/athletic/7152418/2026/03/27/tiger-woods-car-crash-florida/",
         "discoveryScore": 15.6,
-        "eventKey": "sports:tiger woods arrested charged with dui after rollover crash in florida"
+        "targetedCoverage": false,
+        "eventKey": "sports:tiger woods arrested charged with dui after rollover crash in florida",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:24:52.436Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
+      "discoveredAt": "2026-03-31T21:41:05.487Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:transfers-business:athletes train for almost every scenario but there s a stressor sports",
@@ -2382,7 +2438,7 @@
     {
       "identityKey": "event:business:radnet nasdaq rdnt q4 earnings the globe and mail",
       "item": {
-        "id": "google-sec-1774987108207-5",
+        "id": "google-sec-1774993304336-5",
         "title": "RadNet (NASDAQ:RDNT) Q4 Earnings - The Globe and Mail",
         "summary": "2 days ago ... The business had a very strong quarter with full-year revenue guidance exceeding analysts' expectations and a decent beat of analysts' revenue estimates. Quest ...",
         "whyItMatters": "",
@@ -2394,7 +2450,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T19:58:28.210Z",
+        "discoveredAt": "2026-03-31T21:41:44.338Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:business",
@@ -2416,6 +2472,7 @@
         "normalizedTitle": "radnet nasdaq rdnt q4 earnings the globe and mail",
         "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/rdnt-q/pressreleases/999248/radnet-nasdaqrdnt-q4-earnings-leading-the-testing-diagnostics-services-pack/",
         "discoveryScore": 15.4,
+        "targetedCoverage": false,
         "eventKey": "business:radnet nasdaq rdnt q4 earnings the globe and mail",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -2426,14 +2483,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:28.210Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:41:44.338Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
     },
     {
       "identityKey": "event:sports:are these manchester united s summer transfer priorities",
       "item": {
-        "id": "google-sec-1774913092439-6",
+        "id": "google-sec-1774993265489-6",
         "title": "Are these Manchester United's summer transfer priorities?",
         "summary": "19 hours ago ... Senne Lammens' competition. Now let's take a closer look at each of those points. Casemiro, Mark II. Speaking to The Athletic's Adam Crafton, Casemiro ...",
         "whyItMatters": "",
@@ -2445,7 +2502,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:24:52.441Z",
+        "discoveredAt": "2026-03-31T21:41:05.492Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -2464,16 +2521,24 @@
         "normalizedTitle": "are these manchester united s summer transfer priorities",
         "canonicalUrl": "https://www.nytimes.com/athletic/7151826/2026/03/28/manchester-united-transfer-priorities/",
         "discoveryScore": 13.6,
-        "eventKey": "sports:are these manchester united s summer transfer priorities"
+        "targetedCoverage": false,
+        "eventKey": "sports:are these manchester united s summer transfer priorities",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:24:52.441Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
+      "discoveredAt": "2026-03-31T21:41:05.492Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:sports:unc star caleb wilson a projected top 5 pick declares for nba draft",
       "item": {
-        "id": "google-sec-1774913092447-9",
+        "id": "google-sec-1774993265497-9",
         "title": "UNC star Caleb Wilson, a projected top-5 pick, declares for NBA Draft",
         "summary": "24 hours ago ... 8 this season for the Tar Heels.) Top League Content. The Athletic's Sam Vecenie's latest draft model has Wilson being drafted at No. 4 by the Indiana Pacers ...",
         "whyItMatters": "",
@@ -2489,7 +2554,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:24:52.449Z",
+        "discoveredAt": "2026-03-31T21:41:05.500Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -2508,11 +2573,19 @@
         "normalizedTitle": "unc star caleb wilson a projected top 5 pick declares for nba draft",
         "canonicalUrl": "https://www.nytimes.com/athletic/7152954/2026/03/27/caleb-wilson-nba-draft/",
         "discoveryScore": 13.6,
-        "eventKey": "sports:unc star caleb wilson a projected top 5 pick declares for nba draft"
+        "targetedCoverage": false,
+        "eventKey": "sports:unc star caleb wilson a projected top 5 pick declares for nba draft",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:24:52.449Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
+      "discoveredAt": "2026-03-31T21:41:05.500Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:sports:women s march madness 2026 scores live updates louisville vs",
@@ -2557,7 +2630,7 @@
     {
       "identityKey": "event:news:bnzi stock quote price and forecast cnn",
       "item": {
-        "id": "google-sec-1774987108205-4",
+        "id": "google-sec-1774993304334-4",
         "title": "BNZI Stock Quote Price and Forecast - CNN",
         "summary": "2 days ago ... View Banzai International, Inc. Class A BNZI stock quote prices, financial information, real-time forecasts, and company news from CNN.",
         "whyItMatters": "",
@@ -2569,7 +2642,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:28.207Z",
+        "discoveredAt": "2026-03-31T21:41:44.336Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:business",
@@ -2591,6 +2664,7 @@
         "normalizedTitle": "bnzi stock quote price and forecast cnn",
         "canonicalUrl": "https://www.cnn.com/markets/stocks/bnzi",
         "discoveryScore": 11,
+        "targetedCoverage": false,
         "eventKey": "news:bnzi stock quote price and forecast cnn",
         "signalSpecificityScore": 5,
         "signalSpecificityNotes": [
@@ -2600,9 +2674,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:28.207Z",
-      "lastSeenAt": "2026-03-31T19:59:07.285Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:41:44.336Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
     },
     {
       "identityKey": "event:culture:alexander kluge 94 revolutionary filmmaker in postwar germany",
@@ -3190,7 +3264,7 @@
     {
       "identityKey": "event:crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
       "item": {
-        "id": "brave-sec-1774987077976-2",
+        "id": "brave-sec-1774993265463-2",
         "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move - The Econom",
         "summary": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
         "whyItMatters": "",
@@ -3202,7 +3276,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:57:57.983Z",
+        "discoveredAt": "2026-03-31T21:41:05.467Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:business",
@@ -3224,6 +3298,7 @@
         "normalizedTitle": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move the econom",
         "canonicalUrl": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
         "discoveryScore": 14.4,
+        "targetedCoverage": false,
         "eventKey": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -3234,14 +3309,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:57:57.983Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:41:05.467Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:mental-health:the link between medicine and psychology psychology today",
       "item": {
-        "id": "brave-sec-1774987089818-0",
+        "id": "brave-sec-1774993247451-1",
         "title": "The Link Between Medicine and Psychology | Psychology Today",
         "summary": "When you visit your doctor, do they ask about your mental health? A new book explores how mental health has been shown to directly impact both heart and brain health.",
         "whyItMatters": "",
@@ -3253,7 +3328,7 @@
         ],
         "freshness": 6,
         "urgency": 5,
-        "discoveredAt": "2026-03-31T19:58:09.823Z",
+        "discoveredAt": "2026-03-31T21:40:47.454Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:health",
@@ -3274,6 +3349,7 @@
         "normalizedTitle": "the link between medicine and psychology psychology today",
         "canonicalUrl": "https://psychologytoday.com/us/blog/well-read/202603/the-link-between-medicine-and-psychology",
         "discoveryScore": 15.4,
+        "targetedCoverage": false,
         "eventKey": "mental-health:the link between medicine and psychology psychology today",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -3284,14 +3360,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:09.823Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:40:47.454Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:cybersecurity:uk registered ai cybersecurity patent signals new era of intelligent threat mana",
       "item": {
-        "id": "brave-sec-1774987083853-2",
+        "id": "brave-sec-1774993241570-2",
         "title": "UK-Registered AI Cybersecurity Patent Signals New Era of Intelligent Threat Management and Interdisciplinary Innovation",
         "summary": "The global technology and research community is witnessing a significant milestone following the United Kingdom Intellectual Property Office's registration of a groundbreaking design patent titled \"COMPUTER CYBERSECURITY SPRINT PLANNING ENGINE WITH AI-POWERED THREAT PRIORITIZATION.\"",
         "whyItMatters": "",
@@ -3303,7 +3379,7 @@
         ],
         "freshness": 5,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T19:58:03.856Z",
+        "discoveredAt": "2026-03-31T21:40:41.574Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -3325,6 +3401,7 @@
         "normalizedTitle": "uk registered ai cybersecurity patent signals new era of intelligent threat management and interdisciplinary innovation",
         "canonicalUrl": "http://www.techtimes.com/articles/315545/20260329/uk-registered-ai-cybersecurity-patent-signals-new-era-intelligent-threat-management.htm",
         "discoveryScore": 15.4,
+        "targetedCoverage": false,
         "eventKey": "cybersecurity:uk registered ai cybersecurity patent signals new era of intelligent threat mana",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -3335,9 +3412,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:03.856Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:40:41.574Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:cybersecurity:mckinsey s ai system hack should be a wake up call for leaders",
@@ -3393,7 +3470,7 @@
     {
       "identityKey": "event:film-tv:why is horror tv so complicated right now",
       "item": {
-        "id": "brave-sec-1774987101889-2",
+        "id": "brave-sec-1774993259514-4",
         "title": "Why Is Horror TV So Complicated Right Now?",
         "summary": "From 'IT: Welcome to Derry' to 'Yellowjackets' and 'From,' streaming horror keeps piling on mysteries, curses, and lore that can feel more exhausting than scary.",
         "whyItMatters": "",
@@ -3405,7 +3482,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:21.893Z",
+        "discoveredAt": "2026-03-31T21:40:59.516Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -3426,6 +3503,7 @@
         "normalizedTitle": "why is horror tv so complicated right now",
         "canonicalUrl": "https://www.esquire.com/uk/culture/tv/a70879484/tv-horror-too-complicated/",
         "discoveryScore": 14.4,
+        "targetedCoverage": false,
         "eventKey": "film-tv:why is horror tv so complicated right now",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -3436,9 +3514,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:21.893Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:40:59.516Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:culture:why notre dame s culture is winning in the transfer portal era uhnd com",
@@ -3484,7 +3562,7 @@
     {
       "identityKey": "event:us-politics:climate law battle royale politico",
       "item": {
-        "id": "google-sec-1774987108175-3",
+        "id": "google-sec-1774993304299-3",
         "title": "Climate law 'battle royale' - POLITICO",
         "summary": "1 day ago ... The Democratic Party's embrace of affordability politics is pushing what remains of U.S. climate policy to the brink.",
         "whyItMatters": "",
@@ -3496,7 +3574,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:28.178Z",
+        "discoveredAt": "2026-03-31T21:41:44.301Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -3518,6 +3596,7 @@
         "normalizedTitle": "climate law battle royale politico",
         "canonicalUrl": "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808",
         "discoveryScore": 15.6,
+        "targetedCoverage": false,
         "eventKey": "us-politics:climate law battle royale politico",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -3528,9 +3607,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:28.178Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:41:44.301Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
     },
     {
       "identityKey": "event:news:xrp market trends ripple s regulatory milestones in 2026 news and statistics ind",
@@ -4263,7 +4342,7 @@
     {
       "identityKey": "event:sports:what s next for duke tennessee after elite eight recruits transfer portal more e",
       "item": {
-        "id": "brave-sec-1774987095807-1",
+        "id": "brave-sec-1774993327983-4",
         "title": "What's next for Duke, Tennessee after Elite Eight: Recruits, transfer portal, more - ESPN",
         "summary": "With NCAA tournament runs over for key programs, here's how next season is taking shape.",
         "whyItMatters": "",
@@ -4275,7 +4354,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:15.811Z",
+        "discoveredAt": "2026-03-31T21:42:07.986Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:sports",
@@ -4294,6 +4373,7 @@
         "normalizedTitle": "what s next for duke tennessee after elite eight recruits transfer portal more espn",
         "canonicalUrl": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
         "discoveryScore": 11.4,
+        "targetedCoverage": false,
         "eventKey": "sports:what s next for duke tennessee after elite eight recruits transfer portal more e",
         "signalSpecificityScore": 5,
         "signalSpecificityNotes": [
@@ -4303,9 +4383,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:15.811Z",
-      "lastSeenAt": "2026-03-31T19:59:07.285Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:42:07.986Z",
+      "lastSeenAt": "2026-03-31T21:42:08.011Z",
+      "expiresAt": "2026-04-02T21:42:08.010Z"
     },
     {
       "identityKey": "event:medical-research:health medicine news sciencedaily",
@@ -5748,7 +5828,7 @@
     {
       "identityKey": "event:cybersecurity:ai the cybersecurity crisis that vendors love",
       "item": {
-        "id": "brave-sec-1774987083829-0",
+        "id": "brave-sec-1774993241539-0",
         "title": "AI: The Cybersecurity Crisis That Vendors Love",
         "summary": "At the RSAC cybersecurity conference, the arrival of agentic AI gave the community plenty to talk about. New threats include identity and supply chains.",
         "whyItMatters": "",
@@ -5760,7 +5840,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:03.845Z",
+        "discoveredAt": "2026-03-31T21:40:41.562Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -5782,6 +5862,7 @@
         "normalizedTitle": "ai the cybersecurity crisis that vendors love",
         "canonicalUrl": "https://forbes.com/sites/rscottraynovich/2026/03/30/ai-the-cybersecurity-crisis-that-vendors-love",
         "discoveryScore": 15.6,
+        "targetedCoverage": false,
         "eventKey": "cybersecurity:ai the cybersecurity crisis that vendors love",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -5792,14 +5873,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:03.845Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:40:41.562Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:film-tv:the 10 tv shows we re watching in april 2026",
       "item": {
-        "id": "brave-sec-1774987101884-1",
+        "id": "brave-sec-1774993259500-0",
         "title": "The 10 TV Shows We’re Watching in April 2026",
         "summary": "The TV shows coming in April 2026 that matter most, from major premieres and returns to buzzy streaming releases.",
         "whyItMatters": "",
@@ -5811,7 +5892,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:21.889Z",
+        "discoveredAt": "2026-03-31T21:40:59.503Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -5832,6 +5913,7 @@
         "normalizedTitle": "the 10 tv shows we re watching in april 2026",
         "canonicalUrl": "https://www.esquire.com/uk/culture/tv/a70884275/tv-shows-april-2026/",
         "discoveryScore": 12,
+        "targetedCoverage": false,
         "eventKey": "film-tv:the 10 tv shows we re watching in april 2026",
         "signalSpecificityScore": 5,
         "signalSpecificityNotes": [
@@ -5841,9 +5923,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:21.889Z",
-      "lastSeenAt": "2026-03-31T19:59:07.285Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:40:59.503Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:mental-health:mental health and physical health connection",
@@ -6352,7 +6434,7 @@
     {
       "identityKey": "event:crypto-bitcoin:crypto stocks near a bottom after 60 selloff analyst",
       "item": {
-        "id": "brave-sec-1774986791690-4",
+        "id": "brave-sec-1774993265467-3",
         "title": "Crypto Stocks Near A Bottom After 60% Selloff: Analyst",
         "summary": "Wall Street broker Bernstein says crypto-linked equities are approaching a cyclical bottom following a steep ~60% drawdown from 2025 highs",
         "whyItMatters": "",
@@ -6364,7 +6446,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:53:11.693Z",
+        "discoveredAt": "2026-03-31T21:41:05.469Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:business",
@@ -6386,6 +6468,7 @@
         "normalizedTitle": "crypto stocks near a bottom after 60 selloff analyst",
         "canonicalUrl": "https://bitcoinmagazine.com/news/crypto-stocks-near-a-bottom-after-selling",
         "discoveryScore": 14.4,
+        "targetedCoverage": false,
         "eventKey": "crypto-bitcoin:crypto stocks near a bottom after 60 selloff analyst",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -6396,9 +6479,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:53:11.693Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T21:41:05.469Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:tech:microsoft named a leader in 2026 gartner magic quadrant for integration platform",
@@ -6540,7 +6623,7 @@
     {
       "identityKey": "event:news:medical bulletin 31 march 2026",
       "item": {
-        "id": "brave-sec-1774987089823-1",
+        "id": "brave-sec-1774993247457-3",
         "title": "Medical Bulletin 31/March/2026",
         "summary": "Here are the top medical news for today:New Study Identifies Exercise Type That Significantly Improves Sleep Quality A new meta-analysis published in Sleep and Biological Rhythms suggests that yoga...",
         "whyItMatters": "",
@@ -6550,13 +6633,13 @@
         "entities": [
           "meta"
         ],
-        "when": "10 hours ago",
+        "when": "12 hours ago",
         "sourceUrls": [
           "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669"
         ],
         "freshness": 7,
         "urgency": 5,
-        "discoveredAt": "2026-03-31T19:58:09.826Z",
+        "discoveredAt": "2026-03-31T21:40:47.460Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:health",
@@ -6576,6 +6659,7 @@
         "normalizedTitle": "medical bulletin 31 march 2026",
         "canonicalUrl": "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
         "discoveryScore": 15.4,
+        "targetedCoverage": false,
         "eventKey": "news:medical bulletin 31 march 2026",
         "signalSpecificityScore": 4,
         "signalSpecificityNotes": [
@@ -6584,16 +6668,16 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:09.826Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:40:47.460Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:news:trump administration sues minnesota for allowing trans athletes in",
       "item": {
-        "id": "google-sec-1774987108180-5",
+        "id": "google-sec-1774993304301-4",
         "title": "Trump administration sues Minnesota for allowing trans athletes in ...",
-        "summary": "22 hours ago ... Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination.",
+        "summary": "1 day ago ... Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination.",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
@@ -6603,7 +6687,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:28.183Z",
+        "discoveredAt": "2026-03-31T21:41:44.310Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -6625,6 +6709,7 @@
         "normalizedTitle": "trump administration sues minnesota for allowing trans athletes in",
         "canonicalUrl": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
         "discoveryScore": 15.4,
+        "targetedCoverage": false,
         "eventKey": "news:trump administration sues minnesota for allowing trans athletes in",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -6635,14 +6720,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:28.183Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:41:44.310Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
     },
     {
       "identityKey": "event:mental-health:revolutionizing mental health care breakthroughs in neuroscience transforming tr",
       "item": {
-        "id": "brave-sec-1774987089826-2",
+        "id": "brave-sec-1774993247460-4",
         "title": "Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms - mentalhealthparityp",
         "summary": "Contents hide 1 Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms 1.1 Understanding Brain Plasticity and Its Therapeutic Potential 1.2 Advances in Neuroimaging: Mapping the Mind 1.3 Emerging…",
         "whyItMatters": "",
@@ -6654,7 +6739,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:09.830Z",
+        "discoveredAt": "2026-03-31T21:40:47.463Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:health",
@@ -6675,6 +6760,7 @@
         "normalizedTitle": "revolutionizing mental health care breakthroughs in neuroscience transforming treatment paradigms mentalhealthparityp",
         "canonicalUrl": "https://www.mentalhealthparitypartners.com/2026/03/30/revolutionizing-ment/",
         "discoveryScore": 15.6,
+        "targetedCoverage": false,
         "eventKey": "mental-health:revolutionizing mental health care breakthroughs in neuroscience transforming tr",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -6685,14 +6771,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:09.830Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:40:47.463Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:crypto-bitcoin:crypto market update etf outflows cap bitcoin price rebound inn",
       "item": {
-        "id": "brave-sec-1774987077972-1",
+        "id": "brave-sec-1774993265458-1",
         "title": "Crypto Market Update: ETF Outflows Cap Bitcoin Price Rebound | INN",
         "summary": "Bitcoin tumbles to its March low of US$66,400 amid rising US Treasury yields and geopolitical tensions. With over US$1.3 billion in leveraged positions wiped out, the market's reactionary environment is palpable.",
         "whyItMatters": "",
@@ -6704,7 +6790,7 @@
         ],
         "freshness": 6,
         "urgency": 5,
-        "discoveredAt": "2026-03-31T19:57:57.976Z",
+        "discoveredAt": "2026-03-31T21:41:05.463Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:business",
@@ -6725,6 +6811,7 @@
         "normalizedTitle": "crypto market update etf outflows cap bitcoin price rebound inn",
         "canonicalUrl": "https://investingnews.com/cryptocurrency-market-recap/",
         "discoveryScore": 15.4,
+        "targetedCoverage": false,
         "eventKey": "crypto-bitcoin:crypto market update etf outflows cap bitcoin price rebound inn",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -6735,9 +6822,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:57:57.976Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:41:05.463Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:business:morpheus research report alleges anti competitive practices by makemytrip despit",
@@ -6793,19 +6880,19 @@
     {
       "identityKey": "event:cybersecurity:how ai is reshaping the cybersecurity vendor landscape",
       "item": {
-        "id": "brave-sec-1774987083845-1",
+        "id": "brave-sec-1774993241562-1",
         "title": "How AI Is Reshaping the Cybersecurity Vendor Landscape",
         "summary": "The cybersecurity vendor landscape is being rebuilt around AI, and the transformation is moving faster than most organizations are prepared for. Richard Stiennon,",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "17 hours ago",
+        "when": "19 hours ago",
         "sourceUrls": [
           "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280"
         ],
-        "freshness": 7,
+        "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:03.853Z",
+        "discoveredAt": "2026-03-31T21:40:41.570Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -6826,7 +6913,8 @@
         "article_likelihood": 8,
         "normalizedTitle": "how ai is reshaping the cybersecurity vendor landscape",
         "canonicalUrl": "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280",
-        "discoveryScore": 15.4,
+        "discoveryScore": 14.4,
+        "targetedCoverage": false,
         "eventKey": "cybersecurity:how ai is reshaping the cybersecurity vendor landscape",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -6837,26 +6925,26 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:03.853Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:40:41.570Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:health:deakin university advances global agenda for affordable health through raah roun",
       "item": {
-        "id": "brave-sec-1774987089830-3",
+        "id": "brave-sec-1774993247454-2",
         "title": "Deakin University advances global agenda for affordable health through RAAH Roundtable - The Hindu",
         "summary": "Deakin University advances global agenda for affordable health through RAAH Roundtable",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "3 hours ago",
+        "when": "5 hours ago",
         "sourceUrls": [
           "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece"
         ],
-        "freshness": 9,
+        "freshness": 8,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:09.832Z",
+        "discoveredAt": "2026-03-31T21:40:47.457Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:health",
@@ -6874,7 +6962,8 @@
         "article_likelihood": 8,
         "normalizedTitle": "deakin university advances global agenda for affordable health through raah roundtable the hindu",
         "canonicalUrl": "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece",
-        "discoveryScore": 16.4,
+        "discoveryScore": 15.4,
+        "targetedCoverage": false,
         "eventKey": "health:deakin university advances global agenda for affordable health through raah roun",
         "signalSpecificityScore": 6,
         "signalSpecificityNotes": [
@@ -6884,9 +6973,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:09.832Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:40:47.457Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:culture:the 20 greatest tv drama show masterpieces of all time ranked",
@@ -6985,7 +7074,7 @@
     {
       "identityKey": "event:news:what s next in the us government shutdown as situation eases at",
       "item": {
-        "id": "google-sec-1774987108178-4",
+        "id": "google-sec-1774993304310-5",
         "title": "What's next in the US government shutdown, as situation eases at ...",
         "summary": "1 day ago ... Wait times in US airport security queues eased somewhat on Monday after President Donald Trump signed an order instructing his administration to find a way ...",
         "whyItMatters": "",
@@ -6997,7 +7086,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T19:58:28.180Z",
+        "discoveredAt": "2026-03-31T21:41:44.313Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -7019,6 +7108,7 @@
         "normalizedTitle": "what s next in the us government shutdown as situation eases at",
         "canonicalUrl": "https://www.bbc.com/news/articles/cr513dnq61mo",
         "discoveryScore": 14.8,
+        "targetedCoverage": false,
         "eventKey": "news:what s next in the us government shutdown as situation eases at",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -7029,14 +7119,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:28.180Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:41:44.313Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
     },
     {
       "identityKey": "event:news:constantino s sticky ad spending problem politico",
       "item": {
-        "id": "google-sec-1774987108168-1",
+        "id": "google-sec-1774993304291-1",
         "title": "Constantino's sticky ad spending problem - POLITICO",
         "summary": "1 day ago ... GREENBERGER BECOMES POLITICO EDITOR-IN-CHIEF: After an extensive search, POLITICO has named Jonathan Greenberger as the news organization's next Global ...",
         "whyItMatters": "",
@@ -7048,7 +7138,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:28.172Z",
+        "discoveredAt": "2026-03-31T21:41:44.297Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -7068,6 +7158,7 @@
         "normalizedTitle": "constantino s sticky ad spending problem politico",
         "canonicalUrl": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
         "discoveryScore": 14.6,
+        "targetedCoverage": false,
         "eventKey": "news:constantino s sticky ad spending problem politico",
         "signalSpecificityScore": 6,
         "signalSpecificityNotes": [
@@ -7077,9 +7168,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:28.172Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:41:44.297Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
     },
     {
       "identityKey": "event:mental-health:slow healing still matters why recovery is still progress live again india menta",
@@ -7131,7 +7222,7 @@
     {
       "identityKey": "event:news:israel passes law to give death penalty to palestinians convicted of",
       "item": {
-        "id": "google-sec-1774987108172-2",
+        "id": "google-sec-1774993304297-2",
         "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
         "summary": "1 day ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
         "whyItMatters": "",
@@ -7147,7 +7238,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:28.175Z",
+        "discoveredAt": "2026-03-31T21:41:44.299Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -7166,6 +7257,7 @@
         "normalizedTitle": "israel passes law to give death penalty to palestinians convicted of",
         "canonicalUrl": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
         "discoveryScore": 14.4,
+        "targetedCoverage": false,
         "eventKey": "news:israel passes law to give death penalty to palestinians convicted of",
         "signalSpecificityScore": 5,
         "signalSpecificityNotes": [
@@ -7175,9 +7267,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:28.175Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:41:44.299Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
     },
     {
       "identityKey": "event:news:israel passes death penalty law for palestinians convicted of lethal",
@@ -7226,7 +7318,7 @@
     {
       "identityKey": "event:sports:how nil is reshaping the future of college football cleats",
       "item": {
-        "id": "brave-sec-1774987095802-0",
+        "id": "brave-sec-1774993327969-0",
         "title": "How NIL Is Reshaping the Future of College Football | Cleats",
         "summary": "Many athletes are navigating contracts, taxes, and branding for the first time. Without proper guidance, they risk making costly mistakes. ... NIL can affect locker room chemistry, especially when teammates earn vastly different amounts. It also contributes to increased player movement through the transfer portal. ... Perhaps the biggest change is cultural. College sports ...",
         "whyItMatters": "",
@@ -7238,7 +7330,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:15.807Z",
+        "discoveredAt": "2026-03-31T21:42:07.974Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:sports",
@@ -7259,6 +7351,7 @@
         "normalizedTitle": "how nil is reshaping the future of college football cleats",
         "canonicalUrl": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
         "discoveryScore": 13.4,
+        "targetedCoverage": false,
         "eventKey": "sports:how nil is reshaping the future of college football cleats",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -7269,14 +7362,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:15.807Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:42:07.974Z",
+      "lastSeenAt": "2026-03-31T21:42:08.011Z",
+      "expiresAt": "2026-04-02T21:42:08.010Z"
     },
     {
       "identityKey": "event:sports:in ncaa athletics student athletes are often choosing deal over degree andscape",
       "item": {
-        "id": "brave-sec-1774987095811-2",
+        "id": "brave-sec-1774993327974-1",
         "title": "In NCAA athletics, student-athletes are often choosing deal over degree - Andscape",
         "summary": "NIL and the transfer portal have given college athletes newfound power and freedom of movement, but it's often at the detriment of education.",
         "whyItMatters": "",
@@ -7288,7 +7381,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:15.814Z",
+        "discoveredAt": "2026-03-31T21:42:07.978Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:sports",
@@ -7309,6 +7402,7 @@
         "normalizedTitle": "in ncaa athletics student athletes are often choosing deal over degree andscape",
         "canonicalUrl": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
         "discoveryScore": 13.4,
+        "targetedCoverage": false,
         "eventKey": "sports:in ncaa athletics student athletes are often choosing deal over degree andscape",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -7319,9 +7413,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:15.814Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:42:07.978Z",
+      "lastSeenAt": "2026-03-31T21:42:08.011Z",
+      "expiresAt": "2026-04-02T21:42:08.010Z"
     },
     {
       "identityKey": "event:culture:marvel s dark 2 part daredevil replacement is quietly one of its best series to ",
@@ -7605,7 +7699,7 @@
     {
       "identityKey": "event:culture:wake me up when ryan coogler s x files reboot premieres",
       "item": {
-        "id": "brave-sec-1774987101880-0",
+        "id": "brave-sec-1774993259503-1",
         "title": "Wake Me Up When Ryan Coogler's 'X-Files' Reboot Premieres",
         "summary": "Ryan Coogler’s 'X-Files' project already feels like one of TV’s most intriguing revivals. Here’s why the franchise is worth getting excited about again.",
         "whyItMatters": "",
@@ -7617,7 +7711,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:21.884Z",
+        "discoveredAt": "2026-03-31T21:40:59.507Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -7638,6 +7732,7 @@
         "normalizedTitle": "wake me up when ryan coogler s x files reboot premieres",
         "canonicalUrl": "https://www.esquire.com/uk/culture/tv/a70883021/ryan-coogler-x-files-reboot/",
         "discoveryScore": 13.4,
+        "targetedCoverage": false,
         "eventKey": "culture:wake me up when ryan coogler s x files reboot premieres",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -7648,26 +7743,26 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:21.884Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:40:59.507Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:crypto-bitcoin:why businesses are paying closer attention to crypto infrastructure tekedia",
       "item": {
-        "id": "brave-sec-1774987077970-0",
+        "id": "brave-sec-1774993265454-0",
         "title": "Why Businesses Are Paying Closer Attention to Crypto Infrastructure - Tekedia",
         "summary": "Businesses are adopting crypto infrastructure for payments, tokenisation, and treasury efficiency, with growing global and African relevance.",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "5 hours ago",
+        "when": "6 hours ago",
         "sourceUrls": [
           "https://tekedia.com/why-businesses-are-paying-closer-attention-to-crypto-infrastructure"
         ],
         "freshness": 8,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:57:57.972Z",
+        "discoveredAt": "2026-03-31T21:41:05.458Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:business",
@@ -7688,6 +7783,7 @@
         "normalizedTitle": "why businesses are paying closer attention to crypto infrastructure tekedia",
         "canonicalUrl": "https://tekedia.com/why-businesses-are-paying-closer-attention-to-crypto-infrastructure",
         "discoveryScore": 16.4,
+        "targetedCoverage": false,
         "eventKey": "crypto-bitcoin:why businesses are paying closer attention to crypto infrastructure tekedia",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -7698,14 +7794,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:57:57.972Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:41:05.458Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:sports:trump administration sues minnesota over trans athletes in girls sports as pam b",
       "item": {
-        "id": "brave-sec-1774987095814-3",
+        "id": "brave-sec-1774993327978-2",
         "title": "Trump administration sues Minnesota over trans athletes in girls sports as Pam Bondi slams 'flawed policies' | Daily Mai",
         "summary": "The Trump administration is carrying out its threat to punish any state that allows transgender athletes to compete in girls sports by suing Minnesota and its athletics governing body Monday.",
         "whyItMatters": "",
@@ -7717,7 +7813,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:15.817Z",
+        "discoveredAt": "2026-03-31T21:42:07.981Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:sports",
@@ -7738,6 +7834,7 @@
         "normalizedTitle": "trump administration sues minnesota over trans athletes in girls sports as pam bondi slams flawed policies daily mai",
         "canonicalUrl": "https://www.dailymail.co.uk/sport/othersports/article-15692757/trump-administration-sues-minnesota-trans-athletes-girls-sports.html",
         "discoveryScore": 13.4,
+        "targetedCoverage": false,
         "eventKey": "sports:trump administration sues minnesota over trans athletes in girls sports as pam b",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -7748,14 +7845,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:15.817Z",
-      "lastSeenAt": "2026-03-31T19:59:07.284Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-03-31T21:42:07.981Z",
+      "lastSeenAt": "2026-03-31T21:42:08.011Z",
+      "expiresAt": "2026-04-02T21:42:08.010Z"
     },
     {
       "identityKey": "event:culture:sydney chandler talks anima sxsw and alien earth season 2 interview",
       "item": {
-        "id": "brave-sec-1774986866167-4",
+        "id": "brave-sec-1774993259511-3",
         "title": "Sydney Chandler Talks Anima, SXSW, and Alien: Earth Season 2 [INTERVIEW]",
         "summary": "Ahead of SXSW, Sydney Chandler spoke to FandomWire about her new indie sci-fi drama, ANIMA, which premiered to rave reviews.",
         "whyItMatters": "",
@@ -7767,7 +7864,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:54:26.169Z",
+        "discoveredAt": "2026-03-31T21:40:59.514Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -7786,6 +7883,7 @@
         "normalizedTitle": "sydney chandler talks anima sxsw and alien earth season 2 interview",
         "canonicalUrl": "https://fandomwire.com/sydney-chandler-anima-alien-earth-sxsw-interview/",
         "discoveryScore": 13,
+        "targetedCoverage": false,
         "eventKey": "culture:sydney chandler talks anima sxsw and alien earth season 2 interview",
         "signalSpecificityScore": 5,
         "signalSpecificityNotes": [
@@ -7795,9 +7893,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:54:26.169Z",
-      "lastSeenAt": "2026-03-31T19:54:31.836Z",
-      "expiresAt": "2026-04-02T19:54:31.836Z"
+      "discoveredAt": "2026-03-31T21:40:59.514Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
       "identityKey": "event:health:one system one strategy for physician well being american medical association",
@@ -7845,6 +7943,885 @@
       "discoveredAt": "2026-03-31T19:58:09.835Z",
       "lastSeenAt": "2026-03-31T19:59:07.284Z",
       "expiresAt": "2026-04-02T19:59:07.284Z"
+    },
+    {
+      "identityKey": "event:news:how one family s bipolar disorder experience led to more than 1 billion for the ",
+      "item": {
+        "id": "brave-sec-1774993247438-0",
+        "title": "How one family’s bipolar disorder experience led to more than $1 billion for the Broad Institute | RochesterFirst",
+        "summary": "NEW YORK (AP) — Jon Stanley considers himself fortunate among bipolar disorder patients. He eventually responded to the right drug cocktail after self-described “full-brained mania” almost 40 years ago left him naked in a New York City deli, convinced electricity coursed through the floor.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "10 hours ago",
+        "sourceUrls": [
+          "https://www.rochesterfirst.com/news/business/ap-how-one-familys-bipolar-disorder-experience-led-to-more-than-1-billion-for-the-broad-institute/"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:40:47.451Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:health",
+        "sectionCandidates": [
+          "news",
+          "business",
+          "health"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "news",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "official_release",
+        "genericity_score": 1,
+        "article_likelihood": 7,
+        "normalizedTitle": "how one family s bipolar disorder experience led to more than 1 billion for the broad institute rochesterfirst",
+        "canonicalUrl": "https://www.rochesterfirst.com/news/business/ap-how-one-familys-bipolar-disorder-experience-led-to-more-than-1-billion-for-the-broad-institute/",
+        "discoveryScore": 13.8,
+        "targetedCoverage": false,
+        "eventKey": "news:how one family s bipolar disorder experience led to more than 1 billion for the ",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:40:47.451Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
+    },
+    {
+      "identityKey": "event:business:b c should be treated the same after 8 8b ontario fed deal housing minister",
+      "item": {
+        "id": "gdelt-sec-1774993303138-8",
+        "title": "B . C . should be treated the same after $8 . 8B Ontario - fed deal : Housing minister",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://caledoniacourier.com/2026/03/31/b-c-should-be-treated-the-same-after-8-8b-ontario-fed-deal-housing-minister/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:41:43.140Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:business",
+        "sectionCandidates": [
+          "business"
+        ],
+        "topicCandidates": [
+          "housing-real-estate"
+        ],
+        "detectedSectionId": "business",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "b c should be treated the same after 8 8b ontario fed deal housing minister",
+        "canonicalUrl": "https://caledoniacourier.com/2026/03/31/b-c-should-be-treated-the-same-after-8-8b-ontario-fed-deal-housing-minister/",
+        "discoveryScore": 12.6,
+        "targetedCoverage": false,
+        "eventKey": "business:b c should be treated the same after 8 8b ontario fed deal housing minister",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:41:43.140Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
+    },
+    {
+      "identityKey": "event:business:reviewing shoe carnival nasdaq scvl and hennes mauritz otcmkts hnnmy",
+      "item": {
+        "id": "gdelt-sec-1774993303118-1",
+        "title": "Reviewing Shoe Carnival ( NASDAQ : SCVL ) and Hennes & Mauritz ( OTCMKTS : HNNMY )",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://www.dailypolitical.com/2026/03/31/reviewing-shoe-carnival-nasdaqscvl-and-hennes-mauritz-otcmktshnnmy.html"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:41:43.125Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:business",
+        "sectionCandidates": [
+          "business"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "business",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "reviewing shoe carnival nasdaq scvl and hennes mauritz otcmkts hnnmy",
+        "canonicalUrl": "https://www.dailypolitical.com/2026/03/31/reviewing-shoe-carnival-nasdaqscvl-and-hennes-mauritz-otcmktshnnmy.html",
+        "discoveryScore": 11.6,
+        "targetedCoverage": false,
+        "eventKey": "business:reviewing shoe carnival nasdaq scvl and hennes mauritz otcmkts hnnmy",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:41:43.125Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
+    },
+    {
+      "identityKey": "event:business:mfs investment grade municipal trust nyse cxh short interest update",
+      "item": {
+        "id": "gdelt-sec-1774993303130-4",
+        "title": "MFS Investment Grade Municipal Trust ( NYSE : CXH ) Short Interest Update",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://www.dailypolitical.com/2026/03/31/mfs-investment-grade-municipal-trust-nysecxh-short-interest-update.html"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:41:43.132Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:business",
+        "sectionCandidates": [
+          "business"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "business",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "mfs investment grade municipal trust nyse cxh short interest update",
+        "canonicalUrl": "https://www.dailypolitical.com/2026/03/31/mfs-investment-grade-municipal-trust-nysecxh-short-interest-update.html",
+        "discoveryScore": 11.6,
+        "targetedCoverage": false,
+        "eventKey": "business:mfs investment grade municipal trust nyse cxh short interest update",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:41:43.132Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
+    },
+    {
+      "identityKey": "event:business:riverview bancorp declares quarterly cash dividend of 0 02 per share",
+      "item": {
+        "id": "gdelt-sec-1774993303136-7",
+        "title": "Riverview Bancorp Declares Quarterly Cash Dividend of $0 . 02 Per Share",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://www.manilatimes.net/2026/04/01/tmt-newswire/globenewswire/riverview-bancorp-declares-quarterly-cash-dividend-of-002-per-share/2312037"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:41:43.138Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:business",
+        "sectionCandidates": [
+          "business"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "business",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "riverview bancorp declares quarterly cash dividend of 0 02 per share",
+        "canonicalUrl": "https://www.manilatimes.net/2026/04/01/tmt-newswire/globenewswire/riverview-bancorp-declares-quarterly-cash-dividend-of-002-per-share/2312037",
+        "discoveryScore": 11.6,
+        "targetedCoverage": false,
+        "eventKey": "business:riverview bancorp declares quarterly cash dividend of 0 02 per share",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:41:43.138Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
+    },
+    {
+      "identityKey": "event:news:rural currents a small length of canal vitalized the young country export capaci",
+      "item": {
+        "id": "gdelt-sec-1774993327383-3",
+        "title": "RURAL CURRENTS : A small length of canal vitalized the young country export capacity",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://www.stthomastimesjournal.com:443/news/farm-news/rural-currents-a-small-length-of-canal-vitalized-the-young-countrys-export-capacity/wcm/07b73746-6e75-47d2-b80f-901ad4236826"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:42:07.386Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:tech",
+        "sectionCandidates": [
+          "news",
+          "tech"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "news",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "rural currents a small length of canal vitalized the young country export capacity",
+        "canonicalUrl": "https://www.stthomastimesjournal.com/news/farm-news/rural-currents-a-small-length-of-canal-vitalized-the-young-countrys-export-capacity/wcm/07b73746-6e75-47d2-b80f-901ad4236826",
+        "discoveryScore": 11.4,
+        "targetedCoverage": false,
+        "eventKey": "news:rural currents a small length of canal vitalized the young country export capaci",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:42:07.386Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
+    },
+    {
+      "identityKey": "event:news:searchbeyond explains why seo outperforms all digital channels in roi",
+      "item": {
+        "id": "gdelt-sec-1774993327386-4",
+        "title": "SearchBeyond Explains Why SEO Outperforms All Digital Channels in ROI",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "http://www.nashvilleherald.com/news/278955881/searchbeyond-explains-why-seo-outperforms-all-digital-channels-in-roi"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:42:07.388Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:tech",
+        "sectionCandidates": [
+          "news",
+          "tech"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "news",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "searchbeyond explains why seo outperforms all digital channels in roi",
+        "canonicalUrl": "http://www.nashvilleherald.com/news/278955881/searchbeyond-explains-why-seo-outperforms-all-digital-channels-in-roi",
+        "discoveryScore": 11.4,
+        "targetedCoverage": false,
+        "eventKey": "news:searchbeyond explains why seo outperforms all digital channels in roi",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:42:07.388Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
+    },
+    {
+      "identityKey": "event:tech:fleet alliance to showcase award winning tech and salary sacrifice expertise at ",
+      "item": {
+        "id": "gdelt-sec-1774993327395-9",
+        "title": "Fleet Alliance to showcase award - winning tech and salary sacrifice expertise at GBFE 2026",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://evfleetworld.co.uk/fleet-alliance-to-showcase-award-winning-tech-and-salary-sacrifice-expertise-at-gbfe-2026/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:42:07.397Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:tech",
+        "sectionCandidates": [
+          "tech"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "tech",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "fleet alliance to showcase award winning tech and salary sacrifice expertise at gbfe 2026",
+        "canonicalUrl": "https://evfleetworld.co.uk/fleet-alliance-to-showcase-award-winning-tech-and-salary-sacrifice-expertise-at-gbfe-2026/",
+        "discoveryScore": 11.4,
+        "targetedCoverage": false,
+        "eventKey": "tech:fleet alliance to showcase award winning tech and salary sacrifice expertise at ",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:42:07.397Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
+    },
+    {
+      "identityKey": "event:news:silva injury law inc broadens legal services across modesto san diego fresno sto",
+      "item": {
+        "id": "gdelt-sec-1774993303140-9",
+        "title": "Silva Injury Law , Inc . Broadens Legal Services Across Modesto , San Diego , Fresno , Stockton , and Turlock",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "http://www.nashvilleherald.com/news/278955907/silva-injury-law-inc-broadens-legal-services-across-modesto-san-diego-fresno-stockton-and-turlock"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:41:43.142Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:business",
+        "sectionCandidates": [
+          "news",
+          "business"
+        ],
+        "topicCandidates": [
+          "law-crime"
+        ],
+        "detectedSectionId": "news",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "silva injury law inc broadens legal services across modesto san diego fresno stockton and turlock",
+        "canonicalUrl": "http://www.nashvilleherald.com/news/278955907/silva-injury-law-inc-broadens-legal-services-across-modesto-san-diego-fresno-stockton-and-turlock",
+        "discoveryScore": 11.4,
+        "targetedCoverage": false,
+        "eventKey": "news:silva injury law inc broadens legal services across modesto san diego fresno sto",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:41:43.142Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
+    },
+    {
+      "identityKey": "event:news:tariff fears stall business in canada windsor border hub",
+      "item": {
+        "id": "gdelt-sec-1774993303134-6",
+        "title": "Tariff fears stall business in Canada Windsor border hub",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "http://www.nashvilleherald.com/news/278950948/tariff-fears-stall-business-in-canada-s-windsor-border-hub"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:41:43.136Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:business",
+        "sectionCandidates": [
+          "news",
+          "business"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "news",
+        "detectedTopicId": null,
+        "region": "canada",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "official_release",
+        "genericity_score": 1,
+        "article_likelihood": 7,
+        "normalizedTitle": "tariff fears stall business in canada windsor border hub",
+        "canonicalUrl": "http://www.nashvilleherald.com/news/278950948/tariff-fears-stall-business-in-canada-s-windsor-border-hub",
+        "discoveryScore": 10.8,
+        "targetedCoverage": false,
+        "eventKey": "news:tariff fears stall business in canada windsor border hub",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:41:43.136Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
+    },
+    {
+      "identityKey": "event:business:zenzap is the work chat that knows when to stop",
+      "item": {
+        "id": "gdelt-sec-1774993303128-3",
+        "title": "Zenzap is the work chat that knows when to stop",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://nypost.com/contributor-content/zenzap-is-the-work-chat-that-knows-when-to-stop/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:41:43.130Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:business",
+        "sectionCandidates": [
+          "business"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "business",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "zenzap is the work chat that knows when to stop",
+        "canonicalUrl": "https://nypost.com/contributor-content/zenzap-is-the-work-chat-that-knows-when-to-stop/",
+        "discoveryScore": 10.4,
+        "targetedCoverage": false,
+        "eventKey": "business:zenzap is the work chat that knows when to stop",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:41:43.130Z",
+      "lastSeenAt": "2026-03-31T21:41:43.161Z",
+      "expiresAt": "2026-04-02T21:41:43.161Z"
+    },
+    {
+      "identityKey": "event:tech:mndot more than 200 projects planned statewide in 2026",
+      "item": {
+        "id": "gdelt-sec-1774993327393-8",
+        "title": "MnDOT : More than 200 projects planned statewide in 2026",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://www.keyc.com/2026/03/31/mndot-more-than-200-projects-planned-statewide-2026/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:42:07.395Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:tech",
+        "sectionCandidates": [
+          "tech"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "tech",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "mndot more than 200 projects planned statewide in 2026",
+        "canonicalUrl": "https://www.keyc.com/2026/03/31/mndot-more-than-200-projects-planned-statewide-2026/",
+        "discoveryScore": 11.6,
+        "targetedCoverage": false,
+        "eventKey": "tech:mndot more than 200 projects planned statewide in 2026",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:42:07.395Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
+    },
+    {
+      "identityKey": "event:news:meet the artemis crew in nasa first astronaut mission to the moon in more than a",
+      "item": {
+        "id": "gdelt-sec-1774993327358-0",
+        "title": "Meet the Artemis crew in NASA first astronaut mission to the moon in more than a half - century - WSVN 7News | Miami New",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://wsvn.com/news/local/florida/meet-the-artemis-crew-in-nasas-first-astronaut-mission-to-the-moon-in-more-than-a-half-century/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:42:07.374Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:tech",
+        "sectionCandidates": [
+          "news",
+          "tech"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "news",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "meet the artemis crew in nasa first astronaut mission to the moon in more than a half century wsvn 7news miami new",
+        "canonicalUrl": "https://wsvn.com/news/local/florida/meet-the-artemis-crew-in-nasas-first-astronaut-mission-to-the-moon-in-more-than-a-half-century/",
+        "discoveryScore": 11.4,
+        "targetedCoverage": false,
+        "eventKey": "news:meet the artemis crew in nasa first astronaut mission to the moon in more than a",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:42:07.374Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
+    },
+    {
+      "identityKey": "event:news:new gle arrives with bigger grille more tech better engines",
+      "item": {
+        "id": "gdelt-sec-1774993327381-2",
+        "title": "New GLE arrives with bigger grille , more tech , better engines",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://www.carmagazine.co.uk/car-news/first-official-pictures/mercedes-benz/2026-gle-suv/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:42:07.383Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:tech",
+        "sectionCandidates": [
+          "news",
+          "tech"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "news",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "new gle arrives with bigger grille more tech better engines",
+        "canonicalUrl": "https://www.carmagazine.co.uk/car-news/first-official-pictures/mercedes-benz/2026-gle-suv/",
+        "discoveryScore": 11.4,
+        "targetedCoverage": false,
+        "eventKey": "news:new gle arrives with bigger grille more tech better engines",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:42:07.383Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
+    },
+    {
+      "identityKey": "event:news:cory booker says democrats have failed this moment calls for generational renewa",
+      "item": {
+        "id": "gdelt-sec-1774993327390-6",
+        "title": "Cory Booker Says Democrats Have Failed This Moment , Calls For Generational Renewal",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://www.yahoo.com/news/articles/cory-booker-says-democrats-failed-204602775.html"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:42:07.392Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:tech",
+        "sectionCandidates": [
+          "news",
+          "tech"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "news",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "cory booker says democrats have failed this moment calls for generational renewal",
+        "canonicalUrl": "https://www.yahoo.com/news/articles/cory-booker-says-democrats-failed-204602775.html",
+        "discoveryScore": 11.4,
+        "targetedCoverage": false,
+        "eventKey": "news:cory booker says democrats have failed this moment calls for generational renewa",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:42:07.392Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
+    },
+    {
+      "identityKey": "event:tech:april 2026 horoscope the 4 zodiac signs seeing major life shifts with the libra ",
+      "item": {
+        "id": "gdelt-sec-1774993327374-1",
+        "title": "April 2026 Horoscope : The 4 Zodiac Signs Seeing Major Life Shifts With the Libra Full Moon",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://www.wmagazine.com/life/april-horoscope-2026-zodiac-libra-full-moon-astrology"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:42:07.381Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:tech",
+        "sectionCandidates": [
+          "tech"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "tech",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "april 2026 horoscope the 4 zodiac signs seeing major life shifts with the libra full moon",
+        "canonicalUrl": "https://www.wmagazine.com/life/april-horoscope-2026-zodiac-libra-full-moon-astrology",
+        "discoveryScore": 10.4,
+        "targetedCoverage": false,
+        "eventKey": "tech:april 2026 horoscope the 4 zodiac signs seeing major life shifts with the libra ",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:42:07.381Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
+    },
+    {
+      "identityKey": "event:tech:a very jerry birthday returns to boulder fox theatre august 1 with dave abear a ",
+      "item": {
+        "id": "gdelt-sec-1774993327388-5",
+        "title": "A Very Jerry Birthday Returns to Boulder Fox Theatre August 1 with Dave ABear A Very Jerry Band",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://www.gratefulweb.com/articles/a-very-jerry-birthday-returns-to-boulders-fox-theatre-august-1-with-dave-abears-a-very-jerry-band/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:42:07.390Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:tech",
+        "sectionCandidates": [
+          "tech"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "tech",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "a very jerry birthday returns to boulder fox theatre august 1 with dave abear a very jerry band",
+        "canonicalUrl": "https://www.gratefulweb.com/articles/a-very-jerry-birthday-returns-to-boulders-fox-theatre-august-1-with-dave-abears-a-very-jerry-band/",
+        "discoveryScore": 10.4,
+        "targetedCoverage": false,
+        "eventKey": "tech:a very jerry birthday returns to boulder fox theatre august 1 with dave abear a ",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:42:07.390Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
+    },
+    {
+      "identityKey": "event:tech:zenzap is the work chat that knows when to stop",
+      "item": {
+        "id": "gdelt-sec-1774993327392-7",
+        "title": "Zenzap is the work chat that knows when to stop",
+        "summary": "",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "20260331T211500Z",
+        "sourceUrls": [
+          "https://nypost.com/contributor-content/zenzap-is-the-work-chat-that-knows-when-to-stop/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T21:42:07.393Z",
+        "provider": "gdelt",
+        "trustedSource": false,
+        "discoveryLane": "gdelt:tech",
+        "sectionCandidates": [
+          "tech"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "tech",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "zenzap is the work chat that knows when to stop",
+        "canonicalUrl": "https://nypost.com/contributor-content/zenzap-is-the-work-chat-that-knows-when-to-stop/",
+        "discoveryScore": 10.4,
+        "targetedCoverage": false,
+        "eventKey": "tech:zenzap is the work chat that knows when to stop",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T21:42:07.393Z",
+      "lastSeenAt": "2026-03-31T21:42:07.400Z",
+      "expiresAt": "2026-04-02T21:42:07.400Z"
     }
   ]
 }
