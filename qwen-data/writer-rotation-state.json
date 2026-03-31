@@ -1,13 +1,13 @@
 {
-  "totalArticles": 94,
+  "totalArticles": 95,
   "lastReset": null,
   "byWriter": {
     "reporter": {
-      "count": 33,
-      "lastAssigned": 1774986872551,
-      "streak": 1,
-      "authorCursor": 3,
-      "lastAuthorId": "daniel_reed"
+      "count": 34,
+      "lastAssigned": 1774987182593,
+      "streak": 2,
+      "authorCursor": 0,
+      "lastAuthorId": "maya_collins"
     },
     "explainer": {
       "count": 13,
@@ -32,14 +32,6 @@
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "reporter",
-      "timestamp": 1774639686838,
-      "articleType": "report",
-      "beat": "markets",
-      "section": "Business",
-      "topic_id": "crypto-bitcoin"
-    },
     {
       "writerId": "analyst",
       "timestamp": 1774639770944,
@@ -431,6 +423,14 @@
       "beat": "international affairs",
       "section": "News",
       "topic_id": "world-geopolitics"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1774987182593,
+      "articleType": "report",
+      "beat": "politics",
+      "section": "News",
+      "topic_id": "us-politics"
     }
   ]
 }

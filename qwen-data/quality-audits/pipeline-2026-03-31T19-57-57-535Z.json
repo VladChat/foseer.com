@@ -1,0 +1,673 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-03-31T19-57-57-535Z",
+  "started_at": "2026-03-31T19:57:57.534Z",
+  "generated_at": "2026-03-31T20:00:04.878Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "discovery_candidates": 34,
+    "event_clusters": 9,
+    "briefs_normalized": 10,
+    "source_packs_assembled": 38,
+    "publishable_candidates": 1,
+    "selected_topic": "House Appropriations Committee",
+    "selected_topics": [
+      "House Appropriations Committee"
+    ],
+    "articles_attempted": 1,
+    "articles_published": 1,
+    "news_pool": {
+      "total": 61,
+      "active": 51,
+      "published": 10,
+      "ready_candidates": 2
+    },
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 1
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 5,
+            "fresh_files": 5,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 73956
+          },
+          "gdelt": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          },
+          "google": {
+            "files": 1,
+            "fresh_files": 1,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 45271
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 127342,
+    "ready_candidates": 2,
+    "additional_ready_candidates": 2,
+    "source_pack_attempts": 2,
+    "source_pack_retry_external_queries": 3,
+    "source_pack_retry_brave_queries": 0,
+    "source_pack_retry_estimated_tokens": 3600,
+    "pre_draft_rejected": 0
+  },
+  "provider_stats": {
+    "mode": "cache_refresh_with_live_quota",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": true,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 1
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+      "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 5,
+          "fresh_files": 5,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 73956
+        },
+        "gdelt": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        },
+        "google": {
+          "files": 1,
+          "fresh_files": 1,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 45271
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14135
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6189
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 285008
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "preDraftPreparation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claimMapCreation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "articleDrafting": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "imageSupport": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "publishing": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "localVerification": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 1,
+    "editorial_pass_count": 1,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "House Appropriations Committee Posts New Legislative Activity",
+      "slug": "house-appropriations-committee-posts-new-legislative-activit",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "news",
+          "topic_id": "us-politics",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 2,
+          "unique_domains": 2,
+          "direct_event_source_count": 2,
+          "independent_event_domains": 2,
+          "source_consistency_score": 8.8,
+          "strong_match_count": 1,
+          "core_source_count": 2,
+          "supporting_source_count": 0,
+          "background_source_count": 4,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 2,
+          "background": 4,
+          "signal_only": 8
+        },
+        "publish_ready_sources": [
+          {
+            "title": "House Appropriations Committee",
+            "domain": "congress.gov",
+            "url": "https://www.congress.gov/committee/house-appropriations/hsap00",
+            "page_kind": "official_release",
+            "topic_id": null,
+            "section_id": "news"
+          },
+          {
+            "title": "White House claims US",
+            "domain": "bignewsnetwork.com",
+            "url": "http://www.bignewsnetwork.com/news/278954047/white-house-claims-us-iran-talks-continuing-going-well-despite-tehran-denying-direct-negotiations",
+            "page_kind": "article",
+            "topic_id": "us-politics",
+            "section_id": "news"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "House Appropriations Committee",
+            "domain": "congress.gov",
+            "page_kind": "official_release",
+            "same_event_score": 18,
+            "topic_fit_score": 4,
+            "source_quality_score": 30.5,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          },
+          {
+            "role": "core",
+            "title": "White House claims US",
+            "domain": "bignewsnetwork.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 8,
+            "source_quality_score": 14,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "OpenAI News",
+            "domain": "reuters.com",
+            "page_kind": "unknown",
+            "same_event_score": 3,
+            "topic_fit_score": 3,
+            "source_quality_score": 7,
+            "article_likelihood": 1,
+            "genericity_score": 2
+          },
+          {
+            "role": "background",
+            "title": "Trump administration sues Minnesota for allowing trans athletes in ...",
+            "domain": "theguardian.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 12,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Israel passes death penalty law for Palestinians convicted of lethal ...",
+            "domain": "reuters.com",
+            "page_kind": "official_release",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 12,
+            "article_likelihood": 8,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "Vermont Hits Back at Trump's Effort to Block 'Climate Superfund' Law",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 9,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "Latest and breaking political news today",
+            "domain": "politico.com",
+            "page_kind": "unknown",
+            "same_event_score": 1,
+            "topic_fit_score": 2,
+            "source_quality_score": 9,
+            "article_likelihood": 1,
+            "genericity_score": 2
+          },
+          {
+            "role": "signal_only",
+            "title": "Hims & Hers Health Inc (HIMS",
+            "domain": "theglobeandmail.com",
+            "page_kind": "unknown",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 5,
+            "article_likelihood": 1,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "No Kings protests: Thousands across the US rally against Trump",
+            "domain": "bbc.com",
+            "page_kind": "unknown",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 5,
+            "article_likelihood": 1,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "Environmental & Climate News",
+            "domain": "reuters.com",
+            "page_kind": "unknown",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 5,
+            "article_likelihood": 1,
+            "genericity_score": 2
+          },
+          {
+            "role": "signal_only",
+            "title": "US & Canada | Latest News & Updates",
+            "domain": "bbc.com",
+            "page_kind": "live",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 4,
+            "article_likelihood": 0,
+            "genericity_score": 6
+          },
+          {
+            "role": "signal_only",
+            "title": "Vermont defends its landmark climate superfund law against Trump ...",
+            "domain": "abcnews.com",
+            "page_kind": "roundup",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 4,
+            "article_likelihood": 0,
+            "genericity_score": 6
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 2,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "White House claims US",
+              "url": "http://www.bignewsnetwork.com/news/278954047/white-house-claims-us-iran-talks-continuing-going-well-despite-tehran-denying-direct-negotiations",
+              "overlap_ratio": 0.17,
+              "shared_tokens": [
+                "house"
+              ]
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "U.S. Politics & Policy",
+          "Congress"
+        ],
+        "tag_slugs": [
+          "us-politics",
+          "congress"
+        ],
+        "primary_topic_tag": "U.S. Politics & Policy",
+        "primary_topic_slug": "us-politics",
+        "warnings": [
+          "Canonical tag set is thin (2)"
+        ],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "U.S. Politics & Policy",
+            "slug": "us-politics",
+            "score": 29,
+            "reason": "Primary topic inferred from supported theme tag Congress",
+            "fallback": false
+          },
+          {
+            "label": "Congress",
+            "slug": "congress",
+            "score": 23,
+            "reason": "Theme match score 23",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "Canonical tag set is below target floor (3), accepted due sparse evidence"
+          ]
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "us-politics",
+              "label": "U.S. Politics & Policy",
+              "type": "topic"
+            },
+            {
+              "slug": "congress",
+              "label": "Congress",
+              "type": "theme"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "us-politics",
+            "topic_label": "U.S. Politics & Policy",
+            "supported": true,
+            "matched_aliases": [
+              "white house",
+              "congress"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pixabay",
+        "image_path": "~/assets/images/library/pixabay/2920069/cover.jpg",
+        "source_url": "https://pixabay.com/photos/gothenburg-the-palm-house-2920069/",
+        "selection_mode": "provider_download_new:pixabay:acceptable",
+        "query_used": "White House photo",
+        "relevance_tier": "acceptable",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "building",
+        "visual_type": "photo",
+        "entity_hints": [
+          "gothenburg",
+          "palm",
+          "house",
+          "garden",
+          "society",
+          "park",
+          "greenhouse",
+          "architecture"
+        ],
+        "geo_hints": [
+          "iran"
+        ],
+        "queries_tried": [
+          "House Appropriations Committee government photo",
+          "House Appropriations Committee photo",
+          "House Appropriations Committee portrait",
+          "us House Appropriations Committee photo",
+          "White House government photo",
+          "White House photo",
+          "White House portrait",
+          "us White House photo"
+        ],
+        "decision_log": [
+          {
+            "query": "House Appropriations Committee government photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "7017147",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "House Appropriations Committee photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "10954065",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "House Appropriations Committee portrait",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "10954065",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "us House Appropriations Committee photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "3480177",
+            "finalScore": 83,
+            "articleRelevanceScore": 78,
+            "assetQualityScore": 97,
+            "tier": "acceptable"
+          },
+          {
+            "query": "White House government photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "11699573",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "White House photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "2920069",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "White House portrait",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "1750215",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "us White House photo",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "16701076",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          }
+        ],
+        "best_online_decision": {
+          "query": "White House photo",
+          "provider": "pixabay",
+          "providerAssetId": "2920069",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "acceptable"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pixabay",
+          "query_used": "White House photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "acceptable",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "white",
+            "house"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/house-appropriations-committee-posts-new-legislative-activit.json",
+        "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-house-appropriations-committee-posts-new-legislative-activit.mdx",
+        "expected_url": "/article/2026-03-31-house-appropriations-committee-posts-new-legislative-activit",
+        "verified_url": null
+      }
+    }
+  ]
+}

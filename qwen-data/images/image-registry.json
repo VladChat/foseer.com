@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-03-31T19:55:00.547Z",
+  "updatedAt": "2026-03-31T20:00:04.806Z",
   "assets": [
     {
       "assetKey": "legacy:7-social-media-trends-you-need-to-know-in-2026",
@@ -7663,9 +7663,117 @@
       "useCount": 1,
       "status": "ready",
       "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pixabay:2920069",
+      "provider": "pixabay",
+      "providerAssetId": "2920069",
+      "sourcePageUrl": "https://pixabay.com/photos/gothenburg-the-palm-house-2920069/",
+      "sourceDownloadUrl": "https://pixabay.com/get/g79dd74d923cbb1d8f274a68bf1621c25bdd6b1c8267697d865d40d8954b0ea9c2cf8decc8f23704f472e66efd57ebb2de9eb894ab681c59f89a91125b27c4f30_1280.jpg",
+      "authorName": "lenalindell20",
+      "authorUrl": "https://pixabay.com/users/lenalindell20-6853905/",
+      "license": "Pixabay Content License",
+      "altText": "gothenburg, the palm house, the garden society of gothenburg, park, greenhouse, architecture, sweden, building, summer, skyline, city, facade, sky, tree, the building, beautifully, landscape, outside, green, old, destination, city view, grass, photo, shadow, the park, oasis, shadows, summer time, swedish summer, garden, peaceful, plant, glass house, nature, plants, views, view, white, trip, travel",
+      "width": 6285,
+      "height": 4229,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pixabay/2920069/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pixabay/2920069/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pixabay/2920069/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "News"
+      ],
+      "queryHistory": [
+        "White House photo"
+      ],
+      "tags": [
+        "us-politics",
+        "congress",
+        "openai",
+        "white house",
+        "iran",
+        "gothenburg",
+        "the palm house",
+        "the garden society of gothenburg",
+        "park",
+        "greenhouse",
+        "architecture",
+        "sweden",
+        "building",
+        "summer",
+        "skyline",
+        "city",
+        "facade",
+        "sky",
+        "tree",
+        "the building",
+        "beautifully",
+        "landscape",
+        "outside",
+        "green",
+        "old",
+        "destination",
+        "city view",
+        "grass",
+        "photo",
+        "shadow",
+        "the park",
+        "oasis",
+        "shadows",
+        "summer time",
+        "swedish summer",
+        "garden",
+        "peaceful",
+        "plant",
+        "glass house",
+        "nature",
+        "plants",
+        "views",
+        "view",
+        "white",
+        "trip",
+        "travel"
+      ],
+      "topicHints": [
+        "us-politics"
+      ],
+      "entityHints": [
+        "gothenburg",
+        "palm",
+        "house",
+        "garden",
+        "society",
+        "park",
+        "greenhouse",
+        "architecture"
+      ],
+      "sceneType": "building",
+      "geoHints": [
+        "iran"
+      ],
+      "visualType": "photo",
+      "editorialFitScore": 100,
+      "firstSeenAt": "2026-03-31T20:00:04.805Z",
+      "lastFetchedAt": "2026-03-31T20:00:04.805Z",
+      "lastUsedAt": "2026-03-31T20:00:04.806Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
     }
   ],
   "usage": [
+    {
+      "assetKey": "pixabay:2920069",
+      "articleSlug": "house-appropriations-committee-posts-new-legislative-activit",
+      "articleTitle": "House Appropriations Committee Posts New Legislative Activity",
+      "section": "News",
+      "topicId": "us-politics",
+      "query": "White House photo",
+      "usedAt": "2026-03-31T20:00:04.806Z",
+      "selectionMode": "provider_download_new:pixabay:acceptable"
+    },
     {
       "assetKey": "pixabay:5352999",
       "articleSlug": "israel-approves-death-penalty-law-for-some-palestinian-convi",

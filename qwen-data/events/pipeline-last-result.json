@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-03-31T19:55:00.620Z",
+  "timestamp": "2026-03-31T20:00:04.879Z",
   "success": true,
   "hard_blocker": null,
-  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi.mdx",
-  "verified_url": "/article/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi",
+  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-house-appropriations-committee-posts-new-legislative-activit.mdx",
+  "verified_url": "/article/2026-03-31-house-appropriations-committee-posts-new-legislative-activit",
   "stages": {
     "discovery": {
       "stage": "discovery",
       "success": true,
       "error": null,
       "data": {
-        "candidatesCount": 23,
-        "discoveredPoolTotal": 175
+        "candidatesCount": 34,
+        "discoveredPoolTotal": 176
       }
     },
     "briefNormalization": {
@@ -20,7 +20,7 @@
       "error": null,
       "data": {
         "briefsCount": 6,
-        "clusterCount": 6
+        "clusterCount": 9
       }
     },
     "sourcePackAssembly": {
@@ -38,12 +38,6 @@
           {
             "attempt": "retry_1_cheap_refresh",
             "source_packs_assembled": 19,
-            "publishable_candidates": 0,
-            "selected_candidates": 0
-          },
-          {
-            "attempt": "retry_2_limited_brave_refresh",
-            "source_packs_assembled": 19,
             "publishable_candidates": 1,
             "selected_candidates": 1
           }
@@ -60,59 +54,38 @@
             "attempt": 1,
             "phase": "cheap_refresh",
             "status": "ran",
-            "discovery_candidates": 5,
-            "normalized_briefs": 3,
-            "selected_candidates": 0,
-            "source_pack_attempt": {
-              "attempt": "retry_1_cheap_refresh",
-              "source_packs_assembled": 19,
-              "publishable_candidates": 0,
-              "selected_candidates": 0
-            },
-            "query_usage": {
-              "brave": 0,
-              "google": 2,
-              "gdelt": 2,
-              "total": 4
-            },
-            "estimated_tokens": 2700
-          },
-          {
-            "attempt": 2,
-            "phase": "limited_brave_refresh",
-            "status": "ran",
-            "discovery_candidates": 10,
+            "discovery_candidates": 6,
             "normalized_briefs": 4,
             "selected_candidates": 1,
             "source_pack_attempt": {
-              "attempt": "retry_2_limited_brave_refresh",
+              "attempt": "retry_1_cheap_refresh",
               "source_packs_assembled": 19,
               "publishable_candidates": 1,
               "selected_candidates": 1
             },
             "query_usage": {
-              "brave": 1,
-              "google": 1,
-              "gdelt": 2,
-              "total": 4
+              "brave": 0,
+              "google": 2,
+              "gdelt": 1,
+              "total": 3
             },
             "estimated_tokens": 3600
           }
         ],
         "retryUsage": {
-          "external_queries": 8,
-          "brave_queries": 1,
-          "estimated_tokens": 6300
+          "external_queries": 3,
+          "brave_queries": 0,
+          "estimated_tokens": 3600
         },
         "selectedCount": 1,
         "selectedTopics": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
-            "eventId": "evt-2026-03-31-news-general-israel-israel",
-            "sources": 3,
-            "uniqueDomains": 3,
+            "title": "House Appropriations Committee",
+            "eventId": "evt-2026-03-31-news-general-us-congress-openai",
+            "sources": 2,
+            "uniqueDomains": 2,
             "section_id": "news",
-            "topic_id": null,
+            "topic_id": "us-politics",
             "gate_notes": [
               "Role-aware one-event source-pack gate passed"
             ],
@@ -210,42 +183,42 @@
           ],
           "selectedCandidates": [
             {
-              "identityKey": "cluster:evt-2026-03-31-news-general-israel-israel",
-              "briefId": "evt-2026-03-31-news-general-israel-israel",
-              "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
-              "normalizedTitle": "israel passes law to give death penalty to palestinians convicted of",
+              "identityKey": "cluster:evt-2026-03-31-news-general-us-congress-openai",
+              "briefId": "evt-2026-03-31-news-general-us-congress-openai",
+              "title": "House Appropriations Committee",
+              "normalizedTitle": "house appropriations committee",
               "section_id": "news",
-              "topic_id": null,
+              "topic_id": "us-politics",
               "articleType": "report",
               "selectionOrigin": "current_run",
-              "poolIdentityKey": "cluster:evt-2026-03-31-news-general-israel-israel",
+              "poolIdentityKey": "cluster:evt-2026-03-31-news-general-us-congress-openai",
               "rank": 1,
-              "score": 58.4,
+              "score": 37.5,
               "scoreNotes": [
-                "section_penalty:21",
-                "topic_penalty:28",
-                "region_penalty:3",
-                "angle_penalty:2",
+                "section_penalty:23",
+                "topic_penalty:29",
+                "region_penalty:5",
+                "angle_penalty:44",
                 "cluster_repeat:1",
-                "entity_penalty:4",
-                "domains:3",
-                "consistency:8.3",
-                "core:3",
+                "entity_penalty:6",
+                "domains:2",
+                "consistency:8.8",
+                "core:2",
                 "supporting:0"
               ],
-              "sourceCount": 3,
-              "uniqueDomains": 3,
-              "directEventSourceCount": 3,
-              "independentEventDomains": 3,
+              "sourceCount": 2,
+              "uniqueDomains": 2,
+              "directEventSourceCount": 2,
+              "independentEventDomains": 2,
               "gateDecision": "PASS",
               "gateNotes": [
                 "Role-aware one-event source-pack gate passed"
               ],
-              "discoveredAt": "2026-03-31T19:54:31.818Z",
-              "firstQueuedAt": "2026-03-31T19:54:32.395Z",
-              "lastQueuedAt": "2026-03-31T19:54:32.395Z",
+              "discoveredAt": "2026-03-31T19:59:07.953Z",
+              "firstQueuedAt": "2026-03-31T19:59:42.469Z",
+              "lastQueuedAt": "2026-03-31T19:59:42.469Z",
               "status": "selected",
-              "lastSelectedAt": "2026-03-31T19:54:32.395Z",
+              "lastSelectedAt": "2026-03-31T19:59:42.469Z",
               "lastPublishedAt": null,
               "publishedSlug": null,
               "selectedByWorkflow": null,
@@ -256,7 +229,7 @@
           ],
           "filePath": "/home/runner/work/foseer.com/foseer.com/qwen-data/events/ready-article-candidates.json",
           "selectedIdentityKeys": [
-            "cluster:evt-2026-03-31-news-general-israel-israel"
+            "cluster:evt-2026-03-31-news-general-us-congress-openai"
           ]
         },
         "duplicateRejectedCandidates": [
@@ -273,13 +246,6 @@
             "origin": "current_run",
             "reason": "identity_already_published",
             "attempt": "retry_1_cheap_refresh"
-          },
-          {
-            "identityKey": "cluster:evt-2026-03-31-sports-general-global",
-            "title": "How NIL Is Reshaping the Future of College Football",
-            "origin": "current_run",
-            "reason": "identity_already_published",
-            "attempt": "retry_2_limited_brave_refresh"
           }
         ],
         "candidatesEvaluated": 16
@@ -296,24 +262,24 @@
         "rejected": [],
         "items": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "title": "House Appropriations Committee",
             "success": true,
             "error": null,
             "data": {
               "section_id": "news",
-              "topic_id": "world-geopolitics",
+              "topic_id": "us-politics",
               "tags": [
-                "World & Geopolitics",
-                "Diplomacy",
-                "Israel"
+                "U.S. Politics & Policy",
+                "Congress"
               ],
               "tag_slugs": [
-                "world-geopolitics",
-                "diplomacy",
-                "israel"
+                "us-politics",
+                "congress"
               ],
               "thin_tag_set_before_draft": false,
-              "warnings": []
+              "warnings": [
+                "Canonical tag set is below target floor (3), accepted due sparse evidence"
+              ]
             }
           }
         ]
@@ -329,12 +295,12 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "title": "House Appropriations Committee",
             "success": true,
             "error": null,
             "data": {
-              "totalClaims": 3,
-              "supportedClaims": 3,
+              "totalClaims": 2,
+              "supportedClaims": 2,
               "passesGate": true,
               "issues": []
             }
@@ -352,11 +318,11 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "title": "House Appropriations Committee",
             "success": true,
             "error": null,
             "data": {
-              "wordCount": 1121,
+              "wordCount": 958,
               "articleType": "report",
               "quality": "strong",
               "safeForPublishing": true
@@ -375,12 +341,12 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "title": "House Appropriations Committee",
             "success": true,
             "error": null,
             "data": {
               "provider": "pixabay",
-              "imagePath": "~/assets/images/library/pixabay/5352999/cover.jpg",
+              "imagePath": "~/assets/images/library/pixabay/2920069/cover.jpg",
               "hasAltText": true
             }
           }
@@ -397,17 +363,17 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "title": "House Appropriations Committee",
             "success": true,
             "error": null,
             "data": {
-              "filename": "2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi.mdx",
-              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi.mdx",
-              "canonicalSlug": "2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi",
-              "expectedUrl": "/article/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi",
-              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/israel-approves-death-penalty-law-for-some-palestinian-convi.json",
+              "filename": "2026-03-31-house-appropriations-committee-posts-new-legislative-activit.mdx",
+              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-house-appropriations-committee-posts-new-legislative-activit.mdx",
+              "canonicalSlug": "2026-03-31-house-appropriations-committee-posts-new-legislative-activit",
+              "expectedUrl": "/article/2026-03-31-house-appropriations-committee-posts-new-legislative-activit",
+              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/house-appropriations-committee-posts-new-legislative-activit.json",
               "section_id": "news",
-              "topic_id": "world-geopolitics"
+              "topic_id": "us-politics"
             }
           }
         ]
@@ -423,13 +389,13 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "title": "House Appropriations Committee",
             "success": true,
             "error": null,
             "data": {
               "skipped": true,
               "reason": "CI environment: localhost verification skipped; publish + build checks passed",
-              "expectedUrl": "/article/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi"
+              "expectedUrl": "/article/2026-03-31-house-appropriations-committee-posts-new-legislative-activit"
             }
           }
         ]
@@ -438,164 +404,353 @@
   },
   "selected": {
     "brief": {
-      "id": "evt-2026-03-31-news-general-israel-israel",
-      "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
-      "whatHappened": "1 day ago ... Israel has rarely used the death penalty, applying it only in exceptional cases.",
-      "whoIsInvolved": "israel",
+      "id": "evt-2026-03-31-news-general-us-congress-openai",
+      "title": "House Appropriations Committee",
+      "whatHappened": "21 hours ago ... All the legislation activity and reports of the House Appropriations Committee.",
+      "whoIsInvolved": "congress, openai",
       "involvedParties": [
-        "israel"
+        "congress",
+        "openai"
       ],
       "entities": [
-        "israel"
+        "congress",
+        "openai"
       ],
-      "when": "2026-03-30T19:29:35.000Z",
-      "where": "israel",
-      "whyItMatters": "The development could affect international security, diplomacy, or energy markets as the situation develops.",
-      "developmentStage": "developing",
+      "when": "2026-03-31T19:59:07.953Z",
+      "where": "us",
+      "whyItMatters": "The development could shape public services, public policy, or institutional decision-making.",
+      "developmentStage": "confirmed",
       "sourceUrls": [
-        "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists"
+        "https://www.congress.gov/committee/house-appropriations/hsap00",
+        "https://www.reuters.com/technology/openai/",
+        "https://www.theglobeandmail.com/investing/markets/stocks/HIMS-N/"
       ],
-      "publishabilityScore": 8,
+      "publishabilityScore": 9,
       "publishabilityNotes": [
         "Has a usable summary sentence",
         "Specific parties are identified",
-        "Fresh enough for same-day editorial use",
-        "Source diversity still needs source-pack validation",
+        "Freshness is moderate",
+        "Multiple source URLs already attached",
+        "Clustered across multiple discovery hits",
         "At least one trusted source hit is present"
       ],
-      "discoveredAt": "2026-03-31T19:54:31.818Z",
+      "discoveredAt": "2026-03-31T19:59:07.953Z",
       "provider": "google_trusted",
       "section_id": "news",
-      "topic_id": "world-geopolitics",
-      "region": "israel",
-      "angle": "conflict",
-      "cluster_id": "evt-2026-03-31-news-general-israel-israel",
-      "eventKey": "2026-03-31:news-general-israel-israel",
-      "cluster_size": 1,
+      "topic_id": "us-politics",
+      "region": "us",
+      "angle": "general",
+      "cluster_id": "evt-2026-03-31-news-general-us-congress-openai",
+      "eventKey": "2026-03-31:news-general-us-congress-openai",
+      "cluster_size": 3,
       "article_rich_count": 1,
       "generic_page_count": 0,
       "discoveryContext": [
         {
-          "id": "google-sec-1774986871815-2",
-          "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
-          "summary": "1 day ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
+          "id": "google-sec-1774987147947-2",
+          "title": "House Appropriations Committee",
+          "summary": "21 hours ago ... All the legislation activity and reports of the House Appropriations Committee.",
           "whyItMatters": "",
           "involvedParties": [
-            "israel"
+            "congress"
           ],
           "entities": [
-            "israel"
+            "congress"
           ],
-          "when": "2026-03-30T19:29:35.000Z",
+          "when": "",
           "sourceUrls": [
-            "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists"
+            "https://www.congress.gov/committee/house-appropriations/hsap00"
           ],
-          "freshness": 6,
+          "freshness": 4,
           "urgency": 4,
-          "discoveredAt": "2026-03-31T19:54:31.818Z",
+          "discoveredAt": "2026-03-31T19:59:07.949Z",
           "provider": "google_trusted",
           "trustedSource": true,
-          "discoveryLane": "google:news",
+          "discoveryLane": "google:health",
           "sectionCandidates": [
-            "news"
+            "news",
+            "health"
           ],
-          "topicCandidates": [],
+          "topicCandidates": [
+            "us-politics"
+          ],
           "detectedSectionId": "news",
           "detectedTopicId": null,
-          "region": "israel",
-          "angle": "conflict",
+          "region": "us",
+          "angle": "general",
           "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "israel passes law to give death penalty to palestinians convicted of",
-          "canonicalUrl": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
-          "discoveryScore": 14.4,
-          "eventKey": "news:israel passes law to give death penalty to palestinians convicted of",
-          "signalSpecificityScore": 5,
+          "page_kind": "official_release",
+          "genericity_score": 1,
+          "article_likelihood": 7,
+          "normalizedTitle": "house appropriations committee congress gov",
+          "canonicalUrl": "https://www.congress.gov/committee/house-appropriations/hsap00",
+          "discoveryScore": 12.8,
+          "eventKey": "news:house appropriations committee congress gov",
+          "signalSpecificityScore": 7,
           "signalSpecificityNotes": [
             "title_specificity",
             "article_likelihood",
+            "topic_hint",
             "named_marker"
           ],
           "crossTopicRisk": false,
-          "source_id": "google-sec-1774986871815-2",
-          "url": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
-          "canonical_url": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
-          "domain": "theguardian.com",
-          "canonical_domain": "theguardian.com",
-          "normalized_title": "israel passes law to give death penalty to palestinians convicted of",
-          "snippet": "1 day ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
-          "published_at": "2026-03-30T19:29:35.000Z",
+          "source_id": "google-sec-1774987147947-2",
+          "url": "https://www.congress.gov/committee/house-appropriations/hsap00",
+          "canonical_url": "https://www.congress.gov/committee/house-appropriations/hsap00",
+          "domain": "congress.gov",
+          "canonical_domain": "congress.gov",
+          "normalized_title": "house appropriations committee",
+          "snippet": "21 hours ago ... All the legislation activity and reports of the House Appropriations Committee.",
+          "published_at": "2026-03-31T19:59:07.949Z",
           "section_id": "news",
           "topic_id": null,
           "section_candidates": [
-            "news"
+            "news",
+            "health"
           ],
-          "topic_candidates": [],
+          "topic_candidates": [
+            "us-politics"
+          ],
           "cluster_id": null,
-          "event_key": "news:israel passes law to give death penalty to palestinians convicted of",
+          "event_key": "news:house appropriations committee congress gov",
           "keywords": [
-            "israel",
-            "passes",
-            "give",
-            "death",
-            "penalty",
-            "palestinians",
-            "convicted",
-            "rarely",
-            "used",
-            "applying",
-            "only",
-            "exceptional"
+            "house",
+            "appropriations",
+            "committee",
+            "hours",
+            "legislation",
+            "activity"
           ],
           "title_signal_tokens": [
-            "israel",
-            "passes",
-            "give",
-            "death",
-            "penalty",
-            "palestinians",
-            "convicted"
+            "house",
+            "appropriations",
+            "committee"
           ],
           "url_signal_tokens": [
-            "israel",
-            "passes",
-            "death",
-            "penalty",
-            "palestinian",
-            "convicted",
-            "terrorists"
+            "committee",
+            "house",
+            "appropriations",
+            "hsap00"
           ],
-          "title_url_overlap": 0.7142857142857143,
+          "title_url_overlap": 1,
           "title_url_mismatch": false,
           "source_quality_score": 0,
           "action": "general",
-          "place": "israel",
+          "place": "us",
           "titleTokens": [
-            "israel",
-            "passes",
-            "give",
-            "death",
-            "penalty",
-            "palestinians",
-            "convicted"
+            "house",
+            "appropriations",
+            "committee"
+          ]
+        },
+        {
+          "id": "google-sec-1774987147925-2",
+          "title": "OpenAI News | Today's Latest Stories",
+          "summary": "2 days ago ... Latest Stories ; 13 hours ago. SoftBank secures $40 billion loan to boost OpenAI investments · Event to pitch AI for businesses in Tokyo ; March 26, 2026. OpenAI's ...",
+          "whyItMatters": "",
+          "involvedParties": [
+            "openai"
+          ],
+          "entities": [
+            "openai"
+          ],
+          "when": "",
+          "sourceUrls": [
+            "https://www.reuters.com/technology/openai/"
+          ],
+          "freshness": 4,
+          "urgency": 5,
+          "discoveredAt": "2026-03-31T19:59:07.928Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:tech",
+          "sectionCandidates": [
+            "news",
+            "tech"
+          ],
+          "topicCandidates": [
+            "ai-big-tech"
+          ],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "unknown",
+          "genericity_score": 2,
+          "article_likelihood": 1,
+          "normalizedTitle": "openai news today s latest stories reuters",
+          "canonicalUrl": "https://www.reuters.com/technology/openai/",
+          "discoveryScore": 12,
+          "eventKey": "news:openai news today s latest stories reuters",
+          "signalSpecificityScore": 5,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "topic_hint",
+            "named_marker"
+          ],
+          "crossTopicRisk": false,
+          "source_id": "google-sec-1774987147925-2",
+          "url": "https://www.reuters.com/technology/openai/",
+          "canonical_url": "https://www.reuters.com/technology/openai/",
+          "domain": "reuters.com",
+          "canonical_domain": "reuters.com",
+          "normalized_title": "openai news",
+          "snippet": "2 days ago ... Latest Stories ; 13 hours ago. SoftBank secures $40 billion loan to boost OpenAI investments · Event to pitch AI for businesses in Tokyo ; March 26, 2026. OpenAI's ...",
+          "published_at": "2026-03-31T19:59:07.928Z",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news",
+            "tech"
+          ],
+          "topic_candidates": [
+            "ai-big-tech"
+          ],
+          "cluster_id": null,
+          "event_key": "news:openai news today s latest stories reuters",
+          "keywords": [
+            "openai",
+            "days",
+            "hours",
+            "softbank",
+            "secures",
+            "billion",
+            "loan",
+            "boost",
+            "investments",
+            "event",
+            "pitch",
+            "businesses"
+          ],
+          "title_signal_tokens": [
+            "openai"
+          ],
+          "url_signal_tokens": [
+            "openai"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "openai"
+          ]
+        },
+        {
+          "id": "google-sec-1774987147951-4",
+          "title": "Hims & Hers Health Inc (HIMS",
+          "summary": "2 hours ago ... Profile. Hims & Hers Health Inc. is a multi-specialty telehealth platform that connects consumers to licensed healthcare professionals, enabling medical care ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.theglobeandmail.com/investing/markets/stocks/HIMS-N/"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-31T19:59:07.953Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:health",
+          "sectionCandidates": [
+            "news",
+            "health",
+            "business"
+          ],
+          "topicCandidates": [
+            "economy-markets"
+          ],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "unknown",
+          "genericity_score": 0,
+          "article_likelihood": 1,
+          "normalizedTitle": "hims hers health inc hims n stock price and news",
+          "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/hims-n/",
+          "discoveryScore": 11,
+          "eventKey": "news:hims hers health inc hims n stock price and news",
+          "signalSpecificityScore": 5,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "topic_hint",
+            "named_marker"
+          ],
+          "crossTopicRisk": false,
+          "source_id": "google-sec-1774987147951-4",
+          "url": "https://www.theglobeandmail.com/investing/markets/stocks/hims-n/",
+          "canonical_url": "https://www.theglobeandmail.com/investing/markets/stocks/hims-n/",
+          "domain": "theglobeandmail.com",
+          "canonical_domain": "theglobeandmail.com",
+          "normalized_title": "hims hers health inc hims",
+          "snippet": "2 hours ago ... Profile. Hims & Hers Health Inc. is a multi-specialty telehealth platform that connects consumers to licensed healthcare professionals, enabling medical care ...",
+          "published_at": "2026-03-31T19:59:07.953Z",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news",
+            "health",
+            "business"
+          ],
+          "topic_candidates": [
+            "economy-markets"
+          ],
+          "cluster_id": null,
+          "event_key": "news:hims hers health inc hims n stock price and news",
+          "keywords": [
+            "hims",
+            "hers",
+            "health",
+            "hours",
+            "profile",
+            "multi",
+            "specialty",
+            "telehealth",
+            "platform",
+            "connects",
+            "consumers",
+            "licensed"
+          ],
+          "title_signal_tokens": [
+            "hims",
+            "hers"
+          ],
+          "url_signal_tokens": [
+            "investing",
+            "markets",
+            "stocks",
+            "hims"
+          ],
+          "title_url_overlap": 0.5,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "hims",
+            "hers",
+            "health"
           ]
         }
       ],
       "_selectionOrigin": "current_run",
-      "poolIdentityKey": "cluster:evt-2026-03-31-news-general-israel-israel",
+      "poolIdentityKey": "cluster:evt-2026-03-31-news-general-us-congress-openai",
       "section": "News",
-      "subsection": "Israel passes law to give death penalty to Palestinians convicted of ...",
+      "subsection": "House Appropriations Committee",
       "topics": [
-        "Israel passes law to give death penalty to Palestinians convicted of ..."
+        "House Appropriations Committee"
       ]
     },
     "sourcePack": {
-      "eventId": "evt-2026-03-31-news-general-israel-israel",
-      "topic": "Israel passes law to give death penalty to Palestinians convicted of ...",
-      "sources": 3,
-      "uniqueDomains": 3,
+      "eventId": "evt-2026-03-31-news-general-us-congress-openai",
+      "topic": "House Appropriations Committee",
+      "sources": 2,
+      "uniqueDomains": 2,
       "credibilityScore": null,
       "passesGate": true,
       "gateNotes": [
@@ -604,21 +759,21 @@
     }
   },
   "stats": {
-    "discovery_candidates": 23,
-    "event_clusters": 6,
-    "briefs_normalized": 13,
-    "source_packs_assembled": 57,
+    "discovery_candidates": 34,
+    "event_clusters": 9,
+    "briefs_normalized": 10,
+    "source_packs_assembled": 38,
     "publishable_candidates": 1,
-    "selected_topic": "Israel passes law to give death penalty to Palestinians convicted of ...",
+    "selected_topic": "House Appropriations Committee",
     "selected_topics": [
-      "Israel passes law to give death penalty to Palestinians convicted of ..."
+      "House Appropriations Committee"
     ],
     "articles_attempted": 1,
     "articles_published": 1,
     "news_pool": {
-      "total": 58,
-      "active": 49,
-      "published": 9,
+      "total": 61,
+      "active": 51,
+      "published": 10,
       "ready_candidates": 2
     },
     "cache_stats": {
@@ -637,9 +792,9 @@
         "google": 2
       },
       "live_usage": {
-        "brave": 4,
+        "brave": 5,
         "gdelt": 2,
-        "google": 2
+        "google": 1
       },
       "cache": {
         "ttl_hours": 8,
@@ -647,11 +802,11 @@
         "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
         "runtime": {
           "brave": {
-            "files": 4,
-            "fresh_files": 4,
+            "files": 5,
+            "fresh_files": 5,
             "expired_files": 0,
             "corrupt_files": 0,
-            "size_bytes": 59109
+            "size_bytes": 73956
           },
           "gdelt": {
             "files": 0,
@@ -661,11 +816,11 @@
             "size_bytes": 0
           },
           "google": {
-            "files": 2,
-            "fresh_files": 2,
+            "files": 1,
+            "fresh_files": 1,
             "expired_files": 0,
             "corrupt_files": 0,
-            "size_bytes": 60518
+            "size_bytes": 45271
           }
         },
         "seed": {
@@ -693,35 +848,35 @@
         }
       }
     },
-    "duration_ms": 127586,
+    "duration_ms": 127342,
     "ready_candidates": 2,
     "additional_ready_candidates": 2,
-    "source_pack_attempts": 3,
-    "source_pack_retry_external_queries": 8,
-    "source_pack_retry_brave_queries": 1,
-    "source_pack_retry_estimated_tokens": 6300,
+    "source_pack_attempts": 2,
+    "source_pack_retry_external_queries": 3,
+    "source_pack_retry_brave_queries": 0,
+    "source_pack_retry_estimated_tokens": 3600,
     "pre_draft_rejected": 0,
-    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T19-52-53-031Z.json"
+    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T19-57-57-535Z.json"
   },
-  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T19-52-53-031Z.json",
+  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T19-57-57-535Z.json",
   "published_paths": [
-    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi.mdx"
+    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-house-appropriations-committee-posts-new-legislative-activit.mdx"
   ],
   "verified_urls": [
-    "/article/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi"
+    "/article/2026-03-31-house-appropriations-committee-posts-new-legislative-activit"
   ],
   "selected_candidates": [
     {
-      "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
-      "topic": "Israel passes law to give death penalty to Palestinians convicted of ...",
+      "title": "House Appropriations Committee",
+      "topic": "House Appropriations Committee",
       "section_id": "news",
-      "topic_id": "world-geopolitics"
+      "topic_id": "us-politics"
     }
   ],
   "published_articles": [
     {
-      "title": "Israel Approves Death Penalty Law for Some Palestinian Convicts",
-      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi.mdx",
+      "title": "House Appropriations Committee Posts New Legislative Activity",
+      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-house-appropriations-committee-posts-new-legislative-activit.mdx",
       "verifiedUrl": null
     }
   ]

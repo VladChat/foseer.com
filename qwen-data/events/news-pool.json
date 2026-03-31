@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T19:55:00.594Z",
+  "updatedAt": "2026-03-31T20:00:04.851Z",
   "items": [
     {
       "identityKey": "cluster:evt-2026-03-29-ai-big-tech-general-global",
@@ -34411,7 +34411,7 @@
           "Cluster contains multiple article-like materials",
           "Taxonomy topic match is specific enough for routing"
         ],
-        "discoveredAt": "2026-03-31T18:20:16.538Z",
+        "discoveredAt": "2026-03-31T19:58:03.869Z",
         "provider": "brave",
         "section_id": "tech",
         "topic_id": "cybersecurity",
@@ -35236,14 +35236,440 @@
               "vendor",
               "landscape"
             ]
+          },
+          {
+            "id": "brave-sec-1774987083829-0",
+            "title": "AI: The Cybersecurity Crisis That Vendors Love",
+            "summary": "At the RSAC cybersecurity conference, the arrival of agentic AI gave the community plenty to talk about. New threats include identity and supply chains.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://forbes.com/sites/rscottraynovich/2026/03/30/ai-the-cybersecurity-crisis-that-vendors-love"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:03.845Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:tech",
+            "sectionCandidates": [
+              "tech"
+            ],
+            "topicCandidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "detectedSectionId": "tech",
+            "detectedTopicId": "cybersecurity",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "ai the cybersecurity crisis that vendors love",
+            "canonicalUrl": "https://forbes.com/sites/rscottraynovich/2026/03/30/ai-the-cybersecurity-crisis-that-vendors-love",
+            "discoveryScore": 15.6,
+            "eventKey": "cybersecurity:ai the cybersecurity crisis that vendors love",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987083829-0",
+            "url": "https://forbes.com/sites/rscottraynovich/2026/03/30/ai-the-cybersecurity-crisis-that-vendors-love",
+            "canonical_url": "https://forbes.com/sites/rscottraynovich/2026/03/30/ai-the-cybersecurity-crisis-that-vendors-love",
+            "domain": "forbes.com",
+            "canonical_domain": "forbes.com",
+            "normalized_title": "ai the cybersecurity crisis that vendors love",
+            "snippet": "At the RSAC cybersecurity conference, the arrival of agentic AI gave the community plenty to talk about. New threats include identity and supply chains.",
+            "published_at": "1 day ago",
+            "section_id": "tech",
+            "topic_id": "cybersecurity",
+            "section_candidates": [
+              "tech"
+            ],
+            "topic_candidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "cluster_id": null,
+            "event_key": "cybersecurity:ai the cybersecurity crisis that vendors love",
+            "keywords": [
+              "cybersecurity",
+              "crisis",
+              "vendors",
+              "love",
+              "rsac",
+              "conference",
+              "arrival",
+              "agentic",
+              "gave",
+              "community",
+              "plenty",
+              "talk"
+            ],
+            "title_signal_tokens": [
+              "cybersecurity",
+              "crisis",
+              "vendors",
+              "love"
+            ],
+            "url_signal_tokens": [
+              "sites",
+              "rscottraynovich",
+              "cybersecurity",
+              "crisis",
+              "vendors",
+              "love"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "cybersecurity",
+              "crisis",
+              "vendors",
+              "love"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987083845-1",
+            "title": "How AI Is Reshaping the Cybersecurity Vendor Landscape",
+            "summary": "The cybersecurity vendor landscape is being rebuilt around AI, and the transformation is moving faster than most organizations are prepared for. Richard Stiennon,",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "17 hours ago",
+            "sourceUrls": [
+              "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280"
+            ],
+            "freshness": 7,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:03.853Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:tech",
+            "sectionCandidates": [
+              "tech"
+            ],
+            "topicCandidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "detectedSectionId": "tech",
+            "detectedTopicId": "cybersecurity",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "how ai is reshaping the cybersecurity vendor landscape",
+            "canonicalUrl": "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280",
+            "discoveryScore": 15.4,
+            "eventKey": "cybersecurity:how ai is reshaping the cybersecurity vendor landscape",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987083845-1",
+            "url": "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280",
+            "canonical_url": "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280",
+            "domain": "govinfosecurity.com",
+            "canonical_domain": "govinfosecurity.com",
+            "normalized_title": "how ai is reshaping the cybersecurity vendor landscape",
+            "snippet": "The cybersecurity vendor landscape is being rebuilt around AI, and the transformation is moving faster than most organizations are prepared for. Richard Stiennon,",
+            "published_at": "17 hours ago",
+            "section_id": "tech",
+            "topic_id": "cybersecurity",
+            "section_candidates": [
+              "tech"
+            ],
+            "topic_candidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "cluster_id": null,
+            "event_key": "cybersecurity:how ai is reshaping the cybersecurity vendor landscape",
+            "keywords": [
+              "reshaping",
+              "cybersecurity",
+              "vendor",
+              "landscape",
+              "being",
+              "rebuilt",
+              "around",
+              "transformation",
+              "moving",
+              "faster",
+              "than",
+              "most"
+            ],
+            "title_signal_tokens": [
+              "reshaping",
+              "cybersecurity",
+              "vendor",
+              "landscape"
+            ],
+            "url_signal_tokens": [
+              "reshaping",
+              "cybersecurity",
+              "vendor",
+              "landscape"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "reshaping",
+              "cybersecurity",
+              "vendor",
+              "landscape"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987083853-2",
+            "title": "UK-Registered AI Cybersecurity Patent Signals New Era of Intelligent Threat Management and Interdisciplinary Innovation",
+            "summary": "The global technology and research community is witnessing a significant milestone following the United Kingdom Intellectual Property Office's registration of a groundbreaking design patent titled \"COMPUTER CYBERSECURITY SPRINT PLANNING ENGINE WITH AI-POWERED THREAT PRIORITIZATION.\"",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "2 days ago",
+            "sourceUrls": [
+              "http://www.techtimes.com/articles/315545/20260329/uk-registered-ai-cybersecurity-patent-signals-new-era-intelligent-threat-management.htm"
+            ],
+            "freshness": 5,
+            "urgency": 6,
+            "discoveredAt": "2026-03-31T19:58:03.856Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:tech",
+            "sectionCandidates": [
+              "tech"
+            ],
+            "topicCandidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "detectedSectionId": "tech",
+            "detectedTopicId": "cybersecurity",
+            "region": "global",
+            "angle": "research",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "uk registered ai cybersecurity patent signals new era of intelligent threat management and interdisciplinary innovation",
+            "canonicalUrl": "http://www.techtimes.com/articles/315545/20260329/uk-registered-ai-cybersecurity-patent-signals-new-era-intelligent-threat-management.htm",
+            "discoveryScore": 15.4,
+            "eventKey": "cybersecurity:uk registered ai cybersecurity patent signals new era of intelligent threat mana",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987083853-2",
+            "url": "http://www.techtimes.com/articles/315545/20260329/uk-registered-ai-cybersecurity-patent-signals-new-era-intelligent-threat-management.htm",
+            "canonical_url": "http://www.techtimes.com/articles/315545/20260329/uk-registered-ai-cybersecurity-patent-signals-new-era-intelligent-threat-management.htm",
+            "domain": "techtimes.com",
+            "canonical_domain": "techtimes.com",
+            "normalized_title": "uk registered ai cybersecurity patent signals new era of intelligent threat management and interdisciplinary innovation",
+            "snippet": "The global technology and research community is witnessing a significant milestone following the United Kingdom Intellectual Property Office's registration of a groundbreaking design patent titled \"COMPUTER CYBERSECURITY SPRINT PLANNING ENGINE WITH AI-POWERED THREAT PRIORITIZATION.\"",
+            "published_at": "2 days ago",
+            "section_id": "tech",
+            "topic_id": "cybersecurity",
+            "section_candidates": [
+              "tech"
+            ],
+            "topic_candidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "cluster_id": null,
+            "event_key": "cybersecurity:uk registered ai cybersecurity patent signals new era of intelligent threat mana",
+            "keywords": [
+              "registered",
+              "cybersecurity",
+              "patent",
+              "signals",
+              "intelligent",
+              "threat",
+              "management",
+              "interdisciplinary",
+              "innovation",
+              "global",
+              "technology",
+              "research"
+            ],
+            "title_signal_tokens": [
+              "registered",
+              "cybersecurity",
+              "patent",
+              "signals",
+              "intelligent",
+              "threat",
+              "management",
+              "interdisciplinary",
+              "innovation"
+            ],
+            "url_signal_tokens": [
+              "registered",
+              "cybersecurity",
+              "patent",
+              "signals",
+              "intelligent",
+              "threat",
+              "management"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "research",
+            "place": "global",
+            "titleTokens": [
+              "registered",
+              "cybersecurity",
+              "patent",
+              "signals",
+              "intelligent",
+              "threat",
+              "management",
+              "interdisciplinary",
+              "innovation"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987083858-4",
+            "title": "McKinsey’s AI system hack should be a wake up call for leaders",
+            "summary": "57,000 user accounts. 728,000 sensitive file names. 46.5m chat messages. These are some of the assets a cybersecurity firm claimed they were able to access on McKinsey’s internal AI platform last month. It’s the kind of scenario all businesses dread. It’s also one that, in today’s digital ...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://managementtoday.co.uk/mckinseys-ai-system-hack-wake-call-leaders/opinion-and-analysis/article/1953187"
+            ],
+            "freshness": 6,
+            "urgency": 5,
+            "discoveredAt": "2026-03-31T19:58:03.869Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:tech",
+            "sectionCandidates": [
+              "tech"
+            ],
+            "topicCandidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "detectedSectionId": "tech",
+            "detectedTopicId": "cybersecurity",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "mckinsey s ai system hack should be a wake up call for leaders",
+            "canonicalUrl": "https://managementtoday.co.uk/mckinseys-ai-system-hack-wake-call-leaders/opinion-and-analysis/article/1953187",
+            "discoveryScore": 15.4,
+            "eventKey": "cybersecurity:mckinsey s ai system hack should be a wake up call for leaders",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987083858-4",
+            "url": "https://managementtoday.co.uk/mckinseys-ai-system-hack-wake-call-leaders/opinion-and-analysis/article/1953187",
+            "canonical_url": "https://managementtoday.co.uk/mckinseys-ai-system-hack-wake-call-leaders/opinion-and-analysis/article/1953187",
+            "domain": "managementtoday.co.uk",
+            "canonical_domain": "managementtoday.co.uk",
+            "normalized_title": "mckinsey s ai system hack should be a wake up call for leaders",
+            "snippet": "57,000 user accounts. 728,000 sensitive file names. 46.5m chat messages. These are some of the assets a cybersecurity firm claimed they were able to access on McKinsey’s internal AI platform last month. It’s the kind of scenario all businesses dread. It’s also one that, in today’s digital ...",
+            "published_at": "1 day ago",
+            "section_id": "tech",
+            "topic_id": "cybersecurity",
+            "section_candidates": [
+              "tech"
+            ],
+            "topic_candidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "cluster_id": null,
+            "event_key": "cybersecurity:mckinsey s ai system hack should be a wake up call for leaders",
+            "keywords": [
+              "mckinsey",
+              "system",
+              "hack",
+              "wake",
+              "call",
+              "leaders",
+              "user",
+              "accounts",
+              "sensitive",
+              "file",
+              "names",
+              "chat"
+            ],
+            "title_signal_tokens": [
+              "mckinsey",
+              "system",
+              "hack",
+              "should",
+              "wake",
+              "call",
+              "leaders"
+            ],
+            "url_signal_tokens": [
+              "mckinseys",
+              "system",
+              "hack",
+              "wake",
+              "call",
+              "leaders"
+            ],
+            "title_url_overlap": 0.8333333333333334,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "mckinsey",
+              "system",
+              "hack",
+              "wake",
+              "call",
+              "leaders"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-03-31-cybersecurity-general-global",
       "publishabilityScore": 10,
       "discoveredAt": "2026-03-31T15:32:51.726Z",
-      "lastSeenAt": "2026-03-31T18:21:53.436Z",
-      "expiresAt": "2026-04-02T18:21:53.435Z",
+      "lastSeenAt": "2026-03-31T19:59:07.334Z",
+      "expiresAt": "2026-04-02T19:59:07.333Z",
       "status": "candidate",
       "lastSelectedAt": null,
       "lastPublishedAt": null
@@ -37363,7 +37789,7 @@
           "Clustered across multiple discovery hits",
           "Cluster contains multiple article-like materials"
         ],
-        "discoveredAt": "2026-03-31T19:52:59.662Z",
+        "discoveredAt": "2026-03-31T19:58:15.817Z",
         "provider": "brave",
         "section_id": "sports",
         "topic_id": null,
@@ -38659,14 +39085,458 @@
               "portal",
               "more"
             ]
+          },
+          {
+            "id": "brave-sec-1774987095802-0",
+            "title": "How NIL Is Reshaping the Future of College Football",
+            "summary": "Many athletes are navigating contracts, taxes, and branding for the first time. Without proper guidance, they risk making costly mistakes. ... NIL can affect locker room chemistry, especially when teammates earn vastly different amounts. It also contributes to increased player movement through the transfer portal. ... Perhaps the biggest change is cultural. College sports ...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:15.807Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [
+              "athletes-culture"
+            ],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "transfers",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "how nil is reshaping the future of college football cleats",
+            "canonicalUrl": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
+            "discoveryScore": 13.4,
+            "eventKey": "sports:how nil is reshaping the future of college football cleats",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987095802-0",
+            "url": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
+            "canonical_url": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
+            "domain": "vocal.media",
+            "canonical_domain": "vocal.media",
+            "normalized_title": "how nil is reshaping the future of college football",
+            "snippet": "Many athletes are navigating contracts, taxes, and branding for the first time. Without proper guidance, they risk making costly mistakes. ... NIL can affect locker room chemistry, especially when teammates earn vastly different amounts. It also contributes to increased player movement through the transfer portal. ... Perhaps the biggest change is cultural. College sports ...",
+            "published_at": "1 day ago",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [
+              "athletes-culture"
+            ],
+            "cluster_id": null,
+            "event_key": "sports:how nil is reshaping the future of college football cleats",
+            "keywords": [
+              "reshaping",
+              "future",
+              "college",
+              "football",
+              "many",
+              "athletes",
+              "navigating",
+              "contracts",
+              "taxes",
+              "branding",
+              "first",
+              "time"
+            ],
+            "title_signal_tokens": [
+              "reshaping",
+              "future",
+              "college",
+              "football"
+            ],
+            "url_signal_tokens": [
+              "cleats",
+              "reshaping",
+              "future",
+              "college",
+              "football"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "reshaping",
+              "future",
+              "college",
+              "football"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987095811-2",
+            "title": "In NCAA athletics, student-athletes are often choosing deal over degree",
+            "summary": "NIL and the transfer portal have given college athletes newfound power and freedom of movement, but it's often at the detriment of education.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:15.814Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [
+              "athletes-culture"
+            ],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "transfers",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "in ncaa athletics student athletes are often choosing deal over degree andscape",
+            "canonicalUrl": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
+            "discoveryScore": 13.4,
+            "eventKey": "sports:in ncaa athletics student athletes are often choosing deal over degree andscape",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987095811-2",
+            "url": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
+            "canonical_url": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
+            "domain": "andscape.com",
+            "canonical_domain": "andscape.com",
+            "normalized_title": "in ncaa athletics student athletes are often choosing deal over degree",
+            "snippet": "NIL and the transfer portal have given college athletes newfound power and freedom of movement, but it's often at the detriment of education.",
+            "published_at": "1 day ago",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [
+              "athletes-culture"
+            ],
+            "cluster_id": null,
+            "event_key": "sports:in ncaa athletics student athletes are often choosing deal over degree andscape",
+            "keywords": [
+              "ncaa",
+              "athletics",
+              "student",
+              "athletes",
+              "often",
+              "choosing",
+              "deal",
+              "degree",
+              "transfer",
+              "portal",
+              "given",
+              "college"
+            ],
+            "title_signal_tokens": [
+              "ncaa",
+              "athletics",
+              "student",
+              "athletes",
+              "often",
+              "choosing",
+              "deal",
+              "degree"
+            ],
+            "url_signal_tokens": [
+              "features",
+              "ncaa",
+              "athletics",
+              "student",
+              "athletes",
+              "often",
+              "choosing",
+              "deal",
+              "degree"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "ncaa",
+              "athletics",
+              "student",
+              "athletes",
+              "often",
+              "choosing",
+              "deal",
+              "degree"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987095814-3",
+            "title": "Trump administration sues Minnesota over trans athletes in girls sports as Pam Bondi slams 'flawed policies'",
+            "summary": "The Trump administration is carrying out its threat to punish any state that allows transgender athletes to compete in girls sports by suing Minnesota and its athletics governing body Monday.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://www.dailymail.co.uk/sport/othersports/article-15692757/Trump-administration-sues-Minnesota-trans-athletes-girls-sports.html"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:15.817Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [
+              "athletes-culture"
+            ],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "trump administration sues minnesota over trans athletes in girls sports as pam bondi slams flawed policies daily mai",
+            "canonicalUrl": "https://www.dailymail.co.uk/sport/othersports/article-15692757/trump-administration-sues-minnesota-trans-athletes-girls-sports.html",
+            "discoveryScore": 13.4,
+            "eventKey": "sports:trump administration sues minnesota over trans athletes in girls sports as pam b",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987095814-3",
+            "url": "https://www.dailymail.co.uk/sport/othersports/article-15692757/trump-administration-sues-minnesota-trans-athletes-girls-sports.html",
+            "canonical_url": "https://www.dailymail.co.uk/sport/othersports/article-15692757/trump-administration-sues-minnesota-trans-athletes-girls-sports.html",
+            "domain": "dailymail.co.uk",
+            "canonical_domain": "dailymail.co.uk",
+            "normalized_title": "trump administration sues minnesota over trans athletes in girls sports as pam bondi slams flawed policies",
+            "snippet": "The Trump administration is carrying out its threat to punish any state that allows transgender athletes to compete in girls sports by suing Minnesota and its athletics governing body Monday.",
+            "published_at": "1 day ago",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [
+              "athletes-culture"
+            ],
+            "cluster_id": null,
+            "event_key": "sports:trump administration sues minnesota over trans athletes in girls sports as pam b",
+            "keywords": [
+              "trump",
+              "administration",
+              "sues",
+              "minnesota",
+              "trans",
+              "athletes",
+              "girls",
+              "sports",
+              "bondi",
+              "slams",
+              "flawed",
+              "policies"
+            ],
+            "title_signal_tokens": [
+              "trump",
+              "administration",
+              "sues",
+              "minnesota",
+              "trans",
+              "athletes",
+              "girls",
+              "bondi",
+              "slams",
+              "flawed",
+              "policies"
+            ],
+            "url_signal_tokens": [
+              "sport",
+              "othersports",
+              "trump",
+              "administration",
+              "sues",
+              "minnesota",
+              "trans",
+              "athletes",
+              "girls"
+            ],
+            "title_url_overlap": 0.7777777777777778,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "trump",
+              "administration",
+              "sues",
+              "minnesota",
+              "trans",
+              "athletes",
+              "girls",
+              "sports",
+              "bondi",
+              "slams",
+              "flawed",
+              "policies"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987095807-1",
+            "title": "What's next for Duke, Tennessee after Elite Eight: Recruits, transfer portal, more",
+            "summary": "With NCAA tournament runs over for key programs, here's how next season is taking shape.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "2 days ago",
+            "sourceUrls": [
+              "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026"
+            ],
+            "freshness": 5,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:15.811Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "transfers",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "what s next for duke tennessee after elite eight recruits transfer portal more espn",
+            "canonicalUrl": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
+            "discoveryScore": 11.4,
+            "eventKey": "sports:what s next for duke tennessee after elite eight recruits transfer portal more e",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987095807-1",
+            "url": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
+            "canonical_url": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
+            "domain": "espn.com",
+            "canonical_domain": "espn.com",
+            "normalized_title": "what s next for duke tennessee after elite eight recruits transfer portal more",
+            "snippet": "With NCAA tournament runs over for key programs, here's how next season is taking shape.",
+            "published_at": "2 days ago",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "sports:what s next for duke tennessee after elite eight recruits transfer portal more e",
+            "keywords": [
+              "what",
+              "next",
+              "duke",
+              "tennessee",
+              "elite",
+              "eight",
+              "recruits",
+              "transfer",
+              "portal",
+              "more",
+              "ncaa",
+              "tournament"
+            ],
+            "title_signal_tokens": [
+              "what",
+              "next",
+              "duke",
+              "tennessee",
+              "elite",
+              "eight",
+              "recruits",
+              "transfer",
+              "portal",
+              "more"
+            ],
+            "url_signal_tokens": [
+              "mens",
+              "college",
+              "basketball",
+              "ncaa",
+              "tournament",
+              "losers",
+              "recruits",
+              "transfer",
+              "portal",
+              "priorities",
+              "departures"
+            ],
+            "title_url_overlap": 0.3,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "what",
+              "next",
+              "duke",
+              "tennessee",
+              "elite",
+              "eight",
+              "recruits",
+              "transfer",
+              "portal",
+              "more"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-03-31-sports-general-global",
       "publishabilityScore": 10,
       "discoveredAt": "2026-03-31T15:33:03.676Z",
-      "lastSeenAt": "2026-03-31T19:54:24.675Z",
-      "expiresAt": "2026-04-02T19:54:24.675Z",
+      "lastSeenAt": "2026-03-31T19:59:07.334Z",
+      "expiresAt": "2026-04-02T19:59:07.333Z",
       "status": "published",
       "lastSelectedAt": "2026-03-31T18:22:29.262Z",
       "lastPublishedAt": "2026-03-31T18:22:29.262Z",
@@ -38676,8 +39546,8 @@
       "identityKey": "cluster:evt-2026-03-31-news-general-global-meta",
       "brief": {
         "id": "evt-2026-03-31-news-general-global-meta",
-        "title": "The Timeless Fear of Corrupting the Youth",
-        "whatHappened": "1 day ago ... From Socrates to social media, society has always worried about protecting the young.",
+        "title": "Constantino's sticky ad spending problem",
+        "whatHappened": "1 day ago ... GREENBERGER BECOMES POLITICO EDITOR-IN-CHIEF: After an extensive search, POLITICO has named Jonathan Greenberger as the news organization's next Global ...",
         "whoIsInvolved": "meta",
         "involvedParties": [
           "meta"
@@ -38685,26 +39555,31 @@
         "entities": [
           "meta"
         ],
-        "when": "2026-03-31T19:54:25.274Z",
+        "when": "2026-03-31T19:58:28.207Z",
         "where": "Not specified",
-        "whyItMatters": "The development could affect entertainment culture, platform behavior, or the creator economy.",
+        "whyItMatters": "The development appears timely enough to matter to readers, but the full downstream impact is still developing.",
         "developmentStage": "confirmed",
         "sourceUrls": [
           "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
           "https://www.techmarketview.com/ukhotviews/",
           "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
           "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
-          "https://www.wsj.com/politics/social-media-freedom-speech-meta-youtube-ruling-32aaee3b?gaa_at=eafs&gaa_n=AWEtsqf_XFTcoqk35lymOjKqJoLPaP6cFQQqooz2KiKhJeSg01HfLuV2-Zlb&gaa_ts=69c86989&gaa_sig=ubSYKJ5VbyRJLAvXV-tDFWrD6TG1M93QrYme7nV8SPFSgPa3IjDcC5lGgHfuGvNmRnaboe6g6pyE1Cagrk8yGw%3D%3D"
+          "https://www.wsj.com/politics/social-media-freedom-speech-meta-youtube-ruling-32aaee3b?gaa_at=eafs&gaa_n=AWEtsqf_XFTcoqk35lymOjKqJoLPaP6cFQQqooz2KiKhJeSg01HfLuV2-Zlb&gaa_ts=69c86989&gaa_sig=ubSYKJ5VbyRJLAvXV-tDFWrD6TG1M93QrYme7nV8SPFSgPa3IjDcC5lGgHfuGvNmRnaboe6g6pyE1Cagrk8yGw%3D%3D",
+          "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+          "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
+          "https://www.cnn.com/markets/stocks/BNZI"
         ],
-        "publishabilityScore": 7,
+        "publishabilityScore": 10,
         "publishabilityNotes": [
           "Has a usable summary sentence",
           "Specific parties are identified",
           "Freshness is moderate",
-          "Source diversity still needs source-pack validation",
+          "Multiple source URLs already attached",
+          "Clustered across multiple discovery hits",
+          "Cluster contains multiple article-like materials",
           "At least one trusted source hit is present"
         ],
-        "discoveredAt": "2026-03-31T19:54:25.274Z",
+        "discoveredAt": "2026-03-31T19:58:28.207Z",
         "provider": "google_trusted",
         "section_id": "news",
         "topic_id": null,
@@ -38712,8 +39587,8 @@
         "angle": "general",
         "cluster_id": "evt-2026-03-31-news-general-global-meta",
         "eventKey": "2026-03-31:news-general-global-meta",
-        "cluster_size": 1,
-        "article_rich_count": 1,
+        "cluster_size": 5,
+        "article_rich_count": 4,
         "generic_page_count": 0,
         "discoveryContext": [
           {
@@ -39219,14 +40094,505 @@
               "corrupting",
               "youth"
             ]
+          },
+          {
+            "id": "brave-sec-1774987089823-1",
+            "title": "Medical Bulletin 31/March/2026",
+            "summary": "Here are the top medical news for today:New Study Identifies Exercise Type That Significantly Improves Sleep Quality A new meta-analysis published in Sleep and Biological Rhythms suggests that yoga...",
+            "whyItMatters": "",
+            "involvedParties": [
+              "meta"
+            ],
+            "entities": [
+              "meta"
+            ],
+            "when": "10 hours ago",
+            "sourceUrls": [
+              "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669"
+            ],
+            "freshness": 7,
+            "urgency": 5,
+            "discoveredAt": "2026-03-31T19:58:09.826Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:health",
+            "sectionCandidates": [
+              "news",
+              "health"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "research",
+            "genericPage": false,
+            "page_kind": "analysis",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "medical bulletin 31 march 2026",
+            "canonicalUrl": "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
+            "discoveryScore": 15.4,
+            "eventKey": "news:medical bulletin 31 march 2026",
+            "signalSpecificityScore": 4,
+            "signalSpecificityNotes": [
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987089823-1",
+            "url": "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
+            "canonical_url": "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
+            "domain": "medicaldialogues.in",
+            "canonical_domain": "medicaldialogues.in",
+            "normalized_title": "medical bulletin 31 march 2026",
+            "snippet": "Here are the top medical news for today:New Study Identifies Exercise Type That Significantly Improves Sleep Quality A new meta-analysis published in Sleep and Biological Rhythms suggests that yoga...",
+            "published_at": "10 hours ago",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "health"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "news:medical bulletin 31 march 2026",
+            "keywords": [
+              "medical",
+              "bulletin",
+              "march",
+              "2026",
+              "here",
+              "study",
+              "identifies",
+              "exercise",
+              "type",
+              "significantly",
+              "improves",
+              "sleep"
+            ],
+            "title_signal_tokens": [
+              "medical",
+              "bulletin",
+              "march",
+              "2026"
+            ],
+            "url_signal_tokens": [
+              "mdtv",
+              "medical",
+              "bulletin",
+              "31march2026"
+            ],
+            "title_url_overlap": 0.5,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "medical",
+              "bulletin",
+              "march",
+              "2026"
+            ]
+          },
+          {
+            "id": "google-sec-1774987108180-5",
+            "title": "Trump administration sues Minnesota for allowing trans athletes in ...",
+            "summary": "22 hours ago ... Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "2026-03-30T21:37:09.000Z",
+            "sourceUrls": [
+              "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:28.183Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:news",
+            "sectionCandidates": [
+              "news",
+              "sports"
+            ],
+            "topicCandidates": [
+              "athletes-culture"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "trump administration sues minnesota for allowing trans athletes in",
+            "canonicalUrl": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+            "discoveryScore": 15.4,
+            "eventKey": "news:trump administration sues minnesota for allowing trans athletes in",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1774987108180-5",
+            "url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+            "canonical_url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+            "domain": "theguardian.com",
+            "canonical_domain": "theguardian.com",
+            "normalized_title": "trump administration sues minnesota for allowing trans athletes in",
+            "snippet": "22 hours ago ... Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination.",
+            "published_at": "2026-03-30T21:37:09.000Z",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "sports"
+            ],
+            "topic_candidates": [
+              "athletes-culture"
+            ],
+            "cluster_id": null,
+            "event_key": "news:trump administration sues minnesota for allowing trans athletes in",
+            "keywords": [
+              "trump",
+              "administration",
+              "sues",
+              "minnesota",
+              "allowing",
+              "trans",
+              "athletes",
+              "hours",
+              "justice",
+              "department",
+              "claims",
+              "state"
+            ],
+            "title_signal_tokens": [
+              "trump",
+              "administration",
+              "sues",
+              "minnesota",
+              "allowing",
+              "trans",
+              "athletes"
+            ],
+            "url_signal_tokens": [
+              "minnesota",
+              "trans",
+              "athletes",
+              "lawsuit",
+              "trump",
+              "administration"
+            ],
+            "title_url_overlap": 0.8333333333333334,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "trump",
+              "administration",
+              "sues",
+              "minnesota",
+              "allowing",
+              "trans",
+              "athletes"
+            ]
+          },
+          {
+            "id": "google-sec-1774987108168-1",
+            "title": "Constantino's sticky ad spending problem",
+            "summary": "1 day ago ... GREENBERGER BECOMES POLITICO EDITOR-IN-CHIEF: After an extensive search, POLITICO has named Jonathan Greenberger as the news organization's next Global ...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:28.172Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:news",
+            "sectionCandidates": [
+              "news",
+              "business"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "constantino s sticky ad spending problem politico",
+            "canonicalUrl": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
+            "discoveryScore": 14.6,
+            "eventKey": "news:constantino s sticky ad spending problem politico",
+            "signalSpecificityScore": 6,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1774987108168-1",
+            "url": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
+            "canonical_url": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
+            "domain": "politico.com",
+            "canonical_domain": "politico.com",
+            "normalized_title": "constantino s sticky ad spending problem",
+            "snippet": "1 day ago ... GREENBERGER BECOMES POLITICO EDITOR-IN-CHIEF: After an extensive search, POLITICO has named Jonathan Greenberger as the news organization's next Global ...",
+            "published_at": "2026-03-31T19:58:28.172Z",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "business"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "news:constantino s sticky ad spending problem politico",
+            "keywords": [
+              "constantino",
+              "sticky",
+              "spending",
+              "problem",
+              "greenberger",
+              "becomes",
+              "politico",
+              "editor",
+              "chief",
+              "extensive",
+              "search",
+              "named"
+            ],
+            "title_signal_tokens": [
+              "constantino",
+              "sticky",
+              "spending",
+              "problem"
+            ],
+            "url_signal_tokens": [
+              "newsletters",
+              "york",
+              "playbook",
+              "candidates",
+              "were",
+              "paid",
+              "campaign"
+            ],
+            "title_url_overlap": 0,
+            "title_url_mismatch": true,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "constantino",
+              "sticky",
+              "spending",
+              "problem"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987083856-3",
+            "title": "UKHotViews",
+            "summary": "Bringing you opinionated, authoritative research & analysis on the UK technology scene.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "20 hours ago",
+            "sourceUrls": [
+              "https://www.techmarketview.com/ukhotviews/"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:03.858Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:tech",
+            "sectionCandidates": [
+              "news",
+              "tech"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "research",
+            "genericPage": false,
+            "page_kind": "analysis",
+            "genericity_score": 0,
+            "article_likelihood": 7,
+            "normalizedTitle": "ukhotviews latest tech news views",
+            "canonicalUrl": "https://www.techmarketview.com/ukhotviews/",
+            "discoveryScore": 12.8,
+            "eventKey": "news:ukhotviews latest tech news views",
+            "signalSpecificityScore": 6,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987083856-3",
+            "url": "https://www.techmarketview.com/ukhotviews/",
+            "canonical_url": "https://www.techmarketview.com/ukhotviews/",
+            "domain": "techmarketview.com",
+            "canonical_domain": "techmarketview.com",
+            "normalized_title": "ukhotviews",
+            "snippet": "Bringing you opinionated, authoritative research & analysis on the UK technology scene.",
+            "published_at": "20 hours ago",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "tech"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "news:ukhotviews latest tech news views",
+            "keywords": [
+              "ukhotviews",
+              "bringing",
+              "opinionated",
+              "authoritative",
+              "research",
+              "analysis",
+              "technology",
+              "scene"
+            ],
+            "title_signal_tokens": [
+              "ukhotviews"
+            ],
+            "url_signal_tokens": [
+              "ukhotviews"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "research",
+            "place": "global",
+            "titleTokens": [
+              "ukhotviews"
+            ]
+          },
+          {
+            "id": "google-sec-1774987108205-4",
+            "title": "BNZI Stock Quote Price and Forecast",
+            "summary": "2 days ago ... View Banzai International, Inc. Class A BNZI stock quote prices, financial information, real-time forecasts, and company news from CNN.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.cnn.com/markets/stocks/BNZI"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:28.207Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:business",
+            "sectionCandidates": [
+              "news",
+              "business"
+            ],
+            "topicCandidates": [
+              "economy-markets"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "unknown",
+            "genericity_score": 0,
+            "article_likelihood": 1,
+            "normalizedTitle": "bnzi stock quote price and forecast cnn",
+            "canonicalUrl": "https://www.cnn.com/markets/stocks/bnzi",
+            "discoveryScore": 11,
+            "eventKey": "news:bnzi stock quote price and forecast cnn",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1774987108205-4",
+            "url": "https://www.cnn.com/markets/stocks/bnzi",
+            "canonical_url": "https://www.cnn.com/markets/stocks/bnzi",
+            "domain": "cnn.com",
+            "canonical_domain": "cnn.com",
+            "normalized_title": "bnzi stock quote price and forecast",
+            "snippet": "2 days ago ... View Banzai International, Inc. Class A BNZI stock quote prices, financial information, real-time forecasts, and company news from CNN.",
+            "published_at": "2026-03-31T19:58:28.207Z",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "business"
+            ],
+            "topic_candidates": [
+              "economy-markets"
+            ],
+            "cluster_id": null,
+            "event_key": "news:bnzi stock quote price and forecast cnn",
+            "keywords": [
+              "bnzi",
+              "stock",
+              "quote",
+              "price",
+              "forecast",
+              "days",
+              "view",
+              "banzai",
+              "international",
+              "class",
+              "prices",
+              "financial"
+            ],
+            "title_signal_tokens": [
+              "bnzi",
+              "stock",
+              "quote",
+              "price",
+              "forecast"
+            ],
+            "url_signal_tokens": [
+              "markets",
+              "stocks",
+              "bnzi"
+            ],
+            "title_url_overlap": 0.3333333333333333,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "bnzi",
+              "stock",
+              "quote",
+              "price",
+              "forecast"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-03-31-news-general-global-meta",
       "publishabilityScore": 10,
       "discoveredAt": "2026-03-31T18:20:34.445Z",
-      "lastSeenAt": "2026-03-31T19:54:25.639Z",
-      "expiresAt": "2026-04-02T19:54:25.639Z",
+      "lastSeenAt": "2026-03-31T19:59:07.334Z",
+      "expiresAt": "2026-04-02T19:59:07.333Z",
       "status": "candidate",
       "lastSelectedAt": null,
       "lastPublishedAt": null
@@ -39251,7 +40617,8 @@
         "sourceUrls": [
           "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece",
           "https://www.mentalhealthparitypartners.com/2026/03/30/revolutionizing-ment/",
-          "https://psychologytoday.com/us/blog/well-read/202603/the-link-between-medicine-and-psychology"
+          "https://psychologytoday.com/us/blog/well-read/202603/the-link-between-medicine-and-psychology",
+          "https://ama-assn.org/practice-management/physician-health/one-system-one-strategy-physician-well-being"
         ],
         "publishabilityScore": 10,
         "publishabilityNotes": [
@@ -39263,7 +40630,7 @@
           "Cluster contains multiple article-like materials",
           "Taxonomy topic match is specific enough for routing"
         ],
-        "discoveredAt": "2026-03-31T18:20:22.287Z",
+        "discoveredAt": "2026-03-31T19:58:09.835Z",
         "provider": "brave",
         "section_id": "health",
         "topic_id": "mental-health",
@@ -39271,8 +40638,8 @@
         "angle": "general",
         "cluster_id": "evt-2026-03-31-mental-health-general-global",
         "eventKey": "2026-03-31:mental-health-general-global",
-        "cluster_size": 3,
-        "article_rich_count": 3,
+        "cluster_size": 4,
+        "article_rich_count": 4,
         "generic_page_count": 0,
         "discoveryContext": [
           {
@@ -39593,14 +40960,431 @@
               "medicine",
               "psychology"
             ]
+          },
+          {
+            "id": "brave-sec-1774987089830-3",
+            "title": "Deakin University advances global agenda for affordable health through RAAH Roundtable",
+            "summary": "Deakin University advances global agenda for affordable health through RAAH Roundtable",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "3 hours ago",
+            "sourceUrls": [
+              "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece"
+            ],
+            "freshness": 9,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:09.832Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:health",
+            "sectionCandidates": [
+              "health"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "health",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "deakin university advances global agenda for affordable health through raah roundtable the hindu",
+            "canonicalUrl": "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece",
+            "discoveryScore": 16.4,
+            "eventKey": "health:deakin university advances global agenda for affordable health through raah roun",
+            "signalSpecificityScore": 6,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987089830-3",
+            "url": "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece",
+            "canonical_url": "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece",
+            "domain": "thehindu.com",
+            "canonical_domain": "thehindu.com",
+            "normalized_title": "deakin university advances global agenda for affordable health through raah roundtable",
+            "snippet": "Deakin University advances global agenda for affordable health through RAAH Roundtable",
+            "published_at": "3 hours ago",
+            "section_id": "health",
+            "topic_id": null,
+            "section_candidates": [
+              "health"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "health:deakin university advances global agenda for affordable health through raah roun",
+            "keywords": [
+              "deakin",
+              "university",
+              "advances",
+              "global",
+              "agenda",
+              "affordable",
+              "health",
+              "through",
+              "raah",
+              "roundtable"
+            ],
+            "title_signal_tokens": [
+              "deakin",
+              "university",
+              "advances",
+              "global",
+              "agenda",
+              "affordable",
+              "through",
+              "raah",
+              "roundtable"
+            ],
+            "url_signal_tokens": [
+              "brandhub",
+              "release",
+              "deakin",
+              "university",
+              "advances",
+              "global",
+              "agenda",
+              "affordable",
+              "through",
+              "raah",
+              "roundtable",
+              "article70806449"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "deakin",
+              "university",
+              "advances",
+              "global",
+              "agenda",
+              "affordable",
+              "health",
+              "through",
+              "raah",
+              "roundtable"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987089826-2",
+            "title": "Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms",
+            "summary": "Contents hide 1 Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms 1.1 Understanding Brain Plasticity and Its Therapeutic Potential 1.2 Advances in Neuroimaging: Mapping the Mind 1.3 Emerging…",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://www.mentalhealthparitypartners.com/2026/03/30/revolutionizing-ment/"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:09.830Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:health",
+            "sectionCandidates": [
+              "health"
+            ],
+            "topicCandidates": [
+              "mental-health"
+            ],
+            "detectedSectionId": "health",
+            "detectedTopicId": "mental-health",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "revolutionizing mental health care breakthroughs in neuroscience transforming treatment paradigms mentalhealthparityp",
+            "canonicalUrl": "https://www.mentalhealthparitypartners.com/2026/03/30/revolutionizing-ment/",
+            "discoveryScore": 15.6,
+            "eventKey": "mental-health:revolutionizing mental health care breakthroughs in neuroscience transforming tr",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987089826-2",
+            "url": "https://www.mentalhealthparitypartners.com/2026/03/30/revolutionizing-ment/",
+            "canonical_url": "https://www.mentalhealthparitypartners.com/2026/03/30/revolutionizing-ment/",
+            "domain": "mentalhealthparitypartners.com",
+            "canonical_domain": "mentalhealthparitypartners.com",
+            "normalized_title": "revolutionizing mental health care breakthroughs in neuroscience transforming treatment paradigms",
+            "snippet": "Contents hide 1 Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms 1.1 Understanding Brain Plasticity and Its Therapeutic Potential 1.2 Advances in Neuroimaging: Mapping the Mind 1.3 Emerging…",
+            "published_at": "1 day ago",
+            "section_id": "health",
+            "topic_id": "mental-health",
+            "section_candidates": [
+              "health"
+            ],
+            "topic_candidates": [
+              "mental-health"
+            ],
+            "cluster_id": null,
+            "event_key": "mental-health:revolutionizing mental health care breakthroughs in neuroscience transforming tr",
+            "keywords": [
+              "revolutionizing",
+              "mental",
+              "health",
+              "care",
+              "breakthroughs",
+              "neuroscience",
+              "transforming",
+              "treatment",
+              "paradigms",
+              "contents",
+              "hide",
+              "understanding"
+            ],
+            "title_signal_tokens": [
+              "revolutionizing",
+              "mental",
+              "care",
+              "breakthroughs",
+              "neuroscience",
+              "transforming",
+              "treatment",
+              "paradigms"
+            ],
+            "url_signal_tokens": [
+              "revolutionizing",
+              "ment"
+            ],
+            "title_url_overlap": 0.5,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "revolutionizing",
+              "mental",
+              "health",
+              "care",
+              "breakthroughs",
+              "neuroscience",
+              "transforming",
+              "treatment",
+              "paradigms"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987089818-0",
+            "title": "The Link Between Medicine and Psychology",
+            "summary": "When you visit your doctor, do they ask about your mental health? A new book explores how mental health has been shown to directly impact both heart and brain health.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://psychologytoday.com/us/blog/well-read/202603/the-link-between-medicine-and-psychology"
+            ],
+            "freshness": 6,
+            "urgency": 5,
+            "discoveredAt": "2026-03-31T19:58:09.823Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:health",
+            "sectionCandidates": [
+              "health"
+            ],
+            "topicCandidates": [
+              "mental-health"
+            ],
+            "detectedSectionId": "health",
+            "detectedTopicId": "mental-health",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "the link between medicine and psychology psychology today",
+            "canonicalUrl": "https://psychologytoday.com/us/blog/well-read/202603/the-link-between-medicine-and-psychology",
+            "discoveryScore": 15.4,
+            "eventKey": "mental-health:the link between medicine and psychology psychology today",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987089818-0",
+            "url": "https://psychologytoday.com/us/blog/well-read/202603/the-link-between-medicine-and-psychology",
+            "canonical_url": "https://psychologytoday.com/us/blog/well-read/202603/the-link-between-medicine-and-psychology",
+            "domain": "psychologytoday.com",
+            "canonical_domain": "psychologytoday.com",
+            "normalized_title": "the link between medicine and psychology",
+            "snippet": "When you visit your doctor, do they ask about your mental health? A new book explores how mental health has been shown to directly impact both heart and brain health.",
+            "published_at": "1 day ago",
+            "section_id": "health",
+            "topic_id": "mental-health",
+            "section_candidates": [
+              "health"
+            ],
+            "topic_candidates": [
+              "mental-health"
+            ],
+            "cluster_id": null,
+            "event_key": "mental-health:the link between medicine and psychology psychology today",
+            "keywords": [
+              "link",
+              "between",
+              "medicine",
+              "psychology",
+              "when",
+              "visit",
+              "your",
+              "doctor",
+              "they",
+              "about",
+              "mental",
+              "health"
+            ],
+            "title_signal_tokens": [
+              "link",
+              "between",
+              "medicine",
+              "psychology"
+            ],
+            "url_signal_tokens": [
+              "blog",
+              "well",
+              "read",
+              "link",
+              "between",
+              "medicine",
+              "psychology"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "link",
+              "between",
+              "medicine",
+              "psychology"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987089832-4",
+            "title": "One system, one strategy for physician well-being",
+            "summary": "By aligning more than 28 acute care facilities and eight medical groups, Sutter Health built a coordinated strategy to support physician well-being.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "8 hours ago",
+            "sourceUrls": [
+              "https://ama-assn.org/practice-management/physician-health/one-system-one-strategy-physician-well-being"
+            ],
+            "freshness": 8,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:09.835Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:health",
+            "sectionCandidates": [
+              "health"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "health",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "one system one strategy for physician well being american medical association",
+            "canonicalUrl": "https://ama-assn.org/practice-management/physician-health/one-system-one-strategy-physician-well-being",
+            "discoveryScore": 15.4,
+            "eventKey": "health:one system one strategy for physician well being american medical association",
+            "signalSpecificityScore": 6,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987089832-4",
+            "url": "https://ama-assn.org/practice-management/physician-health/one-system-one-strategy-physician-well-being",
+            "canonical_url": "https://ama-assn.org/practice-management/physician-health/one-system-one-strategy-physician-well-being",
+            "domain": "ama-assn.org",
+            "canonical_domain": "ama-assn.org",
+            "normalized_title": "one system one strategy for physician well",
+            "snippet": "By aligning more than 28 acute care facilities and eight medical groups, Sutter Health built a coordinated strategy to support physician well-being.",
+            "published_at": "8 hours ago",
+            "section_id": "health",
+            "topic_id": null,
+            "section_candidates": [
+              "health"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "health:one system one strategy for physician well being american medical association",
+            "keywords": [
+              "system",
+              "strategy",
+              "physician",
+              "well",
+              "aligning",
+              "more",
+              "than",
+              "acute",
+              "care",
+              "facilities",
+              "eight",
+              "medical"
+            ],
+            "title_signal_tokens": [
+              "system",
+              "strategy",
+              "physician",
+              "well"
+            ],
+            "url_signal_tokens": [
+              "practice",
+              "management",
+              "physician",
+              "system",
+              "strategy",
+              "well",
+              "being"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "system",
+              "strategy",
+              "physician",
+              "well",
+              "being"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-03-31-mental-health-general-global",
       "publishabilityScore": 10,
       "discoveredAt": "2026-03-31T18:20:22.287Z",
-      "lastSeenAt": "2026-03-31T18:21:53.436Z",
-      "expiresAt": "2026-04-02T18:21:53.435Z",
+      "lastSeenAt": "2026-03-31T19:59:07.334Z",
+      "expiresAt": "2026-04-02T19:59:07.333Z",
       "status": "candidate",
       "lastSelectedAt": null,
       "lastPublishedAt": null
@@ -39609,8 +41393,8 @@
       "identityKey": "cluster:evt-2026-03-31-business-general-global",
       "brief": {
         "id": "evt-2026-03-31-business-general-global",
-        "title": "MAHA fans want action Trump hasn't delivered",
-        "whatHappened": "1 day ago ... A supermajority of American adults favor challenging big pharmaceutical companies, according to a new POLITICO poll, but they're closely divided on which ...",
+        "title": "Cue Biopharma Announces CEO Transition",
+        "whatHappened": "1 day ago ... (Nasdaq: CUE), a clinical-stage biopharmaceutical company developing a novel class of therapeutic biologics to selectively engage and modulate disease-specific ...",
         "whoIsInvolved": "Unspecified",
         "involvedParties": [
           "Unspecified"
@@ -39618,27 +41402,27 @@
         "entities": [
           "Unspecified"
         ],
-        "when": "2026-03-31T19:54:25.616Z",
+        "when": "2026-03-31T19:59:07.951Z",
         "where": "Not specified",
-        "whyItMatters": "The development appears timely enough to matter to readers, but the full downstream impact is still developing.",
-        "developmentStage": "confirmed",
+        "whyItMatters": "The development could matter for public health, regulation, scientific progress, or access to treatment.",
+        "developmentStage": "breaking",
         "sourceUrls": [
           "https://www.nytimes.com/by/erin-griffith?page=9",
           "https://www.theglobeandmail.com/investing/markets/stocks/MMS/pressreleases/1034951/government-technical-consulting-stocks-q4-teardown-maximus-nysemms-vs-the-rest/",
           "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
-          "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162"
+          "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162",
+          "https://www.theglobeandmail.com/investing/markets/stocks/CUE/pressreleases/1013060/cue-biopharma-announces-ceo-transition/"
         ],
-        "publishabilityScore": 9,
+        "publishabilityScore": 7,
         "publishabilityNotes": [
           "Has a usable summary sentence",
           "Parties remain unclear",
           "Freshness is moderate",
-          "Multiple source URLs already attached",
-          "Clustered across multiple discovery hits",
-          "Cluster contains multiple article-like materials",
+          "Story has a clear urgency signal",
+          "Source diversity still needs source-pack validation",
           "At least one trusted source hit is present"
         ],
-        "discoveredAt": "2026-03-31T19:54:25.616Z",
+        "discoveredAt": "2026-03-31T19:59:07.951Z",
         "provider": "google_trusted",
         "section_id": "business",
         "topic_id": null,
@@ -39646,8 +41430,8 @@
         "angle": "general",
         "cluster_id": "evt-2026-03-31-business-general-global",
         "eventKey": "2026-03-31:business-general-global",
-        "cluster_size": 3,
-        "article_rich_count": 3,
+        "cluster_size": 1,
+        "article_rich_count": 1,
         "generic_page_count": 0,
         "discoveryContext": [
           {
@@ -40070,14 +41854,116 @@
               "hasn",
               "delivered"
             ]
+          },
+          {
+            "id": "google-sec-1774987147949-3",
+            "title": "Cue Biopharma Announces CEO Transition",
+            "summary": "1 day ago ... (Nasdaq: CUE), a clinical-stage biopharmaceutical company developing a novel class of therapeutic biologics to selectively engage and modulate disease-specific ...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.theglobeandmail.com/investing/markets/stocks/CUE/pressreleases/1013060/cue-biopharma-announces-ceo-transition/"
+            ],
+            "freshness": 4,
+            "urgency": 8,
+            "discoveredAt": "2026-03-31T19:59:07.951Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:health",
+            "sectionCandidates": [
+              "business",
+              "health"
+            ],
+            "topicCandidates": [
+              "economy-markets"
+            ],
+            "detectedSectionId": "business",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "cue biopharma announces ceo transition the globe and mail",
+            "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/cue/pressreleases/1013060/cue-biopharma-announces-ceo-transition/",
+            "discoveryScore": 17.4,
+            "eventKey": "business:cue biopharma announces ceo transition the globe and mail",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1774987147949-3",
+            "url": "https://www.theglobeandmail.com/investing/markets/stocks/cue/pressreleases/1013060/cue-biopharma-announces-ceo-transition/",
+            "canonical_url": "https://www.theglobeandmail.com/investing/markets/stocks/cue/pressreleases/1013060/cue-biopharma-announces-ceo-transition/",
+            "domain": "theglobeandmail.com",
+            "canonical_domain": "theglobeandmail.com",
+            "normalized_title": "cue biopharma announces ceo transition",
+            "snippet": "1 day ago ... (Nasdaq: CUE), a clinical-stage biopharmaceutical company developing a novel class of therapeutic biologics to selectively engage and modulate disease-specific ...",
+            "published_at": "2026-03-31T19:59:07.951Z",
+            "section_id": "business",
+            "topic_id": null,
+            "section_candidates": [
+              "business",
+              "health"
+            ],
+            "topic_candidates": [
+              "economy-markets"
+            ],
+            "cluster_id": null,
+            "event_key": "business:cue biopharma announces ceo transition the globe and mail",
+            "keywords": [
+              "biopharma",
+              "announces",
+              "transition",
+              "nasdaq",
+              "clinical",
+              "stage",
+              "biopharmaceutical",
+              "company",
+              "developing",
+              "novel",
+              "class",
+              "therapeutic"
+            ],
+            "title_signal_tokens": [
+              "biopharma",
+              "announces",
+              "transition"
+            ],
+            "url_signal_tokens": [
+              "investing",
+              "markets",
+              "stocks",
+              "pressreleases",
+              "biopharma",
+              "announces",
+              "transition"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "biopharma",
+              "announces",
+              "transition"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-03-31-business-general-global",
       "publishabilityScore": 9,
       "discoveredAt": "2026-03-31T18:20:34.462Z",
-      "lastSeenAt": "2026-03-31T19:54:25.639Z",
-      "expiresAt": "2026-04-02T19:54:25.639Z",
+      "lastSeenAt": "2026-03-31T19:59:41.841Z",
+      "expiresAt": "2026-04-02T19:59:41.841Z",
       "status": "candidate",
       "lastSelectedAt": null,
       "lastPublishedAt": null
@@ -40115,10 +42001,9 @@
           "Multiple source URLs already attached",
           "Clustered across multiple discovery hits",
           "Cluster contains multiple article-like materials",
-          "Taxonomy topic match is specific enough for routing",
-          "At least one trusted source hit is present"
+          "Taxonomy topic match is specific enough for routing"
         ],
-        "discoveredAt": "2026-03-31T19:53:11.727Z",
+        "discoveredAt": "2026-03-31T19:57:57.986Z",
         "provider": "brave",
         "section_id": "business",
         "topic_id": "crypto-bitcoin",
@@ -40126,8 +42011,8 @@
         "angle": "general",
         "cluster_id": "evt-2026-03-31-crypto-bitcoin-general-global",
         "eventKey": "2026-03-31:crypto-bitcoin-general-global",
-        "cluster_size": 6,
-        "article_rich_count": 6,
+        "cluster_size": 4,
+        "article_rich_count": 4,
         "generic_page_count": 0,
         "discoveryContext": [
           {
@@ -40783,14 +42668,462 @@
               "executive",
               "orders"
             ]
+          },
+          {
+            "id": "brave-sec-1774987077970-0",
+            "title": "Why Businesses Are Paying Closer Attention to Crypto Infrastructure",
+            "summary": "Businesses are adopting crypto infrastructure for payments, tokenisation, and treasury efficiency, with growing global and African relevance.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "5 hours ago",
+            "sourceUrls": [
+              "https://tekedia.com/why-businesses-are-paying-closer-attention-to-crypto-infrastructure"
+            ],
+            "freshness": 8,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:57:57.972Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:business",
+            "sectionCandidates": [
+              "business"
+            ],
+            "topicCandidates": [
+              "crypto-bitcoin"
+            ],
+            "detectedSectionId": "business",
+            "detectedTopicId": "crypto-bitcoin",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "why businesses are paying closer attention to crypto infrastructure tekedia",
+            "canonicalUrl": "https://tekedia.com/why-businesses-are-paying-closer-attention-to-crypto-infrastructure",
+            "discoveryScore": 16.4,
+            "eventKey": "crypto-bitcoin:why businesses are paying closer attention to crypto infrastructure tekedia",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987077970-0",
+            "url": "https://tekedia.com/why-businesses-are-paying-closer-attention-to-crypto-infrastructure",
+            "canonical_url": "https://tekedia.com/why-businesses-are-paying-closer-attention-to-crypto-infrastructure",
+            "domain": "tekedia.com",
+            "canonical_domain": "tekedia.com",
+            "normalized_title": "why businesses are paying closer attention to crypto infrastructure",
+            "snippet": "Businesses are adopting crypto infrastructure for payments, tokenisation, and treasury efficiency, with growing global and African relevance.",
+            "published_at": "5 hours ago",
+            "section_id": "business",
+            "topic_id": "crypto-bitcoin",
+            "section_candidates": [
+              "business"
+            ],
+            "topic_candidates": [
+              "crypto-bitcoin"
+            ],
+            "cluster_id": null,
+            "event_key": "crypto-bitcoin:why businesses are paying closer attention to crypto infrastructure tekedia",
+            "keywords": [
+              "businesses",
+              "paying",
+              "closer",
+              "attention",
+              "crypto",
+              "infrastructure",
+              "adopting",
+              "payments",
+              "tokenisation",
+              "treasury",
+              "efficiency",
+              "growing"
+            ],
+            "title_signal_tokens": [
+              "businesses",
+              "paying",
+              "closer",
+              "attention",
+              "crypto",
+              "infrastructure"
+            ],
+            "url_signal_tokens": [
+              "businesses",
+              "paying",
+              "closer",
+              "attention",
+              "crypto",
+              "infrastructure"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "businesses",
+              "paying",
+              "closer",
+              "attention",
+              "crypto",
+              "infrastructure"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987077972-1",
+            "title": "Crypto Market Update: ETF Outflows Cap Bitcoin Price Rebound",
+            "summary": "Bitcoin tumbles to its March low of US$66,400 amid rising US Treasury yields and geopolitical tensions. With over US$1.3 billion in leveraged positions wiped out, the market's reactionary environment is palpable.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://investingnews.com/cryptocurrency-market-recap/"
+            ],
+            "freshness": 6,
+            "urgency": 5,
+            "discoveredAt": "2026-03-31T19:57:57.976Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:business",
+            "sectionCandidates": [
+              "business"
+            ],
+            "topicCandidates": [
+              "crypto-bitcoin"
+            ],
+            "detectedSectionId": "business",
+            "detectedTopicId": "crypto-bitcoin",
+            "region": "global",
+            "angle": "markets",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "crypto market update etf outflows cap bitcoin price rebound inn",
+            "canonicalUrl": "https://investingnews.com/cryptocurrency-market-recap/",
+            "discoveryScore": 15.4,
+            "eventKey": "crypto-bitcoin:crypto market update etf outflows cap bitcoin price rebound inn",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987077972-1",
+            "url": "https://investingnews.com/cryptocurrency-market-recap/",
+            "canonical_url": "https://investingnews.com/cryptocurrency-market-recap/",
+            "domain": "investingnews.com",
+            "canonical_domain": "investingnews.com",
+            "normalized_title": "crypto market update etf outflows cap bitcoin price rebound",
+            "snippet": "Bitcoin tumbles to its March low of US$66,400 amid rising US Treasury yields and geopolitical tensions. With over US$1.3 billion in leveraged positions wiped out, the market's reactionary environment is palpable.",
+            "published_at": "1 day ago",
+            "section_id": "business",
+            "topic_id": "crypto-bitcoin",
+            "section_candidates": [
+              "business"
+            ],
+            "topic_candidates": [
+              "crypto-bitcoin"
+            ],
+            "cluster_id": null,
+            "event_key": "crypto-bitcoin:crypto market update etf outflows cap bitcoin price rebound inn",
+            "keywords": [
+              "crypto",
+              "market",
+              "update",
+              "outflows",
+              "bitcoin",
+              "price",
+              "rebound",
+              "tumbles",
+              "march",
+              "rising",
+              "treasury",
+              "yields"
+            ],
+            "title_signal_tokens": [
+              "crypto",
+              "market",
+              "update",
+              "outflows",
+              "bitcoin",
+              "price",
+              "rebound"
+            ],
+            "url_signal_tokens": [
+              "cryptocurrency",
+              "market",
+              "recap"
+            ],
+            "title_url_overlap": 0.3333333333333333,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "us",
+            "titleTokens": [
+              "crypto",
+              "market",
+              "update",
+              "outflows",
+              "bitcoin",
+              "price",
+              "rebound"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987077976-2",
+            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+            "summary": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:57:57.983Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:business",
+            "sectionCandidates": [
+              "business",
+              "news"
+            ],
+            "topicCandidates": [
+              "crypto-bitcoin"
+            ],
+            "detectedSectionId": "business",
+            "detectedTopicId": "crypto-bitcoin",
+            "region": "global",
+            "angle": "policy",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move the econom",
+            "canonicalUrl": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+            "discoveryScore": 14.4,
+            "eventKey": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987077976-2",
+            "url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+            "canonical_url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+            "domain": "economictimes.indiatimes.com",
+            "canonical_domain": "economictimes.indiatimes.com",
+            "normalized_title": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move",
+            "snippet": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+            "published_at": "1 day ago",
+            "section_id": "business",
+            "topic_id": "crypto-bitcoin",
+            "section_candidates": [
+              "business",
+              "news"
+            ],
+            "topic_candidates": [
+              "crypto-bitcoin"
+            ],
+            "cluster_id": null,
+            "event_key": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
+            "keywords": [
+              "crypto",
+              "mortgage",
+              "explained",
+              "buying",
+              "home",
+              "here",
+              "what",
+              "tells",
+              "before",
+              "make",
+              "move",
+              "explore"
+            ],
+            "title_signal_tokens": [
+              "crypto",
+              "mortgage",
+              "explained",
+              "buying",
+              "home",
+              "here",
+              "what",
+              "tells",
+              "before",
+              "make",
+              "move"
+            ],
+            "url_signal_tokens": [
+              "international",
+              "buying",
+              "home",
+              "crypto",
+              "heres",
+              "what",
+              "tells",
+              "before",
+              "make",
+              "move",
+              "articleshow"
+            ],
+            "title_url_overlap": 0.7272727272727273,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "crypto",
+              "mortgage",
+              "explained",
+              "buying",
+              "home",
+              "here",
+              "what",
+              "tells",
+              "before",
+              "make",
+              "move"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987077983-3",
+            "title": "Morpheus Research report alleges 'anti-competitive' practices by MakeMyTrip despite CCI order",
+            "summary": "Morpheus Research, an activist short-seller, which disclosed a short position in the company, alleged that MakeMyTrip continues to enforce price parity arrangements with hotel partners.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "11 hours ago",
+            "sourceUrls": [
+              "https://www.moneycontrol.com/news/business/companies/morpheus-research-report-alleges-anti-competitive-practices-by-makemytrip-despite-cci-order-13875465.html"
+            ],
+            "freshness": 7,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:57:57.986Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:business",
+            "sectionCandidates": [
+              "business",
+              "news"
+            ],
+            "topicCandidates": [
+              "companies-deals"
+            ],
+            "detectedSectionId": "business",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "research",
+            "genericPage": false,
+            "page_kind": "official_release",
+            "genericity_score": 1,
+            "article_likelihood": 8,
+            "normalizedTitle": "morpheus research report alleges anti competitive practices by makemytrip despite cci order moneycontrol com",
+            "canonicalUrl": "https://www.moneycontrol.com/news/business/companies/morpheus-research-report-alleges-anti-competitive-practices-by-makemytrip-despite-cci-order-13875465.html",
+            "discoveryScore": 14.4,
+            "eventKey": "business:morpheus research report alleges anti competitive practices by makemytrip despit",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987077983-3",
+            "url": "https://www.moneycontrol.com/news/business/companies/morpheus-research-report-alleges-anti-competitive-practices-by-makemytrip-despite-cci-order-13875465.html",
+            "canonical_url": "https://www.moneycontrol.com/news/business/companies/morpheus-research-report-alleges-anti-competitive-practices-by-makemytrip-despite-cci-order-13875465.html",
+            "domain": "moneycontrol.com",
+            "canonical_domain": "moneycontrol.com",
+            "normalized_title": "morpheus research report alleges anti competitive practices by makemytrip despite cci order",
+            "snippet": "Morpheus Research, an activist short-seller, which disclosed a short position in the company, alleged that MakeMyTrip continues to enforce price parity arrangements with hotel partners.",
+            "published_at": "11 hours ago",
+            "section_id": "business",
+            "topic_id": null,
+            "section_candidates": [
+              "business",
+              "news"
+            ],
+            "topic_candidates": [
+              "companies-deals"
+            ],
+            "cluster_id": null,
+            "event_key": "business:morpheus research report alleges anti competitive practices by makemytrip despit",
+            "keywords": [
+              "morpheus",
+              "research",
+              "alleges",
+              "anti",
+              "competitive",
+              "practices",
+              "makemytrip",
+              "despite",
+              "order",
+              "activist",
+              "short",
+              "seller"
+            ],
+            "title_signal_tokens": [
+              "morpheus",
+              "research",
+              "alleges",
+              "anti",
+              "competitive",
+              "practices",
+              "makemytrip",
+              "despite",
+              "order"
+            ],
+            "url_signal_tokens": [
+              "companies",
+              "morpheus",
+              "research",
+              "alleges",
+              "anti",
+              "competitive",
+              "practices",
+              "makemytrip",
+              "despite",
+              "order"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "research",
+            "place": "global",
+            "titleTokens": [
+              "morpheus",
+              "research",
+              "alleges",
+              "anti",
+              "competitive",
+              "practices",
+              "makemytrip",
+              "despite",
+              "order"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-03-31-crypto-bitcoin-general-global",
       "publishabilityScore": 10,
       "discoveredAt": "2026-03-31T19:53:11.727Z",
-      "lastSeenAt": "2026-03-31T19:54:24.675Z",
-      "expiresAt": "2026-04-02T19:54:24.675Z",
+      "lastSeenAt": "2026-03-31T19:59:07.334Z",
+      "expiresAt": "2026-04-02T19:59:07.333Z",
       "status": "candidate",
       "lastSelectedAt": null,
       "lastPublishedAt": null
@@ -41753,7 +44086,7 @@
         "entities": [
           "tsa"
         ],
-        "when": "2026-03-31T19:53:11.718Z",
+        "when": "2026-03-31T19:59:07.942Z",
         "where": "Not specified",
         "whyItMatters": "The development could shape public services, public policy, or institutional decision-making.",
         "developmentStage": "confirmed",
@@ -41768,7 +44101,7 @@
           "Source diversity still needs source-pack validation",
           "At least one trusted source hit is present"
         ],
-        "discoveredAt": "2026-03-31T19:53:11.718Z",
+        "discoveredAt": "2026-03-31T19:59:07.942Z",
         "provider": "google_trusted",
         "section_id": "tech",
         "topic_id": null,
@@ -41878,14 +44211,113 @@
               "order",
               "workers"
             ]
+          },
+          {
+            "id": "google-sec-1774987147940-8",
+            "title": "Trump Signs Order to Pay TSA Workers",
+            "summary": "17 hours ago ... Many unpaid TSA employees have been calling in sick while others have quit, causing delays at airports across the country as travelers head out on spring break.",
+            "whyItMatters": "",
+            "involvedParties": [
+              "tsa"
+            ],
+            "entities": [
+              "tsa"
+            ],
+            "when": "",
+            "sourceUrls": [
+              "https://www.wsj.com/public/resources/documents/GqF7D5JzRw3xpQ4mBoPa-WSJNewsPaper-3-28-2026.pdf?gaa_at=eafs&gaa_n=AWEtsqcHdMqeNHCe3FfrY5mj7Gp6m9we5rHVFDh9jIO9Y26nSNw7_CWPJZ7W&gaa_ts=69c862e1&gaa_sig=Dzfbv_1POYxFmR28afVJiBfQa9QWNhPzIMYmtfPy__RKoKilddZx_rDITM3wIVBCRUMmgSJHnXY5YdeA5pOsMA%3D%3D"
+            ],
+            "freshness": 4,
+            "urgency": 6,
+            "discoveredAt": "2026-03-31T19:59:07.942Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:tech",
+            "sectionCandidates": [
+              "tech"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "tech",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "consumer-impact",
+            "genericPage": false,
+            "page_kind": "official_release",
+            "genericity_score": 1,
+            "article_likelihood": 8,
+            "normalizedTitle": "trump signs order to pay tsa workers wsj",
+            "canonicalUrl": "https://www.wsj.com/public/resources/documents/gqf7d5jzrw3xpq4mbopa-wsjnewspaper-3-28-2026.pdf",
+            "discoveryScore": 14.4,
+            "eventKey": "tech:trump signs order to pay tsa workers wsj",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1774987147940-8",
+            "url": "https://www.wsj.com/public/resources/documents/gqf7d5jzrw3xpq4mbopa-wsjnewspaper-3-28-2026.pdf",
+            "canonical_url": "https://www.wsj.com/public/resources/documents/gqf7d5jzrw3xpq4mbopa-wsjnewspaper-3-28-2026.pdf",
+            "domain": "wsj.com",
+            "canonical_domain": "wsj.com",
+            "normalized_title": "trump signs order to pay tsa workers",
+            "snippet": "17 hours ago ... Many unpaid TSA employees have been calling in sick while others have quit, causing delays at airports across the country as travelers head out on spring break.",
+            "published_at": "2026-03-31T19:59:07.942Z",
+            "section_id": "tech",
+            "topic_id": null,
+            "section_candidates": [
+              "tech"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "tech:trump signs order to pay tsa workers wsj",
+            "keywords": [
+              "trump",
+              "signs",
+              "order",
+              "workers",
+              "hours",
+              "many",
+              "unpaid",
+              "employees",
+              "been",
+              "calling",
+              "sick",
+              "while"
+            ],
+            "title_signal_tokens": [
+              "trump",
+              "signs",
+              "order",
+              "workers"
+            ],
+            "url_signal_tokens": [
+              "public",
+              "resources",
+              "documents",
+              "gqf7d5jzrw3xpq4mbopa",
+              "wsjnewspaper"
+            ],
+            "title_url_overlap": 0,
+            "title_url_mismatch": true,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "trump",
+              "signs",
+              "order",
+              "workers"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-03-31-tech-general-global-tsa",
       "publishabilityScore": 7,
       "discoveredAt": "2026-03-31T19:53:11.718Z",
-      "lastSeenAt": "2026-03-31T19:54:24.675Z",
-      "expiresAt": "2026-04-02T19:54:24.675Z",
+      "lastSeenAt": "2026-03-31T19:59:41.841Z",
+      "expiresAt": "2026-04-02T19:59:41.841Z",
       "status": "candidate",
       "lastSelectedAt": null,
       "lastPublishedAt": null
@@ -42827,6 +45259,1077 @@
       "selectedAt": null,
       "selectionExpiresAt": null,
       "publishedSlug": "2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi"
+    },
+    {
+      "identityKey": "cluster:evt-2026-03-31-us-politics-general-global",
+      "brief": {
+        "id": "evt-2026-03-31-us-politics-general-global",
+        "title": "Climate law 'battle royale'",
+        "whatHappened": "1 day ago ... The Democratic Party's embrace of affordability politics is pushing what remains of U.S.",
+        "whoIsInvolved": "Unspecified",
+        "involvedParties": [
+          "Unspecified"
+        ],
+        "entities": [
+          "Unspecified"
+        ],
+        "when": "2026-03-31T19:58:28.185Z",
+        "where": "Not specified",
+        "whyItMatters": "The development could affect policy decisions, government operations, or how public institutions respond next.",
+        "developmentStage": "confirmed",
+        "sourceUrls": [
+          "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808",
+          "https://www.bbc.com/news/articles/cr513dnq61mo",
+          "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+          "https://www.reuters.com/business/environment/",
+          "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever"
+        ],
+        "publishabilityScore": 10,
+        "publishabilityNotes": [
+          "Has a usable summary sentence",
+          "Parties remain unclear",
+          "Freshness is moderate",
+          "Multiple source URLs already attached",
+          "Clustered across multiple discovery hits",
+          "Cluster contains multiple article-like materials",
+          "Taxonomy topic match is specific enough for routing",
+          "At least one trusted source hit is present"
+        ],
+        "discoveredAt": "2026-03-31T19:58:28.185Z",
+        "provider": "google_trusted",
+        "section_id": "news",
+        "topic_id": "us-politics",
+        "region": "global",
+        "angle": "general",
+        "cluster_id": "evt-2026-03-31-us-politics-general-global",
+        "eventKey": "2026-03-31:us-politics-general-global",
+        "cluster_size": 5,
+        "article_rich_count": 4,
+        "generic_page_count": 0,
+        "discoveryContext": [
+          {
+            "id": "google-sec-1774987108175-3",
+            "title": "Climate law 'battle royale'",
+            "summary": "1 day ago ... The Democratic Party's embrace of affordability politics is pushing what remains of U.S. climate policy to the brink.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:58:28.178Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:news",
+            "sectionCandidates": [
+              "news"
+            ],
+            "topicCandidates": [
+              "us-politics",
+              "climate-extreme-weather"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": "us-politics",
+            "region": "us",
+            "angle": "policy",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "climate law battle royale politico",
+            "canonicalUrl": "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808",
+            "discoveryScore": 15.6,
+            "eventKey": "us-politics:climate law battle royale politico",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1774987108175-3",
+            "url": "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808",
+            "canonical_url": "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808",
+            "domain": "politico.com",
+            "canonical_domain": "politico.com",
+            "normalized_title": "climate law battle royale",
+            "snippet": "1 day ago ... The Democratic Party's embrace of affordability politics is pushing what remains of U.S. climate policy to the brink.",
+            "published_at": "2026-03-31T19:58:28.178Z",
+            "section_id": "news",
+            "topic_id": "us-politics",
+            "section_candidates": [
+              "news"
+            ],
+            "topic_candidates": [
+              "us-politics",
+              "climate-extreme-weather"
+            ],
+            "cluster_id": null,
+            "event_key": "us-politics:climate law battle royale politico",
+            "keywords": [
+              "climate",
+              "battle",
+              "royale",
+              "democratic",
+              "party",
+              "embrace",
+              "affordability",
+              "politics",
+              "pushing",
+              "what",
+              "remains",
+              "policy"
+            ],
+            "title_signal_tokens": [
+              "climate",
+              "battle",
+              "royale"
+            ],
+            "url_signal_tokens": [
+              "newsletters",
+              "weekly",
+              "york",
+              "jersey",
+              "energy",
+              "climate",
+              "battle",
+              "royale"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "us",
+            "titleTokens": [
+              "climate",
+              "battle",
+              "royale"
+            ]
+          },
+          {
+            "id": "google-sec-1774987108178-4",
+            "title": "What's next in the US government shutdown, as situation eases at ...",
+            "summary": "1 day ago ... Wait times in US airport security queues eased somewhat on Monday after President Donald Trump signed an order instructing his administration to find a way ...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.bbc.com/news/articles/cr513dnq61mo"
+            ],
+            "freshness": 4,
+            "urgency": 6,
+            "discoveredAt": "2026-03-31T19:58:28.180Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:news",
+            "sectionCandidates": [
+              "news",
+              "tech"
+            ],
+            "topicCandidates": [
+              "cybersecurity"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "policy",
+            "genericPage": false,
+            "page_kind": "official_release",
+            "genericity_score": 1,
+            "article_likelihood": 7,
+            "normalizedTitle": "what s next in the us government shutdown as situation eases at",
+            "canonicalUrl": "https://www.bbc.com/news/articles/cr513dnq61mo",
+            "discoveryScore": 14.8,
+            "eventKey": "news:what s next in the us government shutdown as situation eases at",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1774987108178-4",
+            "url": "https://www.bbc.com/news/articles/cr513dnq61mo",
+            "canonical_url": "https://www.bbc.com/news/articles/cr513dnq61mo",
+            "domain": "bbc.com",
+            "canonical_domain": "bbc.com",
+            "normalized_title": "what s next in the us government shutdown as situation eases at",
+            "snippet": "1 day ago ... Wait times in US airport security queues eased somewhat on Monday after President Donald Trump signed an order instructing his administration to find a way ...",
+            "published_at": "2026-03-31T19:58:28.180Z",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "tech"
+            ],
+            "topic_candidates": [
+              "cybersecurity"
+            ],
+            "cluster_id": null,
+            "event_key": "news:what s next in the us government shutdown as situation eases at",
+            "keywords": [
+              "what",
+              "next",
+              "government",
+              "shutdown",
+              "situation",
+              "eases",
+              "wait",
+              "times",
+              "airport",
+              "security",
+              "queues",
+              "eased"
+            ],
+            "title_signal_tokens": [
+              "what",
+              "next",
+              "government",
+              "shutdown",
+              "situation",
+              "eases"
+            ],
+            "url_signal_tokens": [
+              "cr513dnq61mo"
+            ],
+            "title_url_overlap": 0,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "shutdown",
+            "place": "us",
+            "titleTokens": [
+              "what",
+              "next",
+              "government",
+              "shutdown",
+              "situation",
+              "eases"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987077554-0",
+            "title": "Ofcom to investigate complaints of climate change denial",
+            "summary": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "2 days ago",
+            "sourceUrls": [
+              "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/"
+            ],
+            "freshness": 5,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:57:57.583Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:news",
+            "sectionCandidates": [
+              "news"
+            ],
+            "topicCandidates": [
+              "climate-extreme-weather"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "official_release",
+            "genericity_score": 1,
+            "article_likelihood": 9,
+            "normalizedTitle": "ofcom to investigate complaints of climate change denial watts up with that",
+            "canonicalUrl": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+            "discoveryScore": 13,
+            "eventKey": "news:ofcom to investigate complaints of climate change denial watts up with that",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987077554-0",
+            "url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+            "canonical_url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+            "domain": "wattsupwiththat.com",
+            "canonical_domain": "wattsupwiththat.com",
+            "normalized_title": "ofcom to investigate complaints of climate change denial",
+            "snippet": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
+            "published_at": "2 days ago",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news"
+            ],
+            "topic_candidates": [
+              "climate-extreme-weather"
+            ],
+            "cluster_id": null,
+            "event_key": "news:ofcom to investigate complaints of climate change denial watts up with that",
+            "keywords": [
+              "ofcom",
+              "investigate",
+              "complaints",
+              "climate",
+              "change",
+              "denial",
+              "stop",
+              "long",
+              "before",
+              "allowed",
+              "call",
+              "starmer"
+            ],
+            "title_signal_tokens": [
+              "ofcom",
+              "investigate",
+              "complaints",
+              "climate",
+              "change",
+              "denial"
+            ],
+            "url_signal_tokens": [
+              "ofcom",
+              "investigate",
+              "complaints",
+              "climate",
+              "change",
+              "denial"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "ofcom",
+              "investigate",
+              "complaints",
+              "climate",
+              "change",
+              "denial"
+            ]
+          },
+          {
+            "id": "google-sec-1774987108183-6",
+            "title": "Environmental & Climate News",
+            "summary": "6 hours ago ... Find latest environment news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.reuters.com/business/environment/"
+            ],
+            "freshness": 4,
+            "urgency": 6,
+            "discoveredAt": "2026-03-31T19:58:28.185Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:news",
+            "sectionCandidates": [
+              "news",
+              "business"
+            ],
+            "topicCandidates": [
+              "climate-extreme-weather"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "unknown",
+            "genericity_score": 2,
+            "article_likelihood": 1,
+            "normalizedTitle": "environmental climate news reuters",
+            "canonicalUrl": "https://www.reuters.com/business/environment/",
+            "discoveryScore": 13,
+            "eventKey": "news:environmental climate news reuters",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1774987108183-6",
+            "url": "https://www.reuters.com/business/environment/",
+            "canonical_url": "https://www.reuters.com/business/environment/",
+            "domain": "reuters.com",
+            "canonical_domain": "reuters.com",
+            "normalized_title": "environmental climate news",
+            "snippet": "6 hours ago ... Find latest environment news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
+            "published_at": "2026-03-31T19:58:28.185Z",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "business"
+            ],
+            "topic_candidates": [
+              "climate-extreme-weather"
+            ],
+            "cluster_id": null,
+            "event_key": "news:environmental climate news reuters",
+            "keywords": [
+              "environmental",
+              "climate",
+              "hours",
+              "find",
+              "environment",
+              "every",
+              "corner",
+              "globe",
+              "reuters",
+              "your",
+              "online",
+              "source"
+            ],
+            "title_signal_tokens": [
+              "environmental",
+              "climate"
+            ],
+            "url_signal_tokens": [
+              "environment"
+            ],
+            "title_url_overlap": 0,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "environmental",
+              "climate"
+            ]
+          },
+          {
+            "id": "brave-sec-1774987077596-3",
+            "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever",
+            "summary": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "2 days ago",
+            "sourceUrls": [
+              "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever"
+            ],
+            "freshness": 5,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:57:57.600Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:news",
+            "sectionCandidates": [
+              "news"
+            ],
+            "topicCandidates": [
+              "climate-extreme-weather"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "in the age of misinformation climate literacy matters more than ever honolulu civil beat",
+            "canonicalUrl": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+            "discoveryScore": 12.4,
+            "eventKey": "news:in the age of misinformation climate literacy matters more than ever honolulu ci",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774987077596-3",
+            "url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+            "canonical_url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+            "domain": "civilbeat.org",
+            "canonical_domain": "civilbeat.org",
+            "normalized_title": "in the age of misinformation climate literacy matters more than ever",
+            "snippet": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
+            "published_at": "2 days ago",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news"
+            ],
+            "topic_candidates": [
+              "climate-extreme-weather"
+            ],
+            "cluster_id": null,
+            "event_key": "news:in the age of misinformation climate literacy matters more than ever honolulu ci",
+            "keywords": [
+              "misinformation",
+              "climate",
+              "literacy",
+              "matters",
+              "more",
+              "than",
+              "ever",
+              "education",
+              "remains",
+              "inconsistent",
+              "optional",
+              "disconnected"
+            ],
+            "title_signal_tokens": [
+              "misinformation",
+              "climate",
+              "literacy",
+              "matters",
+              "more",
+              "than",
+              "ever"
+            ],
+            "url_signal_tokens": [
+              "misinformation",
+              "climate",
+              "literacy",
+              "matters",
+              "more",
+              "than",
+              "ever"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "misinformation",
+              "climate",
+              "literacy",
+              "matters",
+              "more",
+              "than",
+              "ever"
+            ]
+          }
+        ]
+      },
+      "briefId": "evt-2026-03-31-us-politics-general-global",
+      "publishabilityScore": 10,
+      "discoveredAt": "2026-03-31T19:58:28.185Z",
+      "lastSeenAt": "2026-03-31T19:59:07.334Z",
+      "expiresAt": "2026-04-02T19:59:07.333Z",
+      "status": "candidate",
+      "lastSelectedAt": null,
+      "lastPublishedAt": null
+    },
+    {
+      "identityKey": "cluster:evt-2026-03-31-news-general-us-congress-openai",
+      "brief": {
+        "id": "evt-2026-03-31-news-general-us-congress-openai",
+        "title": "House Appropriations Committee",
+        "whatHappened": "21 hours ago ... All the legislation activity and reports of the House Appropriations Committee.",
+        "whoIsInvolved": "congress, openai",
+        "involvedParties": [
+          "congress",
+          "openai"
+        ],
+        "entities": [
+          "congress",
+          "openai"
+        ],
+        "when": "2026-03-31T19:59:07.953Z",
+        "where": "us",
+        "whyItMatters": "The development could shape public services, public policy, or institutional decision-making.",
+        "developmentStage": "confirmed",
+        "sourceUrls": [
+          "https://www.congress.gov/committee/house-appropriations/hsap00",
+          "https://www.reuters.com/technology/openai/",
+          "https://www.theglobeandmail.com/investing/markets/stocks/HIMS-N/"
+        ],
+        "publishabilityScore": 9,
+        "publishabilityNotes": [
+          "Has a usable summary sentence",
+          "Specific parties are identified",
+          "Freshness is moderate",
+          "Multiple source URLs already attached",
+          "Clustered across multiple discovery hits",
+          "At least one trusted source hit is present"
+        ],
+        "discoveredAt": "2026-03-31T19:59:07.953Z",
+        "provider": "google_trusted",
+        "section_id": "news",
+        "topic_id": null,
+        "region": "us",
+        "angle": "general",
+        "cluster_id": "evt-2026-03-31-news-general-us-congress-openai",
+        "eventKey": "2026-03-31:news-general-us-congress-openai",
+        "cluster_size": 3,
+        "article_rich_count": 1,
+        "generic_page_count": 0,
+        "discoveryContext": [
+          {
+            "id": "google-sec-1774987147947-2",
+            "title": "House Appropriations Committee",
+            "summary": "21 hours ago ... All the legislation activity and reports of the House Appropriations Committee.",
+            "whyItMatters": "",
+            "involvedParties": [
+              "congress"
+            ],
+            "entities": [
+              "congress"
+            ],
+            "when": "",
+            "sourceUrls": [
+              "https://www.congress.gov/committee/house-appropriations/hsap00"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:59:07.949Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:health",
+            "sectionCandidates": [
+              "news",
+              "health"
+            ],
+            "topicCandidates": [
+              "us-politics"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "us",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "official_release",
+            "genericity_score": 1,
+            "article_likelihood": 7,
+            "normalizedTitle": "house appropriations committee congress gov",
+            "canonicalUrl": "https://www.congress.gov/committee/house-appropriations/hsap00",
+            "discoveryScore": 12.8,
+            "eventKey": "news:house appropriations committee congress gov",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1774987147947-2",
+            "url": "https://www.congress.gov/committee/house-appropriations/hsap00",
+            "canonical_url": "https://www.congress.gov/committee/house-appropriations/hsap00",
+            "domain": "congress.gov",
+            "canonical_domain": "congress.gov",
+            "normalized_title": "house appropriations committee",
+            "snippet": "21 hours ago ... All the legislation activity and reports of the House Appropriations Committee.",
+            "published_at": "2026-03-31T19:59:07.949Z",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "health"
+            ],
+            "topic_candidates": [
+              "us-politics"
+            ],
+            "cluster_id": null,
+            "event_key": "news:house appropriations committee congress gov",
+            "keywords": [
+              "house",
+              "appropriations",
+              "committee",
+              "hours",
+              "legislation",
+              "activity"
+            ],
+            "title_signal_tokens": [
+              "house",
+              "appropriations",
+              "committee"
+            ],
+            "url_signal_tokens": [
+              "committee",
+              "house",
+              "appropriations",
+              "hsap00"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "us",
+            "titleTokens": [
+              "house",
+              "appropriations",
+              "committee"
+            ]
+          },
+          {
+            "id": "google-sec-1774987147925-2",
+            "title": "OpenAI News | Today's Latest Stories",
+            "summary": "2 days ago ... Latest Stories ; 13 hours ago. SoftBank secures $40 billion loan to boost OpenAI investments · Event to pitch AI for businesses in Tokyo ; March 26, 2026. OpenAI's ...",
+            "whyItMatters": "",
+            "involvedParties": [
+              "openai"
+            ],
+            "entities": [
+              "openai"
+            ],
+            "when": "",
+            "sourceUrls": [
+              "https://www.reuters.com/technology/openai/"
+            ],
+            "freshness": 4,
+            "urgency": 5,
+            "discoveredAt": "2026-03-31T19:59:07.928Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:tech",
+            "sectionCandidates": [
+              "news",
+              "tech"
+            ],
+            "topicCandidates": [
+              "ai-big-tech"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "unknown",
+            "genericity_score": 2,
+            "article_likelihood": 1,
+            "normalizedTitle": "openai news today s latest stories reuters",
+            "canonicalUrl": "https://www.reuters.com/technology/openai/",
+            "discoveryScore": 12,
+            "eventKey": "news:openai news today s latest stories reuters",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1774987147925-2",
+            "url": "https://www.reuters.com/technology/openai/",
+            "canonical_url": "https://www.reuters.com/technology/openai/",
+            "domain": "reuters.com",
+            "canonical_domain": "reuters.com",
+            "normalized_title": "openai news",
+            "snippet": "2 days ago ... Latest Stories ; 13 hours ago. SoftBank secures $40 billion loan to boost OpenAI investments · Event to pitch AI for businesses in Tokyo ; March 26, 2026. OpenAI's ...",
+            "published_at": "2026-03-31T19:59:07.928Z",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "tech"
+            ],
+            "topic_candidates": [
+              "ai-big-tech"
+            ],
+            "cluster_id": null,
+            "event_key": "news:openai news today s latest stories reuters",
+            "keywords": [
+              "openai",
+              "days",
+              "hours",
+              "softbank",
+              "secures",
+              "billion",
+              "loan",
+              "boost",
+              "investments",
+              "event",
+              "pitch",
+              "businesses"
+            ],
+            "title_signal_tokens": [
+              "openai"
+            ],
+            "url_signal_tokens": [
+              "openai"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "openai"
+            ]
+          },
+          {
+            "id": "google-sec-1774987147951-4",
+            "title": "Hims & Hers Health Inc (HIMS",
+            "summary": "2 hours ago ... Profile. Hims & Hers Health Inc. is a multi-specialty telehealth platform that connects consumers to licensed healthcare professionals, enabling medical care ...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.theglobeandmail.com/investing/markets/stocks/HIMS-N/"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:59:07.953Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:health",
+            "sectionCandidates": [
+              "news",
+              "health",
+              "business"
+            ],
+            "topicCandidates": [
+              "economy-markets"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "unknown",
+            "genericity_score": 0,
+            "article_likelihood": 1,
+            "normalizedTitle": "hims hers health inc hims n stock price and news",
+            "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/hims-n/",
+            "discoveryScore": 11,
+            "eventKey": "news:hims hers health inc hims n stock price and news",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1774987147951-4",
+            "url": "https://www.theglobeandmail.com/investing/markets/stocks/hims-n/",
+            "canonical_url": "https://www.theglobeandmail.com/investing/markets/stocks/hims-n/",
+            "domain": "theglobeandmail.com",
+            "canonical_domain": "theglobeandmail.com",
+            "normalized_title": "hims hers health inc hims",
+            "snippet": "2 hours ago ... Profile. Hims & Hers Health Inc. is a multi-specialty telehealth platform that connects consumers to licensed healthcare professionals, enabling medical care ...",
+            "published_at": "2026-03-31T19:59:07.953Z",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "health",
+              "business"
+            ],
+            "topic_candidates": [
+              "economy-markets"
+            ],
+            "cluster_id": null,
+            "event_key": "news:hims hers health inc hims n stock price and news",
+            "keywords": [
+              "hims",
+              "hers",
+              "health",
+              "hours",
+              "profile",
+              "multi",
+              "specialty",
+              "telehealth",
+              "platform",
+              "connects",
+              "consumers",
+              "licensed"
+            ],
+            "title_signal_tokens": [
+              "hims",
+              "hers"
+            ],
+            "url_signal_tokens": [
+              "investing",
+              "markets",
+              "stocks",
+              "hims"
+            ],
+            "title_url_overlap": 0.5,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "hims",
+              "hers",
+              "health"
+            ]
+          }
+        ]
+      },
+      "briefId": "evt-2026-03-31-news-general-us-congress-openai",
+      "publishabilityScore": 9,
+      "discoveredAt": "2026-03-31T19:59:07.953Z",
+      "lastSeenAt": "2026-03-31T19:59:41.841Z",
+      "expiresAt": "2026-04-02T19:59:41.841Z",
+      "status": "published",
+      "lastSelectedAt": "2026-03-31T20:00:04.842Z",
+      "lastPublishedAt": "2026-03-31T20:00:04.842Z",
+      "selectedByWorkflow": null,
+      "selectedByRunId": null,
+      "selectedAt": null,
+      "selectionExpiresAt": null,
+      "publishedSlug": "2026-03-31-house-appropriations-committee-posts-new-legislative-activit"
+    },
+    {
+      "identityKey": "cluster:evt-2026-03-31-public-health-general-global",
+      "brief": {
+        "id": "evt-2026-03-31-public-health-general-global",
+        "title": "NBC News Author Aria Bendix",
+        "whatHappened": "12 hours ago ... I am a health reporter for NBC News Digital.",
+        "whoIsInvolved": "Unspecified",
+        "involvedParties": [
+          "Unspecified"
+        ],
+        "entities": [
+          "Unspecified"
+        ],
+        "when": "2026-03-31T19:59:07.945Z",
+        "where": "Not specified",
+        "whyItMatters": "The development could matter for public health, regulation, scientific progress, or access to treatment.",
+        "developmentStage": "confirmed",
+        "sourceUrls": [
+          "https://www.nbcnews.com/author/aria-bendix-ncpn1294089"
+        ],
+        "publishabilityScore": 7,
+        "publishabilityNotes": [
+          "Has a usable summary sentence",
+          "Parties remain unclear",
+          "Freshness is moderate",
+          "Source diversity still needs source-pack validation",
+          "Taxonomy topic match is specific enough for routing",
+          "At least one trusted source hit is present"
+        ],
+        "discoveredAt": "2026-03-31T19:59:07.945Z",
+        "provider": "google_trusted",
+        "section_id": "health",
+        "topic_id": "public-health",
+        "region": "global",
+        "angle": "general",
+        "cluster_id": "evt-2026-03-31-public-health-general-global",
+        "eventKey": "2026-03-31:public-health-general-global",
+        "cluster_size": 1,
+        "article_rich_count": 1,
+        "generic_page_count": 0,
+        "discoveryContext": [
+          {
+            "id": "google-sec-1774987147943-0",
+            "title": "NBC News Author Aria Bendix",
+            "summary": "12 hours ago ... I am a health reporter for NBC News Digital. I cover a variety of health-related topics with an emphasis on public health issues.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.nbcnews.com/author/aria-bendix-ncpn1294089"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T19:59:07.945Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:health",
+            "sectionCandidates": [
+              "health",
+              "news"
+            ],
+            "topicCandidates": [
+              "public-health"
+            ],
+            "detectedSectionId": "health",
+            "detectedTopicId": "public-health",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "nbc news author aria bendix",
+            "canonicalUrl": "https://www.nbcnews.com/author/aria-bendix-ncpn1294089",
+            "discoveryScore": 14.4,
+            "eventKey": "public-health:nbc news author aria bendix",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1774987147943-0",
+            "url": "https://www.nbcnews.com/author/aria-bendix-ncpn1294089",
+            "canonical_url": "https://www.nbcnews.com/author/aria-bendix-ncpn1294089",
+            "domain": "nbcnews.com",
+            "canonical_domain": "nbcnews.com",
+            "normalized_title": "nbc news author aria bendix",
+            "snippet": "12 hours ago ... I am a health reporter for NBC News Digital. I cover a variety of health-related topics with an emphasis on public health issues.",
+            "published_at": "2026-03-31T19:59:07.945Z",
+            "section_id": "health",
+            "topic_id": "public-health",
+            "section_candidates": [
+              "health",
+              "news"
+            ],
+            "topic_candidates": [
+              "public-health"
+            ],
+            "cluster_id": null,
+            "event_key": "public-health:nbc news author aria bendix",
+            "keywords": [
+              "author",
+              "aria",
+              "bendix",
+              "hours",
+              "health",
+              "reporter",
+              "digital",
+              "cover",
+              "variety",
+              "related",
+              "topics",
+              "emphasis"
+            ],
+            "title_signal_tokens": [
+              "author",
+              "aria",
+              "bendix"
+            ],
+            "url_signal_tokens": [
+              "author",
+              "aria",
+              "bendix",
+              "ncpn1294089"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "author",
+              "aria",
+              "bendix"
+            ]
+          }
+        ]
+      },
+      "briefId": "evt-2026-03-31-public-health-general-global",
+      "publishabilityScore": 7,
+      "discoveredAt": "2026-03-31T19:59:07.945Z",
+      "lastSeenAt": "2026-03-31T19:59:41.841Z",
+      "expiresAt": "2026-04-02T19:59:41.841Z",
+      "status": "candidate",
+      "lastSelectedAt": null,
+      "lastPublishedAt": null
     }
   ]
 }

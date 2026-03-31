@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T19:55:00.594Z",
+  "updatedAt": "2026-03-31T20:00:04.851Z",
   "items": [
     {
       "identityKey": "cluster:evt-2026-03-28-sports-general-global",
@@ -429,6 +429,50 @@
       "lastSelectedAt": "2026-03-29T22:44:18.190Z",
       "lastPublishedAt": "2026-03-29T22:44:18.190Z",
       "publishedSlug": "2026-03-29-ai-s-soaring-power-use-puts-tech-climate-pledges-under-strai-2026-03-29-",
+      "selectedByWorkflow": null,
+      "selectedByRunId": null,
+      "selectedAt": null,
+      "selectionExpiresAt": null
+    },
+    {
+      "identityKey": "cluster:evt-2026-03-31-news-general-us-congress-openai",
+      "briefId": "evt-2026-03-31-news-general-us-congress-openai",
+      "title": "House Appropriations Committee",
+      "normalizedTitle": "house appropriations committee",
+      "section_id": "news",
+      "topic_id": "us-politics",
+      "articleType": "report",
+      "selectionOrigin": "current_run",
+      "poolIdentityKey": "cluster:evt-2026-03-31-news-general-us-congress-openai",
+      "rank": 1,
+      "score": 37.5,
+      "scoreNotes": [
+        "section_penalty:23",
+        "topic_penalty:29",
+        "region_penalty:5",
+        "angle_penalty:44",
+        "cluster_repeat:1",
+        "entity_penalty:6",
+        "domains:2",
+        "consistency:8.8",
+        "core:2",
+        "supporting:0"
+      ],
+      "sourceCount": 2,
+      "uniqueDomains": 2,
+      "directEventSourceCount": 2,
+      "independentEventDomains": 2,
+      "gateDecision": "PASS",
+      "gateNotes": [
+        "Role-aware one-event source-pack gate passed"
+      ],
+      "discoveredAt": "2026-03-31T19:59:07.953Z",
+      "firstQueuedAt": "2026-03-31T19:59:42.469Z",
+      "lastQueuedAt": "2026-03-31T20:00:04.842Z",
+      "status": "published",
+      "lastSelectedAt": "2026-03-31T20:00:04.842Z",
+      "lastPublishedAt": "2026-03-31T20:00:04.842Z",
+      "publishedSlug": "2026-03-31-house-appropriations-committee-posts-new-legislative-activit",
       "selectedByWorkflow": null,
       "selectedByRunId": null,
       "selectedAt": null,

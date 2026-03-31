@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T19:54:31.836Z",
+  "updatedAt": "2026-03-31T19:59:41.819Z",
   "items": [
     {
       "identityKey": "event:news:sustainable business news latest eco headlines reuters",
@@ -228,19 +228,19 @@
     {
       "identityKey": "event:news:ukhotviews latest tech news views",
       "item": {
-        "id": "brave-sec-1774981216530-3",
+        "id": "brave-sec-1774987083856-3",
         "title": "UKHotViews - Latest Tech News & Views",
         "summary": "Bringing you opinionated, authoritative research & analysis on the UK technology scene.",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "18 hours ago",
+        "when": "20 hours ago",
         "sourceUrls": [
           "https://www.techmarketview.com/ukhotviews/"
         ],
-        "freshness": 7,
+        "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T18:20:16.534Z",
+        "discoveredAt": "2026-03-31T19:58:03.858Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -259,7 +259,7 @@
         "article_likelihood": 7,
         "normalizedTitle": "ukhotviews latest tech news views",
         "canonicalUrl": "https://www.techmarketview.com/ukhotviews/",
-        "discoveryScore": 13.8,
+        "discoveryScore": 12.8,
         "eventKey": "news:ukhotviews latest tech news views",
         "signalSpecificityScore": 6,
         "signalSpecificityNotes": [
@@ -269,9 +269,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T18:20:16.534Z",
-      "lastSeenAt": "2026-03-31T18:21:53.396Z",
-      "expiresAt": "2026-04-02T18:21:53.396Z"
+      "discoveredAt": "2026-03-31T19:58:03.858Z",
+      "lastSeenAt": "2026-03-31T19:59:07.285Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:tech:5 things to know before the market opens friday cnbc",
@@ -316,7 +316,7 @@
     {
       "identityKey": "event:news:ofcom to investigate complaints of climate change denial watts up with that",
       "item": {
-        "id": "brave-sec-1774986785715-0",
+        "id": "brave-sec-1774987077554-0",
         "title": "Ofcom to investigate complaints of climate change denial – Watts Up With That?",
         "summary": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
         "whyItMatters": "",
@@ -328,7 +328,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:53:05.719Z",
+        "discoveredAt": "2026-03-31T19:57:57.583Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -359,9 +359,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:53:05.719Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:57:57.583Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:medical-research:quantum biopharma s 2025 audited year end financial results",
@@ -641,7 +641,7 @@
     {
       "identityKey": "event:companies-deals:travel and vacation providers stocks q4 earnings hyatt hotels",
       "item": {
-        "id": "google-sec-1774912723022-1",
+        "id": "google-sec-1774987108196-1",
         "title": "Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...",
         "summary": "2 days ago ... The Consumer Discretionary sector, by definition, is made up of companies selling non-essential goods and services. When economic conditions deteriorate or ...",
         "whyItMatters": "",
@@ -653,7 +653,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-30T23:18:43.026Z",
+        "discoveredAt": "2026-03-31T19:58:28.199Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:business",
@@ -676,11 +676,19 @@
         "normalizedTitle": "travel and vacation providers stocks q4 earnings hyatt hotels",
         "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/h/pressreleases/1002532/reflecting-on-consumer-discretionary-travel-and-vacation-providers-stocks-q4-earnings-hyatt-hotels-nyseh/",
         "discoveryScore": 16.4,
-        "eventKey": "companies-deals:travel and vacation providers stocks q4 earnings hyatt hotels"
+        "eventKey": "companies-deals:travel and vacation providers stocks q4 earnings hyatt hotels",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:18:43.026Z",
-      "lastSeenAt": "2026-03-30T23:19:53.390Z",
-      "expiresAt": "2026-04-01T23:19:53.390Z"
+      "discoveredAt": "2026-03-31T19:58:28.199Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:business:q4 consumer discretionary casino operator earnings penn",
@@ -730,7 +738,7 @@
     {
       "identityKey": "event:business:spotting winners hilton nyse hlt and consumer discretionary",
       "item": {
-        "id": "google-sec-1774912723026-2",
+        "id": "google-sec-1774987108199-2",
         "title": "Spotting Winners: Hilton (NYSE:HLT) And Consumer Discretionary",
         "summary": "2 days ago ... The 19 consumer discretionary - travel and vacation providers stocks we track reported a mixed Q4. As a group, revenues beat analysts' consensus estimates by ...",
         "whyItMatters": "",
@@ -742,7 +750,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:18:43.029Z",
+        "discoveredAt": "2026-03-31T19:58:28.203Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:business",
@@ -764,11 +772,19 @@
         "normalizedTitle": "spotting winners hilton nyse hlt and consumer discretionary",
         "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/hlt/pressreleases/999257/spotting-winners-hilton-nysehlt-and-consumer-discretionary-travel-and-vacation-providers-stocks-in-q4/",
         "discoveryScore": 13.4,
-        "eventKey": "business:spotting winners hilton nyse hlt and consumer discretionary"
+        "eventKey": "business:spotting winners hilton nyse hlt and consumer discretionary",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:18:43.029Z",
-      "lastSeenAt": "2026-03-30T23:19:53.390Z",
-      "expiresAt": "2026-04-01T23:19:53.390Z"
+      "discoveredAt": "2026-03-31T19:58:28.203Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:business:finance economics latest news and analysis from the economist",
@@ -954,7 +970,7 @@
     {
       "identityKey": "event:news:environmental climate news reuters",
       "item": {
-        "id": "google-sec-1774986871825-6",
+        "id": "google-sec-1774987108183-6",
         "title": "Environmental & Climate News | Reuters",
         "summary": "6 hours ago ... Find latest environment news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
         "whyItMatters": "",
@@ -966,7 +982,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T19:54:31.827Z",
+        "discoveredAt": "2026-03-31T19:58:28.185Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -997,9 +1013,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:54:31.827Z",
-      "lastSeenAt": "2026-03-31T19:54:31.836Z",
-      "expiresAt": "2026-04-02T19:54:31.836Z"
+      "discoveredAt": "2026-03-31T19:58:28.185Z",
+      "lastSeenAt": "2026-03-31T19:59:07.285Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:news:law the guardian",
@@ -1261,7 +1277,7 @@
     {
       "identityKey": "event:news:in the age of misinformation climate literacy matters more than ever honolulu ci",
       "item": {
-        "id": "brave-sec-1774986785724-3",
+        "id": "brave-sec-1774987077596-3",
         "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever - Honolulu Civil Beat",
         "summary": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
         "whyItMatters": "",
@@ -1273,7 +1289,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:53:05.726Z",
+        "discoveredAt": "2026-03-31T19:57:57.600Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -1304,9 +1320,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:53:05.726Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:57:57.600Z",
+      "lastSeenAt": "2026-03-31T19:59:07.285Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:news:science nbc news",
@@ -1354,7 +1370,7 @@
     {
       "identityKey": "event:business:cue biopharma announces ceo transition the globe and mail",
       "item": {
-        "id": "google-sec-1774913092456-3",
+        "id": "google-sec-1774987147949-3",
         "title": "Cue Biopharma Announces CEO Transition - The Globe and Mail",
         "summary": "1 day ago ... (Nasdaq: CUE), a clinical-stage biopharmaceutical company developing a novel class of therapeutic biologics to selectively engage and modulate disease-specific ...",
         "whyItMatters": "",
@@ -1366,7 +1382,7 @@
         ],
         "freshness": 4,
         "urgency": 8,
-        "discoveredAt": "2026-03-30T23:24:52.458Z",
+        "discoveredAt": "2026-03-31T19:59:07.951Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:health",
@@ -1388,11 +1404,19 @@
         "normalizedTitle": "cue biopharma announces ceo transition the globe and mail",
         "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/cue/pressreleases/1013060/cue-biopharma-announces-ceo-transition/",
         "discoveryScore": 17.4,
-        "eventKey": "business:cue biopharma announces ceo transition the globe and mail"
+        "eventKey": "business:cue biopharma announces ceo transition the globe and mail",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:24:52.458Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
+      "discoveredAt": "2026-03-31T19:59:07.951Z",
+      "lastSeenAt": "2026-03-31T19:59:41.819Z",
+      "expiresAt": "2026-04-02T19:59:41.819Z"
     },
     {
       "identityKey": "event:tech:chinese universities with military links bought super micro servers",
@@ -1439,7 +1463,7 @@
     {
       "identityKey": "event:tech:trump signs order to pay tsa workers wsj",
       "item": {
-        "id": "google-sec-1774986791715-8",
+        "id": "google-sec-1774987147940-8",
         "title": "Trump Signs Order to Pay TSA Workers - WSJ",
         "summary": "17 hours ago ... Many unpaid TSA employees have been calling in sick while others have quit, causing delays at airports across the country as travelers head out on spring break.",
         "whyItMatters": "",
@@ -1455,7 +1479,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T19:53:11.718Z",
+        "discoveredAt": "2026-03-31T19:59:07.942Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:tech",
@@ -1483,14 +1507,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:53:11.718Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:59:07.942Z",
+      "lastSeenAt": "2026-03-31T19:59:41.819Z",
+      "expiresAt": "2026-04-02T19:59:41.819Z"
     },
     {
       "identityKey": "event:public-health:nbc news author aria bendix",
       "item": {
-        "id": "google-sec-1774913092450-0",
+        "id": "google-sec-1774987147943-0",
         "title": "NBC News Author Aria Bendix",
         "summary": "12 hours ago ... I am a health reporter for NBC News Digital. I cover a variety of health-related topics with an emphasis on public health issues.",
         "whyItMatters": "",
@@ -1502,7 +1526,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:24:52.452Z",
+        "discoveredAt": "2026-03-31T19:59:07.945Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:health",
@@ -1524,16 +1548,23 @@
         "normalizedTitle": "nbc news author aria bendix",
         "canonicalUrl": "https://www.nbcnews.com/author/aria-bendix-ncpn1294089",
         "discoveryScore": 14.4,
-        "eventKey": "public-health:nbc news author aria bendix"
+        "eventKey": "public-health:nbc news author aria bendix",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:24:52.452Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
+      "discoveredAt": "2026-03-31T19:59:07.945Z",
+      "lastSeenAt": "2026-03-31T19:59:41.819Z",
+      "expiresAt": "2026-04-02T19:59:41.819Z"
     },
     {
       "identityKey": "event:news:house appropriations committee congress gov",
       "item": {
-        "id": "google-sec-1774913092454-2",
+        "id": "google-sec-1774987147947-2",
         "title": "House Appropriations Committee - Congress.gov",
         "summary": "21 hours ago ... All the legislation activity and reports of the House Appropriations Committee.",
         "whyItMatters": "",
@@ -1549,7 +1580,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:24:52.456Z",
+        "discoveredAt": "2026-03-31T19:59:07.949Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:health",
@@ -1571,16 +1602,24 @@
         "normalizedTitle": "house appropriations committee congress gov",
         "canonicalUrl": "https://www.congress.gov/committee/house-appropriations/hsap00",
         "discoveryScore": 12.8,
-        "eventKey": "news:house appropriations committee congress gov"
+        "eventKey": "news:house appropriations committee congress gov",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:24:52.456Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
+      "discoveredAt": "2026-03-31T19:59:07.949Z",
+      "lastSeenAt": "2026-03-31T19:59:41.819Z",
+      "expiresAt": "2026-04-02T19:59:41.819Z"
     },
     {
       "identityKey": "event:news:openai news today s latest stories reuters",
       "item": {
-        "id": "google-sec-1774986791701-2",
+        "id": "google-sec-1774987147925-2",
         "title": "OpenAI News | Today's Latest Stories - Reuters",
         "summary": "2 days ago ... Latest Stories ; 13 hours ago. SoftBank secures $40 billion loan to boost OpenAI investments · Event to pitch AI for businesses in Tokyo ; March 26, 2026. OpenAI's ...",
         "whyItMatters": "",
@@ -1596,7 +1635,7 @@
         ],
         "freshness": 4,
         "urgency": 5,
-        "discoveredAt": "2026-03-31T19:53:11.703Z",
+        "discoveredAt": "2026-03-31T19:59:07.928Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:tech",
@@ -1627,9 +1666,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:53:11.703Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:59:07.928Z",
+      "lastSeenAt": "2026-03-31T19:59:41.819Z",
+      "expiresAt": "2026-04-02T19:59:41.819Z"
     },
     {
       "identityKey": "event:news:emerging markets headlines breaking stock market news reuters",
@@ -1722,7 +1761,7 @@
     {
       "identityKey": "event:news:hims hers health inc hims n stock price and news",
       "item": {
-        "id": "google-sec-1774913092458-4",
+        "id": "google-sec-1774987147951-4",
         "title": "Hims & Hers Health Inc (HIMS-N) Stock Price and News",
         "summary": "2 hours ago ... Profile. Hims & Hers Health Inc. is a multi-specialty telehealth platform that connects consumers to licensed healthcare professionals, enabling medical care ...",
         "whyItMatters": "",
@@ -1734,7 +1773,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:24:52.461Z",
+        "discoveredAt": "2026-03-31T19:59:07.953Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:health",
@@ -1757,11 +1796,18 @@
         "normalizedTitle": "hims hers health inc hims n stock price and news",
         "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/hims-n/",
         "discoveryScore": 11,
-        "eventKey": "news:hims hers health inc hims n stock price and news"
+        "eventKey": "news:hims hers health inc hims n stock price and news",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:24:52.461Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
+      "discoveredAt": "2026-03-31T19:59:07.953Z",
+      "lastSeenAt": "2026-03-31T19:59:41.819Z",
+      "expiresAt": "2026-04-02T19:59:41.819Z"
     },
     {
       "identityKey": "event:ai-big-tech:tech news today s latest technology news reuters",
@@ -2336,7 +2382,7 @@
     {
       "identityKey": "event:business:radnet nasdaq rdnt q4 earnings the globe and mail",
       "item": {
-        "id": "google-sec-1774912723034-5",
+        "id": "google-sec-1774987108207-5",
         "title": "RadNet (NASDAQ:RDNT) Q4 Earnings - The Globe and Mail",
         "summary": "2 days ago ... The business had a very strong quarter with full-year revenue guidance exceeding analysts' expectations and a decent beat of analysts' revenue estimates. Quest ...",
         "whyItMatters": "",
@@ -2348,7 +2394,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-30T23:18:43.036Z",
+        "discoveredAt": "2026-03-31T19:58:28.210Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:business",
@@ -2370,11 +2416,19 @@
         "normalizedTitle": "radnet nasdaq rdnt q4 earnings the globe and mail",
         "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/rdnt-q/pressreleases/999248/radnet-nasdaqrdnt-q4-earnings-leading-the-testing-diagnostics-services-pack/",
         "discoveryScore": 15.4,
-        "eventKey": "business:radnet nasdaq rdnt q4 earnings the globe and mail"
+        "eventKey": "business:radnet nasdaq rdnt q4 earnings the globe and mail",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:18:43.036Z",
-      "lastSeenAt": "2026-03-30T23:19:53.390Z",
-      "expiresAt": "2026-04-01T23:19:53.390Z"
+      "discoveredAt": "2026-03-31T19:58:28.210Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:sports:are these manchester united s summer transfer priorities",
@@ -2503,7 +2557,7 @@
     {
       "identityKey": "event:news:bnzi stock quote price and forecast cnn",
       "item": {
-        "id": "google-sec-1774912723032-4",
+        "id": "google-sec-1774987108205-4",
         "title": "BNZI Stock Quote Price and Forecast - CNN",
         "summary": "2 days ago ... View Banzai International, Inc. Class A BNZI stock quote prices, financial information, real-time forecasts, and company news from CNN.",
         "whyItMatters": "",
@@ -2515,7 +2569,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:18:43.034Z",
+        "discoveredAt": "2026-03-31T19:58:28.207Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:business",
@@ -2537,11 +2591,18 @@
         "normalizedTitle": "bnzi stock quote price and forecast cnn",
         "canonicalUrl": "https://www.cnn.com/markets/stocks/bnzi",
         "discoveryScore": 11,
-        "eventKey": "news:bnzi stock quote price and forecast cnn"
+        "eventKey": "news:bnzi stock quote price and forecast cnn",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:18:43.034Z",
-      "lastSeenAt": "2026-03-30T23:19:53.390Z",
-      "expiresAt": "2026-04-01T23:19:53.390Z"
+      "discoveredAt": "2026-03-31T19:58:28.207Z",
+      "lastSeenAt": "2026-03-31T19:59:07.285Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:culture:alexander kluge 94 revolutionary filmmaker in postwar germany",
@@ -3129,7 +3190,7 @@
     {
       "identityKey": "event:crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
       "item": {
-        "id": "brave-sec-1774986791682-2",
+        "id": "brave-sec-1774987077976-2",
         "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move - The Econom",
         "summary": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
         "whyItMatters": "",
@@ -3141,7 +3202,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:53:11.687Z",
+        "discoveredAt": "2026-03-31T19:57:57.983Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:business",
@@ -3173,14 +3234,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:53:11.687Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:57:57.983Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:mental-health:the link between medicine and psychology psychology today",
       "item": {
-        "id": "brave-sec-1774986773738-0",
+        "id": "brave-sec-1774987089818-0",
         "title": "The Link Between Medicine and Psychology | Psychology Today",
         "summary": "When you visit your doctor, do they ask about your mental health? A new book explores how mental health has been shown to directly impact both heart and brain health.",
         "whyItMatters": "",
@@ -3192,7 +3253,7 @@
         ],
         "freshness": 6,
         "urgency": 5,
-        "discoveredAt": "2026-03-31T19:52:53.761Z",
+        "discoveredAt": "2026-03-31T19:58:09.823Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:health",
@@ -3223,14 +3284,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:52:53.761Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:58:09.823Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:cybersecurity:uk registered ai cybersecurity patent signals new era of intelligent threat mana",
       "item": {
-        "id": "brave-sec-1774981216513-1",
+        "id": "brave-sec-1774987083853-2",
         "title": "UK-Registered AI Cybersecurity Patent Signals New Era of Intelligent Threat Management and Interdisciplinary Innovation",
         "summary": "The global technology and research community is witnessing a significant milestone following the United Kingdom Intellectual Property Office's registration of a groundbreaking design patent titled \"COMPUTER CYBERSECURITY SPRINT PLANNING ENGINE WITH AI-POWERED THREAT PRIORITIZATION.\"",
         "whyItMatters": "",
@@ -3242,7 +3303,7 @@
         ],
         "freshness": 5,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T18:20:16.526Z",
+        "discoveredAt": "2026-03-31T19:58:03.856Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -3274,14 +3335,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T18:20:16.526Z",
-      "lastSeenAt": "2026-03-31T18:21:53.396Z",
-      "expiresAt": "2026-04-02T18:21:53.396Z"
+      "discoveredAt": "2026-03-31T19:58:03.856Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:cybersecurity:mckinsey s ai system hack should be a wake up call for leaders",
       "item": {
-        "id": "brave-sec-1774971171715-4",
+        "id": "brave-sec-1774987083858-4",
         "title": "McKinsey’s AI system hack should be a wake up call for leaders",
         "summary": "57,000 user accounts. 728,000 sensitive file names. 46.5m chat messages. These are some of the assets a cybersecurity firm claimed they were able to access on McKinsey’s internal AI platform last month. It’s the kind of scenario all businesses dread. It’s also one that, in today’s digital ...",
         "whyItMatters": "",
@@ -3293,7 +3354,7 @@
         ],
         "freshness": 6,
         "urgency": 5,
-        "discoveredAt": "2026-03-31T15:32:51.726Z",
+        "discoveredAt": "2026-03-31T19:58:03.869Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -3315,16 +3376,24 @@
         "normalizedTitle": "mckinsey s ai system hack should be a wake up call for leaders",
         "canonicalUrl": "https://managementtoday.co.uk/mckinseys-ai-system-hack-wake-call-leaders/opinion-and-analysis/article/1953187",
         "discoveryScore": 15.4,
-        "eventKey": "cybersecurity:mckinsey s ai system hack should be a wake up call for leaders"
+        "eventKey": "cybersecurity:mckinsey s ai system hack should be a wake up call for leaders",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:32:51.726Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T19:58:03.869Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:film-tv:why is horror tv so complicated right now",
       "item": {
-        "id": "brave-sec-1774986866162-2",
+        "id": "brave-sec-1774987101889-2",
         "title": "Why Is Horror TV So Complicated Right Now?",
         "summary": "From 'IT: Welcome to Derry' to 'Yellowjackets' and 'From,' streaming horror keeps piling on mysteries, curses, and lore that can feel more exhausting than scary.",
         "whyItMatters": "",
@@ -3336,7 +3405,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:54:26.165Z",
+        "discoveredAt": "2026-03-31T19:58:21.893Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -3367,9 +3436,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:54:26.165Z",
-      "lastSeenAt": "2026-03-31T19:54:31.836Z",
-      "expiresAt": "2026-04-02T19:54:31.836Z"
+      "discoveredAt": "2026-03-31T19:58:21.893Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:culture:why notre dame s culture is winning in the transfer portal era uhnd com",
@@ -3415,7 +3484,7 @@
     {
       "identityKey": "event:us-politics:climate law battle royale politico",
       "item": {
-        "id": "google-sec-1774986871818-3",
+        "id": "google-sec-1774987108175-3",
         "title": "Climate law 'battle royale' - POLITICO",
         "summary": "1 day ago ... The Democratic Party's embrace of affordability politics is pushing what remains of U.S. climate policy to the brink.",
         "whyItMatters": "",
@@ -3427,7 +3496,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:54:31.820Z",
+        "discoveredAt": "2026-03-31T19:58:28.178Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -3459,9 +3528,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:54:31.820Z",
-      "lastSeenAt": "2026-03-31T19:54:31.836Z",
-      "expiresAt": "2026-04-02T19:54:31.836Z"
+      "discoveredAt": "2026-03-31T19:58:28.178Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:news:xrp market trends ripple s regulatory milestones in 2026 news and statistics ind",
@@ -4194,7 +4263,7 @@
     {
       "identityKey": "event:sports:what s next for duke tennessee after elite eight recruits transfer portal more e",
       "item": {
-        "id": "brave-sec-1774986779649-1",
+        "id": "brave-sec-1774987095807-1",
         "title": "What's next for Duke, Tennessee after Elite Eight: Recruits, transfer portal, more - ESPN",
         "summary": "With NCAA tournament runs over for key programs, here's how next season is taking shape.",
         "whyItMatters": "",
@@ -4206,7 +4275,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:52:59.656Z",
+        "discoveredAt": "2026-03-31T19:58:15.811Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:sports",
@@ -4234,9 +4303,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:52:59.656Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:58:15.811Z",
+      "lastSeenAt": "2026-03-31T19:59:07.285Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:medical-research:health medicine news sciencedaily",
@@ -5679,7 +5748,7 @@
     {
       "identityKey": "event:cybersecurity:ai the cybersecurity crisis that vendors love",
       "item": {
-        "id": "brave-sec-1774981216485-0",
+        "id": "brave-sec-1774987083829-0",
         "title": "AI: The Cybersecurity Crisis That Vendors Love",
         "summary": "At the RSAC cybersecurity conference, the arrival of agentic AI gave the community plenty to talk about. New threats include identity and supply chains.",
         "whyItMatters": "",
@@ -5691,7 +5760,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T18:20:16.513Z",
+        "discoveredAt": "2026-03-31T19:58:03.845Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -5723,14 +5792,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T18:20:16.513Z",
-      "lastSeenAt": "2026-03-31T18:21:53.396Z",
-      "expiresAt": "2026-04-02T18:21:53.396Z"
+      "discoveredAt": "2026-03-31T19:58:03.845Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:film-tv:the 10 tv shows we re watching in april 2026",
       "item": {
-        "id": "brave-sec-1774986866159-1",
+        "id": "brave-sec-1774987101884-1",
         "title": "The 10 TV Shows We’re Watching in April 2026",
         "summary": "The TV shows coming in April 2026 that matter most, from major premieres and returns to buzzy streaming releases.",
         "whyItMatters": "",
@@ -5742,7 +5811,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:54:26.162Z",
+        "discoveredAt": "2026-03-31T19:58:21.889Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -5772,9 +5841,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:54:26.162Z",
-      "lastSeenAt": "2026-03-31T19:54:31.836Z",
-      "expiresAt": "2026-04-02T19:54:31.836Z"
+      "discoveredAt": "2026-03-31T19:58:21.889Z",
+      "lastSeenAt": "2026-03-31T19:59:07.285Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:mental-health:mental health and physical health connection",
@@ -6471,7 +6540,7 @@
     {
       "identityKey": "event:news:medical bulletin 31 march 2026",
       "item": {
-        "id": "brave-sec-1774986773761-1",
+        "id": "brave-sec-1774987089823-1",
         "title": "Medical Bulletin 31/March/2026",
         "summary": "Here are the top medical news for today:New Study Identifies Exercise Type That Significantly Improves Sleep Quality A new meta-analysis published in Sleep and Biological Rhythms suggests that yoga...",
         "whyItMatters": "",
@@ -6487,7 +6556,7 @@
         ],
         "freshness": 7,
         "urgency": 5,
-        "discoveredAt": "2026-03-31T19:52:53.768Z",
+        "discoveredAt": "2026-03-31T19:58:09.826Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:health",
@@ -6515,14 +6584,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:52:53.768Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:58:09.826Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:news:trump administration sues minnesota for allowing trans athletes in",
       "item": {
-        "id": "google-sec-1774986871822-5",
+        "id": "google-sec-1774987108180-5",
         "title": "Trump administration sues Minnesota for allowing trans athletes in ...",
         "summary": "22 hours ago ... Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination.",
         "whyItMatters": "",
@@ -6534,7 +6603,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:54:31.825Z",
+        "discoveredAt": "2026-03-31T19:58:28.183Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -6566,14 +6635,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:54:31.825Z",
-      "lastSeenAt": "2026-03-31T19:54:31.836Z",
-      "expiresAt": "2026-04-02T19:54:31.836Z"
+      "discoveredAt": "2026-03-31T19:58:28.183Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:mental-health:revolutionizing mental health care breakthroughs in neuroscience transforming tr",
       "item": {
-        "id": "brave-sec-1774986773768-2",
+        "id": "brave-sec-1774987089826-2",
         "title": "Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms - mentalhealthparityp",
         "summary": "Contents hide 1 Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms 1.1 Understanding Brain Plasticity and Its Therapeutic Potential 1.2 Advances in Neuroimaging: Mapping the Mind 1.3 Emerging…",
         "whyItMatters": "",
@@ -6585,7 +6654,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:52:53.786Z",
+        "discoveredAt": "2026-03-31T19:58:09.830Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:health",
@@ -6616,14 +6685,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:52:53.786Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:58:09.830Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:crypto-bitcoin:crypto market update etf outflows cap bitcoin price rebound inn",
       "item": {
-        "id": "brave-sec-1774986791678-1",
+        "id": "brave-sec-1774987077972-1",
         "title": "Crypto Market Update: ETF Outflows Cap Bitcoin Price Rebound | INN",
         "summary": "Bitcoin tumbles to its March low of US$66,400 amid rising US Treasury yields and geopolitical tensions. With over US$1.3 billion in leveraged positions wiped out, the market's reactionary environment is palpable.",
         "whyItMatters": "",
@@ -6635,7 +6704,7 @@
         ],
         "freshness": 6,
         "urgency": 5,
-        "discoveredAt": "2026-03-31T19:53:11.682Z",
+        "discoveredAt": "2026-03-31T19:57:57.976Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:business",
@@ -6666,14 +6735,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:53:11.682Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:57:57.976Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:business:morpheus research report alleges anti competitive practices by makemytrip despit",
       "item": {
-        "id": "brave-sec-1774986791687-3",
+        "id": "brave-sec-1774987077983-3",
         "title": "Morpheus Research report alleges 'anti-competitive' practices by MakeMyTrip despite CCI order- Moneycontrol.com",
         "summary": "Morpheus Research, an activist short-seller, which disclosed a short position in the company, alleged that MakeMyTrip continues to enforce price parity arrangements with hotel partners.",
         "whyItMatters": "",
@@ -6685,7 +6754,7 @@
         ],
         "freshness": 7,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:53:11.690Z",
+        "discoveredAt": "2026-03-31T19:57:57.986Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:business",
@@ -6717,26 +6786,26 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:53:11.690Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:57:57.986Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:cybersecurity:how ai is reshaping the cybersecurity vendor landscape",
       "item": {
-        "id": "brave-sec-1774981216526-2",
+        "id": "brave-sec-1774987083845-1",
         "title": "How AI Is Reshaping the Cybersecurity Vendor Landscape",
         "summary": "The cybersecurity vendor landscape is being rebuilt around AI, and the transformation is moving faster than most organizations are prepared for. Richard Stiennon,",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "16 hours ago",
+        "when": "17 hours ago",
         "sourceUrls": [
           "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280"
         ],
         "freshness": 7,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T18:20:16.530Z",
+        "discoveredAt": "2026-03-31T19:58:03.853Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -6768,14 +6837,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T18:20:16.530Z",
-      "lastSeenAt": "2026-03-31T18:21:53.396Z",
-      "expiresAt": "2026-04-02T18:21:53.396Z"
+      "discoveredAt": "2026-03-31T19:58:03.853Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:health:deakin university advances global agenda for affordable health through raah roun",
       "item": {
-        "id": "brave-sec-1774986773786-3",
+        "id": "brave-sec-1774987089830-3",
         "title": "Deakin University advances global agenda for affordable health through RAAH Roundtable - The Hindu",
         "summary": "Deakin University advances global agenda for affordable health through RAAH Roundtable",
         "whyItMatters": "",
@@ -6787,7 +6856,7 @@
         ],
         "freshness": 9,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:52:53.790Z",
+        "discoveredAt": "2026-03-31T19:58:09.832Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:health",
@@ -6815,9 +6884,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:52:53.790Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:58:09.832Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:culture:the 20 greatest tv drama show masterpieces of all time ranked",
@@ -6916,7 +6985,7 @@
     {
       "identityKey": "event:news:what s next in the us government shutdown as situation eases at",
       "item": {
-        "id": "google-sec-1774986871820-4",
+        "id": "google-sec-1774987108178-4",
         "title": "What's next in the US government shutdown, as situation eases at ...",
         "summary": "1 day ago ... Wait times in US airport security queues eased somewhat on Monday after President Donald Trump signed an order instructing his administration to find a way ...",
         "whyItMatters": "",
@@ -6928,7 +6997,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T19:54:31.822Z",
+        "discoveredAt": "2026-03-31T19:58:28.180Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -6960,14 +7029,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:54:31.822Z",
-      "lastSeenAt": "2026-03-31T19:54:31.836Z",
-      "expiresAt": "2026-04-02T19:54:31.836Z"
+      "discoveredAt": "2026-03-31T19:58:28.180Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:news:constantino s sticky ad spending problem politico",
       "item": {
-        "id": "google-sec-1774986871812-1",
+        "id": "google-sec-1774987108168-1",
         "title": "Constantino's sticky ad spending problem - POLITICO",
         "summary": "1 day ago ... GREENBERGER BECOMES POLITICO EDITOR-IN-CHIEF: After an extensive search, POLITICO has named Jonathan Greenberger as the news organization's next Global ...",
         "whyItMatters": "",
@@ -6979,7 +7048,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:54:31.815Z",
+        "discoveredAt": "2026-03-31T19:58:28.172Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -7008,9 +7077,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:54:31.815Z",
-      "lastSeenAt": "2026-03-31T19:54:31.836Z",
-      "expiresAt": "2026-04-02T19:54:31.836Z"
+      "discoveredAt": "2026-03-31T19:58:28.172Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:mental-health:slow healing still matters why recovery is still progress live again india menta",
@@ -7062,7 +7131,7 @@
     {
       "identityKey": "event:news:israel passes law to give death penalty to palestinians convicted of",
       "item": {
-        "id": "google-sec-1774986871815-2",
+        "id": "google-sec-1774987108172-2",
         "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
         "summary": "1 day ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
         "whyItMatters": "",
@@ -7078,7 +7147,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:54:31.818Z",
+        "discoveredAt": "2026-03-31T19:58:28.175Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -7106,9 +7175,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:54:31.818Z",
-      "lastSeenAt": "2026-03-31T19:54:31.836Z",
-      "expiresAt": "2026-04-02T19:54:31.836Z"
+      "discoveredAt": "2026-03-31T19:58:28.175Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:news:israel passes death penalty law for palestinians convicted of lethal",
@@ -7157,7 +7226,7 @@
     {
       "identityKey": "event:sports:how nil is reshaping the future of college football cleats",
       "item": {
-        "id": "brave-sec-1774986779631-0",
+        "id": "brave-sec-1774987095802-0",
         "title": "How NIL Is Reshaping the Future of College Football | Cleats",
         "summary": "Many athletes are navigating contracts, taxes, and branding for the first time. Without proper guidance, they risk making costly mistakes. ... NIL can affect locker room chemistry, especially when teammates earn vastly different amounts. It also contributes to increased player movement through the transfer portal. ... Perhaps the biggest change is cultural. College sports ...",
         "whyItMatters": "",
@@ -7169,7 +7238,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:52:59.649Z",
+        "discoveredAt": "2026-03-31T19:58:15.807Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:sports",
@@ -7200,14 +7269,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:52:59.649Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:58:15.807Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:sports:in ncaa athletics student athletes are often choosing deal over degree andscape",
       "item": {
-        "id": "brave-sec-1774986779656-2",
+        "id": "brave-sec-1774987095811-2",
         "title": "In NCAA athletics, student-athletes are often choosing deal over degree - Andscape",
         "summary": "NIL and the transfer portal have given college athletes newfound power and freedom of movement, but it's often at the detriment of education.",
         "whyItMatters": "",
@@ -7219,7 +7288,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:52:59.659Z",
+        "discoveredAt": "2026-03-31T19:58:15.814Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:sports",
@@ -7250,26 +7319,26 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:52:59.659Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:58:15.814Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:culture:marvel s dark 2 part daredevil replacement is quietly one of its best series to ",
       "item": {
-        "id": "brave-sec-1774971189712-4",
+        "id": "brave-sec-1774987101895-4",
         "title": "Marvel's Dark 2-Part ‘Daredevil’ Replacement Is Quietly One of Its Best Series To Binge",
         "summary": "Jon Bernthal's portrayal of Frank Castle in The Punisher transformed the character into one of Marvel's most compelling antiheroes.",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "15 hours ago",
+        "when": "20 hours ago",
         "sourceUrls": [
           "https://collider.com/punisher-marvel-daredevil-born-again-binge/"
         ],
-        "freshness": 7,
+        "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T15:33:09.714Z",
+        "discoveredAt": "2026-03-31T19:58:21.897Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -7287,12 +7356,19 @@
         "article_likelihood": 8,
         "normalizedTitle": "marvel s dark 2 part daredevil replacement is quietly one of its best series to binge",
         "canonicalUrl": "https://collider.com/punisher-marvel-daredevil-born-again-binge/",
-        "discoveryScore": 13.4,
-        "eventKey": "culture:marvel s dark 2 part daredevil replacement is quietly one of its best series to "
+        "discoveryScore": 12.4,
+        "eventKey": "culture:marvel s dark 2 part daredevil replacement is quietly one of its best series to ",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:33:09.714Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T19:58:21.897Z",
+      "lastSeenAt": "2026-03-31T19:59:07.285Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:news:vermont defends its landmark climate superfund law against trump",
@@ -7529,7 +7605,7 @@
     {
       "identityKey": "event:culture:wake me up when ryan coogler s x files reboot premieres",
       "item": {
-        "id": "brave-sec-1774986866154-0",
+        "id": "brave-sec-1774987101880-0",
         "title": "Wake Me Up When Ryan Coogler's 'X-Files' Reboot Premieres",
         "summary": "Ryan Coogler’s 'X-Files' project already feels like one of TV’s most intriguing revivals. Here’s why the franchise is worth getting excited about again.",
         "whyItMatters": "",
@@ -7541,7 +7617,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:54:26.159Z",
+        "discoveredAt": "2026-03-31T19:58:21.884Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -7572,14 +7648,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:54:26.159Z",
-      "lastSeenAt": "2026-03-31T19:54:31.836Z",
-      "expiresAt": "2026-04-02T19:54:31.836Z"
+      "discoveredAt": "2026-03-31T19:58:21.884Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:crypto-bitcoin:why businesses are paying closer attention to crypto infrastructure tekedia",
       "item": {
-        "id": "brave-sec-1774986791675-0",
+        "id": "brave-sec-1774987077970-0",
         "title": "Why Businesses Are Paying Closer Attention to Crypto Infrastructure - Tekedia",
         "summary": "Businesses are adopting crypto infrastructure for payments, tokenisation, and treasury efficiency, with growing global and African relevance.",
         "whyItMatters": "",
@@ -7591,7 +7667,7 @@
         ],
         "freshness": 8,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:53:11.678Z",
+        "discoveredAt": "2026-03-31T19:57:57.972Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:business",
@@ -7622,14 +7698,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:53:11.678Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:57:57.972Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:sports:trump administration sues minnesota over trans athletes in girls sports as pam b",
       "item": {
-        "id": "brave-sec-1774986779659-3",
+        "id": "brave-sec-1774987095814-3",
         "title": "Trump administration sues Minnesota over trans athletes in girls sports as Pam Bondi slams 'flawed policies' | Daily Mai",
         "summary": "The Trump administration is carrying out its threat to punish any state that allows transgender athletes to compete in girls sports by suing Minnesota and its athletics governing body Monday.",
         "whyItMatters": "",
@@ -7641,7 +7717,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:52:59.662Z",
+        "discoveredAt": "2026-03-31T19:58:15.817Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:sports",
@@ -7672,9 +7748,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:52:59.662Z",
-      "lastSeenAt": "2026-03-31T19:54:24.634Z",
-      "expiresAt": "2026-04-02T19:54:24.634Z"
+      "discoveredAt": "2026-03-31T19:58:15.817Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     },
     {
       "identityKey": "event:culture:sydney chandler talks anima sxsw and alien earth season 2 interview",
@@ -7722,6 +7798,53 @@
       "discoveredAt": "2026-03-31T19:54:26.169Z",
       "lastSeenAt": "2026-03-31T19:54:31.836Z",
       "expiresAt": "2026-04-02T19:54:31.836Z"
+    },
+    {
+      "identityKey": "event:health:one system one strategy for physician well being american medical association",
+      "item": {
+        "id": "brave-sec-1774987089832-4",
+        "title": "One system, one strategy for physician well-being | American Medical Association",
+        "summary": "By aligning more than 28 acute care facilities and eight medical groups, Sutter Health built a coordinated strategy to support physician well-being.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "8 hours ago",
+        "sourceUrls": [
+          "https://ama-assn.org/practice-management/physician-health/one-system-one-strategy-physician-well-being"
+        ],
+        "freshness": 8,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T19:58:09.835Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:health",
+        "sectionCandidates": [
+          "health"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "health",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "one system one strategy for physician well being american medical association",
+        "canonicalUrl": "https://ama-assn.org/practice-management/physician-health/one-system-one-strategy-physician-well-being",
+        "discoveryScore": 15.4,
+        "eventKey": "health:one system one strategy for physician well being american medical association",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T19:58:09.835Z",
+      "lastSeenAt": "2026-03-31T19:59:07.284Z",
+      "expiresAt": "2026-04-02T19:59:07.284Z"
     }
   ]
 }
