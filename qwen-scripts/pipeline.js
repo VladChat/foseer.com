@@ -17,7 +17,7 @@ import { validatePrePublishGraph, buildCanonicalPublishPayload, buildPublishMani
 import { repairContentPosts } from './repair-content-posts.js';
 import { verifyLocalVisibility, generateVerificationReport } from './local-verification.js';
 import { getProviderStats } from './utils/api-clients.js';
-import { mergeBriefsIntoPool, mergeDiscoveredNews, getSelectableBriefs, getReadySelectableBriefs, dedupeBriefCandidates, markBriefPublished, markBriefSelected, getNewsPoolStats, recordReadyArticleCandidates } from './utils/news-pool.js';
+import { mergeBriefsIntoPool, mergeDiscoveredNews, getSelectableBriefs, getReadySelectableBriefs, dedupeBriefCandidates, markBriefPublished, markBriefSelected, getNewsPoolStats, recordReadyArticleCandidates, getBriefIdentityKey, isIdentityAlreadyPublished } from './utils/news-pool.js';
 import { writeQualityAuditRun } from './utils/quality-audit.js';
 
 loadProjectEnv();
@@ -275,14 +275,33 @@ export async function runEditorialPipeline(options = {}) {
       prioritizeReady: true,
       readyBoost: Number(options.readyPriorityBoost || 10),
     });
+    const duplicateRejectedAtSelection = [];
     const mergedBriefs = dedupeBriefCandidates([
       ...normalizedBriefs.map((brief) => ({ ...brief, _selectionOrigin: 'current_run' })),
       ...readyBriefs,
       ...poolBriefs.map((brief) => ({ ...brief, _selectionOrigin: brief._selectionOrigin || 'pool' })),
-    ]);
+    ]).filter((brief) => {
+      const identityKey = brief?.poolIdentityKey || getBriefIdentityKey(brief);
+      if (!identityKey) return true;
+      if (isIdentityAlreadyPublished(identityKey)) {
+        duplicateRejectedAtSelection.push({
+          identityKey,
+          title: brief?.title || null,
+          origin: brief?._selectionOrigin || null,
+          reason: 'identity_already_published',
+        });
+        console.log(`[pipeline] Duplicate guard: skip published identity ${identityKey} :: ${brief?.title || 'Untitled brief'}`);
+        return false;
+      }
+      brief.poolIdentityKey = brief.poolIdentityKey || identityKey;
+      return true;
+    });
 
     const briefsForSelection = mergedBriefs.slice(0, sourcePackCandidateLimit);
     console.log(`[pipeline] Source-pack candidates from merged current+pool+ready set: ${briefsForSelection.length}`);
+    if (duplicateRejectedAtSelection.length > 0) {
+      console.log(`[pipeline] Duplicate guard removed ${duplicateRejectedAtSelection.length} already published candidate(s) before source-pack assembly`);
+    }
     if (readyBriefs.length > 0) {
       console.log(`[pipeline] Ready backlog prioritized for selection: ${readyBriefs.length}`);
     }
@@ -338,6 +357,23 @@ export async function runEditorialPipeline(options = {}) {
       maxPerTopic: Number(options.maxPerTopic || 2),
       relaxedMaxPerSection: Number(options.relaxedMaxPerSection || 3),
       relaxedMaxPerTopic: Number(options.relaxedMaxPerTopic || 3),
+    }).filter((candidate) => {
+      const identityKey = candidate?.brief?.poolIdentityKey || getBriefIdentityKey(candidate?.brief);
+      if (!identityKey) return true;
+      if (isIdentityAlreadyPublished(identityKey)) {
+        duplicateRejectedAtSelection.push({
+          identityKey,
+          title: candidate?.brief?.title || null,
+          origin: candidate?.brief?._selectionOrigin || null,
+          reason: 'identity_already_published_after_selection',
+        });
+        console.log(`[pipeline] Duplicate guard: drop selected candidate with published identity ${identityKey} :: ${candidate?.brief?.title || 'Untitled brief'}`);
+        return false;
+      }
+      if (candidate?.brief) {
+        candidate.brief.poolIdentityKey = candidate.brief.poolIdentityKey || identityKey;
+      }
+      return true;
     });
     selected = selectedCandidates[0] || null;
 
@@ -389,6 +425,7 @@ export async function runEditorialPipeline(options = {}) {
           selectedCandidates: readyBacklog.selectedCandidates,
           filePath: readyBacklog.filePath,
         },
+        duplicateRejectedCandidates: duplicateRejectedAtSelection,
       },
     };
 
@@ -435,6 +472,10 @@ export async function runEditorialPipeline(options = {}) {
 
   for (const candidate of selectedCandidates) {
     const articleLabel = candidate?.brief?.title || candidate?.sourcePack?.topic || 'Untitled candidate';
+    const candidateIdentityKey = candidate?.brief?.poolIdentityKey || getBriefIdentityKey(candidate?.brief);
+    if (candidateIdentityKey && candidate?.brief) {
+      candidate.brief.poolIdentityKey = candidate.brief.poolIdentityKey || candidateIdentityKey;
+    }
     console.log(`[pipeline] === Article run start: ${articleLabel} ===`);
 
     // Stage 4: Claim Map Creation (GATE)
@@ -540,6 +581,19 @@ export async function runEditorialPipeline(options = {}) {
     // Stage 7: Publish Article (GATE)
     console.log('[pipeline] Stage 7: Publishing article...');
     try {
+      if (candidateIdentityKey && isIdentityAlreadyPublished(candidateIdentityKey)) {
+        const duplicateError = `Duplicate guard blocked publish for already published identity: ${candidateIdentityKey}`;
+        console.log(`[pipeline] ${duplicateError}`);
+        publishItems.push({
+          title: articleLabel,
+          success: false,
+          error: duplicateError,
+          data: { identityKey: candidateIdentityKey },
+        });
+        articleErrors.push({ title: articleLabel, stage: 'publishing', error: duplicateError });
+        continue;
+      }
+
       const prePublishValidation = validatePrePublishGraph(candidate);
       if (!prePublishValidation.valid) {
         publishItems.push({

@@ -107,6 +107,23 @@ function getIdentityKey(brief) {
   return primaryUrl ? `url:${normalizeUrl(primaryUrl)}` : `title:${title.slice(0, 120)}`;
 }
 
+function hasPublishedMarker(item) {
+  if (!item) return false;
+  return item.status === 'published' || !!item.publishedSlug || !!item.lastPublishedAt;
+}
+
+export function getBriefIdentityKey(brief) {
+  return getIdentityKey(brief);
+}
+
+export function isIdentityAlreadyPublished(identityKey, pool = loadNewsPool(), readyPool = loadReadyArticleCandidates()) {
+  if (!identityKey) return false;
+  const poolItem = (pool.items || []).find((item) => item.identityKey === identityKey);
+  if (hasPublishedMarker(poolItem)) return true;
+  const readyItem = (readyPool.items || []).find((item) => item.identityKey === identityKey);
+  return hasPublishedMarker(readyItem);
+}
+
 export function loadNewsPool() {
   ensurePoolDir();
   if (!fs.existsSync(NEWS_POOL_PATH)) {
@@ -155,7 +172,7 @@ function reconcileReadyCandidatePool(readyPool = loadReadyArticleCandidates(), n
     const matchingPoolItem = poolItemsByKey.get(item.identityKey);
     if (!matchingPoolItem) return item;
 
-    if (matchingPoolItem.status === 'published') {
+    if (hasPublishedMarker(matchingPoolItem)) {
       return {
         ...item,
         status: 'published',
@@ -164,11 +181,11 @@ function reconcileReadyCandidatePool(readyPool = loadReadyArticleCandidates(), n
       };
     }
 
-    if (item.status === 'published' && matchingPoolItem.status !== 'published') {
+    if (hasPublishedMarker(item)) {
       return {
         ...item,
-        status: matchingPoolItem.status === 'selected' ? 'selected' : 'ready',
-        lastPublishedAt: item.lastPublishedAt || null,
+        status: 'published',
+        lastPublishedAt: item.lastPublishedAt || nowIso(),
         publishedSlug: item.publishedSlug || null,
       };
     }
@@ -269,12 +286,14 @@ export function recordReadyArticleCandidates(candidates = [], { selectedIdentity
   publishable.forEach(({ candidate }, index) => {
     const summary = summarizeReadyCandidate(candidate, coverageContext, index + 1, selectedKeys);
     const existing = byKey.get(summary.identityKey);
+    const published = hasPublishedMarker(existing);
     freshItems.push({
       ...existing,
       ...summary,
       firstQueuedAt: existing?.firstQueuedAt || summary.firstQueuedAt,
       lastPublishedAt: existing?.lastPublishedAt || null,
       publishedSlug: existing?.publishedSlug || null,
+      status: published ? 'published' : summary.status,
     });
   });
 
@@ -378,11 +397,11 @@ export function getReadySelectableBriefs({ limit = 8, includeSelected = true } =
 
   return dedupeBriefArrayBySelectionIdentity(
     (readyPool.items || [])
-      .filter((item) => item.status !== 'published')
+      .filter((item) => !hasPublishedMarker(item))
       .filter((item) => includeSelected || item.status !== 'selected')
       .map((item) => {
         const poolItem = byKey.get(item.identityKey);
-        if (!poolItem || poolItem.status === 'published' || !poolItem.brief) return null;
+        if (!poolItem || hasPublishedMarker(poolItem) || !poolItem.brief) return null;
         const scored = scorePoolItem(poolItem, pruned);
         const readyRank = Math.max(0, 8 - Number(item.rank || 99));
         return {
@@ -410,12 +429,12 @@ export function getSelectableBriefs({ limit = 8, prioritizeReady = true, readyBo
   const readyPool = prioritizeReady ? pruneReadyArticleCandidates() : { items: [] };
   const readyMap = new Map(
     (readyPool.items || [])
-      .filter((item) => item.status !== 'published')
+      .filter((item) => !hasPublishedMarker(item))
       .map((item) => [item.identityKey, item])
   );
 
   const ranked = pruned.items
-    .filter((item) => item.status !== 'published')
+    .filter((item) => !hasPublishedMarker(item))
     .map((item) => {
       const scored = scorePoolItem(item, pruned);
       const readyMeta = readyMap.get(item.identityKey) || null;
