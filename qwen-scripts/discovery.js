@@ -24,7 +24,8 @@ const TARGETED_COVERAGE_RECENT_LIMIT = 16;
 const TARGETED_COVERAGE_MIN_SAMPLE = 8;
 const TARGETED_COVERAGE_MIN_MAX_SECTION_COUNT = 4;
 const TARGETED_COVERAGE_MIN_GAP = 3;
-const TARGETED_SECTION_VIABLE_FLOOR = 1;
+const TARGETED_SECTION_VIABLE_FLOOR = 2;
+const TARGETED_SECTION_VIABLE_SHARE_MIN = 0.25;
 
 let targetedCoverageQueriesUsed = 0;
 
@@ -202,6 +203,8 @@ export async function runDiscovery(options = {}) {
       section_counts: {},
       viable_in_target_section_before: 0,
       viable_in_target_section_after: 0,
+      viable_share_before: 0,
+      viable_share_after: 0,
       skipped_reason: null,
     },
   };
@@ -259,9 +262,12 @@ export async function runDiscovery(options = {}) {
     && targetedCoverageQueriesUsed < TARGETED_BRAVE_QUERY_LIMIT
   ) {
     const viableInTargetSection = countViableCandidatesBySection(filteredCandidates, targetedCoveragePlan.sectionId);
+    const viableShareBefore = viableCandidateCount > 0 ? (viableInTargetSection / viableCandidateCount) : 0;
     stats.targeted_coverage.viable_in_target_section_before = viableInTargetSection;
+    stats.targeted_coverage.viable_share_before = Math.round(viableShareBefore * 1000) / 1000;
+    const needsTargetedBoost = viableInTargetSection < TARGETED_SECTION_VIABLE_FLOOR || viableShareBefore < TARGETED_SECTION_VIABLE_SHARE_MIN;
 
-    if (viableInTargetSection < TARGETED_SECTION_VIABLE_FLOOR) {
+    if (needsTargetedBoost) {
       console.log(`[discovery] Targeted coverage pass: section=${targetedCoveragePlan.sectionId}${targetedCoveragePlan.topicId ? ` topic=${targetedCoveragePlan.topicId}` : ''}`);
       const targetedResult = await discoverWithBrave(braveApiKey, [targetedCoveragePlan.queryEntry], {
         ...options,
@@ -277,8 +283,12 @@ export async function runDiscovery(options = {}) {
       stats.viable_candidates = viableCandidateCount;
       stats.targeted_coverage.triggered = true;
       stats.targeted_coverage.viable_in_target_section_after = countViableCandidatesBySection(filteredCandidates, targetedCoveragePlan.sectionId);
+      const viableShareAfter = viableCandidateCount > 0
+        ? (stats.targeted_coverage.viable_in_target_section_after / viableCandidateCount)
+        : 0;
+      stats.targeted_coverage.viable_share_after = Math.round(viableShareAfter * 1000) / 1000;
     } else {
-      stats.targeted_coverage.skipped_reason = `target_section_already_has_viable_candidates:${viableInTargetSection}`;
+      stats.targeted_coverage.skipped_reason = `target_section_viable_ok:count=${viableInTargetSection}:share=${stats.targeted_coverage.viable_share_before}`;
     }
   } else if (!targetedCoveragePlan) {
     stats.targeted_coverage.skipped_reason = 'no_clear_recent_imbalance';
