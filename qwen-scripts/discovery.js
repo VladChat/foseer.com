@@ -10,12 +10,12 @@ import { resolveProjectRoot } from './utils/project-root.js';
 import { detectPageKind, scoreGenericity, scoreArticleLikelihood } from './utils/page-kind.js';
 
 const PROJECT_ROOT = resolveProjectRoot(import.meta.url);
-const CANDIDATE_FLOOR = 8;
+const CANDIDATE_FLOOR = 10;
 const VIABLE_CANDIDATE_FLOOR = 5;
-const CORE_BRAVE_SECTION_LIMIT = 5;
+const CORE_BRAVE_SECTION_LIMIT = 7;
 const EXPANSION_TOPIC_LIMIT = 4;
-const GOOGLE_LANE_LIMIT = 2;
-const GDELT_LANE_LIMIT = 2;
+const GOOGLE_LANE_LIMIT = 3;
+const GDELT_LANE_LIMIT = 3;
 const DISCOVERY_STATE_PATH = path.resolve(PROJECT_ROOT, 'qwen-data', 'events', 'discovery-lane-state.json');
 
 const REGION_PATTERNS = [
