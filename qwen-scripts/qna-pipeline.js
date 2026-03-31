@@ -544,6 +544,13 @@ async function refreshSharedDiscoveryCache({ braveApiKey, googleApiKey, googleCx
   try {
     const discoveryResult = await runDiscovery({ braveApiKey, googleApiKey, googleCx });
     stage.discovered = discoveryResult.candidates.length;
+    stage.queryUsage = {
+      brave: Number(discoveryResult.stats?.brave_queries || 0),
+      google: Number(discoveryResult.stats?.google_trusted_queries || 0),
+      gdelt: Number(discoveryResult.stats?.gdelt_queries || 0),
+      targeted_brave: Number(discoveryResult.stats?.targeted_brave_queries || 0),
+    };
+    stage.targeted_coverage = discoveryResult.stats?.targeted_coverage || null;
     if (!discoveryResult.candidates.length) {
       stage.error = 'No discovery candidates found';
       return { briefs: [], stage };

@@ -247,6 +247,9 @@ export async function runDiscovery(options = {}) {
   if (targetedCoveragePlan?.sampleSize) {
     stats.targeted_coverage.recent_sample_size = targetedCoveragePlan.sampleSize;
     stats.targeted_coverage.section_counts = targetedCoveragePlan.sectionCounts;
+    stats.targeted_coverage.section_id = targetedCoveragePlan.sectionId;
+    stats.targeted_coverage.topic_id = targetedCoveragePlan.topicId || null;
+    stats.targeted_coverage.reason = targetedCoveragePlan.reason;
   }
 
   if (
@@ -273,9 +276,6 @@ export async function runDiscovery(options = {}) {
       viableCandidateCount = countViableCandidates(filteredCandidates);
       stats.viable_candidates = viableCandidateCount;
       stats.targeted_coverage.triggered = true;
-      stats.targeted_coverage.reason = targetedCoveragePlan.reason;
-      stats.targeted_coverage.section_id = targetedCoveragePlan.sectionId;
-      stats.targeted_coverage.topic_id = targetedCoveragePlan.topicId || null;
       stats.targeted_coverage.viable_in_target_section_after = countViableCandidatesBySection(filteredCandidates, targetedCoveragePlan.sectionId);
     } else {
       stats.targeted_coverage.skipped_reason = `target_section_already_has_viable_candidates:${viableInTargetSection}`;
@@ -286,6 +286,11 @@ export async function runDiscovery(options = {}) {
     stats.targeted_coverage.skipped_reason = 'brave_unavailable';
   } else if (targetedCoverageQueriesUsed >= TARGETED_BRAVE_QUERY_LIMIT) {
     stats.targeted_coverage.skipped_reason = 'targeted_query_limit_reached';
+  }
+  if (stats.targeted_coverage.triggered) {
+    console.log(`[discovery] Targeted coverage applied: section=${stats.targeted_coverage.section_id}${stats.targeted_coverage.topic_id ? ` topic=${stats.targeted_coverage.topic_id}` : ''} fetched=${stats.channels.brave_targeted}`);
+  } else if (stats.targeted_coverage.skipped_reason) {
+    console.log(`[discovery] Targeted coverage skipped: ${stats.targeted_coverage.skipped_reason}`);
   }
 
   const needsExpansion = viableCandidateCount < VIABLE_CANDIDATE_FLOOR;

@@ -179,7 +179,12 @@ export async function runEditorialPipeline(options = {}) {
       stage: 'discovery',
       success: discoveryResult.candidates.length > 0,
       error: discoveryResult.candidates.length === 0 ? 'No candidates discovered' : null,
-      data: { candidatesCount: discoveryResult.candidates.length, discoveredPoolTotal: discoveredPoolStats.total },
+      data: {
+        candidatesCount: discoveryResult.candidates.length,
+        discoveredPoolTotal: discoveredPoolStats.total,
+        queryUsage: extractDiscoveryQueryUsage(discoveryResult.stats),
+        targetedCoverage: discoveryResult.stats?.targeted_coverage || null,
+      },
     };
 
     if (stats.discovery_candidates === 0) {
