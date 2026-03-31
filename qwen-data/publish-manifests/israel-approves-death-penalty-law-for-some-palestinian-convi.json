@@ -1,0 +1,127 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-31T19:55:00.577Z",
+  "event_id": "evt-2026-03-31-news-general-israel-israel",
+  "cluster_id": "evt-2026-03-31-news-general-israel-israel",
+  "article_type": "report",
+  "title": "Israel Approves Death Penalty Law for Some Palestinian Convicts",
+  "slug": "israel-approves-death-penalty-law-for-some-palestinian-convi",
+  "canonical_slug": "2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi",
+  "expected_url": "/article/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi.mdx",
+  "published_at": "2026-03-31T19:55:00.575Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "World & Geopolitics",
+  "topics": [
+    "Israel passes law to give death penalty to Palestinians convicted of ...",
+    "World & Geopolitics"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/5352999/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/5352999/cover.jpg",
+    "source_url": "https://pixabay.com/photos/corona-regulations-rules-penalty-5352999/",
+    "asset_key": "pixabay:5352999",
+    "alt_text": "corona, regulations, rules, penalty, sequence, paragraph, law, regulatory office, businesses, supermarket, restaurant, virus, pandemic, covid-19, hygiene, mask, protection, mouth guard, transmission",
+    "selection_mode": "provider_download_new:pixabay:acceptable",
+    "query_used": "Penalty Law for Some photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "Diplomacy",
+    "Israel"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+        "url": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Israel passes death penalty law for Palestinians convicted of lethal ...",
+        "url": "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/",
+        "domain": "reuters.com"
+      },
+      {
+        "title": "Israel passes controversial death penalty bill for West Bank Palestinians convicted of",
+        "url": "http://www.bignewsnetwork.com/news/278953900/israel-passes-controversial-death-penalty-bill-for-west-bank-palestinians-convicted-of-terrorism",
+        "domain": "bignewsnetwork.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "israel",
+          "label": "Israel",
+          "type": "geography"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "israel",
+          "palestinian",
+          "west bank",
+          "diplomatic"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Penalty Law for Some photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "penalty",
+        "law",
+        "some"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

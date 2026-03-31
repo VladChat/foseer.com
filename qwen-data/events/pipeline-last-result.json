@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-03-31T18:22:29.301Z",
+  "timestamp": "2026-03-31T19:55:00.620Z",
   "success": true,
   "hard_blocker": null,
-  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in.mdx",
-  "verified_url": "/article/2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in",
+  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi.mdx",
+  "verified_url": "/article/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi",
   "stages": {
     "discovery": {
       "stage": "discovery",
       "success": true,
       "error": null,
       "data": {
-        "candidatesCount": 21,
-        "discoveredPoolTotal": 172
+        "candidatesCount": 23,
+        "discoveredPoolTotal": 175
       }
     },
     "briefNormalization": {
@@ -31,7 +31,19 @@
         "attempts": [
           {
             "attempt": "initial",
-            "source_packs_assembled": 12,
+            "source_packs_assembled": 19,
+            "publishable_candidates": 0,
+            "selected_candidates": 0
+          },
+          {
+            "attempt": "retry_1_cheap_refresh",
+            "source_packs_assembled": 19,
+            "publishable_candidates": 0,
+            "selected_candidates": 0
+          },
+          {
+            "attempt": "retry_2_limited_brave_refresh",
+            "source_packs_assembled": 19,
             "publishable_candidates": 1,
             "selected_candidates": 1
           }
@@ -42,24 +54,66 @@
           "maxBraveQueries": 1,
           "maxTokenBudget": 0
         },
-        "sourcePackSelectionCandidateLimit": 6,
-        "retryDiagnostics": [],
+        "sourcePackSelectionCandidateLimit": 16,
+        "retryDiagnostics": [
+          {
+            "attempt": 1,
+            "phase": "cheap_refresh",
+            "status": "ran",
+            "discovery_candidates": 5,
+            "normalized_briefs": 3,
+            "selected_candidates": 0,
+            "source_pack_attempt": {
+              "attempt": "retry_1_cheap_refresh",
+              "source_packs_assembled": 19,
+              "publishable_candidates": 0,
+              "selected_candidates": 0
+            },
+            "query_usage": {
+              "brave": 0,
+              "google": 2,
+              "gdelt": 2,
+              "total": 4
+            },
+            "estimated_tokens": 2700
+          },
+          {
+            "attempt": 2,
+            "phase": "limited_brave_refresh",
+            "status": "ran",
+            "discovery_candidates": 10,
+            "normalized_briefs": 4,
+            "selected_candidates": 1,
+            "source_pack_attempt": {
+              "attempt": "retry_2_limited_brave_refresh",
+              "source_packs_assembled": 19,
+              "publishable_candidates": 1,
+              "selected_candidates": 1
+            },
+            "query_usage": {
+              "brave": 1,
+              "google": 1,
+              "gdelt": 2,
+              "total": 4
+            },
+            "estimated_tokens": 3600
+          }
+        ],
         "retryUsage": {
-          "external_queries": 0,
-          "brave_queries": 0,
-          "estimated_tokens": 0
+          "external_queries": 8,
+          "brave_queries": 1,
+          "estimated_tokens": 6300
         },
         "selectedCount": 1,
         "selectedTopics": [
           {
-            "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
-            "eventId": "evt-2026-03-31-sports-general-global",
-            "sources": 2,
-            "uniqueDomains": 2,
-            "section_id": "sports",
-            "topic_id": "transfers-business",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "eventId": "evt-2026-03-31-news-general-israel-israel",
+            "sources": 3,
+            "uniqueDomains": 3,
+            "section_id": "news",
+            "topic_id": null,
             "gate_notes": [
-              "Large cluster retained extra materials as background/signal; publishable pack remains thin",
               "Role-aware one-event source-pack gate passed"
             ],
             "stage3_editorial_gate": {
@@ -156,53 +210,79 @@
           ],
           "selectedCandidates": [
             {
-              "identityKey": "cluster:evt-2026-03-31-sports-general-global",
-              "briefId": "evt-2026-03-31-sports-general-global",
-              "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
-              "normalizedTitle": "trump administration sues minnesota allowing trans athletes in girls sports",
-              "section_id": "sports",
-              "topic_id": "transfers-business",
+              "identityKey": "cluster:evt-2026-03-31-news-general-israel-israel",
+              "briefId": "evt-2026-03-31-news-general-israel-israel",
+              "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+              "normalizedTitle": "israel passes law to give death penalty to palestinians convicted of",
+              "section_id": "news",
+              "topic_id": null,
               "articleType": "report",
-              "selectionOrigin": "pool",
-              "poolIdentityKey": "cluster:evt-2026-03-31-sports-general-global",
+              "selectionOrigin": "current_run",
+              "poolIdentityKey": "cluster:evt-2026-03-31-news-general-israel-israel",
               "rank": 1,
-              "score": 53.9,
+              "score": 58.4,
               "scoreNotes": [
-                "section_penalty:4",
-                "topic_penalty:23",
-                "region_penalty:42",
+                "section_penalty:21",
+                "topic_penalty:28",
+                "region_penalty:3",
+                "angle_penalty:2",
                 "cluster_repeat:1",
-                "entity_penalty:27",
-                "domains:2",
-                "consistency:5",
-                "core:2",
+                "entity_penalty:4",
+                "domains:3",
+                "consistency:8.3",
+                "core:3",
                 "supporting:0"
               ],
-              "sourceCount": 2,
-              "uniqueDomains": 2,
-              "directEventSourceCount": 2,
-              "independentEventDomains": 2,
+              "sourceCount": 3,
+              "uniqueDomains": 3,
+              "directEventSourceCount": 3,
+              "independentEventDomains": 3,
               "gateDecision": "PASS",
               "gateNotes": [
-                "Large cluster retained extra materials as background/signal; publishable pack remains thin",
                 "Role-aware one-event source-pack gate passed"
               ],
-              "discoveredAt": "2026-03-31T18:20:28.356Z",
-              "firstQueuedAt": "2026-03-31T18:21:53.880Z",
-              "lastQueuedAt": "2026-03-31T18:21:53.880Z",
+              "discoveredAt": "2026-03-31T19:54:31.818Z",
+              "firstQueuedAt": "2026-03-31T19:54:32.395Z",
+              "lastQueuedAt": "2026-03-31T19:54:32.395Z",
               "status": "selected",
-              "lastSelectedAt": "2026-03-31T18:21:53.880Z",
+              "lastSelectedAt": "2026-03-31T19:54:32.395Z",
               "lastPublishedAt": null,
-              "publishedSlug": null
+              "publishedSlug": null,
+              "selectedByWorkflow": null,
+              "selectedByRunId": null,
+              "selectedAt": null,
+              "selectionExpiresAt": null
             }
           ],
           "filePath": "/home/runner/work/foseer.com/foseer.com/qwen-data/events/ready-article-candidates.json",
           "selectedIdentityKeys": [
-            "cluster:evt-2026-03-31-sports-general-global"
+            "cluster:evt-2026-03-31-news-general-israel-israel"
           ]
         },
-        "duplicateRejectedCandidates": [],
-        "candidatesEvaluated": 12
+        "duplicateRejectedCandidates": [
+          {
+            "identityKey": "cluster:evt-2026-03-31-sports-general-global",
+            "title": "How NIL Is Reshaping the Future of College Football",
+            "origin": "current_run",
+            "reason": "identity_already_published",
+            "attempt": "initial"
+          },
+          {
+            "identityKey": "cluster:evt-2026-03-31-sports-general-global",
+            "title": "How NIL Is Reshaping the Future of College Football",
+            "origin": "current_run",
+            "reason": "identity_already_published",
+            "attempt": "retry_1_cheap_refresh"
+          },
+          {
+            "identityKey": "cluster:evt-2026-03-31-sports-general-global",
+            "title": "How NIL Is Reshaping the Future of College Football",
+            "origin": "current_run",
+            "reason": "identity_already_published",
+            "attempt": "retry_2_limited_brave_refresh"
+          }
+        ],
+        "candidatesEvaluated": 16
       }
     },
     "preDraftPreparation": {
@@ -216,24 +296,24 @@
         "rejected": [],
         "items": [
           {
-            "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
             "success": true,
             "error": null,
             "data": {
-              "section_id": "sports",
-              "topic_id": "athletes-culture",
+              "section_id": "news",
+              "topic_id": "world-geopolitics",
               "tags": [
-                "Athletes & Culture",
-                "Trans Athlete Policy"
+                "World & Geopolitics",
+                "Diplomacy",
+                "Israel"
               ],
               "tag_slugs": [
-                "athletes-culture",
-                "trans-athlete-policy"
+                "world-geopolitics",
+                "diplomacy",
+                "israel"
               ],
               "thin_tag_set_before_draft": false,
-              "warnings": [
-                "Canonical tag set is below target floor (3), accepted due sparse evidence"
-              ]
+              "warnings": []
             }
           }
         ]
@@ -249,7 +329,7 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
             "success": true,
             "error": null,
             "data": {
@@ -272,11 +352,11 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
             "success": true,
             "error": null,
             "data": {
-              "wordCount": 1217,
+              "wordCount": 1121,
               "articleType": "report",
               "quality": "strong",
               "safeForPublishing": true
@@ -295,12 +375,12 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
             "success": true,
             "error": null,
             "data": {
-              "provider": "pexels",
-              "imagePath": "~/assets/images/library/pexels/29702008/cover.jpg",
+              "provider": "pixabay",
+              "imagePath": "~/assets/images/library/pixabay/5352999/cover.jpg",
               "hasAltText": true
             }
           }
@@ -317,17 +397,17 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
             "success": true,
             "error": null,
             "data": {
-              "filename": "2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in.mdx",
-              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in.mdx",
-              "canonicalSlug": "2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in",
-              "expectedUrl": "/article/2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in",
-              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/trump-administration-sues-minnesota-over-trans-inclusion-in-.json",
-              "section_id": "sports",
-              "topic_id": "athletes-culture"
+              "filename": "2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi.mdx",
+              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi.mdx",
+              "canonicalSlug": "2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi",
+              "expectedUrl": "/article/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi",
+              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/israel-approves-death-penalty-law-for-some-palestinian-convi.json",
+              "section_id": "news",
+              "topic_id": "world-geopolitics"
             }
           }
         ]
@@ -343,13 +423,13 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
             "success": true,
             "error": null,
             "data": {
               "skipped": true,
               "reason": "CI environment: localhost verification skipped; publish + build checks passed",
-              "expectedUrl": "/article/2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in"
+              "expectedUrl": "/article/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi"
             }
           }
         ]
@@ -358,810 +438,80 @@
   },
   "selected": {
     "brief": {
-      "id": "evt-2026-03-31-sports-general-global",
-      "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
-      "whatHappened": "Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination.",
-      "whoIsInvolved": "Unspecified",
+      "id": "evt-2026-03-31-news-general-israel-israel",
+      "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+      "whatHappened": "1 day ago ... Israel has rarely used the death penalty, applying it only in exceptional cases.",
+      "whoIsInvolved": "israel",
       "involvedParties": [
-        "Unspecified"
+        "israel"
       ],
       "entities": [
-        "Unspecified"
+        "israel"
       ],
-      "when": "1 day ago",
-      "where": "Not specified",
-      "whyItMatters": "The development matters because it may affect technology adoption, competition, regulation, or security decisions.",
+      "when": "2026-03-30T19:29:35.000Z",
+      "where": "israel",
+      "whyItMatters": "The development could affect international security, diplomacy, or energy markets as the situation develops.",
       "developmentStage": "developing",
       "sourceUrls": [
-        "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
-        "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
-        "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
-        "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
-        "https://sports.yahoo.com/articles/nuts-former-buckeye-ohio-state-173100348.html"
+        "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists"
       ],
-      "publishabilityScore": 10,
+      "publishabilityScore": 8,
       "publishabilityNotes": [
         "Has a usable summary sentence",
-        "Parties remain unclear",
+        "Specific parties are identified",
         "Fresh enough for same-day editorial use",
-        "Multiple source URLs already attached",
-        "Clustered across multiple discovery hits",
-        "Cluster contains multiple article-like materials",
+        "Source diversity still needs source-pack validation",
         "At least one trusted source hit is present"
       ],
-      "discoveredAt": "2026-03-31T18:20:28.356Z",
-      "provider": "brave",
-      "section_id": "sports",
-      "topic_id": "athletes-culture",
-      "region": "global",
-      "angle": "transfers",
-      "cluster_id": "evt-2026-03-31-sports-general-global",
-      "eventKey": "2026-03-31:sports-general-global",
-      "cluster_size": 5,
-      "article_rich_count": 5,
+      "discoveredAt": "2026-03-31T19:54:31.818Z",
+      "provider": "google_trusted",
+      "section_id": "news",
+      "topic_id": "world-geopolitics",
+      "region": "israel",
+      "angle": "conflict",
+      "cluster_id": "evt-2026-03-31-news-general-israel-israel",
+      "eventKey": "2026-03-31:news-general-israel-israel",
+      "cluster_size": 1,
+      "article_rich_count": 1,
       "generic_page_count": 0,
       "discoveryContext": [
         {
-          "id": "brave-sec-1774971183664-0",
-          "title": "How NIL Is Reshaping the Future of College Football",
-          "summary": "Many athletes are navigating contracts, taxes, and branding for the first time. Without proper guidance, they risk making costly mistakes. ... NIL can affect locker room chemistry, especially when teammates earn vastly different amounts. It also contributes to increased player movement through the transfer portal. ... Perhaps the biggest change is cultural. College sports ...",
+          "id": "google-sec-1774986871815-2",
+          "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+          "summary": "1 day ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
           "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "1 day ago",
+          "involvedParties": [
+            "israel"
+          ],
+          "entities": [
+            "israel"
+          ],
+          "when": "2026-03-30T19:29:35.000Z",
           "sourceUrls": [
-            "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football"
+            "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists"
           ],
           "freshness": 6,
           "urgency": 4,
-          "discoveredAt": "2026-03-31T15:33:03.669Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:sports",
-          "sectionCandidates": [
-            "sports"
-          ],
-          "topicCandidates": [
-            "athletes-culture"
-          ],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "transfers",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "how nil is reshaping the future of college football cleats",
-          "canonicalUrl": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
-          "discoveryScore": 13.4,
-          "eventKey": "sports:how nil is reshaping the future of college football cleats",
-          "source_id": "brave-sec-1774971183664-0",
-          "url": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
-          "canonical_url": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
-          "domain": "vocal.media",
-          "canonical_domain": "vocal.media",
-          "normalized_title": "how nil is reshaping the future of college football",
-          "snippet": "Many athletes are navigating contracts, taxes, and branding for the first time. Without proper guidance, they risk making costly mistakes. ... NIL can affect locker room chemistry, especially when teammates earn vastly different amounts. It also contributes to increased player movement through the transfer portal. ... Perhaps the biggest change is cultural. College sports ...",
-          "published_at": "1 day ago",
-          "section_id": "sports",
-          "topic_id": null,
-          "section_candidates": [
-            "sports"
-          ],
-          "topic_candidates": [
-            "athletes-culture"
-          ],
-          "cluster_id": null,
-          "event_key": "sports:how nil is reshaping the future of college football cleats",
-          "keywords": [
-            "reshaping",
-            "future",
-            "college",
-            "football",
-            "many",
-            "athletes",
-            "navigating",
-            "contracts",
-            "taxes",
-            "branding",
-            "first",
-            "time"
-          ],
-          "title_signal_tokens": [
-            "reshaping",
-            "future",
-            "college",
-            "football"
-          ],
-          "url_signal_tokens": [
-            "cleats",
-            "reshaping",
-            "future",
-            "college",
-            "football"
-          ],
-          "title_url_overlap": 1,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "reshaping",
-            "future",
-            "college",
-            "football"
-          ]
-        },
-        {
-          "id": "brave-sec-1774971183669-1",
-          "title": "In NCAA athletics, student-athletes are often choosing deal over degree",
-          "summary": "NIL and the transfer portal have given college athletes newfound power and freedom of movement, but it's often at the detriment of education.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "1 day ago",
-          "sourceUrls": [
-            "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree"
-          ],
-          "freshness": 6,
-          "urgency": 4,
-          "discoveredAt": "2026-03-31T15:33:03.673Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:sports",
-          "sectionCandidates": [
-            "sports"
-          ],
-          "topicCandidates": [
-            "athletes-culture"
-          ],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "transfers",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "in ncaa athletics student athletes are often choosing deal over degree andscape",
-          "canonicalUrl": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
-          "discoveryScore": 13.4,
-          "eventKey": "sports:in ncaa athletics student athletes are often choosing deal over degree andscape",
-          "source_id": "brave-sec-1774971183669-1",
-          "url": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
-          "canonical_url": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
-          "domain": "andscape.com",
-          "canonical_domain": "andscape.com",
-          "normalized_title": "in ncaa athletics student athletes are often choosing deal over degree",
-          "snippet": "NIL and the transfer portal have given college athletes newfound power and freedom of movement, but it's often at the detriment of education.",
-          "published_at": "1 day ago",
-          "section_id": "sports",
-          "topic_id": null,
-          "section_candidates": [
-            "sports"
-          ],
-          "topic_candidates": [
-            "athletes-culture"
-          ],
-          "cluster_id": null,
-          "event_key": "sports:in ncaa athletics student athletes are often choosing deal over degree andscape",
-          "keywords": [
-            "ncaa",
-            "athletics",
-            "student",
-            "athletes",
-            "often",
-            "choosing",
-            "deal",
-            "degree",
-            "transfer",
-            "portal",
-            "given",
-            "college"
-          ],
-          "title_signal_tokens": [
-            "ncaa",
-            "athletics",
-            "student",
-            "athletes",
-            "often",
-            "choosing",
-            "deal",
-            "degree"
-          ],
-          "url_signal_tokens": [
-            "features",
-            "ncaa",
-            "athletics",
-            "student",
-            "athletes",
-            "often",
-            "choosing",
-            "deal",
-            "degree"
-          ],
-          "title_url_overlap": 1,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "ncaa",
-            "athletics",
-            "student",
-            "athletes",
-            "often",
-            "choosing",
-            "deal",
-            "degree"
-          ]
-        },
-        {
-          "id": "brave-sec-1774971183673-2",
-          "title": "What's next for Duke, Tennessee after Elite Eight: Recruits, transfer portal, more",
-          "summary": "With NCAA tournament runs over for key programs, here's how next season is taking shape.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "2 days ago",
-          "sourceUrls": [
-            "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026"
-          ],
-          "freshness": 5,
-          "urgency": 4,
-          "discoveredAt": "2026-03-31T15:33:03.676Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:sports",
-          "sectionCandidates": [
-            "sports"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "transfers",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "what s next for duke tennessee after elite eight recruits transfer portal more espn",
-          "canonicalUrl": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
-          "discoveryScore": 11.4,
-          "eventKey": "sports:what s next for duke tennessee after elite eight recruits transfer portal more e",
-          "source_id": "brave-sec-1774971183673-2",
-          "url": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
-          "canonical_url": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
-          "domain": "espn.com",
-          "canonical_domain": "espn.com",
-          "normalized_title": "what s next for duke tennessee after elite eight recruits transfer portal more",
-          "snippet": "With NCAA tournament runs over for key programs, here's how next season is taking shape.",
-          "published_at": "2 days ago",
-          "section_id": "sports",
-          "topic_id": null,
-          "section_candidates": [
-            "sports"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "sports:what s next for duke tennessee after elite eight recruits transfer portal more e",
-          "keywords": [
-            "what",
-            "next",
-            "duke",
-            "tennessee",
-            "elite",
-            "eight",
-            "recruits",
-            "transfer",
-            "portal",
-            "more",
-            "ncaa",
-            "tournament"
-          ],
-          "title_signal_tokens": [
-            "what",
-            "next",
-            "duke",
-            "tennessee",
-            "elite",
-            "eight",
-            "recruits",
-            "transfer",
-            "portal",
-            "more"
-          ],
-          "url_signal_tokens": [
-            "mens",
-            "college",
-            "basketball",
-            "ncaa",
-            "tournament",
-            "losers",
-            "recruits",
-            "transfer",
-            "portal",
-            "priorities",
-            "departures"
-          ],
-          "title_url_overlap": 0.3,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "what",
-            "next",
-            "duke",
-            "tennessee",
-            "elite",
-            "eight",
-            "recruits",
-            "transfer",
-            "portal",
-            "more"
-          ]
-        },
-        {
-          "id": "brave-sec-1774981228353-4",
-          "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports | Trump administration",
-          "summary": "Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "1 day ago",
-          "sourceUrls": [
-            "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration"
-          ],
-          "freshness": 6,
-          "urgency": 4,
-          "discoveredAt": "2026-03-31T18:20:28.356Z",
-          "provider": "brave",
+          "discoveredAt": "2026-03-31T19:54:31.818Z",
+          "provider": "google_trusted",
           "trustedSource": true,
-          "discoveryLane": "section:sports",
+          "discoveryLane": "google:news",
           "sectionCandidates": [
-            "sports",
             "news"
           ],
-          "topicCandidates": [
-            "athletes-culture"
-          ],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "trump administration sues minnesota for allowing trans athletes in girls sports trump administration the guardian",
-          "canonicalUrl": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
-          "discoveryScore": 15.4,
-          "eventKey": "sports:trump administration sues minnesota for allowing trans athletes in girls sports ",
-          "signalSpecificityScore": 7,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "topic_hint",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "brave-sec-1774981228353-4",
-          "url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
-          "canonical_url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
-          "domain": "theguardian.com",
-          "canonical_domain": "theguardian.com",
-          "normalized_title": "trump administration sues minnesota for allowing trans athletes in girls sports",
-          "snippet": "Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination",
-          "published_at": "1 day ago",
-          "section_id": "sports",
-          "topic_id": null,
-          "section_candidates": [
-            "sports",
-            "news"
-          ],
-          "topic_candidates": [
-            "athletes-culture"
-          ],
-          "cluster_id": null,
-          "event_key": "sports:trump administration sues minnesota for allowing trans athletes in girls sports ",
-          "keywords": [
-            "trump",
-            "administration",
-            "sues",
-            "minnesota",
-            "allowing",
-            "trans",
-            "athletes",
-            "girls",
-            "sports",
-            "justice",
-            "department",
-            "claims"
-          ],
-          "title_signal_tokens": [
-            "trump",
-            "administration",
-            "sues",
-            "minnesota",
-            "allowing",
-            "trans",
-            "athletes",
-            "girls"
-          ],
-          "url_signal_tokens": [
-            "minnesota",
-            "trans",
-            "athletes",
-            "lawsuit",
-            "trump",
-            "administration"
-          ],
-          "title_url_overlap": 0.8333333333333334,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "trump",
-            "administration",
-            "sues",
-            "minnesota",
-            "allowing",
-            "trans",
-            "athletes",
-            "girls",
-            "sports"
-          ]
-        },
-        {
-          "id": "brave-sec-1774981228339-0",
-          "title": "How NIL Is Reshaping the Future of College Football",
-          "summary": "Many athletes are navigating contracts, taxes, and branding for the first time. Without proper guidance, they risk making costly mistakes. ... NIL can affect locker room chemistry, especially when teammates earn vastly different amounts. It also contributes to increased player movement through the transfer portal. ... Perhaps the biggest change is cultural. College sports ...",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "1 day ago",
-          "sourceUrls": [
-            "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football"
-          ],
-          "freshness": 6,
-          "urgency": 4,
-          "discoveredAt": "2026-03-31T18:20:28.344Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:sports",
-          "sectionCandidates": [
-            "sports"
-          ],
-          "topicCandidates": [
-            "athletes-culture"
-          ],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "transfers",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "how nil is reshaping the future of college football cleats",
-          "canonicalUrl": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
-          "discoveryScore": 13.4,
-          "eventKey": "sports:how nil is reshaping the future of college football cleats",
-          "signalSpecificityScore": 7,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "topic_hint",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "brave-sec-1774981228339-0",
-          "url": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
-          "canonical_url": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
-          "domain": "vocal.media",
-          "canonical_domain": "vocal.media",
-          "normalized_title": "how nil is reshaping the future of college football",
-          "snippet": "Many athletes are navigating contracts, taxes, and branding for the first time. Without proper guidance, they risk making costly mistakes. ... NIL can affect locker room chemistry, especially when teammates earn vastly different amounts. It also contributes to increased player movement through the transfer portal. ... Perhaps the biggest change is cultural. College sports ...",
-          "published_at": "1 day ago",
-          "section_id": "sports",
-          "topic_id": null,
-          "section_candidates": [
-            "sports"
-          ],
-          "topic_candidates": [
-            "athletes-culture"
-          ],
-          "cluster_id": null,
-          "event_key": "sports:how nil is reshaping the future of college football cleats",
-          "keywords": [
-            "reshaping",
-            "future",
-            "college",
-            "football",
-            "many",
-            "athletes",
-            "navigating",
-            "contracts",
-            "taxes",
-            "branding",
-            "first",
-            "time"
-          ],
-          "title_signal_tokens": [
-            "reshaping",
-            "future",
-            "college",
-            "football"
-          ],
-          "url_signal_tokens": [
-            "cleats",
-            "reshaping",
-            "future",
-            "college",
-            "football"
-          ],
-          "title_url_overlap": 1,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "reshaping",
-            "future",
-            "college",
-            "football"
-          ]
-        },
-        {
-          "id": "brave-sec-1774981228348-2",
-          "title": "In NCAA athletics, student-athletes are often choosing deal over degree",
-          "summary": "NIL and the transfer portal have given college athletes newfound power and freedom of movement, but it's often at the detriment of education.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "1 day ago",
-          "sourceUrls": [
-            "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree"
-          ],
-          "freshness": 6,
-          "urgency": 4,
-          "discoveredAt": "2026-03-31T18:20:28.351Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:sports",
-          "sectionCandidates": [
-            "sports"
-          ],
-          "topicCandidates": [
-            "athletes-culture"
-          ],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "transfers",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "in ncaa athletics student athletes are often choosing deal over degree andscape",
-          "canonicalUrl": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
-          "discoveryScore": 13.4,
-          "eventKey": "sports:in ncaa athletics student athletes are often choosing deal over degree andscape",
-          "signalSpecificityScore": 7,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "topic_hint",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "brave-sec-1774981228348-2",
-          "url": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
-          "canonical_url": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
-          "domain": "andscape.com",
-          "canonical_domain": "andscape.com",
-          "normalized_title": "in ncaa athletics student athletes are often choosing deal over degree",
-          "snippet": "NIL and the transfer portal have given college athletes newfound power and freedom of movement, but it's often at the detriment of education.",
-          "published_at": "1 day ago",
-          "section_id": "sports",
-          "topic_id": null,
-          "section_candidates": [
-            "sports"
-          ],
-          "topic_candidates": [
-            "athletes-culture"
-          ],
-          "cluster_id": null,
-          "event_key": "sports:in ncaa athletics student athletes are often choosing deal over degree andscape",
-          "keywords": [
-            "ncaa",
-            "athletics",
-            "student",
-            "athletes",
-            "often",
-            "choosing",
-            "deal",
-            "degree",
-            "transfer",
-            "portal",
-            "given",
-            "college"
-          ],
-          "title_signal_tokens": [
-            "ncaa",
-            "athletics",
-            "student",
-            "athletes",
-            "often",
-            "choosing",
-            "deal",
-            "degree"
-          ],
-          "url_signal_tokens": [
-            "features",
-            "ncaa",
-            "athletics",
-            "student",
-            "athletes",
-            "often",
-            "choosing",
-            "deal",
-            "degree"
-          ],
-          "title_url_overlap": 1,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "ncaa",
-            "athletics",
-            "student",
-            "athletes",
-            "often",
-            "choosing",
-            "deal",
-            "degree"
-          ]
-        },
-        {
-          "id": "brave-sec-1774981228351-3",
-          "title": "You’re Nuts: Which former Buckeye should be the Ohio State men’s basketball GM?",
-          "summary": "﻿Your (almost) daily dose of good-natured, Ohio State banter.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "1 day ago",
-          "sourceUrls": [
-            "https://sports.yahoo.com/articles/nuts-former-buckeye-ohio-state-173100348.html"
-          ],
-          "freshness": 6,
-          "urgency": 4,
-          "discoveredAt": "2026-03-31T18:20:28.353Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:sports",
-          "sectionCandidates": [
-            "sports"
-          ],
           "topicCandidates": [],
-          "detectedSectionId": "sports",
+          "detectedSectionId": "news",
           "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
+          "region": "israel",
+          "angle": "conflict",
           "genericPage": false,
           "page_kind": "article",
           "genericity_score": 0,
           "article_likelihood": 8,
-          "normalizedTitle": "you re nuts which former buckeye should be the ohio state men s basketball gm yahoo sports",
-          "canonicalUrl": "https://sports.yahoo.com/articles/nuts-former-buckeye-ohio-state-173100348.html",
-          "discoveryScore": 13.4,
-          "eventKey": "sports:you re nuts which former buckeye should be the ohio state men s basketball gm ya",
-          "signalSpecificityScore": 6,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "brave-sec-1774981228351-3",
-          "url": "https://sports.yahoo.com/articles/nuts-former-buckeye-ohio-state-173100348.html",
-          "canonical_url": "https://sports.yahoo.com/articles/nuts-former-buckeye-ohio-state-173100348.html",
-          "domain": "sports.yahoo.com",
-          "canonical_domain": "sports.yahoo.com",
-          "normalized_title": "you re nuts which former buckeye should be the ohio state men s basketball gm",
-          "snippet": "Your (almost) daily dose of good-natured, Ohio State banter.",
-          "published_at": "1 day ago",
-          "section_id": "sports",
-          "topic_id": null,
-          "section_candidates": [
-            "sports"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "sports:you re nuts which former buckeye should be the ohio state men s basketball gm ya",
-          "keywords": [
-            "nuts",
-            "which",
-            "former",
-            "buckeye",
-            "ohio",
-            "state",
-            "basketball",
-            "your",
-            "almost",
-            "daily",
-            "dose",
-            "good"
-          ],
-          "title_signal_tokens": [
-            "nuts",
-            "which",
-            "former",
-            "buckeye",
-            "should",
-            "ohio",
-            "state",
-            "basketball"
-          ],
-          "url_signal_tokens": [
-            "nuts",
-            "former",
-            "buckeye",
-            "ohio",
-            "state"
-          ],
-          "title_url_overlap": 1,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "nuts",
-            "which",
-            "former",
-            "buckeye",
-            "ohio",
-            "state",
-            "basketball"
-          ]
-        },
-        {
-          "id": "brave-sec-1774981228344-1",
-          "title": "What's next for Duke, Tennessee after Elite Eight: Recruits, transfer portal, more",
-          "summary": "With NCAA tournament runs over for key programs, here's how next season is taking shape.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "2 days ago",
-          "sourceUrls": [
-            "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026"
-          ],
-          "freshness": 5,
-          "urgency": 4,
-          "discoveredAt": "2026-03-31T18:20:28.348Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:sports",
-          "sectionCandidates": [
-            "sports"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "transfers",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "what s next for duke tennessee after elite eight recruits transfer portal more espn",
-          "canonicalUrl": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
-          "discoveryScore": 11.4,
-          "eventKey": "sports:what s next for duke tennessee after elite eight recruits transfer portal more e",
+          "normalizedTitle": "israel passes law to give death penalty to palestinians convicted of",
+          "canonicalUrl": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
+          "discoveryScore": 14.4,
+          "eventKey": "news:israel passes law to give death penalty to palestinians convicted of",
           "signalSpecificityScore": 5,
           "signalSpecificityNotes": [
             "title_specificity",
@@ -1169,127 +519,106 @@
             "named_marker"
           ],
           "crossTopicRisk": false,
-          "source_id": "brave-sec-1774981228344-1",
-          "url": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
-          "canonical_url": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
-          "domain": "espn.com",
-          "canonical_domain": "espn.com",
-          "normalized_title": "what s next for duke tennessee after elite eight recruits transfer portal more",
-          "snippet": "With NCAA tournament runs over for key programs, here's how next season is taking shape.",
-          "published_at": "2 days ago",
-          "section_id": "sports",
+          "source_id": "google-sec-1774986871815-2",
+          "url": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
+          "canonical_url": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
+          "domain": "theguardian.com",
+          "canonical_domain": "theguardian.com",
+          "normalized_title": "israel passes law to give death penalty to palestinians convicted of",
+          "snippet": "1 day ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
+          "published_at": "2026-03-30T19:29:35.000Z",
+          "section_id": "news",
           "topic_id": null,
           "section_candidates": [
-            "sports"
+            "news"
           ],
           "topic_candidates": [],
           "cluster_id": null,
-          "event_key": "sports:what s next for duke tennessee after elite eight recruits transfer portal more e",
+          "event_key": "news:israel passes law to give death penalty to palestinians convicted of",
           "keywords": [
-            "what",
-            "next",
-            "duke",
-            "tennessee",
-            "elite",
-            "eight",
-            "recruits",
-            "transfer",
-            "portal",
-            "more",
-            "ncaa",
-            "tournament"
+            "israel",
+            "passes",
+            "give",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted",
+            "rarely",
+            "used",
+            "applying",
+            "only",
+            "exceptional"
           ],
           "title_signal_tokens": [
-            "what",
-            "next",
-            "duke",
-            "tennessee",
-            "elite",
-            "eight",
-            "recruits",
-            "transfer",
-            "portal",
-            "more"
+            "israel",
+            "passes",
+            "give",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted"
           ],
           "url_signal_tokens": [
-            "mens",
-            "college",
-            "basketball",
-            "ncaa",
-            "tournament",
-            "losers",
-            "recruits",
-            "transfer",
-            "portal",
-            "priorities",
-            "departures"
+            "israel",
+            "passes",
+            "death",
+            "penalty",
+            "palestinian",
+            "convicted",
+            "terrorists"
           ],
-          "title_url_overlap": 0.3,
+          "title_url_overlap": 0.7142857142857143,
           "title_url_mismatch": false,
           "source_quality_score": 0,
           "action": "general",
-          "place": "global",
+          "place": "israel",
           "titleTokens": [
-            "what",
-            "next",
-            "duke",
-            "tennessee",
-            "elite",
-            "eight",
-            "recruits",
-            "transfer",
-            "portal",
-            "more"
+            "israel",
+            "passes",
+            "give",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted"
           ]
         }
       ],
-      "poolIdentityKey": "cluster:evt-2026-03-31-sports-general-global",
-      "selectionScore": 13.596539097222223,
-      "selectionNotes": [
-        "undercovered_section:sports",
-        "section_penalty:3",
-        "topic_penalty:22",
-        "region_penalty:41",
-        "entity_penalty:26"
-      ],
-      "readyCandidateStatus": null,
-      "readyCandidateRank": null,
-      "_selectionOrigin": "pool",
-      "section": "Sports",
-      "subsection": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+      "_selectionOrigin": "current_run",
+      "poolIdentityKey": "cluster:evt-2026-03-31-news-general-israel-israel",
+      "section": "News",
+      "subsection": "Israel passes law to give death penalty to Palestinians convicted of ...",
       "topics": [
-        "Trump administration sues Minnesota for allowing trans athletes in girls’ sports"
+        "Israel passes law to give death penalty to Palestinians convicted of ..."
       ]
     },
     "sourcePack": {
-      "eventId": "evt-2026-03-31-sports-general-global",
-      "topic": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
-      "sources": 2,
-      "uniqueDomains": 2,
+      "eventId": "evt-2026-03-31-news-general-israel-israel",
+      "topic": "Israel passes law to give death penalty to Palestinians convicted of ...",
+      "sources": 3,
+      "uniqueDomains": 3,
       "credibilityScore": null,
       "passesGate": true,
       "gateNotes": [
-        "Large cluster retained extra materials as background/signal; publishable pack remains thin",
         "Role-aware one-event source-pack gate passed"
       ]
     }
   },
   "stats": {
-    "discovery_candidates": 21,
+    "discovery_candidates": 23,
     "event_clusters": 6,
-    "briefs_normalized": 6,
-    "source_packs_assembled": 12,
+    "briefs_normalized": 13,
+    "source_packs_assembled": 57,
     "publishable_candidates": 1,
-    "selected_topic": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+    "selected_topic": "Israel passes law to give death penalty to Palestinians convicted of ...",
     "selected_topics": [
-      "Trump administration sues Minnesota for allowing trans athletes in girls’ sports"
+      "Israel passes law to give death penalty to Palestinians convicted of ..."
     ],
     "articles_attempted": 1,
     "articles_published": 1,
     "news_pool": {
-      "total": 50,
-      "active": 42,
-      "published": 8,
+      "total": 58,
+      "active": 49,
+      "published": 9,
       "ready_candidates": 2
     },
     "cache_stats": {
@@ -1310,7 +639,7 @@
       "live_usage": {
         "brave": 4,
         "gdelt": 2,
-        "google": 1
+        "google": 2
       },
       "cache": {
         "ttl_hours": 8,
@@ -1322,7 +651,7 @@
             "fresh_files": 4,
             "expired_files": 0,
             "corrupt_files": 0,
-            "size_bytes": 59603
+            "size_bytes": 59109
           },
           "gdelt": {
             "files": 0,
@@ -1332,11 +661,11 @@
             "size_bytes": 0
           },
           "google": {
-            "files": 1,
-            "fresh_files": 1,
+            "files": 2,
+            "fresh_files": 2,
             "expired_files": 0,
             "corrupt_files": 0,
-            "size_bytes": 2428
+            "size_bytes": 60518
           }
         },
         "seed": {
@@ -1364,35 +693,35 @@
         }
       }
     },
-    "duration_ms": 133535,
+    "duration_ms": 127586,
     "ready_candidates": 2,
     "additional_ready_candidates": 2,
-    "source_pack_attempts": 1,
-    "source_pack_retry_external_queries": 0,
-    "source_pack_retry_brave_queries": 0,
-    "source_pack_retry_estimated_tokens": 0,
+    "source_pack_attempts": 3,
+    "source_pack_retry_external_queries": 8,
+    "source_pack_retry_brave_queries": 1,
+    "source_pack_retry_estimated_tokens": 6300,
     "pre_draft_rejected": 0,
-    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T18-20-15-763Z.json"
+    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T19-52-53-031Z.json"
   },
-  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T18-20-15-763Z.json",
+  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T19-52-53-031Z.json",
   "published_paths": [
-    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in.mdx"
+    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi.mdx"
   ],
   "verified_urls": [
-    "/article/2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in"
+    "/article/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi"
   ],
   "selected_candidates": [
     {
-      "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
-      "topic": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
-      "section_id": "sports",
-      "topic_id": "athletes-culture"
+      "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+      "topic": "Israel passes law to give death penalty to Palestinians convicted of ...",
+      "section_id": "news",
+      "topic_id": "world-geopolitics"
     }
   ],
   "published_articles": [
     {
-      "title": "Trump administration sues Minnesota over trans inclusion in girls’ sports",
-      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in.mdx",
+      "title": "Israel Approves Death Penalty Law for Some Palestinian Convicts",
+      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-israel-approves-death-penalty-law-for-some-palestinian-convi.mdx",
       "verifiedUrl": null
     }
   ]

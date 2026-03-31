@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-03-31T18:22:29.217Z",
+  "updatedAt": "2026-03-31T19:55:00.547Z",
   "assets": [
     {
       "assetKey": "legacy:7-social-media-trends-you-need-to-know-in-2026",
@@ -7583,16 +7583,99 @@
       "sceneType": "stadium",
       "geoHints": [],
       "visualType": "photo",
-      "editorialFitScore": 100,
+      "editorialFitScore": 98,
       "firstSeenAt": "2026-03-31T18:22:29.216Z",
       "lastFetchedAt": "2026-03-31T18:22:29.216Z",
       "lastUsedAt": "2026-03-31T18:22:29.217Z",
       "useCount": 1,
       "status": "ready",
       "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pixabay:5352999",
+      "provider": "pixabay",
+      "providerAssetId": "5352999",
+      "sourcePageUrl": "https://pixabay.com/photos/corona-regulations-rules-penalty-5352999/",
+      "sourceDownloadUrl": "https://pixabay.com/get/g892487375516e33c28278c5381ee0030e0fcb4e3bf80179cf7a64142400f0fd22ab7bfe2c02c1bd0280d2724bf85322f05fd22fbb904a45fa14ae8819889700a_1280.jpg",
+      "authorName": "viarami",
+      "authorUrl": "https://pixabay.com/users/viarami-13458823/",
+      "license": "Pixabay Content License",
+      "altText": "corona, regulations, rules, penalty, sequence, paragraph, law, regulatory office, businesses, supermarket, restaurant, virus, pandemic, covid-19, hygiene, mask, protection, mouth guard, transmission",
+      "width": 3999,
+      "height": 2666,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pixabay/5352999/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pixabay/5352999/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pixabay/5352999/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "News"
+      ],
+      "queryHistory": [
+        "Penalty Law for Some photo"
+      ],
+      "tags": [
+        "world-geopolitics",
+        "israel",
+        "corona",
+        "regulations",
+        "rules",
+        "penalty",
+        "sequence",
+        "paragraph",
+        "law",
+        "regulatory office",
+        "businesses",
+        "supermarket",
+        "restaurant",
+        "virus",
+        "pandemic",
+        "covid-19",
+        "hygiene",
+        "mask",
+        "protection",
+        "mouth guard",
+        "transmission"
+      ],
+      "topicHints": [
+        "world-geopolitics"
+      ],
+      "entityHints": [
+        "corona",
+        "regulations",
+        "rules",
+        "penalty",
+        "sequence",
+        "paragraph",
+        "regulatory",
+        "businesses"
+      ],
+      "sceneType": "office",
+      "geoHints": [
+        "israel"
+      ],
+      "visualType": "photo",
+      "editorialFitScore": 100,
+      "firstSeenAt": "2026-03-31T19:55:00.547Z",
+      "lastFetchedAt": "2026-03-31T19:55:00.547Z",
+      "lastUsedAt": "2026-03-31T19:55:00.547Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
     }
   ],
   "usage": [
+    {
+      "assetKey": "pixabay:5352999",
+      "articleSlug": "israel-approves-death-penalty-law-for-some-palestinian-convi",
+      "articleTitle": "Israel Approves Death Penalty Law for Some Palestinian Convicts",
+      "section": "News",
+      "topicId": "world-geopolitics",
+      "query": "Penalty Law for Some photo",
+      "usedAt": "2026-03-31T19:55:00.547Z",
+      "selectionMode": "provider_download_new:pixabay:acceptable"
+    },
     {
       "assetKey": "pexels:29702008",
       "articleSlug": "trump-administration-sues-minnesota-over-trans-inclusion-in-",
@@ -8357,6 +8440,6 @@
   "maintenance": {
     "lastLegacyImportAt": "2026-03-26T18:24:48.254Z",
     "lastCooldownBackfillAt": null,
-    "lastMetadataEnrichmentAt": "2026-03-31T15:34:56.567Z"
+    "lastMetadataEnrichmentAt": "2026-03-31T19:54:59.265Z"
   }
 }
