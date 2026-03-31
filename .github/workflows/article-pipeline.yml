@@ -6,7 +6,7 @@ on:
       max_articles_per_run:
         description: 'How many articles to attempt in one run (1-5)'
         required: false
-        default: '3'
+        default: '4'
         type: string
   schedule:
     - cron: '27 6 * * *'
