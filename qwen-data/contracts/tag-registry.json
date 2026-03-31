@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-03-29T00:56:05.778Z",
+  "generated_at": "2026-03-31T18:18:48.524Z",
   "source_taxonomy_registry": "qwen-data/contracts/taxonomy-registry.json",
   "tags": [
     {
@@ -2403,6 +2403,32 @@
       "related_tags": []
     },
     {
+      "tag_id": "trans-athlete-policy",
+      "slug": "trans-athlete-policy",
+      "label": "Trans Athlete Policy",
+      "type": "theme",
+      "section_ids": [
+        "sports"
+      ],
+      "topic_ids": [
+        "athletes-culture"
+      ],
+      "aliases": [
+        "Trans Athlete Policy",
+        "trans athlete",
+        "trans athletes",
+        "transgender athlete",
+        "transgender athletes",
+        "girls sports",
+        "women's sports",
+        "school sports"
+      ],
+      "indexable": true,
+      "priority": 80,
+      "min_posts_to_index": 3,
+      "related_tags": []
+    },
+    {
       "tag_id": "streaming",
       "slug": "streaming",
       "label": "Streaming",
@@ -3943,7 +3969,8 @@
     ],
     "athletes-culture": [
       "athlete-activism",
-      "fan-culture"
+      "fan-culture",
+      "trans-athlete-policy"
     ],
     "film-tv": [
       "streaming",
@@ -6443,6 +6470,32 @@
         "Fan Culture",
         "fan culture",
         "fandom"
+      ],
+      "indexable": true,
+      "priority": 80,
+      "min_posts_to_index": 3,
+      "related_tags": []
+    },
+    "trans-athlete-policy": {
+      "tag_id": "trans-athlete-policy",
+      "slug": "trans-athlete-policy",
+      "label": "Trans Athlete Policy",
+      "type": "theme",
+      "section_ids": [
+        "sports"
+      ],
+      "topic_ids": [
+        "athletes-culture"
+      ],
+      "aliases": [
+        "Trans Athlete Policy",
+        "trans athlete",
+        "trans athletes",
+        "transgender athlete",
+        "transgender athletes",
+        "girls sports",
+        "women's sports",
+        "school sports"
       ],
       "indexable": true,
       "priority": 80,
@@ -10221,6 +10274,32 @@
           "Fan Culture",
           "fan culture",
           "fandom"
+        ],
+        "indexable": true,
+        "priority": 80,
+        "min_posts_to_index": 3,
+        "related_tags": []
+      },
+      {
+        "tag_id": "trans-athlete-policy",
+        "slug": "trans-athlete-policy",
+        "label": "Trans Athlete Policy",
+        "type": "theme",
+        "section_ids": [
+          "sports"
+        ],
+        "topic_ids": [
+          "athletes-culture"
+        ],
+        "aliases": [
+          "Trans Athlete Policy",
+          "trans athlete",
+          "trans athletes",
+          "transgender athlete",
+          "transgender athletes",
+          "girls sports",
+          "women's sports",
+          "school sports"
         ],
         "indexable": true,
         "priority": 80,
