@@ -579,11 +579,18 @@ function sanitizeStoredTagging(selection = null) {
   const tags = Array.isArray(selection.tags) ? selection.tags.map((value) => String(value || '').trim()).filter(Boolean) : [];
   const tag_slugs = Array.isArray(selection.tag_slugs) ? selection.tag_slugs.map((value) => String(value || '').trim()).filter(Boolean) : [];
   if (tags.length === 0 || tag_slugs.length === 0 || tags.length !== tag_slugs.length) return null;
+  if (tags.length < MIN_CANONICAL_TAGS || tags.length > MAX_CANONICAL_TAGS) return null;
   if (!selection.primary_topic_slug) return null;
   const registry = loadTagRegistry();
+  const tagRecords = [];
   for (const slug of tag_slugs) {
-    if (!registry.bySlug?.[slug]) return null;
+    const record = registry.bySlug?.[slug];
+    if (!record) return null;
+    tagRecords.push(record);
   }
+  const hasTopic = tagRecords.some((record) => String(record?.type || '').toLowerCase() === 'topic');
+  const hasNonTopic = tagRecords.some((record) => String(record?.type || '').toLowerCase() !== 'topic');
+  if (!hasTopic || !hasNonTopic) return null;
   return {
     ...selection,
     tags,

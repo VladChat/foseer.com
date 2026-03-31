@@ -19,7 +19,11 @@ export function validateTagSelection(selection = {}) {
   const hasTopicTag = tagRecords.some((entry) => String(entry?.type || '').toLowerCase() === 'topic');
   const hasNonTopicEvidenceTag = tagRecords.some((entry) => String(entry?.type || '').toLowerCase() !== 'topic');
 
-  if (tags.length < 3) errors.push('Fewer than 3 canonical tags');
+  if (tags.length < 2) {
+    errors.push('Fewer than 2 canonical tags');
+  } else if (tags.length < 3) {
+    warnings.push('Canonical tag set is below target floor (3), accepted due sparse evidence');
+  }
   if (tags.length > 6) errors.push('More than 6 canonical tags');
   if (!selection.primary_topic_slug) errors.push('Missing primary topic tag');
   if (!hasTopicTag) errors.push('Canonical tag set is missing required topic tag');

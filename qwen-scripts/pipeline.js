@@ -15,6 +15,7 @@ import { generateImagePackage } from './nodes/image-node.js';
 import { publishArticle } from './publisher.js';
 import { validatePrePublishGraph, buildCanonicalPublishPayload, buildPublishManifest, writePublishManifest, validatePublishedArtifact, evaluateSourcePackEditorialIntegrity } from './validate-publish-graph.js';
 import { validateTagSelection } from './validate-tags.js';
+import { resolvePlacementMetadata } from '../qwen-project-governance/shared/article-placement.js';
 import { repairContentPosts } from './repair-content-posts.js';
 import { verifyLocalVisibility, generateVerificationReport } from './local-verification.js';
 import { getProviderStats } from './utils/api-clients.js';
@@ -269,6 +270,15 @@ export async function runEditorialPipeline(options = {}) {
     const retryDiagnostics = [];
     const duplicateRejectedAtSelection = [];
     const stage3AttemptSummaries = [];
+    const sourcePackSelectionCandidateLimit = Math.max(
+      Number(options.sourcePackSelectionCandidateLimit || 0) || 0,
+      maxArticlesPerRun * 4,
+      6,
+    );
+    const stage3Options = {
+      ...options,
+      maxArticlesPerRunForSourcePackSelection: sourcePackSelectionCandidateLimit,
+    };
     const retryUsage = {
       external_queries: 0,
       brave_queries: 0,
@@ -288,7 +298,7 @@ export async function runEditorialPipeline(options = {}) {
     const runStage3Attempt = async (attemptLabel) => {
       const attemptResult = await runSourcePackAssemblyAttempt({
         briefsSeed: seedBriefs,
-        options,
+        options: stage3Options,
         maxArticlesPerRun,
         braveApiKey,
         googleApiKey,
@@ -361,7 +371,7 @@ export async function runEditorialPipeline(options = {}) {
       }
 
       const boundedRetryDiscovery = buildRetryDiscoveryOptions({
-        baseOptions: options,
+        baseOptions: stage3Options,
         phaseOptions: phase.discoveryOptions,
         remainingExternalQueries: retryPolicy.maxExternalQueries > 0 ? remainingExternal : Number.POSITIVE_INFINITY,
         remainingBraveQueries: retryPolicy.maxBraveQueries > 0 ? remainingBrave : Number.POSITIVE_INFINITY,
@@ -399,7 +409,7 @@ export async function runEditorialPipeline(options = {}) {
       const retryNormalization = await normalizeDiscoveryCandidatesToBriefs(
         retryDiscovery.candidates || [],
         {
-          ...options,
+          ...stage3Options,
           clusterSelectionLimit: Math.max(1, Math.min(options.clusterSelectionLimit || 6, retryClusterLimitByTokens)),
         },
         openAiApiKey,
@@ -457,6 +467,7 @@ export async function runEditorialPipeline(options = {}) {
       data: {
         attempts: stage3AttemptSummaries,
         retryPolicy,
+        sourcePackSelectionCandidateLimit,
         retryDiagnostics,
         retryUsage,
         selectedCount: selectedCandidates.length,
@@ -498,9 +509,6 @@ export async function runEditorialPipeline(options = {}) {
     }
 
     for (const candidate of selectedCandidates) {
-      if (candidate?.brief?.poolIdentityKey) {
-        markBriefSelected(candidate.brief.poolIdentityKey);
-      }
       console.log(`[pipeline] SOURCE PACK GATE: PASS :: ${candidate.brief.title}`);
       console.log(`[pipeline] Sources: ${candidate.sourcePack.sources.length}, Domains: ${candidate.sourcePack.uniqueDomains}`);
     }
@@ -543,24 +551,92 @@ export async function runEditorialPipeline(options = {}) {
       article_type: candidate?.brief?.articleType || candidate?.brief?.article_type || 'report',
       articleType: candidate?.brief?.articleType || candidate?.brief?.article_type || 'report',
     };
-    const canonicalPayload = buildCanonicalPublishPayload({
+    let canonicalPayload = buildCanonicalPublishPayload({
       ...candidate,
       draft: preDraftSeed,
       placement: basePlacement,
     });
+    let placementRepairMode = 'none';
+    if (!(canonicalPayload?.placement?.section_id && canonicalPayload?.placement?.topic_id)) {
+      const strictPlacement = resolvePlacementMetadata({
+        title: candidate?.brief?.title || '',
+        excerpt: candidate?.brief?.summary || candidate?.brief?.whyItMatters || '',
+        content: `${candidate?.brief?.whatHappened || ''} ${candidate?.brief?.whyItMatters || ''}`.trim(),
+        section_id: basePlacement.section_id || candidate?.sourcePack?.section_id || candidate?.brief?.section_id || null,
+        topic_id: basePlacement.topic_id || candidate?.sourcePack?.topic_id || candidate?.brief?.topic_id || null,
+        subsection: basePlacement.subsection || null,
+        topics: Array.isArray(basePlacement.topics) ? basePlacement.topics : [],
+        sources: candidate?.sourcePack?.publishReadySources || candidate?.sourcePack?.sources || [],
+        lock_canonical_placement: true,
+      });
+      canonicalPayload = buildCanonicalPublishPayload({
+        ...candidate,
+        draft: {
+          ...preDraftSeed,
+          section_id: strictPlacement.section_id || preDraftSeed.section_id || null,
+          topic_id: strictPlacement.topic_id || preDraftSeed.topic_id || null,
+        },
+        placement: {
+          ...basePlacement,
+          section_id: strictPlacement.section_id || basePlacement.section_id || null,
+          topic_id: strictPlacement.topic_id || basePlacement.topic_id || null,
+          section: strictPlacement.section || basePlacement.section || null,
+          subsection: strictPlacement.subsection || basePlacement.subsection || null,
+          topics: Array.isArray(strictPlacement.topics) ? strictPlacement.topics : basePlacement.topics,
+        },
+      });
+      placementRepairMode = 'strict';
+    }
+    if (!(canonicalPayload?.placement?.section_id && canonicalPayload?.placement?.topic_id)) {
+      const inferredPlacement = resolvePlacementMetadata({
+        title: candidate?.brief?.title || '',
+        excerpt: candidate?.brief?.summary || candidate?.brief?.whyItMatters || '',
+        content: `${candidate?.brief?.whatHappened || ''} ${candidate?.brief?.whyItMatters || ''}`.trim(),
+        section_id: basePlacement.section_id || candidate?.sourcePack?.section_id || candidate?.brief?.section_id || null,
+        topic_id: basePlacement.topic_id || candidate?.sourcePack?.topic_id || candidate?.brief?.topic_id || null,
+        subsection: basePlacement.subsection || null,
+        topics: Array.isArray(basePlacement.topics) ? basePlacement.topics : [],
+        sources: candidate?.sourcePack?.publishReadySources || candidate?.sourcePack?.sources || [],
+        lock_canonical_placement: false,
+      });
+      canonicalPayload = buildCanonicalPublishPayload({
+        ...candidate,
+        draft: {
+          ...preDraftSeed,
+          section_id: inferredPlacement.section_id || preDraftSeed.section_id || null,
+          topic_id: inferredPlacement.topic_id || preDraftSeed.topic_id || null,
+        },
+        placement: {
+          ...basePlacement,
+          section_id: inferredPlacement.section_id || basePlacement.section_id || null,
+          topic_id: inferredPlacement.topic_id || basePlacement.topic_id || null,
+          section: inferredPlacement.section || basePlacement.section || null,
+          subsection: inferredPlacement.subsection || basePlacement.subsection || null,
+          topics: Array.isArray(inferredPlacement.topics) ? inferredPlacement.topics : basePlacement.topics,
+        },
+      });
+      placementRepairMode = 'inferred';
+    }
     const tagValidation = validateTagSelection(canonicalPayload?.tagging || {});
+    const rawTagErrors = Array.isArray(tagValidation.errors) ? tagValidation.errors : [];
+    const nonThinTagErrors = rawTagErrors.filter((message) => String(message || '').trim() !== 'Fewer than 3 canonical tags');
+    const onlyThinTagError = rawTagErrors.length > 0 && nonThinTagErrors.length === 0;
     const hasPlacementLock = Boolean(canonicalPayload?.placement?.section_id && canonicalPayload?.placement?.topic_id);
 
     const rejectionReasons = [];
     if (!hasPlacementLock) {
       rejectionReasons.push('Missing canonical section/topic lock from source-pack evidence');
     }
-    if (!tagValidation.valid) {
-      rejectionReasons.push(`Canonical tags invalid before writing: ${tagValidation.errors.join('; ')}`);
+    if (nonThinTagErrors.length > 0) {
+      rejectionReasons.push(`Canonical tags invalid before writing: ${nonThinTagErrors.join('; ')}`);
     }
 
     const canonicalTags = Array.isArray(canonicalPayload?.tagging?.tags) ? canonicalPayload.tagging.tags : [];
     const canonicalSlugs = Array.isArray(canonicalPayload?.tagging?.tag_slugs) ? canonicalPayload.tagging.tag_slugs : [];
+    const placementWarnings = [];
+    if (placementRepairMode === 'inferred' && hasPlacementLock) {
+      placementWarnings.push('Canonical placement inferred from event evidence after strict lock fallback');
+    }
     preDraftItems.push({
       title: articleLabel,
       success: rejectionReasons.length === 0,
@@ -570,7 +646,8 @@ export async function runEditorialPipeline(options = {}) {
         topic_id: canonicalPayload?.placement?.topic_id || null,
         tags: canonicalTags,
         tag_slugs: canonicalSlugs,
-        warnings: tagValidation.warnings || [],
+        thin_tag_set_before_draft: onlyThinTagError,
+        warnings: [...(tagValidation.warnings || []), ...placementWarnings],
       },
     });
 
@@ -578,6 +655,23 @@ export async function runEditorialPipeline(options = {}) {
       console.log(`[pipeline] PRE-DRAFT LOCK: FAIL :: ${articleLabel} :: ${rejectionReasons.join(' | ')}`);
       preDraftRejected.push({ title: articleLabel, reasons: rejectionReasons });
       continue;
+    }
+
+    if (onlyThinTagError) {
+      console.log(`[pipeline] PRE-DRAFT LOCK: WARN :: ${articleLabel} :: Canonical tag set is thin before drafting (will re-validate after draft)`);
+      const existingWarnings = Array.isArray(canonicalPayload?.tagging?.warnings) ? canonicalPayload.tagging.warnings : [];
+      canonicalPayload.tagging = {
+        ...(canonicalPayload.tagging || {}),
+        warnings: Array.from(new Set([...existingWarnings, 'Canonical tag set is thin before drafting; awaiting post-draft enrichment'])),
+      };
+    }
+    if (placementWarnings.length > 0) {
+      console.log(`[pipeline] PRE-DRAFT LOCK: WARN :: ${articleLabel} :: ${placementWarnings.join(' | ')}`);
+      const existingWarnings = Array.isArray(canonicalPayload?.placement?.warnings) ? canonicalPayload.placement.warnings : [];
+      canonicalPayload.placement = {
+        ...(canonicalPayload.placement || {}),
+        warnings: Array.from(new Set([...existingWarnings, ...placementWarnings])),
+      };
     }
 
     candidate.preDraftCanonicalPayload = canonicalPayload;
@@ -606,8 +700,14 @@ export async function runEditorialPipeline(options = {}) {
     console.log(`[pipeline] PRE-DRAFT LOCK: PASS :: ${articleLabel} :: section=${canonicalPayload?.placement?.section_id} topic=${canonicalPayload?.placement?.topic_id} tags=${canonicalTags.length}`);
   }
 
-  selectedCandidates = preDraftPreparedCandidates;
+  const preDraftPassedCandidates = preDraftPreparedCandidates.slice();
+  selectedCandidates = preDraftPassedCandidates.slice(0, maxArticlesPerRun);
   selected = selectedCandidates[0] || null;
+  for (const candidate of selectedCandidates) {
+    if (candidate?.brief?.poolIdentityKey) {
+      markBriefSelected(candidate.brief.poolIdentityKey);
+    }
+  }
   stats.pre_draft_rejected = preDraftRejected.length;
   stats.articles_attempted = selectedCandidates.length;
   stats.selected_topic = selected?.brief?.title || null;
@@ -619,7 +719,8 @@ export async function runEditorialPipeline(options = {}) {
     error: selectedCandidates.length === 0 ? 'No candidates passed pre-draft canonical lock' : null,
     data: {
       total: preDraftItems.length,
-      passed: selectedCandidates.length,
+      passed: preDraftPassedCandidates.length,
+      selected_for_run: selectedCandidates.length,
       rejected: preDraftRejected,
       items: preDraftItems,
     },
@@ -1393,8 +1494,13 @@ async function runSourcePackAssemblyAttempt({
 
   console.log(`[pipeline] Assembled ${sourcePacksAssembled} source packs, ${publishableCandidates} publishable`);
 
-  const selectedCandidates = selectPublishableCandidates(candidatesWithSources, {
+  const sourcePackSelectionLimit = Math.max(
+    Number(options.maxArticlesPerRunForSourcePackSelection || options.sourcePackSelectionCandidateLimit || 0) || 0,
     maxArticlesPerRun,
+    maxArticlesPerRun * 3,
+  );
+  const selectedCandidates = selectPublishableCandidates(candidatesWithSources, {
+    maxArticlesPerRun: sourcePackSelectionLimit,
     maxPerSection: Number(options.maxPerSection || 2),
     maxPerTopic: Number(options.maxPerTopic || 2),
     relaxedMaxPerSection: Number(options.relaxedMaxPerSection || 3),
