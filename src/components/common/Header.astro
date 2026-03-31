@@ -14,7 +14,7 @@ import { headerData } from '~/navigation';
   <div class="mx-auto flex max-w-screen-xl items-center justify-between px-4 py-2.5">
     <!-- Logo -->
     <a href="/" class="flex items-center flex-shrink-0">
-      <img src={foseerLogo.src} alt="Foseer" class="h-[36px] w-auto" />
+      <img src={foseerLogo.src} alt="Foseer" width="1011" height="243" class="h-[36px] w-auto" />
     </a>
 
     <!-- Desktop Navigation -->
@@ -85,11 +85,11 @@ import { headerData } from '~/navigation';
   <!-- Mobile Navigation Drawer -->
   <div
     id="mobile-nav"
-    class="fixed inset-0 z-40 hidden bg-black/50 lg:hidden"
+    class="fixed inset-0 z-40 hidden opacity-0 bg-black/50 lg:hidden transition-opacity duration-300"
     aria-hidden="true"
   >
     <div
-      class="fixed inset-y-0 right-0 z-50 w-full max-w-xs overflow-y-auto bg-white px-6 py-4 shadow-xl dark:bg-gray-900"
+      class="fixed inset-y-0 right-0 z-50 w-full max-w-xs overflow-y-auto bg-white px-6 py-4 shadow-xl dark:bg-gray-900 transform transition-transform duration-300 ease-out translate-x-full"
       role="dialog"
       aria-modal="true"
       aria-label="Mobile navigation"
@@ -161,17 +161,35 @@ import { headerData } from '~/navigation';
   const menuButton = document.querySelector('[data-toggle-menu]');
   const closeButton = document.querySelector('[data-close-menu]');
   const mobileNav = document.getElementById('mobile-nav');
+  const mobileNavPanel = mobileNav?.querySelector('[role="dialog"]');
 
   function openMenu() {
+    // Remove hidden first to allow layout calculation
     mobileNav?.classList.remove('hidden');
     menuButton?.setAttribute('aria-expanded', 'true');
+    
+    // Use requestAnimationFrame to ensure layout is computed before animating
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        mobileNav?.classList.remove('opacity-0');
+        mobileNavPanel?.classList.remove('translate-x-full');
+      });
+    });
+    
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
-    mobileNav?.classList.add('hidden');
-    menuButton?.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    // Animate out
+    mobileNav?.classList.add('opacity-0');
+    mobileNavPanel?.classList.add('translate-x-full');
+    
+    // Wait for animation to complete before hiding
+    setTimeout(() => {
+      mobileNav?.classList.add('hidden');
+      menuButton?.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }, 300);
   }
 
   menuButton?.addEventListener('click', openMenu);

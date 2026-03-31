@@ -28,6 +28,11 @@ const imageAlt = generateImageAlt(post.title, post.excerpt);
 
 // Loading strategy: eager for lead, lazy for others
 const imageLoading = isLead ? 'eager' : 'lazy';
+const imageWidth = isLead ? 1280 : 960;
+const imageHeight = isLead ? 720 : 540;
+const imageSizes = isLead
+  ? '(max-width: 768px) 100vw, (max-width: 1280px) 92vw, 1200px'
+  : '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
 ---
 
 <article
@@ -49,10 +54,13 @@ const imageLoading = isLead ? 'eager' : 'lazy';
       <Image
         src={coverImage}
         alt={imageAlt}
+        width={imageWidth}
+        height={imageHeight}
+        sizes={imageSizes}
         loading={imageLoading}
         fetchpriority={isLead ? 'high' : 'auto'}
+        quality={85}
         class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-        style="aspect-ratio: 16/9;"
       />
     </div>
   )}

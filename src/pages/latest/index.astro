@@ -7,6 +7,7 @@ import type { GetStaticPaths } from 'astro';
 import Layout from '~/layouts/PageLayout.astro';
 import EditorialStoryCard from '~/components/EditorialStoryCard.astro';
 import { fetchPosts } from '~/utils/blog';
+import type { Post } from '~/types';
 
 export const prerender = true;
 
@@ -15,6 +16,75 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const posts = await fetchPosts();
+
+const DUPLICATE_WINDOW_HOURS = 72;
+const STOP_WORDS = new Set([
+  'a',
+  'an',
+  'and',
+  'as',
+  'at',
+  'for',
+  'from',
+  'how',
+  'in',
+  'into',
+  'is',
+  'it',
+  'its',
+  'of',
+  'on',
+  'or',
+  'over',
+  'rare',
+  'reported',
+  'the',
+  'to',
+  'up',
+  'with',
+]);
+
+const extractTitleTokens = (title: string): Set<string> => {
+  const normalized = title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .map((token) => token.trim())
+    .filter((token) => token.length >= 3 && !STOP_WORDS.has(token));
+  return new Set(normalized);
+};
+
+const titleSimilarityScore = (a: string, b: string): number => {
+  const aTokens = extractTitleTokens(a);
+  const bTokens = extractTitleTokens(b);
+  if (aTokens.size === 0 || bTokens.size === 0) return 0;
+
+  let overlap = 0;
+  for (const token of aTokens) {
+    if (bTokens.has(token)) overlap += 1;
+  }
+  const union = new Set([...aTokens, ...bTokens]).size;
+  return union === 0 ? 0 : overlap / union;
+};
+
+const areNearDuplicates = (candidate: Post, existing: Post): boolean => {
+  const hoursApart = Math.abs(candidate.publishDate.valueOf() - existing.publishDate.valueOf()) / (1000 * 60 * 60);
+  if (hoursApart > DUPLICATE_WINDOW_HOURS) return false;
+
+  const similarity = titleSimilarityScore(candidate.title, existing.title);
+  const sameTopic = !!candidate.topic_id && candidate.topic_id === existing.topic_id;
+  const sameSection = !!candidate.section_id && candidate.section_id === existing.section_id;
+
+  if (sameTopic && similarity >= 0.45) return true;
+  if (sameSection && similarity >= 0.72) return true;
+  return similarity >= 0.86;
+};
+
+const latestPosts = posts.reduce<Post[]>((acc, post) => {
+  const hasDuplicate = acc.some((existing) => areNearDuplicates(post, existing));
+  if (!hasDuplicate) acc.push(post);
+  return acc;
+}, []);
 
 const metadata = {
   title: 'Latest — Foseer',
@@ -41,11 +111,11 @@ const metadata = {
         </p>
       </header>
 
-      {posts.length === 0 ? (
+      {latestPosts.length === 0 ? (
         <p class="text-gray-600 dark:text-slate-400">No articles yet.</p>
       ) : (
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
+          {latestPosts.map((post) => (
             <EditorialStoryCard post={post} variant="compact" />
           ))}
         </div>

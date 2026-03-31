@@ -1,5 +1,6 @@
 ---
 import '@fontsource-variable/inter';
+import deferredUiStylesHref from '~/assets/styles/deferred-ui.css?url';
 
 // 'DM Sans'
 // Nunito
@@ -31,7 +32,7 @@ import '@fontsource-variable/inter';
 
     --aw-color-text-heading: rgb(17 24 39);
     --aw-color-text-default: rgb(31 41 55);
-    --aw-color-text-muted: rgb(71 85 105 / 88%);
+    --aw-color-text-muted: rgb(71 85 105 / 92%);
     --aw-color-bg-page: rgb(250 250 249);
 
     --aw-color-bg-page-dark: rgb(15 23 42);
@@ -52,7 +53,7 @@ import '@fontsource-variable/inter';
 
     --aw-color-text-heading: rgb(241 245 249);
     --aw-color-text-default: rgb(226 232 240);
-    --aw-color-text-muted: rgb(203 213 225 / 78%);
+    --aw-color-text-muted: rgb(203 213 225 / 86%);
     --aw-color-bg-page: rgb(15 23 42);
 
     ::selection {
@@ -206,69 +207,6 @@ import '@fontsource-variable/inter';
     margin-right: auto;
   }
 
-  /* Trust and editorial signals */
-  .publication-meta {
-    border-bottom: 1px solid theme('colors.gray.200');
-    padding-bottom: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .dark .publication-meta {
-    border-bottom-color: theme('colors.slate.70');
-  }
-
-  .category-label {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background-color: theme('colors.primary.100');
-    color: theme('colors.primary.700');
-    border-radius: 9999px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.025em;
-  }
-
-  .dark .category-label {
-    background-color: theme('colors.blue.900/20');
-    color: theme('colors.blue.400');
-  }
-
-  /* Improved social sharing */
-  .social-share-buttons {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-  }
-
-  .social-share-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    background-color: theme('colors.gray.100');
-    color: theme('colors.gray.600');
-    transition: all 0.2s ease-in-out;
-  }
-
-  .dark .social-share-button {
-    background-color: theme('colors.slate.700');
-    color: theme('colors.slate.300');
-  }
-
-  .social-share-button:hover {
-    background-color: theme('colors.primary.100');
-    color: theme('colors.primary.700');
-    transform: translateY(-1px);
-  }
-
-  .dark .social-share-button:hover {
-    background-color: theme('colors.blue.900/30');
-    color: theme('colors.blue.400');
-  }
-
   /* Responsive adjustments for reading experience */
   @media (max-width: 768px) {
     .prose .article-content {
@@ -296,92 +234,8 @@ import '@fontsource-variable/inter';
       font-size: 1.25rem; /* 20px on desktop */
     }
   }
-
-  /* Mobile navigation improvements */
-  @media (max-width: 1023px) {
-    /* Ensure mobile nav drawer is properly positioned */
-    #mobile-nav,
-    #mobile-nav-drawer {
-      -webkit-overflow-scrolling: touch;
-    }
-
-    /* Prevent horizontal scroll on mobile */
-    body {
-      overflow-x: hidden;
-    }
-
-    /* Fix dropdown menus on mobile */
-    .dropdown-menu {
-      position: static !important;
-      box-shadow: none !important;
-      border: none !important;
-      padding-left: 1rem !important;
-      background: transparent !important;
-    }
-  }
-
-  /* Tablet landscape improvements */
-  @media (min-width: 768px) and (max-width: 1023px) {
-    /* Ensure navigation items don't overlap */
-    nav[aria-label="Main navigation"] ul {
-      gap: 0.25rem;
-    }
-
-    nav[aria-label="Main navigation"] li {
-      flex-shrink: 0;
-    }
-  }
-
-  /* Desktop navigation refinements */
-  @media (min-width: 1024px) {
-    /* Smooth dropdown transitions */
-    .dropdown-menu {
-      transition: all 0.2s ease-in-out;
-      opacity: 0;
-      transform: translateY(-8px);
-    }
-
-    .dropdown:hover .dropdown-menu {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Header responsive improvements */
-  @media (max-width: 1023px) {
-    header {
-      position: relative;
-    }
-
-    /* Ensure logo doesn't get too small */
-    header img {
-      min-height: 32px;
-    }
-  }
-
-  /* Section and topic cards responsive */
-  @media (max-width: 640px) {
-    .grid-cols-2,
-    .grid-cols-3 {
-      grid-template-columns: 1fr !important;
-    }
-  }
-
-  /* Fix text overflow in cards */
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  /* Ensure buttons are touch-friendly on mobile */
-  @media (max-width: 768px) {
-    button,
-    a[role="button"],
-    [type="button"] {
-      min-height: 44px;
-      min-width: 44px;
-    }
-  }
 </style>
+
+<link rel="preload" href={deferredUiStylesHref} as="style" />
+<link rel="stylesheet" href={deferredUiStylesHref} media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href={deferredUiStylesHref} /></noscript>

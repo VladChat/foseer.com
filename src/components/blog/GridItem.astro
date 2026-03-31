@@ -28,9 +28,10 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
             <Image
               src={image}
               class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
-              widths={[400, 900]}
-              width={400}
-              sizes="(max-width: 900px) 400px, 900px"
+              widths={[320, 480, 720]}
+              width={720}
+              height={405}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 360px"
               alt={generateImageAlt(post.title)}
               aspectRatio="16:9"
               layout="cover"
@@ -42,9 +43,10 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
           <Image
             src={image}
             class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
-            widths={[400, 900]}
-            width={400}
-            sizes="(max-width: 900px) 400px, 900px"
+            widths={[320, 480, 720]}
+            width={720}
+            height={405}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 360px"
             alt={generateImageAlt(post.title)}
             aspectRatio="16:9"
             layout="cover"
