@@ -1015,10 +1015,21 @@ function evaluatePipelineRunForExit(result) {
     reasons.push('publishing stage was not run');
   }
 
+  const normalizedBlocker = hardBlocker.toLowerCase();
+  const controlledNoArticleFailure = reasons.length > 0
+    && publishedArticlesCount === 0
+    && (
+      normalizedBlocker.includes('no publishable candidate')
+      || normalizedBlocker.includes('source pack gate failed')
+      || normalizedBlocker.includes('no candidates discovered')
+      || normalizedBlocker.includes('no briefs normalized')
+    );
+
   return {
     success: reasons.length === 0,
     reasons,
     articles_published: publishedArticlesCount,
+    controlled_no_article_failure: controlledNoArticleFailure,
   };
 }
 
@@ -1157,6 +1168,7 @@ export function savePipelineResult(result, outputPath) {
 // Main entry point - run if executed directly
 if (process.argv[1]?.endsWith('pipeline.js')) {
   (async () => {
+    const lastResultPath = path.resolve(process.cwd(), 'qwen-data', 'events', 'pipeline-last-result.json');
     try {
       const result = await runEditorialPipeline({});
       console.log('\n[pipeline] === FINAL RESULT ===');
@@ -1194,18 +1206,27 @@ if (process.argv[1]?.endsWith('pipeline.js')) {
       }
       console.log('Stats:', JSON.stringify(result.stats, null, 2));
 
+      savePipelineResult(result, lastResultPath);
+
       const exitEvaluation = evaluatePipelineRunForExit(result);
       if (!exitEvaluation.success) {
         console.error('[pipeline] FINAL STATUS: FAIL');
         console.error('[pipeline] Exit reason(s):', exitEvaluation.reasons.join(' | '));
-        process.exit(1);
+        if (exitEvaluation.controlled_no_article_failure) {
+          console.error('[pipeline] EXIT CLASS: controlled_no_article_failure');
+          process.exit(1);
+        }
+        console.error('[pipeline] EXIT CLASS: unexpected_failure');
+        process.exit(2);
       }
 
       console.log('[pipeline] FINAL STATUS: PASS');
       process.exit(0);
     } catch (error) {
       console.error('[pipeline] Fatal error:', error.message);
-      process.exit(1);
+      const fatalResult = buildPipelineResult(false, `Fatal error: ${error.message}`, null, null, {}, null, { articles_published: 0 }, {});
+      savePipelineResult(fatalResult, lastResultPath);
+      process.exit(2);
     }
   })();
 }

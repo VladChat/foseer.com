@@ -56,15 +56,36 @@ jobs:
           QWEN_API_RETRY_MAX_ATTEMPTS: '3'
           QWEN_API_RETRY_BASE_DELAY_MS: '700'
           QWEN_API_RETRY_MAX_DELAY_MS: '6000'
-        run: npm run article:auto
+        run: |
+          set +e
+          npm run article:auto
+          exit_code=$?
+          echo "exit_code=$exit_code" >> "$GITHUB_OUTPUT"
+
+          if [ "$exit_code" -eq 0 ]; then
+            echo "result=success" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          result_file="qwen-data/events/pipeline-last-result.json"
+          if [ -f "$result_file" ]; then
+            if node -e "const fs=require('node:fs');const p='qwen-data/events/pipeline-last-result.json';const data=JSON.parse(fs.readFileSync(p,'utf8'));const blocker=String(data?.hard_blocker||'').toLowerCase();const published=Number(data?.stats?.articles_published||0);const controlled=published===0 && /(no publishable candidate|source pack gate failed|no candidates discovered|no briefs normalized)/.test(blocker);process.exit(controlled?0:1);"; then
+              echo "result=no_article" >> "$GITHUB_OUTPUT"
+              echo "No publishable article this run. Skipping build/commit/push."
+              exit 0
+            fi
+          fi
+
+          echo "result=failure" >> "$GITHUB_OUTPUT"
+          exit "$exit_code"
 
       - name: Validate site build before persistence
-        if: ${{ success() && steps.article_pipeline.outcome == 'success' }}
+        if: ${{ success() && steps.article_pipeline.outputs.result == 'success' }}
         run: npm run build
 
       - name: Commit generated article artifacts
         id: commit_changes
-        if: ${{ success() && steps.article_pipeline.outcome == 'success' }}
+        if: ${{ success() && steps.article_pipeline.outputs.result == 'success' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -82,7 +103,7 @@ jobs:
           echo "committed=true" >> "$GITHUB_OUTPUT"
 
       - name: Trigger deploy workflow for new content commit
-        if: ${{ success() && steps.article_pipeline.outcome == 'success' && steps.commit_changes.outputs.committed == 'true' }}
+        if: ${{ success() && steps.article_pipeline.outputs.result == 'success' && steps.commit_changes.outputs.committed == 'true' }}
         run: |
           curl --fail --show-error --silent \
             -X POST \
