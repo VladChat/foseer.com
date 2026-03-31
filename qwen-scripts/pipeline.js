@@ -104,6 +104,11 @@ export async function runEditorialPipeline(options = {}) {
 
   const runId = `pipeline-${new Date().toISOString().replace(/[:.]/g, '-')}`;
   const startedAt = new Date(startTime).toISOString();
+  const workflowLeaseOwner = {
+    workflow: String(process.env.GITHUB_WORKFLOW || 'Article Pipeline').trim() || 'Article Pipeline',
+    runId: String(process.env.GITHUB_RUN_ID || runId).trim() || runId,
+    leaseMinutes: Number(options.selectionLeaseMinutes || process.env.SELECTION_LEASE_MINUTES || 75),
+  };
 
   const finalizePipelineResult = (success, hardBlocker, selectedPayload = null, extras = {}) => {
     stats.cache_stats = getProviderStats();
@@ -303,6 +308,7 @@ export async function runEditorialPipeline(options = {}) {
         braveApiKey,
         googleApiKey,
         googleCx,
+        leaseOwner: workflowLeaseOwner,
       });
       stats.source_packs_assembled += Number(attemptResult.sourcePacksAssembled || 0);
       stats.publishable_candidates += Number(attemptResult.publishableCandidates || 0);
@@ -715,7 +721,7 @@ export async function runEditorialPipeline(options = {}) {
   selected = selectedCandidates[0] || null;
   for (const candidate of selectedCandidates) {
     if (candidate?.brief?.poolIdentityKey) {
-      markBriefSelected(candidate.brief.poolIdentityKey);
+      markBriefSelected(candidate.brief.poolIdentityKey, workflowLeaseOwner);
     }
   }
   stats.pre_draft_rejected = preDraftRejected.length;
@@ -1409,6 +1415,7 @@ async function runSourcePackAssemblyAttempt({
   braveApiKey,
   googleApiKey,
   googleCx,
+  leaseOwner = null,
 }) {
   const candidatesWithSources = [];
   const duplicateRejectedAtSelection = [];
@@ -1423,11 +1430,12 @@ async function runSourcePackAssemblyAttempt({
     maxArticlesPerRun * 3,
     maxArticlesPerRun,
   );
-  const readyBriefs = getReadySelectableBriefs({ limit: readyBriefLimit, includeSelected: true });
+  const readyBriefs = getReadySelectableBriefs({ limit: readyBriefLimit, includeSelected: true, leaseOwner });
   const poolBriefs = getSelectableBriefs({
     limit: sourcePackCandidateLimit,
     prioritizeReady: true,
     readyBoost: Number(options.readyPriorityBoost || 10),
+    leaseOwner,
   });
 
   const mergedBriefs = dedupeBriefCandidates([
@@ -1465,6 +1473,7 @@ async function runSourcePackAssemblyAttempt({
 
   let sourcePacksAssembled = 0;
   let publishableCandidates = 0;
+  const nearMissRetryQueue = [];
 
   for (const brief of briefsForSelection) {
     try {
@@ -1497,8 +1506,60 @@ async function runSourcePackAssemblyAttempt({
       candidatesWithSources.push({ brief, sourcePack });
       sourcePacksAssembled++;
       if (sourcePack.passesGate) publishableCandidates++;
+      if (!sourcePack.passesGate && isNearMissSourcePackFailure(sourcePack.gateNotes || [])) {
+        nearMissRetryQueue.push({
+          brief,
+          rankScore: Number(brief?.selectionScore || brief?.publishabilityScore || 0),
+          initialNotes: Array.isArray(sourcePack.gateNotes) ? sourcePack.gateNotes : [],
+        });
+      }
     } catch (error) {
       console.error(`[pipeline] Source pack assembly failed: ${error.message}`);
+    }
+  }
+
+  const retryPoolMatchLimit = Math.max(Number(options.poolMatchLimit || 14), Number(options.stage3NearMissRetryPoolMatchLimit || 24));
+  const nearMissRetries = nearMissRetryQueue
+    .sort((left, right) => Number(right.rankScore || 0) - Number(left.rankScore || 0))
+    .slice(0, 3);
+
+  for (const retry of nearMissRetries) {
+    const brief = retry.brief;
+    console.log(`[pipeline] Stage 3 near-miss retry :: ${brief.title} :: poolMatchLimit=${retryPoolMatchLimit}`);
+    try {
+      const retriedSourcePack = await assembleSourcePack(brief, {
+        ...options,
+        braveApiKey,
+        googleApiKey,
+        googleCx,
+        poolMatchLimit: retryPoolMatchLimit,
+      });
+      const editorialGate = evaluateSourcePackEditorialIntegrity({ brief, sourcePack: retriedSourcePack });
+      retriedSourcePack.stage3EditorialGate = editorialGate;
+      const hardErrors = (editorialGate.blocking_errors || []).filter((message) => !String(message).startsWith('Primary topic_id unsupported by source-pack evidence'));
+      if (hardErrors.length > 0) {
+        const existingNotes = Array.isArray(retriedSourcePack.gateNotes) ? retriedSourcePack.gateNotes : [];
+        retriedSourcePack.passesGate = false;
+        retriedSourcePack.gateDecision = 'FAIL';
+        retriedSourcePack.gateNotes = Array.from(new Set([...existingNotes, ...hardErrors, ...(editorialGate.warnings || [])]));
+      }
+
+      const candidateIndex = candidatesWithSources.findIndex((entry) => getBriefIdentityKey(entry?.brief) === getBriefIdentityKey(brief));
+      const previousPass = candidateIndex >= 0 ? Boolean(candidatesWithSources[candidateIndex]?.sourcePack?.passesGate) : false;
+      if (candidateIndex >= 0) {
+        candidatesWithSources[candidateIndex] = { brief, sourcePack: retriedSourcePack };
+      } else {
+        candidatesWithSources.push({ brief, sourcePack: retriedSourcePack });
+      }
+      sourcePacksAssembled++;
+      if (!previousPass && retriedSourcePack.passesGate) publishableCandidates++;
+      if (!retriedSourcePack.passesGate) {
+        console.log(`[pipeline] Stage 3 near-miss retry rejected :: ${brief.title} :: ${(retriedSourcePack.gateNotes || []).join(' | ')}`);
+      } else {
+        console.log(`[pipeline] Stage 3 near-miss retry passed :: ${brief.title} :: sources=${retriedSourcePack.sources?.length || 0} domains=${retriedSourcePack.uniqueDomains || 0}`);
+      }
+    } catch (error) {
+      console.log(`[pipeline] Stage 3 near-miss retry error :: ${brief.title} :: ${error.message}`);
     }
   }
 
@@ -1548,6 +1609,15 @@ async function runSourcePackAssemblyAttempt({
     sourcePacksAssembled,
     publishableCandidates,
   };
+}
+
+function isNearMissSourcePackFailure(gateNotes = []) {
+  const text = Array.isArray(gateNotes) ? gateNotes.join(' | ').toLowerCase() : '';
+  if (!text) return false;
+  return text.includes('need at least 2 publishable sources, found 1')
+    || text.includes('need at least 2 different domains among publishable sources, found 1')
+    || text.includes('need at least one trusted reporting source or official primary source')
+    || text.includes('publishable pack remains thin');
 }
 
 function buildAggregateStageResult(stage, items = [], articleErrors = [], { allowFailures = false } = {}) {

@@ -494,7 +494,7 @@ function selectProviderCandidate(candidates, registry, { query, section, topicId
 
     const scored = scoreProviderPhoto(enrichedCandidate, articleProfile);
     if (!scored || scored.score < 0) continue;
-    if (isLowEvidenceGenericCandidate(enrichedCandidate, scored.fit, section)) {
+    if (isLowEvidenceGenericCandidate(enrichedCandidate, scored.fit, section, { topicId, articleProfile })) {
       console.log(`[image] Rejecting low-evidence generic candidate provider=${enrichedCandidate.provider || 'unknown'} query="${query}"`);
       continue;
     }
@@ -515,16 +515,20 @@ function selectProviderCandidate(candidates, registry, { query, section, topicId
   return ranked[0] || null;
 }
 
-function isLowEvidenceGenericCandidate(candidate = {}, fit = {}, section = '') {
+function isLowEvidenceGenericCandidate(candidate = {}, fit = {}, section = '', { topicId = null, articleProfile = null } = {}) {
   const anchorScore = Number(fit.titleOverlap || 0)
     + Number(fit.primaryEntityOverlap || 0)
     + Number(fit.sourceOverlap || 0)
     + Number(fit.contextOverlap || 0)
     + Number(fit.geoOverlap || 0);
-  if (anchorScore > 0) return false;
+  const hasSpecificTopic = Boolean(String(topicId || '').trim());
+  const entityHintCount = Array.isArray(articleProfile?.entityHints) ? articleProfile.entityHints.length : 0;
+  const contextPhraseCount = Array.isArray(articleProfile?.contextPhrases) ? articleProfile.contextPhrases.length : 0;
+  const requiredAnchorScore = (hasSpecificTopic || entityHintCount > 0 || contextPhraseCount > 0) ? 2 : 1;
+  if (anchorScore >= requiredAnchorScore) return false;
 
   const strictSection = ['news', 'business', 'culture'].includes(String(section || '').toLowerCase());
-  if (!strictSection) return false;
+  if (!strictSection && !hasSpecificTopic) return false;
 
   const searchableText = [
     candidate.altText,

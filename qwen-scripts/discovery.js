@@ -11,6 +11,7 @@ import { detectPageKind, scoreGenericity, scoreArticleLikelihood } from './utils
 
 const PROJECT_ROOT = resolveProjectRoot(import.meta.url);
 const CANDIDATE_FLOOR = 8;
+const VIABLE_CANDIDATE_FLOOR = 5;
 const CORE_BRAVE_SECTION_LIMIT = 5;
 const EXPANSION_TOPIC_LIMIT = 4;
 const GOOGLE_LANE_LIMIT = 2;
@@ -160,10 +161,12 @@ export async function runDiscovery(options = {}) {
 
   const stats = {
     candidate_floor: CANDIDATE_FLOOR,
+    viable_candidate_floor: VIABLE_CANDIDATE_FLOOR,
     brave_queries: 0,
     google_trusted_queries: 0,
     gdelt_queries: 0,
     total_candidates: 0,
+    viable_candidates: 0,
     rejected_noise: 0,
     rejected_stale: 0,
     rejected_duplicate: 0,
@@ -214,19 +217,27 @@ export async function runDiscovery(options = {}) {
   }
 
   let filteredCandidates = filterAndRankCandidates(allCandidates, stats);
+  let viableCandidateCount = countViableCandidates(filteredCandidates);
+  stats.viable_candidates = viableCandidateCount;
 
-  if (filteredCandidates.length < CANDIDATE_FLOOR && allowExpansion && enableBrave && braveApiKey && plan.expansion.length > 0) {
-    console.log('[discovery] Candidate floor not met; running Brave expansion...');
+  const needsExpansion = filteredCandidates.length < CANDIDATE_FLOOR || viableCandidateCount < VIABLE_CANDIDATE_FLOOR;
+  if (needsExpansion && allowExpansion && enableBrave && braveApiKey && plan.expansion.length > 0) {
+    const shortageReason = filteredCandidates.length < CANDIDATE_FLOOR
+      ? `raw_candidates=${filteredCandidates.length}<${CANDIDATE_FLOOR}`
+      : `viable_candidates=${viableCandidateCount}<${VIABLE_CANDIDATE_FLOOR}`;
+    console.log(`[discovery] Candidate quality floor not met (${shortageReason}); running Brave expansion...`);
     const braveExpansion = await discoverWithBrave(braveApiKey, plan.expansion.map((entry) => ({ ...entry, logLabel: 'discovery_brave_news_expansion' })), options);
     stats.brave_queries += plan.expansion.length;
     stats.channels.brave_expansion = braveExpansion.briefs.length;
     allCandidates.push(...braveExpansion.briefs);
     console.log(`[discovery] Brave expansion found ${braveExpansion.briefs.length} candidates`);
     filteredCandidates = filterAndRankCandidates(allCandidates, stats, true);
+    viableCandidateCount = countViableCandidates(filteredCandidates);
+    stats.viable_candidates = viableCandidateCount;
   }
 
   stats.total_candidates = filteredCandidates.length;
-  console.log(`[discovery] Discovery complete: ${stats.total_candidates} candidates after filtering`);
+  console.log(`[discovery] Discovery complete: ${stats.total_candidates} candidates after filtering (${stats.viable_candidates} viable)`);
   return { candidates: filteredCandidates, stats, discoveryPlan: plan };
 }
 
@@ -411,6 +422,20 @@ function filterAndRankCandidates(candidates, stats, recompute = false) {
 
   filtered.sort((a, b) => (b.discoveryScore || 0) - (a.discoveryScore || 0));
   return filtered;
+}
+
+function countViableCandidates(candidates = []) {
+  return (Array.isArray(candidates) ? candidates : []).filter((brief) => {
+    if (!brief) return false;
+    if (brief.crossTopicRisk) return false;
+    if (brief.genericPage) return false;
+    if (Number(brief.signalSpecificityScore || 0) < 6) return false;
+    if (Number(brief.article_likelihood || 0) < 5) return false;
+
+    const topicHints = Array.isArray(brief.topicCandidates) ? brief.topicCandidates.length : 0;
+    const entities = Array.isArray(brief.entities) ? brief.entities.length : 0;
+    return Boolean(brief.trustedSource) || topicHints > 0 || entities > 0;
+  }).length;
 }
 
 function buildBrief({ id, title, summary, when, url, provider, trustedSource, lane, sectionHint, topicHint }) {

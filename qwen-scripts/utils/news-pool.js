@@ -14,6 +14,7 @@ const DISCOVERED_POOL_PATH = path.resolve(PROJECT_ROOT, 'qwen-data/events/discov
 const READY_CANDIDATES_PATH = path.resolve(PROJECT_ROOT, 'qwen-data/events/ready-article-candidates.json');
 const TTL_MS = 48 * 60 * 60 * 1000;
 const COOLDOWN_MS = 18 * 60 * 60 * 1000;
+const SELECTION_LEASE_MS = 75 * 60 * 1000;
 
 function ensurePoolDir() {
   const dir = path.dirname(NEWS_POOL_PATH);
@@ -24,6 +25,11 @@ function ensurePoolDir() {
 
 function nowIso() {
   return new Date().toISOString();
+}
+
+function parseDateMs(value) {
+  const parsed = new Date(value || 0).getTime();
+  return Number.isFinite(parsed) ? parsed : 0;
 }
 
 function normalizeTitleKey(value) {
@@ -112,6 +118,55 @@ function hasPublishedMarker(item) {
   return item.status === 'published' || !!item.publishedSlug || !!item.lastPublishedAt;
 }
 
+function isSelectionLeaseActive(item, now = Date.now()) {
+  if (!item || item.status !== 'selected' || hasPublishedMarker(item)) return false;
+  const expiresAtMs = parseDateMs(item.selectionExpiresAt);
+  return expiresAtMs > now;
+}
+
+function clearExpiredSelectionLease(item, now = Date.now(), fallbackStatus = 'candidate') {
+  if (!item || item.status !== 'selected' || hasPublishedMarker(item)) return item;
+  if (isSelectionLeaseActive(item, now)) return item;
+  return {
+    ...item,
+    status: fallbackStatus,
+    selectedByWorkflow: null,
+    selectedByRunId: null,
+    selectedAt: null,
+    selectionExpiresAt: null,
+  };
+}
+
+function leaseOwnedByCurrentRun(item, leaseOwner = null) {
+  if (!leaseOwner || typeof leaseOwner !== 'object') return false;
+  const ownerWorkflow = String(leaseOwner.workflow || '').trim();
+  const ownerRunId = String(leaseOwner.runId || '').trim();
+  const itemWorkflow = String(item?.selectedByWorkflow || '').trim();
+  const itemRunId = String(item?.selectedByRunId || '').trim();
+  if (!ownerWorkflow || !ownerRunId) return false;
+  return ownerWorkflow === itemWorkflow && ownerRunId === itemRunId;
+}
+
+function isLeaseBlockedForOwner(item, leaseOwner = null, now = Date.now()) {
+  if (!isSelectionLeaseActive(item, now)) return false;
+  return !leaseOwnedByCurrentRun(item, leaseOwner);
+}
+
+function buildSelectionLeasePatch(leaseOwner = {}, now = Date.now()) {
+  const selectedAt = new Date(now).toISOString();
+  const leaseMinutesRaw = Number(leaseOwner?.leaseMinutes);
+  const leaseMinutes = Number.isFinite(leaseMinutesRaw)
+    ? Math.max(20, Math.min(180, Math.round(leaseMinutesRaw)))
+    : Math.round(SELECTION_LEASE_MS / 60000);
+  const selectionExpiresAt = new Date(now + (leaseMinutes * 60 * 1000)).toISOString();
+  return {
+    selectedByWorkflow: String(leaseOwner?.workflow || '').trim() || null,
+    selectedByRunId: String(leaseOwner?.runId || '').trim() || null,
+    selectedAt,
+    selectionExpiresAt,
+  };
+}
+
 export function getBriefIdentityKey(brief) {
   return getIdentityKey(brief);
 }
@@ -168,37 +223,51 @@ export function saveReadyArticleCandidates(pool) {
 
 function reconcileReadyCandidatePool(readyPool = loadReadyArticleCandidates(), newsPool = loadNewsPool()) {
   const poolItemsByKey = new Map((newsPool.items || []).map((item) => [item.identityKey, item]));
+  const now = Date.now();
   const items = (readyPool.items || []).map((item) => {
-    const matchingPoolItem = poolItemsByKey.get(item.identityKey);
-    if (!matchingPoolItem) return item;
+    const readyItem = clearExpiredSelectionLease(item, now, 'ready');
+    const matchingPoolItem = clearExpiredSelectionLease(poolItemsByKey.get(item.identityKey), now, 'candidate');
+    if (!matchingPoolItem) return readyItem;
 
     if (hasPublishedMarker(matchingPoolItem)) {
       return {
-        ...item,
+        ...readyItem,
         status: 'published',
-        lastPublishedAt: matchingPoolItem.lastPublishedAt || item.lastPublishedAt || nowIso(),
-        publishedSlug: matchingPoolItem.publishedSlug || item.publishedSlug || null,
+        lastPublishedAt: matchingPoolItem.lastPublishedAt || readyItem.lastPublishedAt || nowIso(),
+        publishedSlug: matchingPoolItem.publishedSlug || readyItem.publishedSlug || null,
+        selectedByWorkflow: null,
+        selectedByRunId: null,
+        selectedAt: null,
+        selectionExpiresAt: null,
       };
     }
 
-    if (hasPublishedMarker(item)) {
+    if (hasPublishedMarker(readyItem)) {
       return {
-        ...item,
+        ...readyItem,
         status: 'published',
-        lastPublishedAt: item.lastPublishedAt || nowIso(),
-        publishedSlug: item.publishedSlug || null,
+        lastPublishedAt: readyItem.lastPublishedAt || nowIso(),
+        publishedSlug: readyItem.publishedSlug || null,
+        selectedByWorkflow: null,
+        selectedByRunId: null,
+        selectedAt: null,
+        selectionExpiresAt: null,
       };
     }
 
-    if (matchingPoolItem.status === 'selected' && item.status === 'ready') {
+    if (isSelectionLeaseActive(matchingPoolItem, now) && readyItem.status === 'ready') {
       return {
-        ...item,
+        ...readyItem,
         status: 'selected',
-        lastSelectedAt: matchingPoolItem.lastSelectedAt || item.lastSelectedAt || nowIso(),
+        lastSelectedAt: matchingPoolItem.lastSelectedAt || readyItem.lastSelectedAt || nowIso(),
+        selectedByWorkflow: matchingPoolItem.selectedByWorkflow || null,
+        selectedByRunId: matchingPoolItem.selectedByRunId || null,
+        selectedAt: matchingPoolItem.selectedAt || null,
+        selectionExpiresAt: matchingPoolItem.selectionExpiresAt || null,
       };
     }
 
-    return item;
+    return readyItem;
   });
 
   return { ...readyPool, items };
@@ -207,8 +276,8 @@ function reconcileReadyCandidatePool(readyPool = loadReadyArticleCandidates(), n
 function pruneReadyArticleCandidates(pool = loadReadyArticleCandidates()) {
   const now = Date.now();
   const reconciled = reconcileReadyCandidatePool(pool, loadNewsPool());
-  const items = (reconciled.items || []).filter((item) => {
-    const relevantTs = new Date(item.lastQueuedAt || item.lastSelectedAt || item.lastPublishedAt || item.firstQueuedAt || 0).getTime();
+  const items = (reconciled.items || []).map((item) => clearExpiredSelectionLease(item, now, 'ready')).filter((item) => {
+    const relevantTs = parseDateMs(item.lastQueuedAt || item.lastSelectedAt || item.lastPublishedAt || item.firstQueuedAt || 0);
     if (!Number.isFinite(relevantTs) || relevantTs <= 0) return false;
     return (now - relevantTs) <= TTL_MS;
   });
@@ -285,15 +354,25 @@ export function recordReadyArticleCandidates(candidates = [], { selectedIdentity
 
   publishable.forEach(({ candidate }, index) => {
     const summary = summarizeReadyCandidate(candidate, coverageContext, index + 1, selectedKeys);
-    const existing = byKey.get(summary.identityKey);
+    const existing = clearExpiredSelectionLease(byKey.get(summary.identityKey), Date.now(), 'ready');
     const published = hasPublishedMarker(existing);
+    const activeLease = isSelectionLeaseActive(existing);
+    const status = published
+      ? 'published'
+      : activeLease
+        ? 'selected'
+        : summary.status;
     freshItems.push({
       ...existing,
       ...summary,
       firstQueuedAt: existing?.firstQueuedAt || summary.firstQueuedAt,
       lastPublishedAt: existing?.lastPublishedAt || null,
       publishedSlug: existing?.publishedSlug || null,
-      status: published ? 'published' : summary.status,
+      status,
+      selectedByWorkflow: activeLease ? (existing?.selectedByWorkflow || null) : null,
+      selectedByRunId: activeLease ? (existing?.selectedByRunId || null) : null,
+      selectedAt: activeLease ? (existing?.selectedAt || null) : null,
+      selectionExpiresAt: activeLease ? (existing?.selectionExpiresAt || null) : null,
     });
   });
 
@@ -323,7 +402,7 @@ export function recordReadyArticleCandidates(candidates = [], { selectedIdentity
 
 export function pruneExpiredNews(pool = loadNewsPool()) {
   const now = Date.now();
-  const items = pool.items.filter((item) => {
+  const items = (pool.items || []).map((item) => clearExpiredSelectionLease(item, now, 'candidate')).filter((item) => {
     const expiresAt = item.expiresAt ? new Date(item.expiresAt).getTime() : 0;
     return expiresAt > now;
   });
@@ -391,17 +470,20 @@ function scorePoolItem(item, pool) {
   };
 }
 
-export function getReadySelectableBriefs({ limit = 8, includeSelected = true } = {}, pool = loadNewsPool(), readyPool = pruneReadyArticleCandidates()) {
+export function getReadySelectableBriefs({ limit = 8, includeSelected = true, leaseOwner = null } = {}, pool = loadNewsPool(), readyPool = pruneReadyArticleCandidates()) {
   const pruned = pruneExpiredNews(pool);
   const byKey = new Map((pruned.items || []).map((item) => [item.identityKey, item]));
+  const now = Date.now();
 
   return dedupeBriefArrayBySelectionIdentity(
     (readyPool.items || [])
       .filter((item) => !hasPublishedMarker(item))
       .filter((item) => includeSelected || item.status !== 'selected')
+      .filter((item) => !isLeaseBlockedForOwner(item, leaseOwner, now))
       .map((item) => {
         const poolItem = byKey.get(item.identityKey);
         if (!poolItem || hasPublishedMarker(poolItem) || !poolItem.brief) return null;
+        if (isLeaseBlockedForOwner(poolItem, leaseOwner, now)) return null;
         const scored = scorePoolItem(poolItem, pruned);
         const readyRank = Math.max(0, 8 - Number(item.rank || 99));
         return {
@@ -424,17 +506,20 @@ export function getReadySelectableBriefs({ limit = 8, includeSelected = true } =
   ).slice(0, limit);
 }
 
-export function getSelectableBriefs({ limit = 8, prioritizeReady = true, readyBoost = 10 } = {}, pool = loadNewsPool()) {
+export function getSelectableBriefs({ limit = 8, prioritizeReady = true, readyBoost = 10, leaseOwner = null } = {}, pool = loadNewsPool()) {
   const pruned = pruneExpiredNews(pool);
+  const now = Date.now();
   const readyPool = prioritizeReady ? pruneReadyArticleCandidates() : { items: [] };
   const readyMap = new Map(
     (readyPool.items || [])
       .filter((item) => !hasPublishedMarker(item))
+      .filter((item) => !isLeaseBlockedForOwner(item, leaseOwner, now))
       .map((item) => [item.identityKey, item])
   );
 
   const ranked = pruned.items
     .filter((item) => !hasPublishedMarker(item))
+    .filter((item) => !isLeaseBlockedForOwner(item, leaseOwner, now))
     .map((item) => {
       const scored = scorePoolItem(item, pruned);
       const readyMeta = readyMap.get(item.identityKey) || null;
@@ -468,10 +553,22 @@ export function dedupeBriefCandidates(briefs = []) {
   return dedupeBriefArrayBySelectionIdentity(Array.isArray(briefs) ? briefs : []);
 }
 
-export function markBriefSelected(identityKey) {
+export function markBriefSelected(identityKey, leaseOwner = {}) {
+  const now = Date.now();
+  const leasePatch = buildSelectionLeasePatch(leaseOwner, now);
   const pool = loadNewsPool();
-  const items = pool.items.map((item) => item.identityKey === identityKey ? { ...item, lastSelectedAt: nowIso(), status: 'selected' } : item);
-  updateReadyCandidateStatus(identityKey, { status: 'selected', lastSelectedAt: nowIso(), lastQueuedAt: nowIso() });
+  const items = pool.items.map((item) => item.identityKey === identityKey ? {
+    ...item,
+    lastSelectedAt: leasePatch.selectedAt,
+    status: 'selected',
+    ...leasePatch,
+  } : item);
+  updateReadyCandidateStatus(identityKey, {
+    status: 'selected',
+    lastSelectedAt: leasePatch.selectedAt,
+    lastQueuedAt: nowIso(),
+    ...leasePatch,
+  });
   return saveNewsPool({ ...pool, items });
 }
 
@@ -483,8 +580,22 @@ export function markBriefPublished(identityKey, articleSlug = null) {
     lastPublishedAt: nowIso(),
     publishedSlug: articleSlug,
     status: 'published',
+    selectedByWorkflow: null,
+    selectedByRunId: null,
+    selectedAt: null,
+    selectionExpiresAt: null,
   } : item);
-  updateReadyCandidateStatus(identityKey, { status: 'published', lastSelectedAt: nowIso(), lastPublishedAt: nowIso(), publishedSlug: articleSlug, lastQueuedAt: nowIso() });
+  updateReadyCandidateStatus(identityKey, {
+    status: 'published',
+    lastSelectedAt: nowIso(),
+    lastPublishedAt: nowIso(),
+    publishedSlug: articleSlug,
+    lastQueuedAt: nowIso(),
+    selectedByWorkflow: null,
+    selectedByRunId: null,
+    selectedAt: null,
+    selectionExpiresAt: null,
+  });
   return saveNewsPool({ ...pool, items });
 }
 

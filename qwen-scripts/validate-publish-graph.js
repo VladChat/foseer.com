@@ -47,6 +47,7 @@ const TOPIC_EXTRA_ALIASES = {
   'athletes-culture': ['sports leagues', 'youth sports', 'athlete'],
   'events-tournaments': ['olympic', 'olympics', 'ioc'],
   'major-leagues': ['mlb', 'nba', 'major league baseball', 'national basketball association', 'baseball', 'basketball'],
+  'world-geopolitics': ['israel', 'palestinian', 'gaza', 'west bank', 'ceasefire', 'middle east', 'diplomatic'],
 };
 
 function resolvePlacement(selected = {}) {
