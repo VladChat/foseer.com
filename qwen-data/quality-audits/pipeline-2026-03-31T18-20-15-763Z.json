@@ -1,0 +1,629 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-03-31T18-20-15-763Z",
+  "started_at": "2026-03-31T18:20:15.763Z",
+  "generated_at": "2026-03-31T18:22:29.299Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "discovery_candidates": 21,
+    "event_clusters": 6,
+    "briefs_normalized": 6,
+    "source_packs_assembled": 12,
+    "publishable_candidates": 1,
+    "selected_topic": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+    "selected_topics": [
+      "Trump administration sues Minnesota for allowing trans athletes in girls’ sports"
+    ],
+    "articles_attempted": 1,
+    "articles_published": 1,
+    "news_pool": {
+      "total": 50,
+      "active": 42,
+      "published": 8,
+      "ready_candidates": 2
+    },
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 4,
+        "gdelt": 2,
+        "google": 1
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 4,
+            "fresh_files": 4,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 59603
+          },
+          "gdelt": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          },
+          "google": {
+            "files": 1,
+            "fresh_files": 1,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 2428
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 133535,
+    "ready_candidates": 2,
+    "additional_ready_candidates": 2,
+    "source_pack_attempts": 1,
+    "source_pack_retry_external_queries": 0,
+    "source_pack_retry_brave_queries": 0,
+    "source_pack_retry_estimated_tokens": 0,
+    "pre_draft_rejected": 0
+  },
+  "provider_stats": {
+    "mode": "cache_refresh_with_live_quota",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": true,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 4,
+      "gdelt": 2,
+      "google": 1
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+      "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 4,
+          "fresh_files": 4,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 59603
+        },
+        "gdelt": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        },
+        "google": {
+          "files": 1,
+          "fresh_files": 1,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 2428
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14135
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6189
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 285008
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "preDraftPreparation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claimMapCreation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "articleDrafting": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "imageSupport": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "publishing": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "localVerification": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 1,
+    "editorial_pass_count": 1,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "Trump administration sues Minnesota over trans inclusion in girls’ sports",
+      "slug": "trump-administration-sues-minnesota-over-trans-inclusion-in-",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "sports",
+          "topic_id": "athletes-culture",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 2,
+          "unique_domains": 2,
+          "direct_event_source_count": 2,
+          "independent_event_domains": 2,
+          "source_consistency_score": 5,
+          "strong_match_count": 2,
+          "core_source_count": 2,
+          "supporting_source_count": 0,
+          "background_source_count": 4,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 3,
+          "supporting": 2,
+          "background": 4
+        },
+        "publish_ready_sources": [
+          {
+            "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+            "domain": "theguardian.com",
+            "url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          },
+          {
+            "title": "Trans Day of Visibility basketball tournament creates space for trans athletes amid international sports bans",
+            "domain": "chicago.suntimes.com",
+            "url": "https://chicago.suntimes.com/lgbtq/2026/03/29/basketball-tournament-makes-space-for-trans-athletes-amid-international-sports-bans",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+            "domain": "theguardian.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": 3,
+            "source_quality_score": 44.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Trans Day of Visibility basketball tournament creates space for trans athletes amid international sports bans",
+            "domain": "chicago.suntimes.com",
+            "page_kind": "article",
+            "same_event_score": 10,
+            "topic_fit_score": 3,
+            "source_quality_score": 20,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Athletes train for almost every scenario. But there's a stressor sports ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 7,
+            "source_quality_score": 16.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "In NCAA athletics, student-athletes are often choosing deal over degree",
+            "domain": "andscape.com",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 4,
+            "source_quality_score": 13.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "Anti-Science NPR Tries to Muddy Waters on Olympics: 'Will Ban Transgender Athletes'",
+            "domain": "newsbusters.org",
+            "page_kind": "article",
+            "same_event_score": 3,
+            "topic_fit_score": 3,
+            "source_quality_score": 12.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "How NIL Is Reshaping the Future of College Football",
+            "domain": "vocal.media",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 15,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "You’re Nuts: Which former Buckeye should be the Ohio State men’s basketball GM?",
+            "domain": "sports.yahoo.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 7.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "What's next for Duke, Tennessee after Elite Eight: Recruits, transfer portal, more",
+            "domain": "espn.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 11,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Are these Manchester United's summer transfer priorities?",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 11,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 2,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": []
+        }
+      },
+      "tags": {
+        "tags": [
+          "Athletes & Culture",
+          "Trans Athlete Policy"
+        ],
+        "tag_slugs": [
+          "athletes-culture",
+          "trans-athlete-policy"
+        ],
+        "primary_topic_tag": "Athletes & Culture",
+        "primary_topic_slug": "athletes-culture",
+        "warnings": [
+          "Canonical tag set is thin (2)"
+        ],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "Athletes & Culture",
+            "slug": "athletes-culture",
+            "score": 40,
+            "reason": "Primary topic tag validated from topic_id=athletes-culture",
+            "fallback": false
+          },
+          {
+            "label": "Trans Athlete Policy",
+            "slug": "trans-athlete-policy",
+            "score": 26,
+            "reason": "Theme match score 26",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "Canonical tag set is below target floor (3), accepted due sparse evidence"
+          ]
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "athletes-culture",
+              "label": "Athletes & Culture",
+              "type": "topic"
+            },
+            {
+              "slug": "trans-athlete-policy",
+              "label": "Trans Athlete Policy",
+              "type": "theme"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "athletes-culture",
+            "topic_label": "Athletes & Culture",
+            "supported": true,
+            "matched_aliases": [
+              "athletes",
+              "athlete"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pexels",
+        "image_path": "~/assets/images/library/pexels/29702008/cover.jpg",
+        "source_url": "https://www.pexels.com/photo/mississippi-river-bridge-at-sunset-29702008/",
+        "selection_mode": "provider_download_new:pexels:acceptable",
+        "query_used": "Minnesota portrait",
+        "relevance_tier": "acceptable",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "stadium",
+        "visual_type": "photo",
+        "entity_hints": [
+          "beautiful",
+          "sunset",
+          "view",
+          "bridge",
+          "over",
+          "mississippi",
+          "river",
+          "wabasha"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "Minnesota basketball photo",
+          "Minnesota courtroom photo",
+          "Minnesota photo",
+          "Minnesota portrait",
+          "global Minnesota photo",
+          "Trump basketball photo",
+          "Trump courtroom photo",
+          "Trump photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Minnesota basketball photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "1596644",
+            "finalScore": 99,
+            "articleRelevanceScore": 98,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Minnesota courtroom photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "1596644",
+            "finalScore": 99,
+            "articleRelevanceScore": 98,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Minnesota photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "1596644",
+            "finalScore": 99,
+            "articleRelevanceScore": 98,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Minnesota portrait",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "29702008",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "global Minnesota photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "1596644",
+            "finalScore": 99,
+            "articleRelevanceScore": 98,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Trump basketball photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "2590167",
+            "finalScore": 95,
+            "articleRelevanceScore": 93,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Trump courtroom photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "2798554",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Trump photo",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "2704264",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Minnesota portrait",
+          "provider": "pexels",
+          "providerAssetId": "29702008",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "acceptable"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pexels",
+          "query_used": "Minnesota portrait",
+          "article_relevance_score": 100,
+          "relevance_tier": "acceptable",
+          "overlap_ratio": 0.5,
+          "shared_tokens": [
+            "minnesota"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/trump-administration-sues-minnesota-over-trans-inclusion-in-.json",
+        "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in.mdx",
+        "expected_url": "/article/2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in",
+        "verified_url": null
+      }
+    }
+  ]
+}

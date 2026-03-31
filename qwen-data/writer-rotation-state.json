@@ -1,5 +1,5 @@
 {
-  "totalArticles": 92,
+  "totalArticles": 93,
   "lastReset": null,
   "byWriter": {
     "reporter": {
@@ -19,27 +19,19 @@
     "analyst": {
       "count": 16,
       "lastAssigned": 1774971297691,
-      "streak": 1,
+      "streak": 0,
       "authorCursor": 2,
       "lastAuthorId": "sophia_bennett"
     },
     "features": {
-      "count": 31,
-      "lastAssigned": 1774914933854,
-      "streak": 0,
-      "authorCursor": 2,
-      "lastAuthorId": "grace_holloway"
+      "count": 32,
+      "lastAssigned": 1774981314047,
+      "streak": 1,
+      "authorCursor": 3,
+      "lastAuthorId": "owen_foster"
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "features",
-      "timestamp": 1774631138068,
-      "articleType": "report",
-      "beat": "markets",
-      "section": "Business",
-      "topic_id": "crypto-bitcoin"
-    },
     {
       "writerId": "features",
       "timestamp": 1774635892926,
@@ -431,6 +423,14 @@
       "beat": "markets",
       "section": "Business",
       "topic_id": "crypto-bitcoin"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1774981314047,
+      "articleType": "report",
+      "beat": "sports culture",
+      "section": "Sports",
+      "topic_id": "athletes-culture"
     }
   ]
 }

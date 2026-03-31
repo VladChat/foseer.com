@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T15:35:19.522Z",
+  "updatedAt": "2026-03-31T18:22:29.276Z",
   "items": [
     {
       "identityKey": "cluster:evt-2026-03-29-ai-big-tech-general-global",
@@ -34398,7 +34398,8 @@
           "https://forbes.com/sites/rscottraynovich/2026/03/30/ai-the-cybersecurity-crisis-that-vendors-love",
           "http://www.techtimes.com/articles/315545/20260329/uk-registered-ai-cybersecurity-patent-signals-new-era-intelligent-threat-management.htm",
           "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280",
-          "https://managementtoday.co.uk/mckinseys-ai-system-hack-wake-call-leaders/opinion-and-analysis/article/1953187"
+          "https://managementtoday.co.uk/mckinseys-ai-system-hack-wake-call-leaders/opinion-and-analysis/article/1953187",
+          "https://govinfosecurity.com/ai-drives-software-supply-chain-attacks-a-31279"
         ],
         "publishabilityScore": 10,
         "publishabilityNotes": [
@@ -34410,7 +34411,7 @@
           "Cluster contains multiple article-like materials",
           "Taxonomy topic match is specific enough for routing"
         ],
-        "discoveredAt": "2026-03-31T15:32:51.726Z",
+        "discoveredAt": "2026-03-31T18:20:16.538Z",
         "provider": "brave",
         "section_id": "tech",
         "topic_id": "cybersecurity",
@@ -34815,14 +34816,434 @@
               "call",
               "leaders"
             ]
+          },
+          {
+            "id": "brave-sec-1774981216534-4",
+            "title": "AI Drives Software Supply Chain Attacks",
+            "summary": "AI-driven attacks now reshape software supply chains, as threat actors scale malware injection through CI pipelines and developer access. OpenSourceMalware's Paul",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "15 hours ago",
+            "sourceUrls": [
+              "https://govinfosecurity.com/ai-drives-software-supply-chain-attacks-a-31279"
+            ],
+            "freshness": 7,
+            "urgency": 6,
+            "discoveredAt": "2026-03-31T18:20:16.538Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:tech",
+            "sectionCandidates": [
+              "tech"
+            ],
+            "topicCandidates": [
+              "ai-big-tech"
+            ],
+            "detectedSectionId": "tech",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "ai drives software supply chain attacks govinfosecurity",
+            "canonicalUrl": "https://govinfosecurity.com/ai-drives-software-supply-chain-attacks-a-31279",
+            "discoveryScore": 16.4,
+            "eventKey": "tech:ai drives software supply chain attacks govinfosecurity",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981216534-4",
+            "url": "https://govinfosecurity.com/ai-drives-software-supply-chain-attacks-a-31279",
+            "canonical_url": "https://govinfosecurity.com/ai-drives-software-supply-chain-attacks-a-31279",
+            "domain": "govinfosecurity.com",
+            "canonical_domain": "govinfosecurity.com",
+            "normalized_title": "ai drives software supply chain attacks",
+            "snippet": "AI-driven attacks now reshape software supply chains, as threat actors scale malware injection through CI pipelines and developer access. OpenSourceMalware's Paul",
+            "published_at": "15 hours ago",
+            "section_id": "tech",
+            "topic_id": null,
+            "section_candidates": [
+              "tech"
+            ],
+            "topic_candidates": [
+              "ai-big-tech"
+            ],
+            "cluster_id": null,
+            "event_key": "tech:ai drives software supply chain attacks govinfosecurity",
+            "keywords": [
+              "drives",
+              "software",
+              "supply",
+              "chain",
+              "attacks",
+              "driven",
+              "reshape",
+              "chains",
+              "threat",
+              "actors",
+              "scale",
+              "malware"
+            ],
+            "title_signal_tokens": [
+              "drives",
+              "software",
+              "supply",
+              "chain",
+              "attacks"
+            ],
+            "url_signal_tokens": [
+              "drives",
+              "software",
+              "supply",
+              "chain",
+              "attacks"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "drives",
+              "software",
+              "supply",
+              "chain",
+              "attacks"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981216485-0",
+            "title": "AI: The Cybersecurity Crisis That Vendors Love",
+            "summary": "At the RSAC cybersecurity conference, the arrival of agentic AI gave the community plenty to talk about. New threats include identity and supply chains.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://forbes.com/sites/rscottraynovich/2026/03/30/ai-the-cybersecurity-crisis-that-vendors-love"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:16.513Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:tech",
+            "sectionCandidates": [
+              "tech"
+            ],
+            "topicCandidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "detectedSectionId": "tech",
+            "detectedTopicId": "cybersecurity",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "ai the cybersecurity crisis that vendors love",
+            "canonicalUrl": "https://forbes.com/sites/rscottraynovich/2026/03/30/ai-the-cybersecurity-crisis-that-vendors-love",
+            "discoveryScore": 15.6,
+            "eventKey": "cybersecurity:ai the cybersecurity crisis that vendors love",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981216485-0",
+            "url": "https://forbes.com/sites/rscottraynovich/2026/03/30/ai-the-cybersecurity-crisis-that-vendors-love",
+            "canonical_url": "https://forbes.com/sites/rscottraynovich/2026/03/30/ai-the-cybersecurity-crisis-that-vendors-love",
+            "domain": "forbes.com",
+            "canonical_domain": "forbes.com",
+            "normalized_title": "ai the cybersecurity crisis that vendors love",
+            "snippet": "At the RSAC cybersecurity conference, the arrival of agentic AI gave the community plenty to talk about. New threats include identity and supply chains.",
+            "published_at": "1 day ago",
+            "section_id": "tech",
+            "topic_id": "cybersecurity",
+            "section_candidates": [
+              "tech"
+            ],
+            "topic_candidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "cluster_id": null,
+            "event_key": "cybersecurity:ai the cybersecurity crisis that vendors love",
+            "keywords": [
+              "cybersecurity",
+              "crisis",
+              "vendors",
+              "love",
+              "rsac",
+              "conference",
+              "arrival",
+              "agentic",
+              "gave",
+              "community",
+              "plenty",
+              "talk"
+            ],
+            "title_signal_tokens": [
+              "cybersecurity",
+              "crisis",
+              "vendors",
+              "love"
+            ],
+            "url_signal_tokens": [
+              "sites",
+              "rscottraynovich",
+              "cybersecurity",
+              "crisis",
+              "vendors",
+              "love"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "cybersecurity",
+              "crisis",
+              "vendors",
+              "love"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981216513-1",
+            "title": "UK-Registered AI Cybersecurity Patent Signals New Era of Intelligent Threat Management and Interdisciplinary Innovation",
+            "summary": "The global technology and research community is witnessing a significant milestone following the United Kingdom Intellectual Property Office's registration of a groundbreaking design patent titled \"COMPUTER CYBERSECURITY SPRINT PLANNING ENGINE WITH AI-POWERED THREAT PRIORITIZATION.\"",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "2 days ago",
+            "sourceUrls": [
+              "http://www.techtimes.com/articles/315545/20260329/uk-registered-ai-cybersecurity-patent-signals-new-era-intelligent-threat-management.htm"
+            ],
+            "freshness": 5,
+            "urgency": 6,
+            "discoveredAt": "2026-03-31T18:20:16.526Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:tech",
+            "sectionCandidates": [
+              "tech"
+            ],
+            "topicCandidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "detectedSectionId": "tech",
+            "detectedTopicId": "cybersecurity",
+            "region": "global",
+            "angle": "research",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "uk registered ai cybersecurity patent signals new era of intelligent threat management and interdisciplinary innovation",
+            "canonicalUrl": "http://www.techtimes.com/articles/315545/20260329/uk-registered-ai-cybersecurity-patent-signals-new-era-intelligent-threat-management.htm",
+            "discoveryScore": 15.4,
+            "eventKey": "cybersecurity:uk registered ai cybersecurity patent signals new era of intelligent threat mana",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981216513-1",
+            "url": "http://www.techtimes.com/articles/315545/20260329/uk-registered-ai-cybersecurity-patent-signals-new-era-intelligent-threat-management.htm",
+            "canonical_url": "http://www.techtimes.com/articles/315545/20260329/uk-registered-ai-cybersecurity-patent-signals-new-era-intelligent-threat-management.htm",
+            "domain": "techtimes.com",
+            "canonical_domain": "techtimes.com",
+            "normalized_title": "uk registered ai cybersecurity patent signals new era of intelligent threat management and interdisciplinary innovation",
+            "snippet": "The global technology and research community is witnessing a significant milestone following the United Kingdom Intellectual Property Office's registration of a groundbreaking design patent titled \"COMPUTER CYBERSECURITY SPRINT PLANNING ENGINE WITH AI-POWERED THREAT PRIORITIZATION.\"",
+            "published_at": "2 days ago",
+            "section_id": "tech",
+            "topic_id": "cybersecurity",
+            "section_candidates": [
+              "tech"
+            ],
+            "topic_candidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "cluster_id": null,
+            "event_key": "cybersecurity:uk registered ai cybersecurity patent signals new era of intelligent threat mana",
+            "keywords": [
+              "registered",
+              "cybersecurity",
+              "patent",
+              "signals",
+              "intelligent",
+              "threat",
+              "management",
+              "interdisciplinary",
+              "innovation",
+              "global",
+              "technology",
+              "research"
+            ],
+            "title_signal_tokens": [
+              "registered",
+              "cybersecurity",
+              "patent",
+              "signals",
+              "intelligent",
+              "threat",
+              "management",
+              "interdisciplinary",
+              "innovation"
+            ],
+            "url_signal_tokens": [
+              "registered",
+              "cybersecurity",
+              "patent",
+              "signals",
+              "intelligent",
+              "threat",
+              "management"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "research",
+            "place": "global",
+            "titleTokens": [
+              "registered",
+              "cybersecurity",
+              "patent",
+              "signals",
+              "intelligent",
+              "threat",
+              "management",
+              "interdisciplinary",
+              "innovation"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981216526-2",
+            "title": "How AI Is Reshaping the Cybersecurity Vendor Landscape",
+            "summary": "The cybersecurity vendor landscape is being rebuilt around AI, and the transformation is moving faster than most organizations are prepared for. Richard Stiennon,",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "16 hours ago",
+            "sourceUrls": [
+              "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280"
+            ],
+            "freshness": 7,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:16.530Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:tech",
+            "sectionCandidates": [
+              "tech"
+            ],
+            "topicCandidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "detectedSectionId": "tech",
+            "detectedTopicId": "cybersecurity",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "how ai is reshaping the cybersecurity vendor landscape",
+            "canonicalUrl": "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280",
+            "discoveryScore": 15.4,
+            "eventKey": "cybersecurity:how ai is reshaping the cybersecurity vendor landscape",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981216526-2",
+            "url": "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280",
+            "canonical_url": "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280",
+            "domain": "govinfosecurity.com",
+            "canonical_domain": "govinfosecurity.com",
+            "normalized_title": "how ai is reshaping the cybersecurity vendor landscape",
+            "snippet": "The cybersecurity vendor landscape is being rebuilt around AI, and the transformation is moving faster than most organizations are prepared for. Richard Stiennon,",
+            "published_at": "16 hours ago",
+            "section_id": "tech",
+            "topic_id": "cybersecurity",
+            "section_candidates": [
+              "tech"
+            ],
+            "topic_candidates": [
+              "cybersecurity",
+              "ai-big-tech"
+            ],
+            "cluster_id": null,
+            "event_key": "cybersecurity:how ai is reshaping the cybersecurity vendor landscape",
+            "keywords": [
+              "reshaping",
+              "cybersecurity",
+              "vendor",
+              "landscape",
+              "being",
+              "rebuilt",
+              "around",
+              "transformation",
+              "moving",
+              "faster",
+              "than",
+              "most"
+            ],
+            "title_signal_tokens": [
+              "reshaping",
+              "cybersecurity",
+              "vendor",
+              "landscape"
+            ],
+            "url_signal_tokens": [
+              "reshaping",
+              "cybersecurity",
+              "vendor",
+              "landscape"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "reshaping",
+              "cybersecurity",
+              "vendor",
+              "landscape"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-03-31-cybersecurity-general-global",
       "publishabilityScore": 10,
       "discoveredAt": "2026-03-31T15:32:51.726Z",
-      "lastSeenAt": "2026-03-31T15:34:34.962Z",
-      "expiresAt": "2026-04-02T15:34:34.962Z",
+      "lastSeenAt": "2026-03-31T18:21:53.436Z",
+      "expiresAt": "2026-04-02T18:21:53.435Z",
       "status": "candidate",
       "lastSelectedAt": null,
       "lastPublishedAt": null
@@ -35311,7 +35732,9 @@
           "https://collider.com/best-tv-drama-show-masterpieces-of-all-time",
           "https://www.esquire.com/uk/culture/tv/a70879484/tv-horror-too-complicated/",
           "https://collider.com/punisher-marvel-daredevil-born-again-binge/",
-          "https://www.harpersbazaar.com/culture/art-books-music/g70609378/best-cookbooks-2026/"
+          "https://www.harpersbazaar.com/culture/art-books-music/g70609378/best-cookbooks-2026/",
+          "https://www.esquire.com/uk/culture/tv/a70883021/ryan-coogler-x-files-reboot/",
+          "https://www.esquire.com/uk/culture/tv/a70884275/tv-shows-april-2026/"
         ],
         "publishabilityScore": 10,
         "publishabilityNotes": [
@@ -35323,16 +35746,16 @@
           "Cluster contains multiple article-like materials",
           "Taxonomy topic match is specific enough for routing"
         ],
-        "discoveredAt": "2026-03-31T15:33:09.714Z",
+        "discoveredAt": "2026-03-31T18:20:34.435Z",
         "provider": "brave",
         "section_id": "culture",
         "topic_id": "film-tv",
         "region": "global",
-        "angle": "general",
+        "angle": "media",
         "cluster_id": "evt-2026-03-31-film-tv-general-global",
         "eventKey": "2026-03-31:film-tv-general-global",
         "cluster_size": 4,
-        "article_rich_count": 3,
+        "article_rich_count": 2,
         "generic_page_count": 0,
         "discoveryContext": [
           {
@@ -35705,14 +36128,402 @@
               "cookbooks",
               "2026"
             ]
+          },
+          {
+            "id": "brave-sec-1774981234426-2",
+            "title": "Why Is Horror TV So Complicated Right Now?",
+            "summary": "From 'IT: Welcome to Derry' to 'Yellowjackets' and 'From,' streaming horror keeps piling on mysteries, curses, and lore that can feel more exhausting than scary.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://www.esquire.com/uk/culture/tv/a70879484/tv-horror-too-complicated/"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:34.430Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:culture",
+            "sectionCandidates": [
+              "culture"
+            ],
+            "topicCandidates": [
+              "film-tv"
+            ],
+            "detectedSectionId": "culture",
+            "detectedTopicId": "film-tv",
+            "region": "global",
+            "angle": "media",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "why is horror tv so complicated right now",
+            "canonicalUrl": "https://www.esquire.com/uk/culture/tv/a70879484/tv-horror-too-complicated/",
+            "discoveryScore": 14.4,
+            "eventKey": "film-tv:why is horror tv so complicated right now",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981234426-2",
+            "url": "https://www.esquire.com/uk/culture/tv/a70879484/tv-horror-too-complicated/",
+            "canonical_url": "https://www.esquire.com/uk/culture/tv/a70879484/tv-horror-too-complicated/",
+            "domain": "esquire.com",
+            "canonical_domain": "esquire.com",
+            "normalized_title": "why is horror tv so complicated right now",
+            "snippet": "From 'IT: Welcome to Derry' to 'Yellowjackets' and 'From,' streaming horror keeps piling on mysteries, curses, and lore that can feel more exhausting than scary.",
+            "published_at": "1 day ago",
+            "section_id": "culture",
+            "topic_id": "film-tv",
+            "section_candidates": [
+              "culture"
+            ],
+            "topic_candidates": [
+              "film-tv"
+            ],
+            "cluster_id": null,
+            "event_key": "film-tv:why is horror tv so complicated right now",
+            "keywords": [
+              "horror",
+              "complicated",
+              "right",
+              "welcome",
+              "derry",
+              "yellowjackets",
+              "streaming",
+              "keeps",
+              "piling",
+              "mysteries",
+              "curses",
+              "lore"
+            ],
+            "title_signal_tokens": [
+              "horror",
+              "complicated",
+              "right"
+            ],
+            "url_signal_tokens": [
+              "a70879484",
+              "horror",
+              "complicated"
+            ],
+            "title_url_overlap": 0.6666666666666666,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "horror",
+              "complicated",
+              "right"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981234419-0",
+            "title": "Wake Me Up When Ryan Coogler's 'X",
+            "summary": "Ryan Coogler’s 'X-Files' project already feels like one of TV’s most intriguing revivals. Here’s why the franchise is worth getting excited about again.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://www.esquire.com/uk/culture/tv/a70883021/ryan-coogler-x-files-reboot/"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:34.422Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:culture",
+            "sectionCandidates": [
+              "culture"
+            ],
+            "topicCandidates": [
+              "film-tv"
+            ],
+            "detectedSectionId": "culture",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "wake me up when ryan coogler s x files reboot premieres",
+            "canonicalUrl": "https://www.esquire.com/uk/culture/tv/a70883021/ryan-coogler-x-files-reboot/",
+            "discoveryScore": 13.4,
+            "eventKey": "culture:wake me up when ryan coogler s x files reboot premieres",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981234419-0",
+            "url": "https://www.esquire.com/uk/culture/tv/a70883021/ryan-coogler-x-files-reboot/",
+            "canonical_url": "https://www.esquire.com/uk/culture/tv/a70883021/ryan-coogler-x-files-reboot/",
+            "domain": "esquire.com",
+            "canonical_domain": "esquire.com",
+            "normalized_title": "wake me up when ryan coogler s x",
+            "snippet": "Ryan Coogler’s 'X-Files' project already feels like one of TV’s most intriguing revivals. Here’s why the franchise is worth getting excited about again.",
+            "published_at": "1 day ago",
+            "section_id": "culture",
+            "topic_id": null,
+            "section_candidates": [
+              "culture"
+            ],
+            "topic_candidates": [
+              "film-tv"
+            ],
+            "cluster_id": null,
+            "event_key": "culture:wake me up when ryan coogler s x files reboot premieres",
+            "keywords": [
+              "wake",
+              "when",
+              "ryan",
+              "coogler",
+              "files",
+              "project",
+              "already",
+              "feels",
+              "like",
+              "most",
+              "intriguing",
+              "revivals"
+            ],
+            "title_signal_tokens": [
+              "wake",
+              "when",
+              "ryan",
+              "coogler"
+            ],
+            "url_signal_tokens": [
+              "a70883021",
+              "ryan",
+              "coogler",
+              "files",
+              "reboot"
+            ],
+            "title_url_overlap": 0.5,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "wake",
+              "when",
+              "ryan",
+              "coogler"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981234422-1",
+            "title": "The 10 TV Shows We’re Watching in April 2026",
+            "summary": "The TV shows coming in April 2026 that matter most, from major premieres and returns to buzzy streaming releases.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://www.esquire.com/uk/culture/tv/a70884275/tv-shows-april-2026/"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:34.426Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:culture",
+            "sectionCandidates": [
+              "culture"
+            ],
+            "topicCandidates": [
+              "film-tv"
+            ],
+            "detectedSectionId": "culture",
+            "detectedTopicId": "film-tv",
+            "region": "global",
+            "angle": "media",
+            "genericPage": false,
+            "page_kind": "unknown",
+            "genericity_score": 0,
+            "article_likelihood": 1,
+            "normalizedTitle": "the 10 tv shows we re watching in april 2026",
+            "canonicalUrl": "https://www.esquire.com/uk/culture/tv/a70884275/tv-shows-april-2026/",
+            "discoveryScore": 12,
+            "eventKey": "film-tv:the 10 tv shows we re watching in april 2026",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981234422-1",
+            "url": "https://www.esquire.com/uk/culture/tv/a70884275/tv-shows-april-2026/",
+            "canonical_url": "https://www.esquire.com/uk/culture/tv/a70884275/tv-shows-april-2026/",
+            "domain": "esquire.com",
+            "canonical_domain": "esquire.com",
+            "normalized_title": "the 10 tv shows we re watching in april 2026",
+            "snippet": "The TV shows coming in April 2026 that matter most, from major premieres and returns to buzzy streaming releases.",
+            "published_at": "1 day ago",
+            "section_id": "culture",
+            "topic_id": "film-tv",
+            "section_candidates": [
+              "culture"
+            ],
+            "topic_candidates": [
+              "film-tv"
+            ],
+            "cluster_id": null,
+            "event_key": "film-tv:the 10 tv shows we re watching in april 2026",
+            "keywords": [
+              "shows",
+              "watching",
+              "april",
+              "2026",
+              "coming",
+              "matter",
+              "most",
+              "major",
+              "premieres",
+              "returns",
+              "buzzy",
+              "streaming"
+            ],
+            "title_signal_tokens": [
+              "shows",
+              "watching",
+              "april",
+              "2026"
+            ],
+            "url_signal_tokens": [
+              "a70884275",
+              "shows",
+              "april"
+            ],
+            "title_url_overlap": 0.6666666666666666,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "shows",
+              "watching",
+              "april",
+              "2026"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981234433-4",
+            "title": "The 10 Best Cookbooks of 2026 So Far",
+            "summary": "There’s never been a better time to get creative in the kitchen",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://www.harpersbazaar.com/culture/art-books-music/g70609378/best-cookbooks-2026/"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:34.435Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:culture",
+            "sectionCandidates": [
+              "culture"
+            ],
+            "topicCandidates": [
+              "music-celebrities"
+            ],
+            "detectedSectionId": "culture",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "unknown",
+            "genericity_score": 0,
+            "article_likelihood": 1,
+            "normalizedTitle": "the 10 best cookbooks of 2026 so far",
+            "canonicalUrl": "https://www.harpersbazaar.com/culture/art-books-music/g70609378/best-cookbooks-2026/",
+            "discoveryScore": 11,
+            "eventKey": "culture:the 10 best cookbooks of 2026 so far",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981234433-4",
+            "url": "https://www.harpersbazaar.com/culture/art-books-music/g70609378/best-cookbooks-2026/",
+            "canonical_url": "https://www.harpersbazaar.com/culture/art-books-music/g70609378/best-cookbooks-2026/",
+            "domain": "harpersbazaar.com",
+            "canonical_domain": "harpersbazaar.com",
+            "normalized_title": "the 10 best cookbooks of 2026 so far",
+            "snippet": "There’s never been a better time to get creative in the kitchen",
+            "published_at": "1 day ago",
+            "section_id": "culture",
+            "topic_id": null,
+            "section_candidates": [
+              "culture"
+            ],
+            "topic_candidates": [
+              "music-celebrities"
+            ],
+            "cluster_id": null,
+            "event_key": "culture:the 10 best cookbooks of 2026 so far",
+            "keywords": [
+              "best",
+              "cookbooks",
+              "2026",
+              "there",
+              "never",
+              "been",
+              "better",
+              "time",
+              "creative",
+              "kitchen"
+            ],
+            "title_signal_tokens": [
+              "best",
+              "cookbooks",
+              "2026"
+            ],
+            "url_signal_tokens": [
+              "books",
+              "music",
+              "g70609378",
+              "best",
+              "cookbooks"
+            ],
+            "title_url_overlap": 0.6666666666666666,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "best",
+              "cookbooks",
+              "2026"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-03-31-film-tv-general-global",
       "publishabilityScore": 10,
       "discoveredAt": "2026-03-31T15:33:09.714Z",
-      "lastSeenAt": "2026-03-31T15:34:34.962Z",
-      "expiresAt": "2026-04-02T15:34:34.962Z",
+      "lastSeenAt": "2026-03-31T18:21:53.436Z",
+      "expiresAt": "2026-04-02T18:21:53.435Z",
       "status": "candidate",
       "lastSelectedAt": null,
       "lastPublishedAt": null
@@ -35721,8 +36532,8 @@
       "identityKey": "cluster:evt-2026-03-31-sports-general-global",
       "brief": {
         "id": "evt-2026-03-31-sports-general-global",
-        "title": "How NIL Is Reshaping the Future of College Football",
-        "whatHappened": "Many athletes are navigating contracts, taxes, and branding for the first time.",
+        "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+        "whatHappened": "Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination.",
         "whoIsInvolved": "Unspecified",
         "involvedParties": [
           "Unspecified"
@@ -35732,23 +36543,26 @@
         ],
         "when": "1 day ago",
         "where": "Not specified",
-        "whyItMatters": "The development could reshape competition, fan attention, or the business side of sports.",
+        "whyItMatters": "The development matters because it may affect technology adoption, competition, regulation, or security decisions.",
         "developmentStage": "developing",
         "sourceUrls": [
           "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
           "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
-          "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026"
+          "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
+          "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+          "https://sports.yahoo.com/articles/nuts-former-buckeye-ohio-state-173100348.html"
         ],
-        "publishabilityScore": 9,
+        "publishabilityScore": 10,
         "publishabilityNotes": [
           "Has a usable summary sentence",
           "Parties remain unclear",
           "Fresh enough for same-day editorial use",
           "Multiple source URLs already attached",
           "Clustered across multiple discovery hits",
-          "Cluster contains multiple article-like materials"
+          "Cluster contains multiple article-like materials",
+          "At least one trusted source hit is present"
         ],
-        "discoveredAt": "2026-03-31T15:33:03.676Z",
+        "discoveredAt": "2026-03-31T18:20:28.356Z",
         "provider": "brave",
         "section_id": "sports",
         "topic_id": null,
@@ -35756,8 +36570,8 @@
         "angle": "transfers",
         "cluster_id": "evt-2026-03-31-sports-general-global",
         "eventKey": "2026-03-31:sports-general-global",
-        "cluster_size": 3,
-        "article_rich_count": 3,
+        "cluster_size": 5,
+        "article_rich_count": 5,
         "generic_page_count": 0,
         "discoveryContext": [
           {
@@ -36061,14 +36875,1517 @@
               "portal",
               "more"
             ]
+          },
+          {
+            "id": "brave-sec-1774981228353-4",
+            "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports | Trump administration",
+            "summary": "Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:28.356Z",
+            "provider": "brave",
+            "trustedSource": true,
+            "discoveryLane": "section:sports",
+            "sectionCandidates": [
+              "sports",
+              "news"
+            ],
+            "topicCandidates": [
+              "athletes-culture"
+            ],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "trump administration sues minnesota for allowing trans athletes in girls sports trump administration the guardian",
+            "canonicalUrl": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+            "discoveryScore": 15.4,
+            "eventKey": "sports:trump administration sues minnesota for allowing trans athletes in girls sports ",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981228353-4",
+            "url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+            "canonical_url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+            "domain": "theguardian.com",
+            "canonical_domain": "theguardian.com",
+            "normalized_title": "trump administration sues minnesota for allowing trans athletes in girls sports",
+            "snippet": "Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination",
+            "published_at": "1 day ago",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports",
+              "news"
+            ],
+            "topic_candidates": [
+              "athletes-culture"
+            ],
+            "cluster_id": null,
+            "event_key": "sports:trump administration sues minnesota for allowing trans athletes in girls sports ",
+            "keywords": [
+              "trump",
+              "administration",
+              "sues",
+              "minnesota",
+              "allowing",
+              "trans",
+              "athletes",
+              "girls",
+              "sports",
+              "justice",
+              "department",
+              "claims"
+            ],
+            "title_signal_tokens": [
+              "trump",
+              "administration",
+              "sues",
+              "minnesota",
+              "allowing",
+              "trans",
+              "athletes",
+              "girls"
+            ],
+            "url_signal_tokens": [
+              "minnesota",
+              "trans",
+              "athletes",
+              "lawsuit",
+              "trump",
+              "administration"
+            ],
+            "title_url_overlap": 0.8333333333333334,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "trump",
+              "administration",
+              "sues",
+              "minnesota",
+              "allowing",
+              "trans",
+              "athletes",
+              "girls",
+              "sports"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981228339-0",
+            "title": "How NIL Is Reshaping the Future of College Football",
+            "summary": "Many athletes are navigating contracts, taxes, and branding for the first time. Without proper guidance, they risk making costly mistakes. ... NIL can affect locker room chemistry, especially when teammates earn vastly different amounts. It also contributes to increased player movement through the transfer portal. ... Perhaps the biggest change is cultural. College sports ...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:28.344Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [
+              "athletes-culture"
+            ],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "transfers",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "how nil is reshaping the future of college football cleats",
+            "canonicalUrl": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
+            "discoveryScore": 13.4,
+            "eventKey": "sports:how nil is reshaping the future of college football cleats",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981228339-0",
+            "url": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
+            "canonical_url": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
+            "domain": "vocal.media",
+            "canonical_domain": "vocal.media",
+            "normalized_title": "how nil is reshaping the future of college football",
+            "snippet": "Many athletes are navigating contracts, taxes, and branding for the first time. Without proper guidance, they risk making costly mistakes. ... NIL can affect locker room chemistry, especially when teammates earn vastly different amounts. It also contributes to increased player movement through the transfer portal. ... Perhaps the biggest change is cultural. College sports ...",
+            "published_at": "1 day ago",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [
+              "athletes-culture"
+            ],
+            "cluster_id": null,
+            "event_key": "sports:how nil is reshaping the future of college football cleats",
+            "keywords": [
+              "reshaping",
+              "future",
+              "college",
+              "football",
+              "many",
+              "athletes",
+              "navigating",
+              "contracts",
+              "taxes",
+              "branding",
+              "first",
+              "time"
+            ],
+            "title_signal_tokens": [
+              "reshaping",
+              "future",
+              "college",
+              "football"
+            ],
+            "url_signal_tokens": [
+              "cleats",
+              "reshaping",
+              "future",
+              "college",
+              "football"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "reshaping",
+              "future",
+              "college",
+              "football"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981228348-2",
+            "title": "In NCAA athletics, student-athletes are often choosing deal over degree",
+            "summary": "NIL and the transfer portal have given college athletes newfound power and freedom of movement, but it's often at the detriment of education.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:28.351Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [
+              "athletes-culture"
+            ],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "transfers",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "in ncaa athletics student athletes are often choosing deal over degree andscape",
+            "canonicalUrl": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
+            "discoveryScore": 13.4,
+            "eventKey": "sports:in ncaa athletics student athletes are often choosing deal over degree andscape",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981228348-2",
+            "url": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
+            "canonical_url": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
+            "domain": "andscape.com",
+            "canonical_domain": "andscape.com",
+            "normalized_title": "in ncaa athletics student athletes are often choosing deal over degree",
+            "snippet": "NIL and the transfer portal have given college athletes newfound power and freedom of movement, but it's often at the detriment of education.",
+            "published_at": "1 day ago",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [
+              "athletes-culture"
+            ],
+            "cluster_id": null,
+            "event_key": "sports:in ncaa athletics student athletes are often choosing deal over degree andscape",
+            "keywords": [
+              "ncaa",
+              "athletics",
+              "student",
+              "athletes",
+              "often",
+              "choosing",
+              "deal",
+              "degree",
+              "transfer",
+              "portal",
+              "given",
+              "college"
+            ],
+            "title_signal_tokens": [
+              "ncaa",
+              "athletics",
+              "student",
+              "athletes",
+              "often",
+              "choosing",
+              "deal",
+              "degree"
+            ],
+            "url_signal_tokens": [
+              "features",
+              "ncaa",
+              "athletics",
+              "student",
+              "athletes",
+              "often",
+              "choosing",
+              "deal",
+              "degree"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "ncaa",
+              "athletics",
+              "student",
+              "athletes",
+              "often",
+              "choosing",
+              "deal",
+              "degree"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981228351-3",
+            "title": "You’re Nuts: Which former Buckeye should be the Ohio State men’s basketball GM?",
+            "summary": "﻿Your (almost) daily dose of good-natured, Ohio State banter.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://sports.yahoo.com/articles/nuts-former-buckeye-ohio-state-173100348.html"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:28.353Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "you re nuts which former buckeye should be the ohio state men s basketball gm yahoo sports",
+            "canonicalUrl": "https://sports.yahoo.com/articles/nuts-former-buckeye-ohio-state-173100348.html",
+            "discoveryScore": 13.4,
+            "eventKey": "sports:you re nuts which former buckeye should be the ohio state men s basketball gm ya",
+            "signalSpecificityScore": 6,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981228351-3",
+            "url": "https://sports.yahoo.com/articles/nuts-former-buckeye-ohio-state-173100348.html",
+            "canonical_url": "https://sports.yahoo.com/articles/nuts-former-buckeye-ohio-state-173100348.html",
+            "domain": "sports.yahoo.com",
+            "canonical_domain": "sports.yahoo.com",
+            "normalized_title": "you re nuts which former buckeye should be the ohio state men s basketball gm",
+            "snippet": "Your (almost) daily dose of good-natured, Ohio State banter.",
+            "published_at": "1 day ago",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "sports:you re nuts which former buckeye should be the ohio state men s basketball gm ya",
+            "keywords": [
+              "nuts",
+              "which",
+              "former",
+              "buckeye",
+              "ohio",
+              "state",
+              "basketball",
+              "your",
+              "almost",
+              "daily",
+              "dose",
+              "good"
+            ],
+            "title_signal_tokens": [
+              "nuts",
+              "which",
+              "former",
+              "buckeye",
+              "should",
+              "ohio",
+              "state",
+              "basketball"
+            ],
+            "url_signal_tokens": [
+              "nuts",
+              "former",
+              "buckeye",
+              "ohio",
+              "state"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "nuts",
+              "which",
+              "former",
+              "buckeye",
+              "ohio",
+              "state",
+              "basketball"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981228344-1",
+            "title": "What's next for Duke, Tennessee after Elite Eight: Recruits, transfer portal, more",
+            "summary": "With NCAA tournament runs over for key programs, here's how next season is taking shape.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "2 days ago",
+            "sourceUrls": [
+              "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026"
+            ],
+            "freshness": 5,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:28.348Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "transfers",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "what s next for duke tennessee after elite eight recruits transfer portal more espn",
+            "canonicalUrl": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
+            "discoveryScore": 11.4,
+            "eventKey": "sports:what s next for duke tennessee after elite eight recruits transfer portal more e",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981228344-1",
+            "url": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
+            "canonical_url": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
+            "domain": "espn.com",
+            "canonical_domain": "espn.com",
+            "normalized_title": "what s next for duke tennessee after elite eight recruits transfer portal more",
+            "snippet": "With NCAA tournament runs over for key programs, here's how next season is taking shape.",
+            "published_at": "2 days ago",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "sports:what s next for duke tennessee after elite eight recruits transfer portal more e",
+            "keywords": [
+              "what",
+              "next",
+              "duke",
+              "tennessee",
+              "elite",
+              "eight",
+              "recruits",
+              "transfer",
+              "portal",
+              "more",
+              "ncaa",
+              "tournament"
+            ],
+            "title_signal_tokens": [
+              "what",
+              "next",
+              "duke",
+              "tennessee",
+              "elite",
+              "eight",
+              "recruits",
+              "transfer",
+              "portal",
+              "more"
+            ],
+            "url_signal_tokens": [
+              "mens",
+              "college",
+              "basketball",
+              "ncaa",
+              "tournament",
+              "losers",
+              "recruits",
+              "transfer",
+              "portal",
+              "priorities",
+              "departures"
+            ],
+            "title_url_overlap": 0.3,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "what",
+              "next",
+              "duke",
+              "tennessee",
+              "elite",
+              "eight",
+              "recruits",
+              "transfer",
+              "portal",
+              "more"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-03-31-sports-general-global",
-      "publishabilityScore": 9,
+      "publishabilityScore": 10,
       "discoveredAt": "2026-03-31T15:33:03.676Z",
-      "lastSeenAt": "2026-03-31T15:34:34.962Z",
-      "expiresAt": "2026-04-02T15:34:34.962Z",
+      "lastSeenAt": "2026-03-31T18:21:53.436Z",
+      "expiresAt": "2026-04-02T18:21:53.435Z",
+      "status": "published",
+      "lastSelectedAt": "2026-03-31T18:22:29.262Z",
+      "lastPublishedAt": "2026-03-31T18:22:29.262Z",
+      "publishedSlug": "2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in"
+    },
+    {
+      "identityKey": "cluster:evt-2026-03-31-news-general-global-meta",
+      "brief": {
+        "id": "evt-2026-03-31-news-general-global-meta",
+        "title": "Medical Bulletin 31/March/2026",
+        "whatHappened": "Here are the top medical news for today:New Study Identifies Exercise Type That Significantly Improves Sleep Quality A new meta-analysis published in Sleep and Biological Rhythms suggests that yoga...",
+        "whoIsInvolved": "meta",
+        "involvedParties": [
+          "meta"
+        ],
+        "entities": [
+          "meta"
+        ],
+        "when": "9 hours ago",
+        "where": "Sleep",
+        "whyItMatters": "The development could matter for public health, regulation, scientific progress, or access to treatment.",
+        "developmentStage": "developing",
+        "sourceUrls": [
+          "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
+          "https://www.techmarketview.com/ukhotviews/",
+          "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+          "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever"
+        ],
+        "publishabilityScore": 10,
+        "publishabilityNotes": [
+          "Has a usable summary sentence",
+          "Specific parties are identified",
+          "Fresh enough for same-day editorial use",
+          "Multiple source URLs already attached",
+          "Clustered across multiple discovery hits",
+          "Cluster contains multiple article-like materials"
+        ],
+        "discoveredAt": "2026-03-31T18:20:34.445Z",
+        "provider": "brave",
+        "section_id": "news",
+        "topic_id": null,
+        "region": "global",
+        "angle": "general",
+        "cluster_id": "evt-2026-03-31-news-general-global-meta",
+        "eventKey": "2026-03-31:news-general-global-meta",
+        "cluster_size": 4,
+        "article_rich_count": 4,
+        "generic_page_count": 0,
+        "discoveryContext": [
+          {
+            "id": "brave-sec-1774981222281-2",
+            "title": "Medical Bulletin 31/March/2026",
+            "summary": "Here are the top medical news for today:New Study Identifies Exercise Type That Significantly Improves Sleep Quality A new meta-analysis published in Sleep and Biological Rhythms suggests that yoga...",
+            "whyItMatters": "",
+            "involvedParties": [
+              "meta"
+            ],
+            "entities": [
+              "meta"
+            ],
+            "when": "9 hours ago",
+            "sourceUrls": [
+              "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669"
+            ],
+            "freshness": 7,
+            "urgency": 5,
+            "discoveredAt": "2026-03-31T18:20:22.283Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:health",
+            "sectionCandidates": [
+              "news",
+              "health"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "research",
+            "genericPage": false,
+            "page_kind": "analysis",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "medical bulletin 31 march 2026",
+            "canonicalUrl": "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
+            "discoveryScore": 15.4,
+            "eventKey": "news:medical bulletin 31 march 2026",
+            "signalSpecificityScore": 4,
+            "signalSpecificityNotes": [
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981222281-2",
+            "url": "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
+            "canonical_url": "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
+            "domain": "medicaldialogues.in",
+            "canonical_domain": "medicaldialogues.in",
+            "normalized_title": "medical bulletin 31 march 2026",
+            "snippet": "Here are the top medical news for today:New Study Identifies Exercise Type That Significantly Improves Sleep Quality A new meta-analysis published in Sleep and Biological Rhythms suggests that yoga...",
+            "published_at": "9 hours ago",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "health"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "news:medical bulletin 31 march 2026",
+            "keywords": [
+              "medical",
+              "bulletin",
+              "march",
+              "2026",
+              "here",
+              "study",
+              "identifies",
+              "exercise",
+              "type",
+              "significantly",
+              "improves",
+              "sleep"
+            ],
+            "title_signal_tokens": [
+              "medical",
+              "bulletin",
+              "march",
+              "2026"
+            ],
+            "url_signal_tokens": [
+              "mdtv",
+              "medical",
+              "bulletin",
+              "31march2026"
+            ],
+            "title_url_overlap": 0.5,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "medical",
+              "bulletin",
+              "march",
+              "2026"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981216530-3",
+            "title": "UKHotViews",
+            "summary": "Bringing you opinionated, authoritative research & analysis on the UK technology scene.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "18 hours ago",
+            "sourceUrls": [
+              "https://www.techmarketview.com/ukhotviews/"
+            ],
+            "freshness": 7,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:16.534Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:tech",
+            "sectionCandidates": [
+              "news",
+              "tech"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "research",
+            "genericPage": false,
+            "page_kind": "analysis",
+            "genericity_score": 0,
+            "article_likelihood": 7,
+            "normalizedTitle": "ukhotviews latest tech news views",
+            "canonicalUrl": "https://www.techmarketview.com/ukhotviews/",
+            "discoveryScore": 13.8,
+            "eventKey": "news:ukhotviews latest tech news views",
+            "signalSpecificityScore": 6,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981216530-3",
+            "url": "https://www.techmarketview.com/ukhotviews/",
+            "canonical_url": "https://www.techmarketview.com/ukhotviews/",
+            "domain": "techmarketview.com",
+            "canonical_domain": "techmarketview.com",
+            "normalized_title": "ukhotviews",
+            "snippet": "Bringing you opinionated, authoritative research & analysis on the UK technology scene.",
+            "published_at": "18 hours ago",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "tech"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "news:ukhotviews latest tech news views",
+            "keywords": [
+              "ukhotviews",
+              "bringing",
+              "opinionated",
+              "authoritative",
+              "research",
+              "analysis",
+              "technology",
+              "scene"
+            ],
+            "title_signal_tokens": [
+              "ukhotviews"
+            ],
+            "url_signal_tokens": [
+              "ukhotviews"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "research",
+            "place": "global",
+            "titleTokens": [
+              "ukhotviews"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981234435-0",
+            "title": "Ofcom to investigate complaints of climate change denial",
+            "summary": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "2 days ago",
+            "sourceUrls": [
+              "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/"
+            ],
+            "freshness": 5,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:34.438Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:news",
+            "sectionCandidates": [
+              "news"
+            ],
+            "topicCandidates": [
+              "climate-extreme-weather"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "official_release",
+            "genericity_score": 1,
+            "article_likelihood": 9,
+            "normalizedTitle": "ofcom to investigate complaints of climate change denial watts up with that",
+            "canonicalUrl": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+            "discoveryScore": 13,
+            "eventKey": "news:ofcom to investigate complaints of climate change denial watts up with that",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981234435-0",
+            "url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+            "canonical_url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+            "domain": "wattsupwiththat.com",
+            "canonical_domain": "wattsupwiththat.com",
+            "normalized_title": "ofcom to investigate complaints of climate change denial",
+            "snippet": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
+            "published_at": "2 days ago",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news"
+            ],
+            "topic_candidates": [
+              "climate-extreme-weather"
+            ],
+            "cluster_id": null,
+            "event_key": "news:ofcom to investigate complaints of climate change denial watts up with that",
+            "keywords": [
+              "ofcom",
+              "investigate",
+              "complaints",
+              "climate",
+              "change",
+              "denial",
+              "stop",
+              "long",
+              "before",
+              "allowed",
+              "call",
+              "starmer"
+            ],
+            "title_signal_tokens": [
+              "ofcom",
+              "investigate",
+              "complaints",
+              "climate",
+              "change",
+              "denial"
+            ],
+            "url_signal_tokens": [
+              "ofcom",
+              "investigate",
+              "complaints",
+              "climate",
+              "change",
+              "denial"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "ofcom",
+              "investigate",
+              "complaints",
+              "climate",
+              "change",
+              "denial"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981234443-3",
+            "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever",
+            "summary": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "2 days ago",
+            "sourceUrls": [
+              "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever"
+            ],
+            "freshness": 5,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:34.445Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:news",
+            "sectionCandidates": [
+              "news"
+            ],
+            "topicCandidates": [
+              "climate-extreme-weather"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "in the age of misinformation climate literacy matters more than ever honolulu civil beat",
+            "canonicalUrl": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+            "discoveryScore": 12.4,
+            "eventKey": "news:in the age of misinformation climate literacy matters more than ever honolulu ci",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981234443-3",
+            "url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+            "canonical_url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+            "domain": "civilbeat.org",
+            "canonical_domain": "civilbeat.org",
+            "normalized_title": "in the age of misinformation climate literacy matters more than ever",
+            "snippet": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
+            "published_at": "2 days ago",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news"
+            ],
+            "topic_candidates": [
+              "climate-extreme-weather"
+            ],
+            "cluster_id": null,
+            "event_key": "news:in the age of misinformation climate literacy matters more than ever honolulu ci",
+            "keywords": [
+              "misinformation",
+              "climate",
+              "literacy",
+              "matters",
+              "more",
+              "than",
+              "ever",
+              "education",
+              "remains",
+              "inconsistent",
+              "optional",
+              "disconnected"
+            ],
+            "title_signal_tokens": [
+              "misinformation",
+              "climate",
+              "literacy",
+              "matters",
+              "more",
+              "than",
+              "ever"
+            ],
+            "url_signal_tokens": [
+              "misinformation",
+              "climate",
+              "literacy",
+              "matters",
+              "more",
+              "than",
+              "ever"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "misinformation",
+              "climate",
+              "literacy",
+              "matters",
+              "more",
+              "than",
+              "ever"
+            ]
+          }
+        ]
+      },
+      "briefId": "evt-2026-03-31-news-general-global-meta",
+      "publishabilityScore": 10,
+      "discoveredAt": "2026-03-31T18:20:34.445Z",
+      "lastSeenAt": "2026-03-31T18:21:53.436Z",
+      "expiresAt": "2026-04-02T18:21:53.435Z",
+      "status": "candidate",
+      "lastSelectedAt": null,
+      "lastPublishedAt": null
+    },
+    {
+      "identityKey": "cluster:evt-2026-03-31-mental-health-general-global",
+      "brief": {
+        "id": "evt-2026-03-31-mental-health-general-global",
+        "title": "Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms",
+        "whatHappened": "Contents hide 1 Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms 1.1 Understanding Brain Plasticity and Its Therapeutic Potential 1.2 Advances in Neuroimaging: Mapping the Mind 1.3 Emerging….",
+        "whoIsInvolved": "Unspecified",
+        "involvedParties": [
+          "Unspecified"
+        ],
+        "entities": [
+          "Unspecified"
+        ],
+        "when": "1 day ago",
+        "where": "Neuroscience Transforming Treatment",
+        "whyItMatters": "The development matters because it may affect technology adoption, competition, regulation, or security decisions.",
+        "developmentStage": "developing",
+        "sourceUrls": [
+          "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece",
+          "https://www.mentalhealthparitypartners.com/2026/03/30/revolutionizing-ment/",
+          "https://psychologytoday.com/us/blog/well-read/202603/the-link-between-medicine-and-psychology"
+        ],
+        "publishabilityScore": 10,
+        "publishabilityNotes": [
+          "Has a usable summary sentence",
+          "Parties remain unclear",
+          "Fresh enough for same-day editorial use",
+          "Multiple source URLs already attached",
+          "Clustered across multiple discovery hits",
+          "Cluster contains multiple article-like materials",
+          "Taxonomy topic match is specific enough for routing"
+        ],
+        "discoveredAt": "2026-03-31T18:20:22.287Z",
+        "provider": "brave",
+        "section_id": "health",
+        "topic_id": "mental-health",
+        "region": "global",
+        "angle": "general",
+        "cluster_id": "evt-2026-03-31-mental-health-general-global",
+        "eventKey": "2026-03-31:mental-health-general-global",
+        "cluster_size": 3,
+        "article_rich_count": 3,
+        "generic_page_count": 0,
+        "discoveryContext": [
+          {
+            "id": "brave-sec-1774981222283-3",
+            "title": "Deakin University advances global agenda for affordable health through RAAH Roundtable",
+            "summary": "Deakin University advances global agenda for affordable health through RAAH Roundtable",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 hour ago",
+            "sourceUrls": [
+              "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece"
+            ],
+            "freshness": 9,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:22.287Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:health",
+            "sectionCandidates": [
+              "health"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "health",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "deakin university advances global agenda for affordable health through raah roundtable the hindu",
+            "canonicalUrl": "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece",
+            "discoveryScore": 16.4,
+            "eventKey": "health:deakin university advances global agenda for affordable health through raah roun",
+            "signalSpecificityScore": 6,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981222283-3",
+            "url": "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece",
+            "canonical_url": "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece",
+            "domain": "thehindu.com",
+            "canonical_domain": "thehindu.com",
+            "normalized_title": "deakin university advances global agenda for affordable health through raah roundtable",
+            "snippet": "Deakin University advances global agenda for affordable health through RAAH Roundtable",
+            "published_at": "1 hour ago",
+            "section_id": "health",
+            "topic_id": null,
+            "section_candidates": [
+              "health"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "health:deakin university advances global agenda for affordable health through raah roun",
+            "keywords": [
+              "deakin",
+              "university",
+              "advances",
+              "global",
+              "agenda",
+              "affordable",
+              "health",
+              "through",
+              "raah",
+              "roundtable"
+            ],
+            "title_signal_tokens": [
+              "deakin",
+              "university",
+              "advances",
+              "global",
+              "agenda",
+              "affordable",
+              "through",
+              "raah",
+              "roundtable"
+            ],
+            "url_signal_tokens": [
+              "brandhub",
+              "release",
+              "deakin",
+              "university",
+              "advances",
+              "global",
+              "agenda",
+              "affordable",
+              "through",
+              "raah",
+              "roundtable",
+              "article70806449"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "deakin",
+              "university",
+              "advances",
+              "global",
+              "agenda",
+              "affordable",
+              "health",
+              "through",
+              "raah",
+              "roundtable"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981222270-1",
+            "title": "Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms",
+            "summary": "Contents hide 1 Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms 1.1 Understanding Brain Plasticity and Its Therapeutic Potential 1.2 Advances in Neuroimaging: Mapping the Mind 1.3 Emerging…",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://www.mentalhealthparitypartners.com/2026/03/30/revolutionizing-ment/"
+            ],
+            "freshness": 6,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:22.281Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:health",
+            "sectionCandidates": [
+              "health"
+            ],
+            "topicCandidates": [
+              "mental-health"
+            ],
+            "detectedSectionId": "health",
+            "detectedTopicId": "mental-health",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "revolutionizing mental health care breakthroughs in neuroscience transforming treatment paradigms mentalhealthparityp",
+            "canonicalUrl": "https://www.mentalhealthparitypartners.com/2026/03/30/revolutionizing-ment/",
+            "discoveryScore": 15.6,
+            "eventKey": "mental-health:revolutionizing mental health care breakthroughs in neuroscience transforming tr",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981222270-1",
+            "url": "https://www.mentalhealthparitypartners.com/2026/03/30/revolutionizing-ment/",
+            "canonical_url": "https://www.mentalhealthparitypartners.com/2026/03/30/revolutionizing-ment/",
+            "domain": "mentalhealthparitypartners.com",
+            "canonical_domain": "mentalhealthparitypartners.com",
+            "normalized_title": "revolutionizing mental health care breakthroughs in neuroscience transforming treatment paradigms",
+            "snippet": "Contents hide 1 Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms 1.1 Understanding Brain Plasticity and Its Therapeutic Potential 1.2 Advances in Neuroimaging: Mapping the Mind 1.3 Emerging…",
+            "published_at": "1 day ago",
+            "section_id": "health",
+            "topic_id": "mental-health",
+            "section_candidates": [
+              "health"
+            ],
+            "topic_candidates": [
+              "mental-health"
+            ],
+            "cluster_id": null,
+            "event_key": "mental-health:revolutionizing mental health care breakthroughs in neuroscience transforming tr",
+            "keywords": [
+              "revolutionizing",
+              "mental",
+              "health",
+              "care",
+              "breakthroughs",
+              "neuroscience",
+              "transforming",
+              "treatment",
+              "paradigms",
+              "contents",
+              "hide",
+              "understanding"
+            ],
+            "title_signal_tokens": [
+              "revolutionizing",
+              "mental",
+              "care",
+              "breakthroughs",
+              "neuroscience",
+              "transforming",
+              "treatment",
+              "paradigms"
+            ],
+            "url_signal_tokens": [
+              "revolutionizing",
+              "ment"
+            ],
+            "title_url_overlap": 0.5,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "revolutionizing",
+              "mental",
+              "health",
+              "care",
+              "breakthroughs",
+              "neuroscience",
+              "transforming",
+              "treatment",
+              "paradigms"
+            ]
+          },
+          {
+            "id": "brave-sec-1774981222266-0",
+            "title": "The Link Between Medicine and Psychology",
+            "summary": "When you visit your doctor, do they ask about your mental health? A new book explores how mental health has been shown to directly impact both heart and brain health.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://psychologytoday.com/us/blog/well-read/202603/the-link-between-medicine-and-psychology"
+            ],
+            "freshness": 6,
+            "urgency": 5,
+            "discoveredAt": "2026-03-31T18:20:22.270Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:health",
+            "sectionCandidates": [
+              "health"
+            ],
+            "topicCandidates": [
+              "mental-health"
+            ],
+            "detectedSectionId": "health",
+            "detectedTopicId": "mental-health",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "the link between medicine and psychology psychology today",
+            "canonicalUrl": "https://psychologytoday.com/us/blog/well-read/202603/the-link-between-medicine-and-psychology",
+            "discoveryScore": 15.4,
+            "eventKey": "mental-health:the link between medicine and psychology psychology today",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1774981222266-0",
+            "url": "https://psychologytoday.com/us/blog/well-read/202603/the-link-between-medicine-and-psychology",
+            "canonical_url": "https://psychologytoday.com/us/blog/well-read/202603/the-link-between-medicine-and-psychology",
+            "domain": "psychologytoday.com",
+            "canonical_domain": "psychologytoday.com",
+            "normalized_title": "the link between medicine and psychology",
+            "snippet": "When you visit your doctor, do they ask about your mental health? A new book explores how mental health has been shown to directly impact both heart and brain health.",
+            "published_at": "1 day ago",
+            "section_id": "health",
+            "topic_id": "mental-health",
+            "section_candidates": [
+              "health"
+            ],
+            "topic_candidates": [
+              "mental-health"
+            ],
+            "cluster_id": null,
+            "event_key": "mental-health:the link between medicine and psychology psychology today",
+            "keywords": [
+              "link",
+              "between",
+              "medicine",
+              "psychology",
+              "when",
+              "visit",
+              "your",
+              "doctor",
+              "they",
+              "about",
+              "mental",
+              "health"
+            ],
+            "title_signal_tokens": [
+              "link",
+              "between",
+              "medicine",
+              "psychology"
+            ],
+            "url_signal_tokens": [
+              "blog",
+              "well",
+              "read",
+              "link",
+              "between",
+              "medicine",
+              "psychology"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "link",
+              "between",
+              "medicine",
+              "psychology"
+            ]
+          }
+        ]
+      },
+      "briefId": "evt-2026-03-31-mental-health-general-global",
+      "publishabilityScore": 10,
+      "discoveredAt": "2026-03-31T18:20:22.287Z",
+      "lastSeenAt": "2026-03-31T18:21:53.436Z",
+      "expiresAt": "2026-04-02T18:21:53.435Z",
+      "status": "candidate",
+      "lastSelectedAt": null,
+      "lastPublishedAt": null
+    },
+    {
+      "identityKey": "cluster:evt-2026-03-31-business-general-global",
+      "brief": {
+        "id": "evt-2026-03-31-business-general-global",
+        "title": "Erin Griffith",
+        "whatHappened": "2 days ago ... What I Cover. I focus primarily on start-ups and venture capital. · My Background. I have been reporting on finance, business and technology since 2006.",
+        "whoIsInvolved": "Unspecified",
+        "involvedParties": [
+          "Unspecified"
+        ],
+        "entities": [
+          "Unspecified"
+        ],
+        "when": "2026-03-31T18:20:34.462Z",
+        "where": "Not specified",
+        "whyItMatters": "The development matters because it may affect technology adoption, competition, regulation, or security decisions.",
+        "developmentStage": "confirmed",
+        "sourceUrls": [
+          "https://www.nytimes.com/by/erin-griffith?page=9"
+        ],
+        "publishabilityScore": 6,
+        "publishabilityNotes": [
+          "Has a usable summary sentence",
+          "Parties remain unclear",
+          "Freshness is moderate",
+          "Source diversity still needs source-pack validation",
+          "At least one trusted source hit is present"
+        ],
+        "discoveredAt": "2026-03-31T18:20:34.462Z",
+        "provider": "google_trusted",
+        "section_id": "business",
+        "topic_id": null,
+        "region": "global",
+        "angle": "general",
+        "cluster_id": "evt-2026-03-31-business-general-global",
+        "eventKey": "2026-03-31:business-general-global",
+        "cluster_size": 1,
+        "article_rich_count": 0,
+        "generic_page_count": 0,
+        "discoveryContext": [
+          {
+            "id": "google-sec-1774981234459-4",
+            "title": "Erin Griffith - Page 9",
+            "summary": "2 days ago ... What I Cover. I focus primarily on start-ups and venture capital. · My Background. I have been reporting on finance, business and technology since 2006.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.nytimes.com/by/erin-griffith?page=9"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-03-31T18:20:34.462Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:business",
+            "sectionCandidates": [
+              "business"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "business",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "unknown",
+            "genericity_score": 0,
+            "article_likelihood": 1,
+            "normalizedTitle": "erin griffith page 9 the new york times",
+            "canonicalUrl": "https://www.nytimes.com/by/erin-griffith",
+            "discoveryScore": 11,
+            "eventKey": "business:erin griffith page 9 the new york times",
+            "signalSpecificityScore": 4,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1774981234459-4",
+            "url": "https://www.nytimes.com/by/erin-griffith",
+            "canonical_url": "https://www.nytimes.com/by/erin-griffith",
+            "domain": "nytimes.com",
+            "canonical_domain": "nytimes.com",
+            "normalized_title": "erin griffith",
+            "snippet": "2 days ago ... What I Cover. I focus primarily on start-ups and venture capital. · My Background. I have been reporting on finance, business and technology since 2006.",
+            "published_at": "2026-03-31T18:20:34.462Z",
+            "section_id": "business",
+            "topic_id": null,
+            "section_candidates": [
+              "business"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "business:erin griffith page 9 the new york times",
+            "keywords": [
+              "erin",
+              "griffith",
+              "days",
+              "what",
+              "cover",
+              "focus",
+              "primarily",
+              "start",
+              "venture",
+              "capital",
+              "background",
+              "been"
+            ],
+            "title_signal_tokens": [
+              "erin",
+              "griffith"
+            ],
+            "url_signal_tokens": [
+              "erin",
+              "griffith"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "erin",
+              "griffith",
+              "page"
+            ]
+          }
+        ]
+      },
+      "briefId": "evt-2026-03-31-business-general-global",
+      "publishabilityScore": 6,
+      "discoveredAt": "2026-03-31T18:20:34.462Z",
+      "lastSeenAt": "2026-03-31T18:21:53.436Z",
+      "expiresAt": "2026-04-02T18:21:53.435Z",
       "status": "candidate",
       "lastSelectedAt": null,
       "lastPublishedAt": null

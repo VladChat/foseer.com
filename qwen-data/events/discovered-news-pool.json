@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T15:34:34.918Z",
+  "updatedAt": "2026-03-31T18:21:53.396Z",
   "items": [
     {
       "identityKey": "event:news:sustainable business news latest eco headlines reuters",
@@ -221,19 +221,19 @@
     {
       "identityKey": "event:news:ukhotviews latest tech news views",
       "item": {
-        "id": "brave-sec-1774971171713-3",
+        "id": "brave-sec-1774981216530-3",
         "title": "UKHotViews - Latest Tech News & Views",
         "summary": "Bringing you opinionated, authoritative research & analysis on the UK technology scene.",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "16 hours ago",
+        "when": "18 hours ago",
         "sourceUrls": [
           "https://www.techmarketview.com/ukhotviews/"
         ],
         "freshness": 7,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T15:32:51.715Z",
+        "discoveredAt": "2026-03-31T18:20:16.534Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -253,11 +253,18 @@
         "normalizedTitle": "ukhotviews latest tech news views",
         "canonicalUrl": "https://www.techmarketview.com/ukhotviews/",
         "discoveryScore": 13.8,
-        "eventKey": "news:ukhotviews latest tech news views"
+        "eventKey": "news:ukhotviews latest tech news views",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:32:51.715Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T18:20:16.534Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:tech:5 things to know before the market opens friday cnbc",
@@ -302,7 +309,7 @@
     {
       "identityKey": "event:news:ofcom to investigate complaints of climate change denial watts up with that",
       "item": {
-        "id": "brave-sec-1774914905579-0",
+        "id": "brave-sec-1774981234435-0",
         "title": "Ofcom to investigate complaints of climate change denial – Watts Up With That?",
         "summary": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
         "whyItMatters": "",
@@ -314,7 +321,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:05.598Z",
+        "discoveredAt": "2026-03-31T18:20:34.438Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -335,11 +342,19 @@
         "normalizedTitle": "ofcom to investigate complaints of climate change denial watts up with that",
         "canonicalUrl": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
         "discoveryScore": 13,
-        "eventKey": "news:ofcom to investigate complaints of climate change denial watts up with that"
+        "eventKey": "news:ofcom to investigate complaints of climate change denial watts up with that",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:55:05.598Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
+      "discoveredAt": "2026-03-31T18:20:34.438Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:medical-research:quantum biopharma s 2025 audited year end financial results",
@@ -787,7 +802,7 @@
     {
       "identityKey": "event:business:erin griffith page 9 the new york times",
       "item": {
-        "id": "google-sec-1774902587903-4",
+        "id": "google-sec-1774981234459-4",
         "title": "Erin Griffith - Page 9 - The New York Times",
         "summary": "2 days ago ... What I Cover. I focus primarily on start-ups and venture capital. · My Background. I have been reporting on finance, business and technology since 2006.",
         "whyItMatters": "",
@@ -799,7 +814,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T20:29:47.906Z",
+        "discoveredAt": "2026-03-31T18:20:34.462Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:business",
@@ -818,11 +833,17 @@
         "normalizedTitle": "erin griffith page 9 the new york times",
         "canonicalUrl": "https://www.nytimes.com/by/erin-griffith",
         "discoveryScore": 11,
-        "eventKey": "business:erin griffith page 9 the new york times"
+        "eventKey": "business:erin griffith page 9 the new york times",
+        "signalSpecificityScore": 4,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T20:29:47.906Z",
-      "lastSeenAt": "2026-03-30T20:30:38.813Z",
-      "expiresAt": "2026-04-01T20:30:38.812Z"
+      "discoveredAt": "2026-03-31T18:20:34.462Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:tech:can a note taking ai bracelet really make you more productive",
@@ -1210,7 +1231,7 @@
     {
       "identityKey": "event:news:in the age of misinformation climate literacy matters more than ever honolulu ci",
       "item": {
-        "id": "brave-sec-1774914905612-3",
+        "id": "brave-sec-1774981234443-3",
         "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever - Honolulu Civil Beat",
         "summary": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
         "whyItMatters": "",
@@ -1222,7 +1243,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:05.615Z",
+        "discoveredAt": "2026-03-31T18:20:34.445Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -1243,11 +1264,19 @@
         "normalizedTitle": "in the age of misinformation climate literacy matters more than ever honolulu civil beat",
         "canonicalUrl": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
         "discoveryScore": 12.4,
-        "eventKey": "news:in the age of misinformation climate literacy matters more than ever honolulu ci"
+        "eventKey": "news:in the age of misinformation climate literacy matters more than ever honolulu ci",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:55:05.615Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
+      "discoveredAt": "2026-03-31T18:20:34.445Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:news:science nbc news",
@@ -3076,7 +3105,7 @@
     {
       "identityKey": "event:mental-health:the link between medicine and psychology psychology today",
       "item": {
-        "id": "brave-sec-1774971177658-0",
+        "id": "brave-sec-1774981222266-0",
         "title": "The Link Between Medicine and Psychology | Psychology Today",
         "summary": "When you visit your doctor, do they ask about your mental health? A new book explores how mental health has been shown to directly impact both heart and brain health.",
         "whyItMatters": "",
@@ -3088,7 +3117,7 @@
         ],
         "freshness": 6,
         "urgency": 5,
-        "discoveredAt": "2026-03-31T15:32:57.662Z",
+        "discoveredAt": "2026-03-31T18:20:22.270Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:health",
@@ -3109,16 +3138,24 @@
         "normalizedTitle": "the link between medicine and psychology psychology today",
         "canonicalUrl": "https://psychologytoday.com/us/blog/well-read/202603/the-link-between-medicine-and-psychology",
         "discoveryScore": 15.4,
-        "eventKey": "mental-health:the link between medicine and psychology psychology today"
+        "eventKey": "mental-health:the link between medicine and psychology psychology today",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:32:57.662Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T18:20:22.270Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:cybersecurity:uk registered ai cybersecurity patent signals new era of intelligent threat mana",
       "item": {
-        "id": "brave-sec-1774971171701-1",
+        "id": "brave-sec-1774981216513-1",
         "title": "UK-Registered AI Cybersecurity Patent Signals New Era of Intelligent Threat Management and Interdisciplinary Innovation",
         "summary": "The global technology and research community is witnessing a significant milestone following the United Kingdom Intellectual Property Office's registration of a groundbreaking design patent titled \"COMPUTER CYBERSECURITY SPRINT PLANNING ENGINE WITH AI-POWERED THREAT PRIORITIZATION.\"",
         "whyItMatters": "",
@@ -3130,7 +3167,7 @@
         ],
         "freshness": 5,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T15:32:51.710Z",
+        "discoveredAt": "2026-03-31T18:20:16.526Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -3152,11 +3189,19 @@
         "normalizedTitle": "uk registered ai cybersecurity patent signals new era of intelligent threat management and interdisciplinary innovation",
         "canonicalUrl": "http://www.techtimes.com/articles/315545/20260329/uk-registered-ai-cybersecurity-patent-signals-new-era-intelligent-threat-management.htm",
         "discoveryScore": 15.4,
-        "eventKey": "cybersecurity:uk registered ai cybersecurity patent signals new era of intelligent threat mana"
+        "eventKey": "cybersecurity:uk registered ai cybersecurity patent signals new era of intelligent threat mana",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:32:51.710Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T18:20:16.526Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:cybersecurity:mckinsey s ai system hack should be a wake up call for leaders",
@@ -3204,7 +3249,7 @@
     {
       "identityKey": "event:film-tv:why is horror tv so complicated right now",
       "item": {
-        "id": "brave-sec-1774971189702-1",
+        "id": "brave-sec-1774981234426-2",
         "title": "Why Is Horror TV So Complicated Right Now?",
         "summary": "From 'IT: Welcome to Derry' to 'Yellowjackets' and 'From,' streaming horror keeps piling on mysteries, curses, and lore that can feel more exhausting than scary.",
         "whyItMatters": "",
@@ -3216,7 +3261,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T15:33:09.706Z",
+        "discoveredAt": "2026-03-31T18:20:34.430Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -3237,11 +3282,19 @@
         "normalizedTitle": "why is horror tv so complicated right now",
         "canonicalUrl": "https://www.esquire.com/uk/culture/tv/a70879484/tv-horror-too-complicated/",
         "discoveryScore": 14.4,
-        "eventKey": "film-tv:why is horror tv so complicated right now"
+        "eventKey": "film-tv:why is horror tv so complicated right now",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:33:09.706Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T18:20:34.430Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:culture:why notre dame s culture is winning in the transfer portal era uhnd com",
@@ -4009,7 +4062,7 @@
     {
       "identityKey": "event:culture:the 10 best cookbooks of 2026 so far",
       "item": {
-        "id": "brave-sec-1774971189699-0",
+        "id": "brave-sec-1774981234433-4",
         "title": "The 10 Best Cookbooks of 2026 So Far",
         "summary": "There’s never been a better time to get creative in the kitchen",
         "whyItMatters": "",
@@ -4021,7 +4074,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T15:33:09.702Z",
+        "discoveredAt": "2026-03-31T18:20:34.435Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -4042,16 +4095,23 @@
         "normalizedTitle": "the 10 best cookbooks of 2026 so far",
         "canonicalUrl": "https://www.harpersbazaar.com/culture/art-books-music/g70609378/best-cookbooks-2026/",
         "discoveryScore": 11,
-        "eventKey": "culture:the 10 best cookbooks of 2026 so far"
+        "eventKey": "culture:the 10 best cookbooks of 2026 so far",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:33:09.702Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T18:20:34.435Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:sports:what s next for duke tennessee after elite eight recruits transfer portal more e",
       "item": {
-        "id": "brave-sec-1774971183673-2",
+        "id": "brave-sec-1774981228344-1",
         "title": "What's next for Duke, Tennessee after Elite Eight: Recruits, transfer portal, more - ESPN",
         "summary": "With NCAA tournament runs over for key programs, here's how next season is taking shape.",
         "whyItMatters": "",
@@ -4063,7 +4123,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T15:33:03.676Z",
+        "discoveredAt": "2026-03-31T18:20:28.348Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:sports",
@@ -4082,11 +4142,18 @@
         "normalizedTitle": "what s next for duke tennessee after elite eight recruits transfer portal more espn",
         "canonicalUrl": "https://espn.com/mens-college-basketball/story/_/id/48292503/ncaa-tournament-losers-recruits-transfer-portal-priorities-departures-2026",
         "discoveryScore": 11.4,
-        "eventKey": "sports:what s next for duke tennessee after elite eight recruits transfer portal more e"
+        "eventKey": "sports:what s next for duke tennessee after elite eight recruits transfer portal more e",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:33:03.676Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T18:20:28.348Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:medical-research:health medicine news sciencedaily",
@@ -5529,7 +5596,7 @@
     {
       "identityKey": "event:cybersecurity:ai the cybersecurity crisis that vendors love",
       "item": {
-        "id": "brave-sec-1774971171685-0",
+        "id": "brave-sec-1774981216485-0",
         "title": "AI: The Cybersecurity Crisis That Vendors Love",
         "summary": "At the RSAC cybersecurity conference, the arrival of agentic AI gave the community plenty to talk about. New threats include identity and supply chains.",
         "whyItMatters": "",
@@ -5541,7 +5608,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T15:32:51.701Z",
+        "discoveredAt": "2026-03-31T18:20:16.513Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -5563,28 +5630,36 @@
         "normalizedTitle": "ai the cybersecurity crisis that vendors love",
         "canonicalUrl": "https://forbes.com/sites/rscottraynovich/2026/03/30/ai-the-cybersecurity-crisis-that-vendors-love",
         "discoveryScore": 15.6,
-        "eventKey": "cybersecurity:ai the cybersecurity crisis that vendors love"
+        "eventKey": "cybersecurity:ai the cybersecurity crisis that vendors love",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:32:51.701Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T18:20:16.513Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:film-tv:the 10 tv shows we re watching in april 2026",
       "item": {
-        "id": "brave-sec-1774913074644-4",
+        "id": "brave-sec-1774981234422-1",
         "title": "The 10 TV Shows We’re Watching in April 2026",
         "summary": "The TV shows coming in April 2026 that matter most, from major premieres and returns to buzzy streaming releases.",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "7 hours ago",
+        "when": "1 day ago",
         "sourceUrls": [
           "https://www.esquire.com/uk/culture/tv/a70884275/tv-shows-april-2026/"
         ],
-        "freshness": 8,
+        "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:24:34.647Z",
+        "discoveredAt": "2026-03-31T18:20:34.426Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -5604,12 +5679,19 @@
         "article_likelihood": 1,
         "normalizedTitle": "the 10 tv shows we re watching in april 2026",
         "canonicalUrl": "https://www.esquire.com/uk/culture/tv/a70884275/tv-shows-april-2026/",
-        "discoveryScore": 14,
-        "eventKey": "film-tv:the 10 tv shows we re watching in april 2026"
+        "discoveryScore": 12,
+        "eventKey": "film-tv:the 10 tv shows we re watching in april 2026",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:24:34.647Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
+      "discoveredAt": "2026-03-31T18:20:34.426Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:mental-health:mental health and physical health connection",
@@ -6298,7 +6380,7 @@
     {
       "identityKey": "event:news:medical bulletin 31 march 2026",
       "item": {
-        "id": "brave-sec-1774971177662-1",
+        "id": "brave-sec-1774981222281-2",
         "title": "Medical Bulletin 31/March/2026",
         "summary": "Here are the top medical news for today:New Study Identifies Exercise Type That Significantly Improves Sleep Quality A new meta-analysis published in Sleep and Biological Rhythms suggests that yoga...",
         "whyItMatters": "",
@@ -6308,13 +6390,13 @@
         "entities": [
           "meta"
         ],
-        "when": "6 hours ago",
+        "when": "9 hours ago",
         "sourceUrls": [
           "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669"
         ],
-        "freshness": 8,
+        "freshness": 7,
         "urgency": 5,
-        "discoveredAt": "2026-03-31T15:32:57.666Z",
+        "discoveredAt": "2026-03-31T18:20:22.283Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:health",
@@ -6333,12 +6415,18 @@
         "article_likelihood": 8,
         "normalizedTitle": "medical bulletin 31 march 2026",
         "canonicalUrl": "https://medicaldialogues.in/mdtv/medical-news-today/medical-bulletin-31march2026-167669",
-        "discoveryScore": 16.4,
-        "eventKey": "news:medical bulletin 31 march 2026"
+        "discoveryScore": 15.4,
+        "eventKey": "news:medical bulletin 31 march 2026",
+        "signalSpecificityScore": 4,
+        "signalSpecificityNotes": [
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:32:57.666Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T18:20:22.283Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:news:trump administration sues minnesota for allowing trans athletes in",
@@ -6386,7 +6474,7 @@
     {
       "identityKey": "event:mental-health:revolutionizing mental health care breakthroughs in neuroscience transforming tr",
       "item": {
-        "id": "brave-sec-1774971177666-2",
+        "id": "brave-sec-1774981222270-1",
         "title": "Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms - mentalhealthparityp",
         "summary": "Contents hide 1 Revolutionizing Mental Health Care: Breakthroughs in Neuroscience Transforming Treatment Paradigms 1.1 Understanding Brain Plasticity and Its Therapeutic Potential 1.2 Advances in Neuroimaging: Mapping the Mind 1.3 Emerging…",
         "whyItMatters": "",
@@ -6398,7 +6486,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T15:32:57.670Z",
+        "discoveredAt": "2026-03-31T18:20:22.281Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:health",
@@ -6419,11 +6507,19 @@
         "normalizedTitle": "revolutionizing mental health care breakthroughs in neuroscience transforming treatment paradigms mentalhealthparityp",
         "canonicalUrl": "https://www.mentalhealthparitypartners.com/2026/03/30/revolutionizing-ment/",
         "discoveryScore": 15.6,
-        "eventKey": "mental-health:revolutionizing mental health care breakthroughs in neuroscience transforming tr"
+        "eventKey": "mental-health:revolutionizing mental health care breakthroughs in neuroscience transforming tr",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:32:57.670Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T18:20:22.281Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:crypto-bitcoin:crypto market update etf outflows cap bitcoin price rebound inn",
@@ -6513,19 +6609,19 @@
     {
       "identityKey": "event:cybersecurity:how ai is reshaping the cybersecurity vendor landscape",
       "item": {
-        "id": "brave-sec-1774971171710-2",
+        "id": "brave-sec-1774981216526-2",
         "title": "How AI Is Reshaping the Cybersecurity Vendor Landscape",
         "summary": "The cybersecurity vendor landscape is being rebuilt around AI, and the transformation is moving faster than most organizations are prepared for. Richard Stiennon,",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "13 hours ago",
+        "when": "16 hours ago",
         "sourceUrls": [
           "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280"
         ],
         "freshness": 7,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T15:32:51.713Z",
+        "discoveredAt": "2026-03-31T18:20:16.530Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -6547,28 +6643,36 @@
         "normalizedTitle": "how ai is reshaping the cybersecurity vendor landscape",
         "canonicalUrl": "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280",
         "discoveryScore": 15.4,
-        "eventKey": "cybersecurity:how ai is reshaping the cybersecurity vendor landscape"
+        "eventKey": "cybersecurity:how ai is reshaping the cybersecurity vendor landscape",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:32:51.713Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T18:20:16.530Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:health:deakin university advances global agenda for affordable health through raah roun",
       "item": {
-        "id": "brave-sec-1774971177670-3",
-        "title": "Deakin University advances global agenda for affordable health through RAAH Roundtable - The HinduBusinessLine",
+        "id": "brave-sec-1774981222283-3",
+        "title": "Deakin University advances global agenda for affordable health through RAAH Roundtable - The Hindu",
         "summary": "Deakin University advances global agenda for affordable health through RAAH Roundtable",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "4 hours ago",
+        "when": "1 hour ago",
         "sourceUrls": [
-          "https://www.thehindubusinessline.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806456.ece"
+          "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece"
         ],
-        "freshness": 8,
+        "freshness": 9,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T15:32:57.672Z",
+        "discoveredAt": "2026-03-31T18:20:22.287Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:health",
@@ -6584,14 +6688,21 @@
         "page_kind": "article",
         "genericity_score": 0,
         "article_likelihood": 8,
-        "normalizedTitle": "deakin university advances global agenda for affordable health through raah roundtable the hindubusinessline",
-        "canonicalUrl": "https://www.thehindubusinessline.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806456.ece",
-        "discoveryScore": 15.4,
-        "eventKey": "health:deakin university advances global agenda for affordable health through raah roun"
+        "normalizedTitle": "deakin university advances global agenda for affordable health through raah roundtable the hindu",
+        "canonicalUrl": "https://www.thehindu.com/brandhub/pr-release/deakin-university-advances-global-agenda-for-affordable-health-through-raah-roundtable/article70806449.ece",
+        "discoveryScore": 16.4,
+        "eventKey": "health:deakin university advances global agenda for affordable health through raah roun",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:32:57.672Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T18:20:22.287Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:culture:the 20 greatest tv drama show masterpieces of all time ranked",
@@ -6901,7 +7012,7 @@
     {
       "identityKey": "event:sports:how nil is reshaping the future of college football cleats",
       "item": {
-        "id": "brave-sec-1774971183664-0",
+        "id": "brave-sec-1774981228339-0",
         "title": "How NIL Is Reshaping the Future of College Football | Cleats",
         "summary": "Many athletes are navigating contracts, taxes, and branding for the first time. Without proper guidance, they risk making costly mistakes. ... NIL can affect locker room chemistry, especially when teammates earn vastly different amounts. It also contributes to increased player movement through the transfer portal. ... Perhaps the biggest change is cultural. College sports ...",
         "whyItMatters": "",
@@ -6913,7 +7024,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T15:33:03.669Z",
+        "discoveredAt": "2026-03-31T18:20:28.344Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:sports",
@@ -6934,16 +7045,24 @@
         "normalizedTitle": "how nil is reshaping the future of college football cleats",
         "canonicalUrl": "https://vocal.media/cleats/how-nil-is-reshaping-the-future-of-college-football",
         "discoveryScore": 13.4,
-        "eventKey": "sports:how nil is reshaping the future of college football cleats"
+        "eventKey": "sports:how nil is reshaping the future of college football cleats",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:33:03.669Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T18:20:28.344Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:sports:in ncaa athletics student athletes are often choosing deal over degree andscape",
       "item": {
-        "id": "brave-sec-1774971183669-1",
+        "id": "brave-sec-1774981228348-2",
         "title": "In NCAA athletics, student-athletes are often choosing deal over degree - Andscape",
         "summary": "NIL and the transfer portal have given college athletes newfound power and freedom of movement, but it's often at the detriment of education.",
         "whyItMatters": "",
@@ -6955,7 +7074,7 @@
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T15:33:03.673Z",
+        "discoveredAt": "2026-03-31T18:20:28.351Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:sports",
@@ -6976,11 +7095,19 @@
         "normalizedTitle": "in ncaa athletics student athletes are often choosing deal over degree andscape",
         "canonicalUrl": "https://andscape.com/features/in-ncaa-athletics-student-athletes-are-often-choosing-deal-over-degree",
         "discoveryScore": 13.4,
-        "eventKey": "sports:in ncaa athletics student athletes are often choosing deal over degree andscape"
+        "eventKey": "sports:in ncaa athletics student athletes are often choosing deal over degree andscape",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T15:33:03.673Z",
-      "lastSeenAt": "2026-03-31T15:34:34.918Z",
-      "expiresAt": "2026-04-02T15:34:34.918Z"
+      "discoveredAt": "2026-03-31T18:20:28.351Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     },
     {
       "identityKey": "event:culture:marvel s dark 2 part daredevil replacement is quietly one of its best series to ",
@@ -7105,6 +7232,204 @@
       "discoveredAt": "2026-03-31T15:33:15.957Z",
       "lastSeenAt": "2026-03-31T15:34:34.918Z",
       "expiresAt": "2026-04-02T15:34:34.918Z"
+    },
+    {
+      "identityKey": "event:tech:ai drives software supply chain attacks govinfosecurity",
+      "item": {
+        "id": "brave-sec-1774981216534-4",
+        "title": "AI Drives Software Supply Chain Attacks - GovInfoSecurity",
+        "summary": "AI-driven attacks now reshape software supply chains, as threat actors scale malware injection through CI pipelines and developer access. OpenSourceMalware's Paul",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "15 hours ago",
+        "sourceUrls": [
+          "https://govinfosecurity.com/ai-drives-software-supply-chain-attacks-a-31279"
+        ],
+        "freshness": 7,
+        "urgency": 6,
+        "discoveredAt": "2026-03-31T18:20:16.538Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:tech",
+        "sectionCandidates": [
+          "tech"
+        ],
+        "topicCandidates": [
+          "ai-big-tech"
+        ],
+        "detectedSectionId": "tech",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "ai drives software supply chain attacks govinfosecurity",
+        "canonicalUrl": "https://govinfosecurity.com/ai-drives-software-supply-chain-attacks-a-31279",
+        "discoveryScore": 16.4,
+        "eventKey": "tech:ai drives software supply chain attacks govinfosecurity",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T18:20:16.538Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
+    },
+    {
+      "identityKey": "event:sports:trump administration sues minnesota for allowing trans athletes in girls sports ",
+      "item": {
+        "id": "brave-sec-1774981228353-4",
+        "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports | Trump administration | The Guardian",
+        "summary": "Justice department claims the state is violating Title IX – the federal law that prohibits sex-based discrimination",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "1 day ago",
+        "sourceUrls": [
+          "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration"
+        ],
+        "freshness": 6,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T18:20:28.356Z",
+        "provider": "brave",
+        "trustedSource": true,
+        "discoveryLane": "section:sports",
+        "sectionCandidates": [
+          "sports",
+          "news"
+        ],
+        "topicCandidates": [
+          "athletes-culture"
+        ],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "trump administration sues minnesota for allowing trans athletes in girls sports trump administration the guardian",
+        "canonicalUrl": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+        "discoveryScore": 15.4,
+        "eventKey": "sports:trump administration sues minnesota for allowing trans athletes in girls sports ",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T18:20:28.356Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
+    },
+    {
+      "identityKey": "event:sports:you re nuts which former buckeye should be the ohio state men s basketball gm ya",
+      "item": {
+        "id": "brave-sec-1774981228351-3",
+        "title": "You’re Nuts: Which former Buckeye should be the Ohio State men’s basketball GM? - Yahoo Sports",
+        "summary": "﻿Your (almost) daily dose of good-natured, Ohio State banter.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "1 day ago",
+        "sourceUrls": [
+          "https://sports.yahoo.com/articles/nuts-former-buckeye-ohio-state-173100348.html"
+        ],
+        "freshness": 6,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T18:20:28.353Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:sports",
+        "sectionCandidates": [
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "you re nuts which former buckeye should be the ohio state men s basketball gm yahoo sports",
+        "canonicalUrl": "https://sports.yahoo.com/articles/nuts-former-buckeye-ohio-state-173100348.html",
+        "discoveryScore": 13.4,
+        "eventKey": "sports:you re nuts which former buckeye should be the ohio state men s basketball gm ya",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T18:20:28.353Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
+    },
+    {
+      "identityKey": "event:culture:wake me up when ryan coogler s x files reboot premieres",
+      "item": {
+        "id": "brave-sec-1774981234419-0",
+        "title": "Wake Me Up When Ryan Coogler's 'X-Files' Reboot Premieres",
+        "summary": "Ryan Coogler’s 'X-Files' project already feels like one of TV’s most intriguing revivals. Here’s why the franchise is worth getting excited about again.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "1 day ago",
+        "sourceUrls": [
+          "https://www.esquire.com/uk/culture/tv/a70883021/ryan-coogler-x-files-reboot/"
+        ],
+        "freshness": 6,
+        "urgency": 4,
+        "discoveredAt": "2026-03-31T18:20:34.422Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:culture",
+        "sectionCandidates": [
+          "culture"
+        ],
+        "topicCandidates": [
+          "film-tv"
+        ],
+        "detectedSectionId": "culture",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "wake me up when ryan coogler s x files reboot premieres",
+        "canonicalUrl": "https://www.esquire.com/uk/culture/tv/a70883021/ryan-coogler-x-files-reboot/",
+        "discoveryScore": 13.4,
+        "eventKey": "culture:wake me up when ryan coogler s x files reboot premieres",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-03-31T18:20:34.422Z",
+      "lastSeenAt": "2026-03-31T18:21:53.396Z",
+      "expiresAt": "2026-04-02T18:21:53.396Z"
     }
   ]
 }

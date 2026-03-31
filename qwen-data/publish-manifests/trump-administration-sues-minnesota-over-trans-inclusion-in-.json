@@ -1,0 +1,114 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-31T18:22:29.253Z",
+  "event_id": "evt-2026-03-31-sports-general-global",
+  "cluster_id": "evt-2026-03-31-sports-general-global",
+  "article_type": "report",
+  "title": "Trump administration sues Minnesota over trans inclusion in girls’ sports",
+  "slug": "trump-administration-sues-minnesota-over-trans-inclusion-in-",
+  "canonical_slug": "2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in",
+  "expected_url": "/article/2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in.mdx",
+  "published_at": "2026-03-31T18:22:29.250Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "athletes-culture",
+  "topic_label": "Athletes & Culture",
+  "subsection": "Athletes & Culture",
+  "topics": [
+    "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+    "Athletes & Culture"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/29702008/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/29702008/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/mississippi-river-bridge-at-sunset-29702008/",
+    "asset_key": "pexels:29702008",
+    "alt_text": "Beautiful sunset view of the bridge over the Mississippi River in Wabasha, Minnesota.",
+    "selection_mode": "provider_download_new:pexels:acceptable",
+    "query_used": "Minnesota portrait",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Athletes & Culture",
+    "Trans Athlete Policy"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+        "url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Trans Day of Visibility basketball tournament creates space for trans athletes amid international sports bans",
+        "url": "https://chicago.suntimes.com/lgbtq/2026/03/29/basketball-tournament-makes-space-for-trans-athletes-amid-international-sports-bans",
+        "domain": "chicago.suntimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "athletes-culture",
+          "label": "Athletes & Culture",
+          "type": "topic"
+        },
+        {
+          "slug": "trans-athlete-policy",
+          "label": "Trans Athlete Policy",
+          "type": "theme"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "athletes-culture",
+        "topic_label": "Athletes & Culture",
+        "supported": true,
+        "matched_aliases": [
+          "athletes",
+          "athlete"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Minnesota portrait",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "minnesota"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T15:35:19.522Z",
+  "updatedAt": "2026-03-31T18:22:29.275Z",
   "items": [
     {
       "identityKey": "cluster:evt-2026-03-28-sports-general-global",
@@ -163,6 +163,46 @@
       "lastSelectedAt": "2026-03-31T15:34:57.571Z",
       "lastPublishedAt": "2026-03-31T15:34:57.571Z",
       "publishedSlug": "2026-03-31-vermont-defends-climate-superfund-law-against-trump-challeng"
+    },
+    {
+      "identityKey": "cluster:evt-2026-03-31-sports-general-global",
+      "briefId": "evt-2026-03-31-sports-general-global",
+      "title": "Trump administration sues Minnesota for allowing trans athletes in girls’ sports",
+      "normalizedTitle": "trump administration sues minnesota allowing trans athletes in girls sports",
+      "section_id": "sports",
+      "topic_id": "transfers-business",
+      "articleType": "report",
+      "selectionOrigin": "pool",
+      "poolIdentityKey": "cluster:evt-2026-03-31-sports-general-global",
+      "rank": 1,
+      "score": 53.9,
+      "scoreNotes": [
+        "section_penalty:4",
+        "topic_penalty:23",
+        "region_penalty:42",
+        "cluster_repeat:1",
+        "entity_penalty:27",
+        "domains:2",
+        "consistency:5",
+        "core:2",
+        "supporting:0"
+      ],
+      "sourceCount": 2,
+      "uniqueDomains": 2,
+      "directEventSourceCount": 2,
+      "independentEventDomains": 2,
+      "gateDecision": "PASS",
+      "gateNotes": [
+        "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+        "Role-aware one-event source-pack gate passed"
+      ],
+      "discoveredAt": "2026-03-31T18:20:28.356Z",
+      "firstQueuedAt": "2026-03-31T18:21:53.880Z",
+      "lastQueuedAt": "2026-03-31T18:22:29.262Z",
+      "status": "published",
+      "lastSelectedAt": "2026-03-31T18:22:29.262Z",
+      "lastPublishedAt": "2026-03-31T18:22:29.262Z",
+      "publishedSlug": "2026-03-31-trump-administration-sues-minnesota-over-trans-inclusion-in"
     },
     {
       "identityKey": "cluster:evt-2026-03-31-crypto-bitcoin-general-global-nfl",
