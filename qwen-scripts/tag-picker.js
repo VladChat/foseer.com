@@ -747,15 +747,7 @@ export function pickArticleTags(context = {}) {
 
   if (!hasAnyNonTopicTag(deduped)) {
     const added = pushFirstMatchingSelection(deduped, nonTopicFallbackPool, (item) => String(item?.type || '').toLowerCase() !== 'topic');
-    if (!added && topicId) {
-      const topicLinkedTheme = (registry.themeTagSlugsByTopicId?.[topicId] || [])
-        .map((slug) => registry.bySlug?.[slug])
-        .find((tag) => tag && String(tag.type || '').toLowerCase() !== 'topic');
-      if (topicLinkedTheme) {
-        deduped.push(buildSelectionItem(topicLinkedTheme, 5, 'Topic-linked non-topic fallback for sparse evidence', null, true));
-      }
-    }
-    if (!hasAnyNonTopicTag(deduped)) warnings.push('Missing non-topic evidence tag (entity/theme/geography/format)');
+    if (!added) warnings.push('Missing non-topic evidence tag (entity/theme/geography/format)');
   }
 
   if (deduped.length < MIN_CANONICAL_TAGS) {

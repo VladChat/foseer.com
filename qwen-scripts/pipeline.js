@@ -619,16 +619,22 @@ export async function runEditorialPipeline(options = {}) {
     }
     const tagValidation = validateTagSelection(canonicalPayload?.tagging || {});
     const rawTagErrors = Array.isArray(tagValidation.errors) ? tagValidation.errors : [];
-    const nonThinTagErrors = rawTagErrors.filter((message) => String(message || '').trim() !== 'Fewer than 3 canonical tags');
-    const onlyThinTagError = rawTagErrors.length > 0 && nonThinTagErrors.length === 0;
+    const softPreDraftTagErrors = new Set([
+      'Fewer than 3 canonical tags',
+      'Fewer than 2 canonical tags',
+      'Canonical tag set is missing required non-topic evidence tag',
+    ]);
+    const softTagErrors = rawTagErrors.filter((message) => softPreDraftTagErrors.has(String(message || '').trim()));
+    const hardTagErrors = rawTagErrors.filter((message) => !softPreDraftTagErrors.has(String(message || '').trim()));
+    const onlySoftTagErrors = rawTagErrors.length > 0 && hardTagErrors.length === 0;
     const hasPlacementLock = Boolean(canonicalPayload?.placement?.section_id && canonicalPayload?.placement?.topic_id);
 
     const rejectionReasons = [];
     if (!hasPlacementLock) {
       rejectionReasons.push('Missing canonical section/topic lock from source-pack evidence');
     }
-    if (nonThinTagErrors.length > 0) {
-      rejectionReasons.push(`Canonical tags invalid before writing: ${nonThinTagErrors.join('; ')}`);
+    if (hardTagErrors.length > 0) {
+      rejectionReasons.push(`Canonical tags invalid before writing: ${hardTagErrors.join('; ')}`);
     }
 
     const canonicalTags = Array.isArray(canonicalPayload?.tagging?.tags) ? canonicalPayload.tagging.tags : [];
@@ -646,8 +652,8 @@ export async function runEditorialPipeline(options = {}) {
         topic_id: canonicalPayload?.placement?.topic_id || null,
         tags: canonicalTags,
         tag_slugs: canonicalSlugs,
-        thin_tag_set_before_draft: onlyThinTagError,
-        warnings: [...(tagValidation.warnings || []), ...placementWarnings],
+        thin_tag_set_before_draft: onlySoftTagErrors,
+        warnings: [...(tagValidation.warnings || []), ...softTagErrors, ...placementWarnings],
       },
     });
 
@@ -657,12 +663,16 @@ export async function runEditorialPipeline(options = {}) {
       continue;
     }
 
-    if (onlyThinTagError) {
-      console.log(`[pipeline] PRE-DRAFT LOCK: WARN :: ${articleLabel} :: Canonical tag set is thin before drafting (will re-validate after draft)`);
+    if (onlySoftTagErrors) {
+      console.log(`[pipeline] PRE-DRAFT LOCK: WARN :: ${articleLabel} :: ${softTagErrors.join('; ')} (will re-validate after draft)`);
       const existingWarnings = Array.isArray(canonicalPayload?.tagging?.warnings) ? canonicalPayload.tagging.warnings : [];
       canonicalPayload.tagging = {
         ...(canonicalPayload.tagging || {}),
-        warnings: Array.from(new Set([...existingWarnings, 'Canonical tag set is thin before drafting; awaiting post-draft enrichment'])),
+        warnings: Array.from(new Set([
+          ...existingWarnings,
+          ...softTagErrors,
+          'Canonical tag evidence is sparse before drafting; awaiting post-draft enrichment',
+        ])),
       };
     }
     if (placementWarnings.length > 0) {
