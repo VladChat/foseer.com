@@ -25,6 +25,7 @@
     "qwen:backfill-taxonomy": "node qwen-scripts/backfill-article-taxonomy.js",
     "qwen:replace-duplicate-images": "node qwen-scripts/replace-duplicate-images.js",
     "qwen:backfill-image-metadata": "node qwen-scripts/backfill-image-metadata.js",
+    "qwen:backfill-fallback-images": "node qwen-scripts/backfill-fallback-images.js",
     "qwen:build-seed-cache": "node qwen-scripts/build-seed-cache.js"
   },
   "dependencies": {
