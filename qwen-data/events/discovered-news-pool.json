@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T21:42:08.011Z",
+  "updatedAt": "2026-04-01T12:08:59.588Z",
   "items": [
     {
       "identityKey": "event:news:sustainable business news latest eco headlines reuters",
@@ -237,19 +237,19 @@
     {
       "identityKey": "event:news:ukhotviews latest tech news views",
       "item": {
-        "id": "brave-sec-1774993241577-4",
+        "id": "brave-sec-1775045282190-1",
         "title": "UKHotViews - Latest Tech News & Views",
         "summary": "Bringing you opinionated, authoritative research & analysis on the UK technology scene.",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "1 day ago",
+        "when": "2 days ago",
         "sourceUrls": [
           "https://www.techmarketview.com/ukhotviews/"
         ],
-        "freshness": 6,
+        "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T21:40:41.579Z",
+        "discoveredAt": "2026-04-01T12:08:02.192Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -268,7 +268,7 @@
         "article_likelihood": 7,
         "normalizedTitle": "ukhotviews latest tech news views",
         "canonicalUrl": "https://www.techmarketview.com/ukhotviews/",
-        "discoveryScore": 12.8,
+        "discoveryScore": 11.8,
         "targetedCoverage": false,
         "eventKey": "news:ukhotviews latest tech news views",
         "signalSpecificityScore": 6,
@@ -279,54 +279,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:40:41.579Z",
-      "lastSeenAt": "2026-03-31T21:41:43.161Z",
-      "expiresAt": "2026-04-02T21:41:43.161Z"
-    },
-    {
-      "identityKey": "event:tech:5 things to know before the market opens friday cnbc",
-      "item": {
-        "id": "google-sec-1774821743289-4",
-        "title": "5 things to know before the market opens Friday - CNBC",
-        "summary": "1 day ago ... While the Dow Jones Industrial Average is on track to break a weekly losing streak, the S&P 500 is set to record its longest weekly negative run since 2022.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "2026-03-27T12:14:18+0000",
-        "sourceUrls": [
-          "https://www.cnbc.com/2026/03/27/5-things-to-know-before-the-market-opens.html"
-        ],
-        "freshness": 3,
-        "urgency": 4,
-        "discoveredAt": "2026-03-29T22:02:23.292Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "markets",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "5 things to know before the market opens friday cnbc",
-        "canonicalUrl": "https://www.cnbc.com/2026/03/27/5-things-to-know-before-the-market-opens.html",
-        "discoveryScore": 12.6,
-        "eventKey": "tech:5 things to know before the market opens friday cnbc"
-      },
-      "discoveredAt": "2026-03-29T22:02:23.292Z",
-      "lastSeenAt": "2026-03-29T22:02:23.306Z",
-      "expiresAt": "2026-03-31T22:02:23.305Z"
+      "discoveredAt": "2026-04-01T12:08:02.192Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:news:ofcom to investigate complaints of climate change denial watts up with that",
       "item": {
-        "id": "brave-sec-1774993259516-0",
+        "id": "brave-sec-1775045270420-0",
         "title": "Ofcom to investigate complaints of climate change denial – Watts Up With That?",
         "summary": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
         "whyItMatters": "",
@@ -338,7 +298,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T21:40:59.520Z",
+        "discoveredAt": "2026-04-01T12:07:50.423Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -370,9 +330,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:40:59.520Z",
-      "lastSeenAt": "2026-03-31T21:41:43.161Z",
-      "expiresAt": "2026-04-02T21:41:43.161Z"
+      "discoveredAt": "2026-04-01T12:07:50.423Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:medical-research:quantum biopharma s 2025 audited year end financial results",
@@ -464,7 +424,7 @@
     {
       "identityKey": "event:sports:casemiro not thinking about reversing manchester united decision",
       "item": {
-        "id": "google-sec-1774993265481-3",
+        "id": "google-sec-1775045294238-3",
         "title": "Casemiro not thinking about reversing Manchester United decision",
         "summary": "2 days ago ... The midfielder confirmed his intention to leave the club on January 22, but has seen a recent upturn in form under Michael Carrick.",
         "whyItMatters": "",
@@ -476,7 +436,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T21:41:05.484Z",
+        "discoveredAt": "2026-04-01T12:08:14.241Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -505,9 +465,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:05.484Z",
-      "lastSeenAt": "2026-03-31T21:41:43.161Z",
-      "expiresAt": "2026-04-02T21:41:43.161Z"
+      "discoveredAt": "2026-04-01T12:08:14.241Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:business:bloomberg businessweek",
@@ -660,7 +620,7 @@
     {
       "identityKey": "event:companies-deals:travel and vacation providers stocks q4 earnings hyatt hotels",
       "item": {
-        "id": "google-sec-1774993304325-1",
+        "id": "google-sec-1775045300480-1",
         "title": "Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...",
         "summary": "2 days ago ... The Consumer Discretionary sector, by definition, is made up of companies selling non-essential goods and services. When economic conditions deteriorate or ...",
         "whyItMatters": "",
@@ -672,7 +632,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T21:41:44.328Z",
+        "discoveredAt": "2026-04-01T12:08:20.483Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:business",
@@ -706,9 +666,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:44.328Z",
-      "lastSeenAt": "2026-03-31T21:42:07.400Z",
-      "expiresAt": "2026-04-02T21:42:07.400Z"
+      "discoveredAt": "2026-04-01T12:08:20.483Z",
+      "lastSeenAt": "2026-04-01T12:08:59.588Z",
+      "expiresAt": "2026-04-03T12:08:59.588Z"
     },
     {
       "identityKey": "event:business:q4 consumer discretionary casino operator earnings penn",
@@ -758,7 +718,7 @@
     {
       "identityKey": "event:business:spotting winners hilton nyse hlt and consumer discretionary",
       "item": {
-        "id": "google-sec-1774993304328-2",
+        "id": "google-sec-1775045300483-2",
         "title": "Spotting Winners: Hilton (NYSE:HLT) And Consumer Discretionary",
         "summary": "2 days ago ... The 19 consumer discretionary - travel and vacation providers stocks we track reported a mixed Q4. As a group, revenues beat analysts' consensus estimates by ...",
         "whyItMatters": "",
@@ -770,7 +730,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T21:41:44.331Z",
+        "discoveredAt": "2026-04-01T12:08:20.485Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:business",
@@ -803,9 +763,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:44.331Z",
-      "lastSeenAt": "2026-03-31T21:42:07.400Z",
-      "expiresAt": "2026-04-02T21:42:07.400Z"
+      "discoveredAt": "2026-04-01T12:08:20.485Z",
+      "lastSeenAt": "2026-04-01T12:08:59.588Z",
+      "expiresAt": "2026-04-03T12:08:59.588Z"
     },
     {
       "identityKey": "event:business:finance economics latest news and analysis from the economist",
@@ -951,7 +911,7 @@
     {
       "identityKey": "event:sports:uswnt s catarina macario joins san diego wave from chelsea",
       "item": {
-        "id": "google-sec-1774993265495-8",
+        "id": "google-sec-1775045294251-8",
         "title": "USWNT's Catarina Macario joins San Diego Wave from Chelsea",
         "summary": "1 day ago ... San Diego Wave FC has announced the signing of U.S. women's national team striker Catarina Macario from Chelsea. Macario, who was the USWNT's top goal ...",
         "whyItMatters": "",
@@ -963,7 +923,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T21:41:05.497Z",
+        "discoveredAt": "2026-04-01T12:08:14.254Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -992,9 +952,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:05.497Z",
-      "lastSeenAt": "2026-03-31T21:41:43.161Z",
-      "expiresAt": "2026-04-02T21:41:43.161Z"
+      "discoveredAt": "2026-04-01T12:08:14.254Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:news:environmental climate news reuters",
@@ -1307,7 +1267,7 @@
     {
       "identityKey": "event:news:in the age of misinformation climate literacy matters more than ever honolulu ci",
       "item": {
-        "id": "brave-sec-1774993259524-3",
+        "id": "brave-sec-1775045270428-3",
         "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever - Honolulu Civil Beat",
         "summary": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
         "whyItMatters": "",
@@ -1319,7 +1279,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T21:40:59.527Z",
+        "discoveredAt": "2026-04-01T12:07:50.431Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -1351,9 +1311,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:40:59.527Z",
-      "lastSeenAt": "2026-03-31T21:41:43.161Z",
-      "expiresAt": "2026-04-02T21:41:43.161Z"
+      "discoveredAt": "2026-04-01T12:07:50.431Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:news:science nbc news",
@@ -1448,48 +1408,6 @@
       "discoveredAt": "2026-03-31T19:59:07.951Z",
       "lastSeenAt": "2026-03-31T19:59:41.819Z",
       "expiresAt": "2026-04-02T19:59:41.819Z"
-    },
-    {
-      "identityKey": "event:tech:chinese universities with military links bought super micro servers",
-      "item": {
-        "id": "google-sec-1774821743278-1",
-        "title": "Chinese universities with military links bought Super Micro servers ...",
-        "summary": "2 days ago ... Four Chinese ​universities, including two linked to the People's Liberation Army, bought Super Micro Computer servers with restricted AI chips over the past ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "2026-03-27T06:16:49.947Z",
-        "sourceUrls": [
-          "https://www.reuters.com/world/china/chinese-universities-with-military-links-bought-super-micro-servers-with-2026-03-27/"
-        ],
-        "freshness": 3,
-        "urgency": 4,
-        "discoveredAt": "2026-03-29T22:02:23.284Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "china",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "chinese universities with military links bought super micro servers",
-        "canonicalUrl": "https://www.reuters.com/world/china/chinese-universities-with-military-links-bought-super-micro-servers-with-2026-03-27/",
-        "discoveryScore": 12.4,
-        "eventKey": "tech:chinese universities with military links bought super micro servers"
-      },
-      "discoveredAt": "2026-03-29T22:02:23.284Z",
-      "lastSeenAt": "2026-03-29T22:02:23.306Z",
-      "expiresAt": "2026-03-31T22:02:23.305Z"
     },
     {
       "identityKey": "event:tech:trump signs order to pay tsa workers wsj",
@@ -1935,49 +1853,6 @@
       "expiresAt": "2026-04-02T19:54:25.618Z"
     },
     {
-      "identityKey": "event:news:nobel prize winners face new loss in bid for us crispr patents",
-      "item": {
-        "id": "google-sec-1774824213296-8",
-        "title": "Nobel Prize winners face new loss in bid for US CRISPR patents",
-        "summary": "1 day ago ... CRISPR enables scientists to use biological \"scissors\" to edit DNA. The technology is being tested in clinical trials to help cure diseases caused by genetic ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "2026-03-27T15:43:19.798Z",
-        "sourceUrls": [
-          "https://www.reuters.com/legal/litigation/nobel-prize-winners-face-new-loss-bid-us-crispr-patents-2026-03-27/"
-        ],
-        "freshness": 3,
-        "urgency": 4,
-        "discoveredAt": "2026-03-29T22:43:33.299Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "news",
-          "health"
-        ],
-        "topicCandidates": [
-          "law-crime"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "nobel prize winners face new loss in bid for us crispr patents",
-        "canonicalUrl": "https://www.reuters.com/legal/litigation/nobel-prize-winners-face-new-loss-bid-us-crispr-patents-2026-03-27/",
-        "discoveryScore": 12.4,
-        "eventKey": "news:nobel prize winners face new loss in bid for us crispr patents"
-      },
-      "discoveredAt": "2026-03-29T22:43:33.299Z",
-      "lastSeenAt": "2026-03-29T22:43:33.373Z",
-      "expiresAt": "2026-03-31T22:43:33.372Z"
-    },
-    {
       "identityKey": "event:health:maha fans want action trump hasn t delivered politico",
       "item": {
         "id": "google-sec-1774986865264-3",
@@ -2247,7 +2122,7 @@
     {
       "identityKey": "event:sports:manchester united transfers zirkzee rashford and should the club",
       "item": {
-        "id": "google-sec-1774993265487-5",
+        "id": "google-sec-1775045294243-5",
         "title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
         "summary": "2 days ago ... They have much more attacking potency. I still think that when you then add in Champions League football, when you think of potentially Joshua Zirkzee departing ...",
         "whyItMatters": "",
@@ -2259,7 +2134,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T21:41:05.489Z",
+        "discoveredAt": "2026-04-01T12:08:14.246Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -2291,14 +2166,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:05.489Z",
-      "lastSeenAt": "2026-03-31T21:41:43.161Z",
-      "expiresAt": "2026-04-02T21:41:43.161Z"
+      "discoveredAt": "2026-04-01T12:08:14.246Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:sports:tiger woods history of car crashes and injuries what to know after",
       "item": {
-        "id": "google-sec-1774993265473-0",
+        "id": "google-sec-1775045294229-0",
         "title": "Tiger Woods' history of car crashes and injuries: What to know after ...",
         "summary": "1 day ago ... He was also charged with refusal to submit to a lawful test, Budensiek said. Both charges are misdemeanors. The crash is the fourth major incident involving ...",
         "whyItMatters": "",
@@ -2310,7 +2185,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T21:41:05.476Z",
+        "discoveredAt": "2026-04-01T12:08:14.232Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -2339,14 +2214,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:05.476Z",
-      "lastSeenAt": "2026-03-31T21:41:43.161Z",
-      "expiresAt": "2026-04-02T21:41:43.161Z"
+      "discoveredAt": "2026-04-01T12:08:14.232Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:sports:tiger woods arrested charged with dui after rollover crash in florida",
       "item": {
-        "id": "google-sec-1774993265484-4",
+        "id": "google-sec-1775045294241-4",
         "title": "Tiger Woods arrested, charged with DUI after rollover crash in Florida",
         "summary": "12 hours ago ... But it doesn't matter who you are; if you break the law, we're going to follow the law. It's a really easy path to take. As far as being in the jail, we're ...",
         "whyItMatters": "",
@@ -2358,7 +2233,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T21:41:05.487Z",
+        "discoveredAt": "2026-04-01T12:08:14.243Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -2387,9 +2262,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:05.487Z",
-      "lastSeenAt": "2026-03-31T21:41:43.161Z",
-      "expiresAt": "2026-04-02T21:41:43.161Z"
+      "discoveredAt": "2026-04-01T12:08:14.243Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:transfers-business:athletes train for almost every scenario but there s a stressor sports",
@@ -2438,7 +2313,7 @@
     {
       "identityKey": "event:business:radnet nasdaq rdnt q4 earnings the globe and mail",
       "item": {
-        "id": "google-sec-1774993304336-5",
+        "id": "google-sec-1775045300490-5",
         "title": "RadNet (NASDAQ:RDNT) Q4 Earnings - The Globe and Mail",
         "summary": "2 days ago ... The business had a very strong quarter with full-year revenue guidance exceeding analysts' expectations and a decent beat of analysts' revenue estimates. Quest ...",
         "whyItMatters": "",
@@ -2450,7 +2325,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T21:41:44.338Z",
+        "discoveredAt": "2026-04-01T12:08:20.493Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:business",
@@ -2483,14 +2358,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:44.338Z",
-      "lastSeenAt": "2026-03-31T21:42:07.400Z",
-      "expiresAt": "2026-04-02T21:42:07.400Z"
+      "discoveredAt": "2026-04-01T12:08:20.493Z",
+      "lastSeenAt": "2026-04-01T12:08:59.588Z",
+      "expiresAt": "2026-04-03T12:08:59.588Z"
     },
     {
       "identityKey": "event:sports:are these manchester united s summer transfer priorities",
       "item": {
-        "id": "google-sec-1774993265489-6",
+        "id": "google-sec-1775045294246-6",
         "title": "Are these Manchester United's summer transfer priorities?",
         "summary": "19 hours ago ... Senne Lammens' competition. Now let's take a closer look at each of those points. Casemiro, Mark II. Speaking to The Athletic's Adam Crafton, Casemiro ...",
         "whyItMatters": "",
@@ -2502,7 +2377,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T21:41:05.492Z",
+        "discoveredAt": "2026-04-01T12:08:14.248Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -2531,14 +2406,14 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:05.492Z",
-      "lastSeenAt": "2026-03-31T21:41:43.161Z",
-      "expiresAt": "2026-04-02T21:41:43.161Z"
+      "discoveredAt": "2026-04-01T12:08:14.248Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:sports:unc star caleb wilson a projected top 5 pick declares for nba draft",
       "item": {
-        "id": "google-sec-1774993265497-9",
+        "id": "google-sec-1775045294254-9",
         "title": "UNC star Caleb Wilson, a projected top-5 pick, declares for NBA Draft",
         "summary": "24 hours ago ... 8 this season for the Tar Heels.) Top League Content. The Athletic's Sam Vecenie's latest draft model has Wilson being drafted at No. 4 by the Indiana Pacers ...",
         "whyItMatters": "",
@@ -2554,7 +2429,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T21:41:05.500Z",
+        "discoveredAt": "2026-04-01T12:08:14.257Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:sports",
@@ -2583,9 +2458,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:05.500Z",
-      "lastSeenAt": "2026-03-31T21:41:43.161Z",
-      "expiresAt": "2026-04-02T21:41:43.161Z"
+      "discoveredAt": "2026-04-01T12:08:14.257Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:sports:women s march madness 2026 scores live updates louisville vs",
@@ -2630,7 +2505,7 @@
     {
       "identityKey": "event:news:bnzi stock quote price and forecast cnn",
       "item": {
-        "id": "google-sec-1774993304334-4",
+        "id": "google-sec-1775045300488-4",
         "title": "BNZI Stock Quote Price and Forecast - CNN",
         "summary": "2 days ago ... View Banzai International, Inc. Class A BNZI stock quote prices, financial information, real-time forecasts, and company news from CNN.",
         "whyItMatters": "",
@@ -2642,7 +2517,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T21:41:44.336Z",
+        "discoveredAt": "2026-04-01T12:08:20.490Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:business",
@@ -2674,9 +2549,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:44.336Z",
-      "lastSeenAt": "2026-03-31T21:42:07.400Z",
-      "expiresAt": "2026-04-02T21:42:07.400Z"
+      "discoveredAt": "2026-04-01T12:08:20.490Z",
+      "lastSeenAt": "2026-04-01T12:08:59.588Z",
+      "expiresAt": "2026-04-03T12:08:59.588Z"
     },
     {
       "identityKey": "event:culture:alexander kluge 94 revolutionary filmmaker in postwar germany",
@@ -2721,7 +2596,7 @@
     {
       "identityKey": "event:sports:the leftist no kings protest is in several cities today",
       "item": {
-        "id": "gdelt-sec-1774914933309-0",
+        "id": "gdelt-sec-1775045294258-0",
         "title": "The Leftist No Kings Protest Is in Several Cities Today",
         "summary": "",
         "whyItMatters": "",
@@ -2733,7 +2608,7 @@
         ],
         "freshness": 4,
         "urgency": 5,
-        "discoveredAt": "2026-03-30T23:55:33.312Z",
+        "discoveredAt": "2026-04-01T12:08:14.261Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -2752,16 +2627,24 @@
         "normalizedTitle": "the leftist no kings protest is in several cities today",
         "canonicalUrl": "https://www.independentsentinel.com/the-leftist-no-kings-protest-is-in-several-cities-today/",
         "discoveryScore": 11.4,
-        "eventKey": "sports:the leftist no kings protest is in several cities today"
+        "targetedCoverage": false,
+        "eventKey": "sports:the leftist no kings protest is in several cities today",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:55:33.312Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
+      "discoveredAt": "2026-04-01T12:08:14.261Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:health:jim cramer on hinge health this is actually a really good time to buy it",
       "item": {
-        "id": "gdelt-sec-1774914933312-1",
+        "id": "gdelt-sec-1775045294261-1",
         "title": "Jim Cramer on Hinge Health : This Is Actually a Really Good Time to Buy It",
         "summary": "",
         "whyItMatters": "",
@@ -2773,7 +2656,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:33.314Z",
+        "discoveredAt": "2026-04-01T12:08:14.264Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -2796,16 +2679,25 @@
         "normalizedTitle": "jim cramer on hinge health this is actually a really good time to buy it",
         "canonicalUrl": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-hinge-health-actually-180120187.html",
         "discoveryScore": 11.4,
-        "eventKey": "health:jim cramer on hinge health this is actually a really good time to buy it"
+        "targetedCoverage": false,
+        "eventKey": "health:jim cramer on hinge health this is actually a really good time to buy it",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:55:33.314Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
+      "discoveredAt": "2026-04-01T12:08:14.264Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:news:talent from across country gathers at iffd tourism minister kapil mishra attends",
       "item": {
-        "id": "gdelt-sec-1774914933318-3",
+        "id": "gdelt-sec-1775045294268-3",
         "title": "Talent from across country gathers at IFFD : Tourism Minister Kapil Mishra attends festival",
         "summary": "",
         "whyItMatters": "",
@@ -2817,7 +2709,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:33.321Z",
+        "discoveredAt": "2026-04-01T12:08:14.271Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -2837,16 +2729,24 @@
         "normalizedTitle": "talent from across country gathers at iffd tourism minister kapil mishra attends festival",
         "canonicalUrl": "http://www.myanmarnews.net/news/278950279/talent-from-across-country-gathers-at-iffd-tourism-minister-kapil-mishra-attends-festival",
         "discoveryScore": 11.4,
-        "eventKey": "news:talent from across country gathers at iffd tourism minister kapil mishra attends"
+        "targetedCoverage": false,
+        "eventKey": "news:talent from across country gathers at iffd tourism minister kapil mishra attends",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:55:33.321Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
+      "discoveredAt": "2026-04-01T12:08:14.271Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:news:16 year old sensations ski and snowboard club vail teammates enjoy breakout firs",
       "item": {
-        "id": "gdelt-sec-1774914933321-4",
+        "id": "gdelt-sec-1775045294271-4",
         "title": "16 - year - old sensations : Ski and Snowboard Club Vail teammates enjoy breakout first - year FIS season",
         "summary": "",
         "whyItMatters": "",
@@ -2858,7 +2758,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:33.325Z",
+        "discoveredAt": "2026-04-01T12:08:14.275Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -2878,16 +2778,24 @@
         "normalizedTitle": "16 year old sensations ski and snowboard club vail teammates enjoy breakout first year fis season",
         "canonicalUrl": "https://www.vaildaily.com/news/16-year-old-sensations-ski-and-snowboard-club-vail-teammates-enjoy-breakout-first-year-fis-season/",
         "discoveryScore": 11.4,
-        "eventKey": "news:16 year old sensations ski and snowboard club vail teammates enjoy breakout firs"
+        "targetedCoverage": false,
+        "eventKey": "news:16 year old sensations ski and snowboard club vail teammates enjoy breakout firs",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:55:33.325Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
+      "discoveredAt": "2026-04-01T12:08:14.275Z",
+      "lastSeenAt": "2026-04-01T12:08:14.302Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:news:man is arrested after multiple people are hit by a car in city centre with some ",
       "item": {
-        "id": "gdelt-sec-1774914933325-5",
+        "id": "gdelt-sec-1775045294275-5",
         "title": "Man is arrested after multiple people are hit by a car in city centre with some seriously injured",
         "summary": "",
         "whyItMatters": "",
@@ -2899,7 +2807,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:33.327Z",
+        "discoveredAt": "2026-04-01T12:08:14.277Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -2919,16 +2827,24 @@
         "normalizedTitle": "man is arrested after multiple people are hit by a car in city centre with some seriously injured",
         "canonicalUrl": "https://www.dailymail.co.uk/news/article-15688329/man-arrested-multiple-people-hit-car-city-centre-seriously-injured.html",
         "discoveryScore": 11.4,
-        "eventKey": "news:man is arrested after multiple people are hit by a car in city centre with some "
+        "targetedCoverage": false,
+        "eventKey": "news:man is arrested after multiple people are hit by a car in city centre with some ",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:55:33.327Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
+      "discoveredAt": "2026-04-01T12:08:14.277Z",
+      "lastSeenAt": "2026-04-01T12:08:14.302Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:news:the fake political news pages fooling countless aussies",
       "item": {
-        "id": "gdelt-sec-1774914933327-6",
+        "id": "gdelt-sec-1775045294277-6",
         "title": "The fake political news pages fooling countless Aussies",
         "summary": "",
         "whyItMatters": "",
@@ -2940,7 +2856,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:33.329Z",
+        "discoveredAt": "2026-04-01T12:08:14.279Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -2960,11 +2876,19 @@
         "normalizedTitle": "the fake political news pages fooling countless aussies",
         "canonicalUrl": "https://www.merimbulanewsweekly.com.au/story/9209421/the-fake-political-news-pages-fooling-countless-aussies/",
         "discoveryScore": 11.4,
-        "eventKey": "news:the fake political news pages fooling countless aussies"
+        "targetedCoverage": false,
+        "eventKey": "news:the fake political news pages fooling countless aussies",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:55:33.329Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
+      "discoveredAt": "2026-04-01T12:08:14.279Z",
+      "lastSeenAt": "2026-04-01T12:08:14.302Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:business:jim cramer on paychex this is a stock that strangely has been crushed by ai disr",
@@ -3014,7 +2938,7 @@
     {
       "identityKey": "event:sports:youre a presenter now not a labour minister ed balls is told after on air dust u",
       "item": {
-        "id": "gdelt-sec-1774914933314-2",
+        "id": "gdelt-sec-1775045294264-2",
         "title": "Youre a presenter now , not a Labour minister Ed Balls is told after on - air dust - up with young Jewish campaigner ove",
         "summary": "",
         "whyItMatters": "",
@@ -3026,7 +2950,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:33.318Z",
+        "discoveredAt": "2026-04-01T12:08:14.268Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -3045,16 +2969,24 @@
         "normalizedTitle": "youre a presenter now not a labour minister ed balls is told after on air dust up with young jewish campaigner ove",
         "canonicalUrl": "https://www.dailymail.co.uk/tvshowbiz/article-15688031/ed-balls-good-morning-britain-jewish-campaigner-interview.html",
         "discoveryScore": 10.4,
-        "eventKey": "sports:youre a presenter now not a labour minister ed balls is told after on air dust u"
+        "targetedCoverage": false,
+        "eventKey": "sports:youre a presenter now not a labour minister ed balls is told after on air dust u",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:55:33.318Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
+      "discoveredAt": "2026-04-01T12:08:14.268Z",
+      "lastSeenAt": "2026-04-01T12:08:14.302Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:sports:washington drivers will soon carry blue envelopes here why",
       "item": {
-        "id": "gdelt-sec-1774914933331-8",
+        "id": "gdelt-sec-1775045294281-8",
         "title": "Washington Drivers Will Soon Carry Blue Envelopes Here Why",
         "summary": "",
         "whyItMatters": "",
@@ -3066,7 +2998,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:33.332Z",
+        "discoveredAt": "2026-04-01T12:08:14.282Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -3085,16 +3017,24 @@
         "normalizedTitle": "washington drivers will soon carry blue envelopes here why",
         "canonicalUrl": "https://mega993online.com/ixp/133/p/new-blue-envelope-law-washington-state/",
         "discoveryScore": 10.4,
-        "eventKey": "sports:washington drivers will soon carry blue envelopes here why"
+        "targetedCoverage": false,
+        "eventKey": "sports:washington drivers will soon carry blue envelopes here why",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:55:33.332Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
+      "discoveredAt": "2026-04-01T12:08:14.282Z",
+      "lastSeenAt": "2026-04-01T12:08:14.302Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:sports:jim cramer blesses rigel pharmaceuticals as a spec as it doing better than peopl",
       "item": {
-        "id": "gdelt-sec-1774914933332-9",
+        "id": "gdelt-sec-1775045294282-9",
         "title": "Jim Cramer Blesses Rigel Pharmaceuticals as a Spec as It Doing Better Than People Realize",
         "summary": "",
         "whyItMatters": "",
@@ -3106,7 +3046,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:33.334Z",
+        "discoveredAt": "2026-04-01T12:08:14.284Z",
         "provider": "gdelt",
         "trustedSource": false,
         "discoveryLane": "gdelt:sports",
@@ -3125,11 +3065,19 @@
         "normalizedTitle": "jim cramer blesses rigel pharmaceuticals as a spec as it doing better than people realize",
         "canonicalUrl": "https://finance.yahoo.com/sectors/healthcare/articles/jim-cramer-blesses-rigel-pharmaceuticals-180124928.html",
         "discoveryScore": 10.4,
-        "eventKey": "sports:jim cramer blesses rigel pharmaceuticals as a spec as it doing better than peopl"
+        "targetedCoverage": false,
+        "eventKey": "sports:jim cramer blesses rigel pharmaceuticals as a spec as it doing better than peopl",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-30T23:55:33.334Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
+      "discoveredAt": "2026-04-01T12:08:14.284Z",
+      "lastSeenAt": "2026-04-01T12:08:14.302Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:business:don lemon the new york times",
@@ -3562,9 +3510,9 @@
     {
       "identityKey": "event:us-politics:climate law battle royale politico",
       "item": {
-        "id": "google-sec-1774993304299-3",
+        "id": "google-sec-1775045300461-3",
         "title": "Climate law 'battle royale' - POLITICO",
-        "summary": "1 day ago ... The Democratic Party's embrace of affordability politics is pushing what remains of U.S. climate policy to the brink.",
+        "summary": "2 days ago ... The Democratic Party's embrace of affordability politics is pushing what remains of U.S. climate policy to the brink.",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
@@ -3574,7 +3522,7 @@
         ],
         "freshness": 4,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T21:41:44.301Z",
+        "discoveredAt": "2026-04-01T12:08:20.463Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -3607,9 +3555,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:44.301Z",
-      "lastSeenAt": "2026-03-31T21:42:07.400Z",
-      "expiresAt": "2026-04-02T21:42:07.400Z"
+      "discoveredAt": "2026-04-01T12:08:20.463Z",
+      "lastSeenAt": "2026-04-01T12:08:59.588Z",
+      "expiresAt": "2026-04-03T12:08:59.588Z"
     },
     {
       "identityKey": "event:news:xrp market trends ripple s regulatory milestones in 2026 news and statistics ind",
@@ -6880,19 +6828,19 @@
     {
       "identityKey": "event:cybersecurity:how ai is reshaping the cybersecurity vendor landscape",
       "item": {
-        "id": "brave-sec-1774993241562-1",
+        "id": "brave-sec-1775045282186-0",
         "title": "How AI Is Reshaping the Cybersecurity Vendor Landscape",
         "summary": "The cybersecurity vendor landscape is being rebuilt around AI, and the transformation is moving faster than most organizations are prepared for. Richard Stiennon,",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "19 hours ago",
+        "when": "1 day ago",
         "sourceUrls": [
           "https://govinfosecurity.com/how-ai-reshaping-cybersecurity-vendor-landscape-a-31280"
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T21:40:41.570Z",
+        "discoveredAt": "2026-04-01T12:08:02.190Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -6925,9 +6873,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:40:41.570Z",
-      "lastSeenAt": "2026-03-31T21:41:43.161Z",
-      "expiresAt": "2026-04-02T21:41:43.161Z"
+      "discoveredAt": "2026-04-01T12:08:02.190Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:health:deakin university advances global agenda for affordable health through raah roun",
@@ -7074,9 +7022,9 @@
     {
       "identityKey": "event:news:what s next in the us government shutdown as situation eases at",
       "item": {
-        "id": "google-sec-1774993304310-5",
+        "id": "google-sec-1775045300467-6",
         "title": "What's next in the US government shutdown, as situation eases at ...",
-        "summary": "1 day ago ... Wait times in US airport security queues eased somewhat on Monday after President Donald Trump signed an order instructing his administration to find a way ...",
+        "summary": "2 days ago ... Wait times in US airport security queues eased somewhat on Monday after President Donald Trump signed an order instructing his administration to find a way ...",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
@@ -7086,7 +7034,7 @@
         ],
         "freshness": 4,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T21:41:44.313Z",
+        "discoveredAt": "2026-04-01T12:08:20.469Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -7119,9 +7067,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:44.313Z",
-      "lastSeenAt": "2026-03-31T21:42:07.400Z",
-      "expiresAt": "2026-04-02T21:42:07.400Z"
+      "discoveredAt": "2026-04-01T12:08:20.469Z",
+      "lastSeenAt": "2026-04-01T12:08:59.588Z",
+      "expiresAt": "2026-04-03T12:08:59.588Z"
     },
     {
       "identityKey": "event:news:constantino s sticky ad spending problem politico",
@@ -7222,9 +7170,9 @@
     {
       "identityKey": "event:news:israel passes law to give death penalty to palestinians convicted of",
       "item": {
-        "id": "google-sec-1774993304297-2",
+        "id": "google-sec-1775045300458-2",
         "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
-        "summary": "1 day ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
+        "summary": "2 days ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
         "whyItMatters": "",
         "involvedParties": [
           "israel"
@@ -7236,9 +7184,9 @@
         "sourceUrls": [
           "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists"
         ],
-        "freshness": 6,
+        "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T21:41:44.299Z",
+        "discoveredAt": "2026-04-01T12:08:20.461Z",
         "provider": "google_trusted",
         "trustedSource": true,
         "discoveryLane": "google:news",
@@ -7256,7 +7204,7 @@
         "article_likelihood": 8,
         "normalizedTitle": "israel passes law to give death penalty to palestinians convicted of",
         "canonicalUrl": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
-        "discoveryScore": 14.4,
+        "discoveryScore": 13.4,
         "targetedCoverage": false,
         "eventKey": "news:israel passes law to give death penalty to palestinians convicted of",
         "signalSpecificityScore": 5,
@@ -7267,9 +7215,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T21:41:44.299Z",
-      "lastSeenAt": "2026-03-31T21:42:07.400Z",
-      "expiresAt": "2026-04-02T21:42:07.400Z"
+      "discoveredAt": "2026-04-01T12:08:20.461Z",
+      "lastSeenAt": "2026-04-01T12:08:59.588Z",
+      "expiresAt": "2026-04-03T12:08:59.588Z"
     },
     {
       "identityKey": "event:news:israel passes death penalty law for palestinians convicted of lethal",
@@ -7420,19 +7368,19 @@
     {
       "identityKey": "event:culture:marvel s dark 2 part daredevil replacement is quietly one of its best series to ",
       "item": {
-        "id": "brave-sec-1774987101895-4",
+        "id": "brave-sec-1775045270406-3",
         "title": "Marvel's Dark 2-Part ‘Daredevil’ Replacement Is Quietly One of Its Best Series To Binge",
         "summary": "Jon Bernthal's portrayal of Frank Castle in The Punisher transformed the character into one of Marvel's most compelling antiheroes.",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "20 hours ago",
+        "when": "1 day ago",
         "sourceUrls": [
           "https://collider.com/punisher-marvel-daredevil-born-again-binge/"
         ],
         "freshness": 6,
         "urgency": 4,
-        "discoveredAt": "2026-03-31T19:58:21.897Z",
+        "discoveredAt": "2026-04-01T12:07:50.416Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -7451,6 +7399,7 @@
         "normalizedTitle": "marvel s dark 2 part daredevil replacement is quietly one of its best series to binge",
         "canonicalUrl": "https://collider.com/punisher-marvel-daredevil-born-again-binge/",
         "discoveryScore": 12.4,
+        "targetedCoverage": false,
         "eventKey": "culture:marvel s dark 2 part daredevil replacement is quietly one of its best series to ",
         "signalSpecificityScore": 5,
         "signalSpecificityNotes": [
@@ -7460,9 +7409,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T19:58:21.897Z",
-      "lastSeenAt": "2026-03-31T19:59:07.285Z",
-      "expiresAt": "2026-04-02T19:59:07.284Z"
+      "discoveredAt": "2026-04-01T12:07:50.416Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:news:vermont defends its landmark climate superfund law against trump",
@@ -7551,19 +7500,19 @@
     {
       "identityKey": "event:tech:ai drives software supply chain attacks govinfosecurity",
       "item": {
-        "id": "brave-sec-1774981216534-4",
+        "id": "brave-sec-1775045282192-2",
         "title": "AI Drives Software Supply Chain Attacks - GovInfoSecurity",
         "summary": "AI-driven attacks now reshape software supply chains, as threat actors scale malware injection through CI pipelines and developer access. OpenSourceMalware's Paul",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "15 hours ago",
+        "when": "1 day ago",
         "sourceUrls": [
           "https://govinfosecurity.com/ai-drives-software-supply-chain-attacks-a-31279"
         ],
-        "freshness": 7,
+        "freshness": 6,
         "urgency": 6,
-        "discoveredAt": "2026-03-31T18:20:16.538Z",
+        "discoveredAt": "2026-04-01T12:08:02.196Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:tech",
@@ -7583,7 +7532,8 @@
         "article_likelihood": 8,
         "normalizedTitle": "ai drives software supply chain attacks govinfosecurity",
         "canonicalUrl": "https://govinfosecurity.com/ai-drives-software-supply-chain-attacks-a-31279",
-        "discoveryScore": 16.4,
+        "discoveryScore": 15.4,
+        "targetedCoverage": false,
         "eventKey": "tech:ai drives software supply chain attacks govinfosecurity",
         "signalSpecificityScore": 7,
         "signalSpecificityNotes": [
@@ -7594,9 +7544,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-03-31T18:20:16.538Z",
-      "lastSeenAt": "2026-03-31T18:21:53.396Z",
-      "expiresAt": "2026-04-02T18:21:53.396Z"
+      "discoveredAt": "2026-04-01T12:08:02.196Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
       "identityKey": "event:sports:trump administration sues minnesota for allowing trans athletes in girls sports ",
@@ -8822,6 +8772,762 @@
       "discoveredAt": "2026-03-31T21:42:07.393Z",
       "lastSeenAt": "2026-03-31T21:42:07.400Z",
       "expiresAt": "2026-04-02T21:42:07.400Z"
+    },
+    {
+      "identityKey": "event:culture:culture war eh politico",
+      "item": {
+        "id": "brave-sec-1775045270377-0",
+        "title": "Culture war, eh? - POLITICO",
+        "summary": "Ontario Premier Doug Ford is in the Lone Star state today.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "1 day ago",
+        "sourceUrls": [
+          "https://politico.com/newsletters/canada-playbook/2026/03/31/culture-war-eh-00851519"
+        ],
+        "freshness": 6,
+        "urgency": 5,
+        "discoveredAt": "2026-04-01T12:07:50.396Z",
+        "provider": "brave",
+        "trustedSource": true,
+        "discoveryLane": "section:culture",
+        "sectionCandidates": [
+          "culture"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "culture",
+        "detectedTopicId": null,
+        "region": "canada",
+        "angle": "conflict",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "culture war eh politico",
+        "canonicalUrl": "https://politico.com/newsletters/canada-playbook/2026/03/31/culture-war-eh-00851519",
+        "discoveryScore": 17.6,
+        "targetedCoverage": false,
+        "eventKey": "culture:culture war eh politico",
+        "signalSpecificityScore": 4,
+        "signalSpecificityNotes": [
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:07:50.396Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
+    },
+    {
+      "identityKey": "event:cybersecurity:the new face of threats combating cybersecurity risks in the ai era westham trad",
+      "item": {
+        "id": "brave-sec-1775045282198-4",
+        "title": "The new face of threats: Combating cybersecurity risks in the AI era - Westham Trade",
+        "summary": "AI is transforming how organizations operate and how attackers exploit them.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "16 hours ago",
+        "sourceUrls": [
+          "https://wtrade.com/event/the-new-face-of-threats-combating-cybersecurity-risks-in-the-ai-era"
+        ],
+        "freshness": 7,
+        "urgency": 6,
+        "discoveredAt": "2026-04-01T12:08:02.201Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:tech",
+        "sectionCandidates": [
+          "tech"
+        ],
+        "topicCandidates": [
+          "cybersecurity",
+          "ai-big-tech"
+        ],
+        "detectedSectionId": "tech",
+        "detectedTopicId": "cybersecurity",
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "the new face of threats combating cybersecurity risks in the ai era westham trade",
+        "canonicalUrl": "https://wtrade.com/event/the-new-face-of-threats-combating-cybersecurity-risks-in-the-ai-era",
+        "discoveryScore": 17.4,
+        "targetedCoverage": false,
+        "eventKey": "cybersecurity:the new face of threats combating cybersecurity risks in the ai era westham trad",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:08:02.201Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
+    },
+    {
+      "identityKey": "event:culture:movies and tv shows casting in boulder features santafenewmexican com",
+      "item": {
+        "id": "brave-sec-1775045270416-4",
+        "title": "Movies and TV shows casting in Boulder | Features | santafenewmexican.com",
+        "summary": "Backstage compiled a list of movies and TV shows casting in Boulder.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "3 hours ago",
+        "sourceUrls": [
+          "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-boulder/article_f74af385-63b0-5e28-8b95-8bb2af6b77d1.html"
+        ],
+        "freshness": 9,
+        "urgency": 4,
+        "discoveredAt": "2026-04-01T12:07:50.419Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:culture",
+        "sectionCandidates": [
+          "culture"
+        ],
+        "topicCandidates": [
+          "film-tv"
+        ],
+        "detectedSectionId": "culture",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "movies and tv shows casting in boulder features santafenewmexican com",
+        "canonicalUrl": "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-boulder/article_f74af385-63b0-5e28-8b95-8bb2af6b77d1.html",
+        "discoveryScore": 16.4,
+        "targetedCoverage": false,
+        "eventKey": "culture:movies and tv shows casting in boulder features santafenewmexican com",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:07:50.419Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
+    },
+    {
+      "identityKey": "event:mental-health:breakthrough approaches in self care through mental health services near ruston ",
+      "item": {
+        "id": "brave-sec-1775045288178-1",
+        "title": "Breakthrough Approaches in Self-Care Through Mental Health Services Near Ruston, LA, Locals Recommend. | Hub Of Articles",
+        "summary": "For residents, accessing comprehensive support is crucial to achieving lasting mental wellness. Many people turn to mental health services near Ruston,",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "7 hours ago",
+        "sourceUrls": [
+          "https://www.hubofarticles.com/breakthrough-approaches-in-self-care-through-mental-health-services-near-ruston-la-locals-recommend/"
+        ],
+        "freshness": 8,
+        "urgency": 4,
+        "discoveredAt": "2026-04-01T12:08:08.182Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:health",
+        "sectionCandidates": [
+          "health"
+        ],
+        "topicCandidates": [
+          "mental-health",
+          "wellness-fitness"
+        ],
+        "detectedSectionId": "health",
+        "detectedTopicId": "mental-health",
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "breakthrough approaches in self care through mental health services near ruston la locals recommend hub of articles",
+        "canonicalUrl": "https://www.hubofarticles.com/breakthrough-approaches-in-self-care-through-mental-health-services-near-ruston-la-locals-recommend/",
+        "discoveryScore": 16.4,
+        "targetedCoverage": false,
+        "eventKey": "mental-health:breakthrough approaches in self care through mental health services near ruston ",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:08:08.182Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
+    },
+    {
+      "identityKey": "event:crypto-bitcoin:gulfbusiness",
+      "item": {
+        "id": "brave-sec-1775045276237-3",
+        "title": "Gulfbusiness",
+        "summary": "The move comes amid rising demand for derivatives exposure in virtual asset markets, as regulators globally seek to address the risks associated with increasingly complex digital financial instruments · Dubai Virtual Assets Regulatory Authority (VARA) has introduced a comprehensive regulatory ...",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "1 day ago",
+        "sourceUrls": [
+          "https://gulfbusiness.com/en/2026/cryptocurrency/dubai-moves-to-regulate-crypto-derivatives-under-new-rulebook"
+        ],
+        "freshness": 6,
+        "urgency": 5,
+        "discoveredAt": "2026-04-01T12:07:56.239Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:business",
+        "sectionCandidates": [
+          "business"
+        ],
+        "topicCandidates": [
+          "crypto-bitcoin",
+          "economy-markets"
+        ],
+        "detectedSectionId": "business",
+        "detectedTopicId": "crypto-bitcoin",
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "gulfbusiness",
+        "canonicalUrl": "https://gulfbusiness.com/en/2026/cryptocurrency/dubai-moves-to-regulate-crypto-derivatives-under-new-rulebook",
+        "discoveryScore": 15.4,
+        "targetedCoverage": false,
+        "eventKey": "crypto-bitcoin:gulfbusiness",
+        "signalSpecificityScore": 4,
+        "signalSpecificityNotes": [
+          "article_likelihood",
+          "topic_hint"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:07:56.239Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
+    },
+    {
+      "identityKey": "event:news:basketball ncaa transfer portal talent is moving faster than teams can rebuild",
+      "item": {
+        "id": "brave-sec-1775045294223-3",
+        "title": "Basketball NCAA transfer portal: talent is moving faster than teams can rebuild",
+        "summary": "This isn’t just player movement — it’s the collapse of long-term identity in college basketball",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "5 hours ago",
+        "sourceUrls": [
+          "https://sportworldnews.org/nba/news/27680/basketball-ncaa-transfer-portal-talent-is-moving-faster-than-teams-can-rebuild"
+        ],
+        "freshness": 8,
+        "urgency": 4,
+        "discoveredAt": "2026-04-01T12:08:14.226Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:sports",
+        "sectionCandidates": [
+          "news",
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "news",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "transfers",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "basketball ncaa transfer portal talent is moving faster than teams can rebuild",
+        "canonicalUrl": "https://sportworldnews.org/nba/news/27680/basketball-ncaa-transfer-portal-talent-is-moving-faster-than-teams-can-rebuild",
+        "discoveryScore": 15.4,
+        "targetedCoverage": false,
+        "eventKey": "news:basketball ncaa transfer portal talent is moving faster than teams can rebuild",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:08:14.226Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
+    },
+    {
+      "identityKey": "event:health:unlocking the future of deep sea exploration technology innovations driving mari",
+      "item": {
+        "id": "brave-sec-1775045288186-3",
+        "title": "Unlocking the Future of Deep Sea Exploration Technology: Innovations Driving Marine Discoveries - mentalhealthparitypart",
+        "summary": "Contents hide 1 Unlocking the Future of Deep Sea Exploration Technology: Innovations Driving Marine Discoveries 1.1 Revolutionary Technologies Propelling Deep Sea Exploration 1.2 Applications of Advanced Deep Sea Technologies 1.3…",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "16 hours ago",
+        "sourceUrls": [
+          "https://www.mentalhealthparitypartners.com/2026/03/31/unlocking-the-future/"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-01T12:08:08.189Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:health",
+        "sectionCandidates": [
+          "health"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "health",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "unlocking the future of deep sea exploration technology innovations driving marine discoveries mentalhealthparitypart",
+        "canonicalUrl": "https://www.mentalhealthparitypartners.com/2026/03/31/unlocking-the-future/",
+        "discoveryScore": 14.6,
+        "targetedCoverage": false,
+        "eventKey": "health:unlocking the future of deep sea exploration technology innovations driving mari",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:08:08.189Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
+    },
+    {
+      "identityKey": "event:crypto-bitcoin:top 40 public companies holding bitcoin 2026 updated list",
+      "item": {
+        "id": "brave-sec-1775045276239-4",
+        "title": "Top 40 Public Companies Holding Bitcoin 2026 (Updated List)",
+        "summary": "Check out public companies holding BTC. See which businesses are investing in Bitcoin, how much they own, and their crypto strategies.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "1 day ago",
+        "sourceUrls": [
+          "https://www.demandsage.com/public-companies-holding-btc/"
+        ],
+        "freshness": 6,
+        "urgency": 4,
+        "discoveredAt": "2026-04-01T12:07:56.242Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:business",
+        "sectionCandidates": [
+          "business"
+        ],
+        "topicCandidates": [
+          "crypto-bitcoin",
+          "companies-deals"
+        ],
+        "detectedSectionId": "business",
+        "detectedTopicId": "crypto-bitcoin",
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "top 40 public companies holding bitcoin 2026 updated list",
+        "canonicalUrl": "https://www.demandsage.com/public-companies-holding-btc/",
+        "discoveryScore": 14.4,
+        "targetedCoverage": false,
+        "eventKey": "crypto-bitcoin:top 40 public companies holding bitcoin 2026 updated list",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:07:56.242Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
+    },
+    {
+      "identityKey": "event:sports:oklahoma sooners earn commitment from 2027 interior offensive lineman yahoo spor",
+      "item": {
+        "id": "brave-sec-1775045294220-2",
+        "title": "Oklahoma Sooners earn commitment from 2027 interior offensive lineman - Yahoo Sports",
+        "summary": "The Oklahoma Sooners picked up a commitment from a physical 2027 offensive line prospect out of Texas.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "18 hours ago",
+        "sourceUrls": [
+          "https://sports.yahoo.com/articles/oklahoma-sooners-earn-commitment-2027-182439606.html"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-01T12:08:14.223Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:sports",
+        "sectionCandidates": [
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "oklahoma sooners earn commitment from 2027 interior offensive lineman yahoo sports",
+        "canonicalUrl": "https://sports.yahoo.com/articles/oklahoma-sooners-earn-commitment-2027-182439606.html",
+        "discoveryScore": 14.4,
+        "targetedCoverage": false,
+        "eventKey": "sports:oklahoma sooners earn commitment from 2027 interior offensive lineman yahoo spor",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:08:14.223Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
+    },
+    {
+      "identityKey": "event:sports:ncaa tournament star suddenly enters transfer portal after historic season newsw",
+      "item": {
+        "id": "brave-sec-1775045294226-4",
+        "title": "NCAA Tournament Star Suddenly Enters Transfer Portal After Historic Season - Newsweek",
+        "summary": "An NCAA Tournament star is entering the transfer portal after a historic 31-0 season with the Miami (OH) RedHawks.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "17 hours ago",
+        "sourceUrls": [
+          "https://newsweek.com/sports/ncaa/ncaa-tournament-star-suddenly-enters-transfer-portal-after-historic-season-11765134"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-01T12:08:14.228Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:sports",
+        "sectionCandidates": [
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "transfers",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "ncaa tournament star suddenly enters transfer portal after historic season newsweek",
+        "canonicalUrl": "https://newsweek.com/sports/ncaa/ncaa-tournament-star-suddenly-enters-transfer-portal-after-historic-season-11765134",
+        "discoveryScore": 14.4,
+        "targetedCoverage": false,
+        "eventKey": "sports:ncaa tournament star suddenly enters transfer portal after historic season newsw",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:08:14.228Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
+    },
+    {
+      "identityKey": "event:news:percheron flags asco nod for hmbd 002 cancer therapy data asx per otc percf",
+      "item": {
+        "id": "brave-sec-1775045288174-0",
+        "title": "Percheron flags ASCO nod for HMBD-002 cancer therapy data | ASX:PER, OTC:PERCF",
+        "summary": "New preclinical data for Percheron Therapeutics Ltd (ASX:PER, OTC:PERCF) investigational cancer therapy HMBD-002 has been accepted for presentation at the...",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "1 day ago",
+        "sourceUrls": [
+          "https://www.proactiveinvestors.com/companies/news/1089779/percheron-flags-asco-nod-for-hmbd-002-cancer-therapy-data-1089779.html"
+        ],
+        "freshness": 6,
+        "urgency": 4,
+        "discoveredAt": "2026-04-01T12:08:08.178Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:health",
+        "sectionCandidates": [
+          "news",
+          "business",
+          "health"
+        ],
+        "topicCandidates": [
+          "companies-deals"
+        ],
+        "detectedSectionId": "news",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "percheron flags asco nod for hmbd 002 cancer therapy data asx per otc percf",
+        "canonicalUrl": "https://www.proactiveinvestors.com/companies/news/1089779/percheron-flags-asco-nod-for-hmbd-002-cancer-therapy-data-1089779.html",
+        "discoveryScore": 13.4,
+        "targetedCoverage": false,
+        "eventKey": "news:percheron flags asco nod for hmbd 002 cancer therapy data asx per otc percf",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:08:08.178Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
+    },
+    {
+      "identityKey": "event:health:the ongoing movement against psychiatric medications psychiatric times",
+      "item": {
+        "id": "brave-sec-1775045288189-4",
+        "title": "The Ongoing Movement Against Psychiatric Medications | Psychiatric Times",
+        "summary": "Antipsychiatry’s animus toward psychiatric medication has both ancient and modern parallels.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "12 hours ago",
+        "sourceUrls": [
+          "https://psychiatrictimes.com/view/the-ongoing-movement-against-psychiatric-medications"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-01T12:08:08.191Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:health",
+        "sectionCandidates": [
+          "health"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "health",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "the ongoing movement against psychiatric medications psychiatric times",
+        "canonicalUrl": "https://psychiatrictimes.com/view/the-ongoing-movement-against-psychiatric-medications",
+        "discoveryScore": 13.4,
+        "targetedCoverage": false,
+        "eventKey": "health:the ongoing movement against psychiatric medications psychiatric times",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:08:08.191Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
+    },
+    {
+      "identityKey": "event:crypto-bitcoin:8 best crypto wallets of april 2026 money",
+      "item": {
+        "id": "brave-sec-1775045276231-2",
+        "title": "8 Best Crypto Wallets of April 2026 | Money",
+        "summary": "Discover the best crypto wallets of April 2026, including Exodus, Best Overall; Zengo, Best for Beginners; Sparrow, Best for Bitcoin",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "17 hours ago",
+        "sourceUrls": [
+          "https://money.com/best-crypto-wallets/"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-01T12:07:56.237Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:business",
+        "sectionCandidates": [
+          "business"
+        ],
+        "topicCandidates": [
+          "crypto-bitcoin"
+        ],
+        "detectedSectionId": "business",
+        "detectedTopicId": "crypto-bitcoin",
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "unknown",
+        "genericity_score": 0,
+        "article_likelihood": 1,
+        "normalizedTitle": "8 best crypto wallets of april 2026 money",
+        "canonicalUrl": "https://money.com/best-crypto-wallets/",
+        "discoveryScore": 13,
+        "targetedCoverage": false,
+        "eventKey": "crypto-bitcoin:8 best crypto wallets of april 2026 money",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:07:56.237Z",
+      "lastSeenAt": "2026-04-01T12:08:14.301Z",
+      "expiresAt": "2026-04-03T12:08:14.301Z"
+    },
+    {
+      "identityKey": "event:world-geopolitics:will the iran crisis push the world to rethink oil and gas",
+      "item": {
+        "id": "google-sec-1775045300463-4",
+        "title": "Will the Iran Crisis Push the World to Rethink Oil and Gas?",
+        "summary": "16 hours ago ... A growing energy crisis could push countries to burn more fossil fuels in the short term, experts say. Plus more climate news.",
+        "whyItMatters": "",
+        "involvedParties": [
+          "iran"
+        ],
+        "entities": [
+          "iran"
+        ],
+        "when": "2026-03-31T19:28:25.000Z",
+        "sourceUrls": [
+          "https://www.nytimes.com/2026/03/31/climate/iran-war-renewable-energy.html"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-01T12:08:20.466Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:news",
+        "sectionCandidates": [
+          "news"
+        ],
+        "topicCandidates": [
+          "world-geopolitics",
+          "climate-extreme-weather"
+        ],
+        "detectedSectionId": "news",
+        "detectedTopicId": "world-geopolitics",
+        "region": "iran",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "will the iran crisis push the world to rethink oil and gas",
+        "canonicalUrl": "https://www.nytimes.com/2026/03/31/climate/iran-war-renewable-energy.html",
+        "discoveryScore": 18.6,
+        "targetedCoverage": false,
+        "eventKey": "world-geopolitics:will the iran crisis push the world to rethink oil and gas",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:08:20.466Z",
+      "lastSeenAt": "2026-04-01T12:08:59.588Z",
+      "expiresAt": "2026-04-03T12:08:59.588Z"
+    },
+    {
+      "identityKey": "event:news:israel passes death penalty law for palestinians convicted reuters",
+      "item": {
+        "id": "google-sec-1775045300474-9",
+        "title": "Israel passes death penalty law for Palestinians convicted ... - Reuters",
+        "summary": "2 days ago ... \"Such laws and measures will not break the will of the Palestinian people or undermine their steadfastness,\" Abbas' office said in a statement. \"Nor will they ...",
+        "whyItMatters": "",
+        "involvedParties": [
+          "israel"
+        ],
+        "entities": [
+          "israel"
+        ],
+        "when": "2026-03-30T13:20:45.675Z",
+        "sourceUrls": [
+          "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/"
+        ],
+        "freshness": 5,
+        "urgency": 4,
+        "discoveredAt": "2026-04-01T12:08:20.477Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:news",
+        "sectionCandidates": [
+          "news"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "news",
+        "detectedTopicId": null,
+        "region": "israel",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "official_release",
+        "genericity_score": 1,
+        "article_likelihood": 8,
+        "normalizedTitle": "israel passes death penalty law for palestinians convicted reuters",
+        "canonicalUrl": "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/",
+        "discoveryScore": 13.4,
+        "targetedCoverage": false,
+        "eventKey": "news:israel passes death penalty law for palestinians convicted reuters",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-01T12:08:20.477Z",
+      "lastSeenAt": "2026-04-01T12:08:59.588Z",
+      "expiresAt": "2026-04-03T12:08:59.588Z"
     }
   ]
 }

@@ -1,18 +1,18 @@
 {
-  "totalArticles": 96,
+  "totalArticles": 97,
   "lastReset": null,
   "byWriter": {
     "reporter": {
-      "count": 34,
-      "lastAssigned": 1774987182593,
-      "streak": 0,
-      "authorCursor": 0,
-      "lastAuthorId": "maya_collins"
+      "count": 35,
+      "lastAssigned": 1775045340364,
+      "streak": 1,
+      "authorCursor": 1,
+      "lastAuthorId": "john_smith"
     },
     "explainer": {
       "count": 14,
       "lastAssigned": 1774993328671,
-      "streak": 1,
+      "streak": 0,
       "authorCursor": 0,
       "lastAuthorId": "noah_bennett"
     },
@@ -32,14 +32,6 @@
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "features",
-      "timestamp": 1774639878204,
-      "articleType": "report",
-      "beat": "sports business",
-      "section": "Sports",
-      "topic_id": "transfers-business"
-    },
     {
       "writerId": "reporter",
       "timestamp": 1774644771431,
@@ -431,6 +423,14 @@
       "beat": "technology",
       "section": "Tech",
       "topic_id": "ai-big-tech"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1775045340364,
+      "articleType": "report",
+      "beat": "international affairs",
+      "section": "News",
+      "topic_id": "world-geopolitics"
     }
   ]
 }

@@ -1,17 +1,44 @@
 {
-  "timestamp": "2026-03-31T21:42:27.612Z",
+  "timestamp": "2026-04-01T12:09:24.482Z",
   "success": true,
   "hard_blocker": null,
-  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p.mdx",
-  "verified_url": "/article/2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p",
+  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in.mdx",
+  "verified_url": "/article/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in",
   "stages": {
     "discovery": {
       "stage": "discovery",
       "success": true,
       "error": null,
       "data": {
-        "candidatesCount": 40,
-        "discoveredPoolTotal": 187
+        "candidatesCount": 35,
+        "discoveredPoolTotal": 204,
+        "queryUsage": {
+          "brave": 6,
+          "google": 2,
+          "gdelt": 1,
+          "total": 9
+        },
+        "targetedCoverage": {
+          "triggered": false,
+          "reason": "recent_section_imbalance:health:0_vs_5",
+          "section_id": "health",
+          "topic_id": "public-health",
+          "recent_window_hours": 48,
+          "recent_sample_size": 10,
+          "section_counts": {
+            "news": 5,
+            "business": 2,
+            "tech": 1,
+            "health": 0,
+            "sports": 2,
+            "culture": 0
+          },
+          "viable_in_target_section_before": 3,
+          "viable_in_target_section_after": 0,
+          "viable_share_before": 0.273,
+          "viable_share_after": 0,
+          "skipped_reason": "target_section_viable_ok:count=3:share=0.273"
+        }
       }
     },
     "briefNormalization": {
@@ -38,12 +65,6 @@
           {
             "attempt": "retry_1_cheap_refresh",
             "source_packs_assembled": 15,
-            "publishable_candidates": 0,
-            "selected_candidates": 0
-          },
-          {
-            "attempt": "retry_2_limited_brave_refresh",
-            "source_packs_assembled": 15,
             "publishable_candidates": 1,
             "selected_candidates": 1
           }
@@ -60,14 +81,14 @@
             "attempt": 1,
             "phase": "cheap_refresh",
             "status": "ran",
-            "discovery_candidates": 20,
+            "discovery_candidates": 9,
             "normalized_briefs": 5,
-            "selected_candidates": 0,
+            "selected_candidates": 1,
             "source_pack_attempt": {
               "attempt": "retry_1_cheap_refresh",
               "source_packs_assembled": 15,
-              "publishable_candidates": 0,
-              "selected_candidates": 0
+              "publishable_candidates": 1,
+              "selected_candidates": 1
             },
             "query_usage": {
               "brave": 0,
@@ -76,43 +97,22 @@
               "total": 3
             },
             "estimated_tokens": 4500
-          },
-          {
-            "attempt": 2,
-            "phase": "limited_brave_refresh",
-            "status": "ran",
-            "discovery_candidates": 5,
-            "normalized_briefs": 2,
-            "selected_candidates": 1,
-            "source_pack_attempt": {
-              "attempt": "retry_2_limited_brave_refresh",
-              "source_packs_assembled": 15,
-              "publishable_candidates": 1,
-              "selected_candidates": 1
-            },
-            "query_usage": {
-              "brave": 1,
-              "google": 1,
-              "gdelt": 1,
-              "total": 3
-            },
-            "estimated_tokens": 1800
           }
         ],
         "retryUsage": {
-          "external_queries": 6,
-          "brave_queries": 1,
-          "estimated_tokens": 6300
+          "external_queries": 3,
+          "brave_queries": 0,
+          "estimated_tokens": 4500
         },
         "selectedCount": 1,
         "selectedTopics": [
           {
-            "title": "AI (artificial intelligence)",
-            "eventId": "evt-2026-03-31-ai-big-tech-general-global",
-            "sources": 2,
-            "uniqueDomains": 2,
-            "section_id": "tech",
-            "topic_id": "ai-big-tech",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "eventId": "evt-2026-04-01-news-general-israel-israel",
+            "sources": 3,
+            "uniqueDomains": 3,
+            "section_id": "news",
+            "topic_id": null,
             "gate_notes": [
               "Role-aware one-event source-pack gate passed"
             ],
@@ -124,49 +124,8 @@
           }
         ],
         "readyCandidates": {
-          "readyCount": 2,
+          "readyCount": 1,
           "additionalReadyCandidates": [
-            {
-              "identityKey": "cluster:evt-2026-03-27-sports-ban-global",
-              "briefId": "evt-2026-03-27-sports-ban-global",
-              "title": "International Olympics Committee Bans Trans Athletes from Women's Events",
-              "normalizedTitle": "international olympics committee bans trans athletes women s events",
-              "section_id": "sports",
-              "topic_id": "transfers-business",
-              "articleType": "report",
-              "selectionOrigin": "ready_backlog",
-              "poolIdentityKey": "cluster:evt-2026-03-27-sports-ban-global",
-              "rank": 2,
-              "score": 62.3,
-              "scoreNotes": [
-                "undercovered_section:sports",
-                "section_penalty:6",
-                "topic_penalty:14",
-                "region_penalty:54",
-                "angle_penalty:46",
-                "cluster_repeat:1",
-                "entity_penalty:25",
-                "domains:4",
-                "consistency:6.3",
-                "core:3",
-                "supporting:1"
-              ],
-              "sourceCount": 4,
-              "uniqueDomains": 4,
-              "directEventSourceCount": 4,
-              "independentEventDomains": 4,
-              "gateDecision": "PASS",
-              "gateNotes": [
-                "Role-aware one-event source-pack gate passed"
-              ],
-              "discoveredAt": "2026-03-27T22:37:44.510Z",
-              "firstQueuedAt": "2026-03-27T22:28:34.339Z",
-              "lastQueuedAt": "2026-03-29T22:02:23.720Z",
-              "status": "ready",
-              "lastSelectedAt": null,
-              "lastPublishedAt": null,
-              "publishedSlug": null
-            },
             {
               "identityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
               "briefId": "evt-2026-03-30-crypto-bitcoin-general-global",
@@ -210,42 +169,42 @@
           ],
           "selectedCandidates": [
             {
-              "identityKey": "cluster:evt-2026-03-31-ai-big-tech-general-global",
-              "briefId": "evt-2026-03-31-ai-big-tech-general-global",
-              "title": "AI (artificial intelligence)",
-              "normalizedTitle": "ai artificial intelligence",
-              "section_id": "tech",
-              "topic_id": "ai-big-tech",
+              "identityKey": "cluster:evt-2026-04-01-news-general-israel-israel",
+              "briefId": "evt-2026-04-01-news-general-israel-israel",
+              "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+              "normalizedTitle": "israel passes law to give death penalty to palestinians convicted of",
+              "section_id": "news",
+              "topic_id": null,
               "articleType": "report",
-              "selectionOrigin": "current_run",
-              "poolIdentityKey": "cluster:evt-2026-03-31-ai-big-tech-general-global",
+              "selectionOrigin": "pool",
+              "poolIdentityKey": "cluster:evt-2026-04-01-news-general-israel-israel",
               "rank": 1,
-              "score": 37.8,
+              "score": 64.5,
               "scoreNotes": [
-                "section_penalty:11",
-                "topic_penalty:7",
-                "region_penalty:54",
-                "angle_penalty:46",
+                "section_penalty:24",
+                "topic_penalty:29",
+                "region_penalty:3",
+                "angle_penalty:2",
                 "cluster_repeat:1",
-                "entity_penalty:35",
-                "domains:2",
-                "consistency:10",
-                "core:2",
+                "entity_penalty:4",
+                "domains:3",
+                "consistency:8.3",
+                "core:3",
                 "supporting:0"
               ],
-              "sourceCount": 2,
-              "uniqueDomains": 2,
-              "directEventSourceCount": 2,
-              "independentEventDomains": 2,
+              "sourceCount": 3,
+              "uniqueDomains": 3,
+              "directEventSourceCount": 3,
+              "independentEventDomains": 3,
               "gateDecision": "PASS",
               "gateNotes": [
                 "Role-aware one-event source-pack gate passed"
               ],
-              "discoveredAt": "2026-03-31T21:42:07.999Z",
-              "firstQueuedAt": "2026-03-31T21:42:08.534Z",
-              "lastQueuedAt": "2026-03-31T21:42:08.534Z",
+              "discoveredAt": "2026-04-01T12:08:20.477Z",
+              "firstQueuedAt": "2026-04-01T12:09:00.206Z",
+              "lastQueuedAt": "2026-04-01T12:09:00.206Z",
               "status": "selected",
-              "lastSelectedAt": "2026-03-31T21:42:08.534Z",
+              "lastSelectedAt": "2026-04-01T12:09:00.206Z",
               "lastPublishedAt": null,
               "publishedSlug": null,
               "selectedByWorkflow": null,
@@ -256,32 +215,10 @@
           ],
           "filePath": "/home/runner/work/foseer.com/foseer.com/qwen-data/events/ready-article-candidates.json",
           "selectedIdentityKeys": [
-            "cluster:evt-2026-03-31-ai-big-tech-general-global"
+            "cluster:evt-2026-04-01-news-general-israel-israel"
           ]
         },
-        "duplicateRejectedCandidates": [
-          {
-            "identityKey": "cluster:evt-2026-03-31-news-general-israel-israel",
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
-            "origin": "current_run",
-            "reason": "identity_already_published",
-            "attempt": "retry_1_cheap_refresh"
-          },
-          {
-            "identityKey": "cluster:evt-2026-03-31-news-general-israel-israel",
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
-            "origin": "current_run",
-            "reason": "identity_already_published",
-            "attempt": "retry_2_limited_brave_refresh"
-          },
-          {
-            "identityKey": "cluster:evt-2026-03-31-sports-general-global",
-            "title": "How NIL Is Reshaping the Future of College Football",
-            "origin": "current_run",
-            "reason": "identity_already_published",
-            "attempt": "retry_2_limited_brave_refresh"
-          }
-        ],
+        "duplicateRejectedCandidates": [],
         "candidatesEvaluated": 12
       }
     },
@@ -296,24 +233,24 @@
         "rejected": [],
         "items": [
           {
-            "title": "AI (artificial intelligence)",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
             "success": true,
             "error": null,
             "data": {
-              "section_id": "tech",
-              "topic_id": "ai-big-tech",
+              "section_id": "news",
+              "topic_id": "world-geopolitics",
               "tags": [
-                "AI & Big Tech",
-                "Artificial Intelligence"
+                "World & Geopolitics",
+                "Diplomacy",
+                "Israel"
               ],
               "tag_slugs": [
-                "ai-big-tech",
-                "artificial-intelligence"
+                "world-geopolitics",
+                "diplomacy",
+                "israel"
               ],
               "thin_tag_set_before_draft": false,
-              "warnings": [
-                "Canonical tag set is below target floor (3), accepted due sparse evidence"
-              ]
+              "warnings": []
             }
           }
         ]
@@ -329,7 +266,7 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "AI (artificial intelligence)",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
             "success": true,
             "error": null,
             "data": {
@@ -352,11 +289,11 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "AI (artificial intelligence)",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
             "success": true,
             "error": null,
             "data": {
-              "wordCount": 1084,
+              "wordCount": 1145,
               "articleType": "report",
               "quality": "strong",
               "safeForPublishing": true
@@ -375,12 +312,12 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "AI (artificial intelligence)",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
             "success": true,
             "error": null,
             "data": {
-              "provider": "pexels",
-              "imagePath": "~/assets/images/library/pexels/18069813/cover.png",
+              "provider": "fallback",
+              "imagePath": "~/assets/images/posts/fallback/foseer-default-cover.svg",
               "hasAltText": true
             }
           }
@@ -397,17 +334,17 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "AI (artificial intelligence)",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
             "success": true,
             "error": null,
             "data": {
-              "filename": "2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p.mdx",
-              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p.mdx",
-              "canonicalSlug": "2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p",
-              "expectedUrl": "/article/2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p",
-              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p.json",
-              "section_id": "tech",
-              "topic_id": "ai-big-tech"
+              "filename": "2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in.mdx",
+              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in.mdx",
+              "canonicalSlug": "2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in",
+              "expectedUrl": "/article/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in",
+              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/israel-approves-death-penalty-law-targeting-palestinians-in-.json",
+              "section_id": "news",
+              "topic_id": "world-geopolitics"
             }
           }
         ]
@@ -423,13 +360,13 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "AI (artificial intelligence)",
+            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
             "success": true,
             "error": null,
             "data": {
               "skipped": true,
               "reason": "CI environment: localhost verification skipped; publish + build checks passed",
-              "expectedUrl": "/article/2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p"
+              "expectedUrl": "/article/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in"
             }
           }
         ]
@@ -438,153 +375,287 @@
   },
   "selected": {
     "brief": {
-      "id": "evt-2026-03-31-ai-big-tech-general-global",
-      "title": "AI (artificial intelligence)",
-      "whatHappened": "3 hours ago ... At last, David has landed a double punch on the tech Goliaths.",
-      "whoIsInvolved": "Unspecified",
+      "id": "evt-2026-04-01-news-general-israel-israel",
+      "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+      "whatHappened": "2 days ago ... Israel has rarely used the death penalty, applying it only in exceptional cases.",
+      "whoIsInvolved": "israel",
       "involvedParties": [
-        "Unspecified"
+        "israel"
       ],
       "entities": [
-        "Unspecified"
+        "israel"
       ],
-      "when": "2026-03-31T21:42:07.999Z",
-      "where": "Not specified",
-      "whyItMatters": "The development matters because it may affect technology adoption, competition, regulation, or security decisions.",
-      "developmentStage": "confirmed",
+      "when": "2026-03-30T19:29:35.000Z",
+      "where": "israel",
+      "whyItMatters": "The development could affect international security, diplomacy, or energy markets as the situation develops.",
+      "developmentStage": "developing",
       "sourceUrls": [
-        "https://www.theguardian.com/technology/artificialintelligenceai"
+        "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
+        "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/"
       ],
-      "publishabilityScore": 7,
+      "publishabilityScore": 10,
       "publishabilityNotes": [
         "Has a usable summary sentence",
-        "Parties remain unclear",
-        "Freshness is moderate",
-        "Source diversity still needs source-pack validation",
-        "Taxonomy topic match is specific enough for routing",
+        "Specific parties are identified",
+        "Fresh enough for same-day editorial use",
+        "Multiple source URLs already attached",
+        "Clustered across multiple discovery hits",
+        "Cluster contains multiple article-like materials",
         "At least one trusted source hit is present"
       ],
-      "discoveredAt": "2026-03-31T21:42:07.999Z",
+      "discoveredAt": "2026-04-01T12:08:20.477Z",
       "provider": "google_trusted",
-      "section_id": "tech",
-      "topic_id": "ai-big-tech",
-      "region": "global",
-      "angle": "general",
-      "cluster_id": "evt-2026-03-31-ai-big-tech-general-global",
-      "eventKey": "2026-03-31:ai-big-tech-general-global",
-      "cluster_size": 1,
-      "article_rich_count": 1,
+      "section_id": "news",
+      "topic_id": "world-geopolitics",
+      "region": "israel",
+      "angle": "conflict",
+      "cluster_id": "evt-2026-04-01-news-general-israel-israel",
+      "eventKey": "2026-04-01:news-general-israel-israel",
+      "cluster_size": 2,
+      "article_rich_count": 2,
       "generic_page_count": 0,
       "discoveryContext": [
         {
-          "id": "google-sec-1774993327997-5",
-          "title": "AI (artificial intelligence)",
-          "summary": "3 hours ago ... At last, David has landed a double punch on the tech Goliaths. Now to hit them even harder · Wikipedia bans AI-generated content in its online encyclopedia.",
+          "id": "google-sec-1775045300458-2",
+          "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+          "summary": "2 days ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
           "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.theguardian.com/technology/artificialintelligenceai"
+          "involvedParties": [
+            "israel"
           ],
-          "freshness": 4,
+          "entities": [
+            "israel"
+          ],
+          "when": "2026-03-30T19:29:35.000Z",
+          "sourceUrls": [
+            "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists"
+          ],
+          "freshness": 5,
           "urgency": 4,
-          "discoveredAt": "2026-03-31T21:42:07.999Z",
+          "discoveredAt": "2026-04-01T12:08:20.461Z",
           "provider": "google_trusted",
           "trustedSource": true,
-          "discoveryLane": "google:culture",
+          "discoveryLane": "google:news",
           "sectionCandidates": [
-            "tech",
-            "culture"
+            "news"
           ],
-          "topicCandidates": [
-            "ai-big-tech"
-          ],
-          "detectedSectionId": "tech",
-          "detectedTopicId": "ai-big-tech",
-          "region": "global",
-          "angle": "general",
+          "topicCandidates": [],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "israel",
+          "angle": "conflict",
           "genericPage": false,
           "page_kind": "article",
           "genericity_score": 0,
           "article_likelihood": 8,
-          "normalizedTitle": "ai artificial intelligence the guardian",
-          "canonicalUrl": "https://www.theguardian.com/technology/artificialintelligenceai",
-          "discoveryScore": 14.4,
+          "normalizedTitle": "israel passes law to give death penalty to palestinians convicted of",
+          "canonicalUrl": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
+          "discoveryScore": 13.4,
           "targetedCoverage": false,
-          "eventKey": "ai-big-tech:ai artificial intelligence the guardian",
-          "signalSpecificityScore": 7,
+          "eventKey": "news:israel passes law to give death penalty to palestinians convicted of",
+          "signalSpecificityScore": 5,
           "signalSpecificityNotes": [
             "title_specificity",
             "article_likelihood",
-            "topic_hint",
             "named_marker"
           ],
           "crossTopicRisk": false,
-          "source_id": "google-sec-1774993327997-5",
-          "url": "https://www.theguardian.com/technology/artificialintelligenceai",
-          "canonical_url": "https://www.theguardian.com/technology/artificialintelligenceai",
+          "source_id": "google-sec-1775045300458-2",
+          "url": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
+          "canonical_url": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
           "domain": "theguardian.com",
           "canonical_domain": "theguardian.com",
-          "normalized_title": "ai artificial intelligence",
-          "snippet": "3 hours ago ... At last, David has landed a double punch on the tech Goliaths. Now to hit them even harder · Wikipedia bans AI-generated content in its online encyclopedia.",
-          "published_at": "2026-03-31T21:42:07.999Z",
-          "section_id": "tech",
-          "topic_id": "ai-big-tech",
+          "normalized_title": "israel passes law to give death penalty to palestinians convicted of",
+          "snippet": "2 days ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
+          "published_at": "2026-03-30T19:29:35.000Z",
+          "section_id": "news",
+          "topic_id": null,
           "section_candidates": [
-            "tech",
-            "culture"
+            "news"
           ],
-          "topic_candidates": [
-            "ai-big-tech"
-          ],
+          "topic_candidates": [],
           "cluster_id": null,
-          "event_key": "ai-big-tech:ai artificial intelligence the guardian",
+          "event_key": "news:israel passes law to give death penalty to palestinians convicted of",
           "keywords": [
-            "artificial",
-            "intelligence",
-            "hours",
-            "last",
-            "david",
-            "landed",
-            "double",
-            "punch",
-            "tech",
-            "goliaths",
-            "them",
-            "even"
+            "israel",
+            "passes",
+            "give",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted",
+            "days",
+            "rarely",
+            "used",
+            "applying",
+            "only"
           ],
           "title_signal_tokens": [
-            "artificial",
-            "intelligence"
+            "israel",
+            "passes",
+            "give",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted"
           ],
           "url_signal_tokens": [
-            "artificialintelligenceai"
+            "israel",
+            "passes",
+            "death",
+            "penalty",
+            "palestinian",
+            "convicted",
+            "terrorists"
           ],
-          "title_url_overlap": 0,
+          "title_url_overlap": 0.7142857142857143,
           "title_url_mismatch": false,
           "source_quality_score": 0,
           "action": "general",
-          "place": "global",
+          "place": "israel",
           "titleTokens": [
-            "artificial",
-            "intelligence"
+            "israel",
+            "passes",
+            "give",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted"
+          ]
+        },
+        {
+          "id": "google-sec-1775045300474-9",
+          "title": "Israel passes death penalty law for Palestinians convicted ...",
+          "summary": "2 days ago ... \"Such laws and measures will not break the will of the Palestinian people or undermine their steadfastness,\" Abbas' office said in a statement. \"Nor will they ...",
+          "whyItMatters": "",
+          "involvedParties": [
+            "israel"
+          ],
+          "entities": [
+            "israel"
+          ],
+          "when": "2026-03-30T13:20:45.675Z",
+          "sourceUrls": [
+            "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/"
+          ],
+          "freshness": 5,
+          "urgency": 4,
+          "discoveredAt": "2026-04-01T12:08:20.477Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:news",
+          "sectionCandidates": [
+            "news"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "israel",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "official_release",
+          "genericity_score": 1,
+          "article_likelihood": 8,
+          "normalizedTitle": "israel passes death penalty law for palestinians convicted reuters",
+          "canonicalUrl": "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/",
+          "discoveryScore": 13.4,
+          "targetedCoverage": false,
+          "eventKey": "news:israel passes death penalty law for palestinians convicted reuters",
+          "signalSpecificityScore": 5,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "article_likelihood",
+            "named_marker"
+          ],
+          "crossTopicRisk": false,
+          "source_id": "google-sec-1775045300474-9",
+          "url": "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/",
+          "canonical_url": "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/",
+          "domain": "reuters.com",
+          "canonical_domain": "reuters.com",
+          "normalized_title": "israel passes death penalty law for palestinians convicted",
+          "snippet": "2 days ago ... \"Such laws and measures will not break the will of the Palestinian people or undermine their steadfastness,\" Abbas' office said in a statement. \"Nor will they ...",
+          "published_at": "2026-03-30T13:20:45.675Z",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "news:israel passes death penalty law for palestinians convicted reuters",
+          "keywords": [
+            "israel",
+            "passes",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted",
+            "days",
+            "such",
+            "laws",
+            "measures",
+            "break",
+            "palestinian"
+          ],
+          "title_signal_tokens": [
+            "israel",
+            "passes",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted"
+          ],
+          "url_signal_tokens": [
+            "middle",
+            "east",
+            "israeli",
+            "death",
+            "penalty",
+            "bill",
+            "palestinian",
+            "murder",
+            "convicts",
+            "faces",
+            "vote"
+          ],
+          "title_url_overlap": 0.3333333333333333,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "israel",
+          "titleTokens": [
+            "israel",
+            "passes",
+            "death",
+            "penalty",
+            "palestinians",
+            "convicted"
           ]
         }
       ],
-      "_selectionOrigin": "current_run",
-      "poolIdentityKey": "cluster:evt-2026-03-31-ai-big-tech-general-global",
-      "section": "Tech",
-      "subsection": "AI (artificial intelligence)",
+      "poolIdentityKey": "cluster:evt-2026-04-01-news-general-israel-israel",
+      "selectionScore": 11.897274305555555,
+      "selectionNotes": [
+        "section_penalty:23",
+        "topic_penalty:28",
+        "region_penalty:2",
+        "entity_penalty:3"
+      ],
+      "readyCandidateStatus": null,
+      "readyCandidateRank": null,
+      "_selectionOrigin": "pool",
+      "section": "News",
+      "subsection": "Israel passes law to give death penalty to Palestinians convicted of ...",
       "topics": [
-        "AI (artificial intelligence)"
+        "Israel passes law to give death penalty to Palestinians convicted of ..."
       ]
     },
     "sourcePack": {
-      "eventId": "evt-2026-03-31-ai-big-tech-general-global",
-      "topic": "AI (artificial intelligence)",
-      "sources": 2,
-      "uniqueDomains": 2,
+      "eventId": "evt-2026-04-01-news-general-israel-israel",
+      "topic": "Israel passes law to give death penalty to Palestinians convicted of ...",
+      "sources": 3,
+      "uniqueDomains": 3,
       "credibilityScore": null,
       "passesGate": true,
       "gateNotes": [
@@ -593,22 +664,22 @@
     }
   },
   "stats": {
-    "discovery_candidates": 40,
+    "discovery_candidates": 35,
     "event_clusters": 8,
-    "briefs_normalized": 13,
-    "source_packs_assembled": 45,
+    "briefs_normalized": 11,
+    "source_packs_assembled": 30,
     "publishable_candidates": 1,
-    "selected_topic": "AI (artificial intelligence)",
+    "selected_topic": "Israel passes law to give death penalty to Palestinians convicted of ...",
     "selected_topics": [
-      "AI (artificial intelligence)"
+      "Israel passes law to give death penalty to Palestinians convicted of ..."
     ],
     "articles_attempted": 1,
     "articles_published": 1,
     "news_pool": {
-      "total": 64,
-      "active": 53,
-      "published": 11,
-      "ready_candidates": 2
+      "total": 66,
+      "active": 56,
+      "published": 10,
+      "ready_candidates": 1
     },
     "cache_stats": {
       "mode": "cache_refresh_with_live_quota",
@@ -627,7 +698,7 @@
       },
       "live_usage": {
         "brave": 5,
-        "gdelt": 2,
+        "gdelt": 1,
         "google": 1
       },
       "cache": {
@@ -640,21 +711,21 @@
             "fresh_files": 5,
             "expired_files": 0,
             "corrupt_files": 0,
-            "size_bytes": 74071
+            "size_bytes": 63763
           },
           "gdelt": {
-            "files": 2,
-            "fresh_files": 2,
+            "files": 0,
+            "fresh_files": 0,
             "expired_files": 0,
             "corrupt_files": 0,
-            "size_bytes": 10723
+            "size_bytes": 0
           },
           "google": {
             "files": 1,
             "fresh_files": 1,
             "expired_files": 0,
             "corrupt_files": 0,
-            "size_bytes": 45643
+            "size_bytes": 51276
           }
         },
         "seed": {
@@ -682,35 +753,35 @@
         }
       }
     },
-    "duration_ms": 106744,
-    "ready_candidates": 2,
-    "additional_ready_candidates": 2,
-    "source_pack_attempts": 3,
-    "source_pack_retry_external_queries": 6,
-    "source_pack_retry_brave_queries": 1,
-    "source_pack_retry_estimated_tokens": 6300,
+    "duration_ms": 94765,
+    "ready_candidates": 1,
+    "additional_ready_candidates": 1,
+    "source_pack_attempts": 2,
+    "source_pack_retry_external_queries": 3,
+    "source_pack_retry_brave_queries": 0,
+    "source_pack_retry_estimated_tokens": 4500,
     "pre_draft_rejected": 0,
-    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T21-40-40-864Z.json"
+    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-01T12-07-49-714Z.json"
   },
-  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-03-31T21-40-40-864Z.json",
+  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-01T12-07-49-714Z.json",
   "published_paths": [
-    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p.mdx"
+    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in.mdx"
   ],
   "verified_urls": [
-    "/article/2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p"
+    "/article/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in"
   ],
   "selected_candidates": [
     {
-      "title": "AI (artificial intelligence)",
-      "topic": "AI (artificial intelligence)",
-      "section_id": "tech",
-      "topic_id": "ai-big-tech"
+      "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+      "topic": "Israel passes law to give death penalty to Palestinians convicted of ...",
+      "section_id": "news",
+      "topic_id": "world-geopolitics"
     }
   ],
   "published_articles": [
     {
-      "title": "Drug Giant Signs $2 Billion AI Deal, Marking Shift in Pharma Power",
-      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-03-31-drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p.mdx",
+      "title": "Israel Approves Death Penalty Law Targeting Palestinians in Terror Cases",
+      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in.mdx",
       "verifiedUrl": null
     }
   ]
