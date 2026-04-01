@@ -1,5 +1,5 @@
 {
-  "totalArticles": 98,
+  "totalArticles": 99,
   "lastReset": null,
   "byWriter": {
     "reporter": {
@@ -10,16 +10,16 @@
       "lastAuthorId": "john_smith"
     },
     "explainer": {
-      "count": 14,
-      "lastAssigned": 1774993328671,
-      "streak": 0,
-      "authorCursor": 0,
-      "lastAuthorId": "noah_bennett"
+      "count": 15,
+      "lastAssigned": 1775076941695,
+      "streak": 1,
+      "authorCursor": 1,
+      "lastAuthorId": "olivia_brooks"
     },
     "analyst": {
       "count": 17,
       "lastAssigned": 1775065417399,
-      "streak": 1,
+      "streak": 0,
       "authorCursor": 3,
       "lastAuthorId": "jacob_ellis"
     },
@@ -32,14 +32,6 @@
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "features",
-      "timestamp": 1774644842029,
-      "articleType": "report",
-      "beat": "sports business",
-      "section": "Sports",
-      "topic_id": "transfers-business"
-    },
     {
       "writerId": "features",
       "timestamp": 1774644970414,
@@ -431,6 +423,14 @@
       "beat": "sports business",
       "section": "Sports",
       "topic_id": "transfers-business"
+    },
+    {
+      "writerId": "explainer",
+      "timestamp": 1775076941695,
+      "articleType": "explainer",
+      "beat": "markets",
+      "section": "Business",
+      "topic_id": "crypto-bitcoin"
     }
   ]
 }

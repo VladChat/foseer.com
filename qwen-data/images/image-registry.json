@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-04-01T17:44:20.569Z",
+  "updatedAt": "2026-04-01T20:56:17.175Z",
   "assets": [
     {
       "assetKey": "legacy:7-social-media-trends-you-need-to-know-in-2026",
@@ -7861,16 +7861,93 @@
       "sceneType": "stadium",
       "geoHints": [],
       "visualType": "photo",
-      "editorialFitScore": 100,
+      "editorialFitScore": 98,
       "firstSeenAt": "2026-04-01T17:44:20.569Z",
       "lastFetchedAt": "2026-04-01T17:44:20.569Z",
       "lastUsedAt": "2026-04-01T17:44:20.569Z",
       "useCount": 1,
       "status": "ready",
       "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pixabay:6688945",
+      "provider": "pixabay",
+      "providerAssetId": "6688945",
+      "sourcePageUrl": "https://pixabay.com/photos/real-estate-homeownership-homebuying-6688945/",
+      "sourceDownloadUrl": "https://pixabay.com/get/gcae87c55ed22630c69d8187bc3646cddeecdb469c051ebf01161b27f6b18b07841ad0b3744b77f86206b5508ce3cb13f3c752883bcf844baa619129f41da2197_1280.jpg",
+      "authorName": "OleksandrPidvalnyi",
+      "authorUrl": "https://pixabay.com/users/OleksandrPidvalnyi-4638469/",
+      "license": "Pixabay Content License",
+      "altText": "real estate, homeownership, homebuying, home, house, mortgage, investment, property, home insurance, home loan, apartment, housing, concept, real estate, real estate, real estate, real estate, real estate, mortgage, property",
+      "width": 6000,
+      "height": 4000,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pixabay/6688945/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pixabay/6688945/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pixabay/6688945/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "Business"
+      ],
+      "queryHistory": [
+        "Crypto mortgage photo"
+      ],
+      "tags": [
+        "crypto-bitcoin",
+        "Unspecified",
+        "unspecified",
+        "crypto",
+        "real estate",
+        "homeownership",
+        "homebuying",
+        "home",
+        "house",
+        "mortgage",
+        "investment",
+        "property",
+        "home insurance",
+        "home loan",
+        "apartment",
+        "housing",
+        "concept"
+      ],
+      "topicHints": [
+        "crypto-bitcoin"
+      ],
+      "entityHints": [
+        "real",
+        "estate",
+        "homeownership",
+        "homebuying",
+        "home",
+        "house",
+        "mortgage",
+        "investment"
+      ],
+      "sceneType": "office",
+      "geoHints": [],
+      "visualType": "photo",
+      "editorialFitScore": 100,
+      "firstSeenAt": "2026-04-01T20:56:17.175Z",
+      "lastFetchedAt": "2026-04-01T20:56:17.175Z",
+      "lastUsedAt": "2026-04-01T20:56:17.175Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
     }
   ],
   "usage": [
+    {
+      "assetKey": "pixabay:6688945",
+      "articleSlug": "crypto-mortgages-explained-what-to-know-before-using-crypto-",
+      "articleTitle": "Crypto mortgages, explained: what to know before using crypto for a home",
+      "section": "Business",
+      "topicId": "crypto-bitcoin",
+      "query": "Crypto mortgage photo",
+      "usedAt": "2026-04-01T20:56:17.175Z",
+      "selectionMode": "provider_download_new:pixabay:strong:strict"
+    },
     {
       "assetKey": "pexels:34760021",
       "articleSlug": "manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ",
@@ -8675,6 +8752,6 @@
   "maintenance": {
     "lastLegacyImportAt": "2026-03-26T18:24:48.254Z",
     "lastCooldownBackfillAt": null,
-    "lastMetadataEnrichmentAt": "2026-04-01T12:09:21.868Z"
+    "lastMetadataEnrichmentAt": "2026-04-01T20:56:16.677Z"
   }
 }

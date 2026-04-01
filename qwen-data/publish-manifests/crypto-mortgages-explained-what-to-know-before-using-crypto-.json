@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-01T20:56:17.214Z",
+  "event_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+  "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+  "article_type": "explainer",
+  "title": "Crypto mortgages, explained: what to know before using crypto for a home",
+  "slug": "crypto-mortgages-explained-what-to-know-before-using-crypto-",
+  "canonical_slug": "2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto",
+  "expected_url": "/article/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto.mdx",
+  "published_at": "2026-04-01T20:56:17.212Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "crypto-bitcoin",
+  "topic_label": "Crypto",
+  "subsection": "Crypto",
+  "topics": [
+    "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+    "Crypto"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/6688945/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/6688945/cover.jpg",
+    "source_url": "https://pixabay.com/photos/real-estate-homeownership-homebuying-6688945/",
+    "asset_key": "pixabay:6688945",
+    "alt_text": "real estate, homeownership, homebuying, home, house, mortgage, investment, property, home insurance, home loan, apartment, housing, concept, real estate, real estate, real estate, real estate, real estate, mortgage, property",
+    "selection_mode": "provider_download_new:pixabay:strong:strict",
+    "query_used": "Crypto mortgage photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Crypto",
+    "Mortgages",
+    "Explainer"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "Buying a home with crypto? Here's what no one tells you before you ...",
+        "url": "https://m.economictimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+        "domain": "m.economictimes.com"
+      },
+      {
+        "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+        "url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+        "domain": "economictimes.indiatimes.com"
+      },
+      {
+        "title": "crypto trading fees explained - Crypto Venture Deal Flow Report",
+        "url": "https://www.afsin.bel.tr/crypto/en/crypto-trading-fees-explained",
+        "domain": "afsin.bel.tr"
+      },
+      {
+        "title": "Fannie Mae accepts first crypto",
+        "url": "https://www.cnbc.com/2026/03/26/fannie-mae-accepts-first-crypto-backed-mortgage-product.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "One publish-ready source has weak title overlap with the article title"
+    ],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Fannie Mae accepts first crypto",
+          "url": "https://www.cnbc.com/2026/03/26/fannie-mae-accepts-first-crypto-backed-mortgage-product.html",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "crypto"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "crypto-bitcoin",
+          "label": "Crypto",
+          "type": "topic"
+        },
+        {
+          "slug": "mortgages",
+          "label": "Mortgages",
+          "type": "theme"
+        },
+        {
+          "slug": "explainer",
+          "label": "Explainer",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "crypto-bitcoin",
+        "topic_label": "Crypto",
+        "supported": true,
+        "matched_aliases": [
+          "Crypto"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Crypto mortgage photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "crypto",
+        "mortgage"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

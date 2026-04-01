@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-04-01T12:09:24.482Z",
+  "timestamp": "2026-04-01T20:56:17.294Z",
   "success": true,
   "hard_blocker": null,
-  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in.mdx",
-  "verified_url": "/article/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in",
+  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto.mdx",
+  "verified_url": "/article/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto",
   "stages": {
     "discovery": {
       "stage": "discovery",
       "success": true,
       "error": null,
       "data": {
-        "candidatesCount": 35,
-        "discoveredPoolTotal": 204,
+        "candidatesCount": 24,
+        "discoveredPoolTotal": 188,
         "queryUsage": {
-          "brave": 6,
+          "brave": 7,
           "google": 2,
           "gdelt": 1,
-          "total": 9
+          "total": 10
         },
         "targetedCoverage": {
-          "triggered": false,
+          "triggered": true,
           "reason": "recent_section_imbalance:health:0_vs_5",
           "section_id": "health",
           "topic_id": "public-health",
@@ -27,17 +27,17 @@
           "recent_sample_size": 10,
           "section_counts": {
             "news": 5,
-            "business": 2,
+            "business": 1,
             "tech": 1,
             "health": 0,
-            "sports": 2,
+            "sports": 3,
             "culture": 0
           },
           "viable_in_target_section_before": 3,
-          "viable_in_target_section_after": 0,
-          "viable_share_before": 0.273,
-          "viable_share_after": 0,
-          "skipped_reason": "target_section_viable_ok:count=3:share=0.273"
+          "viable_in_target_section_after": 3,
+          "viable_share_before": 0.214,
+          "viable_share_after": 0.214,
+          "skipped_reason": null
         }
       }
     },
@@ -59,12 +59,6 @@
           {
             "attempt": "initial",
             "source_packs_assembled": 15,
-            "publishable_candidates": 0,
-            "selected_candidates": 0
-          },
-          {
-            "attempt": "retry_1_cheap_refresh",
-            "source_packs_assembled": 15,
             "publishable_candidates": 1,
             "selected_candidates": 1
           }
@@ -76,135 +70,72 @@
           "maxTokenBudget": 0
         },
         "sourcePackSelectionCandidateLimit": 6,
-        "retryDiagnostics": [
-          {
-            "attempt": 1,
-            "phase": "cheap_refresh",
-            "status": "ran",
-            "discovery_candidates": 9,
-            "normalized_briefs": 5,
-            "selected_candidates": 1,
-            "source_pack_attempt": {
-              "attempt": "retry_1_cheap_refresh",
-              "source_packs_assembled": 15,
-              "publishable_candidates": 1,
-              "selected_candidates": 1
-            },
-            "query_usage": {
-              "brave": 0,
-              "google": 2,
-              "gdelt": 1,
-              "total": 3
-            },
-            "estimated_tokens": 4500
-          }
-        ],
+        "retryDiagnostics": [],
         "retryUsage": {
-          "external_queries": 3,
+          "external_queries": 0,
           "brave_queries": 0,
-          "estimated_tokens": 4500
+          "estimated_tokens": 0
         },
         "selectedCount": 1,
         "selectedTopics": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
-            "eventId": "evt-2026-04-01-news-general-israel-israel",
-            "sources": 3,
-            "uniqueDomains": 3,
-            "section_id": "news",
-            "topic_id": null,
+            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+            "eventId": "evt-2026-03-30-crypto-bitcoin-general-global",
+            "sources": 4,
+            "uniqueDomains": 4,
+            "section_id": "business",
+            "topic_id": "crypto-bitcoin",
             "gate_notes": [
               "Role-aware one-event source-pack gate passed"
             ],
             "stage3_editorial_gate": {
-              "editorial_valid": true,
+              "editorial_valid": null,
               "blocking_errors": [],
               "warnings": []
             }
           }
         ],
         "readyCandidates": {
-          "readyCount": 1,
-          "additionalReadyCandidates": [
+          "readyCount": 0,
+          "additionalReadyCandidates": [],
+          "selectedCandidates": [
             {
               "identityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
               "briefId": "evt-2026-03-30-crypto-bitcoin-general-global",
-              "title": "MAHA fans want action Trump hasn't delivered",
-              "normalizedTitle": "maha fans want action trump hasn t delivered",
+              "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+              "normalizedTitle": "crypto mortgage explained buying home crypto here s what no one tells you you make move",
               "section_id": "business",
               "topic_id": "crypto-bitcoin",
-              "articleType": "report",
-              "selectionOrigin": "current_run",
-              "poolIdentityKey": null,
-              "rank": 2,
-              "score": 50.2,
-              "scoreNotes": [
-                "section_penalty:9",
-                "topic_penalty:3",
-                "region_penalty:44",
-                "angle_penalty:35",
-                "cluster_repeat:1",
-                "entity_penalty:30",
-                "domains:2",
-                "consistency:6.7",
-                "core:3",
-                "supporting:0"
-              ],
-              "sourceCount": 3,
-              "uniqueDomains": 2,
-              "directEventSourceCount": 3,
-              "independentEventDomains": 2,
-              "gateDecision": "PASS",
-              "gateNotes": [
-                "Role-aware one-event source-pack gate passed"
-              ],
-              "discoveredAt": "2026-03-30T23:18:43.039Z",
-              "firstQueuedAt": "2026-03-30T23:19:53.820Z",
-              "lastQueuedAt": "2026-03-30T23:19:53.820Z",
-              "status": "ready",
-              "lastSelectedAt": null,
-              "lastPublishedAt": null,
-              "publishedSlug": null
-            }
-          ],
-          "selectedCandidates": [
-            {
-              "identityKey": "cluster:evt-2026-04-01-news-general-israel-israel",
-              "briefId": "evt-2026-04-01-news-general-israel-israel",
-              "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
-              "normalizedTitle": "israel passes law to give death penalty to palestinians convicted of",
-              "section_id": "news",
-              "topic_id": null,
-              "articleType": "report",
-              "selectionOrigin": "pool",
-              "poolIdentityKey": "cluster:evt-2026-04-01-news-general-israel-israel",
+              "articleType": "analysis",
+              "selectionOrigin": "ready_backlog",
+              "poolIdentityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
               "rank": 1,
-              "score": 64.5,
+              "score": 75,
               "scoreNotes": [
-                "section_penalty:24",
-                "topic_penalty:29",
-                "region_penalty:3",
-                "angle_penalty:2",
+                "section_penalty:10",
+                "topic_penalty:5",
+                "region_penalty:50",
+                "angle_penalty:43",
                 "cluster_repeat:1",
-                "entity_penalty:4",
-                "domains:3",
-                "consistency:8.3",
+                "entity_penalty:33",
+                "domains:4",
+                "consistency:9.4",
                 "core:3",
-                "supporting:0"
+                "supporting:1"
               ],
-              "sourceCount": 3,
-              "uniqueDomains": 3,
-              "directEventSourceCount": 3,
-              "independentEventDomains": 3,
+              "sourceCount": 4,
+              "uniqueDomains": 4,
+              "directEventSourceCount": 4,
+              "independentEventDomains": 4,
               "gateDecision": "PASS",
               "gateNotes": [
                 "Role-aware one-event source-pack gate passed"
               ],
-              "discoveredAt": "2026-04-01T12:08:20.477Z",
-              "firstQueuedAt": "2026-04-01T12:09:00.206Z",
-              "lastQueuedAt": "2026-04-01T12:09:00.206Z",
+              "discoveredAt": "2026-03-30T23:55:33.331Z",
+              "firstQueuedAt": "2026-03-30T23:19:53.820Z",
+              "lastQueuedAt": "2026-04-01T20:55:41.469Z",
               "status": "selected",
-              "lastSelectedAt": "2026-04-01T12:09:00.206Z",
+              "lastSelectedAt": "2026-04-01T20:55:41.469Z",
               "lastPublishedAt": null,
               "publishedSlug": null,
               "selectedByWorkflow": null,
@@ -215,11 +146,11 @@
           ],
           "filePath": "/home/runner/work/foseer.com/foseer.com/qwen-data/events/ready-article-candidates.json",
           "selectedIdentityKeys": [
-            "cluster:evt-2026-04-01-news-general-israel-israel"
+            "cluster:evt-2026-03-30-crypto-bitcoin-general-global"
           ]
         },
         "duplicateRejectedCandidates": [],
-        "candidatesEvaluated": 12
+        "candidatesEvaluated": 1
       }
     },
     "preDraftPreparation": {
@@ -233,24 +164,24 @@
         "rejected": [],
         "items": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
             "success": true,
             "error": null,
             "data": {
-              "section_id": "news",
-              "topic_id": "world-geopolitics",
+              "section_id": "business",
+              "topic_id": "crypto-bitcoin",
               "tags": [
-                "World & Geopolitics",
-                "Diplomacy",
-                "Israel"
+                "Crypto",
+                "Mortgages"
               ],
               "tag_slugs": [
-                "world-geopolitics",
-                "diplomacy",
-                "israel"
+                "crypto-bitcoin",
+                "mortgages"
               ],
               "thin_tag_set_before_draft": false,
-              "warnings": []
+              "warnings": [
+                "Canonical tag set is below target floor (3), accepted due sparse evidence"
+              ]
             }
           }
         ]
@@ -266,7 +197,7 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
             "success": true,
             "error": null,
             "data": {
@@ -289,12 +220,12 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
             "success": true,
             "error": null,
             "data": {
-              "wordCount": 1145,
-              "articleType": "report",
+              "wordCount": 1697,
+              "articleType": "explainer",
               "quality": "strong",
               "safeForPublishing": true
             }
@@ -312,12 +243,12 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
             "success": true,
             "error": null,
             "data": {
-              "provider": "fallback",
-              "imagePath": "~/assets/images/posts/fallback/foseer-default-cover.svg",
+              "provider": "pixabay",
+              "imagePath": "~/assets/images/library/pixabay/6688945/cover.jpg",
               "hasAltText": true
             }
           }
@@ -334,17 +265,17 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
             "success": true,
             "error": null,
             "data": {
-              "filename": "2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in.mdx",
-              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in.mdx",
-              "canonicalSlug": "2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in",
-              "expectedUrl": "/article/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in",
-              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/israel-approves-death-penalty-law-targeting-palestinians-in-.json",
-              "section_id": "news",
-              "topic_id": "world-geopolitics"
+              "filename": "2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto.mdx",
+              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto.mdx",
+              "canonicalSlug": "2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto",
+              "expectedUrl": "/article/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto",
+              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/crypto-mortgages-explained-what-to-know-before-using-crypto-.json",
+              "section_id": "business",
+              "topic_id": "crypto-bitcoin"
             }
           }
         ]
@@ -360,13 +291,13 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
+            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
             "success": true,
             "error": null,
             "data": {
               "skipped": true,
               "reason": "CI environment: localhost verification skipped; publish + build checks passed",
-              "expectedUrl": "/article/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in"
+              "expectedUrl": "/article/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto"
             }
           }
         ]
@@ -375,287 +306,2838 @@
   },
   "selected": {
     "brief": {
-      "id": "evt-2026-04-01-news-general-israel-israel",
-      "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
-      "whatHappened": "2 days ago ... Israel has rarely used the death penalty, applying it only in exceptional cases.",
-      "whoIsInvolved": "israel",
+      "id": "evt-2026-03-30-crypto-bitcoin-general-global",
+      "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+      "whatHappened": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+      "whoIsInvolved": "Unspecified",
       "involvedParties": [
-        "israel"
+        "Unspecified"
       ],
       "entities": [
-        "israel"
+        "Unspecified"
       ],
-      "when": "2026-03-30T19:29:35.000Z",
-      "where": "israel",
-      "whyItMatters": "The development could affect international security, diplomacy, or energy markets as the situation develops.",
-      "developmentStage": "developing",
+      "when": "5 hours ago",
+      "where": "Not specified",
+      "whyItMatters": "The development could shape public services, public policy, or institutional decision-making.",
+      "developmentStage": "breaking",
       "sourceUrls": [
-        "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
-        "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/"
+        "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+        "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+        "https://www.wsj.com/economy/central-banking/rba-board-members-harper-hewson-to-deliver-public-speeches-in-coming-months-804d04b2?gaa_at=eafs&gaa_n=AWEtsqeVsHk9VWwsV0uuc3PVzuhmSqB4QhF32HAgp--kn6H0sTmExiTLUerM&gaa_ts=69cade0b&gaa_sig=MfKo95mqMoZpJ1Zek0CRGu0hwfQ68iSHt3E37OyRp5rfTMDTnlMndu93NaYacKPcUZTQFrmbbYGjsqnL7mX6aA%3D%3D",
+        "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
+        "https://www.economist.com/topics/finance-and-economics?after=d211d2f5-dc21-49e0-a014-6d88f81c7e1f",
+        "https://www.foxbusiness.com/media/delta-ceo-ed-bastian-rips-lawmakers-lack-leadership-dhs-shutdown",
+        "https://www.themarketsdaily.com/2026/03/30/honey-badger-silver-cvetuf-stock-price-up-13-6-time-to-buy.html",
+        "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163",
+        "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines",
+        "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next",
+        "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
+        "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162",
+        "https://www.theglobeandmail.com/investing/markets/stocks/CUE/pressreleases/1013060/cue-biopharma-announces-ceo-transition/",
+        "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
+        "https://bitcoinmagazine.com/news/crypto-stocks-near-a-bottom-after-selling",
+        "https://www.bloomberg.com/businessweek",
+        "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
+        "https://www.nytimes.com/topic/don-lemon"
       ],
       "publishabilityScore": 10,
       "publishabilityNotes": [
         "Has a usable summary sentence",
-        "Specific parties are identified",
-        "Fresh enough for same-day editorial use",
+        "Parties remain unclear",
+        "Very fresh development",
         "Multiple source URLs already attached",
         "Clustered across multiple discovery hits",
         "Cluster contains multiple article-like materials",
+        "Taxonomy topic match is specific enough for routing",
         "At least one trusted source hit is present"
       ],
-      "discoveredAt": "2026-04-01T12:08:20.477Z",
-      "provider": "google_trusted",
-      "section_id": "news",
-      "topic_id": "world-geopolitics",
-      "region": "israel",
-      "angle": "conflict",
-      "cluster_id": "evt-2026-04-01-news-general-israel-israel",
-      "eventKey": "2026-04-01:news-general-israel-israel",
-      "cluster_size": 2,
-      "article_rich_count": 2,
-      "generic_page_count": 0,
+      "discoveredAt": "2026-03-30T23:55:33.331Z",
+      "provider": "brave",
+      "section_id": "business",
+      "topic_id": "crypto-bitcoin",
+      "region": "global",
+      "angle": "general",
+      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+      "eventKey": "2026-03-30:crypto-bitcoin-general-global",
+      "cluster_size": 7,
+      "article_rich_count": 6,
+      "generic_page_count": 1,
       "discoveryContext": [
         {
-          "id": "google-sec-1775045300458-2",
-          "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
-          "summary": "2 days ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
+          "id": "brave-sec-1774901865856-0",
+          "title": "Intellectia",
+          "summary": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
           "whyItMatters": "",
-          "involvedParties": [
-            "israel"
-          ],
-          "entities": [
-            "israel"
-          ],
-          "when": "2026-03-30T19:29:35.000Z",
+          "involvedParties": [],
+          "entities": [],
+          "when": "8 hours ago",
           "sourceUrls": [
-            "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists"
+            "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis"
           ],
-          "freshness": 5,
-          "urgency": 4,
-          "discoveredAt": "2026-04-01T12:08:20.461Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:news",
+          "freshness": 8,
+          "urgency": 6,
+          "discoveredAt": "2026-03-30T20:17:45.872Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:business",
           "sectionCandidates": [
+            "business",
+            "tech"
+          ],
+          "topicCandidates": [
+            "crypto-bitcoin",
+            "ai-big-tech"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": "crypto-bitcoin",
+          "region": "global",
+          "angle": "markets",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 2,
+          "article_likelihood": 8,
+          "normalizedTitle": "intellectia",
+          "canonicalUrl": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "discoveryScore": 18.4,
+          "eventKey": "crypto-bitcoin:intellectia",
+          "source_id": "brave-sec-1774901865856-0",
+          "url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "canonical_url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "domain": "intellectia.ai",
+          "canonical_domain": "intellectia.ai",
+          "normalized_title": "intellectia",
+          "snippet": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
+          "published_at": "8 hours ago",
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "section_candidates": [
+            "business",
+            "tech"
+          ],
+          "topic_candidates": [
+            "crypto-bitcoin",
+            "ai-big-tech"
+          ],
+          "cluster_id": null,
+          "event_key": "crypto-bitcoin:intellectia",
+          "keywords": [
+            "intellectia",
+            "cryptocurrency",
+            "market",
+            "sending",
+            "contradictory",
+            "signals",
+            "left",
+            "investors",
+            "both",
+            "nervous",
+            "curious",
+            "bitcoin"
+          ],
+          "title_signal_tokens": [
+            "intellectia"
+          ],
+          "url_signal_tokens": [
+            "blog",
+            "crypto",
+            "market",
+            "crash",
+            "bitcoin",
+            "rebound"
+          ],
+          "title_url_overlap": 0,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "intellectia"
+          ]
+        },
+        {
+          "id": "brave-sec-1774901865872-1",
+          "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+          "summary": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "1 hour ago",
+          "sourceUrls": [
+            "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms"
+          ],
+          "freshness": 9,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T20:17:45.882Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:business",
+          "sectionCandidates": [
+            "business",
             "news"
           ],
-          "topicCandidates": [],
-          "detectedSectionId": "news",
-          "detectedTopicId": null,
-          "region": "israel",
-          "angle": "conflict",
+          "topicCandidates": [
+            "crypto-bitcoin"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": "crypto-bitcoin",
+          "region": "global",
+          "angle": "policy",
           "genericPage": false,
           "page_kind": "article",
           "genericity_score": 0,
           "article_likelihood": 8,
-          "normalizedTitle": "israel passes law to give death penalty to palestinians convicted of",
-          "canonicalUrl": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
-          "discoveryScore": 13.4,
-          "targetedCoverage": false,
-          "eventKey": "news:israel passes law to give death penalty to palestinians convicted of",
-          "signalSpecificityScore": 5,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "google-sec-1775045300458-2",
-          "url": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
-          "canonical_url": "https://www.theguardian.com/world/2026/mar/30/israel-passes-law-death-penalty-palestinian-convicted-terrorists",
-          "domain": "theguardian.com",
-          "canonical_domain": "theguardian.com",
-          "normalized_title": "israel passes law to give death penalty to palestinians convicted of",
-          "snippet": "2 days ago ... Israel has rarely used the death penalty, applying it only in exceptional cases. The Nazi war criminal Adolf Eichmann was the last person to be executed, in ...",
-          "published_at": "2026-03-30T19:29:35.000Z",
-          "section_id": "news",
-          "topic_id": null,
+          "normalizedTitle": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move the econom",
+          "canonicalUrl": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "discoveryScore": 17.4,
+          "eventKey": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
+          "source_id": "brave-sec-1774901865872-1",
+          "url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "canonical_url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "domain": "economictimes.indiatimes.com",
+          "canonical_domain": "economictimes.indiatimes.com",
+          "normalized_title": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move",
+          "snippet": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+          "published_at": "1 hour ago",
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
           "section_candidates": [
+            "business",
             "news"
           ],
-          "topic_candidates": [],
+          "topic_candidates": [
+            "crypto-bitcoin"
+          ],
           "cluster_id": null,
-          "event_key": "news:israel passes law to give death penalty to palestinians convicted of",
+          "event_key": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
           "keywords": [
-            "israel",
-            "passes",
-            "give",
-            "death",
-            "penalty",
-            "palestinians",
-            "convicted",
-            "days",
-            "rarely",
-            "used",
-            "applying",
-            "only"
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move",
+            "explore"
           ],
           "title_signal_tokens": [
-            "israel",
-            "passes",
-            "give",
-            "death",
-            "penalty",
-            "palestinians",
-            "convicted"
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move"
           ],
           "url_signal_tokens": [
-            "israel",
-            "passes",
-            "death",
-            "penalty",
-            "palestinian",
-            "convicted",
-            "terrorists"
+            "international",
+            "buying",
+            "home",
+            "crypto",
+            "heres",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move",
+            "articleshow"
           ],
-          "title_url_overlap": 0.7142857142857143,
+          "title_url_overlap": 0.7272727272727273,
           "title_url_mismatch": false,
           "source_quality_score": 0,
           "action": "general",
-          "place": "israel",
+          "place": "global",
           "titleTokens": [
-            "israel",
-            "passes",
-            "give",
-            "death",
-            "penalty",
-            "palestinians",
-            "convicted"
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move"
           ]
         },
         {
-          "id": "google-sec-1775045300474-9",
-          "title": "Israel passes death penalty law for Palestinians convicted ...",
-          "summary": "2 days ago ... \"Such laws and measures will not break the will of the Palestinian people or undermine their steadfastness,\" Abbas' office said in a statement. \"Nor will they ...",
+          "id": "google-sec-1774901895563-5",
+          "title": "RBA Board Members to Deliver Public Speeches, Breaking ...",
+          "summary": "18 hours ago ... SYDNEY—The Reserve Bank of Australia has approved two public-speaking events by external members of its policy-setting board, breaking with past practice where ...",
           "whyItMatters": "",
-          "involvedParties": [
-            "israel"
-          ],
-          "entities": [
-            "israel"
-          ],
-          "when": "2026-03-30T13:20:45.675Z",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
           "sourceUrls": [
-            "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/"
+            "https://www.wsj.com/economy/central-banking/rba-board-members-harper-hewson-to-deliver-public-speeches-in-coming-months-804d04b2?gaa_at=eafs&gaa_n=AWEtsqeVsHk9VWwsV0uuc3PVzuhmSqB4QhF32HAgp--kn6H0sTmExiTLUerM&gaa_ts=69cade0b&gaa_sig=MfKo95mqMoZpJ1Zek0CRGu0hwfQ68iSHt3E37OyRp5rfTMDTnlMndu93NaYacKPcUZTQFrmbbYGjsqnL7mX6aA%3D%3D"
           ],
-          "freshness": 5,
-          "urgency": 4,
-          "discoveredAt": "2026-04-01T12:08:20.477Z",
+          "freshness": 4,
+          "urgency": 6,
+          "discoveredAt": "2026-03-30T20:18:15.567Z",
           "provider": "google_trusted",
           "trustedSource": true,
           "discoveryLane": "google:news",
           "sectionCandidates": [
+            "business",
+            "sports",
+            "news"
+          ],
+          "topicCandidates": [
+            "economy-markets",
+            "events-tournaments"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "australia",
+          "angle": "policy",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 2,
+          "article_likelihood": 8,
+          "normalizedTitle": "rba board members to deliver public speeches breaking wsj",
+          "canonicalUrl": "https://www.wsj.com/economy/central-banking/rba-board-members-harper-hewson-to-deliver-public-speeches-in-coming-months-804d04b2",
+          "discoveryScore": 15.4,
+          "eventKey": "business:rba board members to deliver public speeches breaking wsj",
+          "source_id": "google-sec-1774901895563-5",
+          "url": "https://www.wsj.com/economy/central-banking/rba-board-members-harper-hewson-to-deliver-public-speeches-in-coming-months-804d04b2",
+          "canonical_url": "https://www.wsj.com/economy/central-banking/rba-board-members-harper-hewson-to-deliver-public-speeches-in-coming-months-804d04b2",
+          "domain": "wsj.com",
+          "canonical_domain": "wsj.com",
+          "normalized_title": "rba board members to deliver public speeches",
+          "snippet": "18 hours ago ... SYDNEY—The Reserve Bank of Australia has approved two public-speaking events by external members of its policy-setting board, breaking with past practice where ...",
+          "published_at": "2026-03-30T20:18:15.567Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business",
+            "sports",
+            "news"
+          ],
+          "topic_candidates": [
+            "economy-markets",
+            "events-tournaments"
+          ],
+          "cluster_id": null,
+          "event_key": "business:rba board members to deliver public speeches breaking wsj",
+          "keywords": [
+            "board",
+            "members",
+            "deliver",
+            "public",
+            "speeches",
+            "hours",
+            "sydney",
+            "reserve",
+            "bank",
+            "australia",
+            "approved",
+            "speaking"
+          ],
+          "title_signal_tokens": [
+            "board",
+            "members",
+            "deliver",
+            "public",
+            "speeches"
+          ],
+          "url_signal_tokens": [
+            "economy",
+            "central",
+            "banking",
+            "board",
+            "members",
+            "harper",
+            "hewson",
+            "deliver",
+            "public",
+            "speeches",
+            "coming",
+            "months"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "australia",
+          "titleTokens": [
+            "board",
+            "members",
+            "deliver",
+            "public",
+            "speeches"
+          ]
+        },
+        {
+          "id": "google-sec-1774901895551-1",
+          "title": "Constantino's sticky ad spending problem",
+          "summary": "10 hours ago ... Greenberger has spent the past two years as POLITICO's Executive Vice President, where he built a team of top journalists and newsroom leaders and lifted the ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T20:18:15.555Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:news",
+          "sectionCandidates": [
+            "business",
             "news"
           ],
           "topicCandidates": [],
-          "detectedSectionId": "news",
+          "detectedSectionId": "business",
           "detectedTopicId": null,
-          "region": "israel",
+          "region": "global",
           "angle": "general",
           "genericPage": false,
-          "page_kind": "official_release",
-          "genericity_score": 1,
-          "article_likelihood": 8,
-          "normalizedTitle": "israel passes death penalty law for palestinians convicted reuters",
-          "canonicalUrl": "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/",
-          "discoveryScore": 13.4,
-          "targetedCoverage": false,
-          "eventKey": "news:israel passes death penalty law for palestinians convicted reuters",
-          "signalSpecificityScore": 5,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "google-sec-1775045300474-9",
-          "url": "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/",
-          "canonical_url": "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/",
-          "domain": "reuters.com",
-          "canonical_domain": "reuters.com",
-          "normalized_title": "israel passes death penalty law for palestinians convicted",
-          "snippet": "2 days ago ... \"Such laws and measures will not break the will of the Palestinian people or undermine their steadfastness,\" Abbas' office said in a statement. \"Nor will they ...",
-          "published_at": "2026-03-30T13:20:45.675Z",
-          "section_id": "news",
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 10,
+          "normalizedTitle": "constantino s sticky ad spending problem politico",
+          "canonicalUrl": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
+          "discoveryScore": 14.6,
+          "eventKey": "business:constantino s sticky ad spending problem politico",
+          "source_id": "google-sec-1774901895551-1",
+          "url": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
+          "canonical_url": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
+          "domain": "politico.com",
+          "canonical_domain": "politico.com",
+          "normalized_title": "constantino s sticky ad spending problem",
+          "snippet": "10 hours ago ... Greenberger has spent the past two years as POLITICO's Executive Vice President, where he built a team of top journalists and newsroom leaders and lifted the ...",
+          "published_at": "2026-03-30T20:18:15.555Z",
+          "section_id": "business",
           "topic_id": null,
           "section_candidates": [
+            "business",
             "news"
           ],
           "topic_candidates": [],
           "cluster_id": null,
-          "event_key": "news:israel passes death penalty law for palestinians convicted reuters",
+          "event_key": "business:constantino s sticky ad spending problem politico",
           "keywords": [
-            "israel",
-            "passes",
-            "death",
-            "penalty",
-            "palestinians",
-            "convicted",
-            "days",
-            "such",
-            "laws",
-            "measures",
-            "break",
-            "palestinian"
+            "constantino",
+            "sticky",
+            "spending",
+            "problem",
+            "hours",
+            "greenberger",
+            "spent",
+            "past",
+            "years",
+            "politico",
+            "executive",
+            "vice"
           ],
           "title_signal_tokens": [
-            "israel",
-            "passes",
-            "death",
-            "penalty",
-            "palestinians",
-            "convicted"
+            "constantino",
+            "sticky",
+            "spending",
+            "problem"
           ],
           "url_signal_tokens": [
-            "middle",
-            "east",
-            "israeli",
-            "death",
-            "penalty",
-            "bill",
-            "palestinian",
-            "murder",
-            "convicts",
-            "faces",
-            "vote"
+            "newsletters",
+            "york",
+            "playbook",
+            "candidates",
+            "were",
+            "paid",
+            "campaign"
           ],
-          "title_url_overlap": 0.3333333333333333,
+          "title_url_overlap": 0,
+          "title_url_mismatch": true,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "constantino",
+            "sticky",
+            "spending",
+            "problem"
+          ]
+        },
+        {
+          "id": "google-sec-1774901895594-6",
+          "title": "Finance & economics | Latest news and analysis from The Economist",
+          "summary": "1 day ago ... ... consumer prices. 3 min read. Finance & economics. Chinese companies suffer an intense cash crunch in offshore bond markets. Spreads on junk bonds are at their ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.economist.com/topics/finance-and-economics?after=d211d2f5-dc21-49e0-a014-6d88f81c7e1f"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T20:18:15.596Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:business",
+          "sectionCandidates": [
+            "business",
+            "news"
+          ],
+          "topicCandidates": [
+            "economy-markets",
+            "companies-deals"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": true,
+          "page_kind": "topic",
+          "genericity_score": 8,
+          "article_likelihood": 0,
+          "normalizedTitle": "finance economics latest news and analysis from the economist",
+          "canonicalUrl": "https://www.economist.com/topics/finance-and-economics",
+          "discoveryScore": 8,
+          "eventKey": "business:finance economics latest news and analysis from the economist",
+          "source_id": "google-sec-1774901895594-6",
+          "url": "https://www.economist.com/topics/finance-and-economics",
+          "canonical_url": "https://www.economist.com/topics/finance-and-economics",
+          "domain": "economist.com",
+          "canonical_domain": "economist.com",
+          "normalized_title": "finance economics news and from the economist",
+          "snippet": "1 day ago ... ... consumer prices. 3 min read. Finance & economics. Chinese companies suffer an intense cash crunch in offshore bond markets. Spreads on junk bonds are at their ...",
+          "published_at": "2026-03-30T20:18:15.596Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business",
+            "news"
+          ],
+          "topic_candidates": [
+            "economy-markets",
+            "companies-deals"
+          ],
+          "cluster_id": null,
+          "event_key": "business:finance economics latest news and analysis from the economist",
+          "keywords": [
+            "finance",
+            "economics",
+            "economist",
+            "consumer",
+            "prices",
+            "read",
+            "chinese",
+            "companies",
+            "suffer",
+            "intense",
+            "cash",
+            "crunch"
+          ],
+          "title_signal_tokens": [
+            "finance",
+            "economics",
+            "economist"
+          ],
+          "url_signal_tokens": [
+            "topics",
+            "finance",
+            "economics"
+          ],
+          "title_url_overlap": 0.6666666666666666,
           "title_url_mismatch": false,
           "source_quality_score": 0,
           "action": "general",
-          "place": "israel",
+          "place": "global",
           "titleTokens": [
-            "israel",
-            "passes",
-            "death",
-            "penalty",
-            "palestinians",
-            "convicted"
+            "finance",
+            "economics",
+            "analysis",
+            "economist"
+          ]
+        },
+        {
+          "id": "brave-sec-1774908172491-0",
+          "title": "Intellectia",
+          "summary": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "10 hours ago",
+          "sourceUrls": [
+            "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis"
+          ],
+          "freshness": 7,
+          "urgency": 6,
+          "discoveredAt": "2026-03-30T22:02:52.497Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:business",
+          "sectionCandidates": [
+            "business",
+            "tech"
+          ],
+          "topicCandidates": [
+            "crypto-bitcoin",
+            "ai-big-tech"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": "crypto-bitcoin",
+          "region": "global",
+          "angle": "markets",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 2,
+          "article_likelihood": 8,
+          "normalizedTitle": "intellectia",
+          "canonicalUrl": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "discoveryScore": 17.4,
+          "eventKey": "crypto-bitcoin:intellectia",
+          "source_id": "brave-sec-1774908172491-0",
+          "url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "canonical_url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "domain": "intellectia.ai",
+          "canonical_domain": "intellectia.ai",
+          "normalized_title": "intellectia",
+          "snippet": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
+          "published_at": "10 hours ago",
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "section_candidates": [
+            "business",
+            "tech"
+          ],
+          "topic_candidates": [
+            "crypto-bitcoin",
+            "ai-big-tech"
+          ],
+          "cluster_id": null,
+          "event_key": "crypto-bitcoin:intellectia",
+          "keywords": [
+            "intellectia",
+            "cryptocurrency",
+            "market",
+            "sending",
+            "contradictory",
+            "signals",
+            "left",
+            "investors",
+            "both",
+            "nervous",
+            "curious",
+            "bitcoin"
+          ],
+          "title_signal_tokens": [
+            "intellectia"
+          ],
+          "url_signal_tokens": [
+            "blog",
+            "crypto",
+            "market",
+            "crash",
+            "bitcoin",
+            "rebound"
+          ],
+          "title_url_overlap": 0,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "intellectia"
+          ]
+        },
+        {
+          "id": "brave-sec-1774908172497-1",
+          "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+          "summary": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "3 hours ago",
+          "sourceUrls": [
+            "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms"
+          ],
+          "freshness": 9,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T22:02:52.502Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:business",
+          "sectionCandidates": [
+            "business",
+            "news"
+          ],
+          "topicCandidates": [
+            "crypto-bitcoin"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": "crypto-bitcoin",
+          "region": "global",
+          "angle": "policy",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move the econom",
+          "canonicalUrl": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "discoveryScore": 17.4,
+          "eventKey": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
+          "source_id": "brave-sec-1774908172497-1",
+          "url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "canonical_url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "domain": "economictimes.indiatimes.com",
+          "canonical_domain": "economictimes.indiatimes.com",
+          "normalized_title": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move",
+          "snippet": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+          "published_at": "3 hours ago",
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "section_candidates": [
+            "business",
+            "news"
+          ],
+          "topic_candidates": [
+            "crypto-bitcoin"
+          ],
+          "cluster_id": null,
+          "event_key": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
+          "keywords": [
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move",
+            "explore"
+          ],
+          "title_signal_tokens": [
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move"
+          ],
+          "url_signal_tokens": [
+            "international",
+            "buying",
+            "home",
+            "crypto",
+            "heres",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move",
+            "articleshow"
+          ],
+          "title_url_overlap": 0.7272727272727273,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move"
+          ]
+        },
+        {
+          "id": "gdelt-sec-1774908214199-4",
+          "title": "Delta CEO Ed Bastian rips lawmakers for lack of leadership in DHS shutdown",
+          "summary": "",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "20260330T213000Z",
+          "sourceUrls": [
+            "https://www.foxbusiness.com/media/delta-ceo-ed-bastian-rips-lawmakers-lack-leadership-dhs-shutdown"
+          ],
+          "freshness": 4,
+          "urgency": 6,
+          "discoveredAt": "2026-03-30T22:03:34.201Z",
+          "provider": "gdelt",
+          "trustedSource": false,
+          "discoveryLane": "gdelt:business",
+          "sectionCandidates": [
+            "business"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "policy",
+          "genericPage": false,
+          "page_kind": "official_release",
+          "genericity_score": 1,
+          "article_likelihood": 7,
+          "normalizedTitle": "delta ceo ed bastian rips lawmakers for lack of leadership in dhs shutdown",
+          "canonicalUrl": "https://www.foxbusiness.com/media/delta-ceo-ed-bastian-rips-lawmakers-lack-leadership-dhs-shutdown",
+          "discoveryScore": 11.8,
+          "eventKey": "business:delta ceo ed bastian rips lawmakers for lack of leadership in dhs shutdown",
+          "source_id": "gdelt-sec-1774908214199-4",
+          "url": "https://www.foxbusiness.com/media/delta-ceo-ed-bastian-rips-lawmakers-lack-leadership-dhs-shutdown",
+          "canonical_url": "https://www.foxbusiness.com/media/delta-ceo-ed-bastian-rips-lawmakers-lack-leadership-dhs-shutdown",
+          "domain": "foxbusiness.com",
+          "canonical_domain": "foxbusiness.com",
+          "normalized_title": "delta ceo ed bastian rips lawmakers for lack of leadership in dhs shutdown",
+          "snippet": "",
+          "published_at": "20260330T213000Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "business:delta ceo ed bastian rips lawmakers for lack of leadership in dhs shutdown",
+          "keywords": [
+            "delta",
+            "bastian",
+            "rips",
+            "lawmakers",
+            "lack",
+            "leadership",
+            "shutdown"
+          ],
+          "title_signal_tokens": [
+            "delta",
+            "bastian",
+            "rips",
+            "lawmakers",
+            "lack",
+            "leadership",
+            "shutdown"
+          ],
+          "url_signal_tokens": [
+            "media",
+            "delta",
+            "bastian",
+            "rips",
+            "lawmakers",
+            "lack",
+            "leadership",
+            "shutdown"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "shutdown",
+          "place": "global",
+          "titleTokens": [
+            "delta",
+            "bastian",
+            "rips",
+            "lawmakers",
+            "lack",
+            "leadership",
+            "shutdown"
+          ]
+        },
+        {
+          "id": "gdelt-sec-1774908214193-2",
+          "title": "Honey Badger Silver ( CVE : TUF ) Stock Price Up 13 . 6 %",
+          "summary": "",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "20260330T213000Z",
+          "sourceUrls": [
+            "https://www.themarketsdaily.com/2026/03/30/honey-badger-silver-cvetuf-stock-price-up-13-6-time-to-buy.html"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T22:03:34.196Z",
+          "provider": "gdelt",
+          "trustedSource": false,
+          "discoveryLane": "gdelt:business",
+          "sectionCandidates": [
+            "business"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 10,
+          "normalizedTitle": "honey badger silver cve tuf stock price up 13 6 time to buy",
+          "canonicalUrl": "https://www.themarketsdaily.com/2026/03/30/honey-badger-silver-cvetuf-stock-price-up-13-6-time-to-buy.html",
+          "discoveryScore": 11.6,
+          "eventKey": "business:honey badger silver cve tuf stock price up 13 6 time to buy",
+          "source_id": "gdelt-sec-1774908214193-2",
+          "url": "https://www.themarketsdaily.com/2026/03/30/honey-badger-silver-cvetuf-stock-price-up-13-6-time-to-buy.html",
+          "canonical_url": "https://www.themarketsdaily.com/2026/03/30/honey-badger-silver-cvetuf-stock-price-up-13-6-time-to-buy.html",
+          "domain": "themarketsdaily.com",
+          "canonical_domain": "themarketsdaily.com",
+          "normalized_title": "honey badger silver cve tuf stock price up 13 6",
+          "snippet": "",
+          "published_at": "20260330T213000Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "business:honey badger silver cve tuf stock price up 13 6 time to buy",
+          "keywords": [
+            "honey",
+            "badger",
+            "silver",
+            "stock",
+            "price"
+          ],
+          "title_signal_tokens": [
+            "honey",
+            "badger",
+            "silver",
+            "stock",
+            "price"
+          ],
+          "url_signal_tokens": [
+            "honey",
+            "badger",
+            "silver",
+            "cvetuf",
+            "stock",
+            "price",
+            "time"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "honey",
+            "badger",
+            "silver",
+            "stock",
+            "price"
+          ]
+        },
+        {
+          "id": "gdelt-sec-1774908214204-6",
+          "title": "Girl Scout cookie prices doubled since 2000 , analysis finds",
+          "summary": "",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "20260330T213000Z",
+          "sourceUrls": [
+            "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T22:03:34.206Z",
+          "provider": "gdelt",
+          "trustedSource": false,
+          "discoveryLane": "gdelt:business",
+          "sectionCandidates": [
+            "business"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "analysis",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "girl scout cookie prices doubled since 2000 analysis finds",
+          "canonicalUrl": "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163",
+          "discoveryScore": 10.4,
+          "eventKey": "business:girl scout cookie prices doubled since 2000 analysis finds",
+          "source_id": "gdelt-sec-1774908214204-6",
+          "url": "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163",
+          "canonical_url": "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163",
+          "domain": "wlky.com",
+          "canonical_domain": "wlky.com",
+          "normalized_title": "girl scout cookie prices doubled since 2000 finds",
+          "snippet": "",
+          "published_at": "20260330T213000Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "business:girl scout cookie prices doubled since 2000 analysis finds",
+          "keywords": [
+            "girl",
+            "scout",
+            "cookie",
+            "prices",
+            "doubled",
+            "since",
+            "2000",
+            "finds"
+          ],
+          "title_signal_tokens": [
+            "girl",
+            "scout",
+            "cookie",
+            "prices",
+            "doubled",
+            "since",
+            "2000",
+            "finds"
+          ],
+          "url_signal_tokens": [
+            "girl",
+            "scout",
+            "cookie",
+            "price",
+            "increase"
+          ],
+          "title_url_overlap": 0.6,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "girl",
+            "scout",
+            "cookie",
+            "prices",
+            "doubled",
+            "since",
+            "2000",
+            "analysis",
+            "finds"
+          ]
+        },
+        {
+          "id": "gdelt-sec-1774908214209-8",
+          "title": "Victorian property professionals face $12k fines",
+          "summary": "",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "20260330T213000Z",
+          "sourceUrls": [
+            "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T22:03:34.210Z",
+          "provider": "gdelt",
+          "trustedSource": false,
+          "discoveryLane": "gdelt:business",
+          "sectionCandidates": [
+            "business"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "victorian property professionals face 12k fines",
+          "canonicalUrl": "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines",
+          "discoveryScore": 10.4,
+          "eventKey": "business:victorian property professionals face 12k fines",
+          "source_id": "gdelt-sec-1774908214209-8",
+          "url": "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines",
+          "canonical_url": "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines",
+          "domain": "realestatebusiness.com.au",
+          "canonical_domain": "realestatebusiness.com.au",
+          "normalized_title": "victorian property professionals face 12k fines",
+          "snippet": "",
+          "published_at": "20260330T213000Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "business:victorian property professionals face 12k fines",
+          "keywords": [
+            "victorian",
+            "property",
+            "professionals",
+            "face",
+            "fines"
+          ],
+          "title_signal_tokens": [
+            "victorian",
+            "property",
+            "professionals",
+            "face",
+            "fines"
+          ],
+          "url_signal_tokens": [
+            "industry",
+            "victorian",
+            "property",
+            "professionals",
+            "face",
+            "fines"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "victorian",
+            "property",
+            "professionals",
+            "face",
+            "fines"
+          ]
+        },
+        {
+          "id": "gdelt-sec-1774908214210-9",
+          "title": "Figure skating season ends with redemption and heartbreak . What do fans watch next ?",
+          "summary": "",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "20260330T213000Z",
+          "sourceUrls": [
+            "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T22:03:34.212Z",
+          "provider": "gdelt",
+          "trustedSource": false,
+          "discoveryLane": "gdelt:business",
+          "sectionCandidates": [
+            "business"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "figure skating season ends with redemption and heartbreak what do fans watch next",
+          "canonicalUrl": "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next",
+          "discoveryScore": 10.4,
+          "eventKey": "business:figure skating season ends with redemption and heartbreak what do fans watch nex",
+          "source_id": "gdelt-sec-1774908214210-9",
+          "url": "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next",
+          "canonical_url": "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next",
+          "domain": "ideastream.org",
+          "canonical_domain": "ideastream.org",
+          "normalized_title": "figure skating season ends with redemption and heartbreak what do fans watch next",
+          "snippet": "",
+          "published_at": "20260330T213000Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "business:figure skating season ends with redemption and heartbreak what do fans watch nex",
+          "keywords": [
+            "figure",
+            "skating",
+            "season",
+            "ends",
+            "redemption",
+            "heartbreak",
+            "what",
+            "fans",
+            "watch",
+            "next"
+          ],
+          "title_signal_tokens": [
+            "figure",
+            "skating",
+            "season",
+            "ends",
+            "redemption",
+            "heartbreak",
+            "what",
+            "fans",
+            "next"
+          ],
+          "url_signal_tokens": [
+            "figure",
+            "skating",
+            "season",
+            "ends",
+            "redemption",
+            "heartbreak",
+            "what",
+            "fans",
+            "next"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "figure",
+            "skating",
+            "season",
+            "ends",
+            "redemption",
+            "heartbreak",
+            "what",
+            "fans",
+            "watch",
+            "next"
+          ]
+        },
+        {
+          "id": "brave-sec-1774912717004-0",
+          "title": "Intellectia",
+          "summary": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "11 hours ago",
+          "sourceUrls": [
+            "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis"
+          ],
+          "freshness": 7,
+          "urgency": 6,
+          "discoveredAt": "2026-03-30T23:18:37.008Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:business",
+          "sectionCandidates": [
+            "business",
+            "tech"
+          ],
+          "topicCandidates": [
+            "crypto-bitcoin",
+            "ai-big-tech"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": "crypto-bitcoin",
+          "region": "global",
+          "angle": "markets",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 2,
+          "article_likelihood": 8,
+          "normalizedTitle": "intellectia",
+          "canonicalUrl": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "discoveryScore": 17.4,
+          "eventKey": "crypto-bitcoin:intellectia",
+          "source_id": "brave-sec-1774912717004-0",
+          "url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "canonical_url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "domain": "intellectia.ai",
+          "canonical_domain": "intellectia.ai",
+          "normalized_title": "intellectia",
+          "snippet": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
+          "published_at": "11 hours ago",
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "section_candidates": [
+            "business",
+            "tech"
+          ],
+          "topic_candidates": [
+            "crypto-bitcoin",
+            "ai-big-tech"
+          ],
+          "cluster_id": null,
+          "event_key": "crypto-bitcoin:intellectia",
+          "keywords": [
+            "intellectia",
+            "cryptocurrency",
+            "market",
+            "sending",
+            "contradictory",
+            "signals",
+            "left",
+            "investors",
+            "both",
+            "nervous",
+            "curious",
+            "bitcoin"
+          ],
+          "title_signal_tokens": [
+            "intellectia"
+          ],
+          "url_signal_tokens": [
+            "blog",
+            "crypto",
+            "market",
+            "crash",
+            "bitcoin",
+            "rebound"
+          ],
+          "title_url_overlap": 0,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "intellectia"
+          ]
+        },
+        {
+          "id": "brave-sec-1774912717008-1",
+          "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+          "summary": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "4 hours ago",
+          "sourceUrls": [
+            "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms"
+          ],
+          "freshness": 8,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T23:18:37.013Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:business",
+          "sectionCandidates": [
+            "business",
+            "news"
+          ],
+          "topicCandidates": [
+            "crypto-bitcoin"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": "crypto-bitcoin",
+          "region": "global",
+          "angle": "policy",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move the econom",
+          "canonicalUrl": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "discoveryScore": 16.4,
+          "eventKey": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
+          "source_id": "brave-sec-1774912717008-1",
+          "url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "canonical_url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "domain": "economictimes.indiatimes.com",
+          "canonical_domain": "economictimes.indiatimes.com",
+          "normalized_title": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move",
+          "snippet": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+          "published_at": "4 hours ago",
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "section_candidates": [
+            "business",
+            "news"
+          ],
+          "topic_candidates": [
+            "crypto-bitcoin"
+          ],
+          "cluster_id": null,
+          "event_key": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
+          "keywords": [
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move",
+            "explore"
+          ],
+          "title_signal_tokens": [
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move"
+          ],
+          "url_signal_tokens": [
+            "international",
+            "buying",
+            "home",
+            "crypto",
+            "heres",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move",
+            "articleshow"
+          ],
+          "title_url_overlap": 0.7272727272727273,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move"
+          ]
+        },
+        {
+          "id": "google-sec-1774912722996-1",
+          "title": "MAHA fans want action Trump hasn't delivered",
+          "summary": "1 day ago ... A supermajority of American adults favor challenging big pharmaceutical companies, according to a new POLITICO poll, but they're closely divided on which ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T23:18:42.998Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:health",
+          "sectionCandidates": [
+            "business",
+            "health"
+          ],
+          "topicCandidates": [
+            "companies-deals"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 10,
+          "normalizedTitle": "maha fans want action trump hasn t delivered politico",
+          "canonicalUrl": "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
+          "discoveryScore": 14.6,
+          "eventKey": "business:maha fans want action trump hasn t delivered politico",
+          "source_id": "google-sec-1774912722996-1",
+          "url": "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
+          "canonical_url": "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
+          "domain": "politico.com",
+          "canonical_domain": "politico.com",
+          "normalized_title": "maha fans want action trump hasn t delivered",
+          "snippet": "1 day ago ... A supermajority of American adults favor challenging big pharmaceutical companies, according to a new POLITICO poll, but they're closely divided on which ...",
+          "published_at": "2026-03-30T23:18:42.998Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business",
+            "health"
+          ],
+          "topic_candidates": [
+            "companies-deals"
+          ],
+          "cluster_id": null,
+          "event_key": "business:maha fans want action trump hasn t delivered politico",
+          "keywords": [
+            "maha",
+            "fans",
+            "want",
+            "action",
+            "trump",
+            "hasn",
+            "delivered",
+            "supermajority",
+            "american",
+            "adults",
+            "favor",
+            "challenging"
+          ],
+          "title_signal_tokens": [
+            "maha",
+            "fans",
+            "want",
+            "action",
+            "trump",
+            "hasn",
+            "delivered"
+          ],
+          "url_signal_tokens": [
+            "newsletters",
+            "prescription",
+            "pulse",
+            "maha",
+            "fans",
+            "want",
+            "action",
+            "trump",
+            "hasnt",
+            "delivered"
+          ],
+          "title_url_overlap": 0.8571428571428571,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "maha",
+            "fans",
+            "want",
+            "action",
+            "trump",
+            "hasn",
+            "delivered"
+          ]
+        },
+        {
+          "id": "google-sec-1774912723001-3",
+          "title": "MAHA fans want action Trump hasn't delivered",
+          "summary": "1 day ago ... The Make America Healthy Again movement joined forces with Republicans in 2024, helping hand Donald Trump the presidency. The midterms might look different.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T23:18:43.004Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:health",
+          "sectionCandidates": [
+            "health"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "health",
+          "detectedTopicId": null,
+          "region": "us",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 10,
+          "normalizedTitle": "maha fans want action trump hasn t delivered politico",
+          "canonicalUrl": "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162",
+          "discoveryScore": 13.6,
+          "eventKey": "health:maha fans want action trump hasn t delivered politico",
+          "source_id": "google-sec-1774912723001-3",
+          "url": "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162",
+          "canonical_url": "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162",
+          "domain": "politico.com",
+          "canonical_domain": "politico.com",
+          "normalized_title": "maha fans want action trump hasn t delivered",
+          "snippet": "1 day ago ... The Make America Healthy Again movement joined forces with Republicans in 2024, helping hand Donald Trump the presidency. The midterms might look different.",
+          "published_at": "2026-03-30T23:18:43.004Z",
+          "section_id": "health",
+          "topic_id": null,
+          "section_candidates": [
+            "health"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "health:maha fans want action trump hasn t delivered politico",
+          "keywords": [
+            "maha",
+            "fans",
+            "want",
+            "action",
+            "trump",
+            "hasn",
+            "delivered",
+            "make",
+            "america",
+            "healthy",
+            "again",
+            "movement"
+          ],
+          "title_signal_tokens": [
+            "maha",
+            "fans",
+            "want",
+            "action",
+            "trump",
+            "hasn",
+            "delivered"
+          ],
+          "url_signal_tokens": [
+            "newsletters",
+            "politico",
+            "pulse",
+            "maha",
+            "fans",
+            "want",
+            "action",
+            "trump",
+            "hasnt",
+            "delivered"
+          ],
+          "title_url_overlap": 0.8571428571428571,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "us",
+          "titleTokens": [
+            "maha",
+            "fans",
+            "want",
+            "action",
+            "trump",
+            "hasn",
+            "delivered"
+          ]
+        },
+        {
+          "id": "google-sec-1774912723036-6",
+          "title": "Finance & economics | Latest news and analysis from The Economist",
+          "summary": "1 day ago ... ... consumer prices. 3 min read. Finance & economics. Chinese companies suffer an intense cash crunch in offshore bond markets. Spreads on junk bonds are at their ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.economist.com/topics/finance-and-economics?after=d211d2f5-dc21-49e0-a014-6d88f81c7e1f"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T23:18:43.039Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:business",
+          "sectionCandidates": [
+            "business",
+            "news"
+          ],
+          "topicCandidates": [
+            "economy-markets",
+            "companies-deals"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": true,
+          "page_kind": "topic",
+          "genericity_score": 8,
+          "article_likelihood": 0,
+          "normalizedTitle": "finance economics latest news and analysis from the economist",
+          "canonicalUrl": "https://www.economist.com/topics/finance-and-economics",
+          "discoveryScore": 8,
+          "eventKey": "business:finance economics latest news and analysis from the economist",
+          "source_id": "google-sec-1774912723036-6",
+          "url": "https://www.economist.com/topics/finance-and-economics",
+          "canonical_url": "https://www.economist.com/topics/finance-and-economics",
+          "domain": "economist.com",
+          "canonical_domain": "economist.com",
+          "normalized_title": "finance economics news and from the economist",
+          "snippet": "1 day ago ... ... consumer prices. 3 min read. Finance & economics. Chinese companies suffer an intense cash crunch in offshore bond markets. Spreads on junk bonds are at their ...",
+          "published_at": "2026-03-30T23:18:43.039Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business",
+            "news"
+          ],
+          "topic_candidates": [
+            "economy-markets",
+            "companies-deals"
+          ],
+          "cluster_id": null,
+          "event_key": "business:finance economics latest news and analysis from the economist",
+          "keywords": [
+            "finance",
+            "economics",
+            "economist",
+            "consumer",
+            "prices",
+            "read",
+            "chinese",
+            "companies",
+            "suffer",
+            "intense",
+            "cash",
+            "crunch"
+          ],
+          "title_signal_tokens": [
+            "finance",
+            "economics",
+            "economist"
+          ],
+          "url_signal_tokens": [
+            "topics",
+            "finance",
+            "economics"
+          ],
+          "title_url_overlap": 0.6666666666666666,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "finance",
+            "economics",
+            "analysis",
+            "economist"
+          ]
+        },
+        {
+          "id": "brave-sec-1774913080440-0",
+          "title": "Intellectia",
+          "summary": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "12 hours ago",
+          "sourceUrls": [
+            "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis"
+          ],
+          "freshness": 7,
+          "urgency": 6,
+          "discoveredAt": "2026-03-30T23:24:40.443Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:business",
+          "sectionCandidates": [
+            "business",
+            "tech"
+          ],
+          "topicCandidates": [
+            "crypto-bitcoin",
+            "ai-big-tech"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": "crypto-bitcoin",
+          "region": "global",
+          "angle": "markets",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 2,
+          "article_likelihood": 8,
+          "normalizedTitle": "intellectia",
+          "canonicalUrl": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "discoveryScore": 17.4,
+          "eventKey": "crypto-bitcoin:intellectia",
+          "source_id": "brave-sec-1774913080440-0",
+          "url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "canonical_url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "domain": "intellectia.ai",
+          "canonical_domain": "intellectia.ai",
+          "normalized_title": "intellectia",
+          "snippet": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
+          "published_at": "12 hours ago",
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "section_candidates": [
+            "business",
+            "tech"
+          ],
+          "topic_candidates": [
+            "crypto-bitcoin",
+            "ai-big-tech"
+          ],
+          "cluster_id": null,
+          "event_key": "crypto-bitcoin:intellectia",
+          "keywords": [
+            "intellectia",
+            "cryptocurrency",
+            "market",
+            "sending",
+            "contradictory",
+            "signals",
+            "left",
+            "investors",
+            "both",
+            "nervous",
+            "curious",
+            "bitcoin"
+          ],
+          "title_signal_tokens": [
+            "intellectia"
+          ],
+          "url_signal_tokens": [
+            "blog",
+            "crypto",
+            "market",
+            "crash",
+            "bitcoin",
+            "rebound"
+          ],
+          "title_url_overlap": 0,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "intellectia"
+          ]
+        },
+        {
+          "id": "google-sec-1774913092456-3",
+          "title": "Cue Biopharma Announces CEO Transition",
+          "summary": "1 day ago ... (Nasdaq: CUE), a clinical-stage biopharmaceutical company developing a novel class of therapeutic biologics to selectively engage and modulate disease-specific ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.theglobeandmail.com/investing/markets/stocks/CUE/pressreleases/1013060/cue-biopharma-announces-ceo-transition/"
+          ],
+          "freshness": 4,
+          "urgency": 8,
+          "discoveredAt": "2026-03-30T23:24:52.458Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:health",
+          "sectionCandidates": [
+            "business",
+            "health"
+          ],
+          "topicCandidates": [
+            "economy-markets"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "cue biopharma announces ceo transition the globe and mail",
+          "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/cue/pressreleases/1013060/cue-biopharma-announces-ceo-transition/",
+          "discoveryScore": 17.4,
+          "eventKey": "business:cue biopharma announces ceo transition the globe and mail",
+          "source_id": "google-sec-1774913092456-3",
+          "url": "https://www.theglobeandmail.com/investing/markets/stocks/cue/pressreleases/1013060/cue-biopharma-announces-ceo-transition/",
+          "canonical_url": "https://www.theglobeandmail.com/investing/markets/stocks/cue/pressreleases/1013060/cue-biopharma-announces-ceo-transition/",
+          "domain": "theglobeandmail.com",
+          "canonical_domain": "theglobeandmail.com",
+          "normalized_title": "cue biopharma announces ceo transition",
+          "snippet": "1 day ago ... (Nasdaq: CUE), a clinical-stage biopharmaceutical company developing a novel class of therapeutic biologics to selectively engage and modulate disease-specific ...",
+          "published_at": "2026-03-30T23:24:52.458Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business",
+            "health"
+          ],
+          "topic_candidates": [
+            "economy-markets"
+          ],
+          "cluster_id": null,
+          "event_key": "business:cue biopharma announces ceo transition the globe and mail",
+          "keywords": [
+            "biopharma",
+            "announces",
+            "transition",
+            "nasdaq",
+            "clinical",
+            "stage",
+            "biopharmaceutical",
+            "company",
+            "developing",
+            "novel",
+            "class",
+            "therapeutic"
+          ],
+          "title_signal_tokens": [
+            "biopharma",
+            "announces",
+            "transition"
+          ],
+          "url_signal_tokens": [
+            "investing",
+            "markets",
+            "stocks",
+            "pressreleases",
+            "biopharma",
+            "announces",
+            "transition"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "biopharma",
+            "announces",
+            "transition"
+          ]
+        },
+        {
+          "id": "brave-sec-1774913080443-1",
+          "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+          "summary": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "4 hours ago",
+          "sourceUrls": [
+            "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms"
+          ],
+          "freshness": 8,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T23:24:40.446Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:business",
+          "sectionCandidates": [
+            "business",
+            "news"
+          ],
+          "topicCandidates": [
+            "crypto-bitcoin"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": "crypto-bitcoin",
+          "region": "global",
+          "angle": "policy",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move the econom",
+          "canonicalUrl": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "discoveryScore": 16.4,
+          "eventKey": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
+          "source_id": "brave-sec-1774913080443-1",
+          "url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "canonical_url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "domain": "economictimes.indiatimes.com",
+          "canonical_domain": "economictimes.indiatimes.com",
+          "normalized_title": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move",
+          "snippet": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+          "published_at": "4 hours ago",
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "section_candidates": [
+            "business",
+            "news"
+          ],
+          "topic_candidates": [
+            "crypto-bitcoin"
+          ],
+          "cluster_id": null,
+          "event_key": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
+          "keywords": [
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move",
+            "explore"
+          ],
+          "title_signal_tokens": [
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move"
+          ],
+          "url_signal_tokens": [
+            "international",
+            "buying",
+            "home",
+            "crypto",
+            "heres",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move",
+            "articleshow"
+          ],
+          "title_url_overlap": 0.7272727272727273,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move"
+          ]
+        },
+        {
+          "id": "gdelt-sec-1774913092478-7",
+          "title": "Jim Cramer on Paychex : This Is a Stock That Strangely Has Been Crushed By AI Disruption Worries , I Think Theyre Overbl",
+          "summary": "",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "20260329T004500Z",
+          "sourceUrls": [
+            "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T23:24:52.480Z",
+          "provider": "gdelt",
+          "trustedSource": false,
+          "discoveryLane": "gdelt:sports",
+          "sectionCandidates": [
+            "business",
+            "tech",
+            "sports"
+          ],
+          "topicCandidates": [
+            "economy-markets",
+            "ai-big-tech"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "jim cramer on paychex this is a stock that strangely has been crushed by ai disruption worries i think theyre overbl",
+          "canonicalUrl": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
+          "discoveryScore": 11.4,
+          "eventKey": "business:jim cramer on paychex this is a stock that strangely has been crushed by ai disr",
+          "source_id": "gdelt-sec-1774913092478-7",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
+          "canonical_url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
+          "domain": "finance.yahoo.com",
+          "canonical_domain": "finance.yahoo.com",
+          "normalized_title": "jim cramer on paychex this is a stock that strangely has been crushed by ai disruption worries i think theyre overbl",
+          "snippet": "",
+          "published_at": "20260329T004500Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business",
+            "tech",
+            "sports"
+          ],
+          "topic_candidates": [
+            "economy-markets",
+            "ai-big-tech"
+          ],
+          "cluster_id": null,
+          "event_key": "business:jim cramer on paychex this is a stock that strangely has been crushed by ai disr",
+          "keywords": [
+            "cramer",
+            "paychex",
+            "stock",
+            "strangely",
+            "been",
+            "crushed",
+            "disruption",
+            "worries",
+            "think",
+            "theyre",
+            "overbl"
+          ],
+          "title_signal_tokens": [
+            "cramer",
+            "paychex",
+            "stock",
+            "strangely",
+            "been",
+            "crushed",
+            "disruption",
+            "worries",
+            "think",
+            "theyre",
+            "overbl"
+          ],
+          "url_signal_tokens": [
+            "markets",
+            "stocks",
+            "cramer",
+            "paychex",
+            "stock",
+            "strangely"
+          ],
+          "title_url_overlap": 0.6666666666666666,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "cramer",
+            "paychex",
+            "stock",
+            "strangely",
+            "been",
+            "crushed",
+            "disruption",
+            "worries",
+            "think",
+            "theyre",
+            "overbl"
+          ]
+        },
+        {
+          "id": "brave-sec-1774914906279-0",
+          "title": "Intellectia",
+          "summary": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "12 hours ago",
+          "sourceUrls": [
+            "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis"
+          ],
+          "freshness": 7,
+          "urgency": 6,
+          "discoveredAt": "2026-03-30T23:55:06.284Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:business",
+          "sectionCandidates": [
+            "business",
+            "tech"
+          ],
+          "topicCandidates": [
+            "crypto-bitcoin",
+            "ai-big-tech"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": "crypto-bitcoin",
+          "region": "global",
+          "angle": "markets",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 2,
+          "article_likelihood": 8,
+          "normalizedTitle": "intellectia",
+          "canonicalUrl": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "discoveryScore": 17.4,
+          "eventKey": "crypto-bitcoin:intellectia",
+          "source_id": "brave-sec-1774914906279-0",
+          "url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "canonical_url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "domain": "intellectia.ai",
+          "canonical_domain": "intellectia.ai",
+          "normalized_title": "intellectia",
+          "snippet": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
+          "published_at": "12 hours ago",
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "section_candidates": [
+            "business",
+            "tech"
+          ],
+          "topic_candidates": [
+            "crypto-bitcoin",
+            "ai-big-tech"
+          ],
+          "cluster_id": null,
+          "event_key": "crypto-bitcoin:intellectia",
+          "keywords": [
+            "intellectia",
+            "cryptocurrency",
+            "market",
+            "sending",
+            "contradictory",
+            "signals",
+            "left",
+            "investors",
+            "both",
+            "nervous",
+            "curious",
+            "bitcoin"
+          ],
+          "title_signal_tokens": [
+            "intellectia"
+          ],
+          "url_signal_tokens": [
+            "blog",
+            "crypto",
+            "market",
+            "crash",
+            "bitcoin",
+            "rebound"
+          ],
+          "title_url_overlap": 0,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "intellectia"
+          ]
+        },
+        {
+          "id": "brave-sec-1774914906284-1",
+          "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+          "summary": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "5 hours ago",
+          "sourceUrls": [
+            "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms"
+          ],
+          "freshness": 8,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T23:55:06.295Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:business",
+          "sectionCandidates": [
+            "business",
+            "news"
+          ],
+          "topicCandidates": [
+            "crypto-bitcoin"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": "crypto-bitcoin",
+          "region": "global",
+          "angle": "policy",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move the econom",
+          "canonicalUrl": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "discoveryScore": 16.4,
+          "eventKey": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
+          "source_id": "brave-sec-1774914906284-1",
+          "url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "canonical_url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+          "domain": "economictimes.indiatimes.com",
+          "canonical_domain": "economictimes.indiatimes.com",
+          "normalized_title": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move",
+          "snippet": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+          "published_at": "5 hours ago",
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "section_candidates": [
+            "business",
+            "news"
+          ],
+          "topic_candidates": [
+            "crypto-bitcoin"
+          ],
+          "cluster_id": null,
+          "event_key": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
+          "keywords": [
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move",
+            "explore"
+          ],
+          "title_signal_tokens": [
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move"
+          ],
+          "url_signal_tokens": [
+            "international",
+            "buying",
+            "home",
+            "crypto",
+            "heres",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move",
+            "articleshow"
+          ],
+          "title_url_overlap": 0.7272727272727273,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "crypto",
+            "mortgage",
+            "explained",
+            "buying",
+            "home",
+            "here",
+            "what",
+            "tells",
+            "before",
+            "make",
+            "move"
+          ]
+        },
+        {
+          "id": "brave-sec-1774914906302-4",
+          "title": "Crypto Stocks Near A Bottom After 60% Selloff: Analyst",
+          "summary": "Wall Street broker Bernstein says crypto-linked equities are approaching a cyclical bottom following a steep ~60% drawdown from 2025 highs",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "4 hours ago",
+          "sourceUrls": [
+            "https://bitcoinmagazine.com/news/crypto-stocks-near-a-bottom-after-selling"
+          ],
+          "freshness": 8,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T23:55:06.304Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:business",
+          "sectionCandidates": [
+            "business",
+            "news"
+          ],
+          "topicCandidates": [
+            "crypto-bitcoin"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": "crypto-bitcoin",
+          "region": "global",
+          "angle": "markets",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "crypto stocks near a bottom after 60 selloff analyst",
+          "canonicalUrl": "https://bitcoinmagazine.com/news/crypto-stocks-near-a-bottom-after-selling",
+          "discoveryScore": 16.4,
+          "eventKey": "crypto-bitcoin:crypto stocks near a bottom after 60 selloff analyst",
+          "source_id": "brave-sec-1774914906302-4",
+          "url": "https://bitcoinmagazine.com/news/crypto-stocks-near-a-bottom-after-selling",
+          "canonical_url": "https://bitcoinmagazine.com/news/crypto-stocks-near-a-bottom-after-selling",
+          "domain": "bitcoinmagazine.com",
+          "canonical_domain": "bitcoinmagazine.com",
+          "normalized_title": "crypto stocks near a bottom after 60 selloff analyst",
+          "snippet": "Wall Street broker Bernstein says crypto-linked equities are approaching a cyclical bottom following a steep ~60% drawdown from 2025 highs",
+          "published_at": "4 hours ago",
+          "section_id": "business",
+          "topic_id": "crypto-bitcoin",
+          "section_candidates": [
+            "business",
+            "news"
+          ],
+          "topic_candidates": [
+            "crypto-bitcoin"
+          ],
+          "cluster_id": null,
+          "event_key": "crypto-bitcoin:crypto stocks near a bottom after 60 selloff analyst",
+          "keywords": [
+            "crypto",
+            "stocks",
+            "near",
+            "bottom",
+            "selloff",
+            "analyst",
+            "wall",
+            "street",
+            "broker",
+            "bernstein",
+            "linked",
+            "equities"
+          ],
+          "title_signal_tokens": [
+            "crypto",
+            "stocks",
+            "near",
+            "bottom",
+            "selloff",
+            "analyst"
+          ],
+          "url_signal_tokens": [
+            "crypto",
+            "stocks",
+            "near",
+            "bottom",
+            "selling"
+          ],
+          "title_url_overlap": 0.8,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "crypto",
+            "stocks",
+            "near",
+            "bottom",
+            "selloff",
+            "analyst"
+          ]
+        },
+        {
+          "id": "google-sec-1774914924267-3",
+          "title": "Bloomberg Businessweek",
+          "summary": "17 hours ago ... Bloomberg Businessweek helps global leaders stay ahead with insights and in-depth analysis on the people, companies, events, and trends shaping today's ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.bloomberg.com/businessweek"
+          ],
+          "freshness": 4,
+          "urgency": 5,
+          "discoveredAt": "2026-03-30T23:55:24.269Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:culture",
+          "sectionCandidates": [
+            "business",
+            "sports",
+            "culture"
+          ],
+          "topicCandidates": [
+            "companies-deals",
+            "events-tournaments"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "analysis",
+          "genericity_score": 0,
+          "article_likelihood": 7,
+          "normalizedTitle": "bloomberg businessweek",
+          "canonicalUrl": "https://www.bloomberg.com/businessweek",
+          "discoveryScore": 13.8,
+          "eventKey": "business:bloomberg businessweek",
+          "source_id": "google-sec-1774914924267-3",
+          "url": "https://www.bloomberg.com/businessweek",
+          "canonical_url": "https://www.bloomberg.com/businessweek",
+          "domain": "bloomberg.com",
+          "canonical_domain": "bloomberg.com",
+          "normalized_title": "bloomberg businessweek",
+          "snippet": "17 hours ago ... Bloomberg Businessweek helps global leaders stay ahead with insights and in-depth analysis on the people, companies, events, and trends shaping today's ...",
+          "published_at": "2026-03-30T23:55:24.269Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business",
+            "sports",
+            "culture"
+          ],
+          "topic_candidates": [
+            "companies-deals",
+            "events-tournaments"
+          ],
+          "cluster_id": null,
+          "event_key": "business:bloomberg businessweek",
+          "keywords": [
+            "bloomberg",
+            "businessweek",
+            "hours",
+            "helps",
+            "global",
+            "leaders",
+            "stay",
+            "ahead",
+            "insights",
+            "depth",
+            "analysis",
+            "people"
+          ],
+          "title_signal_tokens": [
+            "bloomberg",
+            "businessweek"
+          ],
+          "url_signal_tokens": [
+            "businessweek"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "bloomberg",
+            "businessweek"
+          ]
+        },
+        {
+          "id": "google-sec-1774914924291-3",
+          "title": "2026 Donald J. Trump Executive Orders",
+          "summary": "22 hours ago ... Once received, OFR gives presidential documents priority processing and documents will appear on public inspection the business day before publication. These 26 ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T23:55:24.294Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:news",
+          "sectionCandidates": [
+            "business",
+            "news"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "official_release",
+          "genericity_score": 1,
+          "article_likelihood": 7,
+          "normalizedTitle": "2026 donald j trump executive orders federal register",
+          "canonicalUrl": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
+          "discoveryScore": 12.8,
+          "eventKey": "business:2026 donald j trump executive orders federal register",
+          "source_id": "google-sec-1774914924291-3",
+          "url": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
+          "canonical_url": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
+          "domain": "federalregister.gov",
+          "canonical_domain": "federalregister.gov",
+          "normalized_title": "2026 donald j trump executive orders",
+          "snippet": "22 hours ago ... Once received, OFR gives presidential documents priority processing and documents will appear on public inspection the business day before publication. These 26 ...",
+          "published_at": "2026-03-30T23:55:24.294Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business",
+            "news"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "business:2026 donald j trump executive orders federal register",
+          "keywords": [
+            "2026",
+            "donald",
+            "trump",
+            "executive",
+            "orders",
+            "hours",
+            "once",
+            "received",
+            "gives",
+            "presidential",
+            "documents",
+            "priority"
+          ],
+          "title_signal_tokens": [
+            "2026",
+            "donald",
+            "trump",
+            "executive",
+            "orders"
+          ],
+          "url_signal_tokens": [
+            "presidential",
+            "documents",
+            "executive",
+            "orders",
+            "donald",
+            "trump"
+          ],
+          "title_url_overlap": 0.8,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "2026",
+            "donald",
+            "trump",
+            "executive",
+            "orders"
+          ]
+        },
+        {
+          "id": "gdelt-sec-1774914933329-7",
+          "title": "Jim Cramer on Paychex : This Is a Stock That Strangely Has Been Crushed By AI Disruption Worries , I Think Theyre Overbl",
+          "summary": "",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "20260329T004500Z",
+          "sourceUrls": [
+            "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T23:55:33.331Z",
+          "provider": "gdelt",
+          "trustedSource": false,
+          "discoveryLane": "gdelt:sports",
+          "sectionCandidates": [
+            "business",
+            "tech",
+            "sports"
+          ],
+          "topicCandidates": [
+            "economy-markets",
+            "ai-big-tech"
+          ],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "jim cramer on paychex this is a stock that strangely has been crushed by ai disruption worries i think theyre overbl",
+          "canonicalUrl": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
+          "discoveryScore": 11.4,
+          "eventKey": "business:jim cramer on paychex this is a stock that strangely has been crushed by ai disr",
+          "source_id": "gdelt-sec-1774914933329-7",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
+          "canonical_url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
+          "domain": "finance.yahoo.com",
+          "canonical_domain": "finance.yahoo.com",
+          "normalized_title": "jim cramer on paychex this is a stock that strangely has been crushed by ai disruption worries i think theyre overbl",
+          "snippet": "",
+          "published_at": "20260329T004500Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business",
+            "tech",
+            "sports"
+          ],
+          "topic_candidates": [
+            "economy-markets",
+            "ai-big-tech"
+          ],
+          "cluster_id": null,
+          "event_key": "business:jim cramer on paychex this is a stock that strangely has been crushed by ai disr",
+          "keywords": [
+            "cramer",
+            "paychex",
+            "stock",
+            "strangely",
+            "been",
+            "crushed",
+            "disruption",
+            "worries",
+            "think",
+            "theyre",
+            "overbl"
+          ],
+          "title_signal_tokens": [
+            "cramer",
+            "paychex",
+            "stock",
+            "strangely",
+            "been",
+            "crushed",
+            "disruption",
+            "worries",
+            "think",
+            "theyre",
+            "overbl"
+          ],
+          "url_signal_tokens": [
+            "markets",
+            "stocks",
+            "cramer",
+            "paychex",
+            "stock",
+            "strangely"
+          ],
+          "title_url_overlap": 0.6666666666666666,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "cramer",
+            "paychex",
+            "stock",
+            "strangely",
+            "been",
+            "crushed",
+            "disruption",
+            "worries",
+            "think",
+            "theyre",
+            "overbl"
+          ]
+        },
+        {
+          "id": "google-sec-1774914924274-6",
+          "title": "Don Lemon",
+          "summary": "2 days ago ... The former CNN anchor released a wide-ranging interview with the billionaire about business, politics, online hate speech and more.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.nytimes.com/topic/don-lemon"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-03-30T23:55:24.276Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:culture",
+          "sectionCandidates": [
+            "business",
+            "culture"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "product",
+          "genericPage": false,
+          "page_kind": "topic",
+          "genericity_score": 6,
+          "article_likelihood": 0,
+          "normalizedTitle": "don lemon the new york times",
+          "canonicalUrl": "https://www.nytimes.com/topic/don-lemon",
+          "discoveryScore": 10,
+          "eventKey": "business:don lemon the new york times",
+          "source_id": "google-sec-1774914924274-6",
+          "url": "https://www.nytimes.com/topic/don-lemon",
+          "canonical_url": "https://www.nytimes.com/topic/don-lemon",
+          "domain": "nytimes.com",
+          "canonical_domain": "nytimes.com",
+          "normalized_title": "don lemon",
+          "snippet": "2 days ago ... The former CNN anchor released a wide-ranging interview with the billionaire about business, politics, online hate speech and more.",
+          "published_at": "2026-03-30T23:55:24.276Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business",
+            "culture"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "business:don lemon the new york times",
+          "keywords": [
+            "lemon",
+            "days",
+            "former",
+            "anchor",
+            "released",
+            "wide",
+            "ranging",
+            "interview",
+            "billionaire",
+            "about",
+            "business",
+            "politics"
+          ],
+          "title_signal_tokens": [
+            "lemon"
+          ],
+          "url_signal_tokens": [
+            "topic",
+            "lemon"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "lemon"
           ]
         }
       ],
-      "poolIdentityKey": "cluster:evt-2026-04-01-news-general-israel-israel",
-      "selectionScore": 11.897274305555555,
+      "poolIdentityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
+      "selectionScore": 56.2,
       "selectionNotes": [
-        "section_penalty:23",
-        "topic_penalty:28",
-        "region_penalty:2",
-        "entity_penalty:3"
+        "section_penalty:9",
+        "topic_penalty:4",
+        "region_penalty:49",
+        "angle_penalty:42",
+        "entity_penalty:32",
+        "ready-backlog:2"
       ],
-      "readyCandidateStatus": null,
-      "readyCandidateRank": null,
-      "_selectionOrigin": "pool",
-      "section": "News",
-      "subsection": "Israel passes law to give death penalty to Palestinians convicted of ...",
+      "readyCandidateStatus": "ready",
+      "readyCandidateRank": 2,
+      "readyCandidateScore": 50.2,
+      "_selectionOrigin": "ready_backlog",
+      "section": "Business",
+      "subsection": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
       "topics": [
-        "Israel passes law to give death penalty to Palestinians convicted of ..."
+        "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move"
       ]
     },
     "sourcePack": {
-      "eventId": "evt-2026-04-01-news-general-israel-israel",
-      "topic": "Israel passes law to give death penalty to Palestinians convicted of ...",
-      "sources": 3,
-      "uniqueDomains": 3,
+      "eventId": "evt-2026-03-30-crypto-bitcoin-general-global",
+      "topic": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+      "sources": 4,
+      "uniqueDomains": 4,
       "credibilityScore": null,
       "passesGate": true,
       "gateNotes": [
@@ -664,22 +3146,22 @@
     }
   },
   "stats": {
-    "discovery_candidates": 35,
+    "discovery_candidates": 24,
     "event_clusters": 8,
-    "briefs_normalized": 11,
-    "source_packs_assembled": 30,
+    "briefs_normalized": 6,
+    "source_packs_assembled": 15,
     "publishable_candidates": 1,
-    "selected_topic": "Israel passes law to give death penalty to Palestinians convicted of ...",
+    "selected_topic": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
     "selected_topics": [
-      "Israel passes law to give death penalty to Palestinians convicted of ..."
+      "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move"
     ],
     "articles_attempted": 1,
     "articles_published": 1,
     "news_pool": {
-      "total": 66,
-      "active": 56,
-      "published": 10,
-      "ready_candidates": 1
+      "total": 60,
+      "active": 49,
+      "published": 11,
+      "ready_candidates": 0
     },
     "cache_stats": {
       "mode": "cache_refresh_with_live_quota",
@@ -698,8 +3180,8 @@
       },
       "live_usage": {
         "brave": 5,
-        "gdelt": 1,
-        "google": 1
+        "gdelt": 2,
+        "google": 2
       },
       "cache": {
         "ttl_hours": 8,
@@ -711,7 +3193,7 @@
             "fresh_files": 5,
             "expired_files": 0,
             "corrupt_files": 0,
-            "size_bytes": 63763
+            "size_bytes": 71098
           },
           "gdelt": {
             "files": 0,
@@ -721,11 +3203,11 @@
             "size_bytes": 0
           },
           "google": {
-            "files": 1,
-            "fresh_files": 1,
+            "files": 2,
+            "fresh_files": 2,
             "expired_files": 0,
             "corrupt_files": 0,
-            "size_bytes": 51276
+            "size_bytes": 60439
           }
         },
         "seed": {
@@ -753,35 +3235,35 @@
         }
       }
     },
-    "duration_ms": 94765,
-    "ready_candidates": 1,
-    "additional_ready_candidates": 1,
-    "source_pack_attempts": 2,
-    "source_pack_retry_external_queries": 3,
+    "duration_ms": 141294,
+    "ready_candidates": 0,
+    "additional_ready_candidates": 0,
+    "source_pack_attempts": 1,
+    "source_pack_retry_external_queries": 0,
     "source_pack_retry_brave_queries": 0,
-    "source_pack_retry_estimated_tokens": 4500,
+    "source_pack_retry_estimated_tokens": 0,
     "pre_draft_rejected": 0,
-    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-01T12-07-49-714Z.json"
+    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-01T20-53-55-997Z.json"
   },
-  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-01T12-07-49-714Z.json",
+  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-01T20-53-55-997Z.json",
   "published_paths": [
-    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in.mdx"
+    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto.mdx"
   ],
   "verified_urls": [
-    "/article/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in"
+    "/article/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto"
   ],
   "selected_candidates": [
     {
-      "title": "Israel passes law to give death penalty to Palestinians convicted of ...",
-      "topic": "Israel passes law to give death penalty to Palestinians convicted of ...",
-      "section_id": "news",
-      "topic_id": "world-geopolitics"
+      "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+      "topic": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+      "section_id": "business",
+      "topic_id": "crypto-bitcoin"
     }
   ],
   "published_articles": [
     {
-      "title": "Israel Approves Death Penalty Law Targeting Palestinians in Terror Cases",
-      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-israel-approves-death-penalty-law-targeting-palestinians-in.mdx",
+      "title": "Crypto mortgages, explained: what to know before using crypto for a home",
+      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto.mdx",
       "verifiedUrl": null
     }
   ]

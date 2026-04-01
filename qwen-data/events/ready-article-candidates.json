@@ -1,6 +1,50 @@
 {
-  "updatedAt": "2026-04-01T17:44:20.613Z",
+  "updatedAt": "2026-04-01T20:56:17.246Z",
   "items": [
+    {
+      "identityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
+      "briefId": "evt-2026-03-30-crypto-bitcoin-general-global",
+      "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+      "normalizedTitle": "crypto mortgage explained buying home crypto here s what no one tells you you make move",
+      "section_id": "business",
+      "topic_id": "crypto-bitcoin",
+      "articleType": "analysis",
+      "selectionOrigin": "ready_backlog",
+      "poolIdentityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
+      "rank": 1,
+      "score": 75,
+      "scoreNotes": [
+        "section_penalty:10",
+        "topic_penalty:5",
+        "region_penalty:50",
+        "angle_penalty:43",
+        "cluster_repeat:1",
+        "entity_penalty:33",
+        "domains:4",
+        "consistency:9.4",
+        "core:3",
+        "supporting:1"
+      ],
+      "sourceCount": 4,
+      "uniqueDomains": 4,
+      "directEventSourceCount": 4,
+      "independentEventDomains": 4,
+      "gateDecision": "PASS",
+      "gateNotes": [
+        "Role-aware one-event source-pack gate passed"
+      ],
+      "discoveredAt": "2026-03-30T23:55:33.331Z",
+      "firstQueuedAt": "2026-03-30T23:19:53.820Z",
+      "lastQueuedAt": "2026-04-01T20:56:17.230Z",
+      "status": "published",
+      "lastSelectedAt": "2026-04-01T20:56:17.230Z",
+      "lastPublishedAt": "2026-04-01T20:56:17.230Z",
+      "publishedSlug": "2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto",
+      "selectedByWorkflow": null,
+      "selectedByRunId": null,
+      "selectedAt": null,
+      "selectionExpiresAt": null
+    },
     {
       "identityKey": "cluster:evt-2026-04-01-news-general-israel-israel",
       "briefId": "evt-2026-04-01-news-general-israel-israel",
@@ -266,46 +310,6 @@
       "selectedByRunId": null,
       "selectedAt": null,
       "selectionExpiresAt": null
-    },
-    {
-      "identityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
-      "briefId": "evt-2026-03-30-crypto-bitcoin-general-global",
-      "title": "MAHA fans want action Trump hasn't delivered",
-      "normalizedTitle": "maha fans want action trump hasn t delivered",
-      "section_id": "business",
-      "topic_id": "crypto-bitcoin",
-      "articleType": "report",
-      "selectionOrigin": "current_run",
-      "poolIdentityKey": null,
-      "rank": 2,
-      "score": 50.2,
-      "scoreNotes": [
-        "section_penalty:9",
-        "topic_penalty:3",
-        "region_penalty:44",
-        "angle_penalty:35",
-        "cluster_repeat:1",
-        "entity_penalty:30",
-        "domains:2",
-        "consistency:6.7",
-        "core:3",
-        "supporting:0"
-      ],
-      "sourceCount": 3,
-      "uniqueDomains": 2,
-      "directEventSourceCount": 3,
-      "independentEventDomains": 2,
-      "gateDecision": "PASS",
-      "gateNotes": [
-        "Role-aware one-event source-pack gate passed"
-      ],
-      "discoveredAt": "2026-03-30T23:18:43.039Z",
-      "firstQueuedAt": "2026-03-30T23:19:53.820Z",
-      "lastQueuedAt": "2026-03-30T23:19:53.820Z",
-      "status": "ready",
-      "lastSelectedAt": null,
-      "lastPublishedAt": null,
-      "publishedSlug": null
     },
     {
       "identityKey": "cluster:evt-2026-03-31-ai-big-tech-general-global",
