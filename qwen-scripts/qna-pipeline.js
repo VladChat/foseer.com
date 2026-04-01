@@ -14,8 +14,9 @@ import { validatePrePublishGraph, buildCanonicalPublishPayload, buildPublishMani
 import { markBriefSelected, markBriefPublished, getNewsPoolStats } from './utils/news-pool.js';
 import { getProviderStats } from './utils/api-clients.js';
 import { writeQualityAuditRun } from './utils/quality-audit.js';
-import { extractQuestionCandidates } from './question-extractor.js';
-import { loadSharedBriefCandidatesFromPool, runPreWriterDiscoveryIntake, runSharedSourcePackEngine, mergeRescueDiagnostics } from './pre-writer-engine.js';
+import { extractQuestionCandidate, extractQuestionCandidates } from './question-extractor.js';
+import { loadSharedBriefCandidatesFromPool, runPreWriterDiscoveryIntake, runSharedSourcePackEngine, mergeRescueDiagnostics, estimateSourcePackCoherence } from './pre-writer-engine.js';
+import { evaluatePreWriteQualityGate } from './pre-write-quality-gate.js';
 
 loadProjectEnv();
 
@@ -170,7 +171,14 @@ export async function runQnaPipeline(options = {}) {
     return finalizeRun(result, [], null, startTime);
   }
 
-  const questionCandidates = await extractQuestionCandidates(screened.viableBriefs, openAiApiKey, {});
+  const useLlmBulkQuestionExtraction = String(
+    options.questionExtractionUseLlm
+    ?? process.env.QNA_QUESTION_EXTRACTION_USE_LLM
+    ?? '0'
+  ) === '1';
+  const questionCandidates = await extractQuestionCandidates(screened.viableBriefs, openAiApiKey, {
+    useOpenAi: useLlmBulkQuestionExtraction,
+  });
   const extractionModels = Array.from(new Set(questionCandidates.map((candidate) => candidate.model).filter(Boolean)));
   console.log(`[qna-pipeline] Question extraction model(s): ${extractionModels.length > 0 ? extractionModels.join(', ') : 'fallback-only'}`);
   result.stats.question_candidates = questionCandidates.length;
@@ -180,6 +188,7 @@ export async function runQnaPipeline(options = {}) {
     valid_count: questionCandidates.filter((candidate) => candidate.valid).length,
     eligible_count: questionCandidates.filter((candidate) => candidate.selection_eligible).length,
     models: extractionModels,
+    mode: useLlmBulkQuestionExtraction ? 'llm_bulk' : 'fallback_bulk',
   };
 
   const questionArtifactPath = writeQuestionArtifacts(runId, questionCandidates);
@@ -376,6 +385,110 @@ export async function runQnaPipeline(options = {}) {
     return finalizeRun(result, questionCandidates, null, startTime);
   }
 
+  selected.briefForDraft = selectedMode === 'standard-fallback'
+    ? buildStandardFallbackDraftBrief(selected.brief)
+    : buildQuestionDraftBrief(selected.brief, selected.questionCandidate);
+
+  const preWriteCoherence = estimateSourcePackCoherence(selected.sourcePack, selected.brief);
+  const preWriteGateBase = evaluatePreWriteQualityGate({
+    brief: selected.brief,
+    sourcePack: selected.sourcePack,
+    questionCandidate: selected.questionCandidate,
+    mode: selectedMode === 'question-led' ? 'qna' : 'article',
+    coherenceScore: preWriteCoherence,
+  }, options.preWriteGate || {});
+  const preWriteReasons = Array.isArray(preWriteGateBase.reasons) ? [...preWriteGateBase.reasons] : [];
+  const preWriteWarnings = Array.isArray(preWriteGateBase.warnings) ? [...preWriteGateBase.warnings] : [];
+
+  const preWriteGraphValidation = validatePrePublishGraph({
+    ...selected,
+    draft: {
+      title: selected.briefForDraft?.title || selected.brief?.title || 'Developing story',
+      excerpt: selected.briefForDraft?.summary || selected.brief?.summary || selected.brief?.whyItMatters || '',
+      content: `${selected.briefForDraft?.whatHappened || selected.brief?.whatHappened || ''} ${selected.briefForDraft?.whyItMatters || selected.brief?.whyItMatters || ''}`.trim(),
+      articleType: selected.briefForDraft?.articleType || selected.brief?.articleType || 'analysis',
+      article_type: selected.briefForDraft?.articleType || selected.brief?.articleType || 'analysis',
+    },
+  });
+  const preWriteGraphErrorsRaw = Array.isArray(preWriteGraphValidation.errors) ? preWriteGraphValidation.errors : [];
+  const preWriteGraphErrors = preWriteGraphErrorsRaw.filter((message) => isPreWriteRelevantGraphError(message));
+  if (preWriteGraphErrors.length > 0) {
+    preWriteReasons.push(...preWriteGraphErrors);
+  }
+  if (preWriteGraphErrorsRaw.length > preWriteGraphErrors.length) {
+    preWriteWarnings.push('Pre-publish graph reported post-draft-only errors during precheck');
+  }
+  if (Array.isArray(preWriteGraphValidation.warnings) && preWriteGraphValidation.warnings.length > 0) {
+    preWriteWarnings.push(...preWriteGraphValidation.warnings);
+  }
+  const preWriteGate = {
+    ...preWriteGateBase,
+    pass: preWriteReasons.length === 0,
+    reasons: Array.from(new Set(preWriteReasons)),
+    warnings: Array.from(new Set(preWriteWarnings)),
+    metrics: {
+      ...(preWriteGateBase.metrics || {}),
+      prepublish_graph_precheck: {
+        valid: preWriteGraphValidation.valid,
+        errors: preWriteGraphValidation.errors || [],
+        warnings: preWriteGraphValidation.warnings || [],
+      },
+    },
+  };
+  result.stages.pre_write_quality_gate = {
+    success: preWriteGate.pass,
+    reasons: preWriteGate.reasons,
+    warnings: preWriteGate.warnings,
+    metrics: preWriteGate.metrics,
+  };
+  if (!preWriteGate.pass) {
+    result.hard_blocker = `Pre-write quality gate failed: ${preWriteGate.reasons.join('; ')}`;
+    return finalizeRun(result, questionCandidates, null, startTime);
+  }
+
+  const allowQuestionRefinement = String(
+    options.qnaRefineSelectedQuestionWithLlm
+    ?? process.env.QNA_REFINE_SELECTED_QUESTION_WITH_LLM
+    ?? '1'
+  ) !== '0';
+  if (selectedMode === 'question-led' && allowQuestionRefinement && openAiApiKey) {
+    try {
+      const refined = await extractQuestionCandidate(selected.brief, openAiApiKey, { useOpenAi: true });
+      if (refined?.valid && refined?.selection_eligible) {
+        selected.questionCandidate = {
+          ...selected.questionCandidate,
+          ...refined,
+          source_pack_gate: selected.questionCandidate?.source_pack_gate || null,
+        };
+        result.stages.question_refinement = {
+          success: true,
+          applied: true,
+          provider: refined.provider || 'openai',
+          model: refined.model || null,
+          question: refined.question || null,
+        };
+      } else {
+        result.stages.question_refinement = {
+          success: true,
+          applied: false,
+          reason: refined?.invalid_reason || 'Refined question failed quality checks',
+        };
+      }
+    } catch (error) {
+      result.stages.question_refinement = {
+        success: false,
+        applied: false,
+        error: error.message,
+      };
+    }
+  } else {
+    result.stages.question_refinement = {
+      success: true,
+      applied: false,
+      reason: allowQuestionRefinement ? 'No OpenAI key or non-question mode selection' : 'Question refinement disabled',
+    };
+  }
+
   result.selected_question = {
     question: selected.questionCandidate?.question || null,
     question_type: selected.questionCandidate?.question_type || null,
@@ -413,12 +526,8 @@ export async function runQnaPipeline(options = {}) {
   }
 
   try {
-    const briefForDraft = selectedMode === 'standard-fallback'
-      ? buildStandardFallbackDraftBrief(selected.brief)
-      : buildQuestionDraftBrief(selected.brief, selected.questionCandidate);
-    const draft = await draftArticle(briefForDraft, selected.sourcePack, selected.claimMap, openAiApiKey);
+    const draft = await draftArticle(selected.briefForDraft, selected.sourcePack, selected.claimMap, openAiApiKey);
     const hardened = hardenDraft(draft, selected.claimMap);
-    selected.briefForDraft = briefForDraft;
     selected.draft = hardened;
     selected.publishIdentity = {
       title: hardened.title,
@@ -691,6 +800,21 @@ function getBriefCandidateKey(brief = {}) {
   ].join('::');
 }
 
+function isPreWriteRelevantGraphError(message = '') {
+  const normalized = String(message || '').toLowerCase();
+  if (!normalized) return false;
+  if (normalized.includes('missing selected article slug')) return false;
+  if (normalized.includes('missing published path')) return false;
+  if (normalized.includes('missing draft')) return false;
+  if (normalized.includes('title is required')) return false;
+  return normalized.includes('publish-ready source pack')
+    || normalized.includes('source-pack')
+    || normalized.includes('coherence')
+    || normalized.includes('canonical section')
+    || normalized.includes('canonical topic')
+    || normalized.includes('tag');
+}
+
 function finalizeRun(result, questionCandidates = [], selected = null, startTime = Date.now()) {
   void questionCandidates;
   result.stats.cache_stats = getProviderStats();
@@ -820,6 +944,7 @@ function evaluateQnaRunForExit(result) {
     || normalized.includes('no brief candidate passed source-pack viability gate')
     || normalized.includes('no viable question candidates after quality filtering')
     || normalized.includes('no question candidate passed source-pack assembly')
+    || normalized.includes('pre-write quality gate failed')
     || normalized.includes('source-pack gate failed')
   );
 

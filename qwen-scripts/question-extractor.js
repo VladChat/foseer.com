@@ -42,6 +42,15 @@ const RUMOR_TEXT_PATTERNS = [
 export async function extractQuestionCandidate(eventBrief, openAiApiKey, options = {}) {
   const fallback = buildFallbackQuestionCandidate(eventBrief);
   const model = options.model || process.env.OPENAI_WRITER_MODEL || DEFAULT_WRITER_MODEL;
+  const useOpenAi = options.useOpenAi !== false;
+
+  if (!useOpenAi) {
+    return finalizeQuestionCandidate(fallback, eventBrief, {
+      provider: 'fallback',
+      model: null,
+      note: 'LLM extraction disabled; fallback extractor used',
+    });
+  }
 
   if (!openAiApiKey) {
     return finalizeQuestionCandidate(fallback, eventBrief, {

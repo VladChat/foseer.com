@@ -19,7 +19,8 @@ import { verifyLocalVisibility, generateVerificationReport } from './local-verif
 import { getProviderStats } from './utils/api-clients.js';
 import { mergeBriefsIntoPool, mergeDiscoveredNews, getSelectableBriefs, getReadySelectableBriefs, dedupeBriefCandidates, markBriefPublished, markBriefSelected, getNewsPoolStats, recordReadyArticleCandidates, getBriefIdentityKey, isIdentityAlreadyPublished } from './utils/news-pool.js';
 import { writeQualityAuditRun } from './utils/quality-audit.js';
-import { runSharedSourcePackEngine, selectSharedPreWriterCandidates, normalizeDiscoveryCandidatesToBriefs } from './pre-writer-engine.js';
+import { runSharedSourcePackEngine, selectSharedPreWriterCandidates, normalizeDiscoveryCandidatesToBriefs, estimateSourcePackCoherence } from './pre-writer-engine.js';
+import { evaluatePreWriteQualityGate } from './pre-write-quality-gate.js';
 
 loadProjectEnv();
 
@@ -749,6 +750,7 @@ export async function runEditorialPipeline(options = {}) {
   }
 
   // Stage 4-8: Per-article execution loop
+  const preWriteItems = [];
   const claimMapItems = [];
   const draftItems = [];
   const imageItems = [];
@@ -763,6 +765,27 @@ export async function runEditorialPipeline(options = {}) {
       candidate.brief.poolIdentityKey = candidate.brief.poolIdentityKey || candidateIdentityKey;
     }
     console.log(`[pipeline] === Article run start: ${articleLabel} ===`);
+
+    // Stage 3.7: Pre-write quality gate (cheap, no writer tokens)
+    const preWriteCoherence = estimateSourcePackCoherence(candidate?.sourcePack || {}, candidate?.brief || {});
+    const preWriteGate = evaluatePreWriteQualityGate({
+      brief: candidate?.brief || {},
+      sourcePack: candidate?.sourcePack || {},
+      mode: 'article',
+      coherenceScore: preWriteCoherence,
+    }, options.preWriteGate || {});
+    preWriteItems.push({
+      title: articleLabel,
+      success: preWriteGate.pass,
+      error: preWriteGate.pass ? null : preWriteGate.reasons.join('; '),
+      data: preWriteGate.metrics,
+    });
+    if (!preWriteGate.pass) {
+      console.log(`[pipeline] PRE-WRITE GATE: FAIL :: ${articleLabel} :: ${preWriteGate.reasons.join(' | ')}`);
+      articleErrors.push({ title: articleLabel, stage: 'preWriteQualityGate', error: preWriteGate.reasons.join('; ') });
+      continue;
+    }
+    console.log(`[pipeline] PRE-WRITE GATE: PASS :: ${articleLabel} :: coherence=${preWriteCoherence}`);
 
     // Stage 4: Claim Map Creation (GATE)
     console.log('[pipeline] Stage 4: Claim map creation...');
@@ -1044,6 +1067,7 @@ export async function runEditorialPipeline(options = {}) {
     }
   }
 
+  stageResults.preWriteQualityGate = buildAggregateStageResult('preWriteQualityGate', preWriteItems, articleErrors);
   stageResults.claimMapCreation = buildAggregateStageResult('claimMapCreation', claimMapItems, articleErrors);
   stageResults.articleDrafting = buildAggregateStageResult('articleDrafting', draftItems, articleErrors);
   stageResults.imageSupport = buildAggregateStageResult('imageSupport', imageItems, articleErrors, { allowFailures: true });
