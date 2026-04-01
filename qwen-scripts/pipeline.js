@@ -6,14 +6,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { runDiscovery } from './discovery.js';
-import { normalizeClusteredBrief, selectBestTopic } from './event-brief-builder.js';
-import { clusterDiscoveredCandidates } from './nodes/event-clustering-node.js';
-import { assembleSourcePack, selectPublishableCandidates } from './source-pack.js';
+import { selectBestTopic } from './event-brief-builder.js';
 import { createClaimMap, validateClaimMap } from './claim-map.js';
 import { draftArticle, hardenDraft } from './article-drafter.js';
 import { generateImagePackage } from './nodes/image-node.js';
 import { publishArticle } from './publisher.js';
-import { validatePrePublishGraph, buildCanonicalPublishPayload, buildPublishManifest, writePublishManifest, validatePublishedArtifact, evaluateSourcePackEditorialIntegrity } from './validate-publish-graph.js';
+import { validatePrePublishGraph, buildCanonicalPublishPayload, buildPublishManifest, writePublishManifest, validatePublishedArtifact } from './validate-publish-graph.js';
 import { validateTagSelection } from './validate-tags.js';
 import { resolvePlacementMetadata } from '../qwen-project-governance/shared/article-placement.js';
 import { repairContentPosts } from './repair-content-posts.js';
@@ -21,11 +19,9 @@ import { verifyLocalVisibility, generateVerificationReport } from './local-verif
 import { getProviderStats } from './utils/api-clients.js';
 import { mergeBriefsIntoPool, mergeDiscoveredNews, getSelectableBriefs, getReadySelectableBriefs, dedupeBriefCandidates, markBriefPublished, markBriefSelected, getNewsPoolStats, recordReadyArticleCandidates, getBriefIdentityKey, isIdentityAlreadyPublished } from './utils/news-pool.js';
 import { writeQualityAuditRun } from './utils/quality-audit.js';
+import { runSharedSourcePackEngine, selectSharedPreWriterCandidates, normalizeDiscoveryCandidatesToBriefs } from './pre-writer-engine.js';
 
 loadProjectEnv();
-
-const ARTICLE_INVENTORY_PATH = path.resolve(process.cwd(), 'qwen-project-governance', 'article_inventory.md');
-const RECENT_DUPLICATE_WINDOW_MS = 4 * 24 * 60 * 60 * 1000;
 
 /**
  * Pipeline stage result
@@ -162,7 +158,6 @@ export async function runEditorialPipeline(options = {}) {
 
   let discoveryResult = null;
   let normalizedBriefs = null;
-  let eventClusters = null;
 
   const repairResult = repairContentPosts();
   if (repairResult.changed > 0) {
@@ -216,22 +211,17 @@ export async function runEditorialPipeline(options = {}) {
   // Stage 2: Event Clustering + Brief Normalization
   console.log('[pipeline] Stage 2: Event clustering and brief normalization...');
   try {
-    normalizedBriefs = [];
-    eventClusters = clusterDiscoveredCandidates(discoveryResult.candidates, { threshold: options.clusterThreshold || 6 });
-    stats.event_clusters = eventClusters.length;
-    const topClusters = eventClusters.slice(0, options.clusterSelectionLimit || 6);
-
-    for (const cluster of topClusters) {
-      try {
-        const normalized = await normalizeClusteredBrief(cluster, openAiApiKey);
-        normalized.discoveryContext = cluster.candidates || [];
-        normalized.cluster_size = cluster.candidateCount;
-        normalizedBriefs.push(normalized);
-        stats.briefs_normalized++;
-      } catch (error) {
-        console.error(`[pipeline] Brief normalization failed: ${error.message}`);
-      }
-    }
+    const normalizationResult = await normalizeDiscoveryCandidatesToBriefs(
+      discoveryResult.candidates,
+      {
+        clusterThreshold: options.clusterThreshold || 6,
+        clusterSelectionLimit: options.clusterSelectionLimit || 6,
+      },
+      openAiApiKey,
+    );
+    normalizedBriefs = Array.isArray(normalizationResult?.briefs) ? normalizationResult.briefs : [];
+    stats.event_clusters = Number(normalizationResult?.clusterCount || 0);
+    stats.briefs_normalized += normalizedBriefs.length;
 
     if (normalizedBriefs.length > 1) {
       const best = selectBestTopic(normalizedBriefs);
@@ -1111,153 +1101,6 @@ function loadProjectEnv() {
   }
 }
 
-function parseArticleInventoryRows(markdown) {
-  return String(markdown || '')
-    .split(/\r?\n/)
-    .filter((line) => line.trim().startsWith('|'))
-    .filter((line) => !/^\|[-\s|]+\|$/.test(line.trim()))
-    .filter((line) => !/^\|\s*Article ID\s*\|/i.test(line.trim()))
-    .map((line) => line.split('|').slice(1, -1).map((cell) => cell.trim()))
-    .filter((cells) => cells.length >= 12)
-    .map((cells) => ({
-      article_id: cells[0],
-      topic_id: cells[1],
-      title: cells[2],
-      created: cells[3],
-      status: cells[5],
-      section: cells[6],
-      article_type: cells[7],
-      primary_topic: cells[8],
-      key_entities: String(cells[9] || '').split(',').map((value) => value.trim()).filter(Boolean),
-      search_keywords: String(cells[10] || '').split(',').map((value) => value.trim()).filter(Boolean),
-      canonical_url: cells[11],
-    }));
-}
-
-function selectionTokens(value) {
-  const stop = new Set(['the','a','an','and','or','for','with','from','into','amid','after','before','over','under','latest','breaking','news','report','reports','live','updates','today','story','stories','key']);
-  return Array.from(new Set(String(value || '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, ' ')
-    .split(/\s+/)
-    .map((token) => token.trim())
-    .filter((token) => token.length >= 4 && !stop.has(token))));
-}
-
-function overlapCount(left, right) {
-  const rightSet = new Set(right);
-  return left.filter((value) => rightSet.has(value)).length;
-}
-
-function getCandidateSelectionTopicId(candidate) {
-  return String(candidate?.sourcePack?.topic_id || candidate?.brief?.topic_id || '').trim().toLowerCase();
-}
-
-function loadRecentPublishedInventory() {
-  try {
-    if (!fs.existsSync(ARTICLE_INVENTORY_PATH)) return [];
-    return parseArticleInventoryRows(fs.readFileSync(ARTICLE_INVENTORY_PATH, 'utf-8'))
-      .filter((entry) => String(entry.status || '').toLowerCase() === 'published')
-      .filter((entry) => {
-        const createdMs = new Date(`${entry.created}T00:00:00Z`).getTime();
-        return Number.isFinite(createdMs) && (Date.now() - createdMs) <= RECENT_DUPLICATE_WINDOW_MS;
-      });
-  } catch {
-    return [];
-  }
-}
-
-function isRecentDuplicateCandidate(candidate, inventoryEntries) {
-  const brief = candidate?.brief || {};
-  const sourcePack = candidate?.sourcePack || {};
-  const titleTokens = selectionTokens(brief.title);
-  const entityTokens = selectionTokens((brief.entities || brief.involvedParties || []).join(' '));
-  const searchTokens = Array.from(new Set([
-    ...titleTokens,
-    ...selectionTokens(sourcePack?.topic || ''),
-    ...selectionTokens(brief.whatHappened || ''),
-    ...selectionTokens((brief.entities || brief.involvedParties || []).join(' ')),
-  ]));
-  const topicId = getCandidateSelectionTopicId(candidate);
-
-  let bestMatch = null;
-  let bestScore = -Infinity;
-
-  for (const entry of inventoryEntries) {
-    const entryTitleTokens = selectionTokens(entry.title);
-    const entryKeywordTokens = selectionTokens((entry.search_keywords || []).join(' '));
-    const entryEntityTokens = selectionTokens((entry.key_entities || []).join(' '));
-    const titleOverlap = overlapCount(titleTokens, entryTitleTokens);
-    const keywordOverlap = overlapCount(searchTokens, entryKeywordTokens);
-    const entityOverlap = overlapCount(entityTokens, entryEntityTokens);
-    const sameTopic = topicId && topicId === String(entry.topic_id || '').trim().toLowerCase();
-
-    let score = 0;
-    if (titleOverlap >= 4) score = Math.max(score, 100);
-    if (sameTopic && titleOverlap >= 3) score = Math.max(score, 95);
-    if (sameTopic && titleOverlap >= 2 && entityOverlap >= 1) score = Math.max(score, 90);
-    if (sameTopic && titleOverlap >= 2 && keywordOverlap >= 2) score = Math.max(score, 85);
-    if (sameTopic && keywordOverlap >= 3 && entityOverlap >= 1) score = Math.max(score, 85);
-    if (titleOverlap >= 3 && keywordOverlap >= 3) score = Math.max(score, 80);
-
-    if (score > bestScore) {
-      bestScore = score;
-      bestMatch = {
-        entry,
-        score,
-        details: {
-          titleOverlap,
-          keywordOverlap,
-          entityOverlap,
-          sameTopic,
-        },
-      };
-    }
-  }
-
-  return bestScore >= 80 ? bestMatch : null;
-}
-
-function filterRecentDuplicateCandidates(candidates) {
-  const recentInventory = loadRecentPublishedInventory();
-  if (!recentInventory.length) {
-    return {
-      candidates: Array.isArray(candidates) ? candidates : [],
-      rejected: [],
-      inventorySize: 0,
-    };
-  }
-
-  const kept = [];
-  const rejected = [];
-  for (const candidate of (Array.isArray(candidates) ? candidates : [])) {
-    const match = isRecentDuplicateCandidate(candidate, recentInventory);
-    if (!match) {
-      kept.push(candidate);
-      continue;
-    }
-    rejected.push({
-      candidateTitle: candidate?.brief?.title || candidate?.sourcePack?.topic || null,
-      candidateTopicId: getCandidateSelectionTopicId(candidate) || null,
-      matchedEntry: {
-        article_id: match.entry?.article_id || null,
-        topic_id: match.entry?.topic_id || null,
-        title: match.entry?.title || null,
-        created: match.entry?.created || null,
-        canonical_url: match.entry?.canonical_url || null,
-      },
-      score: match.score,
-      details: match.details,
-    });
-  }
-
-  return {
-    candidates: kept,
-    rejected,
-    inventorySize: recentInventory.length,
-  };
-}
-
 function resolveMaxArticlesPerRun(options = {}) {
   const raw = options.maxArticlesPerRun
     ?? options.max_articles_per_run
@@ -1454,29 +1297,6 @@ function extractDiscoveryQueryUsage(discoveryStats = {}) {
   };
 }
 
-async function normalizeDiscoveryCandidatesToBriefs(candidates = [], options = {}, openAiApiKey = null) {
-  const normalizedBriefs = [];
-  if (!Array.isArray(candidates) || candidates.length === 0) {
-    return { briefs: normalizedBriefs, clusterCount: 0 };
-  }
-
-  const eventClusters = clusterDiscoveredCandidates(candidates, { threshold: options.clusterThreshold || 6 });
-  const topClusters = eventClusters.slice(0, options.clusterSelectionLimit || 6);
-
-  for (const cluster of topClusters) {
-    try {
-      const normalized = await normalizeClusteredBrief(cluster, openAiApiKey);
-      normalized.discoveryContext = cluster.candidates || [];
-      normalized.cluster_size = cluster.candidateCount;
-      normalizedBriefs.push(normalized);
-    } catch (error) {
-      console.error(`[pipeline] Retry brief normalization failed: ${error.message}`);
-    }
-  }
-
-  return { briefs: normalizedBriefs, clusterCount: eventClusters.length };
-}
-
 async function runSourcePackAssemblyAttempt({
   briefsSeed = [],
   options = {},
@@ -1486,7 +1306,6 @@ async function runSourcePackAssemblyAttempt({
   googleCx,
   leaseOwner = null,
 }) {
-  const candidatesWithSources = [];
   const duplicateRejectedAtSelection = [];
   const sourcePackCandidateLimit = Math.max(
     Number(options.sourcePackCandidateLimit || 0) || 0,
@@ -1540,103 +1359,44 @@ async function runSourcePackAssemblyAttempt({
     console.log(`[pipeline] Top ranked brief score=${briefsForSelection[0].selectionScore} origin=${briefsForSelection[0]._selectionOrigin} title=${briefsForSelection[0].title}`);
   }
 
-  let sourcePacksAssembled = 0;
-  let publishableCandidates = 0;
-  const nearMissRetryQueue = [];
+  const sourcePackSelectionLimit = Math.max(
+    Number(options.maxArticlesPerRunForSourcePackSelection || options.sourcePackSelectionCandidateLimit || 0) || 0,
+    maxArticlesPerRun,
+    maxArticlesPerRun * 3,
+  );
 
-  for (const brief of briefsForSelection) {
-    try {
-      const sourcePack = await assembleSourcePack(brief, { ...options, braveApiKey, googleApiKey, googleCx });
-      const stage3EditorialGate = evaluateSourcePackEditorialIntegrity({ brief, sourcePack });
-      sourcePack.stage3EditorialGate = stage3EditorialGate;
-      const stage3BlockingErrors = Array.isArray(stage3EditorialGate.blocking_errors) ? stage3EditorialGate.blocking_errors : [];
-      const hardSourceIntegrityErrors = stage3BlockingErrors.filter((message) => !String(message).startsWith('Primary topic_id unsupported by source-pack evidence'));
-      const placementRepairErrors = stage3BlockingErrors.filter((message) => String(message).startsWith('Primary topic_id unsupported by source-pack evidence'));
+  const sharedPreWriterResult = await runSharedSourcePackEngine({
+    briefs: briefsForSelection,
+    options: {
+      ...options,
+      qnaNearMissRescueLimit: Number(options.stage3NearMissRetryLimit || 3),
+      qnaRetryPoolMatchLimit: Number(options.stage3NearMissRetryPoolMatchLimit || 24),
+    },
+    braveApiKey,
+    googleApiKey,
+    googleCx,
+    maxSelectionCount: sourcePackSelectionLimit,
+    selectionLimits: {
+      maxPerSection: Number(options.maxPerSection || 2),
+      maxPerTopic: Number(options.maxPerTopic || 2),
+      relaxedMaxPerSection: Number(options.relaxedMaxPerSection || 3),
+      relaxedMaxPerTopic: Number(options.relaxedMaxPerTopic || 3),
+    },
+    applyDuplicateGuard: true,
+  });
 
-      if (hardSourceIntegrityErrors.length > 0) {
-        const existingNotes = Array.isArray(sourcePack.gateNotes) ? sourcePack.gateNotes : [];
-        sourcePack.passesGate = false;
-        sourcePack.gateDecision = 'FAIL';
-        sourcePack.gateNotes = Array.from(new Set([...existingNotes, ...hardSourceIntegrityErrors, ...stage3EditorialGate.warnings]));
-        console.log(`[pipeline] Stage 3 aligned gate blocked :: ${brief.title} :: ${hardSourceIntegrityErrors.join(' | ')}`);
-      } else {
-        const advisoryNotes = [
-          ...stage3EditorialGate.warnings,
-          ...placementRepairErrors.map((message) => `${message} (deferred to placement repair)`),
-        ];
-        if (advisoryNotes.length > 0) {
-          sourcePack.gateNotes = Array.from(new Set([...(Array.isArray(sourcePack.gateNotes) ? sourcePack.gateNotes : []), ...advisoryNotes]));
-        }
-        if (placementRepairErrors.length > 0) {
-          console.log(`[pipeline] Stage 3 placement repair queued :: ${brief.title} :: ${placementRepairErrors.join(' | ')}`);
-        }
-      }
-
-      candidatesWithSources.push({ brief, sourcePack });
-      sourcePacksAssembled++;
-      if (sourcePack.passesGate) publishableCandidates++;
-      if (!sourcePack.passesGate && isNearMissSourcePackFailure(sourcePack.gateNotes || [])) {
-        nearMissRetryQueue.push({
-          brief,
-          rankScore: Number(brief?.selectionScore || brief?.publishabilityScore || 0),
-          initialNotes: Array.isArray(sourcePack.gateNotes) ? sourcePack.gateNotes : [],
-        });
-      }
-    } catch (error) {
-      console.error(`[pipeline] Source pack assembly failed: ${error.message}`);
-    }
-  }
-
-  const retryPoolMatchLimit = Math.max(Number(options.poolMatchLimit || 14), Number(options.stage3NearMissRetryPoolMatchLimit || 24));
-  const nearMissRetries = nearMissRetryQueue
-    .sort((left, right) => Number(right.rankScore || 0) - Number(left.rankScore || 0))
-    .slice(0, 3);
-
-  for (const retry of nearMissRetries) {
-    const brief = retry.brief;
-    console.log(`[pipeline] Stage 3 near-miss retry :: ${brief.title} :: poolMatchLimit=${retryPoolMatchLimit}`);
-    try {
-      const retriedSourcePack = await assembleSourcePack(brief, {
-        ...options,
-        braveApiKey,
-        googleApiKey,
-        googleCx,
-        poolMatchLimit: retryPoolMatchLimit,
-      });
-      const editorialGate = evaluateSourcePackEditorialIntegrity({ brief, sourcePack: retriedSourcePack });
-      retriedSourcePack.stage3EditorialGate = editorialGate;
-      const hardErrors = (editorialGate.blocking_errors || []).filter((message) => !String(message).startsWith('Primary topic_id unsupported by source-pack evidence'));
-      if (hardErrors.length > 0) {
-        const existingNotes = Array.isArray(retriedSourcePack.gateNotes) ? retriedSourcePack.gateNotes : [];
-        retriedSourcePack.passesGate = false;
-        retriedSourcePack.gateDecision = 'FAIL';
-        retriedSourcePack.gateNotes = Array.from(new Set([...existingNotes, ...hardErrors, ...(editorialGate.warnings || [])]));
-      }
-
-      const candidateIndex = candidatesWithSources.findIndex((entry) => getBriefIdentityKey(entry?.brief) === getBriefIdentityKey(brief));
-      const previousPass = candidateIndex >= 0 ? Boolean(candidatesWithSources[candidateIndex]?.sourcePack?.passesGate) : false;
-      if (candidateIndex >= 0) {
-        candidatesWithSources[candidateIndex] = { brief, sourcePack: retriedSourcePack };
-      } else {
-        candidatesWithSources.push({ brief, sourcePack: retriedSourcePack });
-      }
-      sourcePacksAssembled++;
-      if (!previousPass && retriedSourcePack.passesGate) publishableCandidates++;
-      if (!retriedSourcePack.passesGate) {
-        console.log(`[pipeline] Stage 3 near-miss retry rejected :: ${brief.title} :: ${(retriedSourcePack.gateNotes || []).join(' | ')}`);
-      } else {
-        console.log(`[pipeline] Stage 3 near-miss retry passed :: ${brief.title} :: sources=${retriedSourcePack.sources?.length || 0} domains=${retriedSourcePack.uniqueDomains || 0}`);
-      }
-    } catch (error) {
-      console.log(`[pipeline] Stage 3 near-miss retry error :: ${brief.title} :: ${error.message}`);
-    }
-  }
-
+  const sourcePacksAssembled = Number(sharedPreWriterResult.sourcePacksAssembled || 0);
+  const candidatesAfterInventoryDedupe = Array.isArray(sharedPreWriterResult.candidatesAfterDuplicateGuard)
+    ? sharedPreWriterResult.candidatesAfterDuplicateGuard
+    : [];
+  let publishableCandidates = candidatesAfterInventoryDedupe.filter((candidate) => candidate?.sourcePack?.passesGate).length;
   console.log(`[pipeline] Assembled ${sourcePacksAssembled} source packs, ${publishableCandidates} publishable`);
-  const recentDuplicateScreen = filterRecentDuplicateCandidates(candidatesWithSources);
-  const candidatesAfterInventoryDedupe = recentDuplicateScreen.candidates;
-  if (recentDuplicateScreen.rejected.length > 0) {
-    for (const rejected of recentDuplicateScreen.rejected) {
+
+  const recentDuplicateRejected = Array.isArray(sharedPreWriterResult.duplicateRejectedAtSelection)
+    ? sharedPreWriterResult.duplicateRejectedAtSelection
+    : [];
+  if (recentDuplicateRejected.length > 0) {
+    for (const rejected of recentDuplicateRejected) {
       const details = rejected?.details || {};
       duplicateRejectedAtSelection.push({
         identityKey: null,
@@ -1647,22 +1407,22 @@ async function runSourcePackAssemblyAttempt({
       });
       console.log(`[pipeline] Duplicate guard: drop recent-inventory candidate "${rejected.candidateTitle || 'Untitled'}" matched with "${rejected?.matchedEntry?.title || 'unknown'}" (score=${rejected.score})`);
     }
-    publishableCandidates = candidatesAfterInventoryDedupe.filter((candidate) => candidate?.sourcePack?.passesGate).length;
-    console.log(`[pipeline] Recent inventory duplicate guard removed ${recentDuplicateScreen.rejected.length} candidate(s) (inventory scanned: ${recentDuplicateScreen.inventorySize})`);
+    console.log(`[pipeline] Recent inventory duplicate guard removed ${recentDuplicateRejected.length} candidate(s)`);
   }
 
-  const sourcePackSelectionLimit = Math.max(
-    Number(options.maxArticlesPerRunForSourcePackSelection || options.sourcePackSelectionCandidateLimit || 0) || 0,
-    maxArticlesPerRun,
-    maxArticlesPerRun * 3,
-  );
-  const selectedCandidates = selectPublishableCandidates(candidatesAfterInventoryDedupe, {
-    maxArticlesPerRun: sourcePackSelectionLimit,
-    maxPerSection: Number(options.maxPerSection || 2),
-    maxPerTopic: Number(options.maxPerTopic || 2),
-    relaxedMaxPerSection: Number(options.relaxedMaxPerSection || 3),
-    relaxedMaxPerTopic: Number(options.relaxedMaxPerTopic || 3),
-  }).filter((candidate) => {
+  const sharedSelectedCandidates = Array.isArray(sharedPreWriterResult.selectedCandidates)
+    ? sharedPreWriterResult.selectedCandidates
+    : selectSharedPreWriterCandidates(candidatesAfterInventoryDedupe, {
+      maxSelectionCount: sourcePackSelectionLimit,
+      selectionLimits: {
+        maxPerSection: Number(options.maxPerSection || 2),
+        maxPerTopic: Number(options.maxPerTopic || 2),
+        relaxedMaxPerSection: Number(options.relaxedMaxPerSection || 3),
+        relaxedMaxPerTopic: Number(options.relaxedMaxPerTopic || 3),
+      },
+    });
+
+  let selectedCandidates = sharedSelectedCandidates.filter((candidate) => {
     const identityKey = candidate?.brief?.poolIdentityKey || getBriefIdentityKey(candidate?.brief);
     if (!identityKey) return true;
     if (isIdentityAlreadyPublished(identityKey)) {
@@ -1695,15 +1455,6 @@ async function runSourcePackAssemblyAttempt({
     sourcePacksAssembled,
     publishableCandidates,
   };
-}
-
-function isNearMissSourcePackFailure(gateNotes = []) {
-  const text = Array.isArray(gateNotes) ? gateNotes.join(' | ').toLowerCase() : '';
-  if (!text) return false;
-  return text.includes('need at least 2 publishable sources, found 1')
-    || text.includes('need at least 2 different domains among publishable sources, found 1')
-    || text.includes('need at least one trusted reporting source or official primary source')
-    || text.includes('publishable pack remains thin');
 }
 
 function buildAggregateStageResult(stage, items = [], articleErrors = [], { allowFailures = false } = {}) {
