@@ -50,12 +50,80 @@ const metadata = {
       {posts.length === 0 ? (
         <p class="text-gray-600 dark:text-slate-400">No articles found for this category.</p>
       ) : (
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
-            <EditorialStoryCard post={post} variant="compact" />
-          ))}
-        </div>
+        <>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="category-grid">
+            {posts.slice(0, 12).map((post) => (
+              <EditorialStoryCard post={post} variant="compact" />
+            ))}
+          </div>
+
+          {posts.length > 12 && (
+            <div class="mt-12 text-center">
+              <button
+                id="load-more-btn"
+                class="inline-flex items-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-semibold text-sm hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 dark:focus:ring-white"
+                data-total={posts.length}
+                data-step="12"
+              >
+                <span>Load More</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <p class="mt-3 text-sm text-muted dark:text-slate-400">
+                Showing 12 of {posts.length} articles
+              </p>
+            </div>
+          )}
+
+          <!-- Hidden container with remaining posts -->
+          <div id="hidden-posts" class="hidden">
+            {posts.slice(12).map((post) => (
+              <EditorialStoryCard post={post} variant="compact" />
+            ))}
+          </div>
+        </>
       )}
     </div>
   </section>
 </Layout>
+
+<script>
+  // Load More functionality for category pages
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  const hiddenPostsContainer = document.getElementById('hidden-posts');
+  const categoryGrid = document.getElementById('category-grid');
+
+  if (loadMoreBtn && hiddenPostsContainer && categoryGrid) {
+    const totalPosts = parseInt(loadMoreBtn.dataset.total || '0');
+    const step = parseInt(loadMoreBtn.dataset.step || '12');
+    let shownCount = 12;
+
+    const hiddenCards = Array.from(hiddenPostsContainer.children);
+
+    loadMoreBtn.addEventListener('click', () => {
+      const remaining = hiddenCards.length - (shownCount - 12);
+      const toShow = Math.min(step, remaining);
+
+      for (let i = 0; i < toShow; i++) {
+        const card = hiddenCards[shownCount - 12 + i];
+        if (card) {
+          categoryGrid.appendChild(card);
+        }
+      }
+
+      shownCount += toShow;
+
+      // Update counter text
+      const counterText = loadMoreBtn.parentElement?.querySelector('p');
+      if (counterText) {
+        counterText.textContent = `Showing ${shownCount} of ${totalPosts} articles`;
+      }
+
+      // Hide button if all posts shown
+      if (shownCount >= totalPosts) {
+        loadMoreBtn.parentElement?.remove();
+      }
+    });
+  }
+</script>
