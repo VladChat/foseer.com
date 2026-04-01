@@ -292,6 +292,7 @@ async function screenBriefSourcePackViability(briefs = [], { options = {}, brave
         braveApiKey,
         googleApiKey,
         googleCx,
+        initialFailureCodes: retryCandidate.failureCodes,
       });
 
       if (Array.isArray(rescueResult?.workedQueries) && rescueResult.workedQueries.length > 0) {
@@ -511,17 +512,41 @@ async function runNearMissSourcePackRescue({
     query_results: [],
     worked_queries: [],
     role_coverage: null,
+    missing_roles: ['primary_or_official', 'trusted_reporting', 'independent_confirming'],
+    early_stop_reason: null,
     failure_codes: [],
+    rescue_failure_summary: null,
   };
 
   const rescuedCandidates = [];
   let braveRescueUsed = false;
+  let noProgressStreak = 0;
+  let previousMissingRolesKey = diagnostics.missing_roles.join('|');
 
-  for (const queryEntry of queryPlan) {
+  for (let queryIndex = 0; queryIndex < queryPlan.length; queryIndex += 1) {
+    const queryEntry = queryPlan[queryIndex];
     const level = String(queryEntry.level || 'strict');
     const intent = String(queryEntry.intent || 'general');
     const query = String(queryEntry.query || '').trim();
     if (!query) continue;
+    if (shouldSkipRescueQueryByCoverage(queryEntry, diagnostics.role_coverage)) {
+      diagnostics.query_results.push({
+        level,
+        intent,
+        query,
+        skipped: 'role_already_satisfied',
+      });
+      continue;
+    }
+    if (String(entityProfile.confidence || 'low') === 'low' && level === 'broad' && intent === 'trusted_reporting') {
+      diagnostics.query_results.push({
+        level,
+        intent,
+        query,
+        skipped: 'entity_confidence_low_broad_trusted_skip',
+      });
+      continue;
+    }
 
     const searchResult = await runRescueSearchPass({
       brief,
@@ -534,6 +559,7 @@ async function runNearMissSourcePackRescue({
       braveApiKey: null,
       includeGdelt: true,
       entityProfile,
+      livePhase: 'rescue',
     });
 
     diagnostics.query_results.push({
@@ -546,6 +572,7 @@ async function runNearMissSourcePackRescue({
       generic_filtered: searchResult.genericFiltered,
     });
 
+    const candidateCountBefore = rescuedCandidates.length;
     if (searchResult.candidates.length > 0) {
       rescuedCandidates.push(...searchResult.candidates);
       diagnostics.worked_queries.push({
@@ -559,13 +586,30 @@ async function runNearMissSourcePackRescue({
     const clusterView = buildRescueClusterView(rescuedCandidates, brief, { entityProfile });
     const roleCoverage = buildRescueRoleCoverage(clusterView.dominantEntries || []);
     diagnostics.role_coverage = roleCoverage;
+    diagnostics.missing_roles = deriveMissingRescueRoles(roleCoverage);
     diagnostics.cluster_coherence = clusterView?.dominantCoherence ?? null;
     if (isRescueRoleCoverageReady(roleCoverage)) {
       break;
     }
+
+    const missingRolesKey = diagnostics.missing_roles.join('|');
+    const progressed = rescuedCandidates.length > candidateCountBefore || missingRolesKey !== previousMissingRolesKey;
+    noProgressStreak = progressed ? 0 : noProgressStreak + 1;
+    previousMissingRolesKey = missingRolesKey;
+
+    const earlyStop = evaluateRescueEarlyStop({
+      roleCoverage,
+      remainingQueries: queryPlan.slice(queryIndex + 1),
+      noProgressStreak,
+      queryResult: searchResult,
+    });
+    if (earlyStop.stop) {
+      diagnostics.early_stop_reason = earlyStop.reason;
+      break;
+    }
   }
 
-  if (rescueNeedsBraveFallback(diagnostics.role_coverage) && !braveRescueUsed) {
+  if (rescueNeedsBraveFallback(diagnostics.role_coverage) && !braveRescueUsed && shouldRunBraveRescueFallback({ diagnostics, entityProfile })) {
     const braveQuery = queryPlan.find((entry) => entry.level === 'broad') || queryPlan[queryPlan.length - 1] || null;
     if (braveQuery?.query) {
       braveRescueUsed = true;
@@ -580,6 +624,7 @@ async function runNearMissSourcePackRescue({
         braveApiKey,
         includeGdelt: false,
         entityProfile,
+        livePhase: 'rescue',
       });
       diagnostics.query_results.push({
         level: braveQuery.level,
@@ -605,10 +650,17 @@ async function runNearMissSourcePackRescue({
   const clusterView = buildRescueClusterView(rescuedCandidates, brief, { entityProfile });
   const roleCoverage = buildRescueRoleCoverage(clusterView.dominantEntries || []);
   diagnostics.role_coverage = roleCoverage;
+  diagnostics.missing_roles = deriveMissingRescueRoles(roleCoverage);
   diagnostics.cluster_coherence = clusterView?.dominantCoherence ?? null;
 
   if ((clusterView.totalCandidates || 0) === 0) {
     diagnostics.failure_codes = ['generic_sources_only', 'thin_pack_after_rescue'];
+    diagnostics.rescue_failure_summary = summarizeRescueFailure({
+      diagnostics,
+      failureCodes: diagnostics.failure_codes,
+      queryPlan,
+      roleCoverage,
+    });
     return {
       rescued: false,
       sourcePack: null,
@@ -622,6 +674,12 @@ async function runNearMissSourcePackRescue({
   const selectedRescueSources = selectRescueSourcesByRole(clusterView.dominantEntries || []);
   if (selectedRescueSources.length === 0) {
     diagnostics.failure_codes = ['generic_sources_only', 'thin_pack_after_rescue'];
+    diagnostics.rescue_failure_summary = summarizeRescueFailure({
+      diagnostics,
+      failureCodes: diagnostics.failure_codes,
+      queryPlan,
+      roleCoverage,
+    });
     return {
       rescued: false,
       sourcePack: null,
@@ -664,6 +722,12 @@ async function runNearMissSourcePackRescue({
   ]));
   diagnostics.failure_codes = failureCodes;
   diagnostics.post_rescue_coherence = estimateSourcePackCoherence(sourcePack, augmentedBrief);
+  diagnostics.rescue_failure_summary = summarizeRescueFailure({
+    diagnostics,
+    failureCodes,
+    queryPlan,
+    roleCoverage,
+  });
 
   return {
     rescued: false,
@@ -684,7 +748,9 @@ function buildNearMissRescueQueryPlan(brief = {}, { maxQueries = 5, failureCodes
   const dateToken = extractBriefDateToken(brief);
   const broadTopic = buildBroadRescueTopic(brief);
   const allowStrictEntity = String(entity.confidence || 'low') !== 'low';
+  const lowConfidenceEntity = !allowStrictEntity;
   const requiresOfficial = Array.isArray(failureCodes) && failureCodes.includes('missing_official');
+  const requiresTrusted = Array.isArray(failureCodes) && failureCodes.includes('missing_trusted_reporting');
   const officialDomainTargets = buildRescueOfficialDomainTargets(brief, {
     requireOfficial: requiresOfficial,
     entityProfile: entity,
@@ -694,7 +760,7 @@ function buildNearMissRescueQueryPlan(brief = {}, { maxQueries = 5, failureCodes
     : '';
 
   const strictAnchor = compactRescueText([mainEntity, title, aliases[0], eventType, dateToken].filter(Boolean).join(' '), 24);
-  const relaxedAnchor = compactRescueText([mainEntity || title, aliases[0], broadTopic, eventType].filter(Boolean).join(' '), 22);
+  const relaxedAnchor = compactRescueText([mainEntity || title, aliases[0], broadTopic, eventType, dateToken].filter(Boolean).join(' '), 22);
   const broadAnchor = compactRescueText([mainEntity || '', broadTopic || title || 'developing story'].filter(Boolean).join(' '), 16);
   const aliasClause = aliases.length > 0 ? `(${aliases.slice(0, 2).join(' OR ')})` : '';
 
@@ -723,21 +789,30 @@ function buildNearMissRescueQueryPlan(brief = {}, { maxQueries = 5, failureCodes
     },
     {
       level: 'broad',
-      intent: 'trusted_reporting',
-      query: compactRescueText(`${broadAnchor} ${mainEntity || ''} (news analysis OR report OR investigation)`, 30),
-      targetedDomains: [],
-    },
-    {
-      level: 'broad',
       intent: 'official_primary',
-      query: compactRescueText(`${mainEntity || broadAnchor} ${eventType} (newsroom OR regulator OR agency OR court OR league OR team OR university OR journal OR investor relations) ${officialDomainClause}`, 36),
+      query: compactRescueText(`${mainEntity || title || broadAnchor} ${eventType} (newsroom OR regulator OR agency OR court OR league OR team OR university OR journal OR investor relations) ${officialDomainClause}`, 36),
       targetedDomains: officialDomainTargets,
     },
   );
 
+  if (!lowConfidenceEntity || requiresTrusted) {
+    queries.push({
+      level: lowConfidenceEntity ? 'relaxed' : 'broad',
+      intent: 'trusted_reporting',
+      query: compactRescueText(`${broadAnchor} ${mainEntity || ''} (reuters OR associated press OR apnews OR bbc OR bloomberg OR investigation OR report)`, 32),
+      targetedDomains: [],
+    });
+  }
+
   return queries
+    .filter((entry) => {
+      if (!entry?.query) return false;
+      if (lowConfidenceEntity && entry.level === 'strict') return false;
+      return true;
+    })
+    .filter((entry, index, list) => list.findIndex((candidate) => candidate.query === entry.query) === index)
     .filter((entry) => String(entry.query || '').trim().length >= 8)
-    .slice(0, Math.max(3, Math.min(5, maxQueries)));
+    .slice(0, Math.max(3, Math.min(lowConfidenceEntity ? 4 : 5, maxQueries)));
 }
 
 async function runRescueSearchPass({
@@ -751,6 +826,7 @@ async function runRescueSearchPass({
   braveApiKey = null,
   includeGdelt = true,
   entityProfile = null,
+  livePhase = 'rescue',
 } = {}) {
   const providerStatus = [];
   const rawCandidates = [];
@@ -762,6 +838,7 @@ async function runRescueSearchPass({
         num: 8,
         dateRestrict: 'd7',
         logLabel: `qna_rescue_google_${level}`,
+        livePhase,
       });
       providerStatus.push({
         provider: 'google',
@@ -794,6 +871,7 @@ async function runRescueSearchPass({
         timespan: '7days',
         sort: 'DateDesc',
         logLabel: `qna_rescue_gdelt_${level}`,
+        livePhase,
       });
       providerStatus.push({
         provider: 'gdelt',
@@ -825,6 +903,7 @@ async function runRescueSearchPass({
         count: 8,
         freshness: 'pw',
         logLabel: `qna_rescue_brave_${level}`,
+        livePhase,
       });
       providerStatus.push({
         provider: 'brave',
@@ -876,10 +955,20 @@ async function runRescueSearchPass({
     }
 
     const roleResult = classifySourceRole(normalized, brief);
-    if (String(roleResult?.role || '') === 'reject' && Number(roleResult?.same_event_score || 0) < 3) {
+    const sameEventScore = Number(roleResult?.same_event_score || 0);
+    const role = String(roleResult?.role || '');
+    const entityCoherence = computeRescueEntityCoherence(normalized, brief, entity);
+
+    if (role === 'reject' && sameEventScore < 4) {
       continue;
     }
-    if (Number(roleResult?.same_event_score || 0) < 2 && String(roleResult?.role || '') === 'signal_only') {
+    if (sameEventScore < 2 && role === 'signal_only') {
+      continue;
+    }
+    if (String(entity?.confidence || 'low') === 'low' && sameEventScore < 3 && !['core', 'supporting'].includes(role)) {
+      continue;
+    }
+    if (String(entity?.confidence || 'low') === 'low' && entityCoherence < 0.35 && sameEventScore < 4) {
       continue;
     }
 
@@ -955,11 +1044,15 @@ function buildRescueClusterView(entries = [], brief = {}, { entityProfile = null
     return { ...cluster, clusterScore, domainCount, coherenceScore };
   }).sort((left, right) => right.clusterScore - left.clusterScore);
 
+  const dominantEntriesRaw = scoredClusters[0]?.entries || [];
+  const dominantEntries = filterRescueDominantEntries(dominantEntriesRaw, brief, entity);
+  const dominantCoherence = computeRescueClusterCoherence(dominantEntries, brief, entity);
+
   return {
     totalCandidates: deduped.length,
     clusters: scoredClusters,
-    dominantEntries: scoredClusters[0]?.entries || [],
-    dominantCoherence: Number(scoredClusters[0]?.coherenceScore || 0),
+    dominantEntries,
+    dominantCoherence: Number(dominantCoherence || 0),
   };
 }
 
@@ -974,6 +1067,21 @@ function dedupeRescueEntries(entries = []) {
     }
   }
   return Array.from(byUrl.values());
+}
+
+function filterRescueDominantEntries(entries = [], brief = {}, entityProfile = null) {
+  const list = Array.isArray(entries) ? entries : [];
+  if (list.length <= 2) return list;
+  const anchor = list[0];
+  const filtered = [anchor];
+  for (let index = 1; index < list.length; index += 1) {
+    const entry = list[index];
+    const sameEvent = rescueEntriesBelongToSameEvent(entry, anchor, brief, { entityProfile });
+    if (!sameEvent) continue;
+    if (Number(entry?.roleResult?.same_event_score || 0) < 3) continue;
+    filtered.push(entry);
+  }
+  return filtered;
 }
 
 function rescueEntriesBelongToSameEvent(leftEntry = {}, rightEntry = {}, brief = {}, { entityProfile = null } = {}) {
@@ -1001,6 +1109,7 @@ function rescueEntriesBelongToSameEvent(leftEntry = {}, rightEntry = {}, brief =
   const leftSameEvent = Number(leftEntry?.roleResult?.same_event_score || 0);
   const rightSameEvent = Number(rightEntry?.roleResult?.same_event_score || 0);
   const briefTokens = titleTokensForCoherence(brief?.title || '');
+  const eventTokens = titleTokensForCoherence(`${brief?.whatHappened || ''} ${brief?.angle || ''} ${inferRescueEventType(brief)}`);
   let briefOverlap = 0;
   for (const token of leftTokens) {
     if (briefTokens.has(token)) briefOverlap += 1;
@@ -1008,15 +1117,19 @@ function rescueEntriesBelongToSameEvent(leftEntry = {}, rightEntry = {}, brief =
   for (const token of rightTokens) {
     if (briefTokens.has(token)) briefOverlap += 1;
   }
+  const leftEventOverlap = Array.from(leftTokens).filter((token) => eventTokens.has(token)).length;
+  const rightEventOverlap = Array.from(rightTokens).filter((token) => eventTokens.has(token)).length;
+  const eventOverlap = leftEventOverlap + rightEventOverlap;
 
   const entity = entityProfile || inferRescueEntityProfile(brief);
   const leftEntityCoherence = computeRescueEntityCoherence(left, brief, entity);
   const rightEntityCoherence = computeRescueEntityCoherence(right, brief, entity);
 
-  if (titleOverlap >= 2) return true;
+  if (titleOverlap >= 3 && (entityOverlap >= 1 || (leftSameEvent >= 4 && rightSameEvent >= 4))) return true;
   if (entityOverlap >= 1 && (leftSameEvent >= 3 || rightSameEvent >= 3)) return true;
-  if (briefOverlap >= 2 && leftSameEvent >= 3 && rightSameEvent >= 3) return true;
-  if (leftEntityCoherence >= 0.5 && rightEntityCoherence >= 0.5 && (leftSameEvent >= 3 || rightSameEvent >= 3)) return true;
+  if (briefOverlap >= 3 && leftSameEvent >= 3 && rightSameEvent >= 3) return true;
+  if (eventOverlap >= 2 && leftSameEvent >= 4 && rightSameEvent >= 4) return true;
+  if (leftEntityCoherence >= 0.55 && rightEntityCoherence >= 0.55 && (leftSameEvent >= 3 || rightSameEvent >= 3)) return true;
   return false;
 }
 
@@ -1090,15 +1203,28 @@ function buildRescueRoleCoverage(entries = []) {
     }
   }
 
-  const independentConfirming = pickUniqueDomainEntries(confirmingCandidates, 4);
+  const primaryOfficialUnique = pickUniqueDomainEntries(primaryOfficial, 4);
+  const trustedUnique = pickUniqueDomainEntries(trusted, 4);
+  const roleLockedDomains = new Set([
+    ...primaryOfficialUnique.map((entry) => normalizeDomain(entry?.source?.canonical_domain || entry?.source?.domain || '')),
+    ...trustedUnique.map((entry) => normalizeDomain(entry?.source?.canonical_domain || entry?.source?.domain || '')),
+  ].filter(Boolean));
+
+  const independentConfirming = pickUniqueDomainEntries(
+    confirmingCandidates.filter((entry) => {
+      const domain = normalizeDomain(entry?.source?.canonical_domain || entry?.source?.domain || '');
+      return domain && !roleLockedDomains.has(domain);
+    }),
+    4
+  );
   const optionalContext = pickUniqueDomainEntries(optional, 4);
   return {
     totalCandidates: candidates.length,
-    primary_or_official: { count: primaryOfficial.length, items: pickUniqueDomainEntries(primaryOfficial, 4) },
-    trusted_reporting: { count: trusted.length, items: pickUniqueDomainEntries(trusted, 4) },
+    primary_or_official: { count: primaryOfficial.length, items: primaryOfficialUnique },
+    trusted_reporting: { count: trusted.length, items: trustedUnique },
     independent_confirming: { count: independentConfirming.length, items: independentConfirming },
     optional_context: { count: optionalContext.length, items: optionalContext },
-    unique_domains: new Set(candidates.map((entry) => normalizeDomain(entry?.source?.canonical_domain || entry?.source?.domain || ''))).size,
+    unique_domains: new Set(candidates.map((entry) => normalizeDomain(entry?.source?.canonical_domain || entry?.source?.domain || '')).filter(Boolean)).size,
   };
 }
 
@@ -1124,6 +1250,114 @@ function deriveMissingCoverageCodes(coverage = null) {
   if (Number(coverage?.independent_confirming?.count || 0) < 1) codes.add('only_one_publishable_source');
   if (Number(coverage?.totalCandidates || 0) < 2) codes.add('thin_pack_after_rescue');
   return Array.from(codes);
+}
+
+function deriveMissingRescueRoles(coverage = null) {
+  const missing = [];
+  if (Number(coverage?.primary_or_official?.count || 0) < 1) missing.push('primary_or_official');
+  if (Number(coverage?.trusted_reporting?.count || 0) < 1) missing.push('trusted_reporting');
+  if (Number(coverage?.independent_confirming?.count || 0) < 1) missing.push('independent_confirming');
+  return missing;
+}
+
+function queryIntentSupportsRole(intent = '', role = '') {
+  const normalizedIntent = String(intent || '').toLowerCase();
+  if (normalizedIntent === 'general') return true;
+  if (role === 'primary_or_official') return normalizedIntent === 'official_primary';
+  if (role === 'trusted_reporting') return normalizedIntent === 'trusted_reporting';
+  if (role === 'independent_confirming') {
+    return normalizedIntent === 'independent_confirming'
+      || normalizedIntent === 'trusted_reporting'
+      || normalizedIntent === 'official_primary';
+  }
+  return true;
+}
+
+function shouldSkipRescueQueryByCoverage(queryEntry = {}, coverage = null) {
+  if (!coverage) return false;
+  const missingRoles = deriveMissingRescueRoles(coverage);
+  if (missingRoles.length === 0) return true;
+  const intent = String(queryEntry?.intent || 'general');
+  return !missingRoles.some((role) => queryIntentSupportsRole(intent, role));
+}
+
+function remainingQueriesCanCoverMissingRoles(remainingQueries = [], missingRoles = []) {
+  if (!Array.isArray(missingRoles) || missingRoles.length === 0) return true;
+  const intents = Array.isArray(remainingQueries)
+    ? remainingQueries.map((entry) => String(entry?.intent || 'general'))
+    : [];
+  for (const role of missingRoles) {
+    if (intents.some((intent) => queryIntentSupportsRole(intent, role))) continue;
+    return false;
+  }
+  return true;
+}
+
+function evaluateRescueEarlyStop({
+  roleCoverage = null,
+  remainingQueries = [],
+  noProgressStreak = 0,
+  queryResult = null,
+} = {}) {
+  const missingRoles = deriveMissingRescueRoles(roleCoverage);
+  if (missingRoles.length === 0) return { stop: true, reason: 'role_coverage_completed' };
+  if (!remainingQueriesCanCoverMissingRoles(remainingQueries, missingRoles)) {
+    return {
+      stop: true,
+      reason: `missing_roles_not_coverable:${missingRoles.join(',')}`,
+    };
+  }
+
+  const exhaustedProviders = (queryResult?.providerStatus || [])
+    .filter((item) => String(item?.status || '') === 'live_quota_exhausted')
+    .map((item) => String(item?.provider || '').toLowerCase())
+    .filter(Boolean);
+  if (exhaustedProviders.length >= 2 && noProgressStreak >= 1) {
+    return {
+      stop: true,
+      reason: `multi_provider_quota_exhausted:${Array.from(new Set(exhaustedProviders)).join(',')}`,
+    };
+  }
+  if (noProgressStreak >= 2) {
+    return { stop: true, reason: 'no_progress_after_multiple_passes' };
+  }
+  return { stop: false, reason: null };
+}
+
+function shouldRunBraveRescueFallback({ diagnostics = {}, entityProfile = null } = {}) {
+  const missingRoles = Array.isArray(diagnostics?.missing_roles) ? diagnostics.missing_roles : [];
+  if (missingRoles.length === 0) return false;
+  if (String(entityProfile?.confidence || 'low') !== 'low') return true;
+  return Array.isArray(diagnostics?.worked_queries) && diagnostics.worked_queries.length > 0;
+}
+
+function collectRescueQuotaSignals(queryResults = []) {
+  const exhaustedProviders = new Set();
+  for (const result of Array.isArray(queryResults) ? queryResults : []) {
+    for (const provider of Array.isArray(result?.providers) ? result.providers : []) {
+      if (String(provider?.status || '') === 'live_quota_exhausted') {
+        exhaustedProviders.add(String(provider?.provider || '').toLowerCase());
+      }
+    }
+  }
+  return Array.from(exhaustedProviders);
+}
+
+function summarizeRescueFailure({ diagnostics = {}, failureCodes = [], queryPlan = [], roleCoverage = null } = {}) {
+  const codes = Array.isArray(failureCodes) ? failureCodes : [];
+  const missingRoles = deriveMissingRescueRoles(roleCoverage || diagnostics?.role_coverage || null);
+  const quotaExhaustedProviders = collectRescueQuotaSignals(diagnostics?.query_results || []);
+  const summaryCode = codes[0] || (missingRoles.length > 0 ? `missing_roles:${missingRoles.join(',')}` : 'thin_pack_after_rescue');
+  return {
+    summary_code: summaryCode,
+    failure_codes: codes,
+    missing_roles: missingRoles,
+    early_stop_reason: diagnostics?.early_stop_reason || null,
+    quota_exhausted_providers: quotaExhaustedProviders,
+    query_plan_size: Array.isArray(queryPlan) ? queryPlan.length : 0,
+    query_attempted: Array.isArray(diagnostics?.query_results) ? diagnostics.query_results.filter((entry) => !entry?.skipped).length : 0,
+    worked_query_count: Array.isArray(diagnostics?.worked_queries) ? diagnostics.worked_queries.length : 0,
+  };
 }
 
 function selectRescueSourcesByRole(entries = []) {
