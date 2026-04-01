@@ -116,18 +116,18 @@ const metadata = {
       ) : (
         <>
           <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="latest-grid">
-            {latestPosts.slice(0, 10).map((post) => (
+            {latestPosts.slice(0, 12).map((post) => (
               <EditorialStoryCard post={post} variant="compact" />
             ))}
           </div>
-          
-          {latestPosts.length > 10 && (
+
+          {latestPosts.length > 12 && (
             <div class="mt-12 text-center">
               <button
                 id="load-more-btn"
                 class="inline-flex items-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-semibold text-sm hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 dark:focus:ring-white"
                 data-total={latestPosts.length}
-                data-step="10"
+                data-step="12"
               >
                 <span>Load More</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,14 +135,14 @@ const metadata = {
                 </svg>
               </button>
               <p class="mt-3 text-sm text-muted dark:text-slate-400">
-                Showing 10 of {latestPosts.length} articles
+                Showing 12 of {latestPosts.length} articles
               </p>
             </div>
           )}
-          
+
           <!-- Hidden container with remaining posts -->
           <div id="hidden-posts" class="hidden">
-            {latestPosts.slice(10).map((post) => (
+            {latestPosts.slice(12).map((post) => (
               <EditorialStoryCard post={post} variant="compact" />
             ))}
           </div>
@@ -157,33 +157,33 @@ const metadata = {
   const loadMoreBtn = document.getElementById('load-more-btn');
   const hiddenPostsContainer = document.getElementById('hidden-posts');
   const latestGrid = document.getElementById('latest-grid');
-  
+
   if (loadMoreBtn && hiddenPostsContainer && latestGrid) {
     const totalPosts = parseInt(loadMoreBtn.dataset.total || '0');
-    const step = parseInt(loadMoreBtn.dataset.step || '10');
-    let shownCount = 10;
-    
+    const step = parseInt(loadMoreBtn.dataset.step || '12');
+    let shownCount = 12;
+
     const hiddenCards = Array.from(hiddenPostsContainer.children);
-    
+
     loadMoreBtn.addEventListener('click', () => {
-      const remaining = hiddenCards.length - (shownCount - 10);
+      const remaining = hiddenCards.length - (shownCount - 12);
       const toShow = Math.min(step, remaining);
-      
+
       for (let i = 0; i < toShow; i++) {
-        const card = hiddenCards[shownCount - 10 + i];
+        const card = hiddenCards[shownCount - 12 + i];
         if (card) {
           latestGrid.appendChild(card);
         }
       }
-      
+
       shownCount += toShow;
-      
+
       // Update counter text
       const counterText = loadMoreBtn.parentElement?.querySelector('p');
       if (counterText) {
         counterText.textContent = `Showing ${shownCount} of ${totalPosts} articles`;
       }
-      
+
       // Hide button if all posts shown
       if (shownCount >= totalPosts) {
         loadMoreBtn.parentElement?.remove();
