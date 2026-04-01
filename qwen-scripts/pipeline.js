@@ -1171,31 +1171,91 @@ function isRecentDuplicateCandidate(candidate, inventoryEntries) {
   const brief = candidate?.brief || {};
   const sourcePack = candidate?.sourcePack || {};
   const titleTokens = selectionTokens(brief.title);
+  const entityTokens = selectionTokens((brief.entities || brief.involvedParties || []).join(' '));
   const searchTokens = Array.from(new Set([
     ...titleTokens,
     ...selectionTokens(sourcePack?.topic || ''),
+    ...selectionTokens(brief.whatHappened || ''),
     ...selectionTokens((brief.entities || brief.involvedParties || []).join(' ')),
   ]));
   const topicId = getCandidateSelectionTopicId(candidate);
 
-  return inventoryEntries.some((entry) => {
+  let bestMatch = null;
+  let bestScore = -Infinity;
+
+  for (const entry of inventoryEntries) {
     const entryTitleTokens = selectionTokens(entry.title);
     const entryKeywordTokens = selectionTokens((entry.search_keywords || []).join(' '));
+    const entryEntityTokens = selectionTokens((entry.key_entities || []).join(' '));
     const titleOverlap = overlapCount(titleTokens, entryTitleTokens);
     const keywordOverlap = overlapCount(searchTokens, entryKeywordTokens);
+    const entityOverlap = overlapCount(entityTokens, entryEntityTokens);
     const sameTopic = topicId && topicId === String(entry.topic_id || '').trim().toLowerCase();
 
-    if (titleOverlap >= 4) return true;
-    if (sameTopic && titleOverlap >= 3) return true;
-    if (titleOverlap >= 3 && keywordOverlap >= 3) return true;
-    return false;
-  });
+    let score = 0;
+    if (titleOverlap >= 4) score = Math.max(score, 100);
+    if (sameTopic && titleOverlap >= 3) score = Math.max(score, 95);
+    if (sameTopic && titleOverlap >= 2 && entityOverlap >= 1) score = Math.max(score, 90);
+    if (sameTopic && titleOverlap >= 2 && keywordOverlap >= 2) score = Math.max(score, 85);
+    if (sameTopic && keywordOverlap >= 3 && entityOverlap >= 1) score = Math.max(score, 85);
+    if (titleOverlap >= 3 && keywordOverlap >= 3) score = Math.max(score, 80);
+
+    if (score > bestScore) {
+      bestScore = score;
+      bestMatch = {
+        entry,
+        score,
+        details: {
+          titleOverlap,
+          keywordOverlap,
+          entityOverlap,
+          sameTopic,
+        },
+      };
+    }
+  }
+
+  return bestScore >= 80 ? bestMatch : null;
 }
 
 function filterRecentDuplicateCandidates(candidates) {
   const recentInventory = loadRecentPublishedInventory();
-  if (!recentInventory.length) return Array.isArray(candidates) ? candidates : [];
-  return (Array.isArray(candidates) ? candidates : []).filter((candidate) => !isRecentDuplicateCandidate(candidate, recentInventory));
+  if (!recentInventory.length) {
+    return {
+      candidates: Array.isArray(candidates) ? candidates : [],
+      rejected: [],
+      inventorySize: 0,
+    };
+  }
+
+  const kept = [];
+  const rejected = [];
+  for (const candidate of (Array.isArray(candidates) ? candidates : [])) {
+    const match = isRecentDuplicateCandidate(candidate, recentInventory);
+    if (!match) {
+      kept.push(candidate);
+      continue;
+    }
+    rejected.push({
+      candidateTitle: candidate?.brief?.title || candidate?.sourcePack?.topic || null,
+      candidateTopicId: getCandidateSelectionTopicId(candidate) || null,
+      matchedEntry: {
+        article_id: match.entry?.article_id || null,
+        topic_id: match.entry?.topic_id || null,
+        title: match.entry?.title || null,
+        created: match.entry?.created || null,
+        canonical_url: match.entry?.canonical_url || null,
+      },
+      score: match.score,
+      details: match.details,
+    });
+  }
+
+  return {
+    candidates: kept,
+    rejected,
+    inventorySize: recentInventory.length,
+  };
 }
 
 function resolveMaxArticlesPerRun(options = {}) {
@@ -1573,13 +1633,30 @@ async function runSourcePackAssemblyAttempt({
   }
 
   console.log(`[pipeline] Assembled ${sourcePacksAssembled} source packs, ${publishableCandidates} publishable`);
+  const recentDuplicateScreen = filterRecentDuplicateCandidates(candidatesWithSources);
+  const candidatesAfterInventoryDedupe = recentDuplicateScreen.candidates;
+  if (recentDuplicateScreen.rejected.length > 0) {
+    for (const rejected of recentDuplicateScreen.rejected) {
+      const details = rejected?.details || {};
+      duplicateRejectedAtSelection.push({
+        identityKey: null,
+        title: rejected.candidateTitle || null,
+        origin: 'recent_inventory_guard',
+        reason: `recent_inventory_duplicate(score=${rejected.score}, topic=${rejected.candidateTopicId || 'na'}, title_overlap=${details.titleOverlap || 0}, keyword_overlap=${details.keywordOverlap || 0}, entity_overlap=${details.entityOverlap || 0})`,
+        matched: rejected.matchedEntry || null,
+      });
+      console.log(`[pipeline] Duplicate guard: drop recent-inventory candidate "${rejected.candidateTitle || 'Untitled'}" matched with "${rejected?.matchedEntry?.title || 'unknown'}" (score=${rejected.score})`);
+    }
+    publishableCandidates = candidatesAfterInventoryDedupe.filter((candidate) => candidate?.sourcePack?.passesGate).length;
+    console.log(`[pipeline] Recent inventory duplicate guard removed ${recentDuplicateScreen.rejected.length} candidate(s) (inventory scanned: ${recentDuplicateScreen.inventorySize})`);
+  }
 
   const sourcePackSelectionLimit = Math.max(
     Number(options.maxArticlesPerRunForSourcePackSelection || options.sourcePackSelectionCandidateLimit || 0) || 0,
     maxArticlesPerRun,
     maxArticlesPerRun * 3,
   );
-  const selectedCandidates = selectPublishableCandidates(candidatesWithSources, {
+  const selectedCandidates = selectPublishableCandidates(candidatesAfterInventoryDedupe, {
     maxArticlesPerRun: sourcePackSelectionLimit,
     maxPerSection: Number(options.maxPerSection || 2),
     maxPerTopic: Number(options.maxPerTopic || 2),
@@ -1605,13 +1682,13 @@ async function runSourcePackAssemblyAttempt({
   });
 
   const selectedIdentityKeys = selectedCandidates.map((candidate) => candidate?.brief?.poolIdentityKey).filter(Boolean);
-  const readyBacklog = recordReadyArticleCandidates(candidatesWithSources, {
+  const readyBacklog = recordReadyArticleCandidates(candidatesAfterInventoryDedupe, {
     selectedIdentityKeys,
     limit: options.readyCandidateLimit || 10,
   });
 
   return {
-    candidatesWithSources,
+    candidatesWithSources: candidatesAfterInventoryDedupe,
     selectedCandidates,
     readyBacklog,
     duplicateRejectedAtSelection,
