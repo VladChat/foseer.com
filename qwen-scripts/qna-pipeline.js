@@ -385,259 +385,464 @@ export async function runQnaPipeline(options = {}) {
     return finalizeRun(result, questionCandidates, null, startTime);
   }
 
-  selected.briefForDraft = selectedMode === 'standard-fallback'
-    ? buildStandardFallbackDraftBrief(selected.brief)
-    : buildQuestionDraftBrief(selected.brief, selected.questionCandidate);
+  const lateFallbackUsedBriefKeys = new Set(sourcePackAttemptQuestions.map((candidate) => getBriefCandidateKey(candidate?.brief || {})));
+  if (selected?.brief) lateFallbackUsedBriefKeys.add(getBriefCandidateKey(selected.brief));
+  let completed = false;
 
-  const preWriteCoherence = estimateSourcePackCoherence(selected.sourcePack, selected.brief);
-  const preWriteGateBase = evaluatePreWriteQualityGate({
-    brief: selected.brief,
-    sourcePack: selected.sourcePack,
-    questionCandidate: selected.questionCandidate,
-    mode: selectedMode === 'question-led' ? 'qna' : 'article',
-    coherenceScore: preWriteCoherence,
-  }, options.preWriteGate || {});
-  const preWriteReasons = Array.isArray(preWriteGateBase.reasons) ? [...preWriteGateBase.reasons] : [];
-  const preWriteWarnings = Array.isArray(preWriteGateBase.warnings) ? [...preWriteGateBase.warnings] : [];
+  while (!completed) {
+    selected.briefForDraft = selectedMode === 'standard-fallback'
+      ? buildStandardFallbackDraftBrief(selected.brief)
+      : buildQuestionDraftBrief(selected.brief, selected.questionCandidate);
 
-  const preWriteGraphValidation = validatePrePublishGraph({
-    ...selected,
-    draft: {
-      title: selected.briefForDraft?.title || selected.brief?.title || 'Developing story',
-      excerpt: selected.briefForDraft?.summary || selected.brief?.summary || selected.brief?.whyItMatters || '',
-      content: `${selected.briefForDraft?.whatHappened || selected.brief?.whatHappened || ''} ${selected.briefForDraft?.whyItMatters || selected.brief?.whyItMatters || ''}`.trim(),
-      articleType: selected.briefForDraft?.articleType || selected.brief?.articleType || 'analysis',
-      article_type: selected.briefForDraft?.articleType || selected.brief?.articleType || 'analysis',
-    },
-  });
-  const preWriteGraphErrorsRaw = Array.isArray(preWriteGraphValidation.errors) ? preWriteGraphValidation.errors : [];
-  const preWriteGraphErrors = preWriteGraphErrorsRaw.filter((message) => isPreWriteRelevantGraphError(message));
-  if (preWriteGraphErrors.length > 0) {
-    preWriteReasons.push(...preWriteGraphErrors);
-  }
-  if (preWriteGraphErrorsRaw.length > preWriteGraphErrors.length) {
-    preWriteWarnings.push('Pre-publish graph reported post-draft-only errors during precheck');
-  }
-  if (Array.isArray(preWriteGraphValidation.warnings) && preWriteGraphValidation.warnings.length > 0) {
-    preWriteWarnings.push(...preWriteGraphValidation.warnings);
-  }
-  const preWriteGate = {
-    ...preWriteGateBase,
-    pass: preWriteReasons.length === 0,
-    reasons: Array.from(new Set(preWriteReasons)),
-    warnings: Array.from(new Set(preWriteWarnings)),
-    metrics: {
-      ...(preWriteGateBase.metrics || {}),
-      prepublish_graph_precheck: {
-        valid: preWriteGraphValidation.valid,
-        errors: preWriteGraphValidation.errors || [],
-        warnings: preWriteGraphValidation.warnings || [],
+    const preWriteCoherence = estimateSourcePackCoherence(selected.sourcePack, selected.brief);
+    const preWriteGateBase = evaluatePreWriteQualityGate({
+      brief: selected.brief,
+      sourcePack: selected.sourcePack,
+      questionCandidate: selected.questionCandidate,
+      mode: selectedMode === 'question-led' ? 'qna' : 'article',
+      coherenceScore: preWriteCoherence,
+    }, options.preWriteGate || {});
+    const preWriteReasons = Array.isArray(preWriteGateBase.reasons) ? [...preWriteGateBase.reasons] : [];
+    const preWriteWarnings = Array.isArray(preWriteGateBase.warnings) ? [...preWriteGateBase.warnings] : [];
+
+    const preWriteGraphValidation = validatePrePublishGraph({
+      ...selected,
+      draft: {
+        title: selected.briefForDraft?.title || selected.brief?.title || 'Developing story',
+        excerpt: selected.briefForDraft?.summary || selected.brief?.summary || selected.brief?.whyItMatters || '',
+        content: `${selected.briefForDraft?.whatHappened || selected.brief?.whatHappened || ''} ${selected.briefForDraft?.whyItMatters || selected.brief?.whyItMatters || ''}`.trim(),
+        articleType: selected.briefForDraft?.articleType || selected.brief?.articleType || 'analysis',
+        article_type: selected.briefForDraft?.articleType || selected.brief?.articleType || 'analysis',
       },
-    },
-  };
-  result.stages.pre_write_quality_gate = {
-    success: preWriteGate.pass,
-    reasons: preWriteGate.reasons,
-    warnings: preWriteGate.warnings,
-    metrics: preWriteGate.metrics,
-  };
-  if (!preWriteGate.pass) {
-    result.hard_blocker = `Pre-write quality gate failed: ${preWriteGate.reasons.join('; ')}`;
-    return finalizeRun(result, questionCandidates, null, startTime);
-  }
+    });
+    const preWriteGraphErrorsRaw = Array.isArray(preWriteGraphValidation.errors) ? preWriteGraphValidation.errors : [];
+    const preWriteGraphErrors = preWriteGraphErrorsRaw.filter((message) => isPreWriteRelevantGraphError(message));
+    if (preWriteGraphErrors.length > 0) {
+      preWriteReasons.push(...preWriteGraphErrors);
+    }
+    if (preWriteGraphErrorsRaw.length > preWriteGraphErrors.length) {
+      preWriteWarnings.push('Pre-publish graph reported post-draft-only errors during precheck');
+    }
+    if (Array.isArray(preWriteGraphValidation.warnings) && preWriteGraphValidation.warnings.length > 0) {
+      preWriteWarnings.push(...preWriteGraphValidation.warnings);
+    }
+    const preWriteGate = {
+      ...preWriteGateBase,
+      pass: preWriteReasons.length === 0,
+      reasons: Array.from(new Set(preWriteReasons)),
+      warnings: Array.from(new Set(preWriteWarnings)),
+      metrics: {
+        ...(preWriteGateBase.metrics || {}),
+        prepublish_graph_precheck: {
+          valid: preWriteGraphValidation.valid,
+          errors: preWriteGraphValidation.errors || [],
+          warnings: preWriteGraphValidation.warnings || [],
+        },
+      },
+    };
+    result.stages.pre_write_quality_gate = {
+      success: preWriteGate.pass,
+      reasons: preWriteGate.reasons,
+      warnings: preWriteGate.warnings,
+      metrics: preWriteGate.metrics,
+    };
+    if (!preWriteGate.pass) {
+      const lateFallback = await tryLateStageFallbackSelection({
+        selectedMode,
+        selected,
+        screened,
+        options,
+        braveApiKey,
+        googleApiKey,
+        googleCx,
+        result,
+        usedBriefKeys: lateFallbackUsedBriefKeys,
+        triggerStage: 'pre_write_quality_gate',
+        triggerReason: `Pre-write quality gate failed: ${preWriteGate.reasons.join('; ')}`,
+      });
+      if (lateFallback) {
+        selected = lateFallback;
+        selectedMode = 'standard-fallback';
+        result.stages.source_pack_selection = {
+          ...(result.stages.source_pack_selection || {}),
+          selected_mode: selectedMode,
+        };
+        continue;
+      }
+      result.hard_blocker = `Pre-write quality gate failed: ${preWriteGate.reasons.join('; ')}`;
+      return finalizeRun(result, questionCandidates, null, startTime);
+    }
 
-  const allowQuestionRefinement = String(
-    options.qnaRefineSelectedQuestionWithLlm
-    ?? process.env.QNA_REFINE_SELECTED_QUESTION_WITH_LLM
-    ?? '1'
-  ) !== '0';
-  if (selectedMode === 'question-led' && allowQuestionRefinement && openAiApiKey) {
-    try {
-      const refined = await extractQuestionCandidate(selected.brief, openAiApiKey, { useOpenAi: true });
-      if (refined?.valid && refined?.selection_eligible) {
-        selected.questionCandidate = {
-          ...selected.questionCandidate,
-          ...refined,
-          source_pack_gate: selected.questionCandidate?.source_pack_gate || null,
-        };
+    const allowQuestionRefinement = String(
+      options.qnaRefineSelectedQuestionWithLlm
+      ?? process.env.QNA_REFINE_SELECTED_QUESTION_WITH_LLM
+      ?? '1'
+    ) !== '0';
+    if (selectedMode === 'question-led' && allowQuestionRefinement && openAiApiKey) {
+      try {
+        const refined = await extractQuestionCandidate(selected.brief, openAiApiKey, { useOpenAi: true });
+        if (refined?.valid && refined?.selection_eligible) {
+          selected.questionCandidate = {
+            ...selected.questionCandidate,
+            ...refined,
+            source_pack_gate: selected.questionCandidate?.source_pack_gate || null,
+          };
+          result.stages.question_refinement = {
+            success: true,
+            applied: true,
+            provider: refined.provider || 'openai',
+            model: refined.model || null,
+            question: refined.question || null,
+          };
+        } else {
+          result.stages.question_refinement = {
+            success: true,
+            applied: false,
+            reason: refined?.invalid_reason || 'Refined question failed quality checks',
+          };
+        }
+      } catch (error) {
         result.stages.question_refinement = {
-          success: true,
-          applied: true,
-          provider: refined.provider || 'openai',
-          model: refined.model || null,
-          question: refined.question || null,
-        };
-      } else {
-        result.stages.question_refinement = {
-          success: true,
+          success: false,
           applied: false,
-          reason: refined?.invalid_reason || 'Refined question failed quality checks',
+          error: error.message,
         };
       }
-    } catch (error) {
+    } else {
       result.stages.question_refinement = {
-        success: false,
+        success: true,
         applied: false,
-        error: error.message,
+        reason: allowQuestionRefinement ? 'No OpenAI key or non-question mode selection' : 'Question refinement disabled',
       };
     }
-  } else {
-    result.stages.question_refinement = {
-      success: true,
-      applied: false,
-      reason: allowQuestionRefinement ? 'No OpenAI key or non-question mode selection' : 'Question refinement disabled',
-    };
-  }
 
-  result.selected_question = {
-    question: selected.questionCandidate?.question || null,
-    question_type: selected.questionCandidate?.question_type || null,
-    score: selected.questionCandidate?.score || null,
-    selection_score: selected.questionCandidate?.selection_score || null,
-    signal: selected.questionCandidate?.signal || null,
-    mode: selectedMode,
-    brief_title: selected.brief.title,
-    source_pack_sources: selected.sourcePack.sources?.length || 0,
-    source_pack_domains: selected.sourcePack.uniqueDomains || 0,
-  };
-
-  if (selected.brief.poolIdentityKey) {
-    markBriefSelected(selected.brief.poolIdentityKey, workflowLeaseOwner);
-  }
-
-  try {
-    const claimMap = await createClaimMap(selected.sourcePack, openAiApiKey);
-    selected.claimMap = claimMap;
-    const claimValidation = validateClaimMap(claimMap);
-    result.stages.claim_map = {
-      success: claimValidation.passes,
-      issues: claimValidation.issues,
-      supported_claims: claimMap.supportedClaims,
-      total_claims: claimMap.totalClaims,
-    };
-    if (!claimValidation.passes) {
-      result.hard_blocker = `Claim map failed: ${claimValidation.issues.join('; ')}`;
-      return finalizeRun(result, questionCandidates, null, startTime);
-    }
-  } catch (error) {
-    result.stages.claim_map = { success: false, error: error.message };
-    result.hard_blocker = `Claim map failed: ${error.message}`;
-    return finalizeRun(result, questionCandidates, null, startTime);
-  }
-
-  try {
-    const draft = await draftArticle(selected.briefForDraft, selected.sourcePack, selected.claimMap, openAiApiKey);
-    const hardened = hardenDraft(draft, selected.claimMap);
-    selected.draft = hardened;
-    selected.publishIdentity = {
-      title: hardened.title,
-      slug: generateSlug(hardened.title),
-    };
-    selected.articleSlug = selected.publishIdentity.slug;
-    result.stages.draft = {
-      success: hardened.safeForPublishing,
-      quality: hardened.quality,
-      word_count: hardened.wordCount,
-      article_type: hardened.articleType,
-      title: hardened.title,
-    };
-    if (!hardened.safeForPublishing) {
-      result.hard_blocker = `Draft not safe for publishing: ${(hardened.qualityIssues || []).join('; ')}`;
-      return finalizeRun(result, questionCandidates, null, startTime);
-    }
-  } catch (error) {
-    result.stages.draft = { success: false, error: error.message };
-    result.hard_blocker = `Draft failed: ${error.message}`;
-    return finalizeRun(result, questionCandidates, null, startTime);
-  }
-
-  try {
-    const imageResult = await generateImagePackage(selected, selected.articleSlug, { pexelsApiKey, unsplashApiKey, pixabayApiKey });
-    selected.image = imageResult;
-    result.stages.image = {
-      success: true,
-      provider: imageResult.provider,
-      imagePath: imageResult.imagePath,
-    };
-  } catch (error) {
-    result.stages.image = { success: false, error: error.message };
-  }
-
-  try {
-    const prePublishValidation = validatePrePublishGraph(selected);
-    if (!prePublishValidation.valid) {
-      result.stages.publish_validation = {
-        success: false,
-        errors: prePublishValidation.errors,
-        warnings: prePublishValidation.warnings,
-      };
-      result.hard_blocker = `Pre-publish validation failed: ${prePublishValidation.errors.join('; ')}`;
-      return finalizeRun(result, questionCandidates, null, startTime);
-    }
-
-    selected.canonicalPublishPayload = prePublishValidation.canonical_publish_payload || buildCanonicalPublishPayload(selected, prePublishValidation);
-    selected.placement = {
-      ...(selected.placement || {}),
-      ...(selected.canonicalPublishPayload?.placement || {}),
-    };
-    if (selected.canonicalPublishPayload?.tagging) {
-      const tagging = selected.canonicalPublishPayload.tagging;
-      selected.draft = {
-        ...(selected.draft || {}),
-        tags: Array.isArray(tagging.tags) ? tagging.tags : (selected.draft?.tags || []),
-        tag_slugs: Array.isArray(tagging.tag_slugs) ? tagging.tag_slugs : (selected.draft?.tag_slugs || []),
-        subsection: selected.canonicalPublishPayload?.placement?.subsection || selected.draft?.subsection,
-        topics: Array.isArray(selected.canonicalPublishPayload?.placement?.topics)
-          ? selected.canonicalPublishPayload.placement.topics
-          : (selected.draft?.topics || []),
-        metadata: {
-          ...(selected.draft?.metadata || {}),
-          tagging,
-          questionIntent: selected.questionCandidate,
-        },
-      };
-    }
-    if (selected.sourcePack && Array.isArray(selected.canonicalPublishPayload?.sources)) {
-      selected.sourcePack.publicSources = selected.canonicalPublishPayload.sources;
-      selected.sourcePack.canonicalPublicSources = selected.canonicalPublishPayload.sources;
-    }
-    selected.publishManifest = buildPublishManifest(selected);
-    const publishResult = publishArticle(selected);
-    selected.publishResult = publishResult;
-
-    if (!publishResult.success) {
-      result.stages.publish = { success: false, error: publishResult.error };
-      result.hard_blocker = `Publish failed: ${publishResult.error}`;
-      return finalizeRun(result, questionCandidates, null, startTime);
-    }
-
-    selected.placement = { ...(selected.placement || {}), ...(publishResult.placement || {}) };
-    selected.publishManifest = buildPublishManifest(selected, publishResult);
-    selected.publishManifestPath = writePublishManifest(selected.publishManifest);
-    const artifactValidation = validatePublishedArtifact(publishResult.filePath, selected.publishManifest);
-    if (!artifactValidation.valid) {
-      result.stages.publish = { success: false, error: artifactValidation.errors.join('; ') };
-      result.hard_blocker = `Published artifact validation failed: ${artifactValidation.errors.join('; ')}`;
-      return finalizeRun(result, questionCandidates, null, startTime);
-    }
-
-    result.success = true;
-    result.published_path = publishResult.filePath;
-    result.published_url = publishResult.expectedUrl;
-    result.artifacts.publish_manifest = selected.publishManifestPath || null;
-    result.stages.publish = {
-      success: true,
-      filename: publishResult.filename,
-      expectedUrl: publishResult.expectedUrl,
+    result.selected_question = {
+      question: selected.questionCandidate?.question || null,
+      question_type: selected.questionCandidate?.question_type || null,
+      score: selected.questionCandidate?.score || null,
+      selection_score: selected.questionCandidate?.selection_score || null,
+      signal: selected.questionCandidate?.signal || null,
+      mode: selectedMode,
+      brief_title: selected.brief.title,
+      source_pack_sources: selected.sourcePack.sources?.length || 0,
+      source_pack_domains: selected.sourcePack.uniqueDomains || 0,
     };
 
     if (selected.brief.poolIdentityKey) {
-      markBriefPublished(selected.brief.poolIdentityKey, publishResult.canonicalSlug || publishResult.slug || selected.articleSlug);
+      markBriefSelected(selected.brief.poolIdentityKey, workflowLeaseOwner);
     }
-  } catch (error) {
-    result.stages.publish = { success: false, error: error.message };
-    result.hard_blocker = `Publish failed: ${error.message}`;
-    return finalizeRun(result, questionCandidates, null, startTime);
+
+    try {
+      const claimMap = await createClaimMap(selected.sourcePack, openAiApiKey);
+      selected.claimMap = claimMap;
+      const claimValidation = validateClaimMap(claimMap);
+      result.stages.claim_map = {
+        success: claimValidation.passes,
+        issues: claimValidation.issues,
+        supported_claims: claimMap.supportedClaims,
+        total_claims: claimMap.totalClaims,
+      };
+      if (!claimValidation.passes) {
+        const lateFallback = await tryLateStageFallbackSelection({
+          selectedMode,
+          selected,
+          screened,
+          options,
+          braveApiKey,
+          googleApiKey,
+          googleCx,
+          result,
+          usedBriefKeys: lateFallbackUsedBriefKeys,
+          triggerStage: 'claim_map',
+          triggerReason: `Claim map failed: ${claimValidation.issues.join('; ')}`,
+        });
+        if (lateFallback) {
+          selected = lateFallback;
+          selectedMode = 'standard-fallback';
+          result.stages.source_pack_selection = {
+            ...(result.stages.source_pack_selection || {}),
+            selected_mode: selectedMode,
+          };
+          continue;
+        }
+        result.hard_blocker = `Claim map failed: ${claimValidation.issues.join('; ')}`;
+        return finalizeRun(result, questionCandidates, null, startTime);
+      }
+    } catch (error) {
+      result.stages.claim_map = { success: false, error: error.message };
+      const lateFallback = await tryLateStageFallbackSelection({
+        selectedMode,
+        selected,
+        screened,
+        options,
+        braveApiKey,
+        googleApiKey,
+        googleCx,
+        result,
+        usedBriefKeys: lateFallbackUsedBriefKeys,
+        triggerStage: 'claim_map',
+        triggerReason: `Claim map failed: ${error.message}`,
+      });
+      if (lateFallback) {
+        selected = lateFallback;
+        selectedMode = 'standard-fallback';
+        result.stages.source_pack_selection = {
+          ...(result.stages.source_pack_selection || {}),
+          selected_mode: selectedMode,
+        };
+        continue;
+      }
+      result.hard_blocker = `Claim map failed: ${error.message}`;
+      return finalizeRun(result, questionCandidates, null, startTime);
+    }
+
+    try {
+      const draft = await draftArticle(selected.briefForDraft, selected.sourcePack, selected.claimMap, openAiApiKey);
+      const hardened = hardenDraft(draft, selected.claimMap);
+      selected.draft = hardened;
+      selected.publishIdentity = {
+        title: hardened.title,
+        slug: generateSlug(hardened.title),
+      };
+      selected.articleSlug = selected.publishIdentity.slug;
+      result.stages.draft = {
+        success: hardened.safeForPublishing,
+        quality: hardened.quality,
+        word_count: hardened.wordCount,
+        article_type: hardened.articleType,
+        title: hardened.title,
+      };
+      if (!hardened.safeForPublishing) {
+        const lateFallback = await tryLateStageFallbackSelection({
+          selectedMode,
+          selected,
+          screened,
+          options,
+          braveApiKey,
+          googleApiKey,
+          googleCx,
+          result,
+          usedBriefKeys: lateFallbackUsedBriefKeys,
+          triggerStage: 'draft',
+          triggerReason: `Draft not safe for publishing: ${(hardened.qualityIssues || []).join('; ')}`,
+        });
+        if (lateFallback) {
+          selected = lateFallback;
+          selectedMode = 'standard-fallback';
+          result.stages.source_pack_selection = {
+            ...(result.stages.source_pack_selection || {}),
+            selected_mode: selectedMode,
+          };
+          continue;
+        }
+        result.hard_blocker = `Draft not safe for publishing: ${(hardened.qualityIssues || []).join('; ')}`;
+        return finalizeRun(result, questionCandidates, null, startTime);
+      }
+    } catch (error) {
+      result.stages.draft = { success: false, error: error.message };
+      const lateFallback = await tryLateStageFallbackSelection({
+        selectedMode,
+        selected,
+        screened,
+        options,
+        braveApiKey,
+        googleApiKey,
+        googleCx,
+        result,
+        usedBriefKeys: lateFallbackUsedBriefKeys,
+        triggerStage: 'draft',
+        triggerReason: `Draft failed: ${error.message}`,
+      });
+      if (lateFallback) {
+        selected = lateFallback;
+        selectedMode = 'standard-fallback';
+        result.stages.source_pack_selection = {
+          ...(result.stages.source_pack_selection || {}),
+          selected_mode: selectedMode,
+        };
+        continue;
+      }
+      result.hard_blocker = `Draft failed: ${error.message}`;
+      return finalizeRun(result, questionCandidates, null, startTime);
+    }
+
+    try {
+      const imageResult = await generateImagePackage(selected, selected.articleSlug, { pexelsApiKey, unsplashApiKey, pixabayApiKey });
+      selected.image = imageResult;
+      result.stages.image = {
+        success: true,
+        provider: imageResult.provider,
+        imagePath: imageResult.imagePath,
+      };
+    } catch (error) {
+      result.stages.image = { success: false, error: error.message };
+    }
+
+    try {
+      const prePublishValidation = validatePrePublishGraph(selected);
+      if (!prePublishValidation.valid) {
+        result.stages.publish_validation = {
+          success: false,
+          errors: prePublishValidation.errors,
+          warnings: prePublishValidation.warnings,
+        };
+        const lateFallback = await tryLateStageFallbackSelection({
+          selectedMode,
+          selected,
+          screened,
+          options,
+          braveApiKey,
+          googleApiKey,
+          googleCx,
+          result,
+          usedBriefKeys: lateFallbackUsedBriefKeys,
+          triggerStage: 'publish_validation',
+          triggerReason: `Pre-publish validation failed: ${prePublishValidation.errors.join('; ')}`,
+        });
+        if (lateFallback) {
+          selected = lateFallback;
+          selectedMode = 'standard-fallback';
+          result.stages.source_pack_selection = {
+            ...(result.stages.source_pack_selection || {}),
+            selected_mode: selectedMode,
+          };
+          continue;
+        }
+        result.hard_blocker = `Pre-publish validation failed: ${prePublishValidation.errors.join('; ')}`;
+        return finalizeRun(result, questionCandidates, null, startTime);
+      }
+
+      selected.canonicalPublishPayload = prePublishValidation.canonical_publish_payload || buildCanonicalPublishPayload(selected, prePublishValidation);
+      selected.placement = {
+        ...(selected.placement || {}),
+        ...(selected.canonicalPublishPayload?.placement || {}),
+      };
+      if (selected.canonicalPublishPayload?.tagging) {
+        const tagging = selected.canonicalPublishPayload.tagging;
+        selected.draft = {
+          ...(selected.draft || {}),
+          tags: Array.isArray(tagging.tags) ? tagging.tags : (selected.draft?.tags || []),
+          tag_slugs: Array.isArray(tagging.tag_slugs) ? tagging.tag_slugs : (selected.draft?.tag_slugs || []),
+          subsection: selected.canonicalPublishPayload?.placement?.subsection || selected.draft?.subsection,
+          topics: Array.isArray(selected.canonicalPublishPayload?.placement?.topics)
+            ? selected.canonicalPublishPayload.placement.topics
+            : (selected.draft?.topics || []),
+          metadata: {
+            ...(selected.draft?.metadata || {}),
+            tagging,
+            questionIntent: selected.questionCandidate,
+          },
+        };
+      }
+      if (selected.sourcePack && Array.isArray(selected.canonicalPublishPayload?.sources)) {
+        selected.sourcePack.publicSources = selected.canonicalPublishPayload.sources;
+        selected.sourcePack.canonicalPublicSources = selected.canonicalPublishPayload.sources;
+      }
+      selected.publishManifest = buildPublishManifest(selected);
+      const publishResult = publishArticle(selected);
+      selected.publishResult = publishResult;
+
+      if (!publishResult.success) {
+        result.stages.publish = { success: false, error: publishResult.error };
+        const lateFallback = await tryLateStageFallbackSelection({
+          selectedMode,
+          selected,
+          screened,
+          options,
+          braveApiKey,
+          googleApiKey,
+          googleCx,
+          result,
+          usedBriefKeys: lateFallbackUsedBriefKeys,
+          triggerStage: 'publish',
+          triggerReason: `Publish failed: ${publishResult.error}`,
+        });
+        if (lateFallback) {
+          selected = lateFallback;
+          selectedMode = 'standard-fallback';
+          result.stages.source_pack_selection = {
+            ...(result.stages.source_pack_selection || {}),
+            selected_mode: selectedMode,
+          };
+          continue;
+        }
+        result.hard_blocker = `Publish failed: ${publishResult.error}`;
+        return finalizeRun(result, questionCandidates, null, startTime);
+      }
+
+      selected.placement = { ...(selected.placement || {}), ...(publishResult.placement || {}) };
+      selected.publishManifest = buildPublishManifest(selected, publishResult);
+      selected.publishManifestPath = writePublishManifest(selected.publishManifest);
+      const artifactValidation = validatePublishedArtifact(publishResult.filePath, selected.publishManifest);
+      if (!artifactValidation.valid) {
+        result.stages.publish = { success: false, error: artifactValidation.errors.join('; ') };
+        const lateFallback = await tryLateStageFallbackSelection({
+          selectedMode,
+          selected,
+          screened,
+          options,
+          braveApiKey,
+          googleApiKey,
+          googleCx,
+          result,
+          usedBriefKeys: lateFallbackUsedBriefKeys,
+          triggerStage: 'publish_artifact_validation',
+          triggerReason: `Published artifact validation failed: ${artifactValidation.errors.join('; ')}`,
+        });
+        if (lateFallback) {
+          selected = lateFallback;
+          selectedMode = 'standard-fallback';
+          result.stages.source_pack_selection = {
+            ...(result.stages.source_pack_selection || {}),
+            selected_mode: selectedMode,
+          };
+          continue;
+        }
+        result.hard_blocker = `Published artifact validation failed: ${artifactValidation.errors.join('; ')}`;
+        return finalizeRun(result, questionCandidates, null, startTime);
+      }
+
+      result.success = true;
+      result.published_path = publishResult.filePath;
+      result.published_url = publishResult.expectedUrl;
+      result.artifacts.publish_manifest = selected.publishManifestPath || null;
+      result.stages.publish = {
+        success: true,
+        filename: publishResult.filename,
+        expectedUrl: publishResult.expectedUrl,
+      };
+
+      if (selected.brief.poolIdentityKey) {
+        markBriefPublished(selected.brief.poolIdentityKey, publishResult.canonicalSlug || publishResult.slug || selected.articleSlug);
+      }
+      completed = true;
+    } catch (error) {
+      result.stages.publish = { success: false, error: error.message };
+      const lateFallback = await tryLateStageFallbackSelection({
+        selectedMode,
+        selected,
+        screened,
+        options,
+        braveApiKey,
+        googleApiKey,
+        googleCx,
+        result,
+        usedBriefKeys: lateFallbackUsedBriefKeys,
+        triggerStage: 'publish',
+        triggerReason: `Publish failed: ${error.message}`,
+      });
+      if (lateFallback) {
+        selected = lateFallback;
+        selectedMode = 'standard-fallback';
+        result.stages.source_pack_selection = {
+          ...(result.stages.source_pack_selection || {}),
+          selected_mode: selectedMode,
+        };
+        continue;
+      }
+      result.hard_blocker = `Publish failed: ${error.message}`;
+      return finalizeRun(result, questionCandidates, null, startTime);
+    }
   }
 
   return finalizeRun(result, questionCandidates, selected, startTime);
@@ -786,6 +991,61 @@ async function buildStandardFallbackSelection({
     sourcePack,
     mode: 'standard-fallback',
   };
+}
+
+async function tryLateStageFallbackSelection({
+  selectedMode,
+  selected,
+  screened,
+  options,
+  braveApiKey,
+  googleApiKey,
+  googleCx,
+  result,
+  usedBriefKeys,
+  triggerStage,
+  triggerReason,
+} = {}) {
+  if (selectedMode !== 'question-led') return null;
+  if (selected?.brief) {
+    usedBriefKeys.add(getBriefCandidateKey(selected.brief));
+  }
+
+  const fallback = await buildStandardFallbackSelection({
+    viableBriefs: screened?.viableBriefs || [],
+    prioritizedBriefs: (Array.isArray(screened?.selectedCandidates) ? screened.selectedCandidates : [])
+      .map((candidate) => candidate?.brief)
+      .filter(Boolean),
+    sourcePackByKey: screened?.sourcePackByKey || new Map(),
+    options,
+    braveApiKey,
+    googleApiKey,
+    googleCx,
+    result,
+    usedBriefKeys,
+    reason: `late_stage_${String(triggerStage || 'unknown')}`,
+  });
+
+  if (!fallback) return null;
+
+  const attempts = Array.isArray(result?.stages?.late_standard_fallback?.attempts)
+    ? [...result.stages.late_standard_fallback.attempts]
+    : [];
+  const attempt = {
+    trigger_stage: triggerStage || 'unknown',
+    trigger_reason: triggerReason || null,
+    from_brief_title: selected?.brief?.title || null,
+    fallback_brief_title: fallback?.brief?.title || null,
+  };
+  attempts.push(attempt);
+  result.stages.late_standard_fallback = {
+    success: true,
+    used: true,
+    attempts,
+    latest: attempt,
+  };
+
+  return fallback;
 }
 
 function getBriefCandidateKey(brief = {}) {
