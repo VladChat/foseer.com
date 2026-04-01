@@ -38,6 +38,7 @@ export async function runQnaPipeline(options = {}) {
   const googleApiKey = process.env.SEARCH_WEB_API;
   const googleCx = process.env.SEARCH_WEB_CX;
   const pexelsApiKey = process.env.PEXELS_API_KEY;
+  const unsplashApiKey = process.env.UNSPLASH_ACCESS_KEY || process.env.UNSPLASH_API_KEY;
   const pixabayApiKey = process.env.PIXABAY_API_KEY;
 
   const result = {
@@ -404,7 +405,7 @@ export async function runQnaPipeline(options = {}) {
   }
 
   try {
-    const imageResult = await generateImagePackage(selected, selected.articleSlug, { pexelsApiKey, pixabayApiKey });
+    const imageResult = await generateImagePackage(selected, selected.articleSlug, { pexelsApiKey, unsplashApiKey, pixabayApiKey });
     selected.image = imageResult;
     result.stages.image = {
       success: true,

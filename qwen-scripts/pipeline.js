@@ -133,6 +133,7 @@ export async function runEditorialPipeline(options = {}) {
   const braveApiKey = process.env.BRAVE_SEARCH_API_KEY || process.env.BRAVE_API_KEY;
   const openAiApiKey = process.env.OPENAI_API_KEY;
   const pexelsApiKey = process.env.PEXELS_API_KEY;
+  const unsplashApiKey = process.env.UNSPLASH_ACCESS_KEY || process.env.UNSPLASH_API_KEY;
   const pixabayApiKey = process.env.PIXABAY_API_KEY;
   const googleApiKey = process.env.SEARCH_WEB_API;
   const googleCx = process.env.SEARCH_WEB_CX;
@@ -141,6 +142,7 @@ export async function runEditorialPipeline(options = {}) {
     brave: !!braveApiKey,
     openai: !!openAiApiKey,
     pexels: !!pexelsApiKey,
+    unsplash: !!unsplashApiKey,
     pixabay: !!pixabayApiKey,
     google: !!googleApiKey && !!googleCx,
   });
@@ -852,7 +854,7 @@ export async function runEditorialPipeline(options = {}) {
         || generateSlug(candidate.draft?.title || candidate.brief?.title || 'untitled');
       candidate.articleSlug = slug;
 
-      const imageResult = await generateImagePackage(candidate, slug, { pexelsApiKey, pixabayApiKey });
+      const imageResult = await generateImagePackage(candidate, slug, { pexelsApiKey, unsplashApiKey, pixabayApiKey });
       candidate.image = imageResult;
       imageItems.push({
         title: articleLabel,

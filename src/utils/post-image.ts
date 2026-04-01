@@ -3,6 +3,7 @@
 
 import type { ImageMetadata } from 'astro';
 import { findImage } from './images';
+import fallbackCover from '~/assets/images/posts/fallback/foseer-default-cover.svg';
 
 /**
  * Fallback image path - used when article has no cover image
@@ -13,6 +14,16 @@ const FALLBACK_IMAGE = '~/assets/images/posts/fallback/foseer-default-cover.svg'
  * Base path for article cover images
  */
 const POSTS_IMAGES_BASE = '~/assets/images/posts/';
+
+const isRenderableImage = (image: string | ImageMetadata | null | undefined): image is string | ImageMetadata => {
+  if (!image) return false;
+  if (typeof image !== 'string') return true;
+
+  const value = image.trim();
+  if (!value) return false;
+
+  return value.startsWith('/') || value.startsWith('http://') || value.startsWith('https://');
+};
 
 /**
  * Resolve article cover image with fallback
@@ -28,7 +39,7 @@ export const resolvePostImage = async (
   // If explicit image is provided, try to resolve it
   if (image) {
     const resolvedImage = await findImage(image);
-    if (resolvedImage) {
+    if (isRenderableImage(resolvedImage)) {
       return resolvedImage;
     }
   }
@@ -37,13 +48,14 @@ export const resolvePostImage = async (
   if (slug) {
     const slugImage = `${POSTS_IMAGES_BASE}${slug}/cover.jpg`;
     const resolvedSlugImage = await findImage(slugImage);
-    if (resolvedSlugImage) {
+    if (isRenderableImage(resolvedSlugImage)) {
       return resolvedSlugImage;
     }
   }
 
-  // Return fallback image
-  return await findImage(FALLBACK_IMAGE);
+  // Return fallback image, guaranteeing non-null output even if dynamic lookup fails.
+  const resolvedFallbackImage = await findImage(FALLBACK_IMAGE);
+  return isRenderableImage(resolvedFallbackImage) ? resolvedFallbackImage : fallbackCover;
 };
 
 /**

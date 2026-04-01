@@ -477,7 +477,7 @@ export async function pexelsSearch(query, apiKey, options = {}) {
   let response;
   try {
     const fetchResult = await fetchWithRetry({
-      provider: 'pixabay',
+      provider: 'pexels',
       label,
       url: endpoint.toString(),
       options: {
@@ -558,7 +558,7 @@ export async function pixabaySearch(query, apiKey, options = {}) {
   let response;
   try {
     const fetchResult = await fetchWithRetry({
-      provider: 'pexels',
+      provider: 'pixabay',
       label,
       url: endpoint.toString(),
       options: {
@@ -615,6 +615,104 @@ export async function pixabaySearch(query, apiKey, options = {}) {
     status: result.status,
     code: response.status,
     hits: result.data?.hits?.length || 0,
+    rate_limit_remaining: result.rateLimit?.remaining,
+    rate_limit_reset: result.rateLimit?.reset,
+    retry_count: result.retryCount,
+    retry_delay_ms: result.retryDelayMs,
+  });
+  return result;
+}
+
+export async function unsplashSearch(query, apiKey, options = {}) {
+  const result = baseResult('unsplash');
+  const label = options.logLabel || 'unsplash_search';
+  if (!apiKey) {
+    result.status = PROVIDER_STATUS.SKIPPED_CONFIG;
+    result.error = 'Unsplash API key not configured';
+    logProvider('unsplash', { label, status: result.status, error: result.error });
+    return result;
+  }
+
+  let endpoint;
+  try {
+    endpoint = new URL('https://api.unsplash.com/search/photos');
+    endpoint.searchParams.set('query', query);
+    endpoint.searchParams.set('per_page', String(options.perPage || 10));
+    endpoint.searchParams.set('orientation', options.orientation || 'landscape');
+    endpoint.searchParams.set('content_filter', options.contentFilter || 'high');
+    endpoint.searchParams.set('order_by', options.orderBy || 'relevant');
+  } catch (error) {
+    result.status = PROVIDER_STATUS.REQUEST_CONSTRUCTION_FAILURE;
+    result.error = `Failed to build request: ${error.message}`;
+    result.errorType = 'request_construction';
+    logProvider('unsplash', { label, status: result.status, error: result.error });
+    return result;
+  }
+
+  result.networkCall = true;
+  logProvider('unsplash', { label, status: 'calling', query });
+  let response;
+  try {
+    const fetchResult = await fetchWithRetry({
+      provider: 'unsplash',
+      label,
+      url: endpoint.toString(),
+      options: {
+        headers: {
+          Accept: 'application/json',
+          Authorization: `Client-ID ${apiKey}`,
+          'Accept-Version': 'v1',
+          'User-Agent': 'Foseer/1.0 (News Pipeline)',
+        },
+      },
+      log: logProvider,
+    });
+    response = fetchResult.response;
+    result.httpResponseCode = response.status;
+    result.rateLimit = extractRateLimitHeaders(response);
+    result.retryCount = fetchResult.retryCount;
+    result.retryDelayMs = fetchResult.totalDelayMs;
+  } catch (error) {
+    result.status = PROVIDER_STATUS.UPSTREAM_RESPONSE_FAILURE;
+    result.error = `Network error: ${error.message}`;
+    result.retryCount = Number(error?.retryMeta?.retryCount || 0);
+    result.retryDelayMs = Number(error?.retryMeta?.totalDelayMs || 0);
+    result.errorType = 'network';
+    logProvider('unsplash', { label, status: result.status, error: result.error });
+    return result;
+  }
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    result.status = response.status === 401 || response.status === 403
+      ? PROVIDER_STATUS.AUTH_FAILURE
+      : response.status === 429
+        ? PROVIDER_STATUS.RATE_LIMIT
+        : PROVIDER_STATUS.UPSTREAM_RESPONSE_FAILURE;
+    result.errorType = response.status === 401 || response.status === 403
+      ? 'auth'
+      : response.status === 429
+        ? 'rate_limit'
+        : 'upstream';
+    result.error = `API error: ${response.status} ${errorText}`;
+    logProvider('unsplash', {
+      label,
+      status: result.status,
+      code: response.status,
+      rate_limit_remaining: result.rateLimit?.remaining,
+      rate_limit_reset: result.rateLimit?.reset,
+      error: result.error,
+    });
+    return result;
+  }
+
+  result.status = PROVIDER_STATUS.CALLED_SUCCESS;
+  result.data = await response.json();
+  logProvider('unsplash', {
+    label,
+    status: result.status,
+    code: response.status,
+    photos: result.data?.results?.length || 0,
     rate_limit_remaining: result.rateLimit?.remaining,
     rate_limit_reset: result.rateLimit?.reset,
     retry_count: result.retryCount,

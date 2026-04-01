@@ -367,6 +367,51 @@ function buildEntityLedQueries(primaryEntities = [], contextPhrases = [], geoHin
   return queries;
 }
 
+function buildStageLimits(maxQueries = 8) {
+  const total = Math.max(6, Number(maxQueries || 8));
+  let strict = Math.max(2, Math.ceil(total * 0.45));
+  let relaxed = Math.max(2, Math.ceil(total * 0.35));
+  let broad = Math.max(2, total - strict - relaxed);
+
+  while (strict + relaxed + broad > total) {
+    if (strict > 2) {
+      strict -= 1;
+    } else if (relaxed > 2) {
+      relaxed -= 1;
+    } else if (broad > 2) {
+      broad -= 1;
+    } else {
+      break;
+    }
+  }
+
+  return { strict, relaxed, broad };
+}
+
+function createLevelQueryCollector(maxQueries = 8) {
+  const limits = buildStageLimits(maxQueries);
+  const seen = new Set();
+  const levels = {
+    strict: [],
+    relaxed: [],
+    broad: [],
+  };
+
+  const push = (level, value) => {
+    if (!levels[level]) return;
+    const normalized = normalizeText(value);
+    const key = normalizeKey(normalized);
+    if (!normalized || !key) return;
+    if (isPlaceholderPhrase(normalized)) return;
+    if (seen.has(key)) return;
+    if (levels[level].length >= limits[level]) return;
+    seen.add(key);
+    levels[level].push(normalized);
+  };
+
+  return { levels, push, limits };
+}
+
 export function buildImageQueryPlan({
   title,
   excerpt,
@@ -403,25 +448,40 @@ export function buildImageQueryPlan({
   }
   const sectionSubject = deriveSectionSubject(section, contextPhrases);
   const sourceTitleHints = sourceEvidence.sourceTitles.slice(0, 2);
+  const collector = createLevelQueryCollector(maxQueries);
 
-  const queries = [];
-  buildEntityLedQueries(validatedEntities, contextPhrases, validatedGeoHints, fullEvidenceText).forEach((query) => pushQuery(queries, query));
+  // strict: anchored by entities/context/title evidence
+  buildEntityLedQueries(validatedEntities, contextPhrases, validatedGeoHints, fullEvidenceText)
+    .forEach((query) => collector.push('strict', query));
+  if (titleSubject && validatedEntities[0]) collector.push('strict', `${validatedEntities[0]} ${titleSubject} photo`);
+  if (titleSubject && contextPhrases[0]) collector.push('strict', `${titleSubject} ${contextPhrases[0]} photo`);
+  if (validatedEntities[0] && sectionSubject) collector.push('strict', `${validatedEntities[0]} ${sectionSubject} photo`);
+  if (validatedGeoHints[0] && validatedEntities[0]) collector.push('strict', `${validatedGeoHints[0]} ${validatedEntities[0]} photo`);
 
-  if (titleSubject && validatedEntities[0]) pushQuery(queries, `${validatedEntities[0]} ${titleSubject} photo`);
-  if (titleSubject && contextPhrases[0]) pushQuery(queries, `${titleSubject} ${contextPhrases[0]} photo`);
-  if (titleSubject) pushQuery(queries, `${titleSubject} photo`);
-  if (sectionSubject && validatedEntities.length === 0) pushQuery(queries, sectionSubject);
+  // relaxed: remove narrow constraints but keep topical direction
+  if (titleSubject) collector.push('relaxed', `${titleSubject} photo`);
+  if (contextPhrases[0]) collector.push('relaxed', `${contextPhrases[0]} photo`);
+  if (sectionSubject && validatedEntities.length === 0) collector.push('relaxed', sectionSubject);
+  validatedEntities.slice(0, 2).forEach((entity) => collector.push('relaxed', `${entity} photo`));
+  if (topicRecord?.label) collector.push('relaxed', `${topicRecord.label} photo`);
+  (topicRecord?.aliases || []).slice(0, 2).forEach((alias) => collector.push('relaxed', `${alias} photo`));
 
-  if (validatedEntities.length === 0 || queries.length < 3) {
-    (SECTION_FALLBACK_QUERIES[section] || []).forEach((query) => pushQuery(queries, query));
-  }
-  if (validatedEntities.length === 0 && queries.length < Math.max(3, Math.min(5, maxQueries))) {
-    const conservativeFallback = section && section !== 'News' ? `${section} photo` : 'editorial photo';
-    pushQuery(queries, conservativeFallback);
-  }
+  // broad: wide but still editorially relevant for the desk/topic
+  (SECTION_FALLBACK_QUERIES[section] || []).forEach((query) => collector.push('broad', query));
+  if (section) collector.push('broad', `${section} news photo`);
+  if (section && contextPhrases[0]) collector.push('broad', `${section} ${contextPhrases[0]} photo`);
+  collector.push('broad', 'editorial news photo');
+
+  const queryLevels = [
+    { level: 'strict', queries: collector.levels.strict },
+    { level: 'relaxed', queries: collector.levels.relaxed },
+    { level: 'broad', queries: collector.levels.broad },
+  ].filter((entry) => entry.queries.length > 0);
+  const queries = queryLevels.flatMap((entry) => entry.queries).slice(0, Math.max(6, maxQueries));
 
   return {
-    queries: queries.slice(0, maxQueries),
+    queries,
+    queryLevels,
     entityHints: validatedEntities,
     geoHints: validatedGeoHints,
     sourceHints: sourceTitleHints,
@@ -432,6 +492,8 @@ export function buildImageQueryPlan({
       contextPhrases,
       titleSubject,
       sourceTitleHints,
+      stageLimits: collector.limits,
+      queryLevelCounts: queryLevels.map((entry) => ({ level: entry.level, count: entry.queries.length })),
     },
   };
 }

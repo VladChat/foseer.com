@@ -20,6 +20,7 @@ import {
 } from './image-library/registry.js';
 import { applyEnrichmentToAsset, buildArticleSearchProfile, computeContextualEditorialFit } from './image-library/enrichment.js';
 import { searchPexelsImageCandidates } from './image-library/providers/pexels.js';
+import { searchUnsplashImageCandidates } from './image-library/providers/unsplash.js';
 import { searchPixabayImageCandidates } from './image-library/providers/pixabay.js';
 import { getSectionRecord, getTopicRecord, resolveSectionId, resolveTopicId } from './utils/taxonomy-registry.js';
 import { buildImageQueryPlan } from './utils/image-query-builder.js';
@@ -28,7 +29,7 @@ const IMAGE_CONFIG = {
   fallbackPath: '~/assets/images/posts/fallback/foseer-default-cover.svg',
   libraryBase: '~/assets/images/library',
   searchPerQuery: Number(process.env.QWEN_IMAGE_SEARCH_PER_QUERY || 15),
-  maxQueriesPerRun: Number(process.env.QWEN_IMAGE_MAX_QUERIES || 8),
+  maxQueriesPerRun: Number(process.env.QWEN_IMAGE_MAX_QUERIES || 12),
 };
 
 const SECTION_FALLBACK_KEYWORDS = {
@@ -64,7 +65,8 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
     publishReadySources: imageContext.publishReadySources,
     maxQueries: IMAGE_CONFIG.maxQueriesPerRun,
   });
-  const queries = imageQueryPlan.queries;
+  const queryLevels = normalizeQueryLevels(imageQueryPlan, IMAGE_CONFIG.maxQueriesPerRun);
+  const queries = queryLevels.flatMap((entry) => entry.queries);
   const registry = loadImageRegistry();
   const providers = getEnabledProviders(providerApiKeys);
   const articleProfile = buildArticleSearchProfile({
@@ -83,63 +85,93 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
   const onlineDecisions = [];
   const decisionLog = [];
 
-  for (const query of queries.slice(0, IMAGE_CONFIG.maxQueriesPerRun)) {
-    const providerResults = await Promise.allSettled(providers.map(async (provider) => ({
-      providerId: provider.id,
-      candidates: await provider.searchCandidates({
-        query,
-        article,
-        section,
-        perPage: IMAGE_CONFIG.searchPerQuery,
-      }),
-    })));
+  for (const levelEntry of queryLevels) {
+    const level = levelEntry.level;
+    let levelBestDecision = null;
+    const levelStartIndex = onlineDecisions.length;
+    console.log(`[image] Query level start: level=${level} queries=${levelEntry.queries.length}`);
 
-    const candidatePool = [];
-    for (const result of providerResults) {
-      if (result.status === 'rejected') {
-        console.error(`[image] Provider query failed (${query}): ${result.reason?.message || result.reason}`);
+    for (const query of levelEntry.queries) {
+      const providerResults = await Promise.allSettled(providers.map(async (provider) => ({
+        providerId: provider.id,
+        candidates: await provider.searchCandidates({
+          query,
+          article,
+          section,
+          perPage: IMAGE_CONFIG.searchPerQuery,
+        }),
+      })));
+
+      const candidatePool = [];
+      for (const result of providerResults) {
+        if (result.status === 'rejected') {
+          console.error(`[image] Provider query failed (${level}/${query}): ${result.reason?.message || result.reason}`);
+          continue;
+        }
+        const payload = result.value;
+        if (!payload?.candidates?.length) continue;
+        candidatePool.push(...payload.candidates.map((candidate) => ({ ...candidate, providerId: payload.providerId })));
+      }
+
+      if (!candidatePool.length) {
+        decisionLog.push({ query, queryLevel: level, status: 'no_candidates', providersTried: providers.map((provider) => provider.id) });
         continue;
       }
-      const payload = result.value;
-      if (!payload?.candidates?.length) continue;
-      candidatePool.push(...payload.candidates.map((candidate) => ({ ...candidate, providerId: payload.providerId })));
-    }
 
-    if (!candidatePool.length) {
-      decisionLog.push({ query, status: 'no_candidates', providersTried: providers.map((provider) => provider.id) });
-      continue;
-    }
+      const decision = selectProviderCandidate(candidatePool, registry, {
+        query,
+        queryLevel: level,
+        section,
+        topicId,
+        articleSlug,
+        articleProfile,
+      });
+      if (!decision) {
+        console.log(`[image] No eligible fresh online candidate across providers for level=${level} query="${query}"`);
+        decisionLog.push({ query, queryLevel: level, status: 'no_eligible_candidate', candidateCount: candidatePool.length });
+        continue;
+      }
 
-    const decision = selectProviderCandidate(candidatePool, registry, {
-      query,
-      section,
-      topicId,
-      articleSlug,
-      articleProfile,
-    });
-    if (!decision) {
-      console.log(`[image] No eligible fresh online candidate across providers for query="${query}"`);
-      decisionLog.push({ query, status: 'no_eligible_candidate', candidateCount: candidatePool.length });
-      continue;
+      decisionLog.push({
+        query,
+        queryLevel: level,
+        status: 'ranked_candidate',
+        provider: decision.candidate.provider,
+        providerAssetId: decision.candidate.providerAssetId || null,
+        finalScore: decision.fit.finalScore,
+        articleRelevanceScore: decision.fit.articleRelevanceScore,
+        assetQualityScore: decision.fit.assetQualityScore,
+        tier: decision.fit.tier,
+      });
+
+      onlineDecisions.push(decision);
+      levelBestDecision = chooseBetterDecision(levelBestDecision, decision);
+      bestOnlineDecision = chooseBetterDecision(bestOnlineDecision, decision);
+
+      if (shouldEarlyStopOnlineSelection(levelBestDecision, imageQueryPlan, level)) {
+        console.log(`[image] Early stop within level=${level} query="${query}" provider=${levelBestDecision.candidate.provider} score=${levelBestDecision.fit.finalScore}`);
+        break;
+      }
     }
 
     decisionLog.push({
-      query,
-      status: 'ranked_candidate',
-      provider: decision.candidate.provider,
-      providerAssetId: decision.candidate.providerAssetId || null,
-      finalScore: decision.fit.finalScore,
-      articleRelevanceScore: decision.fit.articleRelevanceScore,
-      assetQualityScore: decision.fit.assetQualityScore,
-      tier: decision.fit.tier,
+      queryLevel: level,
+      status: 'level_complete',
+      attemptedQueries: levelEntry.queries.length,
+      rankedCandidates: onlineDecisions.length - levelStartIndex,
+      bestProvider: levelBestDecision?.candidate?.provider || null,
+      bestFinalScore: levelBestDecision?.fit?.finalScore ?? null,
+      bestTier: levelBestDecision?.fit?.tier || null,
     });
 
-    onlineDecisions.push(decision);
-    bestOnlineDecision = chooseBetterDecision(bestOnlineDecision, decision);
-    if (onlineDecisions.length >= 2 && shouldEarlyStopOnlineSelection(bestOnlineDecision, imageQueryPlan)) {
-      console.log(`[image] Early stop with context-confirmed strong match query="${query}" provider=${bestOnlineDecision.candidate.provider} score=${bestOnlineDecision.fit.finalScore}`);
+    if (shouldStopAfterQueryLevel(levelBestDecision, level, imageQueryPlan)) {
+      console.log(`[image] Query level resolved search: level=${level} provider=${levelBestDecision?.candidate?.provider || 'n/a'} score=${levelBestDecision?.fit?.finalScore ?? 'n/a'}`);
       break;
     }
+  }
+
+  if (providers.length === 0) {
+    console.warn('[image] No online image providers configured; using local-registry/fallback only');
   }
 
   if (bestOnlineDecision?.type === 'download_new') {
@@ -177,22 +209,25 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
         section,
         topicId,
         query: decision.query,
-        selectionMode: `provider_download_new:${decision.candidate.provider}:${decision.fit.tier}`,
+        selectionMode: `provider_download_new:${decision.candidate.provider}:${decision.fit.tier}:${decision.queryLevel || 'unknown'}`,
       });
       saveImageRegistry(registry);
       return buildResultFromAsset(assetRecord, article, {
         articleSlug,
         queryUsed: decision.query,
-        selectionMode: `provider_download_new:${decision.candidate.provider}:${decision.fit.tier}`,
+        queryLevel: decision.queryLevel || null,
+        selectionMode: `provider_download_new:${decision.candidate.provider}:${decision.fit.tier}:${decision.queryLevel || 'unknown'}`,
         sectionId,
         topicId,
         articleProfile,
         auditTrail: buildImageAuditTrail({
           queries,
+          queryLevels,
           providers,
           decisionLog,
           bestOnlineDecision,
           onlineAttempted: providers.length > 0,
+          imageQueryPlan,
         }),
       });
     }
@@ -219,18 +254,20 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
       section,
       topicId,
       query: queries[0] || section,
-      selectionMode: 'local_registry_reuse_after_online_miss',
+      selectionMode: `local_registry_reuse_after_online_miss:${bestOnlineDecision?.queryLevel || 'none'}`,
     });
     saveImageRegistry(registry);
     return buildResultFromAsset(localAsset, article, {
       articleSlug,
       queryUsed: queries[0] || null,
-      selectionMode: 'local_registry_reuse_after_online_miss',
+      queryLevel: bestOnlineDecision?.queryLevel || null,
+      selectionMode: `local_registry_reuse_after_online_miss:${bestOnlineDecision?.queryLevel || 'none'}`,
       sectionId,
       topicId,
       articleProfile,
       auditTrail: buildImageAuditTrail({
         queries,
+        queryLevels,
         providers,
         decisionLog,
         bestOnlineDecision,
@@ -241,6 +278,7 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
   }
 
   const fallbackAlt = generateAltText(article.title, article.excerpt, section);
+  console.warn(`[image] Query levels exhausted; using fallback image (level=fallback) for article=${articleSlug}`);
   return {
     articleSlug,
     imagePath: IMAGE_CONFIG.fallbackPath,
@@ -256,10 +294,13 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
       section_id: sectionId,
       topic_id: topicId,
       queriesTried: queries,
+      queryLevelsTried: queryLevels.map((entry) => entry.level),
+      queryLevel: 'fallback',
       onlineAttempted: providers.length > 0,
       onlineCandidateFound: Boolean(bestOnlineDecision),
       auditTrail: buildImageAuditTrail({
         queries,
+        queryLevels,
         providers,
         decisionLog,
         bestOnlineDecision,
@@ -315,7 +356,37 @@ function chooseBetterDecision(previous, candidate) {
   if (!previous) return candidate;
   return Number(candidate.score || 0) > Number(previous.score || 0) ? candidate : previous;
 }
-function getEnabledProviders({ pexelsApiKey, pixabayApiKey } = {}) {
+
+function normalizeQueryLevels(imageQueryPlan = {}, maxQueriesPerRun = IMAGE_CONFIG.maxQueriesPerRun) {
+  const planLevels = Array.isArray(imageQueryPlan?.queryLevels) ? imageQueryPlan.queryLevels : [];
+  if (planLevels.length > 0) {
+    const normalized = planLevels
+      .map((entry) => ({
+        level: String(entry?.level || '').toLowerCase().trim(),
+        queries: Array.isArray(entry?.queries) ? entry.queries.map((value) => String(value || '').trim()).filter(Boolean) : [],
+      }))
+      .filter((entry) => ['strict', 'relaxed', 'broad'].includes(entry.level) && entry.queries.length > 0);
+    if (normalized.length > 0) return normalized;
+  }
+
+  const fallbackQueries = Array.isArray(imageQueryPlan?.queries)
+    ? imageQueryPlan.queries.map((value) => String(value || '').trim()).filter(Boolean)
+    : [];
+  if (fallbackQueries.length === 0) {
+    return [];
+  }
+
+  const limited = fallbackQueries.slice(0, Math.max(1, maxQueriesPerRun));
+  const strictEnd = Math.max(1, Math.ceil(limited.length * 0.5));
+  const relaxedEnd = Math.max(strictEnd, Math.ceil(limited.length * 0.8));
+  return [
+    { level: 'strict', queries: limited.slice(0, strictEnd) },
+    { level: 'relaxed', queries: limited.slice(strictEnd, relaxedEnd) },
+    { level: 'broad', queries: limited.slice(relaxedEnd) },
+  ].filter((entry) => entry.queries.length > 0);
+}
+
+function getEnabledProviders({ pexelsApiKey, unsplashApiKey, pixabayApiKey } = {}) {
   const providers = [];
   if (pexelsApiKey) {
     providers.push({
@@ -323,6 +394,17 @@ function getEnabledProviders({ pexelsApiKey, pixabayApiKey } = {}) {
       searchCandidates: async ({ query, perPage }) => searchPexelsImageCandidates({
         query,
         apiKey: pexelsApiKey,
+        perPage,
+        orientation: 'landscape',
+      }),
+    });
+  }
+  if (unsplashApiKey) {
+    providers.push({
+      id: 'unsplash',
+      searchCandidates: async ({ query, perPage }) => searchUnsplashImageCandidates({
+        query,
+        apiKey: unsplashApiKey,
         perPage,
         orientation: 'landscape',
       }),
@@ -451,7 +533,13 @@ function scoreProviderPhoto(candidate, articleProfile) {
   const fit = downgradeUnconfirmedFit(computeContextualEditorialFit(candidate, articleProfile));
   const sizeScore = Math.round(((candidate.width || 0) * (candidate.height || 0)) / 10000);
   const rawTagsCount = Array.isArray(candidate.rawTags) ? candidate.rawTags.length : 0;
-  const providerBonus = candidate.provider === 'pexels' ? 3 : candidate.provider === 'pixabay' ? 2 : 0;
+  const providerBonus = candidate.provider === 'pexels'
+    ? 3
+    : candidate.provider === 'unsplash'
+      ? 3
+      : candidate.provider === 'pixabay'
+        ? 2
+        : 0;
   const scenicPenalty = fit.scenicPenalty ? 6 : 0;
   const genericPenalty = fit.genericPenalty ? 10 : 0;
   const score = (
@@ -469,7 +557,35 @@ function scoreProviderPhoto(candidate, articleProfile) {
   return { score, fit };
 }
 
-function selectProviderCandidate(candidates, registry, { query, section, topicId, articleProfile }) {
+function shouldAcceptByQueryLevel(fit = {}, queryLevel = 'strict') {
+  const level = String(queryLevel || 'strict').toLowerCase();
+  const semanticAnchor = Number(fit.titleOverlap || 0)
+    + Number(fit.primaryEntityOverlap || 0)
+    + Number(fit.geoOverlap || 0)
+    + Number(fit.sourceOverlap || 0)
+    + Number(fit.contextOverlap || 0);
+
+  if (level === 'strict') {
+    if (!hasSemanticImageConfirmation(fit) && fit.tier !== 'strong') return false;
+    if (fit.tier === 'weak' && fit.articleRelevanceScore < 18) return false;
+    if (fit.contextRequired && Number(fit.contextOverlap || 0) === 0 && Number(fit.sourceOverlap || 0) < 2) return false;
+    return true;
+  }
+
+  if (level === 'relaxed') {
+    if (fit.tier === 'weak' && fit.articleRelevanceScore < 22) return false;
+    if (fit.contextRequired && Number(fit.contextOverlap || 0) === 0 && Number(fit.sourceOverlap || 0) === 0 && Number(fit.primaryEntityOverlap || 0) === 0) return false;
+    if (semanticAnchor === 0) return false;
+    return Number(fit.articleRelevanceScore || 0) >= 22;
+  }
+
+  // broad: still require at least one semantic anchor, but allow wider imagery.
+  if (semanticAnchor === 0) return false;
+  if (Number(fit.articleRelevanceScore || 0) < 20 && Number(fit.finalScore || 0) < 40) return false;
+  return true;
+}
+
+function selectProviderCandidate(candidates, registry, { query, queryLevel = 'strict', section, topicId, articleProfile }) {
   const ranked = [];
 
   for (const candidate of candidates) {
@@ -498,14 +614,13 @@ function selectProviderCandidate(candidates, registry, { query, section, topicId
       console.log(`[image] Rejecting low-evidence generic candidate provider=${enrichedCandidate.provider || 'unknown'} query="${query}"`);
       continue;
     }
-    if (!hasSemanticImageConfirmation(scored.fit) && scored.fit.tier !== 'strong') continue;
-    if (scored.fit.tier === 'weak' && scored.fit.articleRelevanceScore < 18) continue;
-    if (scored.fit.contextRequired && Number(scored.fit.contextOverlap || 0) === 0 && Number(scored.fit.sourceOverlap || 0) < 2) continue;
+    if (!shouldAcceptByQueryLevel(scored.fit, queryLevel)) continue;
 
     ranked.push({
       type: 'download_new',
       candidate: enrichedCandidate,
       query,
+      queryLevel,
       score: scored.score,
       fit: scored.fit,
     });
@@ -566,12 +681,32 @@ function hasSemanticImageConfirmation(fit = {}) {
     || (fit.geoOverlap || 0) >= 1;
 }
 
-function shouldEarlyStopOnlineSelection(decision, imageQueryPlan = null) {
-  if (!decision?.fit || decision.fit.tier !== 'strong') return false;
+function shouldEarlyStopOnlineSelection(decision, imageQueryPlan = null, queryLevel = 'strict') {
+  if (!decision?.fit) return false;
+  if (String(queryLevel || 'strict').toLowerCase() !== 'strict') return false;
+  if (decision.fit.tier !== 'strong') return false;
   const contextPhrases = Array.isArray(imageQueryPlan?.contextPhrases) ? imageQueryPlan.contextPhrases : [];
   const contextRequired = Boolean(decision.fit.contextRequired) || contextPhrases.length > 0;
   if (!contextRequired) return true;
   return Number(decision.fit.contextOverlap || 0) >= 1 || Number(decision.fit.sourceOverlap || 0) >= 2;
+}
+
+function shouldStopAfterQueryLevel(levelBestDecision, queryLevel = 'strict', imageQueryPlan = null) {
+  if (!levelBestDecision?.fit) return false;
+  const level = String(queryLevel || 'strict').toLowerCase();
+
+  if (level === 'strict') {
+    return shouldEarlyStopOnlineSelection(levelBestDecision, imageQueryPlan, queryLevel);
+  }
+
+  if (level === 'relaxed') {
+    if (levelBestDecision.fit.tier === 'strong') return true;
+    return levelBestDecision.fit.tier === 'acceptable'
+      && Number(levelBestDecision.fit.articleRelevanceScore || 0) >= 56;
+  }
+
+  // broad is the final search level; if we found a candidate, stop.
+  return true;
 }
 
 function downgradeUnconfirmedFit(fit = {}) {
@@ -707,7 +842,7 @@ async function persistProviderCandidate(candidate, { section, query, topicId, en
   }
 }
 
-function buildResultFromAsset(asset, article, { articleSlug, queryUsed, selectionMode, sectionId, topicId, articleProfile, auditTrail = null }) {
+function buildResultFromAsset(asset, article, { articleSlug, queryUsed, queryLevel = null, selectionMode, sectionId, topicId, articleProfile, auditTrail = null }) {
   const altText = generateAltText(article.title, article.excerpt, asset.altText);
   const fit = downgradeUnconfirmedFit(computeContextualEditorialFit(asset, articleProfile || buildArticleSearchProfile({ title: article.title, excerpt: article.excerpt || article.content || '' })));
   return {
@@ -723,6 +858,7 @@ function buildResultFromAsset(asset, article, { articleSlug, queryUsed, selectio
       height: asset.height || 900,
       format: asset.format || 'jpg',
       queryUsed: queryUsed || null,
+      queryLevel: queryLevel || null,
       authorName: asset.authorName || null,
       selectionMode,
       section_id: sectionId || null,
@@ -742,9 +878,10 @@ function buildResultFromAsset(asset, article, { articleSlug, queryUsed, selectio
   };
 }
 
-function buildImageAuditTrail({ queries = [], providers = [], decisionLog = [], bestOnlineDecision = null, onlineAttempted = false, imageQueryPlan = null } = {}) {
+function buildImageAuditTrail({ queries = [], queryLevels = [], providers = [], decisionLog = [], bestOnlineDecision = null, onlineAttempted = false, imageQueryPlan = null } = {}) {
   return {
     queriesTried: Array.isArray(queries) ? queries.slice(0, IMAGE_CONFIG.maxQueriesPerRun) : [],
+    queryLevelsTried: Array.isArray(queryLevels) ? queryLevels.map((entry) => entry.level) : [],
     providersTried: Array.isArray(providers) ? providers.map((provider) => provider.id) : [],
     decisionLog: Array.isArray(decisionLog) ? decisionLog : [],
     imageQueryPlan: imageQueryPlan ? {
@@ -758,6 +895,7 @@ function buildImageAuditTrail({ queries = [], providers = [], decisionLog = [], 
       query: bestOnlineDecision.query || null,
       provider: bestOnlineDecision.candidate?.provider || null,
       providerAssetId: bestOnlineDecision.candidate?.providerAssetId || null,
+      queryLevel: bestOnlineDecision.queryLevel || null,
       finalScore: bestOnlineDecision.fit?.finalScore ?? null,
       articleRelevanceScore: bestOnlineDecision.fit?.articleRelevanceScore ?? null,
       assetQualityScore: bestOnlineDecision.fit?.assetQualityScore ?? null,
