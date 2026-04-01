@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-01T17:44:20.588Z",
+  "event_id": "evt-2026-03-30-transfers-business-general-global-nba",
+  "cluster_id": "evt-2026-03-30-transfers-business-general-global-nba",
+  "article_type": "analysis",
+  "title": "Manchester United’s Attack Reset: Zirkzee, Rashford and a Summer of Hard Choices",
+  "slug": "manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ",
+  "canonical_slug": "2026-04-01-manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ",
+  "expected_url": "/article/2026-04-01-manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ.mdx",
+  "published_at": "2026-04-01T17:44:20.586Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Transfers & Business",
+  "topics": [
+    "Transfers & Business"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "jacob_ellis",
+    "author_name": "Jacob Ellis",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/34760021/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/34760021/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/skyline-of-manchester-city-with-historic-buildings-34760021/",
+    "asset_key": "pexels:34760021",
+    "alt_text": "Aerial view of Manchester city skyline featuring modern and historic architecture under a clear blue sky.",
+    "selection_mode": "provider_download_new:pexels:acceptable:relaxed",
+    "query_used": "Manchester United photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Report: Manchester United and Arsenal set to battle for Bundesliga star",
+        "url": "https://onefootball.com/en/news/report-manchester-united-and-arsenal-set-to-battle-for-bundesliga-star-42635943",
+        "domain": "onefootball.com"
+      },
+      {
+        "title": "Manchester United Women 0-3 Manchester City Women: Match Report",
+        "url": "https://sports.yahoo.com/articles/manchester-united-women-0-3-061000195.html",
+        "domain": "sports.yahoo.com"
+      },
+      {
+        "title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+        "url": "https://www.nytimes.com/athletic/7148954/2026/03/27/manchester-united-transfers-rashford-zirkzee-hojlund/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Casemiro not thinking about reversing Manchester United decision",
+        "url": "https://www.nytimes.com/athletic/7151400/2026/03/27/casemiro-manchester-united-stay-transfer/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": true,
+        "matched_aliases": [
+          "transfers"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Manchester United photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "manchester",
+        "united"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

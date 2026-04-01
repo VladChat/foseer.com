@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-01T12:09:24.443Z",
+  "updatedAt": "2026-04-01T17:44:20.613Z",
   "items": [
     {
       "identityKey": "cluster:evt-2026-04-01-news-general-israel-israel",
@@ -306,50 +306,6 @@
       "lastSelectedAt": null,
       "lastPublishedAt": null,
       "publishedSlug": null
-    },
-    {
-      "identityKey": "cluster:evt-2026-03-29-business-general-global",
-      "briefId": "evt-2026-03-29-business-general-global",
-      "title": "MAHA fans want action Trump hasn't delivered",
-      "normalizedTitle": "maha fans want action trump hasn t delivered",
-      "section_id": "business",
-      "topic_id": null,
-      "articleType": "report",
-      "selectionOrigin": "ready_backlog",
-      "poolIdentityKey": "cluster:evt-2026-03-29-business-general-global",
-      "rank": 1,
-      "score": 50.2,
-      "scoreNotes": [
-        "section_penalty:7",
-        "topic_penalty:12",
-        "region_penalty:36",
-        "angle_penalty:32",
-        "cluster_repeat:1",
-        "entity_penalty:22",
-        "domains:2",
-        "consistency:9.2",
-        "core:3",
-        "supporting:0"
-      ],
-      "sourceCount": 3,
-      "uniqueDomains": 2,
-      "directEventSourceCount": 3,
-      "independentEventDomains": 2,
-      "gateDecision": "PASS",
-      "gateNotes": [
-        "Role-aware one-event source-pack gate passed"
-      ],
-      "discoveredAt": "2026-03-29T22:43:33.346Z",
-      "firstQueuedAt": "2026-03-29T22:43:33.859Z",
-      "lastQueuedAt": "2026-03-30T13:53:38.464Z",
-      "status": "published",
-      "lastSelectedAt": "2026-03-30T13:53:38.464Z",
-      "lastPublishedAt": "2026-03-30T13:53:38.464Z",
-      "publishedSlug": "2026-03-30-why-trump-s-maha-base-is-restless-over-undelivered-pharma-cr",
-      "selectedByWorkflow": null,
-      "selectedByRunId": null,
-      "selectedAt": null,
-      "selectionExpiresAt": null
     },
     {
       "identityKey": "cluster:evt-2026-03-31-ai-big-tech-general-global",

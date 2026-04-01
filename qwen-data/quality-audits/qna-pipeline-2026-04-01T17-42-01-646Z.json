@@ -1,0 +1,704 @@
+{
+  "version": 2,
+  "run_id": "qna-pipeline-2026-04-01T17-42-01-646Z",
+  "started_at": "2026-04-01T17:42:01.646Z",
+  "generated_at": "2026-04-01T17:44:20.642Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 2,
+        "gdelt": 2,
+        "google": 2
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 2,
+            "fresh_files": 2,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 38276
+          },
+          "gdelt": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          },
+          "google": {
+            "files": 2,
+            "fresh_files": 2,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 113742
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 138983,
+    "news_pool": {
+      "total": 62,
+      "active": 51,
+      "published": 11,
+      "ready_candidates": 1
+    },
+    "brief_candidates": 12,
+    "question_candidates": 1,
+    "source_pack_attempts": 15,
+    "source_pack_near_miss": 12,
+    "source_pack_rescue_attempts": 3,
+    "source_pack_rescue_successes": 1
+  },
+  "provider_stats": {
+    "mode": "cache_refresh_with_live_quota",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": true,
+    "min_search_interval_ms": 6000,
+    "live_quota": {
+      "brave": 5,
+      "gdelt": 2,
+      "google": 2
+    },
+    "live_usage": {
+      "brave": 2,
+      "gdelt": 2,
+      "google": 2
+    },
+    "cache": {
+      "ttl_hours": 8,
+      "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+      "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 2,
+          "fresh_files": 2,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 38276
+        },
+        "gdelt": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        },
+        "google": {
+          "files": 2,
+          "fresh_files": 2,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 113742
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14135
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6189
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 285008
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "shared_cache_load": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "brief_source_pack_gate": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "question_extraction": {
+      "success": false,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "question_filtering": {
+      "success": false,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "source_pack_selection": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claim_map": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "draft": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "image": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "publish": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 1,
+    "editorial_pass_count": 1,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "Manchester United’s Attack Reset: Zirkzee, Rashford and a Summer of Hard Choices",
+      "slug": "manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ",
+      "published": false,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "sports",
+          "topic_id": "transfers-business",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 4,
+          "unique_domains": 3,
+          "direct_event_source_count": 4,
+          "independent_event_domains": 3,
+          "source_consistency_score": 8.8,
+          "strong_match_count": 4,
+          "core_source_count": 3,
+          "supporting_source_count": 1,
+          "background_source_count": 4,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 5,
+          "supporting": 1,
+          "background": 7,
+          "signal_only": 2
+        },
+        "publish_ready_sources": [
+          {
+            "title": "Report: Manchester United and Arsenal set to battle for Bundesliga star",
+            "domain": "onefootball.com",
+            "url": "https://onefootball.com/en/news/report-manchester-united-and-arsenal-set-to-battle-for-bundesliga-star-42635943",
+            "page_kind": "article",
+            "topic_id": "transfers-business",
+            "section_id": "sports"
+          },
+          {
+            "title": "Manchester United Women 0-3 Manchester City Women: Match Report",
+            "domain": "sports.yahoo.com",
+            "url": "https://sports.yahoo.com/articles/manchester-united-women-0-3-061000195.html",
+            "page_kind": "article",
+            "topic_id": "transfers-business",
+            "section_id": "sports"
+          },
+          {
+            "title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+            "domain": "nytimes.com",
+            "url": "https://www.nytimes.com/athletic/7148954/2026/03/27/manchester-united-transfers-rashford-zirkzee-hojlund/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          },
+          {
+            "title": "Casemiro not thinking about reversing Manchester United decision",
+            "domain": "nytimes.com",
+            "url": "https://www.nytimes.com/athletic/7151400/2026/03/27/casemiro-manchester-united-stay-transfer/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "Report: Manchester United and Arsenal set to battle for Bundesliga star",
+            "domain": "onefootball.com",
+            "page_kind": "article",
+            "same_event_score": 20,
+            "topic_fit_score": 8,
+            "source_quality_score": 30,
+            "article_likelihood": 9,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Manchester United Women 0-3 Manchester City Women: Match Report",
+            "domain": "sports.yahoo.com",
+            "page_kind": "article",
+            "same_event_score": 20,
+            "topic_fit_score": 8,
+            "source_quality_score": 27.5,
+            "article_likelihood": 9,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": 4,
+            "source_quality_score": 42.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Casemiro not thinking about reversing Manchester United decision",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 9,
+            "topic_fit_score": 4,
+            "source_quality_score": 19.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Are these Manchester United's summer transfer priorities?",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 9,
+            "topic_fit_score": 3,
+            "source_quality_score": 13.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "supporting",
+            "title": "UNC star Caleb Wilson, a projected top",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 2,
+            "topic_fit_score": 4,
+            "source_quality_score": 9.5,
+            "article_likelihood": 10,
+            "genericity_score": 2
+          },
+          {
+            "role": "background",
+            "title": "Athletes train for almost every scenario. But there's a stressor sports ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 7,
+            "source_quality_score": 9.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "The Leftist No Kings Protest Is in Several Cities Today",
+            "domain": "independentsentinel.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Youre a presenter now , not a Labour minister Ed Balls is told after on - air dust - up with young Jewish campaigner ove",
+            "domain": "dailymail.co.uk",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Washington Drivers Will Soon Carry Blue Envelopes Here Why",
+            "domain": "mega993online.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Jim Cramer Blesses Rigel Pharmaceuticals as a Spec as It Doing Better Than People Realize",
+            "domain": "finance.yahoo.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 4,
+            "source_quality_score": 7.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Tiger Woods' history of car crashes and injuries: What to know after ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 6.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 4,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": []
+        }
+      },
+      "tags": {
+        "tags": [
+          "Transfers & Business",
+          "Analysis"
+        ],
+        "tag_slugs": [
+          "transfers-business",
+          "analysis"
+        ],
+        "primary_topic_tag": "Transfers & Business",
+        "primary_topic_slug": "transfers-business",
+        "warnings": [
+          "Canonical tag set is thin (2)"
+        ],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "Transfers & Business",
+            "slug": "transfers-business",
+            "score": 40,
+            "reason": "Primary topic tag validated from topic_id=transfers-business",
+            "fallback": false
+          },
+          {
+            "label": "Analysis",
+            "slug": "analysis",
+            "score": 10,
+            "reason": "Format from article type: analysis",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "Canonical tag set is below target floor (3), accepted due sparse evidence"
+          ]
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "transfers-business",
+              "label": "Transfers & Business",
+              "type": "topic"
+            },
+            {
+              "slug": "analysis",
+              "label": "Analysis",
+              "type": "format"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "transfers-business",
+            "topic_label": "Transfers & Business",
+            "supported": true,
+            "matched_aliases": [
+              "transfers"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pexels",
+        "image_path": "~/assets/images/library/pexels/34760021/cover.jpg",
+        "source_url": "https://www.pexels.com/photo/skyline-of-manchester-city-with-historic-buildings-34760021/",
+        "selection_mode": "provider_download_new:pexels:acceptable:relaxed",
+        "query_used": "Manchester United photo",
+        "relevance_tier": "acceptable",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "stadium",
+        "visual_type": "photo",
+        "entity_hints": [
+          "aerial",
+          "view",
+          "manchester",
+          "skyline",
+          "featuring",
+          "historic",
+          "architecture",
+          "under"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "Rashford and basketball photo",
+          "Rashford and football photo",
+          "Rashford and photo",
+          "Rashford and portrait",
+          "global Rashford and photo",
+          "attack reset summer photo",
+          "basketball photo",
+          "Manchester United photo",
+          "Transfers and Business photo",
+          "transfers business photo",
+          "sports arena photo",
+          "athlete portrait"
+        ],
+        "decision_log": [
+          {
+            "query": "Rashford and basketball photo",
+            "queryLevel": "strict",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "6767322",
+            "finalScore": 65,
+            "articleRelevanceScore": 51,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Rashford and football photo",
+            "queryLevel": "strict",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "35273301",
+            "finalScore": 65,
+            "articleRelevanceScore": 51,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Rashford and photo",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "Rashford and portrait",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "global Rashford and photo",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "queryLevel": "strict",
+            "status": "level_complete",
+            "attemptedQueries": 5,
+            "rankedCandidates": 2,
+            "bestProvider": "pexels",
+            "bestFinalScore": 65,
+            "bestTier": "acceptable"
+          },
+          {
+            "query": "attack reset summer photo",
+            "queryLevel": "relaxed",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "3691852",
+            "finalScore": 99,
+            "articleRelevanceScore": 99,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "basketball photo",
+            "queryLevel": "relaxed",
+            "status": "ranked_candidate",
+            "provider": "pixabay",
+            "providerAssetId": "3295366",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Manchester United photo",
+            "queryLevel": "relaxed",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "34760021",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Transfers and Business photo",
+            "queryLevel": "relaxed",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "7043071",
+            "finalScore": 44,
+            "articleRelevanceScore": 34,
+            "assetQualityScore": 100,
+            "tier": "usable"
+          },
+          {
+            "query": "transfers business photo",
+            "queryLevel": "relaxed",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "17455633",
+            "finalScore": 44,
+            "articleRelevanceScore": 34,
+            "assetQualityScore": 100,
+            "tier": "usable"
+          },
+          {
+            "queryLevel": "relaxed",
+            "status": "level_complete",
+            "attemptedQueries": 5,
+            "rankedCandidates": 5,
+            "bestProvider": "pexels",
+            "bestFinalScore": 100,
+            "bestTier": "acceptable"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Manchester United photo",
+          "provider": "pexels",
+          "providerAssetId": "34760021",
+          "queryLevel": "relaxed",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "acceptable"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pexels",
+          "query_used": "Manchester United photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "acceptable",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "manchester",
+            "united"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ.json",
+        "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ.mdx",
+        "expected_url": "/article/2026-04-01-manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ",
+        "verified_url": null
+      }
+    }
+  ]
+}

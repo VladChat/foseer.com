@@ -1,0 +1,3548 @@
+{
+  "timestamp": "2026-04-01T17:44:20.643Z",
+  "started_at": "2026-04-01T17:42:01.646Z",
+  "success": true,
+  "runId": "qna-pipeline-2026-04-01T17-42-01-646Z",
+  "mode": "question-led",
+  "used_shared_discovery_cache": true,
+  "selected_question": {
+    "question": null,
+    "question_type": "standard_fallback",
+    "score": 10,
+    "selection_score": 16.4,
+    "signal": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+    "mode": "standard-fallback",
+    "brief_title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+    "source_pack_sources": 4,
+    "source_pack_domains": 3
+  },
+  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ.mdx",
+  "published_url": "/article/2026-04-01-manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ",
+  "stats": {
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 6000,
+      "live_quota": {
+        "brave": 5,
+        "gdelt": 2,
+        "google": 2
+      },
+      "live_usage": {
+        "brave": 2,
+        "gdelt": 2,
+        "google": 2
+      },
+      "cache": {
+        "ttl_hours": 8,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 2,
+            "fresh_files": 2,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 38276
+          },
+          "gdelt": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          },
+          "google": {
+            "files": 2,
+            "fresh_files": 2,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 113742
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 138983,
+    "news_pool": {
+      "total": 62,
+      "active": 51,
+      "published": 11,
+      "ready_candidates": 1
+    },
+    "brief_candidates": 12,
+    "question_candidates": 1,
+    "source_pack_attempts": 15,
+    "source_pack_near_miss": 12,
+    "source_pack_rescue_attempts": 3,
+    "source_pack_rescue_successes": 1
+  },
+  "stages": {
+    "shared_cache_load": {
+      "success": true,
+      "count": 12,
+      "source": "shared-news-pool"
+    },
+    "brief_source_pack_gate": {
+      "success": true,
+      "attempted": 15,
+      "passed": 1,
+      "rescue": {
+        "nearMissTotal": 12,
+        "attempted": 3,
+        "rescued": 1,
+        "failed": 2,
+        "pre_rescue_passed": 0,
+        "post_rescue_passed": 1,
+        "worked_queries": [
+          {
+            "level": "relaxed",
+            "intent": "independent_confirming",
+            "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+            "candidates": 5
+          },
+          {
+            "level": "broad",
+            "intent": "trusted_reporting",
+            "query": "Manchester United manchester united transfers zirkzee rashford Manchester United (news analysis OR report OR investigation)",
+            "candidates": 8
+          },
+          {
+            "level": "broad",
+            "intent": "trusted_reporting",
+            "query": "Daiwa Securities Group hard truths soft metals development Daiwa Securities Group (news analysis OR report OR investigation)",
+            "candidates": 8
+          }
+        ],
+        "failed_candidates": [
+          {
+            "brief_title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+            "reasons": [
+              "Role-aware one-event source-pack gate passed",
+              "Publish-ready source pack mixes unrelated event titles (2 weak-title sources)"
+            ],
+            "failure_codes": [
+              "only_one_publishable_source",
+              "thin_pack_after_rescue",
+              "missing_official",
+              "missing_trusted_reporting"
+            ]
+          },
+          {
+            "brief_title": "Hard truths, soft metals",
+            "reasons": [
+              "Publish-ready source pack coherence too low (0.33)",
+              "Publish-ready source pack mixes unrelated event titles (2 weak-title sources)"
+            ],
+            "failure_codes": [
+              "missing_trusted_reporting"
+            ]
+          }
+        ]
+      },
+      "rejected": [
+        {
+          "brief_title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+          "poolIdentityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
+          "status": "near_miss_source_pack",
+          "reasons": [
+            "Role-aware one-event source-pack gate passed",
+            "Publish-ready source pack mixes unrelated event titles (2 weak-title sources)"
+          ],
+          "failure_codes": [
+            "only_one_publishable_source",
+            "thin_pack_after_rescue",
+            "missing_official",
+            "missing_trusted_reporting"
+          ],
+          "rescue": {
+            "brief_title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+            "initial_failure_codes": [],
+            "entity_profile": {
+              "canonical": "Crypto",
+              "aliases": [
+                "Crypto"
+              ],
+              "confidence": "low",
+              "evidence": {
+                "candidate_groups": 34,
+                "top_score": 51.9,
+                "second_score": 51.9,
+                "source_support": 5,
+                "title_support": 1,
+                "pattern": "unknown"
+              }
+            },
+            "entity_diagnostics": [
+              "entity_inferred_from_title",
+              "entity_inferred_from_sources",
+              "entity_alias_collision",
+              "entity_confidence_low"
+            ],
+            "query_plan": [
+              {
+                "level": "relaxed",
+                "intent": "independent_confirming",
+                "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                "targeted_domains": []
+              },
+              {
+                "level": "broad",
+                "intent": "trusted_reporting",
+                "query": "Crypto crypto mortgage explained buying home Crypto (news analysis OR report OR investigation)",
+                "targeted_domains": []
+              },
+              {
+                "level": "broad",
+                "intent": "official_primary",
+                "query": "Crypto policy decision (newsroom OR regulator OR agency OR court OR league OR team OR university OR journal OR investor relations) (site:federalregister.gov)",
+                "targeted_domains": [
+                  "federalregister.gov"
+                ]
+              }
+            ],
+            "query_results": [
+              {
+                "level": "relaxed",
+                "intent": "independent_confirming",
+                "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                "providers": [
+                  {
+                    "provider": "google",
+                    "status": "called_success",
+                    "items": 8
+                  },
+                  {
+                    "provider": "gdelt",
+                    "status": "upstream_response_failure",
+                    "items": 0
+                  }
+                ],
+                "candidates": 5,
+                "kept_after_filter": 5,
+                "generic_filtered": 3
+              }
+            ],
+            "worked_queries": [
+              {
+                "level": "relaxed",
+                "intent": "independent_confirming",
+                "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                "candidates": 5
+              }
+            ],
+            "role_coverage": {
+              "totalCandidates": 5,
+              "primary_or_official": {
+                "count": 1,
+                "items": [
+                  {
+                    "source": {
+                      "source_id": "src-1506007186",
+                      "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                      "canonical_url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                      "domain": "consumer.ftc.gov",
+                      "canonical_domain": "consumer.ftc.gov",
+                      "title": "What To Know About Romance Scams",
+                      "normalized_title": "what to know about romance scams",
+                      "snippet": "2 days ago ... How to Report a Romance Scam. If you paid a romance scammer with a gift card, wire transfer, credit or debit card, or cryptocurrency, contact the company ...",
+                      "page_kind": "official_release",
+                      "published_at": "2019-06-05T00:00:00-04:00",
+                      "provider": "google_trusted",
+                      "section_id": "business",
+                      "topic_id": "crypto-bitcoin",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                      "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                      "entities": [
+                        "unspecified",
+                        "crypto"
+                      ],
+                      "keywords": [
+                        "what",
+                        "know",
+                        "about",
+                        "romance",
+                        "scams",
+                        "days",
+                        "report",
+                        "scam",
+                        "paid",
+                        "scammer",
+                        "with",
+                        "gift"
+                      ],
+                      "title_signal_tokens": [
+                        "what",
+                        "know",
+                        "romance",
+                        "scams"
+                      ],
+                      "url_signal_tokens": [
+                        "what",
+                        "know",
+                        "romance",
+                        "scams"
+                      ],
+                      "title_url_overlap": 1,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 1,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    },
+                    "roleResult": {
+                      "role": "core",
+                      "role_confidence": 100,
+                      "role_reason": [
+                        "same_cluster",
+                        "same_event_key",
+                        "same_topic",
+                        "same_section",
+                        "same_region",
+                        "same_angle",
+                        "entity_hits:1",
+                        "keyword_hits:2",
+                        "article_like",
+                        "official_release",
+                        "core_threshold"
+                      ],
+                      "same_event_score": 13,
+                      "topic_fit_score": 8,
+                      "genericity_score": 1,
+                      "article_likelihood": 8,
+                      "page_kind": "official_release",
+                      "source_id": "src-1506007186",
+                      "source": {
+                        "source_id": "src-1506007186",
+                        "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                        "canonical_url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                        "domain": "consumer.ftc.gov",
+                        "canonical_domain": "consumer.ftc.gov",
+                        "title": "What To Know About Romance Scams",
+                        "normalized_title": "what to know about romance scams",
+                        "snippet": "2 days ago ... How to Report a Romance Scam. If you paid a romance scammer with a gift card, wire transfer, credit or debit card, or cryptocurrency, contact the company ...",
+                        "page_kind": "official_release",
+                        "published_at": "2019-06-05T00:00:00-04:00",
+                        "provider": "google_trusted",
+                        "section_id": "business",
+                        "topic_id": "crypto-bitcoin",
+                        "section_candidates": [],
+                        "topic_candidates": [],
+                        "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                        "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                        "entities": [
+                          "unspecified",
+                          "crypto"
+                        ],
+                        "keywords": [
+                          "what",
+                          "know",
+                          "about",
+                          "romance",
+                          "scams",
+                          "days",
+                          "report",
+                          "scam",
+                          "paid",
+                          "scammer",
+                          "with",
+                          "gift"
+                        ],
+                        "title_signal_tokens": [
+                          "what",
+                          "know",
+                          "romance",
+                          "scams"
+                        ],
+                        "url_signal_tokens": [
+                          "what",
+                          "know",
+                          "romance",
+                          "scams"
+                        ],
+                        "title_url_overlap": 1,
+                        "title_url_mismatch": false,
+                        "region": "global",
+                        "angle": "general",
+                        "genericity_score": 1,
+                        "article_likelihood": 8,
+                        "source_quality_score": 0
+                      }
+                    },
+                    "rescueScore": 54.4,
+                    "queryMeta": {
+                      "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                      "level": "relaxed",
+                      "intent": "independent_confirming"
+                    }
+                  }
+                ]
+              },
+              "trusted_reporting": {
+                "count": 1,
+                "items": [
+                  {
+                    "source": {
+                      "source_id": "src-1600132345",
+                      "url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7?gaa_at=eafs&gaa_n=AWEtsqdEYrm2JrKHcbEU_VHOu5_xJrHxWH81RpnOyTuv5a13lpPXS4FYJVYx&gaa_ts=69cd5c6e&gaa_sig=PFytR9pnYbjquyRnLjtSq-6CHj2l6VZNfW3T3fm36i9oOzdSIY7Oz_cwl_fFH40AIW3Hs7hX9oQ-5ggHr9hIkA%3D%3D",
+                      "canonical_url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7",
+                      "domain": "wsj.com",
+                      "canonical_domain": "wsj.com",
+                      "title": "Fannie Mae to Accept Crypto-Backed Mortgages for the First Time",
+                      "normalized_title": "fannie mae to accept crypto backed mortgages for the first time",
+                      "snippet": "6 days ago ... New offering from Better Home & Finance and Coinbase allows home buyers to pledge bitcoin and other cryptocurrencies when making a down payment.",
+                      "page_kind": "article",
+                      "published_at": null,
+                      "provider": "google_trusted",
+                      "section_id": "business",
+                      "topic_id": "crypto-bitcoin",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                      "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                      "entities": [
+                        "unspecified",
+                        "crypto"
+                      ],
+                      "keywords": [
+                        "fannie",
+                        "accept",
+                        "crypto",
+                        "backed",
+                        "mortgages",
+                        "first",
+                        "time",
+                        "days",
+                        "offering",
+                        "from",
+                        "better",
+                        "home"
+                      ],
+                      "title_signal_tokens": [
+                        "fannie",
+                        "accept",
+                        "crypto",
+                        "backed",
+                        "mortgages",
+                        "first",
+                        "time"
+                      ],
+                      "url_signal_tokens": [
+                        "real",
+                        "estate",
+                        "fannie",
+                        "accept",
+                        "crypto",
+                        "backed",
+                        "mortgages",
+                        "first",
+                        "time",
+                        "bfa502c7"
+                      ],
+                      "title_url_overlap": 1,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 0,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    },
+                    "roleResult": {
+                      "role": "core",
+                      "role_confidence": 100,
+                      "role_reason": [
+                        "same_cluster",
+                        "same_event_key",
+                        "same_topic",
+                        "same_section",
+                        "same_region",
+                        "same_angle",
+                        "entity_hits:1",
+                        "keyword_hits:2",
+                        "signature_hits:1",
+                        "article_like",
+                        "core_threshold"
+                      ],
+                      "same_event_score": 15,
+                      "topic_fit_score": 8,
+                      "genericity_score": 0,
+                      "article_likelihood": 8,
+                      "page_kind": "article",
+                      "source_id": "src-1600132345",
+                      "source": {
+                        "source_id": "src-1600132345",
+                        "url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7?gaa_at=eafs&gaa_n=AWEtsqdEYrm2JrKHcbEU_VHOu5_xJrHxWH81RpnOyTuv5a13lpPXS4FYJVYx&gaa_ts=69cd5c6e&gaa_sig=PFytR9pnYbjquyRnLjtSq-6CHj2l6VZNfW3T3fm36i9oOzdSIY7Oz_cwl_fFH40AIW3Hs7hX9oQ-5ggHr9hIkA%3D%3D",
+                        "canonical_url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7",
+                        "domain": "wsj.com",
+                        "canonical_domain": "wsj.com",
+                        "title": "Fannie Mae to Accept Crypto-Backed Mortgages for the First Time",
+                        "normalized_title": "fannie mae to accept crypto backed mortgages for the first time",
+                        "snippet": "6 days ago ... New offering from Better Home & Finance and Coinbase allows home buyers to pledge bitcoin and other cryptocurrencies when making a down payment.",
+                        "page_kind": "article",
+                        "published_at": null,
+                        "provider": "google_trusted",
+                        "section_id": "business",
+                        "topic_id": "crypto-bitcoin",
+                        "section_candidates": [],
+                        "topic_candidates": [],
+                        "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                        "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                        "entities": [
+                          "unspecified",
+                          "crypto"
+                        ],
+                        "keywords": [
+                          "fannie",
+                          "accept",
+                          "crypto",
+                          "backed",
+                          "mortgages",
+                          "first",
+                          "time",
+                          "days",
+                          "offering",
+                          "from",
+                          "better",
+                          "home"
+                        ],
+                        "title_signal_tokens": [
+                          "fannie",
+                          "accept",
+                          "crypto",
+                          "backed",
+                          "mortgages",
+                          "first",
+                          "time"
+                        ],
+                        "url_signal_tokens": [
+                          "real",
+                          "estate",
+                          "fannie",
+                          "accept",
+                          "crypto",
+                          "backed",
+                          "mortgages",
+                          "first",
+                          "time",
+                          "bfa502c7"
+                        ],
+                        "title_url_overlap": 1,
+                        "title_url_mismatch": false,
+                        "region": "global",
+                        "angle": "general",
+                        "genericity_score": 0,
+                        "article_likelihood": 8,
+                        "source_quality_score": 0
+                      }
+                    },
+                    "rescueScore": 58.4,
+                    "queryMeta": {
+                      "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                      "level": "relaxed",
+                      "intent": "independent_confirming"
+                    }
+                  }
+                ]
+              },
+              "independent_confirming": {
+                "count": 4,
+                "items": [
+                  {
+                    "source": {
+                      "source_id": "src-1958048908",
+                      "url": "https://m.economictimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+                      "canonical_url": "https://m.economictimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+                      "domain": "m.economictimes.com",
+                      "canonical_domain": "m.economictimes.com",
+                      "title": "Buying a home with crypto? Here's what no one tells you before you ...",
+                      "normalized_title": "buying a home with crypto here s what no one tells you before you",
+                      "snippet": "2 days ago ... Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing ...",
+                      "page_kind": "article",
+                      "published_at": null,
+                      "provider": "google_trusted",
+                      "section_id": "business",
+                      "topic_id": "crypto-bitcoin",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                      "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                      "entities": [
+                        "unspecified",
+                        "crypto"
+                      ],
+                      "keywords": [
+                        "buying",
+                        "home",
+                        "with",
+                        "crypto",
+                        "here",
+                        "what",
+                        "tells",
+                        "before",
+                        "days",
+                        "mortgage",
+                        "explained",
+                        "explore"
+                      ],
+                      "title_signal_tokens": [
+                        "buying",
+                        "home",
+                        "crypto",
+                        "here",
+                        "what",
+                        "tells",
+                        "before"
+                      ],
+                      "url_signal_tokens": [
+                        "international",
+                        "buying",
+                        "home",
+                        "crypto",
+                        "heres",
+                        "what",
+                        "tells",
+                        "before",
+                        "make",
+                        "move",
+                        "articleshow"
+                      ],
+                      "title_url_overlap": 0.8571428571428571,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 0,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    },
+                    "roleResult": {
+                      "role": "core",
+                      "role_confidence": 100,
+                      "role_reason": [
+                        "same_cluster",
+                        "same_event_key",
+                        "same_topic",
+                        "same_section",
+                        "same_region",
+                        "same_angle",
+                        "entity_hits:1",
+                        "keyword_hits:10",
+                        "title_hits:7",
+                        "title_overlap:0.64",
+                        "signature_hits:4",
+                        "article_like",
+                        "core_threshold"
+                      ],
+                      "same_event_score": 22,
+                      "topic_fit_score": 8,
+                      "genericity_score": 0,
+                      "article_likelihood": 8,
+                      "page_kind": "article",
+                      "source_id": "src-1958048908",
+                      "source": {
+                        "source_id": "src-1958048908",
+                        "url": "https://m.economictimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+                        "canonical_url": "https://m.economictimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+                        "domain": "m.economictimes.com",
+                        "canonical_domain": "m.economictimes.com",
+                        "title": "Buying a home with crypto? Here's what no one tells you before you ...",
+                        "normalized_title": "buying a home with crypto here s what no one tells you before you",
+                        "snippet": "2 days ago ... Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing ...",
+                        "page_kind": "article",
+                        "published_at": null,
+                        "provider": "google_trusted",
+                        "section_id": "business",
+                        "topic_id": "crypto-bitcoin",
+                        "section_candidates": [],
+                        "topic_candidates": [],
+                        "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                        "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                        "entities": [
+                          "unspecified",
+                          "crypto"
+                        ],
+                        "keywords": [
+                          "buying",
+                          "home",
+                          "with",
+                          "crypto",
+                          "here",
+                          "what",
+                          "tells",
+                          "before",
+                          "days",
+                          "mortgage",
+                          "explained",
+                          "explore"
+                        ],
+                        "title_signal_tokens": [
+                          "buying",
+                          "home",
+                          "crypto",
+                          "here",
+                          "what",
+                          "tells",
+                          "before"
+                        ],
+                        "url_signal_tokens": [
+                          "international",
+                          "buying",
+                          "home",
+                          "crypto",
+                          "heres",
+                          "what",
+                          "tells",
+                          "before",
+                          "make",
+                          "move",
+                          "articleshow"
+                        ],
+                        "title_url_overlap": 0.8571428571428571,
+                        "title_url_mismatch": false,
+                        "region": "global",
+                        "angle": "general",
+                        "genericity_score": 0,
+                        "article_likelihood": 8,
+                        "source_quality_score": 0
+                      }
+                    },
+                    "rescueScore": 68.4,
+                    "queryMeta": {
+                      "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                      "level": "relaxed",
+                      "intent": "independent_confirming"
+                    }
+                  },
+                  {
+                    "source": {
+                      "source_id": "src-1600132345",
+                      "url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7?gaa_at=eafs&gaa_n=AWEtsqdEYrm2JrKHcbEU_VHOu5_xJrHxWH81RpnOyTuv5a13lpPXS4FYJVYx&gaa_ts=69cd5c6e&gaa_sig=PFytR9pnYbjquyRnLjtSq-6CHj2l6VZNfW3T3fm36i9oOzdSIY7Oz_cwl_fFH40AIW3Hs7hX9oQ-5ggHr9hIkA%3D%3D",
+                      "canonical_url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7",
+                      "domain": "wsj.com",
+                      "canonical_domain": "wsj.com",
+                      "title": "Fannie Mae to Accept Crypto-Backed Mortgages for the First Time",
+                      "normalized_title": "fannie mae to accept crypto backed mortgages for the first time",
+                      "snippet": "6 days ago ... New offering from Better Home & Finance and Coinbase allows home buyers to pledge bitcoin and other cryptocurrencies when making a down payment.",
+                      "page_kind": "article",
+                      "published_at": null,
+                      "provider": "google_trusted",
+                      "section_id": "business",
+                      "topic_id": "crypto-bitcoin",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                      "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                      "entities": [
+                        "unspecified",
+                        "crypto"
+                      ],
+                      "keywords": [
+                        "fannie",
+                        "accept",
+                        "crypto",
+                        "backed",
+                        "mortgages",
+                        "first",
+                        "time",
+                        "days",
+                        "offering",
+                        "from",
+                        "better",
+                        "home"
+                      ],
+                      "title_signal_tokens": [
+                        "fannie",
+                        "accept",
+                        "crypto",
+                        "backed",
+                        "mortgages",
+                        "first",
+                        "time"
+                      ],
+                      "url_signal_tokens": [
+                        "real",
+                        "estate",
+                        "fannie",
+                        "accept",
+                        "crypto",
+                        "backed",
+                        "mortgages",
+                        "first",
+                        "time",
+                        "bfa502c7"
+                      ],
+                      "title_url_overlap": 1,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 0,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    },
+                    "roleResult": {
+                      "role": "core",
+                      "role_confidence": 100,
+                      "role_reason": [
+                        "same_cluster",
+                        "same_event_key",
+                        "same_topic",
+                        "same_section",
+                        "same_region",
+                        "same_angle",
+                        "entity_hits:1",
+                        "keyword_hits:2",
+                        "signature_hits:1",
+                        "article_like",
+                        "core_threshold"
+                      ],
+                      "same_event_score": 15,
+                      "topic_fit_score": 8,
+                      "genericity_score": 0,
+                      "article_likelihood": 8,
+                      "page_kind": "article",
+                      "source_id": "src-1600132345",
+                      "source": {
+                        "source_id": "src-1600132345",
+                        "url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7?gaa_at=eafs&gaa_n=AWEtsqdEYrm2JrKHcbEU_VHOu5_xJrHxWH81RpnOyTuv5a13lpPXS4FYJVYx&gaa_ts=69cd5c6e&gaa_sig=PFytR9pnYbjquyRnLjtSq-6CHj2l6VZNfW3T3fm36i9oOzdSIY7Oz_cwl_fFH40AIW3Hs7hX9oQ-5ggHr9hIkA%3D%3D",
+                        "canonical_url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7",
+                        "domain": "wsj.com",
+                        "canonical_domain": "wsj.com",
+                        "title": "Fannie Mae to Accept Crypto-Backed Mortgages for the First Time",
+                        "normalized_title": "fannie mae to accept crypto backed mortgages for the first time",
+                        "snippet": "6 days ago ... New offering from Better Home & Finance and Coinbase allows home buyers to pledge bitcoin and other cryptocurrencies when making a down payment.",
+                        "page_kind": "article",
+                        "published_at": null,
+                        "provider": "google_trusted",
+                        "section_id": "business",
+                        "topic_id": "crypto-bitcoin",
+                        "section_candidates": [],
+                        "topic_candidates": [],
+                        "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                        "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                        "entities": [
+                          "unspecified",
+                          "crypto"
+                        ],
+                        "keywords": [
+                          "fannie",
+                          "accept",
+                          "crypto",
+                          "backed",
+                          "mortgages",
+                          "first",
+                          "time",
+                          "days",
+                          "offering",
+                          "from",
+                          "better",
+                          "home"
+                        ],
+                        "title_signal_tokens": [
+                          "fannie",
+                          "accept",
+                          "crypto",
+                          "backed",
+                          "mortgages",
+                          "first",
+                          "time"
+                        ],
+                        "url_signal_tokens": [
+                          "real",
+                          "estate",
+                          "fannie",
+                          "accept",
+                          "crypto",
+                          "backed",
+                          "mortgages",
+                          "first",
+                          "time",
+                          "bfa502c7"
+                        ],
+                        "title_url_overlap": 1,
+                        "title_url_mismatch": false,
+                        "region": "global",
+                        "angle": "general",
+                        "genericity_score": 0,
+                        "article_likelihood": 8,
+                        "source_quality_score": 0
+                      }
+                    },
+                    "rescueScore": 58.4,
+                    "queryMeta": {
+                      "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                      "level": "relaxed",
+                      "intent": "independent_confirming"
+                    }
+                  },
+                  {
+                    "source": {
+                      "source_id": "src-1506007186",
+                      "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                      "canonical_url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                      "domain": "consumer.ftc.gov",
+                      "canonical_domain": "consumer.ftc.gov",
+                      "title": "What To Know About Romance Scams",
+                      "normalized_title": "what to know about romance scams",
+                      "snippet": "2 days ago ... How to Report a Romance Scam. If you paid a romance scammer with a gift card, wire transfer, credit or debit card, or cryptocurrency, contact the company ...",
+                      "page_kind": "official_release",
+                      "published_at": "2019-06-05T00:00:00-04:00",
+                      "provider": "google_trusted",
+                      "section_id": "business",
+                      "topic_id": "crypto-bitcoin",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                      "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                      "entities": [
+                        "unspecified",
+                        "crypto"
+                      ],
+                      "keywords": [
+                        "what",
+                        "know",
+                        "about",
+                        "romance",
+                        "scams",
+                        "days",
+                        "report",
+                        "scam",
+                        "paid",
+                        "scammer",
+                        "with",
+                        "gift"
+                      ],
+                      "title_signal_tokens": [
+                        "what",
+                        "know",
+                        "romance",
+                        "scams"
+                      ],
+                      "url_signal_tokens": [
+                        "what",
+                        "know",
+                        "romance",
+                        "scams"
+                      ],
+                      "title_url_overlap": 1,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 1,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    },
+                    "roleResult": {
+                      "role": "core",
+                      "role_confidence": 100,
+                      "role_reason": [
+                        "same_cluster",
+                        "same_event_key",
+                        "same_topic",
+                        "same_section",
+                        "same_region",
+                        "same_angle",
+                        "entity_hits:1",
+                        "keyword_hits:2",
+                        "article_like",
+                        "official_release",
+                        "core_threshold"
+                      ],
+                      "same_event_score": 13,
+                      "topic_fit_score": 8,
+                      "genericity_score": 1,
+                      "article_likelihood": 8,
+                      "page_kind": "official_release",
+                      "source_id": "src-1506007186",
+                      "source": {
+                        "source_id": "src-1506007186",
+                        "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                        "canonical_url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                        "domain": "consumer.ftc.gov",
+                        "canonical_domain": "consumer.ftc.gov",
+                        "title": "What To Know About Romance Scams",
+                        "normalized_title": "what to know about romance scams",
+                        "snippet": "2 days ago ... How to Report a Romance Scam. If you paid a romance scammer with a gift card, wire transfer, credit or debit card, or cryptocurrency, contact the company ...",
+                        "page_kind": "official_release",
+                        "published_at": "2019-06-05T00:00:00-04:00",
+                        "provider": "google_trusted",
+                        "section_id": "business",
+                        "topic_id": "crypto-bitcoin",
+                        "section_candidates": [],
+                        "topic_candidates": [],
+                        "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                        "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                        "entities": [
+                          "unspecified",
+                          "crypto"
+                        ],
+                        "keywords": [
+                          "what",
+                          "know",
+                          "about",
+                          "romance",
+                          "scams",
+                          "days",
+                          "report",
+                          "scam",
+                          "paid",
+                          "scammer",
+                          "with",
+                          "gift"
+                        ],
+                        "title_signal_tokens": [
+                          "what",
+                          "know",
+                          "romance",
+                          "scams"
+                        ],
+                        "url_signal_tokens": [
+                          "what",
+                          "know",
+                          "romance",
+                          "scams"
+                        ],
+                        "title_url_overlap": 1,
+                        "title_url_mismatch": false,
+                        "region": "global",
+                        "angle": "general",
+                        "genericity_score": 1,
+                        "article_likelihood": 8,
+                        "source_quality_score": 0
+                      }
+                    },
+                    "rescueScore": 54.4,
+                    "queryMeta": {
+                      "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                      "level": "relaxed",
+                      "intent": "independent_confirming"
+                    }
+                  },
+                  {
+                    "source": {
+                      "source_id": "src-358278401",
+                      "url": "https://evrimagaci.org/gpt/crypto-collateral-and-rising-rates-reshape-homebuying-535393",
+                      "canonical_url": "https://evrimagaci.org/gpt/crypto-collateral-and-rising-rates-reshape-homebuying-535393",
+                      "domain": "evrimagaci.org",
+                      "canonical_domain": "evrimagaci.org",
+                      "title": "Crypto Collateral And Rising Rates Reshape Homebuying",
+                      "normalized_title": "crypto collateral and rising rates reshape homebuying",
+                      "snippet": "5 days ago ... ... homes, and tighter mortgage rules affecting Ontario buyers. Better Home & Finance Holding Co. partners with Coinbase to launch crypto-backed mortgages ...",
+                      "page_kind": "article",
+                      "published_at": null,
+                      "provider": "google_trusted",
+                      "section_id": "business",
+                      "topic_id": "crypto-bitcoin",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                      "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                      "entities": [
+                        "unspecified",
+                        "crypto"
+                      ],
+                      "keywords": [
+                        "crypto",
+                        "collateral",
+                        "rising",
+                        "rates",
+                        "reshape",
+                        "homebuying",
+                        "days",
+                        "homes",
+                        "tighter",
+                        "mortgage",
+                        "rules",
+                        "affecting"
+                      ],
+                      "title_signal_tokens": [
+                        "crypto",
+                        "collateral",
+                        "rising",
+                        "rates",
+                        "reshape",
+                        "homebuying"
+                      ],
+                      "url_signal_tokens": [
+                        "crypto",
+                        "collateral",
+                        "rising",
+                        "rates",
+                        "reshape",
+                        "homebuying"
+                      ],
+                      "title_url_overlap": 1,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 0,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    },
+                    "roleResult": {
+                      "role": "core",
+                      "role_confidence": 100,
+                      "role_reason": [
+                        "same_cluster",
+                        "same_event_key",
+                        "same_topic",
+                        "same_section",
+                        "same_region",
+                        "same_angle",
+                        "entity_hits:1",
+                        "keyword_hits:2",
+                        "signature_hits:1",
+                        "article_like",
+                        "core_threshold"
+                      ],
+                      "same_event_score": 15,
+                      "topic_fit_score": 8,
+                      "genericity_score": 0,
+                      "article_likelihood": 8,
+                      "page_kind": "article",
+                      "source_id": "src-358278401",
+                      "source": {
+                        "source_id": "src-358278401",
+                        "url": "https://evrimagaci.org/gpt/crypto-collateral-and-rising-rates-reshape-homebuying-535393",
+                        "canonical_url": "https://evrimagaci.org/gpt/crypto-collateral-and-rising-rates-reshape-homebuying-535393",
+                        "domain": "evrimagaci.org",
+                        "canonical_domain": "evrimagaci.org",
+                        "title": "Crypto Collateral And Rising Rates Reshape Homebuying",
+                        "normalized_title": "crypto collateral and rising rates reshape homebuying",
+                        "snippet": "5 days ago ... ... homes, and tighter mortgage rules affecting Ontario buyers. Better Home & Finance Holding Co. partners with Coinbase to launch crypto-backed mortgages ...",
+                        "page_kind": "article",
+                        "published_at": null,
+                        "provider": "google_trusted",
+                        "section_id": "business",
+                        "topic_id": "crypto-bitcoin",
+                        "section_candidates": [],
+                        "topic_candidates": [],
+                        "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                        "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                        "entities": [
+                          "unspecified",
+                          "crypto"
+                        ],
+                        "keywords": [
+                          "crypto",
+                          "collateral",
+                          "rising",
+                          "rates",
+                          "reshape",
+                          "homebuying",
+                          "days",
+                          "homes",
+                          "tighter",
+                          "mortgage",
+                          "rules",
+                          "affecting"
+                        ],
+                        "title_signal_tokens": [
+                          "crypto",
+                          "collateral",
+                          "rising",
+                          "rates",
+                          "reshape",
+                          "homebuying"
+                        ],
+                        "url_signal_tokens": [
+                          "crypto",
+                          "collateral",
+                          "rising",
+                          "rates",
+                          "reshape",
+                          "homebuying"
+                        ],
+                        "title_url_overlap": 1,
+                        "title_url_mismatch": false,
+                        "region": "global",
+                        "angle": "general",
+                        "genericity_score": 0,
+                        "article_likelihood": 8,
+                        "source_quality_score": 0
+                      }
+                    },
+                    "rescueScore": 54.4,
+                    "queryMeta": {
+                      "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                      "level": "relaxed",
+                      "intent": "independent_confirming"
+                    }
+                  }
+                ]
+              },
+              "optional_context": {
+                "count": 0,
+                "items": []
+              },
+              "unique_domains": 5
+            },
+            "failure_codes": [],
+            "cluster_coherence": 1,
+            "post_rescue_coherence": 0.5
+          }
+        },
+        {
+          "brief_title": "Hard truths, soft metals",
+          "poolIdentityKey": "cluster:evt-2026-03-30-climate-extreme-weather-general-global",
+          "status": "near_miss_source_pack",
+          "reasons": [
+            "Publish-ready source pack coherence too low (0.33)",
+            "Publish-ready source pack mixes unrelated event titles (2 weak-title sources)"
+          ],
+          "failure_codes": [
+            "missing_trusted_reporting"
+          ],
+          "rescue": {
+            "brief_title": "Hard truths, soft metals",
+            "initial_failure_codes": [],
+            "entity_profile": {
+              "canonical": "Daiwa Securities Group",
+              "aliases": [
+                "Daiwa Securities Group"
+              ],
+              "confidence": "low",
+              "evidence": {
+                "candidate_groups": 35,
+                "top_score": 11.3,
+                "second_score": 11.3,
+                "source_support": 1,
+                "title_support": 0,
+                "pattern": "organization"
+              }
+            },
+            "entity_diagnostics": [
+              "entity_inferred_from_title",
+              "entity_inferred_from_sources",
+              "entity_alias_collision",
+              "entity_confidence_low"
+            ],
+            "query_plan": [
+              {
+                "level": "relaxed",
+                "intent": "independent_confirming",
+                "query": "Daiwa Securities Group Daiwa Securities Group hard truths soft metals development policy decision 2026-03-30 (confirmed OR report OR filing OR statement)",
+                "targeted_domains": []
+              },
+              {
+                "level": "broad",
+                "intent": "trusted_reporting",
+                "query": "Daiwa Securities Group hard truths soft metals development Daiwa Securities Group (news analysis OR report OR investigation)",
+                "targeted_domains": []
+              },
+              {
+                "level": "broad",
+                "intent": "official_primary",
+                "query": "Daiwa Securities Group policy decision (newsroom OR regulator OR agency OR court OR league OR team OR university OR journal OR investor relations)",
+                "targeted_domains": []
+              }
+            ],
+            "query_results": [
+              {
+                "level": "relaxed",
+                "intent": "independent_confirming",
+                "query": "Daiwa Securities Group Daiwa Securities Group hard truths soft metals development policy decision 2026-03-30 (confirmed OR report OR filing OR statement)",
+                "providers": [
+                  {
+                    "provider": "google",
+                    "status": "live_quota_exhausted",
+                    "items": 0
+                  },
+                  {
+                    "provider": "gdelt",
+                    "status": "live_quota_exhausted",
+                    "items": 0
+                  }
+                ],
+                "candidates": 0,
+                "kept_after_filter": 0,
+                "generic_filtered": 0
+              },
+              {
+                "level": "broad",
+                "intent": "trusted_reporting",
+                "query": "Daiwa Securities Group hard truths soft metals development Daiwa Securities Group (news analysis OR report OR investigation)",
+                "providers": [
+                  {
+                    "provider": "google",
+                    "status": "live_quota_exhausted",
+                    "items": 0
+                  },
+                  {
+                    "provider": "gdelt",
+                    "status": "live_quota_exhausted",
+                    "items": 0
+                  }
+                ],
+                "candidates": 0,
+                "kept_after_filter": 0,
+                "generic_filtered": 0
+              },
+              {
+                "level": "broad",
+                "intent": "official_primary",
+                "query": "Daiwa Securities Group policy decision (newsroom OR regulator OR agency OR court OR league OR team OR university OR journal OR investor relations)",
+                "providers": [
+                  {
+                    "provider": "google",
+                    "status": "live_quota_exhausted",
+                    "items": 0
+                  },
+                  {
+                    "provider": "gdelt",
+                    "status": "live_quota_exhausted",
+                    "items": 0
+                  }
+                ],
+                "candidates": 0,
+                "kept_after_filter": 0,
+                "generic_filtered": 0
+              },
+              {
+                "level": "broad",
+                "intent": "trusted_reporting",
+                "query": "Daiwa Securities Group hard truths soft metals development Daiwa Securities Group (news analysis OR report OR investigation)",
+                "providers": [
+                  {
+                    "provider": "brave",
+                    "status": "called_success",
+                    "items": 8
+                  }
+                ],
+                "candidates": 8,
+                "kept_after_filter": 8,
+                "generic_filtered": 0
+              }
+            ],
+            "worked_queries": [
+              {
+                "level": "broad",
+                "intent": "trusted_reporting",
+                "query": "Daiwa Securities Group hard truths soft metals development Daiwa Securities Group (news analysis OR report OR investigation)",
+                "candidates": 8
+              }
+            ],
+            "role_coverage": {
+              "totalCandidates": 8,
+              "primary_or_official": {
+                "count": 1,
+                "items": [
+                  {
+                    "source": {
+                      "source_id": "src-1426980671",
+                      "url": "https://www.tickerreport.com/banking-finance/13395837/caterpillar-inc-cat-shares-sold-by-foster-motley-inc.html",
+                      "canonical_url": "https://www.tickerreport.com/banking-finance/13395837/caterpillar-inc-cat-shares-sold-by-foster-motley-inc.html",
+                      "domain": "tickerreport.com",
+                      "canonical_domain": "tickerreport.com",
+                      "title": "Caterpillar Inc. $CAT Shares Sold by Foster & Motley Inc.",
+                      "normalized_title": "caterpillar inc cat shares sold by foster motley inc",
+                      "snippet": "Foster & Motley Inc. trimmed its stake in shares of Caterpillar Inc. (NYSE:CAT – Free Report) by 12.4% in the fourth quarter, according to the company in its most recent 13F filing with the Securities and Exchange Commission. The firm owned 15,527 shares of the industrial products company’s ...",
+                      "page_kind": "official_release",
+                      "published_at": "1 day ago",
+                      "provider": "brave",
+                      "section_id": "news",
+                      "topic_id": "climate-extreme-weather",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-climate-extreme-weather-general-global",
+                      "event_key": "2026-03-30:climate-extreme-weather-general-global",
+                      "entities": [
+                        "unspecified",
+                        "daiwa securities group"
+                      ],
+                      "keywords": [
+                        "caterpillar",
+                        "shares",
+                        "sold",
+                        "foster",
+                        "motley",
+                        "trimmed",
+                        "stake",
+                        "nyse",
+                        "free",
+                        "report",
+                        "fourth",
+                        "quarter"
+                      ],
+                      "title_signal_tokens": [
+                        "caterpillar",
+                        "shares",
+                        "sold",
+                        "foster",
+                        "motley"
+                      ],
+                      "url_signal_tokens": [
+                        "banking",
+                        "finance",
+                        "caterpillar",
+                        "shares",
+                        "sold",
+                        "foster",
+                        "motley"
+                      ],
+                      "title_url_overlap": 1,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 1,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    },
+                    "roleResult": {
+                      "role": "core",
+                      "role_confidence": 100,
+                      "role_reason": [
+                        "same_cluster",
+                        "same_event_key",
+                        "same_topic",
+                        "same_section",
+                        "same_region",
+                        "same_angle",
+                        "entity_hits:1",
+                        "article_like",
+                        "official_release",
+                        "core_threshold"
+                      ],
+                      "same_event_score": 11,
+                      "topic_fit_score": 8,
+                      "genericity_score": 1,
+                      "article_likelihood": 8,
+                      "page_kind": "official_release",
+                      "source_id": "src-1426980671",
+                      "source": {
+                        "source_id": "src-1426980671",
+                        "url": "https://www.tickerreport.com/banking-finance/13395837/caterpillar-inc-cat-shares-sold-by-foster-motley-inc.html",
+                        "canonical_url": "https://www.tickerreport.com/banking-finance/13395837/caterpillar-inc-cat-shares-sold-by-foster-motley-inc.html",
+                        "domain": "tickerreport.com",
+                        "canonical_domain": "tickerreport.com",
+                        "title": "Caterpillar Inc. $CAT Shares Sold by Foster & Motley Inc.",
+                        "normalized_title": "caterpillar inc cat shares sold by foster motley inc",
+                        "snippet": "Foster & Motley Inc. trimmed its stake in shares of Caterpillar Inc. (NYSE:CAT – Free Report) by 12.4% in the fourth quarter, according to the company in its most recent 13F filing with the Securities and Exchange Commission. The firm owned 15,527 shares of the industrial products company’s ...",
+                        "page_kind": "official_release",
+                        "published_at": "1 day ago",
+                        "provider": "brave",
+                        "section_id": "news",
+                        "topic_id": "climate-extreme-weather",
+                        "section_candidates": [],
+                        "topic_candidates": [],
+                        "cluster_id": "evt-2026-03-30-climate-extreme-weather-general-global",
+                        "event_key": "2026-03-30:climate-extreme-weather-general-global",
+                        "entities": [
+                          "unspecified",
+                          "daiwa securities group"
+                        ],
+                        "keywords": [
+                          "caterpillar",
+                          "shares",
+                          "sold",
+                          "foster",
+                          "motley",
+                          "trimmed",
+                          "stake",
+                          "nyse",
+                          "free",
+                          "report",
+                          "fourth",
+                          "quarter"
+                        ],
+                        "title_signal_tokens": [
+                          "caterpillar",
+                          "shares",
+                          "sold",
+                          "foster",
+                          "motley"
+                        ],
+                        "url_signal_tokens": [
+                          "banking",
+                          "finance",
+                          "caterpillar",
+                          "shares",
+                          "sold",
+                          "foster",
+                          "motley"
+                        ],
+                        "title_url_overlap": 1,
+                        "title_url_mismatch": false,
+                        "region": "global",
+                        "angle": "general",
+                        "genericity_score": 1,
+                        "article_likelihood": 8,
+                        "source_quality_score": 0
+                      }
+                    },
+                    "rescueScore": 46.379999999999995,
+                    "queryMeta": {
+                      "query": "Daiwa Securities Group hard truths soft metals development Daiwa Securities Group (news analysis OR report OR investigation)",
+                      "level": "broad",
+                      "intent": "trusted_reporting"
+                    }
+                  }
+                ]
+              },
+              "trusted_reporting": {
+                "count": 0,
+                "items": []
+              },
+              "independent_confirming": {
+                "count": 1,
+                "items": [
+                  {
+                    "source": {
+                      "source_id": "src-1499798943",
+                      "url": "https://www.tickerreport.com/banking-finance/13396186/daiwa-securities-group-initiates-coverage-on-ge-aerospace-nysege.html",
+                      "canonical_url": "https://www.tickerreport.com/banking-finance/13396186/daiwa-securities-group-initiates-coverage-on-ge-aerospace-nysege.html",
+                      "domain": "tickerreport.com",
+                      "canonical_domain": "tickerreport.com",
+                      "title": "Daiwa Securities Group Initiates Coverage on GE Aerospace (NYSE:GE)",
+                      "normalized_title": "daiwa securities group initiates coverage on ge aerospace nyse ge",
+                      "snippet": "Analysts at Daiwa Securities Group initiated coverage on shares of GE Aerospace (NYSE:GE – Get Free Report) in a research note issued on Tuesday, Marketbeat Ratings reports. The brokerage set a “neutral” rating and a $301.00 price target on the stock. Daiwa Securities Group’s price ...",
+                      "page_kind": "article",
+                      "published_at": "1 day ago",
+                      "provider": "brave",
+                      "section_id": "news",
+                      "topic_id": "climate-extreme-weather",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-climate-extreme-weather-general-global",
+                      "event_key": "2026-03-30:climate-extreme-weather-general-global",
+                      "entities": [
+                        "unspecified",
+                        "daiwa securities group"
+                      ],
+                      "keywords": [
+                        "daiwa",
+                        "securities",
+                        "group",
+                        "initiates",
+                        "coverage",
+                        "aerospace",
+                        "nyse",
+                        "analysts",
+                        "initiated",
+                        "shares",
+                        "free",
+                        "report"
+                      ],
+                      "title_signal_tokens": [
+                        "daiwa",
+                        "securities",
+                        "group",
+                        "initiates",
+                        "coverage",
+                        "aerospace",
+                        "nyse"
+                      ],
+                      "url_signal_tokens": [
+                        "banking",
+                        "finance",
+                        "daiwa",
+                        "securities",
+                        "group",
+                        "initiates",
+                        "coverage",
+                        "aerospace",
+                        "nysege"
+                      ],
+                      "title_url_overlap": 0.8571428571428571,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 0,
+                      "article_likelihood": 9,
+                      "source_quality_score": 0
+                    },
+                    "roleResult": {
+                      "role": "core",
+                      "role_confidence": 100,
+                      "role_reason": [
+                        "same_cluster",
+                        "same_event_key",
+                        "same_topic",
+                        "same_section",
+                        "same_region",
+                        "same_angle",
+                        "entity_hits:1",
+                        "article_like",
+                        "core_threshold"
+                      ],
+                      "same_event_score": 11,
+                      "topic_fit_score": 8,
+                      "genericity_score": 0,
+                      "article_likelihood": 9,
+                      "page_kind": "article",
+                      "source_id": "src-1499798943",
+                      "source": {
+                        "source_id": "src-1499798943",
+                        "url": "https://www.tickerreport.com/banking-finance/13396186/daiwa-securities-group-initiates-coverage-on-ge-aerospace-nysege.html",
+                        "canonical_url": "https://www.tickerreport.com/banking-finance/13396186/daiwa-securities-group-initiates-coverage-on-ge-aerospace-nysege.html",
+                        "domain": "tickerreport.com",
+                        "canonical_domain": "tickerreport.com",
+                        "title": "Daiwa Securities Group Initiates Coverage on GE Aerospace (NYSE:GE)",
+                        "normalized_title": "daiwa securities group initiates coverage on ge aerospace nyse ge",
+                        "snippet": "Analysts at Daiwa Securities Group initiated coverage on shares of GE Aerospace (NYSE:GE – Get Free Report) in a research note issued on Tuesday, Marketbeat Ratings reports. The brokerage set a “neutral” rating and a $301.00 price target on the stock. Daiwa Securities Group’s price ...",
+                        "page_kind": "article",
+                        "published_at": "1 day ago",
+                        "provider": "brave",
+                        "section_id": "news",
+                        "topic_id": "climate-extreme-weather",
+                        "section_candidates": [],
+                        "topic_candidates": [],
+                        "cluster_id": "evt-2026-03-30-climate-extreme-weather-general-global",
+                        "event_key": "2026-03-30:climate-extreme-weather-general-global",
+                        "entities": [
+                          "unspecified",
+                          "daiwa securities group"
+                        ],
+                        "keywords": [
+                          "daiwa",
+                          "securities",
+                          "group",
+                          "initiates",
+                          "coverage",
+                          "aerospace",
+                          "nyse",
+                          "analysts",
+                          "initiated",
+                          "shares",
+                          "free",
+                          "report"
+                        ],
+                        "title_signal_tokens": [
+                          "daiwa",
+                          "securities",
+                          "group",
+                          "initiates",
+                          "coverage",
+                          "aerospace",
+                          "nyse"
+                        ],
+                        "url_signal_tokens": [
+                          "banking",
+                          "finance",
+                          "daiwa",
+                          "securities",
+                          "group",
+                          "initiates",
+                          "coverage",
+                          "aerospace",
+                          "nysege"
+                        ],
+                        "title_url_overlap": 0.8571428571428571,
+                        "title_url_mismatch": false,
+                        "region": "global",
+                        "angle": "general",
+                        "genericity_score": 0,
+                        "article_likelihood": 9,
+                        "source_quality_score": 0
+                      }
+                    },
+                    "rescueScore": 47.2,
+                    "queryMeta": {
+                      "query": "Daiwa Securities Group hard truths soft metals development Daiwa Securities Group (news analysis OR report OR investigation)",
+                      "level": "broad",
+                      "intent": "trusted_reporting"
+                    }
+                  }
+                ]
+              },
+              "optional_context": {
+                "count": 0,
+                "items": []
+              },
+              "unique_domains": 1
+            },
+            "failure_codes": [
+              "missing_trusted_reporting"
+            ],
+            "cluster_coherence": 0.21,
+            "post_rescue_coherence": 0.44
+          }
+        },
+        {
+          "brief_title": "Will the Iran Crisis Push the World to Rethink Oil and Gas?",
+          "poolIdentityKey": "cluster:evt-2026-04-01-world-geopolitics-general-iran-iran",
+          "status": "near_miss_source_pack",
+          "reasons": [
+            "Need at least 2 publishable sources, found 1"
+          ],
+          "failure_codes": [
+            "only_one_publishable_source"
+          ]
+        },
+        {
+          "brief_title": "Tech company climate goals under pressure due to AI energy demand",
+          "poolIdentityKey": "cluster:evt-2026-03-30-ai-big-tech-general-global-tsa",
+          "status": "near_miss_source_pack",
+          "reasons": [
+            "Need at least 2 publishable sources, found 1",
+            "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+          ],
+          "failure_codes": [
+            "only_one_publishable_source",
+            "thin_pack_after_rescue"
+          ]
+        },
+        {
+          "brief_title": "XRP Market Trends & Ripple's Regulatory Milestones in 2026",
+          "poolIdentityKey": "cluster:evt-2026-03-30-news-general-global-sec",
+          "status": "near_miss_source_pack",
+          "reasons": [
+            "Need at least 2 publishable sources, found 1",
+            "Need at least one trusted reporting source or official primary source",
+            "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+          ],
+          "failure_codes": [
+            "only_one_publishable_source",
+            "thin_pack_after_rescue",
+            "missing_official",
+            "missing_trusted_reporting"
+          ]
+        },
+        {
+          "brief_title": "10 TV Shows That Changed Fandom Culture",
+          "poolIdentityKey": "cluster:evt-2026-03-30-film-tv-general-global",
+          "status": "near_miss_source_pack",
+          "reasons": [
+            "Need at least 2 publishable sources, found 1",
+            "Need at least one trusted reporting source or official primary source",
+            "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+          ],
+          "failure_codes": [
+            "only_one_publishable_source",
+            "thin_pack_after_rescue",
+            "missing_official",
+            "missing_trusted_reporting"
+          ]
+        },
+        {
+          "brief_title": "Why Is Horror TV So Complicated Right Now?",
+          "poolIdentityKey": "cluster:evt-2026-03-31-film-tv-general-global",
+          "status": "near_miss_source_pack",
+          "reasons": [
+            "Need at least 2 publishable sources, found 1",
+            "Need at least one trusted reporting source or official primary source",
+            "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+          ],
+          "failure_codes": [
+            "only_one_publishable_source",
+            "thin_pack_after_rescue",
+            "missing_official",
+            "missing_trusted_reporting"
+          ]
+        },
+        {
+          "brief_title": "Movies and TV shows casting in Boulder",
+          "poolIdentityKey": "cluster:evt-2026-04-01-culture-general-global",
+          "status": "near_miss_source_pack",
+          "reasons": [
+            "Need at least one trusted reporting source or official primary source"
+          ],
+          "failure_codes": [
+            "missing_official",
+            "missing_trusted_reporting"
+          ]
+        },
+        {
+          "brief_title": "Medical Bulletin 31/March/2026",
+          "poolIdentityKey": "cluster:evt-2026-03-31-news-general-global-meta",
+          "status": "near_miss_source_pack",
+          "reasons": [
+            "Need at least 2 publishable sources, found 1",
+            "Need at least one trusted reporting source or official primary source",
+            "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+          ],
+          "failure_codes": [
+            "only_one_publishable_source",
+            "thin_pack_after_rescue",
+            "missing_official",
+            "missing_trusted_reporting"
+          ]
+        },
+        {
+          "brief_title": "Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...",
+          "poolIdentityKey": "cluster:evt-2026-04-01-companies-deals-earnings-global",
+          "status": "near_miss_source_pack",
+          "reasons": [
+            "Need at least 2 publishable sources, found 1"
+          ],
+          "failure_codes": [
+            "only_one_publishable_source"
+          ]
+        },
+        {
+          "brief_title": "The Link Between Medicine and Psychology",
+          "poolIdentityKey": "cluster:evt-2026-03-30-mental-health-general-global-sec-fda",
+          "status": "near_miss_source_pack",
+          "reasons": [
+            "Need at least 2 publishable sources, found 1",
+            "Need at least one trusted reporting source or official primary source",
+            "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+          ],
+          "failure_codes": [
+            "only_one_publishable_source",
+            "thin_pack_after_rescue",
+            "missing_official",
+            "missing_trusted_reporting"
+          ]
+        }
+      ]
+    },
+    "question_extraction": {
+      "success": false,
+      "count": 1,
+      "valid_count": 0,
+      "eligible_count": 0,
+      "models": [
+        "gpt-5.1"
+      ]
+    },
+    "question_filtering": {
+      "success": false,
+      "total_candidates": 1,
+      "eligible_candidates": 0,
+      "rejected_candidates": [
+        {
+          "question": "How would a decision by Manchester United to move on from Marcus Rashford and build their attack around a signing like Joshua Zirkzee change their chances of returning to genuine Champions League contention over the next two seasons?",
+          "brief_title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+          "provider": "openai",
+          "model": "gpt-5.1",
+          "reasons": [
+            "Rumor-like or gossip-like framing detected"
+          ]
+        }
+      ],
+      "fallback_to_standard": {
+        "used": true,
+        "reason": "No viable question candidate survived filtering",
+        "brief_title": "Manchester United transfers: Zirkzee, Rashford, and should the club ..."
+      }
+    },
+    "source_pack_selection": {
+      "success": true,
+      "attempted": 0,
+      "selected_question": null,
+      "selected_mode": "standard-fallback",
+      "rejected_candidates": []
+    },
+    "claim_map": {
+      "success": true,
+      "issues": [],
+      "supported_claims": 3,
+      "total_claims": 3
+    },
+    "draft": {
+      "success": true,
+      "quality": "strong",
+      "word_count": 1637,
+      "article_type": "analysis",
+      "title": "Manchester United’s Attack Reset: Zirkzee, Rashford and a Summer of Hard Choices"
+    },
+    "image": {
+      "success": true,
+      "provider": "pexels",
+      "imagePath": "~/assets/images/library/pexels/34760021/cover.jpg"
+    },
+    "publish": {
+      "success": true,
+      "filename": "2026-04-01-manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ.mdx",
+      "expectedUrl": "/article/2026-04-01-manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ"
+    }
+  },
+  "artifacts": {
+    "question_candidates": "/home/runner/work/foseer.com/foseer.com/qwen-data/questions/qna-pipeline-2026-04-01T17-42-01-646Z.json",
+    "publish_manifest": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ.json",
+    "quality_audit": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/qna-pipeline-2026-04-01T17-42-01-646Z.json",
+    "latest_question_candidates": "/home/runner/work/foseer.com/foseer.com/qwen-data/questions/latest-question-candidates.json"
+  },
+  "hard_blocker": null,
+  "rejection_report": {
+    "pre_selection": [
+      {
+        "question": "How would a decision by Manchester United to move on from Marcus Rashford and build their attack around a signing like Joshua Zirkzee change their chances of returning to genuine Champions League contention over the next two seasons?",
+        "brief_title": "Manchester United transfers: Zirkzee, Rashford, and should the club ...",
+        "provider": "openai",
+        "model": "gpt-5.1",
+        "reasons": [
+          "Rumor-like or gossip-like framing detected"
+        ]
+      }
+    ],
+    "brief_source_pack": [
+      {
+        "brief_title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+        "poolIdentityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
+        "status": "near_miss_source_pack",
+        "reasons": [
+          "Role-aware one-event source-pack gate passed",
+          "Publish-ready source pack mixes unrelated event titles (2 weak-title sources)"
+        ],
+        "failure_codes": [
+          "only_one_publishable_source",
+          "thin_pack_after_rescue",
+          "missing_official",
+          "missing_trusted_reporting"
+        ],
+        "rescue": {
+          "brief_title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+          "initial_failure_codes": [],
+          "entity_profile": {
+            "canonical": "Crypto",
+            "aliases": [
+              "Crypto"
+            ],
+            "confidence": "low",
+            "evidence": {
+              "candidate_groups": 34,
+              "top_score": 51.9,
+              "second_score": 51.9,
+              "source_support": 5,
+              "title_support": 1,
+              "pattern": "unknown"
+            }
+          },
+          "entity_diagnostics": [
+            "entity_inferred_from_title",
+            "entity_inferred_from_sources",
+            "entity_alias_collision",
+            "entity_confidence_low"
+          ],
+          "query_plan": [
+            {
+              "level": "relaxed",
+              "intent": "independent_confirming",
+              "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+              "targeted_domains": []
+            },
+            {
+              "level": "broad",
+              "intent": "trusted_reporting",
+              "query": "Crypto crypto mortgage explained buying home Crypto (news analysis OR report OR investigation)",
+              "targeted_domains": []
+            },
+            {
+              "level": "broad",
+              "intent": "official_primary",
+              "query": "Crypto policy decision (newsroom OR regulator OR agency OR court OR league OR team OR university OR journal OR investor relations) (site:federalregister.gov)",
+              "targeted_domains": [
+                "federalregister.gov"
+              ]
+            }
+          ],
+          "query_results": [
+            {
+              "level": "relaxed",
+              "intent": "independent_confirming",
+              "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+              "providers": [
+                {
+                  "provider": "google",
+                  "status": "called_success",
+                  "items": 8
+                },
+                {
+                  "provider": "gdelt",
+                  "status": "upstream_response_failure",
+                  "items": 0
+                }
+              ],
+              "candidates": 5,
+              "kept_after_filter": 5,
+              "generic_filtered": 3
+            }
+          ],
+          "worked_queries": [
+            {
+              "level": "relaxed",
+              "intent": "independent_confirming",
+              "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+              "candidates": 5
+            }
+          ],
+          "role_coverage": {
+            "totalCandidates": 5,
+            "primary_or_official": {
+              "count": 1,
+              "items": [
+                {
+                  "source": {
+                    "source_id": "src-1506007186",
+                    "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                    "canonical_url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                    "domain": "consumer.ftc.gov",
+                    "canonical_domain": "consumer.ftc.gov",
+                    "title": "What To Know About Romance Scams",
+                    "normalized_title": "what to know about romance scams",
+                    "snippet": "2 days ago ... How to Report a Romance Scam. If you paid a romance scammer with a gift card, wire transfer, credit or debit card, or cryptocurrency, contact the company ...",
+                    "page_kind": "official_release",
+                    "published_at": "2019-06-05T00:00:00-04:00",
+                    "provider": "google_trusted",
+                    "section_id": "business",
+                    "topic_id": "crypto-bitcoin",
+                    "section_candidates": [],
+                    "topic_candidates": [],
+                    "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                    "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                    "entities": [
+                      "unspecified",
+                      "crypto"
+                    ],
+                    "keywords": [
+                      "what",
+                      "know",
+                      "about",
+                      "romance",
+                      "scams",
+                      "days",
+                      "report",
+                      "scam",
+                      "paid",
+                      "scammer",
+                      "with",
+                      "gift"
+                    ],
+                    "title_signal_tokens": [
+                      "what",
+                      "know",
+                      "romance",
+                      "scams"
+                    ],
+                    "url_signal_tokens": [
+                      "what",
+                      "know",
+                      "romance",
+                      "scams"
+                    ],
+                    "title_url_overlap": 1,
+                    "title_url_mismatch": false,
+                    "region": "global",
+                    "angle": "general",
+                    "genericity_score": 1,
+                    "article_likelihood": 8,
+                    "source_quality_score": 0
+                  },
+                  "roleResult": {
+                    "role": "core",
+                    "role_confidence": 100,
+                    "role_reason": [
+                      "same_cluster",
+                      "same_event_key",
+                      "same_topic",
+                      "same_section",
+                      "same_region",
+                      "same_angle",
+                      "entity_hits:1",
+                      "keyword_hits:2",
+                      "article_like",
+                      "official_release",
+                      "core_threshold"
+                    ],
+                    "same_event_score": 13,
+                    "topic_fit_score": 8,
+                    "genericity_score": 1,
+                    "article_likelihood": 8,
+                    "page_kind": "official_release",
+                    "source_id": "src-1506007186",
+                    "source": {
+                      "source_id": "src-1506007186",
+                      "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                      "canonical_url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                      "domain": "consumer.ftc.gov",
+                      "canonical_domain": "consumer.ftc.gov",
+                      "title": "What To Know About Romance Scams",
+                      "normalized_title": "what to know about romance scams",
+                      "snippet": "2 days ago ... How to Report a Romance Scam. If you paid a romance scammer with a gift card, wire transfer, credit or debit card, or cryptocurrency, contact the company ...",
+                      "page_kind": "official_release",
+                      "published_at": "2019-06-05T00:00:00-04:00",
+                      "provider": "google_trusted",
+                      "section_id": "business",
+                      "topic_id": "crypto-bitcoin",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                      "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                      "entities": [
+                        "unspecified",
+                        "crypto"
+                      ],
+                      "keywords": [
+                        "what",
+                        "know",
+                        "about",
+                        "romance",
+                        "scams",
+                        "days",
+                        "report",
+                        "scam",
+                        "paid",
+                        "scammer",
+                        "with",
+                        "gift"
+                      ],
+                      "title_signal_tokens": [
+                        "what",
+                        "know",
+                        "romance",
+                        "scams"
+                      ],
+                      "url_signal_tokens": [
+                        "what",
+                        "know",
+                        "romance",
+                        "scams"
+                      ],
+                      "title_url_overlap": 1,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 1,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    }
+                  },
+                  "rescueScore": 54.4,
+                  "queryMeta": {
+                    "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                    "level": "relaxed",
+                    "intent": "independent_confirming"
+                  }
+                }
+              ]
+            },
+            "trusted_reporting": {
+              "count": 1,
+              "items": [
+                {
+                  "source": {
+                    "source_id": "src-1600132345",
+                    "url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7?gaa_at=eafs&gaa_n=AWEtsqdEYrm2JrKHcbEU_VHOu5_xJrHxWH81RpnOyTuv5a13lpPXS4FYJVYx&gaa_ts=69cd5c6e&gaa_sig=PFytR9pnYbjquyRnLjtSq-6CHj2l6VZNfW3T3fm36i9oOzdSIY7Oz_cwl_fFH40AIW3Hs7hX9oQ-5ggHr9hIkA%3D%3D",
+                    "canonical_url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7",
+                    "domain": "wsj.com",
+                    "canonical_domain": "wsj.com",
+                    "title": "Fannie Mae to Accept Crypto-Backed Mortgages for the First Time",
+                    "normalized_title": "fannie mae to accept crypto backed mortgages for the first time",
+                    "snippet": "6 days ago ... New offering from Better Home & Finance and Coinbase allows home buyers to pledge bitcoin and other cryptocurrencies when making a down payment.",
+                    "page_kind": "article",
+                    "published_at": null,
+                    "provider": "google_trusted",
+                    "section_id": "business",
+                    "topic_id": "crypto-bitcoin",
+                    "section_candidates": [],
+                    "topic_candidates": [],
+                    "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                    "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                    "entities": [
+                      "unspecified",
+                      "crypto"
+                    ],
+                    "keywords": [
+                      "fannie",
+                      "accept",
+                      "crypto",
+                      "backed",
+                      "mortgages",
+                      "first",
+                      "time",
+                      "days",
+                      "offering",
+                      "from",
+                      "better",
+                      "home"
+                    ],
+                    "title_signal_tokens": [
+                      "fannie",
+                      "accept",
+                      "crypto",
+                      "backed",
+                      "mortgages",
+                      "first",
+                      "time"
+                    ],
+                    "url_signal_tokens": [
+                      "real",
+                      "estate",
+                      "fannie",
+                      "accept",
+                      "crypto",
+                      "backed",
+                      "mortgages",
+                      "first",
+                      "time",
+                      "bfa502c7"
+                    ],
+                    "title_url_overlap": 1,
+                    "title_url_mismatch": false,
+                    "region": "global",
+                    "angle": "general",
+                    "genericity_score": 0,
+                    "article_likelihood": 8,
+                    "source_quality_score": 0
+                  },
+                  "roleResult": {
+                    "role": "core",
+                    "role_confidence": 100,
+                    "role_reason": [
+                      "same_cluster",
+                      "same_event_key",
+                      "same_topic",
+                      "same_section",
+                      "same_region",
+                      "same_angle",
+                      "entity_hits:1",
+                      "keyword_hits:2",
+                      "signature_hits:1",
+                      "article_like",
+                      "core_threshold"
+                    ],
+                    "same_event_score": 15,
+                    "topic_fit_score": 8,
+                    "genericity_score": 0,
+                    "article_likelihood": 8,
+                    "page_kind": "article",
+                    "source_id": "src-1600132345",
+                    "source": {
+                      "source_id": "src-1600132345",
+                      "url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7?gaa_at=eafs&gaa_n=AWEtsqdEYrm2JrKHcbEU_VHOu5_xJrHxWH81RpnOyTuv5a13lpPXS4FYJVYx&gaa_ts=69cd5c6e&gaa_sig=PFytR9pnYbjquyRnLjtSq-6CHj2l6VZNfW3T3fm36i9oOzdSIY7Oz_cwl_fFH40AIW3Hs7hX9oQ-5ggHr9hIkA%3D%3D",
+                      "canonical_url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7",
+                      "domain": "wsj.com",
+                      "canonical_domain": "wsj.com",
+                      "title": "Fannie Mae to Accept Crypto-Backed Mortgages for the First Time",
+                      "normalized_title": "fannie mae to accept crypto backed mortgages for the first time",
+                      "snippet": "6 days ago ... New offering from Better Home & Finance and Coinbase allows home buyers to pledge bitcoin and other cryptocurrencies when making a down payment.",
+                      "page_kind": "article",
+                      "published_at": null,
+                      "provider": "google_trusted",
+                      "section_id": "business",
+                      "topic_id": "crypto-bitcoin",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                      "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                      "entities": [
+                        "unspecified",
+                        "crypto"
+                      ],
+                      "keywords": [
+                        "fannie",
+                        "accept",
+                        "crypto",
+                        "backed",
+                        "mortgages",
+                        "first",
+                        "time",
+                        "days",
+                        "offering",
+                        "from",
+                        "better",
+                        "home"
+                      ],
+                      "title_signal_tokens": [
+                        "fannie",
+                        "accept",
+                        "crypto",
+                        "backed",
+                        "mortgages",
+                        "first",
+                        "time"
+                      ],
+                      "url_signal_tokens": [
+                        "real",
+                        "estate",
+                        "fannie",
+                        "accept",
+                        "crypto",
+                        "backed",
+                        "mortgages",
+                        "first",
+                        "time",
+                        "bfa502c7"
+                      ],
+                      "title_url_overlap": 1,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 0,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    }
+                  },
+                  "rescueScore": 58.4,
+                  "queryMeta": {
+                    "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                    "level": "relaxed",
+                    "intent": "independent_confirming"
+                  }
+                }
+              ]
+            },
+            "independent_confirming": {
+              "count": 4,
+              "items": [
+                {
+                  "source": {
+                    "source_id": "src-1958048908",
+                    "url": "https://m.economictimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+                    "canonical_url": "https://m.economictimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+                    "domain": "m.economictimes.com",
+                    "canonical_domain": "m.economictimes.com",
+                    "title": "Buying a home with crypto? Here's what no one tells you before you ...",
+                    "normalized_title": "buying a home with crypto here s what no one tells you before you",
+                    "snippet": "2 days ago ... Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing ...",
+                    "page_kind": "article",
+                    "published_at": null,
+                    "provider": "google_trusted",
+                    "section_id": "business",
+                    "topic_id": "crypto-bitcoin",
+                    "section_candidates": [],
+                    "topic_candidates": [],
+                    "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                    "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                    "entities": [
+                      "unspecified",
+                      "crypto"
+                    ],
+                    "keywords": [
+                      "buying",
+                      "home",
+                      "with",
+                      "crypto",
+                      "here",
+                      "what",
+                      "tells",
+                      "before",
+                      "days",
+                      "mortgage",
+                      "explained",
+                      "explore"
+                    ],
+                    "title_signal_tokens": [
+                      "buying",
+                      "home",
+                      "crypto",
+                      "here",
+                      "what",
+                      "tells",
+                      "before"
+                    ],
+                    "url_signal_tokens": [
+                      "international",
+                      "buying",
+                      "home",
+                      "crypto",
+                      "heres",
+                      "what",
+                      "tells",
+                      "before",
+                      "make",
+                      "move",
+                      "articleshow"
+                    ],
+                    "title_url_overlap": 0.8571428571428571,
+                    "title_url_mismatch": false,
+                    "region": "global",
+                    "angle": "general",
+                    "genericity_score": 0,
+                    "article_likelihood": 8,
+                    "source_quality_score": 0
+                  },
+                  "roleResult": {
+                    "role": "core",
+                    "role_confidence": 100,
+                    "role_reason": [
+                      "same_cluster",
+                      "same_event_key",
+                      "same_topic",
+                      "same_section",
+                      "same_region",
+                      "same_angle",
+                      "entity_hits:1",
+                      "keyword_hits:10",
+                      "title_hits:7",
+                      "title_overlap:0.64",
+                      "signature_hits:4",
+                      "article_like",
+                      "core_threshold"
+                    ],
+                    "same_event_score": 22,
+                    "topic_fit_score": 8,
+                    "genericity_score": 0,
+                    "article_likelihood": 8,
+                    "page_kind": "article",
+                    "source_id": "src-1958048908",
+                    "source": {
+                      "source_id": "src-1958048908",
+                      "url": "https://m.economictimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+                      "canonical_url": "https://m.economictimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
+                      "domain": "m.economictimes.com",
+                      "canonical_domain": "m.economictimes.com",
+                      "title": "Buying a home with crypto? Here's what no one tells you before you ...",
+                      "normalized_title": "buying a home with crypto here s what no one tells you before you",
+                      "snippet": "2 days ago ... Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing ...",
+                      "page_kind": "article",
+                      "published_at": null,
+                      "provider": "google_trusted",
+                      "section_id": "business",
+                      "topic_id": "crypto-bitcoin",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                      "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                      "entities": [
+                        "unspecified",
+                        "crypto"
+                      ],
+                      "keywords": [
+                        "buying",
+                        "home",
+                        "with",
+                        "crypto",
+                        "here",
+                        "what",
+                        "tells",
+                        "before",
+                        "days",
+                        "mortgage",
+                        "explained",
+                        "explore"
+                      ],
+                      "title_signal_tokens": [
+                        "buying",
+                        "home",
+                        "crypto",
+                        "here",
+                        "what",
+                        "tells",
+                        "before"
+                      ],
+                      "url_signal_tokens": [
+                        "international",
+                        "buying",
+                        "home",
+                        "crypto",
+                        "heres",
+                        "what",
+                        "tells",
+                        "before",
+                        "make",
+                        "move",
+                        "articleshow"
+                      ],
+                      "title_url_overlap": 0.8571428571428571,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 0,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    }
+                  },
+                  "rescueScore": 68.4,
+                  "queryMeta": {
+                    "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                    "level": "relaxed",
+                    "intent": "independent_confirming"
+                  }
+                },
+                {
+                  "source": {
+                    "source_id": "src-1600132345",
+                    "url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7?gaa_at=eafs&gaa_n=AWEtsqdEYrm2JrKHcbEU_VHOu5_xJrHxWH81RpnOyTuv5a13lpPXS4FYJVYx&gaa_ts=69cd5c6e&gaa_sig=PFytR9pnYbjquyRnLjtSq-6CHj2l6VZNfW3T3fm36i9oOzdSIY7Oz_cwl_fFH40AIW3Hs7hX9oQ-5ggHr9hIkA%3D%3D",
+                    "canonical_url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7",
+                    "domain": "wsj.com",
+                    "canonical_domain": "wsj.com",
+                    "title": "Fannie Mae to Accept Crypto-Backed Mortgages for the First Time",
+                    "normalized_title": "fannie mae to accept crypto backed mortgages for the first time",
+                    "snippet": "6 days ago ... New offering from Better Home & Finance and Coinbase allows home buyers to pledge bitcoin and other cryptocurrencies when making a down payment.",
+                    "page_kind": "article",
+                    "published_at": null,
+                    "provider": "google_trusted",
+                    "section_id": "business",
+                    "topic_id": "crypto-bitcoin",
+                    "section_candidates": [],
+                    "topic_candidates": [],
+                    "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                    "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                    "entities": [
+                      "unspecified",
+                      "crypto"
+                    ],
+                    "keywords": [
+                      "fannie",
+                      "accept",
+                      "crypto",
+                      "backed",
+                      "mortgages",
+                      "first",
+                      "time",
+                      "days",
+                      "offering",
+                      "from",
+                      "better",
+                      "home"
+                    ],
+                    "title_signal_tokens": [
+                      "fannie",
+                      "accept",
+                      "crypto",
+                      "backed",
+                      "mortgages",
+                      "first",
+                      "time"
+                    ],
+                    "url_signal_tokens": [
+                      "real",
+                      "estate",
+                      "fannie",
+                      "accept",
+                      "crypto",
+                      "backed",
+                      "mortgages",
+                      "first",
+                      "time",
+                      "bfa502c7"
+                    ],
+                    "title_url_overlap": 1,
+                    "title_url_mismatch": false,
+                    "region": "global",
+                    "angle": "general",
+                    "genericity_score": 0,
+                    "article_likelihood": 8,
+                    "source_quality_score": 0
+                  },
+                  "roleResult": {
+                    "role": "core",
+                    "role_confidence": 100,
+                    "role_reason": [
+                      "same_cluster",
+                      "same_event_key",
+                      "same_topic",
+                      "same_section",
+                      "same_region",
+                      "same_angle",
+                      "entity_hits:1",
+                      "keyword_hits:2",
+                      "signature_hits:1",
+                      "article_like",
+                      "core_threshold"
+                    ],
+                    "same_event_score": 15,
+                    "topic_fit_score": 8,
+                    "genericity_score": 0,
+                    "article_likelihood": 8,
+                    "page_kind": "article",
+                    "source_id": "src-1600132345",
+                    "source": {
+                      "source_id": "src-1600132345",
+                      "url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7?gaa_at=eafs&gaa_n=AWEtsqdEYrm2JrKHcbEU_VHOu5_xJrHxWH81RpnOyTuv5a13lpPXS4FYJVYx&gaa_ts=69cd5c6e&gaa_sig=PFytR9pnYbjquyRnLjtSq-6CHj2l6VZNfW3T3fm36i9oOzdSIY7Oz_cwl_fFH40AIW3Hs7hX9oQ-5ggHr9hIkA%3D%3D",
+                      "canonical_url": "https://www.wsj.com/real-estate/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time-bfa502c7",
+                      "domain": "wsj.com",
+                      "canonical_domain": "wsj.com",
+                      "title": "Fannie Mae to Accept Crypto-Backed Mortgages for the First Time",
+                      "normalized_title": "fannie mae to accept crypto backed mortgages for the first time",
+                      "snippet": "6 days ago ... New offering from Better Home & Finance and Coinbase allows home buyers to pledge bitcoin and other cryptocurrencies when making a down payment.",
+                      "page_kind": "article",
+                      "published_at": null,
+                      "provider": "google_trusted",
+                      "section_id": "business",
+                      "topic_id": "crypto-bitcoin",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                      "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                      "entities": [
+                        "unspecified",
+                        "crypto"
+                      ],
+                      "keywords": [
+                        "fannie",
+                        "accept",
+                        "crypto",
+                        "backed",
+                        "mortgages",
+                        "first",
+                        "time",
+                        "days",
+                        "offering",
+                        "from",
+                        "better",
+                        "home"
+                      ],
+                      "title_signal_tokens": [
+                        "fannie",
+                        "accept",
+                        "crypto",
+                        "backed",
+                        "mortgages",
+                        "first",
+                        "time"
+                      ],
+                      "url_signal_tokens": [
+                        "real",
+                        "estate",
+                        "fannie",
+                        "accept",
+                        "crypto",
+                        "backed",
+                        "mortgages",
+                        "first",
+                        "time",
+                        "bfa502c7"
+                      ],
+                      "title_url_overlap": 1,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 0,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    }
+                  },
+                  "rescueScore": 58.4,
+                  "queryMeta": {
+                    "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                    "level": "relaxed",
+                    "intent": "independent_confirming"
+                  }
+                },
+                {
+                  "source": {
+                    "source_id": "src-1506007186",
+                    "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                    "canonical_url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                    "domain": "consumer.ftc.gov",
+                    "canonical_domain": "consumer.ftc.gov",
+                    "title": "What To Know About Romance Scams",
+                    "normalized_title": "what to know about romance scams",
+                    "snippet": "2 days ago ... How to Report a Romance Scam. If you paid a romance scammer with a gift card, wire transfer, credit or debit card, or cryptocurrency, contact the company ...",
+                    "page_kind": "official_release",
+                    "published_at": "2019-06-05T00:00:00-04:00",
+                    "provider": "google_trusted",
+                    "section_id": "business",
+                    "topic_id": "crypto-bitcoin",
+                    "section_candidates": [],
+                    "topic_candidates": [],
+                    "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                    "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                    "entities": [
+                      "unspecified",
+                      "crypto"
+                    ],
+                    "keywords": [
+                      "what",
+                      "know",
+                      "about",
+                      "romance",
+                      "scams",
+                      "days",
+                      "report",
+                      "scam",
+                      "paid",
+                      "scammer",
+                      "with",
+                      "gift"
+                    ],
+                    "title_signal_tokens": [
+                      "what",
+                      "know",
+                      "romance",
+                      "scams"
+                    ],
+                    "url_signal_tokens": [
+                      "what",
+                      "know",
+                      "romance",
+                      "scams"
+                    ],
+                    "title_url_overlap": 1,
+                    "title_url_mismatch": false,
+                    "region": "global",
+                    "angle": "general",
+                    "genericity_score": 1,
+                    "article_likelihood": 8,
+                    "source_quality_score": 0
+                  },
+                  "roleResult": {
+                    "role": "core",
+                    "role_confidence": 100,
+                    "role_reason": [
+                      "same_cluster",
+                      "same_event_key",
+                      "same_topic",
+                      "same_section",
+                      "same_region",
+                      "same_angle",
+                      "entity_hits:1",
+                      "keyword_hits:2",
+                      "article_like",
+                      "official_release",
+                      "core_threshold"
+                    ],
+                    "same_event_score": 13,
+                    "topic_fit_score": 8,
+                    "genericity_score": 1,
+                    "article_likelihood": 8,
+                    "page_kind": "official_release",
+                    "source_id": "src-1506007186",
+                    "source": {
+                      "source_id": "src-1506007186",
+                      "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                      "canonical_url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+                      "domain": "consumer.ftc.gov",
+                      "canonical_domain": "consumer.ftc.gov",
+                      "title": "What To Know About Romance Scams",
+                      "normalized_title": "what to know about romance scams",
+                      "snippet": "2 days ago ... How to Report a Romance Scam. If you paid a romance scammer with a gift card, wire transfer, credit or debit card, or cryptocurrency, contact the company ...",
+                      "page_kind": "official_release",
+                      "published_at": "2019-06-05T00:00:00-04:00",
+                      "provider": "google_trusted",
+                      "section_id": "business",
+                      "topic_id": "crypto-bitcoin",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                      "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                      "entities": [
+                        "unspecified",
+                        "crypto"
+                      ],
+                      "keywords": [
+                        "what",
+                        "know",
+                        "about",
+                        "romance",
+                        "scams",
+                        "days",
+                        "report",
+                        "scam",
+                        "paid",
+                        "scammer",
+                        "with",
+                        "gift"
+                      ],
+                      "title_signal_tokens": [
+                        "what",
+                        "know",
+                        "romance",
+                        "scams"
+                      ],
+                      "url_signal_tokens": [
+                        "what",
+                        "know",
+                        "romance",
+                        "scams"
+                      ],
+                      "title_url_overlap": 1,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 1,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    }
+                  },
+                  "rescueScore": 54.4,
+                  "queryMeta": {
+                    "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                    "level": "relaxed",
+                    "intent": "independent_confirming"
+                  }
+                },
+                {
+                  "source": {
+                    "source_id": "src-358278401",
+                    "url": "https://evrimagaci.org/gpt/crypto-collateral-and-rising-rates-reshape-homebuying-535393",
+                    "canonical_url": "https://evrimagaci.org/gpt/crypto-collateral-and-rising-rates-reshape-homebuying-535393",
+                    "domain": "evrimagaci.org",
+                    "canonical_domain": "evrimagaci.org",
+                    "title": "Crypto Collateral And Rising Rates Reshape Homebuying",
+                    "normalized_title": "crypto collateral and rising rates reshape homebuying",
+                    "snippet": "5 days ago ... ... homes, and tighter mortgage rules affecting Ontario buyers. Better Home & Finance Holding Co. partners with Coinbase to launch crypto-backed mortgages ...",
+                    "page_kind": "article",
+                    "published_at": null,
+                    "provider": "google_trusted",
+                    "section_id": "business",
+                    "topic_id": "crypto-bitcoin",
+                    "section_candidates": [],
+                    "topic_candidates": [],
+                    "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                    "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                    "entities": [
+                      "unspecified",
+                      "crypto"
+                    ],
+                    "keywords": [
+                      "crypto",
+                      "collateral",
+                      "rising",
+                      "rates",
+                      "reshape",
+                      "homebuying",
+                      "days",
+                      "homes",
+                      "tighter",
+                      "mortgage",
+                      "rules",
+                      "affecting"
+                    ],
+                    "title_signal_tokens": [
+                      "crypto",
+                      "collateral",
+                      "rising",
+                      "rates",
+                      "reshape",
+                      "homebuying"
+                    ],
+                    "url_signal_tokens": [
+                      "crypto",
+                      "collateral",
+                      "rising",
+                      "rates",
+                      "reshape",
+                      "homebuying"
+                    ],
+                    "title_url_overlap": 1,
+                    "title_url_mismatch": false,
+                    "region": "global",
+                    "angle": "general",
+                    "genericity_score": 0,
+                    "article_likelihood": 8,
+                    "source_quality_score": 0
+                  },
+                  "roleResult": {
+                    "role": "core",
+                    "role_confidence": 100,
+                    "role_reason": [
+                      "same_cluster",
+                      "same_event_key",
+                      "same_topic",
+                      "same_section",
+                      "same_region",
+                      "same_angle",
+                      "entity_hits:1",
+                      "keyword_hits:2",
+                      "signature_hits:1",
+                      "article_like",
+                      "core_threshold"
+                    ],
+                    "same_event_score": 15,
+                    "topic_fit_score": 8,
+                    "genericity_score": 0,
+                    "article_likelihood": 8,
+                    "page_kind": "article",
+                    "source_id": "src-358278401",
+                    "source": {
+                      "source_id": "src-358278401",
+                      "url": "https://evrimagaci.org/gpt/crypto-collateral-and-rising-rates-reshape-homebuying-535393",
+                      "canonical_url": "https://evrimagaci.org/gpt/crypto-collateral-and-rising-rates-reshape-homebuying-535393",
+                      "domain": "evrimagaci.org",
+                      "canonical_domain": "evrimagaci.org",
+                      "title": "Crypto Collateral And Rising Rates Reshape Homebuying",
+                      "normalized_title": "crypto collateral and rising rates reshape homebuying",
+                      "snippet": "5 days ago ... ... homes, and tighter mortgage rules affecting Ontario buyers. Better Home & Finance Holding Co. partners with Coinbase to launch crypto-backed mortgages ...",
+                      "page_kind": "article",
+                      "published_at": null,
+                      "provider": "google_trusted",
+                      "section_id": "business",
+                      "topic_id": "crypto-bitcoin",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
+                      "event_key": "2026-03-30:crypto-bitcoin-general-global",
+                      "entities": [
+                        "unspecified",
+                        "crypto"
+                      ],
+                      "keywords": [
+                        "crypto",
+                        "collateral",
+                        "rising",
+                        "rates",
+                        "reshape",
+                        "homebuying",
+                        "days",
+                        "homes",
+                        "tighter",
+                        "mortgage",
+                        "rules",
+                        "affecting"
+                      ],
+                      "title_signal_tokens": [
+                        "crypto",
+                        "collateral",
+                        "rising",
+                        "rates",
+                        "reshape",
+                        "homebuying"
+                      ],
+                      "url_signal_tokens": [
+                        "crypto",
+                        "collateral",
+                        "rising",
+                        "rates",
+                        "reshape",
+                        "homebuying"
+                      ],
+                      "title_url_overlap": 1,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 0,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    }
+                  },
+                  "rescueScore": 54.4,
+                  "queryMeta": {
+                    "query": "Crypto Crypto crypto mortgage explained buying home policy decision (confirmed OR report OR filing OR statement)",
+                    "level": "relaxed",
+                    "intent": "independent_confirming"
+                  }
+                }
+              ]
+            },
+            "optional_context": {
+              "count": 0,
+              "items": []
+            },
+            "unique_domains": 5
+          },
+          "failure_codes": [],
+          "cluster_coherence": 1,
+          "post_rescue_coherence": 0.5
+        }
+      },
+      {
+        "brief_title": "Hard truths, soft metals",
+        "poolIdentityKey": "cluster:evt-2026-03-30-climate-extreme-weather-general-global",
+        "status": "near_miss_source_pack",
+        "reasons": [
+          "Publish-ready source pack coherence too low (0.33)",
+          "Publish-ready source pack mixes unrelated event titles (2 weak-title sources)"
+        ],
+        "failure_codes": [
+          "missing_trusted_reporting"
+        ],
+        "rescue": {
+          "brief_title": "Hard truths, soft metals",
+          "initial_failure_codes": [],
+          "entity_profile": {
+            "canonical": "Daiwa Securities Group",
+            "aliases": [
+              "Daiwa Securities Group"
+            ],
+            "confidence": "low",
+            "evidence": {
+              "candidate_groups": 35,
+              "top_score": 11.3,
+              "second_score": 11.3,
+              "source_support": 1,
+              "title_support": 0,
+              "pattern": "organization"
+            }
+          },
+          "entity_diagnostics": [
+            "entity_inferred_from_title",
+            "entity_inferred_from_sources",
+            "entity_alias_collision",
+            "entity_confidence_low"
+          ],
+          "query_plan": [
+            {
+              "level": "relaxed",
+              "intent": "independent_confirming",
+              "query": "Daiwa Securities Group Daiwa Securities Group hard truths soft metals development policy decision 2026-03-30 (confirmed OR report OR filing OR statement)",
+              "targeted_domains": []
+            },
+            {
+              "level": "broad",
+              "intent": "trusted_reporting",
+              "query": "Daiwa Securities Group hard truths soft metals development Daiwa Securities Group (news analysis OR report OR investigation)",
+              "targeted_domains": []
+            },
+            {
+              "level": "broad",
+              "intent": "official_primary",
+              "query": "Daiwa Securities Group policy decision (newsroom OR regulator OR agency OR court OR league OR team OR university OR journal OR investor relations)",
+              "targeted_domains": []
+            }
+          ],
+          "query_results": [
+            {
+              "level": "relaxed",
+              "intent": "independent_confirming",
+              "query": "Daiwa Securities Group Daiwa Securities Group hard truths soft metals development policy decision 2026-03-30 (confirmed OR report OR filing OR statement)",
+              "providers": [
+                {
+                  "provider": "google",
+                  "status": "live_quota_exhausted",
+                  "items": 0
+                },
+                {
+                  "provider": "gdelt",
+                  "status": "live_quota_exhausted",
+                  "items": 0
+                }
+              ],
+              "candidates": 0,
+              "kept_after_filter": 0,
+              "generic_filtered": 0
+            },
+            {
+              "level": "broad",
+              "intent": "trusted_reporting",
+              "query": "Daiwa Securities Group hard truths soft metals development Daiwa Securities Group (news analysis OR report OR investigation)",
+              "providers": [
+                {
+                  "provider": "google",
+                  "status": "live_quota_exhausted",
+                  "items": 0
+                },
+                {
+                  "provider": "gdelt",
+                  "status": "live_quota_exhausted",
+                  "items": 0
+                }
+              ],
+              "candidates": 0,
+              "kept_after_filter": 0,
+              "generic_filtered": 0
+            },
+            {
+              "level": "broad",
+              "intent": "official_primary",
+              "query": "Daiwa Securities Group policy decision (newsroom OR regulator OR agency OR court OR league OR team OR university OR journal OR investor relations)",
+              "providers": [
+                {
+                  "provider": "google",
+                  "status": "live_quota_exhausted",
+                  "items": 0
+                },
+                {
+                  "provider": "gdelt",
+                  "status": "live_quota_exhausted",
+                  "items": 0
+                }
+              ],
+              "candidates": 0,
+              "kept_after_filter": 0,
+              "generic_filtered": 0
+            },
+            {
+              "level": "broad",
+              "intent": "trusted_reporting",
+              "query": "Daiwa Securities Group hard truths soft metals development Daiwa Securities Group (news analysis OR report OR investigation)",
+              "providers": [
+                {
+                  "provider": "brave",
+                  "status": "called_success",
+                  "items": 8
+                }
+              ],
+              "candidates": 8,
+              "kept_after_filter": 8,
+              "generic_filtered": 0
+            }
+          ],
+          "worked_queries": [
+            {
+              "level": "broad",
+              "intent": "trusted_reporting",
+              "query": "Daiwa Securities Group hard truths soft metals development Daiwa Securities Group (news analysis OR report OR investigation)",
+              "candidates": 8
+            }
+          ],
+          "role_coverage": {
+            "totalCandidates": 8,
+            "primary_or_official": {
+              "count": 1,
+              "items": [
+                {
+                  "source": {
+                    "source_id": "src-1426980671",
+                    "url": "https://www.tickerreport.com/banking-finance/13395837/caterpillar-inc-cat-shares-sold-by-foster-motley-inc.html",
+                    "canonical_url": "https://www.tickerreport.com/banking-finance/13395837/caterpillar-inc-cat-shares-sold-by-foster-motley-inc.html",
+                    "domain": "tickerreport.com",
+                    "canonical_domain": "tickerreport.com",
+                    "title": "Caterpillar Inc. $CAT Shares Sold by Foster & Motley Inc.",
+                    "normalized_title": "caterpillar inc cat shares sold by foster motley inc",
+                    "snippet": "Foster & Motley Inc. trimmed its stake in shares of Caterpillar Inc. (NYSE:CAT – Free Report) by 12.4% in the fourth quarter, according to the company in its most recent 13F filing with the Securities and Exchange Commission. The firm owned 15,527 shares of the industrial products company’s ...",
+                    "page_kind": "official_release",
+                    "published_at": "1 day ago",
+                    "provider": "brave",
+                    "section_id": "news",
+                    "topic_id": "climate-extreme-weather",
+                    "section_candidates": [],
+                    "topic_candidates": [],
+                    "cluster_id": "evt-2026-03-30-climate-extreme-weather-general-global",
+                    "event_key": "2026-03-30:climate-extreme-weather-general-global",
+                    "entities": [
+                      "unspecified",
+                      "daiwa securities group"
+                    ],
+                    "keywords": [
+                      "caterpillar",
+                      "shares",
+                      "sold",
+                      "foster",
+                      "motley",
+                      "trimmed",
+                      "stake",
+                      "nyse",
+                      "free",
+                      "report",
+                      "fourth",
+                      "quarter"
+                    ],
+                    "title_signal_tokens": [
+                      "caterpillar",
+                      "shares",
+                      "sold",
+                      "foster",
+                      "motley"
+                    ],
+                    "url_signal_tokens": [
+                      "banking",
+                      "finance",
+                      "caterpillar",
+                      "shares",
+                      "sold",
+                      "foster",
+                      "motley"
+                    ],
+                    "title_url_overlap": 1,
+                    "title_url_mismatch": false,
+                    "region": "global",
+                    "angle": "general",
+                    "genericity_score": 1,
+                    "article_likelihood": 8,
+                    "source_quality_score": 0
+                  },
+                  "roleResult": {
+                    "role": "core",
+                    "role_confidence": 100,
+                    "role_reason": [
+                      "same_cluster",
+                      "same_event_key",
+                      "same_topic",
+                      "same_section",
+                      "same_region",
+                      "same_angle",
+                      "entity_hits:1",
+                      "article_like",
+                      "official_release",
+                      "core_threshold"
+                    ],
+                    "same_event_score": 11,
+                    "topic_fit_score": 8,
+                    "genericity_score": 1,
+                    "article_likelihood": 8,
+                    "page_kind": "official_release",
+                    "source_id": "src-1426980671",
+                    "source": {
+                      "source_id": "src-1426980671",
+                      "url": "https://www.tickerreport.com/banking-finance/13395837/caterpillar-inc-cat-shares-sold-by-foster-motley-inc.html",
+                      "canonical_url": "https://www.tickerreport.com/banking-finance/13395837/caterpillar-inc-cat-shares-sold-by-foster-motley-inc.html",
+                      "domain": "tickerreport.com",
+                      "canonical_domain": "tickerreport.com",
+                      "title": "Caterpillar Inc. $CAT Shares Sold by Foster & Motley Inc.",
+                      "normalized_title": "caterpillar inc cat shares sold by foster motley inc",
+                      "snippet": "Foster & Motley Inc. trimmed its stake in shares of Caterpillar Inc. (NYSE:CAT – Free Report) by 12.4% in the fourth quarter, according to the company in its most recent 13F filing with the Securities and Exchange Commission. The firm owned 15,527 shares of the industrial products company’s ...",
+                      "page_kind": "official_release",
+                      "published_at": "1 day ago",
+                      "provider": "brave",
+                      "section_id": "news",
+                      "topic_id": "climate-extreme-weather",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-climate-extreme-weather-general-global",
+                      "event_key": "2026-03-30:climate-extreme-weather-general-global",
+                      "entities": [
+                        "unspecified",
+                        "daiwa securities group"
+                      ],
+                      "keywords": [
+                        "caterpillar",
+                        "shares",
+                        "sold",
+                        "foster",
+                        "motley",
+                        "trimmed",
+                        "stake",
+                        "nyse",
+                        "free",
+                        "report",
+                        "fourth",
+                        "quarter"
+                      ],
+                      "title_signal_tokens": [
+                        "caterpillar",
+                        "shares",
+                        "sold",
+                        "foster",
+                        "motley"
+                      ],
+                      "url_signal_tokens": [
+                        "banking",
+                        "finance",
+                        "caterpillar",
+                        "shares",
+                        "sold",
+                        "foster",
+                        "motley"
+                      ],
+                      "title_url_overlap": 1,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 1,
+                      "article_likelihood": 8,
+                      "source_quality_score": 0
+                    }
+                  },
+                  "rescueScore": 46.379999999999995,
+                  "queryMeta": {
+                    "query": "Daiwa Securities Group hard truths soft metals development Daiwa Securities Group (news analysis OR report OR investigation)",
+                    "level": "broad",
+                    "intent": "trusted_reporting"
+                  }
+                }
+              ]
+            },
+            "trusted_reporting": {
+              "count": 0,
+              "items": []
+            },
+            "independent_confirming": {
+              "count": 1,
+              "items": [
+                {
+                  "source": {
+                    "source_id": "src-1499798943",
+                    "url": "https://www.tickerreport.com/banking-finance/13396186/daiwa-securities-group-initiates-coverage-on-ge-aerospace-nysege.html",
+                    "canonical_url": "https://www.tickerreport.com/banking-finance/13396186/daiwa-securities-group-initiates-coverage-on-ge-aerospace-nysege.html",
+                    "domain": "tickerreport.com",
+                    "canonical_domain": "tickerreport.com",
+                    "title": "Daiwa Securities Group Initiates Coverage on GE Aerospace (NYSE:GE)",
+                    "normalized_title": "daiwa securities group initiates coverage on ge aerospace nyse ge",
+                    "snippet": "Analysts at Daiwa Securities Group initiated coverage on shares of GE Aerospace (NYSE:GE – Get Free Report) in a research note issued on Tuesday, Marketbeat Ratings reports. The brokerage set a “neutral” rating and a $301.00 price target on the stock. Daiwa Securities Group’s price ...",
+                    "page_kind": "article",
+                    "published_at": "1 day ago",
+                    "provider": "brave",
+                    "section_id": "news",
+                    "topic_id": "climate-extreme-weather",
+                    "section_candidates": [],
+                    "topic_candidates": [],
+                    "cluster_id": "evt-2026-03-30-climate-extreme-weather-general-global",
+                    "event_key": "2026-03-30:climate-extreme-weather-general-global",
+                    "entities": [
+                      "unspecified",
+                      "daiwa securities group"
+                    ],
+                    "keywords": [
+                      "daiwa",
+                      "securities",
+                      "group",
+                      "initiates",
+                      "coverage",
+                      "aerospace",
+                      "nyse",
+                      "analysts",
+                      "initiated",
+                      "shares",
+                      "free",
+                      "report"
+                    ],
+                    "title_signal_tokens": [
+                      "daiwa",
+                      "securities",
+                      "group",
+                      "initiates",
+                      "coverage",
+                      "aerospace",
+                      "nyse"
+                    ],
+                    "url_signal_tokens": [
+                      "banking",
+                      "finance",
+                      "daiwa",
+                      "securities",
+                      "group",
+                      "initiates",
+                      "coverage",
+                      "aerospace",
+                      "nysege"
+                    ],
+                    "title_url_overlap": 0.8571428571428571,
+                    "title_url_mismatch": false,
+                    "region": "global",
+                    "angle": "general",
+                    "genericity_score": 0,
+                    "article_likelihood": 9,
+                    "source_quality_score": 0
+                  },
+                  "roleResult": {
+                    "role": "core",
+                    "role_confidence": 100,
+                    "role_reason": [
+                      "same_cluster",
+                      "same_event_key",
+                      "same_topic",
+                      "same_section",
+                      "same_region",
+                      "same_angle",
+                      "entity_hits:1",
+                      "article_like",
+                      "core_threshold"
+                    ],
+                    "same_event_score": 11,
+                    "topic_fit_score": 8,
+                    "genericity_score": 0,
+                    "article_likelihood": 9,
+                    "page_kind": "article",
+                    "source_id": "src-1499798943",
+                    "source": {
+                      "source_id": "src-1499798943",
+                      "url": "https://www.tickerreport.com/banking-finance/13396186/daiwa-securities-group-initiates-coverage-on-ge-aerospace-nysege.html",
+                      "canonical_url": "https://www.tickerreport.com/banking-finance/13396186/daiwa-securities-group-initiates-coverage-on-ge-aerospace-nysege.html",
+                      "domain": "tickerreport.com",
+                      "canonical_domain": "tickerreport.com",
+                      "title": "Daiwa Securities Group Initiates Coverage on GE Aerospace (NYSE:GE)",
+                      "normalized_title": "daiwa securities group initiates coverage on ge aerospace nyse ge",
+                      "snippet": "Analysts at Daiwa Securities Group initiated coverage on shares of GE Aerospace (NYSE:GE – Get Free Report) in a research note issued on Tuesday, Marketbeat Ratings reports. The brokerage set a “neutral” rating and a $301.00 price target on the stock. Daiwa Securities Group’s price ...",
+                      "page_kind": "article",
+                      "published_at": "1 day ago",
+                      "provider": "brave",
+                      "section_id": "news",
+                      "topic_id": "climate-extreme-weather",
+                      "section_candidates": [],
+                      "topic_candidates": [],
+                      "cluster_id": "evt-2026-03-30-climate-extreme-weather-general-global",
+                      "event_key": "2026-03-30:climate-extreme-weather-general-global",
+                      "entities": [
+                        "unspecified",
+                        "daiwa securities group"
+                      ],
+                      "keywords": [
+                        "daiwa",
+                        "securities",
+                        "group",
+                        "initiates",
+                        "coverage",
+                        "aerospace",
+                        "nyse",
+                        "analysts",
+                        "initiated",
+                        "shares",
+                        "free",
+                        "report"
+                      ],
+                      "title_signal_tokens": [
+                        "daiwa",
+                        "securities",
+                        "group",
+                        "initiates",
+                        "coverage",
+                        "aerospace",
+                        "nyse"
+                      ],
+                      "url_signal_tokens": [
+                        "banking",
+                        "finance",
+                        "daiwa",
+                        "securities",
+                        "group",
+                        "initiates",
+                        "coverage",
+                        "aerospace",
+                        "nysege"
+                      ],
+                      "title_url_overlap": 0.8571428571428571,
+                      "title_url_mismatch": false,
+                      "region": "global",
+                      "angle": "general",
+                      "genericity_score": 0,
+                      "article_likelihood": 9,
+                      "source_quality_score": 0
+                    }
+                  },
+                  "rescueScore": 47.2,
+                  "queryMeta": {
+                    "query": "Daiwa Securities Group hard truths soft metals development Daiwa Securities Group (news analysis OR report OR investigation)",
+                    "level": "broad",
+                    "intent": "trusted_reporting"
+                  }
+                }
+              ]
+            },
+            "optional_context": {
+              "count": 0,
+              "items": []
+            },
+            "unique_domains": 1
+          },
+          "failure_codes": [
+            "missing_trusted_reporting"
+          ],
+          "cluster_coherence": 0.21,
+          "post_rescue_coherence": 0.44
+        }
+      },
+      {
+        "brief_title": "Will the Iran Crisis Push the World to Rethink Oil and Gas?",
+        "poolIdentityKey": "cluster:evt-2026-04-01-world-geopolitics-general-iran-iran",
+        "status": "near_miss_source_pack",
+        "reasons": [
+          "Need at least 2 publishable sources, found 1"
+        ],
+        "failure_codes": [
+          "only_one_publishable_source"
+        ]
+      },
+      {
+        "brief_title": "Tech company climate goals under pressure due to AI energy demand",
+        "poolIdentityKey": "cluster:evt-2026-03-30-ai-big-tech-general-global-tsa",
+        "status": "near_miss_source_pack",
+        "reasons": [
+          "Need at least 2 publishable sources, found 1",
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+        ],
+        "failure_codes": [
+          "only_one_publishable_source",
+          "thin_pack_after_rescue"
+        ]
+      },
+      {
+        "brief_title": "XRP Market Trends & Ripple's Regulatory Milestones in 2026",
+        "poolIdentityKey": "cluster:evt-2026-03-30-news-general-global-sec",
+        "status": "near_miss_source_pack",
+        "reasons": [
+          "Need at least 2 publishable sources, found 1",
+          "Need at least one trusted reporting source or official primary source",
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+        ],
+        "failure_codes": [
+          "only_one_publishable_source",
+          "thin_pack_after_rescue",
+          "missing_official",
+          "missing_trusted_reporting"
+        ]
+      },
+      {
+        "brief_title": "10 TV Shows That Changed Fandom Culture",
+        "poolIdentityKey": "cluster:evt-2026-03-30-film-tv-general-global",
+        "status": "near_miss_source_pack",
+        "reasons": [
+          "Need at least 2 publishable sources, found 1",
+          "Need at least one trusted reporting source or official primary source",
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+        ],
+        "failure_codes": [
+          "only_one_publishable_source",
+          "thin_pack_after_rescue",
+          "missing_official",
+          "missing_trusted_reporting"
+        ]
+      },
+      {
+        "brief_title": "Why Is Horror TV So Complicated Right Now?",
+        "poolIdentityKey": "cluster:evt-2026-03-31-film-tv-general-global",
+        "status": "near_miss_source_pack",
+        "reasons": [
+          "Need at least 2 publishable sources, found 1",
+          "Need at least one trusted reporting source or official primary source",
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+        ],
+        "failure_codes": [
+          "only_one_publishable_source",
+          "thin_pack_after_rescue",
+          "missing_official",
+          "missing_trusted_reporting"
+        ]
+      },
+      {
+        "brief_title": "Movies and TV shows casting in Boulder",
+        "poolIdentityKey": "cluster:evt-2026-04-01-culture-general-global",
+        "status": "near_miss_source_pack",
+        "reasons": [
+          "Need at least one trusted reporting source or official primary source"
+        ],
+        "failure_codes": [
+          "missing_official",
+          "missing_trusted_reporting"
+        ]
+      },
+      {
+        "brief_title": "Medical Bulletin 31/March/2026",
+        "poolIdentityKey": "cluster:evt-2026-03-31-news-general-global-meta",
+        "status": "near_miss_source_pack",
+        "reasons": [
+          "Need at least 2 publishable sources, found 1",
+          "Need at least one trusted reporting source or official primary source",
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+        ],
+        "failure_codes": [
+          "only_one_publishable_source",
+          "thin_pack_after_rescue",
+          "missing_official",
+          "missing_trusted_reporting"
+        ]
+      },
+      {
+        "brief_title": "Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...",
+        "poolIdentityKey": "cluster:evt-2026-04-01-companies-deals-earnings-global",
+        "status": "near_miss_source_pack",
+        "reasons": [
+          "Need at least 2 publishable sources, found 1"
+        ],
+        "failure_codes": [
+          "only_one_publishable_source"
+        ]
+      },
+      {
+        "brief_title": "The Link Between Medicine and Psychology",
+        "poolIdentityKey": "cluster:evt-2026-03-30-mental-health-general-global-sec-fda",
+        "status": "near_miss_source_pack",
+        "reasons": [
+          "Need at least 2 publishable sources, found 1",
+          "Need at least one trusted reporting source or official primary source",
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin"
+        ],
+        "failure_codes": [
+          "only_one_publishable_source",
+          "thin_pack_after_rescue",
+          "missing_official",
+          "missing_trusted_reporting"
+        ]
+      }
+    ],
+    "source_pack": []
+  }
+}

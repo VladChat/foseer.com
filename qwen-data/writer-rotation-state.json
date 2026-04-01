@@ -1,11 +1,11 @@
 {
-  "totalArticles": 97,
+  "totalArticles": 98,
   "lastReset": null,
   "byWriter": {
     "reporter": {
       "count": 35,
       "lastAssigned": 1775045340364,
-      "streak": 1,
+      "streak": 0,
       "authorCursor": 1,
       "lastAuthorId": "john_smith"
     },
@@ -17,11 +17,11 @@
       "lastAuthorId": "noah_bennett"
     },
     "analyst": {
-      "count": 16,
-      "lastAssigned": 1774971297691,
-      "streak": 0,
-      "authorCursor": 2,
-      "lastAuthorId": "sophia_bennett"
+      "count": 17,
+      "lastAssigned": 1775065417399,
+      "streak": 1,
+      "authorCursor": 3,
+      "lastAuthorId": "jacob_ellis"
     },
     "features": {
       "count": 32,
@@ -32,14 +32,6 @@
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "reporter",
-      "timestamp": 1774644771431,
-      "articleType": "report",
-      "beat": "markets",
-      "section": "Business",
-      "topic_id": "crypto-bitcoin"
-    },
     {
       "writerId": "features",
       "timestamp": 1774644842029,
@@ -431,6 +423,14 @@
       "beat": "international affairs",
       "section": "News",
       "topic_id": "world-geopolitics"
+    },
+    {
+      "writerId": "analyst",
+      "timestamp": 1775065417399,
+      "articleType": "analysis",
+      "beat": "sports business",
+      "section": "Sports",
+      "topic_id": "transfers-business"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-04-01T12:09:21.868Z",
+  "updatedAt": "2026-04-01T17:44:20.569Z",
   "assets": [
     {
       "assetKey": "legacy:7-social-media-trends-you-need-to-know-in-2026",
@@ -7814,9 +7814,73 @@
       "useCount": 1,
       "status": "ready",
       "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pexels:34760021",
+      "provider": "pexels",
+      "providerAssetId": "34760021",
+      "sourcePageUrl": "https://www.pexels.com/photo/skyline-of-manchester-city-with-historic-buildings-34760021/",
+      "sourceDownloadUrl": "https://images.pexels.com/photos/34760021/pexels-photo-34760021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "authorName": "Max W",
+      "authorUrl": "https://www.pexels.com/@max-w-1673439416",
+      "license": "Pexels License",
+      "altText": "Aerial view of Manchester city skyline featuring modern and historic architecture under a clear blue sky.",
+      "width": 7728,
+      "height": 5152,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pexels/34760021/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pexels/34760021/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pexels/34760021/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "Sports"
+      ],
+      "queryHistory": [
+        "Manchester United photo"
+      ],
+      "tags": [
+        "transfers-business",
+        "nba",
+        "manchester united",
+        "Aerial view of Manchester city skyline featuring modern and historic architecture under a clear blue sky."
+      ],
+      "topicHints": [
+        "transfers-business"
+      ],
+      "entityHints": [
+        "aerial",
+        "view",
+        "manchester",
+        "skyline",
+        "featuring",
+        "historic",
+        "architecture",
+        "under"
+      ],
+      "sceneType": "stadium",
+      "geoHints": [],
+      "visualType": "photo",
+      "editorialFitScore": 100,
+      "firstSeenAt": "2026-04-01T17:44:20.569Z",
+      "lastFetchedAt": "2026-04-01T17:44:20.569Z",
+      "lastUsedAt": "2026-04-01T17:44:20.569Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
     }
   ],
   "usage": [
+    {
+      "assetKey": "pexels:34760021",
+      "articleSlug": "manchester-united-s-attack-reset-zirkzee-rashford-and-a-summ",
+      "articleTitle": "Manchester United’s Attack Reset: Zirkzee, Rashford and a Summer of Hard Choices",
+      "section": "Sports",
+      "topicId": "transfers-business",
+      "query": "Manchester United photo",
+      "usedAt": "2026-04-01T17:44:20.569Z",
+      "selectionMode": "provider_download_new:pexels:acceptable:relaxed"
+    },
     {
       "assetKey": "pexels:18069813",
       "articleSlug": "drug-giant-signs-2-billion-ai-deal-marking-shift-in-pharma-p",
