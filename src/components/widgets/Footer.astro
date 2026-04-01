@@ -1,108 +1,198 @@
 ---
-import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
 import { getHomePermalink } from '~/utils/permalinks';
+import { SITE_LEGAL } from '~/config/site-legal';
 
 interface Link {
   text?: string;
   href?: string;
   ariaLabel?: string;
-  icon?: string;
-}
-
-interface Links {
-  title?: string;
-  links: Array<Link>;
 }
 
 export interface Props {
-  links: Array<Links>;
-  secondaryLinks: Array<Link>;
-  socialLinks: Array<Link>;
-  footNote?: string;
   theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+const { theme = 'light' } = Astro.props;
+
+const coverageLinks: Link[] = [
+  { text: 'News', href: '/sections/news' },
+  { text: 'Business', href: '/sections/business' },
+  { text: 'Tech', href: '/sections/tech' },
+  { text: 'Health', href: '/sections/health' },
+  { text: 'Sports', href: '/sections/sports' },
+  { text: 'Culture', href: '/sections/culture' },
+];
+
+const aboutLinks: Link[] = [
+  { text: 'About Foseer', href: '/about' },
+  { text: 'Editorial Standards', href: '/editorial-standards' },
+  { text: 'Corrections Policy', href: '/corrections-policy' },
+  { text: 'Authors', href: '/authors' },
+  { text: 'Ownership & Funding', href: '/ownership-funding' },
+  { text: 'Contact', href: '/contact' },
+  { text: 'RSS', href: '/rss.xml' },
+];
+
+const legalLinks: Link[] = [
+  { text: 'Privacy Policy', href: '/privacy' },
+  { text: 'Terms of Use', href: '/terms' },
+  { text: 'Cookies', href: '/cookies' },
+  { text: 'Disclaimer', href: '/disclaimer' },
+  { text: 'Copyright & Takedown', href: '/copyright' },
+  { text: 'Accessibility', href: '/accessibility' },
+];
 ---
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
   <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-  <div
-    class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300 intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
-  >
-    <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-10 md:py-14">
-      <div class="col-span-12 lg:col-span-4">
-        <div class="mb-3">
-          <a class="inline-block font-bold text-2xl font-heading text-slate-900 dark:text-slate-100" href={getHomePermalink()}>{SITE?.name}</a>
-        </div>
-        <p class="mb-4 max-w-sm text-sm leading-6 text-muted dark:text-slate-300">
-          Independent coverage of news, business, tech, health, sports, and culture with a focus on clarity,
-          context, and signal over noise.
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300">
+    <!-- Footer Main Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 py-10">
+      
+      <!-- Column 1: Foseer Brand Block (Static, Always Visible) -->
+      <div class="lg:col-span-1">
+        <a class="inline-block font-bold text-xl font-heading text-slate-900 dark:text-slate-100 mb-3" href={getHomePermalink()}>
+          {SITE?.name}
+        </a>
+        <p class="text-sm leading-relaxed text-muted dark:text-slate-400 mb-3">
+          Independent news and analysis with context, clarity, and signal over noise.
         </p>
-        <div class="text-sm text-muted flex gap-1">
-          {
-            secondaryLinks.map(({ text, href }, index) => (
-              <>
-                {index !== 0 ? ' · ' : ''}
-                <a
-                  class="text-muted hover:text-gray-700 dark:text-slate-300 hover:underline transition duration-150 ease-in-out"
-                  href={href}
-                  set:html={text}
-                />
-              </>
-            ))
-          }
+        <div class="text-sm text-muted space-y-1">
+          <p>Buffalo Grove, Illinois</p>
+          <p>
+            <a href={`mailto:${SITE_LEGAL.contactEmail}`} class="hover:text-gray-700 dark:hover:text-slate-300 transition">
+              {SITE_LEGAL.contactEmail}
+            </a>
+          </p>
+          <p>
+            <a href={SITE_LEGAL.contactPhoneHref} class="hover:text-gray-700 dark:hover:text-slate-300 transition">
+              {SITE_LEGAL.contactPhoneDisplay}
+            </a>
+          </p>
         </div>
       </div>
-      {
-        links.map(({ title, links }) => (
-          <div class="col-span-6 md:col-span-3 lg:col-span-2">
-            <div class="dark:text-gray-300 font-semibold uppercase tracking-[0.08em] text-[0.72rem] text-slate-500 mb-3">{title}</div>
-            {links && Array.isArray(links) && links.length > 0 && (
-              <ul class="text-sm">
-                {links.map(({ text, href, ariaLabel }) => (
-                  <li class="mb-2">
-                    <a
-                      class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-                      href={href}
-                      aria-label={ariaLabel}
-                    >
-                      <Fragment set:html={text} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        ))
-      }
-    </div>
-    <div class="md:flex md:items-center md:justify-between py-6 md:py-8 border-t border-slate-200/80 dark:border-slate-800">
-      {
-        socialLinks?.length ? (
-          <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
-            {socialLinks.map(({ ariaLabel, href, text, icon }) => (
+
+      <!-- Column 2: Coverage -->
+      <div class="footer-group lg:col-span-1">
+        <div class="flex items-center justify-between py-2 lg:py-0 lg:mb-3">
+          <span class="font-semibold text-sm uppercase tracking-wider text-slate-700 dark:text-slate-300">Coverage</span>
+          <button class="footer-group-button lg:hidden p-1" aria-expanded="false" aria-controls="footer-coverage-content">
+            <svg class="w-5 h-5 text-slate-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+        </div>
+        <div id="footer-coverage-content" class="footer-group-content hidden pt-4 lg:block lg:pt-0">
+          <ul class="space-y-2 text-sm">
+            {coverageLinks.map(({ text, href }) => (
               <li>
-                <a
-                      class="text-muted dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-                  aria-label={ariaLabel}
-                  href={href}
-                >
-                  {icon && <Icon name={icon} class="w-5 h-5" />}
-                  <Fragment set:html={text} />
-                </a>
+                <a class="text-muted hover:text-gray-700 dark:hover:text-slate-300 transition" href={href}>{text}</a>
               </li>
             ))}
           </ul>
-        ) : (
-          ''
-        )
-      }
-
-      <div class="text-sm mr-4 dark:text-muted leading-6">
-        <Fragment set:html={footNote} />
+        </div>
       </div>
+
+      <!-- Column 3: About -->
+      <div class="footer-group lg:col-span-1">
+        <div class="flex items-center justify-between py-2 lg:py-0 lg:mb-3">
+          <span class="font-semibold text-sm uppercase tracking-wider text-slate-700 dark:text-slate-300">About</span>
+          <button class="footer-group-button lg:hidden p-1" aria-expanded="false" aria-controls="footer-about-content">
+            <svg class="w-5 h-5 text-slate-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+        </div>
+        <div id="footer-about-content" class="footer-group-content hidden pt-4 lg:block lg:pt-0">
+          <ul class="space-y-2 text-sm">
+            {aboutLinks.map(({ text, href }) => (
+              <li>
+                <a class="text-muted hover:text-gray-700 dark:hover:text-slate-300 transition" href={href}>{text}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 4: Legal -->
+      <div class="footer-group lg:col-span-1">
+        <div class="flex items-center justify-between py-2 lg:py-0 lg:mb-3">
+          <span class="font-semibold text-sm uppercase tracking-wider text-slate-700 dark:text-slate-300">Legal</span>
+          <button class="footer-group-button lg:hidden p-1" aria-expanded="false" aria-controls="footer-legal-content">
+            <svg class="w-5 h-5 text-slate-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+        </div>
+        <div id="footer-legal-content" class="footer-group-content hidden pt-4 lg:block lg:pt-0">
+          <ul class="space-y-2 text-sm">
+            {legalLinks.map(({ text, href }) => (
+              <li>
+                <a class="text-muted hover:text-gray-700 dark:hover:text-slate-300 transition" href={href}>{text}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="border-t border-slate-200 dark:border-slate-700 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-muted dark:text-slate-400 text-center sm:text-left">
+        © 2026 Foseer. Independent digital publication based in Illinois.
+      </p>
+      <a href="/rss.xml" class="text-sm text-muted hover:text-gray-700 dark:hover:text-slate-300 transition flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 12a6 6 0 016 6 6 6 0 016 6m-6-9a9 9 0 019 9m-9-9a9 9 0 00-9 9m0 0a9 9 0 009 9"></path>
+        </svg>
+        RSS
+      </a>
     </div>
   </div>
 </footer>
+
+<script is:inline>
+  // Footer accordion functionality using document-level event delegation
+  // This ensures it works across Astro View Transitions navigation without duplicate listeners
+  document.addEventListener('click', function(e) {
+    const button = e.target.closest('.footer-group-button');
+    if (!button) return;
+
+    const footer = button.closest('footer');
+    if (!footer) return;
+
+    e.preventDefault();
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+    const targetId = button.getAttribute('aria-controls');
+    const targetContent = document.getElementById(targetId);
+    const icon = button.querySelector('svg');
+
+    // Get all buttons and contents within this footer
+    const allButtons = footer.querySelectorAll('.footer-group-button');
+    const allContents = footer.querySelectorAll('.footer-group-content');
+
+    if (isExpanded) {
+      // Close this group
+      button.setAttribute('aria-expanded', 'false');
+      if (icon) icon.classList.remove('rotate-180');
+      if (targetContent) targetContent.classList.add('hidden');
+    } else {
+      // Close all other groups first
+      allButtons.forEach(btn => {
+        btn.setAttribute('aria-expanded', 'false');
+        const btnIcon = btn.querySelector('svg');
+        if (btnIcon) btnIcon.classList.remove('rotate-180');
+      });
+      allContents.forEach(content => {
+        content.classList.add('hidden');
+      });
+
+      // Open this group
+      button.setAttribute('aria-expanded', 'true');
+      if (icon) icon.classList.add('rotate-180');
+      if (targetContent) targetContent.classList.remove('hidden');
+    }
+  });
+</script>

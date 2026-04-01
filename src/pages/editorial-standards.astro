@@ -1,0 +1,74 @@
+---
+// File: src/pages/editorial-standards.astro
+// Purpose: Foseer Editorial Standards page.
+
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Editorial Standards',
+  description: 'Foseer publishes editorial content with a focus on accuracy, clarity, transparency, and reader value.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <header class="mb-12 border-b border-slate-200 dark:border-slate-700 pb-8">
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white font-heading mb-4">
+          Editorial Standards
+        </h1>
+      </header>
+
+      <div class="prose prose-lg dark:prose-invert">
+        <p class="text-lg text-gray-700 dark:text-slate-300 leading-relaxed">
+          Foseer publishes editorial content with a focus on accuracy, clarity, transparency, and reader value.
+        </p>
+
+        <h2>Our Coverage</h2>
+        <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
+          We cover stories that have public relevance, practical impact, or sustained reader interest across news, business, tech, health, sports, and culture. Our aim is to reduce noise, present material facts clearly, and add context that helps readers follow developing stories over time.
+        </p>
+
+        <h2>Our Sources</h2>
+        <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
+          We rely on source materials such as official statements, public documents, company releases, government publications, court filings, primary data, and credible reporting from established outlets. When a story depends on external reporting or source material, we aim to attribute it clearly.
+        </p>
+
+        <h2>Types of Editorial Work</h2>
+        <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
+          Foseer may publish different kinds of editorial work, including:
+        </p>
+        <ul class="text-gray-700 dark:text-slate-300">
+          <li><strong>News</strong> for current developments</li>
+          <li><strong>Analysis</strong> for interpretation and broader context</li>
+          <li><strong>Explainers</strong> for background and understanding</li>
+          <li><strong>Developing updates</strong> for stories that change quickly</li>
+        </ul>
+
+        <h2>Accuracy and Updates</h2>
+        <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
+          We aim to keep our reporting accurate and current. When meaningful new facts emerge, we may update an article for accuracy, clarity, or completeness.
+        </p>
+
+        <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
+          When we identify a material factual error, we correct it. When appropriate, we note a correction or update on the page.
+        </p>
+
+        <h2>Use of Automation</h2>
+        <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
+          Foseer may use automation or AI-assisted workflows for research support, structuring, drafting assistance, formatting, classification, and editorial operations. Final publication decisions, editorial framing, and quality control remain the responsibility of Foseer.
+        </p>
+
+        <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
+          We publish to help readers, not to manipulate rankings or flood search surfaces with low-value output.
+        </p>
+
+        <div class="mt-8 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+          <p class="text-sm text-gray-600 dark:text-slate-400 mb-0">
+            For questions about our editorial standards, contact <a href="mailto:info@foseer.com" class="text-primary hover:underline">info@foseer.com</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

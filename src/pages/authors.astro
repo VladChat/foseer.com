@@ -1,0 +1,49 @@
+---
+// File: src/pages/authors.astro
+// Purpose: Foseer Authors page.
+
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Authors',
+  description: 'Foseer publishes editorial work across news, business, tech, health, sports, and culture.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <header class="mb-12 border-b border-slate-200 dark:border-slate-700 pb-8">
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white font-heading mb-4">
+          Authors
+        </h1>
+      </header>
+
+      <div class="prose prose-lg dark:prose-invert">
+        <p class="text-lg text-gray-700 dark:text-slate-300 leading-relaxed">
+          Foseer publishes editorial work across news, business, tech, health, sports, and culture.
+        </p>
+
+        <h2>Bylines</h2>
+        <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
+          Some coverage may appear under a desk, staff, or publication-level byline when the work reflects coordinated editorial production, structured newsroom workflows, developing updates, or multi-source synthesis rather than a single named reporter.
+        </p>
+
+        <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
+          Where useful, Foseer may also publish named author pages or desk-based bylines that help readers understand editorial ownership and subject focus.
+        </p>
+
+        <h2>Transparency</h2>
+        <p class="text-gray-700 dark:text-slate-300 leading-relaxed">
+          Bylines, article dates, article labels, and source context are part of our effort to make content easier to evaluate and understand.
+        </p>
+
+        <div class="mt-8 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+          <p class="text-sm text-gray-600 dark:text-slate-400 mb-0">
+            For editorial questions, contact <a href="mailto:info@foseer.com" class="text-primary hover:underline">info@foseer.com</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
