@@ -1,6 +1,8 @@
 // File: qwen-scripts/utils/api-clients.js
 // Purpose: Provider wrappers for Brave/GDELT/Google with 8-hour cache TTL, offline-first reads, and optional manual live refresh.
 
+import fs from 'node:fs';
+import path from 'node:path';
 import { readCacheEntry, writeCache, getCacheStats } from './cache-manager.js';
 import { fetchWithRetry, getRetryPolicyStats, isRetryableHttpStatus } from './retry-policy.js';
 
@@ -12,6 +14,7 @@ const PROVIDER_STATUS = {
   CALLED_SUCCESS: 'called_success',
   AUTH_FAILURE: 'auth_failure',
   RATE_LIMIT: 'rate_limit',
+  RATE_LIMIT_CIRCUIT_OPEN: 'rate_limit_circuit_open',
   REQUEST_CONSTRUCTION_FAILURE: 'request_construction_failure',
   UPSTREAM_RESPONSE_FAILURE: 'upstream_response_failure',
   LIVE_QUOTA_EXHAUSTED: 'live_quota_exhausted',
@@ -67,6 +70,81 @@ const LAST_PROVIDER_SEARCH_AT = {
   gdelt: 0,
   google: 0,
 };
+const PROVIDER_CIRCUIT_STATE_PATH = path.resolve(process.cwd(), 'qwen-data', 'events', 'provider-circuit-state.json');
+const GDELT_RATE_LIMIT_LOCK_MS = Math.max(60_000, Number(process.env.QWEN_GDELT_RATE_LIMIT_LOCK_MS || 24 * 60 * 60 * 1000));
+const PROVIDER_RATE_LIMIT_CIRCUITS = loadProviderRateLimitCircuits();
+
+function loadProviderRateLimitCircuits() {
+  try {
+    if (!fs.existsSync(PROVIDER_CIRCUIT_STATE_PATH)) {
+      return { providers: {} };
+    }
+    const parsed = JSON.parse(fs.readFileSync(PROVIDER_CIRCUIT_STATE_PATH, 'utf-8'));
+    if (!parsed || typeof parsed !== 'object') return { providers: {} };
+    const providers = parsed.providers && typeof parsed.providers === 'object' ? parsed.providers : {};
+    return { providers };
+  } catch {
+    return { providers: {} };
+  }
+}
+
+function saveProviderRateLimitCircuits() {
+  try {
+    fs.mkdirSync(path.dirname(PROVIDER_CIRCUIT_STATE_PATH), { recursive: true });
+    fs.writeFileSync(PROVIDER_CIRCUIT_STATE_PATH, JSON.stringify(PROVIDER_RATE_LIMIT_CIRCUITS, null, 2), 'utf-8');
+  } catch {
+    // best-effort persistence only
+  }
+}
+
+function closeProviderRateLimitCircuit(provider) {
+  if (!provider) return;
+  if (!PROVIDER_RATE_LIMIT_CIRCUITS.providers?.[provider]) return;
+  delete PROVIDER_RATE_LIMIT_CIRCUITS.providers[provider];
+  saveProviderRateLimitCircuits();
+}
+
+function getProviderRateLimitCircuitState(provider) {
+  const state = PROVIDER_RATE_LIMIT_CIRCUITS.providers?.[provider];
+  if (!state) {
+    return { open: false, provider, lockedUntilMs: null, lockedUntilIso: null, reason: null, httpCode: null };
+  }
+
+  const lockedUntilMs = Number(state.locked_until_ms || 0);
+  const now = Date.now();
+  if (!Number.isFinite(lockedUntilMs) || lockedUntilMs <= now) {
+    closeProviderRateLimitCircuit(provider);
+    return { open: false, provider, lockedUntilMs: null, lockedUntilIso: null, reason: null, httpCode: null };
+  }
+
+  return {
+    open: true,
+    provider,
+    lockedUntilMs,
+    lockedUntilIso: new Date(lockedUntilMs).toISOString(),
+    reason: String(state.reason || 'rate_limit'),
+    httpCode: Number(state.http_code || 429),
+  };
+}
+
+function openProviderRateLimitCircuit(provider, { lockMs, reason = 'rate_limit', httpCode = 429 } = {}) {
+  const safeLockMs = Math.max(60_000, Number(lockMs || 0) || 0);
+  const lockedUntilMs = Date.now() + safeLockMs;
+  PROVIDER_RATE_LIMIT_CIRCUITS.providers = PROVIDER_RATE_LIMIT_CIRCUITS.providers || {};
+  PROVIDER_RATE_LIMIT_CIRCUITS.providers[provider] = {
+    opened_at: new Date().toISOString(),
+    locked_until_ms: lockedUntilMs,
+    reason: String(reason || 'rate_limit'),
+    http_code: Number(httpCode || 429),
+  };
+  saveProviderRateLimitCircuits();
+  return {
+    provider,
+    lockedUntilMs,
+    lockedUntilIso: new Date(lockedUntilMs).toISOString(),
+    lockMs: safeLockMs,
+  };
+}
 
 function baseResult(provider, extra = {}) {
   return {
@@ -475,6 +553,25 @@ export async function braveNewsSearch(query, apiKey, options = {}) {
 }
 
 export async function gdeltSearch(query, options = {}) {
+  const label = options.logLabel || 'gdelt_search';
+  const circuitState = getProviderRateLimitCircuitState('gdelt');
+  if (circuitState.open) {
+    const lockedResult = baseResult('gdelt', {
+      status: PROVIDER_STATUS.RATE_LIMIT_CIRCUIT_OPEN,
+      error: `GDELT circuit open after previous rate limit (locked until ${circuitState.lockedUntilIso})`,
+      errorType: 'rate_limit',
+      httpResponseCode: 429,
+    });
+    lockedResult.articles = [];
+    logProvider('gdelt', {
+      label,
+      status: lockedResult.status,
+      lock_until: circuitState.lockedUntilIso,
+      reason: circuitState.reason,
+    });
+    return lockedResult;
+  }
+
   const normalizedOptions = {
     maxRecords: Math.min(options.maxRecords || 50, 250),
     sort: options.sort || 'DateDesc',
@@ -484,7 +581,7 @@ export async function gdeltSearch(query, options = {}) {
   const result = await searchWithCacheRefresh({
     provider: 'gdelt',
     cacheKey,
-    label: options.logLabel || 'gdelt_search',
+    label,
     configPresent: true,
     normalize: normalizeGdelt,
     buildRequest: () => {
@@ -509,6 +606,24 @@ export async function gdeltSearch(query, options = {}) {
     parseResponse: async (response) => response.json(),
     livePhase: options.livePhase || null,
   });
+  if (
+    result.status === PROVIDER_STATUS.RATE_LIMIT
+    || Number(result.httpResponseCode || 0) === 429
+    || String(result.errorType || '') === 'rate_limit'
+  ) {
+    const lockMs = Math.max(60_000, Number(options.gdeltRateLimitLockMs || process.env.QWEN_GDELT_RATE_LIMIT_LOCK_MS || GDELT_RATE_LIMIT_LOCK_MS));
+    const lock = openProviderRateLimitCircuit('gdelt', {
+      lockMs,
+      reason: result.error || 'gdelt_http_429',
+      httpCode: Number(result.httpResponseCode || 429),
+    });
+    logProvider('gdelt', {
+      label,
+      status: 'rate_limit_circuit_opened',
+      lock_ms: lock.lockMs,
+      lock_until: lock.lockedUntilIso,
+    });
+  }
   result.articles = result.data?.articles || [];
   return result;
 }
@@ -898,6 +1013,7 @@ export async function openAIComplete(prompt, apiKey, options = {}) {
 }
 
 export function getProviderStats() {
+  const gdeltCircuit = getProviderRateLimitCircuitState('gdelt');
   return {
     mode: SEARCH_NETWORK_ENABLED ? 'cache_refresh_with_live_quota' : 'cache_only',
     retry_policy: getRetryPolicyStats(),
@@ -929,6 +1045,13 @@ export function getProviderStats() {
       brave: { ...LIVE_USAGE_BY_PHASE.brave },
       gdelt: { ...LIVE_USAGE_BY_PHASE.gdelt },
       google: { ...LIVE_USAGE_BY_PHASE.google },
+    },
+    provider_circuits: {
+      gdelt: {
+        open: gdeltCircuit.open,
+        locked_until: gdeltCircuit.lockedUntilIso,
+        reason: gdeltCircuit.reason,
+      },
     },
     cache: getCacheStats(),
   };
