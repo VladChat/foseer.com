@@ -1,51 +1,6 @@
 {
-  "updatedAt": "2026-04-01T20:54:59.972Z",
+  "updatedAt": "2026-04-02T02:39:00.014Z",
   "items": [
-    {
-      "identityKey": "event:business:economy wsj com",
-      "item": {
-        "id": "google-sec-1774908172528-6",
-        "title": "Economy - WSJ.com",
-        "summary": "2 days ago ... The latest news on the economy, jobs market, U.S. trade and housing, including the latest news and analysis on the Federal Reserve and Central Banking.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.wsj.com/economy?gaa_at=eafs&gaa_n=AWEtsqcPPPUOR28a9sPy4SEgKPL7tgtrNzF5f2w-aPvr2M6niluF9arndpWk&gaa_ts=69c862e1&gaa_sig=YjtCMnh1PcDKDIreiu8stsENdzSN_ZKWILENHjrhdrVt752iBOCoUop6yzGA8CLjNqUndKKhEg-sc0Fk54YLlw%3D%3D"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:02:52.531Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:tech",
-        "sectionCandidates": [
-          "business",
-          "news",
-          "tech"
-        ],
-        "topicCandidates": [
-          "economy-markets",
-          "housing-real-estate"
-        ],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "us",
-        "angle": "markets",
-        "genericPage": false,
-        "page_kind": "analysis",
-        "genericity_score": 2,
-        "article_likelihood": 7,
-        "normalizedTitle": "economy wsj com",
-        "canonicalUrl": "https://www.wsj.com/economy",
-        "discoveryScore": 12.8,
-        "eventKey": "business:economy wsj com"
-      },
-      "discoveredAt": "2026-03-30T22:02:52.531Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
     {
       "identityKey": "event:ai-big-tech:ai artificial intelligence the guardian",
       "item": {
@@ -97,53 +52,6 @@
       "discoveredAt": "2026-03-31T21:42:07.999Z",
       "lastSeenAt": "2026-03-31T21:42:08.011Z",
       "expiresAt": "2026-04-02T21:42:08.010Z"
-    },
-    {
-      "identityKey": "event:news:latest news sport and opinion from the guardian",
-      "item": {
-        "id": "google-sec-1774914924281-9",
-        "title": "Latest news, sport and opinion from the Guardian",
-        "summary": "12 hours ago ... US-Israel war on Iran expands as Yemen's Houthis launch first attack since conflict began. Missile traces launched from Yemen at Israel sighted in the sky over ...",
-        "whyItMatters": "",
-        "involvedParties": [
-          "iran",
-          "israel"
-        ],
-        "entities": [
-          "iran",
-          "israel"
-        ],
-        "when": "",
-        "sourceUrls": [
-          "https://www.theguardian.com/uk?q=Online%20slots%20software%20platform"
-        ],
-        "freshness": 4,
-        "urgency": 6,
-        "discoveredAt": "2026-03-30T23:55:24.283Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:culture",
-        "sectionCandidates": [
-          "news",
-          "culture"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "israel",
-        "angle": "product",
-        "genericPage": false,
-        "page_kind": "analysis",
-        "genericity_score": 2,
-        "article_likelihood": 6,
-        "normalizedTitle": "latest news sport and opinion from the guardian",
-        "canonicalUrl": "https://www.theguardian.com/uk",
-        "discoveryScore": 14.2,
-        "eventKey": "news:latest news sport and opinion from the guardian"
-      },
-      "discoveredAt": "2026-03-30T23:55:24.283Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
     },
     {
       "identityKey": "event:business:2026 donald j trump executive orders federal register",
@@ -245,7 +153,7 @@
     {
       "identityKey": "event:news:ofcom to investigate complaints of climate change denial watts up with that",
       "item": {
-        "id": "brave-sec-1775076860620-0",
+        "id": "brave-sec-1775097539924-0",
         "title": "Ofcom to investigate complaints of climate change denial – Watts Up With That?",
         "summary": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
         "whyItMatters": "",
@@ -257,7 +165,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-04-01T20:54:20.624Z",
+        "discoveredAt": "2026-04-02T02:38:59.927Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -289,96 +197,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-04-01T20:54:20.624Z",
-      "lastSeenAt": "2026-04-01T20:54:59.972Z",
-      "expiresAt": "2026-04-03T20:54:59.972Z"
-    },
-    {
-      "identityKey": "event:medical-research:quantum biopharma s 2025 audited year end financial results",
-      "item": {
-        "id": "google-sec-1774913092461-5",
-        "title": "Quantum Biopharma's 2025 Audited Year End Financial Results ...",
-        "summary": "1 day ago ... Multiple Sclerosis Drug Candidate Lucid-21-302 Phase 1 Trial with Toxicology Studies Complete, and unbuzzd™ Clinical Trial Published in Peer-Reviewed ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.theglobeandmail.com/investing/markets/stocks/QNTM/pressreleases/36563944/quantum-biopharmas-2025-audited-year-end-financial-results-maintain-no-going-concern-status/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:24:52.464Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "health",
-          "business"
-        ],
-        "topicCandidates": [
-          "medical-research",
-          "economy-markets"
-        ],
-        "detectedSectionId": "health",
-        "detectedTopicId": "medical-research",
-        "region": "global",
-        "angle": "research",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "quantum biopharma s 2025 audited year end financial results",
-        "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/qntm/pressreleases/36563944/quantum-biopharmas-2025-audited-year-end-financial-results-maintain-no-going-concern-status/",
-        "discoveryScore": 14.4,
-        "eventKey": "medical-research:quantum biopharma s 2025 audited year end financial results"
-      },
-      "discoveredAt": "2026-03-30T23:24:52.464Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
-      "identityKey": "event:health:health wsj",
-      "item": {
-        "id": "google-sec-1774912723009-6",
-        "title": "Health - WSJ",
-        "summary": "2 days ago ... The latest news on health and wellness, including the healthcare industry, pharmaceuticals and more.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.wsj.com/health?page=1&gaa_at=eafs&gaa_n=AWEtsqe8kVh5vjw7UGW9JKebRxgsz6D7nCTPJwXIXC6YdwYqzaSeDpibvV_l&gaa_ts=69c86989&gaa_sig=LdmNYEDNx71xIx7AbdcuUaYvOWu9iPNsEpaxKupKJJGEfBPmHN1XNZAnFZCCLW0PbaIhEQN3ZtMMIU5JRju_Hw%3D%3D"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:18:43.012Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "health",
-          "news"
-        ],
-        "topicCandidates": [
-          "wellness-fitness"
-        ],
-        "detectedSectionId": "health",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": true,
-        "page_kind": "section",
-        "genericity_score": 9,
-        "article_likelihood": 0,
-        "normalizedTitle": "health wsj",
-        "canonicalUrl": "https://www.wsj.com/health",
-        "discoveryScore": 7,
-        "eventKey": "health:health wsj"
-      },
-      "discoveredAt": "2026-03-30T23:18:43.012Z",
-      "lastSeenAt": "2026-03-30T23:19:53.390Z",
-      "expiresAt": "2026-04-01T23:19:53.390Z"
+      "discoveredAt": "2026-04-02T02:38:59.927Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
     },
     {
       "identityKey": "event:sports:casemiro not thinking about reversing manchester united decision",
@@ -427,99 +248,6 @@
       "discoveredAt": "2026-04-01T12:08:14.241Z",
       "lastSeenAt": "2026-04-01T12:08:14.301Z",
       "expiresAt": "2026-04-03T12:08:14.301Z"
-    },
-    {
-      "identityKey": "event:business:bloomberg businessweek",
-      "item": {
-        "id": "google-sec-1774914924267-3",
-        "title": "Bloomberg Businessweek",
-        "summary": "17 hours ago ... Bloomberg Businessweek helps global leaders stay ahead with insights and in-depth analysis on the people, companies, events, and trends shaping today's ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.bloomberg.com/businessweek"
-        ],
-        "freshness": 4,
-        "urgency": 5,
-        "discoveredAt": "2026-03-30T23:55:24.269Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:culture",
-        "sectionCandidates": [
-          "business",
-          "sports",
-          "culture"
-        ],
-        "topicCandidates": [
-          "companies-deals",
-          "events-tournaments"
-        ],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "analysis",
-        "genericity_score": 0,
-        "article_likelihood": 7,
-        "normalizedTitle": "bloomberg businessweek",
-        "canonicalUrl": "https://www.bloomberg.com/businessweek",
-        "discoveryScore": 13.8,
-        "eventKey": "business:bloomberg businessweek"
-      },
-      "discoveredAt": "2026-03-30T23:55:24.269Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
-    },
-    {
-      "identityKey": "event:world-geopolitics:israel says it killed iran navy chief trump warns tehran to get",
-      "item": {
-        "id": "google-sec-1774914924305-9",
-        "title": "Israel says it killed Iran navy chief; Trump warns Tehran to 'get ...",
-        "summary": "2 days ago ... Follow NBC News for live updates on the latest about the war with Iran, peace talks, the energy crisis and a possible ground operation.",
-        "whyItMatters": "",
-        "involvedParties": [
-          "iran",
-          "israel"
-        ],
-        "entities": [
-          "iran",
-          "israel"
-        ],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nbcnews.com/world/iran/live-blog/live-updates-iran-war-trump-talks-israel-attacks-oil-hormuz-kharg-rcna265243"
-        ],
-        "freshness": 4,
-        "urgency": 6,
-        "discoveredAt": "2026-03-30T23:55:24.308Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:news",
-        "sectionCandidates": [
-          "news"
-        ],
-        "topicCandidates": [
-          "world-geopolitics"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": "world-geopolitics",
-        "region": "israel",
-        "angle": "conflict",
-        "genericPage": false,
-        "page_kind": "live",
-        "genericity_score": 6,
-        "article_likelihood": 0,
-        "normalizedTitle": "israel says it killed iran navy chief trump warns tehran to get",
-        "canonicalUrl": "https://www.nbcnews.com/world/iran/live-blog/live-updates-iran-war-trump-talks-israel-attacks-oil-hormuz-kharg-rcna265243",
-        "discoveryScore": 13,
-        "eventKey": "world-geopolitics:israel says it killed iran navy chief trump warns tehran to get"
-      },
-      "discoveredAt": "2026-03-30T23:55:24.308Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
     },
     {
       "identityKey": "event:health:search for fda guidance documents",
@@ -630,51 +358,6 @@
       "expiresAt": "2026-04-03T12:08:59.588Z"
     },
     {
-      "identityKey": "event:business:q4 consumer discretionary casino operator earnings penn",
-      "item": {
-        "id": "google-sec-1774912723029-3",
-        "title": "Q4 Consumer Discretionary - Casino Operator Earnings: PENN ...",
-        "summary": "2 days ago ... Rising competition from online gambling platforms, regional saturation in mature markets, and geopolitical risks in key international jurisdictions add further ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.theglobeandmail.com/investing/markets/stocks/PENN-Q/pressreleases/999537/q4-consumer-discretionary-casino-operator-earnings-penn-entertainment-nasdaqpenn-earns-top-marks/"
-        ],
-        "freshness": 4,
-        "urgency": 6,
-        "discoveredAt": "2026-03-30T23:18:43.031Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:business",
-        "sectionCandidates": [
-          "business",
-          "tech"
-        ],
-        "topicCandidates": [
-          "economy-markets",
-          "companies-deals",
-          "enterprise-platforms"
-        ],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "earnings",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "q4 consumer discretionary casino operator earnings penn",
-        "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/penn-q/pressreleases/999537/q4-consumer-discretionary-casino-operator-earnings-penn-entertainment-nasdaqpenn-earns-top-marks/",
-        "discoveryScore": 15.4,
-        "eventKey": "business:q4 consumer discretionary casino operator earnings penn"
-      },
-      "discoveredAt": "2026-03-30T23:18:43.031Z",
-      "lastSeenAt": "2026-03-30T23:19:53.390Z",
-      "expiresAt": "2026-04-01T23:19:53.390Z"
-    },
-    {
       "identityKey": "event:business:spotting winners hilton nyse hlt and consumer discretionary",
       "item": {
         "id": "google-sec-1775045300483-2",
@@ -725,50 +408,6 @@
       "discoveredAt": "2026-04-01T12:08:20.485Z",
       "lastSeenAt": "2026-04-01T12:08:59.588Z",
       "expiresAt": "2026-04-03T12:08:59.588Z"
-    },
-    {
-      "identityKey": "event:business:finance economics latest news and analysis from the economist",
-      "item": {
-        "id": "google-sec-1774912723036-6",
-        "title": "Finance & economics | Latest news and analysis from The Economist",
-        "summary": "1 day ago ... ... consumer prices. 3 min read. Finance & economics. Chinese companies suffer an intense cash crunch in offshore bond markets. Spreads on junk bonds are at their ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.economist.com/topics/finance-and-economics?after=d211d2f5-dc21-49e0-a014-6d88f81c7e1f"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:18:43.039Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:business",
-        "sectionCandidates": [
-          "business",
-          "news"
-        ],
-        "topicCandidates": [
-          "economy-markets",
-          "companies-deals"
-        ],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": true,
-        "page_kind": "topic",
-        "genericity_score": 8,
-        "article_likelihood": 0,
-        "normalizedTitle": "finance economics latest news and analysis from the economist",
-        "canonicalUrl": "https://www.economist.com/topics/finance-and-economics",
-        "discoveryScore": 8,
-        "eventKey": "business:finance economics latest news and analysis from the economist"
-      },
-      "discoveredAt": "2026-03-30T23:18:43.039Z",
-      "lastSeenAt": "2026-03-30T23:19:53.390Z",
-      "expiresAt": "2026-04-01T23:19:53.390Z"
     },
     {
       "identityKey": "event:business:erin griffith page 9 the new york times",
@@ -967,95 +606,9 @@
       "expiresAt": "2026-04-02T21:42:07.400Z"
     },
     {
-      "identityKey": "event:ai-big-tech:tech company climate goals under pressure due to ai energy demand ap news",
-      "item": {
-        "id": "brave-sec-1774914905598-1",
-        "title": "Tech company climate goals under pressure due to AI energy demand | AP News",
-        "summary": "Tech companies set ambitious climate goals at the start of the decade, promising to slash emissoins that contribute to global warming.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "1 day ago",
-        "sourceUrls": [
-          "https://apnews.com/article/technology-artificial-intelligence-climate-change-data-centers-ef3a9c264bd6376d77e2c81ab266fb38"
-        ],
-        "freshness": 6,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:05.609Z",
-        "provider": "brave",
-        "trustedSource": true,
-        "discoveryLane": "section:news",
-        "sectionCandidates": [
-          "tech",
-          "news",
-          "business"
-        ],
-        "topicCandidates": [
-          "ai-big-tech",
-          "climate-extreme-weather",
-          "companies-deals"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": "ai-big-tech",
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "tech company climate goals under pressure due to ai energy demand ap news",
-        "canonicalUrl": "https://apnews.com/article/technology-artificial-intelligence-climate-change-data-centers-ef3a9c264bd6376d77e2c81ab266fb38",
-        "discoveryScore": 16.4,
-        "eventKey": "ai-big-tech:tech company climate goals under pressure due to ai energy demand ap news"
-      },
-      "discoveredAt": "2026-03-30T23:55:05.609Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
-    },
-    {
-      "identityKey": "event:news:live updates no kings protests across the us rally against trump",
-      "item": {
-        "id": "google-sec-1774914924296-5",
-        "title": "Live updates: 'No Kings' protests across the US rally against Trump ...",
-        "summary": "1 hour ago ... 'No Kings' protests: Large crowds attend nationwide rallies against the Trump administration. A marquee event is underway in Minnesota and protesters are ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "2026-03-28T12:30:19.921Z",
-        "sourceUrls": [
-          "https://www.cnn.com/2026/03/28/us/live-news/no-kings-protests-03-28-26"
-        ],
-        "freshness": 3,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:24.299Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:news",
-        "sectionCandidates": [
-          "news"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "live",
-        "genericity_score": 6,
-        "article_likelihood": 2,
-        "normalizedTitle": "live updates no kings protests across the us rally against trump",
-        "canonicalUrl": "https://www.cnn.com/2026/03/28/us/live-news/no-kings-protests-03-28-26",
-        "discoveryScore": 9,
-        "eventKey": "news:live updates no kings protests across the us rally against trump"
-      },
-      "discoveredAt": "2026-03-30T23:55:24.299Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
-    },
-    {
       "identityKey": "event:news:in the age of misinformation climate literacy matters more than ever honolulu ci",
       "item": {
-        "id": "brave-sec-1775076860629-3",
+        "id": "brave-sec-1775097539932-3",
         "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever - Honolulu Civil Beat",
         "summary": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
         "whyItMatters": "",
@@ -1067,7 +620,7 @@
         ],
         "freshness": 5,
         "urgency": 4,
-        "discoveredAt": "2026-04-01T20:54:20.631Z",
+        "discoveredAt": "2026-04-02T02:38:59.934Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:news",
@@ -1099,52 +652,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-04-01T20:54:20.631Z",
-      "lastSeenAt": "2026-04-01T20:54:59.972Z",
-      "expiresAt": "2026-04-03T20:54:59.972Z"
-    },
-    {
-      "identityKey": "event:news:science nbc news",
-      "item": {
-        "id": "google-sec-1774914924301-7",
-        "title": "Science - NBC News",
-        "summary": "1 day ago ... Find the latest science news articles, photos and videos covering space, the environment, human development and more on NBCNews.com.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nbcnews.com/science"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:24.303Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:news",
-        "sectionCandidates": [
-          "news",
-          "tech"
-        ],
-        "topicCandidates": [
-          "space-astronomy"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "unknown",
-        "genericity_score": 2,
-        "article_likelihood": 1,
-        "normalizedTitle": "science nbc news",
-        "canonicalUrl": "https://www.nbcnews.com/science",
-        "discoveryScore": 11,
-        "eventKey": "news:science nbc news"
-      },
-      "discoveredAt": "2026-03-30T23:55:24.303Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
+      "discoveredAt": "2026-04-02T02:38:59.934Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
     },
     {
       "identityKey": "event:business:cue biopharma announces ceo transition the globe and mail",
@@ -1413,94 +923,6 @@
       "expiresAt": "2026-04-03T20:54:59.972Z"
     },
     {
-      "identityKey": "event:news:emerging markets headlines breaking stock market news reuters",
-      "item": {
-        "id": "google-sec-1774908172531-7",
-        "title": "Emerging Markets Headlines | Breaking Stock Market News - Reuters",
-        "summary": "3 hours ago ... Lisa Bernhard reports. Up next. CIO likes tech, defense stocks despite recent volatility.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.reuters.com/markets/emerging/"
-        ],
-        "freshness": 4,
-        "urgency": 6,
-        "discoveredAt": "2026-03-30T22:02:52.533Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:tech",
-        "sectionCandidates": [
-          "news",
-          "tech",
-          "business"
-        ],
-        "topicCandidates": [
-          "economy-markets"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "markets",
-        "genericPage": false,
-        "page_kind": "roundup",
-        "genericity_score": 6,
-        "article_likelihood": 0,
-        "normalizedTitle": "emerging markets headlines breaking stock market news reuters",
-        "canonicalUrl": "https://www.reuters.com/markets/emerging/",
-        "discoveryScore": 12,
-        "eventKey": "news:emerging markets headlines breaking stock market news reuters"
-      },
-      "discoveredAt": "2026-03-30T22:02:52.533Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:health:s 1 sec gov",
-      "item": {
-        "id": "google-sec-1774913092452-1",
-        "title": "S-1 - SEC.gov",
-        "summary": "1 day ago ... Preliminary Prospectus dated March 27, 2026. Prospectus. Shares. LOGO. Common Stock. This is Kailera Therapeutics, Inc.'s initial public offering. We are ...",
-        "whyItMatters": "",
-        "involvedParties": [
-          "sec"
-        ],
-        "entities": [
-          "sec"
-        ],
-        "when": "",
-        "sourceUrls": [
-          "https://www.sec.gov/Archives/edgar/data/2096997/000119312526128952/d113532ds1.htm"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:24:52.454Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "health",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "official_release",
-        "genericity_score": 1,
-        "article_likelihood": 6,
-        "normalizedTitle": "s 1 sec gov",
-        "canonicalUrl": "https://www.sec.gov/archives/edgar/data/2096997/000119312526128952/d113532ds1.htm",
-        "discoveryScore": 11.2,
-        "eventKey": "health:s 1 sec gov"
-      },
-      "discoveredAt": "2026-03-30T23:24:52.454Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
       "identityKey": "event:news:hims hers health inc hims n stock price and news",
       "item": {
         "id": "google-sec-1775076860666-4",
@@ -1551,49 +973,6 @@
       "discoveredAt": "2026-04-01T20:54:20.668Z",
       "lastSeenAt": "2026-04-01T20:54:59.972Z",
       "expiresAt": "2026-04-03T20:54:59.972Z"
-    },
-    {
-      "identityKey": "event:ai-big-tech:tech news today s latest technology news reuters",
-      "item": {
-        "id": "google-sec-1774908172512-0",
-        "title": "Tech News | Today's Latest Technology News | Reuters",
-        "summary": "1 hour ago ... Researchers at Northwestern University have developed modular robots designed with the help of artificial intelligence (AI) that can keep moving outdoors even ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.reuters.com/technology/"
-        ],
-        "freshness": 4,
-        "urgency": 5,
-        "discoveredAt": "2026-03-30T22:02:52.515Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:tech",
-        "sectionCandidates": [
-          "tech",
-          "news"
-        ],
-        "topicCandidates": [
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": "ai-big-tech",
-        "region": "global",
-        "angle": "general",
-        "genericPage": true,
-        "page_kind": "section",
-        "genericity_score": 9,
-        "article_likelihood": 0,
-        "normalizedTitle": "tech news today s latest technology news reuters",
-        "canonicalUrl": "https://www.reuters.com/technology/",
-        "discoveryScore": 9,
-        "eventKey": "ai-big-tech:tech news today s latest technology news reuters"
-      },
-      "discoveredAt": "2026-03-30T22:02:52.515Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
     },
     {
       "identityKey": "event:business:maha fans want action trump hasn t delivered politico",
@@ -1749,171 +1128,6 @@
       "expiresAt": "2026-04-02T19:54:25.618Z"
     },
     {
-      "identityKey": "event:news:science the new york times",
-      "item": {
-        "id": "google-sec-1774912722993-0",
-        "title": "Science - The New York Times",
-        "summary": "1 day ago ... The latest science news and developments about space, animal behavior, plant life, the brain, genetics, archaeology, robots and climate change, ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nytimes.com/section/science"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:18:42.995Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "news",
-          "tech",
-          "health"
-        ],
-        "topicCandidates": [
-          "climate-extreme-weather",
-          "space-astronomy"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "topic",
-        "genericity_score": 6,
-        "article_likelihood": 0,
-        "normalizedTitle": "science the new york times",
-        "canonicalUrl": "https://www.nytimes.com/section/science",
-        "discoveryScore": 10,
-        "eventKey": "news:science the new york times"
-      },
-      "discoveredAt": "2026-03-30T23:18:42.995Z",
-      "lastSeenAt": "2026-03-30T23:19:53.390Z",
-      "expiresAt": "2026-04-01T23:19:53.390Z"
-    },
-    {
-      "identityKey": "event:health:merck company inc the new york times",
-      "item": {
-        "id": "google-sec-1774912722998-2",
-        "title": "Merck & Company Inc. - The New York Times",
-        "summary": "21 hours ago ... Robert F. Kennedy Jr., President Trump's nominee to be health secretary, would have oversight power over the vaccine's maker, Merck, if confirmed.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nytimes.com/topic/company/merck-company-inc"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:18:43.001Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "health",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "topic",
-        "genericity_score": 6,
-        "article_likelihood": 0,
-        "normalizedTitle": "merck company inc the new york times",
-        "canonicalUrl": "https://www.nytimes.com/topic/company/merck-company-inc",
-        "discoveryScore": 10,
-        "eventKey": "health:merck company inc the new york times"
-      },
-      "discoveredAt": "2026-03-30T23:18:43.001Z",
-      "lastSeenAt": "2026-03-30T23:19:53.390Z",
-      "expiresAt": "2026-04-01T23:19:53.390Z"
-    },
-    {
-      "identityKey": "event:health:27 march 2026 sitemap reuters",
-      "item": {
-        "id": "google-sec-1774912723012-7",
-        "title": "27 March 2026 - Sitemap | Reuters",
-        "summary": "2 days ago ... Explore the list of articles from selected day 2026-03-27 published on reuters.com.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.reuters.com/sitemap/2026-03/27/1/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:18:43.014Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "health",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "unknown",
-        "genericity_score": 0,
-        "article_likelihood": 1,
-        "normalizedTitle": "27 march 2026 sitemap reuters",
-        "canonicalUrl": "https://www.reuters.com/sitemap/2026-03/27/1/",
-        "discoveryScore": 10,
-        "eventKey": "health:27 march 2026 sitemap reuters"
-      },
-      "discoveredAt": "2026-03-30T23:18:43.014Z",
-      "lastSeenAt": "2026-03-30T23:19:53.390Z",
-      "expiresAt": "2026-04-01T23:19:53.390Z"
-    },
-    {
-      "identityKey": "event:health:implants page 9 the new york times",
-      "item": {
-        "id": "google-sec-1774912723004-4",
-        "title": "Implants - Page 9 - The New York Times",
-        "summary": "2 days ago ... Boston Scientific announced multiple recalls but has said its battery issues were limited. One internal test in 2025 found batteries with an “extremely high ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nytimes.com/topic/subject/implants?page=9"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:18:43.006Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:health",
-        "sectionCandidates": [
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "health",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "announcement",
-        "genericPage": false,
-        "page_kind": "topic",
-        "genericity_score": 6,
-        "article_likelihood": 0,
-        "normalizedTitle": "implants page 9 the new york times",
-        "canonicalUrl": "https://www.nytimes.com/topic/subject/implants",
-        "discoveryScore": 9,
-        "eventKey": "health:implants page 9 the new york times"
-      },
-      "discoveredAt": "2026-03-30T23:18:43.006Z",
-      "lastSeenAt": "2026-03-30T23:19:53.390Z",
-      "expiresAt": "2026-04-01T23:19:53.390Z"
-    },
-    {
       "identityKey": "event:sports:manchester united transfers zirkzee rashford and should the club",
       "item": {
         "id": "google-sec-1775045294243-5",
@@ -2059,50 +1273,6 @@
       "discoveredAt": "2026-04-01T12:08:14.243Z",
       "lastSeenAt": "2026-04-01T12:08:14.301Z",
       "expiresAt": "2026-04-03T12:08:14.301Z"
-    },
-    {
-      "identityKey": "event:transfers-business:athletes train for almost every scenario but there s a stressor sports",
-      "item": {
-        "id": "google-sec-1774913092441-7",
-        "title": "Athletes train for almost every scenario. But there's a stressor sports ...",
-        "summary": "16 hours ago ... She was a professor at Harvard Business School and is a best-selling author. Before the opening tip of an NCAA tournament game, an unnamed college basketball ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nytimes.com/athletic/7152160/2026/03/28/athletes-train-for-almost-every-scenario-but-theres-a-stressor-sports-hasnt-caught-up-to/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:24:52.444Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:sports",
-        "sectionCandidates": [
-          "sports",
-          "business"
-        ],
-        "topicCandidates": [
-          "transfers-business",
-          "athletes-culture"
-        ],
-        "detectedSectionId": "sports",
-        "detectedTopicId": "transfers-business",
-        "region": "global",
-        "angle": "events",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "athletes train for almost every scenario but there s a stressor sports",
-        "canonicalUrl": "https://www.nytimes.com/athletic/7152160/2026/03/28/athletes-train-for-almost-every-scenario-but-theres-a-stressor-sports-hasnt-caught-up-to/",
-        "discoveryScore": 15.6,
-        "eventKey": "transfers-business:athletes train for almost every scenario but there s a stressor sports"
-      },
-      "discoveredAt": "2026-03-30T23:24:52.444Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
     },
     {
       "identityKey": "event:business:radnet nasdaq rdnt q4 earnings the globe and mail",
@@ -2605,51 +1775,6 @@
       "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
-      "identityKey": "event:business:jim cramer on paychex this is a stock that strangely has been crushed by ai disr",
-      "item": {
-        "id": "gdelt-sec-1774914933329-7",
-        "title": "Jim Cramer on Paychex : This Is a Stock That Strangely Has Been Crushed By AI Disruption Worries , I Think Theyre Overbl",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260329T004500Z",
-        "sourceUrls": [
-          "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:33.331Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:sports",
-        "sectionCandidates": [
-          "business",
-          "tech",
-          "sports"
-        ],
-        "topicCandidates": [
-          "economy-markets",
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "jim cramer on paychex this is a stock that strangely has been crushed by ai disruption worries i think theyre overbl",
-        "canonicalUrl": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
-        "discoveryScore": 11.4,
-        "eventKey": "business:jim cramer on paychex this is a stock that strangely has been crushed by ai disr"
-      },
-      "discoveredAt": "2026-03-30T23:55:33.331Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
-    },
-    {
       "identityKey": "event:sports:youre a presenter now not a labour minister ed balls is told after on air dust u",
       "item": {
         "id": "gdelt-sec-1775045294264-2",
@@ -2794,47 +1919,6 @@
       "expiresAt": "2026-04-03T12:08:14.301Z"
     },
     {
-      "identityKey": "event:business:don lemon the new york times",
-      "item": {
-        "id": "google-sec-1774914924274-6",
-        "title": "Don Lemon - The New York Times",
-        "summary": "2 days ago ... The former CNN anchor released a wide-ranging interview with the billionaire about business, politics, online hate speech and more.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "",
-        "sourceUrls": [
-          "https://www.nytimes.com/topic/don-lemon"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:24.276Z",
-        "provider": "google_trusted",
-        "trustedSource": true,
-        "discoveryLane": "google:culture",
-        "sectionCandidates": [
-          "business",
-          "culture"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "product",
-        "genericPage": false,
-        "page_kind": "topic",
-        "genericity_score": 6,
-        "article_likelihood": 0,
-        "normalizedTitle": "don lemon the new york times",
-        "canonicalUrl": "https://www.nytimes.com/topic/don-lemon",
-        "discoveryScore": 10,
-        "eventKey": "business:don lemon the new york times"
-      },
-      "discoveredAt": "2026-03-30T23:55:24.276Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
-    },
-    {
       "identityKey": "event:crypto-bitcoin:intellectia",
       "item": {
         "id": "brave-sec-1774971165801-2",
@@ -2877,51 +1961,6 @@
       "discoveredAt": "2026-03-31T15:32:45.805Z",
       "lastSeenAt": "2026-03-31T15:34:34.918Z",
       "expiresAt": "2026-04-02T15:34:34.918Z"
-    },
-    {
-      "identityKey": "event:sports:trans day of visibility basketball tournament creates space for trans athletes a",
-      "item": {
-        "id": "brave-sec-1774914924253-4",
-        "title": "Trans Day of Visibility basketball tournament creates space for trans athletes amid international sports bans - Chicago ",
-        "summary": "The court, split into competitive and recreational sides, pitted players of all genders against each other for 15-minute matchups less than a week after transgender female athletes were banned from women’s events at the Olympics after the International Olympic Committee agreed to a new ...",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "1 day ago",
-        "sourceUrls": [
-          "https://chicago.suntimes.com/lgbtq/2026/03/29/basketball-tournament-makes-space-for-trans-athletes-amid-international-sports-bans"
-        ],
-        "freshness": 6,
-        "urgency": 7,
-        "discoveredAt": "2026-03-30T23:55:24.257Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:sports",
-        "sectionCandidates": [
-          "sports",
-          "tech"
-        ],
-        "topicCandidates": [
-          "space-astronomy",
-          "events-tournaments",
-          "athletes-culture"
-        ],
-        "detectedSectionId": "sports",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "legal",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "trans day of visibility basketball tournament creates space for trans athletes amid international sports bans chicago",
-        "canonicalUrl": "https://chicago.suntimes.com/lgbtq/2026/03/29/basketball-tournament-makes-space-for-trans-athletes-amid-international-sports-bans",
-        "discoveryScore": 17.6,
-        "eventKey": "sports:trans day of visibility basketball tournament creates space for trans athletes a"
-      },
-      "discoveredAt": "2026-03-30T23:55:24.257Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
     },
     {
       "identityKey": "event:crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
@@ -3181,47 +2220,6 @@
       "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
-      "identityKey": "event:culture:why notre dame s culture is winning in the transfer portal era uhnd com",
-      "item": {
-        "id": "brave-sec-1774914924238-0",
-        "title": "Why Notre Dame's Culture Is Winning In The Transfer Portal Era // UHND.com",
-        "summary": "In today’s college football landscape, roster stability is rare. The transfer portal has turned player movement into a year-round reality, with programs",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "2 days ago",
-        "sourceUrls": [
-          "https://uhnd.com/football/2026/03/29/why-notre-dames-culture-is-winning-in-the-transfer-portal-era"
-        ],
-        "freshness": 5,
-        "urgency": 5,
-        "discoveredAt": "2026-03-30T23:55:24.243Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:sports",
-        "sectionCandidates": [
-          "culture",
-          "sports"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "culture",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "transfers",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "why notre dame s culture is winning in the transfer portal era uhnd com",
-        "canonicalUrl": "https://uhnd.com/football/2026/03/29/why-notre-dames-culture-is-winning-in-the-transfer-portal-era",
-        "discoveryScore": 14.6,
-        "eventKey": "culture:why notre dame s culture is winning in the transfer portal era uhnd com"
-      },
-      "discoveredAt": "2026-03-30T23:55:24.243Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
-    },
-    {
       "identityKey": "event:us-politics:climate law battle royale politico",
       "item": {
         "id": "google-sec-1775045300461-3",
@@ -3274,303 +2272,6 @@
       "expiresAt": "2026-04-03T12:08:59.588Z"
     },
     {
-      "identityKey": "event:news:xrp market trends ripple s regulatory milestones in 2026 news and statistics ind",
-      "item": {
-        "id": "brave-sec-1774914906295-2",
-        "title": "XRP Market Trends & Ripple's Regulatory Milestones in 2026 - News and Statistics - IndexBox",
-        "summary": "This article examines XRP's market downturn alongside Ripple Labs' key regulatory advancements, including a resolved SEC case and conditional approval for a national trust bank, as of early 2026.",
-        "whyItMatters": "",
-        "involvedParties": [
-          "sec"
-        ],
-        "entities": [
-          "sec"
-        ],
-        "when": "1 day ago",
-        "sourceUrls": [
-          "https://www.indexbox.io/blog/xrp-price-decline-and-ripple-labs-regulatory-progress-in-2026/"
-        ],
-        "freshness": 6,
-        "urgency": 6,
-        "discoveredAt": "2026-03-30T23:55:06.299Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:business",
-        "sectionCandidates": [
-          "news",
-          "business"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "markets",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "xrp market trends ripple s regulatory milestones in 2026 news and statistics indexbox",
-        "canonicalUrl": "https://www.indexbox.io/blog/xrp-price-decline-and-ripple-labs-regulatory-progress-in-2026/",
-        "discoveryScore": 15.4,
-        "eventKey": "news:xrp market trends ripple s regulatory milestones in 2026 news and statistics ind"
-      },
-      "discoveredAt": "2026-03-30T23:55:06.299Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
-    },
-    {
-      "identityKey": "event:culture:10 tv shows that changed fandom culture",
-      "item": {
-        "id": "brave-sec-1774913074611-0",
-        "title": "10 TV Shows That Changed Fandom Culture",
-        "summary": "These groundbreaking TV shows transformed fandom culture through interactive storytelling, online engagement, & participatory fan communities.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "1 day ago",
-        "sourceUrls": [
-          "https://screenrant.com/tv-shows-changed-fandom-culture"
-        ],
-        "freshness": 6,
-        "urgency": 6,
-        "discoveredAt": "2026-03-30T23:24:34.626Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:culture",
-        "sectionCandidates": [
-          "culture"
-        ],
-        "topicCandidates": [
-          "film-tv"
-        ],
-        "detectedSectionId": "culture",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "10 tv shows that changed fandom culture",
-        "canonicalUrl": "https://screenrant.com/tv-shows-changed-fandom-culture",
-        "discoveryScore": 15.4,
-        "eventKey": "culture:10 tv shows that changed fandom culture"
-      },
-      "discoveredAt": "2026-03-30T23:24:34.626Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
-      "identityKey": "event:culture:what the netflix warner music deal really means for artists and brands",
-      "item": {
-        "id": "brave-sec-1774913074626-1",
-        "title": "What the Netflix–Warner Music Deal Really Means for Artists and Brands",
-        "summary": "What does the Netflix-Warner Music deal signal about the future of artists and music IP, and should brands be taking notice?",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "8 hours ago",
-        "sourceUrls": [
-          "https://adweek.com/creativity/what-the-netflix-warner-music-deal-really-means-for-artists-and-brands"
-        ],
-        "freshness": 8,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:24:34.635Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:culture",
-        "sectionCandidates": [
-          "culture"
-        ],
-        "topicCandidates": [
-          "music-celebrities"
-        ],
-        "detectedSectionId": "culture",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "what the netflix warner music deal really means for artists and brands",
-        "canonicalUrl": "https://adweek.com/creativity/what-the-netflix-warner-music-deal-really-means-for-artists-and-brands",
-        "discoveryScore": 15.4,
-        "eventKey": "culture:what the netflix warner music deal really means for artists and brands"
-      },
-      "discoveredAt": "2026-03-30T23:24:34.635Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
-      "identityKey": "event:cybersecurity:3 6 billion in crunchbase funding 96 billion in m a and 10 agentic ai security s",
-      "item": {
-        "id": "brave-sec-1774914912341-0",
-        "title": "$3.6 Billion in Crunchbase funding, $96 Billion in M&A, and 10 Agentic AI security startups Reshaping 2026",
-        "summary": "Three acquirers spent $72 billion on cybersecurity M&A. The 10 startups building agentic AI defenses raised $3.6 billion. Total MCP security funding: $40 million. Analysis of Crunchbase, CB Insights, and Gartner data.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "2 days ago",
-        "sourceUrls": [
-          "https://softwarestrategiesblog.com/2026/03/28/agentic-ai-security-startups-funding-mna-rsac-2026"
-        ],
-        "freshness": 5,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:12.356Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [
-          "cybersecurity",
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": "cybersecurity",
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "analysis",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "3 6 billion in crunchbase funding 96 billion in m a and 10 agentic ai security startups reshaping 2026",
-        "canonicalUrl": "https://softwarestrategiesblog.com/2026/03/28/agentic-ai-security-startups-funding-mna-rsac-2026",
-        "discoveryScore": 14.6,
-        "eventKey": "cybersecurity:3 6 billion in crunchbase funding 96 billion in m a and 10 agentic ai security s"
-      },
-      "discoveredAt": "2026-03-30T23:55:12.356Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
-    },
-    {
-      "identityKey": "event:cybersecurity:where ai labs will and won t disrupt cybersecurity",
-      "item": {
-        "id": "brave-sec-1774914912376-4",
-        "title": "Where AI Labs Will and Won't Disrupt Cybersecurity",
-        "summary": "AI labs are moving into application security, but three structural barriers define where they won't go, and that's where the next generation of durable security",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "2 days ago",
-        "sourceUrls": [
-          "https://bankinfosecurity.com/where-ai-labs-will-wont-disrupt-cybersecurity-a-31267"
-        ],
-        "freshness": 5,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:12.378Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [
-          "cybersecurity",
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": "cybersecurity",
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "where ai labs will and won t disrupt cybersecurity",
-        "canonicalUrl": "https://bankinfosecurity.com/where-ai-labs-will-wont-disrupt-cybersecurity-a-31267",
-        "discoveryScore": 13.4,
-        "eventKey": "cybersecurity:where ai labs will and won t disrupt cybersecurity"
-      },
-      "discoveredAt": "2026-03-30T23:55:12.378Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
-    },
-    {
-      "identityKey": "event:health:heart disease",
-      "item": {
-        "id": "brave-sec-1774914918218-4",
-        "title": "Heart Disease",
-        "summary": "Discover how just 11 extra minutes of sleep and 5 minutes of daily exercise can help reduce the risk of heart disease. Learn simple, science-backed habits to improve your heart health naturally.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "18 hours ago",
-        "sourceUrls": [
-          "https://www.carenibo.com/sleep-more-exercise-daily-heart-disease-risk/"
-        ],
-        "freshness": 7,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:18.220Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:health",
-        "sectionCandidates": [
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "health",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "heart disease",
-        "canonicalUrl": "https://www.carenibo.com/sleep-more-exercise-daily-heart-disease-risk/",
-        "discoveryScore": 14.4,
-        "eventKey": "health:heart disease"
-      },
-      "discoveredAt": "2026-03-30T23:55:18.220Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
-    },
-    {
-      "identityKey": "event:sports:anti science npr tries to muddy waters on olympics will ban transgender athletes",
-      "item": {
-        "id": "brave-sec-1774914924250-3",
-        "title": "Anti-Science NPR Tries to Muddy Waters on Olympics: 'Will Ban Transgender Athletes'",
-        "summary": "NPR reporter Rachel Treisman relied on politicized \"science\" to muddy the waters on Thursday’s Morning E",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "2 days ago",
-        "sourceUrls": [
-          "https://www.newsbusters.org/blogs/nb/clay-waters/2026/03/28/anti-science-npr-tries-muddy-waters-olympics-will-ban-transgender"
-        ],
-        "freshness": 5,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:24.253Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:sports",
-        "sectionCandidates": [
-          "sports"
-        ],
-        "topicCandidates": [
-          "athletes-culture"
-        ],
-        "detectedSectionId": "sports",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "anti science npr tries to muddy waters on olympics will ban transgender athletes",
-        "canonicalUrl": "https://www.newsbusters.org/blogs/nb/clay-waters/2026/03/28/anti-science-npr-tries-muddy-waters-olympics-will-ban-transgender",
-        "discoveryScore": 13.6,
-        "eventKey": "sports:anti science npr tries to muddy waters on olympics will ban transgender athletes"
-      },
-      "discoveredAt": "2026-03-30T23:55:24.253Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
-    },
-    {
       "identityKey": "event:business:5 cctvs to consider as india set to ban sale of hikvision dahua and tp link from",
       "item": {
         "id": "brave-sec-1774971165815-4",
@@ -3613,92 +2314,6 @@
       "discoveredAt": "2026-03-31T15:32:45.819Z",
       "lastSeenAt": "2026-03-31T15:34:34.918Z",
       "expiresAt": "2026-04-02T15:34:34.918Z"
-    },
-    {
-      "identityKey": "event:health:health a comprehensive view of well being",
-      "item": {
-        "id": "brave-sec-1774908154639-4",
-        "title": "Health: A Comprehensive View of Well-Being",
-        "summary": "Health is one of the most essential aspects of human life, influencing productivity, happiness, and overall quality of living. It is not simply defined by",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "1 day ago",
-        "sourceUrls": [
-          "https://buyetizolamrx.com/health-a-comprehensive-view-of-well-being/"
-        ],
-        "freshness": 6,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:02:34.642Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:health",
-        "sectionCandidates": [
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "health",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "health a comprehensive view of well being",
-        "canonicalUrl": "https://buyetizolamrx.com/health-a-comprehensive-view-of-well-being/",
-        "discoveryScore": 13.4,
-        "eventKey": "health:health a comprehensive view of well being"
-      },
-      "discoveredAt": "2026-03-30T22:02:34.642Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:health:best led masks of 2026 cleared by the fda cnet",
-      "item": {
-        "id": "brave-sec-1774914918212-2",
-        "title": "Best LED Masks of 2026, Cleared by the FDA - CNET",
-        "summary": "Here's our selection of the most dazzling light therapy masks of the year that'll leave your skin glowing.",
-        "whyItMatters": "",
-        "involvedParties": [
-          "fda"
-        ],
-        "entities": [
-          "fda"
-        ],
-        "when": "12 hours ago",
-        "sourceUrls": [
-          "https://www.cnet.com/health/best-led-face-masks/"
-        ],
-        "freshness": 7,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:18.215Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:health",
-        "sectionCandidates": [
-          "health"
-        ],
-        "topicCandidates": [
-          "pharma-fda"
-        ],
-        "detectedSectionId": "health",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "unknown",
-        "genericity_score": 0,
-        "article_likelihood": 1,
-        "normalizedTitle": "best led masks of 2026 cleared by the fda cnet",
-        "canonicalUrl": "https://www.cnet.com/health/best-led-face-masks/",
-        "discoveryScore": 12,
-        "eventKey": "health:best led masks of 2026 cleared by the fda cnet"
-      },
-      "discoveredAt": "2026-03-30T23:55:18.215Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
     },
     {
       "identityKey": "event:culture:the 10 best cookbooks of 2026 so far",
@@ -3798,49 +2413,6 @@
       "expiresAt": "2026-04-02T21:42:08.010Z"
     },
     {
-      "identityKey": "event:medical-research:health medicine news sciencedaily",
-      "item": {
-        "id": "brave-sec-1774914918205-0",
-        "title": "Health & Medicine News -- ScienceDaily",
-        "summary": "Medical Research News. Health news on everything from cancer to nutrition. Updated daily.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "2 days ago",
-        "sourceUrls": [
-          "https://www.sciencedaily.com/news/health_medicine/"
-        ],
-        "freshness": 5,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:18.208Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:health",
-        "sectionCandidates": [
-          "health",
-          "news"
-        ],
-        "topicCandidates": [
-          "medical-research"
-        ],
-        "detectedSectionId": "health",
-        "detectedTopicId": "medical-research",
-        "region": "global",
-        "angle": "research",
-        "genericPage": false,
-        "page_kind": "unknown",
-        "genericity_score": 0,
-        "article_likelihood": 1,
-        "normalizedTitle": "health medicine news sciencedaily",
-        "canonicalUrl": "https://www.sciencedaily.com/news/health_medicine/",
-        "discoveryScore": 11,
-        "eventKey": "medical-research:health medicine news sciencedaily"
-      },
-      "discoveredAt": "2026-03-30T23:55:18.208Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
-    },
-    {
       "identityKey": "event:news:transfer centre live football transfer news updates and rumours transfer centre ",
       "item": {
         "id": "brave-sec-1774971183676-3",
@@ -3880,867 +2452,6 @@
       "discoveredAt": "2026-03-31T15:33:03.678Z",
       "lastSeenAt": "2026-03-31T15:34:34.918Z",
       "expiresAt": "2026-04-02T15:34:34.918Z"
-    },
-    {
-      "identityKey": "event:culture:is the pitt s dr robby going to die in season 2 these 9 clues are hard to ignore",
-      "item": {
-        "id": "brave-sec-1774908166588-3",
-        "title": "Is 'The Pitt's Dr. Robby Going To Die in Season 2? These 9 Clues Are Hard To Ignore",
-        "summary": "The Pitt Season 2 is hinting at a dark ending for Noah Wyle's Dr. Robby, and these clues are getting harder to ignore on the HBO Max series.",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "4 hours ago",
-        "sourceUrls": [
-          "https://collider.com/the-pitt-season-2-dr-robby-death-clues-hard-to-ignore/"
-        ],
-        "freshness": 8,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:02:46.590Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:culture",
-        "sectionCandidates": [
-          "culture"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "culture",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "is the pitt s dr robby going to die in season 2 these 9 clues are hard to ignore",
-        "canonicalUrl": "https://collider.com/the-pitt-season-2-dr-robby-death-clues-hard-to-ignore/",
-        "discoveryScore": 14.4,
-        "eventKey": "culture:is the pitt s dr robby going to die in season 2 these 9 clues are hard to ignore"
-      },
-      "discoveredAt": "2026-03-30T22:02:46.590Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:business:blackstone backed epl and indorama ventures backed indovida to merge moneycontro",
-      "item": {
-        "id": "brave-sec-1774912717019-4",
-        "title": "Blackstone-backed EPL and Indorama Ventures backed Indovida to merge- Moneycontrol.com",
-        "summary": "The transaction aligns with Indorama Ventures’ long‑term strategy to expand and deepen its presence in India, leveraging the country’s structural growth opportunity through an expanded and integrated packaging platform with public markets access",
-        "whyItMatters": "",
-        "involvedParties": [
-          "india"
-        ],
-        "entities": [
-          "india"
-        ],
-        "when": "1 day ago",
-        "sourceUrls": [
-          "https://www.moneycontrol.com/news/business/companies/blackstone-backed-epl-and-indorama-ventures-backed-indovida-to-merge-13873706.html"
-        ],
-        "freshness": 6,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:18:37.022Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:business",
-        "sectionCandidates": [
-          "business",
-          "news"
-        ],
-        "topicCandidates": [
-          "economy-markets",
-          "companies-deals"
-        ],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "india",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "blackstone backed epl and indorama ventures backed indovida to merge moneycontrol com",
-        "canonicalUrl": "https://www.moneycontrol.com/news/business/companies/blackstone-backed-epl-and-indorama-ventures-backed-indovida-to-merge-13873706.html",
-        "discoveryScore": 13.4,
-        "eventKey": "business:blackstone backed epl and indorama ventures backed indovida to merge moneycontro"
-      },
-      "discoveredAt": "2026-03-30T23:18:37.022Z",
-      "lastSeenAt": "2026-03-30T23:19:53.390Z",
-      "expiresAt": "2026-04-01T23:19:53.390Z"
-    },
-    {
-      "identityKey": "event:tech:ex bluesky ceo jay graber launches app for user defined social feeds",
-      "item": {
-        "id": "gdelt-sec-1774908193412-9",
-        "title": "Ex - Bluesky CEO Jay Graber Launches App for User - Defined Social Feeds",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://observer.com/2026/03/bluesky-jay-graber-ai-custom-feeds/"
-        ],
-        "freshness": 4,
-        "urgency": 6,
-        "discoveredAt": "2026-03-30T22:03:13.414Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "ex bluesky ceo jay graber launches app for user defined social feeds",
-        "canonicalUrl": "https://observer.com/2026/03/bluesky-jay-graber-ai-custom-feeds/",
-        "discoveryScore": 13.4,
-        "eventKey": "tech:ex bluesky ceo jay graber launches app for user defined social feeds"
-      },
-      "discoveredAt": "2026-03-30T22:03:13.414Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:news:elections commission chair warns against betting on wisconsin elections",
-      "item": {
-        "id": "gdelt-sec-1774908214187-0",
-        "title": "Elections commission chair warns against betting on Wisconsin elections",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.wjfw.com/news/regional/elections-commission-chair-warns-against-betting-on-wisconsin-elections/article_306dde56-aee9-5038-ab52-bf134e6ef132.html"
-        ],
-        "freshness": 4,
-        "urgency": 6,
-        "discoveredAt": "2026-03-30T22:03:34.189Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:business",
-        "sectionCandidates": [
-          "news",
-          "business"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "elections commission chair warns against betting on wisconsin elections",
-        "canonicalUrl": "https://www.wjfw.com/news/regional/elections-commission-chair-warns-against-betting-on-wisconsin-elections/article_306dde56-aee9-5038-ab52-bf134e6ef132.html",
-        "discoveryScore": 13.4,
-        "eventKey": "news:elections commission chair warns against betting on wisconsin elections"
-      },
-      "discoveredAt": "2026-03-30T22:03:34.189Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:tech:chance ai debuts visual agent technology at art central hong kong",
-      "item": {
-        "id": "gdelt-sec-1774908193394-2",
-        "title": "Chance AI Debuts Visual Agent Technology at Art Central Hong Kong",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.manilatimes.net/2026/03/31/tmt-newswire/globenewswire/chance-ai-debuts-visual-agent-technology-at-art-central-hong-kong/2310938"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:13.397Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "chance ai debuts visual agent technology at art central hong kong",
-        "canonicalUrl": "https://www.manilatimes.net/2026/03/31/tmt-newswire/globenewswire/chance-ai-debuts-visual-agent-technology-at-art-central-hong-kong/2310938",
-        "discoveryScore": 12.6,
-        "eventKey": "tech:chance ai debuts visual agent technology at art central hong kong"
-      },
-      "discoveredAt": "2026-03-30T22:03:13.397Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:ai-big-tech:eli lilly signs 2 billion deal to develop drugs using artificial intelligence",
-      "item": {
-        "id": "gdelt-sec-1774908193387-0",
-        "title": "Eli Lilly signs $2 billion deal to develop drugs using artificial intelligence",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.kulr8.com/national/eli-lilly-signs-2-billion-deal-to-develop-drugs-using-artificial-intelligence/article_2242bd55-470b-5eee-bb9d-005c6ac296be.html"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:13.391Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [
-          "ai-big-tech"
-        ],
-        "detectedSectionId": "tech",
-        "detectedTopicId": "ai-big-tech",
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "eli lilly signs 2 billion deal to develop drugs using artificial intelligence",
-        "canonicalUrl": "https://www.kulr8.com/national/eli-lilly-signs-2-billion-deal-to-develop-drugs-using-artificial-intelligence/article_2242bd55-470b-5eee-bb9d-005c6ac296be.html",
-        "discoveryScore": 12.4,
-        "eventKey": "ai-big-tech:eli lilly signs 2 billion deal to develop drugs using artificial intelligence"
-      },
-      "discoveredAt": "2026-03-30T22:03:13.391Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:business:delta ceo ed bastian rips lawmakers for lack of leadership in dhs shutdown",
-      "item": {
-        "id": "gdelt-sec-1774908214199-4",
-        "title": "Delta CEO Ed Bastian rips lawmakers for lack of leadership in DHS shutdown",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.foxbusiness.com/media/delta-ceo-ed-bastian-rips-lawmakers-lack-leadership-dhs-shutdown"
-        ],
-        "freshness": 4,
-        "urgency": 6,
-        "discoveredAt": "2026-03-30T22:03:34.201Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:business",
-        "sectionCandidates": [
-          "business"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "policy",
-        "genericPage": false,
-        "page_kind": "official_release",
-        "genericity_score": 1,
-        "article_likelihood": 7,
-        "normalizedTitle": "delta ceo ed bastian rips lawmakers for lack of leadership in dhs shutdown",
-        "canonicalUrl": "https://www.foxbusiness.com/media/delta-ceo-ed-bastian-rips-lawmakers-lack-leadership-dhs-shutdown",
-        "discoveryScore": 11.8,
-        "eventKey": "business:delta ceo ed bastian rips lawmakers for lack of leadership in dhs shutdown"
-      },
-      "discoveredAt": "2026-03-30T22:03:34.201Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:tech:viq solutions inc vqs v cve vqs sets new 12 month low here why",
-      "item": {
-        "id": "gdelt-sec-1774908193408-7",
-        "title": "VIQ Solutions Inc . ( VQS . V ) ( CVE : VQS ) Sets New 12 - Month Low – Here Why",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.dailypolitical.com/2026/03/30/viq-solutions-inc-vqs-v-cvevqs-sets-new-12-month-low-heres-why.html"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:13.410Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "viq solutions inc vqs v cve vqs sets new 12 month low here why",
-        "canonicalUrl": "https://www.dailypolitical.com/2026/03/30/viq-solutions-inc-vqs-v-cvevqs-sets-new-12-month-low-heres-why.html",
-        "discoveryScore": 11.6,
-        "eventKey": "tech:viq solutions inc vqs v cve vqs sets new 12 month low here why"
-      },
-      "discoveredAt": "2026-03-30T22:03:13.410Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:tech:georgia study shows how many years it takes to save for a home",
-      "item": {
-        "id": "gdelt-sec-1774908193410-8",
-        "title": "Georgia : Study Shows How Many Years It Takes to Save for a Home",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://kicks99.com/2026/03/30/georgia-study-shows-how-many-years-it-takes-to-save-for-a-home/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:13.412Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "research",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "georgia study shows how many years it takes to save for a home",
-        "canonicalUrl": "https://kicks99.com/2026/03/30/georgia-study-shows-how-many-years-it-takes-to-save-for-a-home/",
-        "discoveryScore": 11.6,
-        "eventKey": "tech:georgia study shows how many years it takes to save for a home"
-      },
-      "discoveredAt": "2026-03-30T22:03:13.412Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:business:china citic bank otcmkts chcjy sets new 12 month high time to buy",
-      "item": {
-        "id": "gdelt-sec-1774908214189-1",
-        "title": "China CITIC Bank ( OTCMKTS : CHCJY ) Sets New 12 - Month High – Time to Buy ?",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [
-          "china"
-        ],
-        "entities": [
-          "china"
-        ],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.themarketsdaily.com/2026/03/30/china-citic-bank-otcmktschcjy-sets-new-12-month-high-time-to-buy.html"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:34.193Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:business",
-        "sectionCandidates": [
-          "business"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "china",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "china citic bank otcmkts chcjy sets new 12 month high time to buy",
-        "canonicalUrl": "https://www.themarketsdaily.com/2026/03/30/china-citic-bank-otcmktschcjy-sets-new-12-month-high-time-to-buy.html",
-        "discoveryScore": 11.6,
-        "eventKey": "business:china citic bank otcmkts chcjy sets new 12 month high time to buy"
-      },
-      "discoveredAt": "2026-03-30T22:03:34.193Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:business:honey badger silver cve tuf stock price up 13 6 time to buy",
-      "item": {
-        "id": "gdelt-sec-1774908214193-2",
-        "title": "Honey Badger Silver ( CVE : TUF ) Stock Price Up 13 . 6 % – Time to Buy ?",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.themarketsdaily.com/2026/03/30/honey-badger-silver-cvetuf-stock-price-up-13-6-time-to-buy.html"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:34.196Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:business",
-        "sectionCandidates": [
-          "business"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "honey badger silver cve tuf stock price up 13 6 time to buy",
-        "canonicalUrl": "https://www.themarketsdaily.com/2026/03/30/honey-badger-silver-cvetuf-stock-price-up-13-6-time-to-buy.html",
-        "discoveryScore": 11.6,
-        "eventKey": "business:honey badger silver cve tuf stock price up 13 6 time to buy"
-      },
-      "discoveredAt": "2026-03-30T22:03:34.196Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:news:acceleron and monex announce u s partnership to enhance international payments a",
-      "item": {
-        "id": "gdelt-sec-1774908193404-6",
-        "title": "Acceleron and Monex Announce U . S . Partnership to Enhance International Payments and Streamline Inbound Wire Processin",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "http://www.jamaicantimes.com/news/278953618/acceleron-and-monex-announce-us-partnership-to-enhance-international-payments-and-streamline-inbound-wire-processing"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:13.408Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:tech",
-        "sectionCandidates": [
-          "news",
-          "tech"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "acceleron and monex announce u s partnership to enhance international payments and streamline inbound wire processin",
-        "canonicalUrl": "http://www.jamaicantimes.com/news/278953618/acceleron-and-monex-announce-us-partnership-to-enhance-international-payments-and-streamline-inbound-wire-processing",
-        "discoveryScore": 11.4,
-        "eventKey": "news:acceleron and monex announce u s partnership to enhance international payments a"
-      },
-      "discoveredAt": "2026-03-30T22:03:13.408Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:news:portsmouth pond temporarily closing for pfas study eastbayri com news opinion th",
-      "item": {
-        "id": "gdelt-sec-1774908214206-7",
-        "title": "Portsmouth pond temporarily closing for PFAS study | EastBayRI . com - News , Opinion , Things to Do in the East Bay",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "http://www.eastbayri.com/stories/portsmouth-pond-temporarily-closing-for-pfas-study,138738"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:34.209Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:business",
-        "sectionCandidates": [
-          "news",
-          "business"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "research",
-        "genericPage": false,
-        "page_kind": "analysis",
-        "genericity_score": 0,
-        "article_likelihood": 7,
-        "normalizedTitle": "portsmouth pond temporarily closing for pfas study eastbayri com news opinion things to do in the east bay",
-        "canonicalUrl": "http://www.eastbayri.com/stories/portsmouth-pond-temporarily-closing-for-pfas-study,138738",
-        "discoveryScore": 10.8,
-        "eventKey": "news:portsmouth pond temporarily closing for pfas study eastbayri com news opinion th"
-      },
-      "discoveredAt": "2026-03-30T22:03:34.209Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:tech:girl scout cookie prices doubled since 2000 analysis finds",
-      "item": {
-        "id": "gdelt-sec-1774908193397-3",
-        "title": "Girl Scout cookie prices doubled since 2000 , analysis finds",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:13.399Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "analysis",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "girl scout cookie prices doubled since 2000 analysis finds",
-        "canonicalUrl": "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163",
-        "discoveryScore": 10.4,
-        "eventKey": "tech:girl scout cookie prices doubled since 2000 analysis finds"
-      },
-      "discoveredAt": "2026-03-30T22:03:13.399Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:tech:victorian property professionals face 12k fines",
-      "item": {
-        "id": "gdelt-sec-1774908193399-4",
-        "title": "Victorian property professionals face $12k fines",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:13.401Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "victorian property professionals face 12k fines",
-        "canonicalUrl": "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines",
-        "discoveryScore": 10.4,
-        "eventKey": "tech:victorian property professionals face 12k fines"
-      },
-      "discoveredAt": "2026-03-30T22:03:13.401Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:tech:figure skating season ends with redemption and heartbreak what do fans watch nex",
-      "item": {
-        "id": "gdelt-sec-1774908193401-5",
-        "title": "Figure skating season ends with redemption and heartbreak . What do fans watch next ?",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:13.404Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "figure skating season ends with redemption and heartbreak what do fans watch next",
-        "canonicalUrl": "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next",
-        "discoveryScore": 10.4,
-        "eventKey": "tech:figure skating season ends with redemption and heartbreak what do fans watch nex"
-      },
-      "discoveredAt": "2026-03-30T22:03:13.404Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:business:girl scout cookie prices doubled since 2000 analysis finds",
-      "item": {
-        "id": "gdelt-sec-1774908214204-6",
-        "title": "Girl Scout cookie prices doubled since 2000 , analysis finds",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:34.206Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:business",
-        "sectionCandidates": [
-          "business"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "analysis",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "girl scout cookie prices doubled since 2000 analysis finds",
-        "canonicalUrl": "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163",
-        "discoveryScore": 10.4,
-        "eventKey": "business:girl scout cookie prices doubled since 2000 analysis finds"
-      },
-      "discoveredAt": "2026-03-30T22:03:34.206Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:business:victorian property professionals face 12k fines",
-      "item": {
-        "id": "gdelt-sec-1774908214209-8",
-        "title": "Victorian property professionals face $12k fines",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:34.210Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:business",
-        "sectionCandidates": [
-          "business"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "victorian property professionals face 12k fines",
-        "canonicalUrl": "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines",
-        "discoveryScore": 10.4,
-        "eventKey": "business:victorian property professionals face 12k fines"
-      },
-      "discoveredAt": "2026-03-30T22:03:34.210Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:business:figure skating season ends with redemption and heartbreak what do fans watch nex",
-      "item": {
-        "id": "gdelt-sec-1774908214210-9",
-        "title": "Figure skating season ends with redemption and heartbreak . What do fans watch next ?",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:34.212Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:business",
-        "sectionCandidates": [
-          "business"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "figure skating season ends with redemption and heartbreak what do fans watch next",
-        "canonicalUrl": "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next",
-        "discoveryScore": 10.4,
-        "eventKey": "business:figure skating season ends with redemption and heartbreak what do fans watch nex"
-      },
-      "discoveredAt": "2026-03-30T22:03:34.212Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:tech:op ed the gender motivated violence act at 26 how new york city finally closed t",
-      "item": {
-        "id": "gdelt-sec-1774908193391-1",
-        "title": "Op - ed | The Gender - Motivated Violence Act at 26 : How New York City finally closed the institutional accountability ",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.amny.com/opinion/op-ed-the-gender-motivated-violence-act-at-26-how-new-york-city-finally-closed-the-institutional-accountability-gap/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:13.394Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "analysis",
-        "genericity_score": 0,
-        "article_likelihood": 7,
-        "normalizedTitle": "op ed the gender motivated violence act at 26 how new york city finally closed the institutional accountability",
-        "canonicalUrl": "https://www.amny.com/opinion/op-ed-the-gender-motivated-violence-act-at-26-how-new-york-city-finally-closed-the-institutional-accountability-gap/",
-        "discoveryScore": 9.8,
-        "eventKey": "tech:op ed the gender motivated violence act at 26 how new york city finally closed t"
-      },
-      "discoveredAt": "2026-03-30T22:03:13.394Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
-    },
-    {
-      "identityKey": "event:business:trump says us talking to new and more reasonable iranian regime rubio declines t",
-      "item": {
-        "id": "gdelt-sec-1774908214201-5",
-        "title": "Trump says US talking to new and more reasonable Iranian regime , Rubio declines to say who",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T213000Z",
-        "sourceUrls": [
-          "https://www.wlip.com/syndicated-article/?id=1662935"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T22:03:34.204Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:business",
-        "sectionCandidates": [
-          "business"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "business",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "unknown",
-        "genericity_score": 0,
-        "article_likelihood": 1,
-        "normalizedTitle": "trump says us talking to new and more reasonable iranian regime rubio declines to say who",
-        "canonicalUrl": "https://www.wlip.com/syndicated-article/",
-        "discoveryScore": 8,
-        "eventKey": "business:trump says us talking to new and more reasonable iranian regime rubio declines t"
-      },
-      "discoveredAt": "2026-03-30T22:03:34.204Z",
-      "lastSeenAt": "2026-03-30T22:03:34.216Z",
-      "expiresAt": "2026-04-01T22:03:34.215Z"
     },
     {
       "identityKey": "event:cybersecurity:ai the cybersecurity crisis that vendors love",
@@ -4845,510 +2556,6 @@
       "expiresAt": "2026-04-02T21:41:43.161Z"
     },
     {
-      "identityKey": "event:mental-health:mental health and physical health connection",
-      "item": {
-        "id": "brave-sec-1774914918215-3",
-        "title": "Mental Health and Physical Health Connection",
-        "summary": "Explore how physical and mental health interconnect through stress, sleep, exercise, and immune function for complete wellness restoration",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "10 hours ago",
-        "sourceUrls": [
-          "https://lonestarmentalhealth.com/blog/mental-health-physical-health-connection-guide/"
-        ],
-        "freshness": 7,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:18.218Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:health",
-        "sectionCandidates": [
-          "health"
-        ],
-        "topicCandidates": [
-          "mental-health",
-          "wellness-fitness"
-        ],
-        "detectedSectionId": "health",
-        "detectedTopicId": "mental-health",
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "mental health and physical health connection",
-        "canonicalUrl": "https://lonestarmentalhealth.com/blog/mental-health-physical-health-connection-guide/",
-        "discoveryScore": 15.4,
-        "eventKey": "mental-health:mental health and physical health connection"
-      },
-      "discoveredAt": "2026-03-30T23:55:18.218Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
-    },
-    {
-      "identityKey": "event:crypto-bitcoin:fannie mae to accept crypto backed mortgages for the first time pymnts com",
-      "item": {
-        "id": "brave-sec-1774913080451-4",
-        "title": "Fannie Mae to Accept Crypto-backed Mortgages for the First Time | PYMNTS.com",
-        "summary": "Fannie Mae, the government-backed cornerstone of the U.S. mortgage market, is preparing to accept crypto-backed mortgages for the first time, marking a",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "1 day ago",
-        "sourceUrls": [
-          "https://pymnts.com/cpi-posts/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time"
-        ],
-        "freshness": 6,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:24:40.454Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:business",
-        "sectionCandidates": [
-          "business"
-        ],
-        "topicCandidates": [
-          "crypto-bitcoin"
-        ],
-        "detectedSectionId": "business",
-        "detectedTopicId": "crypto-bitcoin",
-        "region": "us",
-        "angle": "markets",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "fannie mae to accept crypto backed mortgages for the first time pymnts com",
-        "canonicalUrl": "https://pymnts.com/cpi-posts/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time",
-        "discoveryScore": 14.4,
-        "eventKey": "crypto-bitcoin:fannie mae to accept crypto backed mortgages for the first time pymnts com"
-      },
-      "discoveredAt": "2026-03-30T23:24:40.454Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
-      "identityKey": "event:us-politics:white house claims us iran talks",
-      "item": {
-        "id": "gdelt-sec-1774913117238-0",
-        "title": "White House claims US - Iran talks",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [
-          "white house",
-          "iran"
-        ],
-        "entities": [
-          "white house",
-          "iran"
-        ],
-        "when": "20260330T230000Z",
-        "sourceUrls": [
-          "http://www.bignewsnetwork.com/news/278954047/white-house-claims-us-iran-talks-continuing-going-well-despite-tehran-denying-direct-negotiations"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:25:17.255Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:health",
-        "sectionCandidates": [
-          "news",
-          "health"
-        ],
-        "topicCandidates": [
-          "us-politics"
-        ],
-        "detectedSectionId": "news",
-        "detectedTopicId": "us-politics",
-        "region": "us",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "white house claims us iran talks",
-        "canonicalUrl": "http://www.bignewsnetwork.com/news/278954047/white-house-claims-us-iran-talks-continuing-going-well-despite-tehran-denying-direct-negotiations",
-        "discoveryScore": 12.4,
-        "eventKey": "us-politics:white house claims us iran talks"
-      },
-      "discoveredAt": "2026-03-30T23:25:17.255Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
-      "identityKey": "event:health:sale closed in san jose 2 million for a single family home",
-      "item": {
-        "id": "gdelt-sec-1774913117255-1",
-        "title": "Sale closed in San Jose : $2 million for a single - family home",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T230000Z",
-        "sourceUrls": [
-          "https://www.eastbaytimes.com/2026/03/30/sale-closed-in-san-jose-2-million-for-a-single-family-home/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:25:17.261Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:health",
-        "sectionCandidates": [
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "health",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 10,
-        "normalizedTitle": "sale closed in san jose 2 million for a single family home",
-        "canonicalUrl": "https://www.eastbaytimes.com/2026/03/30/sale-closed-in-san-jose-2-million-for-a-single-family-home/",
-        "discoveryScore": 11.6,
-        "eventKey": "health:sale closed in san jose 2 million for a single family home"
-      },
-      "discoveredAt": "2026-03-30T23:25:17.261Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
-      "identityKey": "event:news:violent protests erupt in eastern cape over alleged igbo king coronation diaspor",
-      "item": {
-        "id": "gdelt-sec-1774913117265-3",
-        "title": "Violent Protests Erupt in Eastern Cape Over Alleged Igbo King Coronation - Diaspora News & Features",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T230000Z",
-        "sourceUrls": [
-          "https://naija247news.com/violent-protests-erupt-in-eastern-cape-over-alleged-igbo-king-coronation/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:25:17.269Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:health",
-        "sectionCandidates": [
-          "news",
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "violent protests erupt in eastern cape over alleged igbo king coronation diaspora news features",
-        "canonicalUrl": "https://naija247news.com/violent-protests-erupt-in-eastern-cape-over-alleged-igbo-king-coronation/",
-        "discoveryScore": 11.4,
-        "eventKey": "news:violent protests erupt in eastern cape over alleged igbo king coronation diaspor"
-      },
-      "discoveredAt": "2026-03-30T23:25:17.269Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
-      "identityKey": "event:news:what happened with king charles prince edward",
-      "item": {
-        "id": "gdelt-sec-1774913117269-4",
-        "title": "What Happened with King Charles & Prince Edward ?",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T230000Z",
-        "sourceUrls": [
-          "https://stylecaster.com/entertainment/celebrity-news/1234883502/what-happened-charles-edward/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:25:17.271Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:health",
-        "sectionCandidates": [
-          "news",
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "what happened with king charles prince edward",
-        "canonicalUrl": "https://stylecaster.com/entertainment/celebrity-news/1234883502/what-happened-charles-edward/",
-        "discoveryScore": 11.4,
-        "eventKey": "news:what happened with king charles prince edward"
-      },
-      "discoveredAt": "2026-03-30T23:25:17.271Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
-      "identityKey": "event:news:ontario insurance sector second most active for fsra enforcement",
-      "item": {
-        "id": "gdelt-sec-1774913117275-6",
-        "title": "Ontario insurance sector second - most active for FSRA enforcement",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T230000Z",
-        "sourceUrls": [
-          "https://www.investmentexecutive.com/news/ontario-insurance-sector-second-most-active-for-fsra-enforcement/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:25:17.278Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:health",
-        "sectionCandidates": [
-          "news",
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "ontario insurance sector second most active for fsra enforcement",
-        "canonicalUrl": "https://www.investmentexecutive.com/news/ontario-insurance-sector-second-most-active-for-fsra-enforcement/",
-        "discoveryScore": 11.4,
-        "eventKey": "news:ontario insurance sector second most active for fsra enforcement"
-      },
-      "discoveredAt": "2026-03-30T23:25:17.278Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
-      "identityKey": "event:news:ontario budget outlines modular jail cell blocks to ease overcrowding",
-      "item": {
-        "id": "gdelt-sec-1774913117278-7",
-        "title": "Ontario budget outlines modular jail cell blocks to ease overcrowding",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T230000Z",
-        "sourceUrls": [
-          "https://www.simcoereformer.ca:443/news/national/ontario-budget-outlines-modular-jail-cell-blocks-to-ease-overcrowding/wcm/b114a14c-e8db-45dd-af28-2252fa60f351"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:25:17.282Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:health",
-        "sectionCandidates": [
-          "news",
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "ontario budget outlines modular jail cell blocks to ease overcrowding",
-        "canonicalUrl": "https://www.simcoereformer.ca/news/national/ontario-budget-outlines-modular-jail-cell-blocks-to-ease-overcrowding/wcm/b114a14c-e8db-45dd-af28-2252fa60f351",
-        "discoveryScore": 11.4,
-        "eventKey": "news:ontario budget outlines modular jail cell blocks to ease overcrowding"
-      },
-      "discoveredAt": "2026-03-30T23:25:17.282Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
-      "identityKey": "event:tech:india moves to legally bind tech giants to government advisories",
-      "item": {
-        "id": "gdelt-sec-1774913117282-8",
-        "title": "India Moves to Legally Bind Tech Giants to Government Advisories",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [
-          "india"
-        ],
-        "entities": [
-          "india"
-        ],
-        "when": "20260330T230000Z",
-        "sourceUrls": [
-          "https://slguardian.org/india-moves-to-legally-bind-tech-giants-to-government-advisories/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:25:17.285Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:health",
-        "sectionCandidates": [
-          "tech",
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "india",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "india moves to legally bind tech giants to government advisories",
-        "canonicalUrl": "https://slguardian.org/india-moves-to-legally-bind-tech-giants-to-government-advisories/",
-        "discoveryScore": 11.4,
-        "eventKey": "tech:india moves to legally bind tech giants to government advisories"
-      },
-      "discoveredAt": "2026-03-30T23:25:17.285Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
-      "identityKey": "event:news:what happened with donald trump jr tiger woods",
-      "item": {
-        "id": "gdelt-sec-1774913117285-9",
-        "title": "What Happened with Donald Trump Jr & Tiger Woods ?",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T230000Z",
-        "sourceUrls": [
-          "https://stylecaster.com/entertainment/celebrity-news/1234883431/don-trump-jr-tiger-woods/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:25:17.287Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:health",
-        "sectionCandidates": [
-          "news",
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "news",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "what happened with donald trump jr tiger woods",
-        "canonicalUrl": "https://stylecaster.com/entertainment/celebrity-news/1234883431/don-trump-jr-tiger-woods/",
-        "discoveryScore": 11.4,
-        "eventKey": "news:what happened with donald trump jr tiger woods"
-      },
-      "discoveredAt": "2026-03-30T23:25:17.287Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
-      "identityKey": "event:health:whitehouse tillis seek to end army corps pause on flood studies",
-      "item": {
-        "id": "gdelt-sec-1774913117261-2",
-        "title": "Whitehouse , Tillis seek to end Army Corps pause on flood studies",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T230000Z",
-        "sourceUrls": [
-          "https://www.eenews.net/articles/whitehouse-tillis-seek-to-end-army-corps-pause-on-flood-studies/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:25:17.265Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:health",
-        "sectionCandidates": [
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "health",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "whitehouse tillis seek to end army corps pause on flood studies",
-        "canonicalUrl": "https://www.eenews.net/articles/whitehouse-tillis-seek-to-end-army-corps-pause-on-flood-studies/",
-        "discoveryScore": 10.4,
-        "eventKey": "health:whitehouse tillis seek to end army corps pause on flood studies"
-      },
-      "discoveredAt": "2026-03-30T23:25:17.265Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
-      "identityKey": "event:health:plane diverted after landing when passenger claimed to have a bomb",
-      "item": {
-        "id": "gdelt-sec-1774913117271-5",
-        "title": "Plane Diverted After Landing When Passenger Claimed To Have A Bomb",
-        "summary": "",
-        "whyItMatters": "",
-        "involvedParties": [],
-        "entities": [],
-        "when": "20260330T230000Z",
-        "sourceUrls": [
-          "https://wtkg.iheart.com/content/2026-03-30-plane-diverted-after-landing-when-passenger-claimed-to-have-a-bomb/"
-        ],
-        "freshness": 4,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:25:17.275Z",
-        "provider": "gdelt",
-        "trustedSource": false,
-        "discoveryLane": "gdelt:health",
-        "sectionCandidates": [
-          "health"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "health",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "plane diverted after landing when passenger claimed to have a bomb",
-        "canonicalUrl": "https://wtkg.iheart.com/content/2026-03-30-plane-diverted-after-landing-when-passenger-claimed-to-have-a-bomb/",
-        "discoveryScore": 10.4,
-        "eventKey": "health:plane diverted after landing when passenger claimed to have a bomb"
-      },
-      "discoveredAt": "2026-03-30T23:25:17.275Z",
-      "lastSeenAt": "2026-03-30T23:25:17.292Z",
-      "expiresAt": "2026-04-01T23:25:17.291Z"
-    },
-    {
       "identityKey": "event:crypto-bitcoin:crypto stocks near a bottom after 60 selloff analyst",
       "item": {
         "id": "brave-sec-1774993265467-3",
@@ -5399,50 +2606,6 @@
       "discoveredAt": "2026-03-31T21:41:05.469Z",
       "lastSeenAt": "2026-03-31T21:41:43.161Z",
       "expiresAt": "2026-04-02T21:41:43.161Z"
-    },
-    {
-      "identityKey": "event:tech:microsoft named a leader in 2026 gartner magic quadrant for integration platform",
-      "item": {
-        "id": "brave-sec-1774914912365-2",
-        "title": "Microsoft named a Leader in 2026 Gartner® Magic Quadrant™ for Integration Platform as a Service | Microsoft Azure Blog",
-        "summary": "Read why Microsoft was named a Leader for integration services in the 2026 Gartner® Magic Quadrant™ for Integration Platform as a Service.",
-        "whyItMatters": "",
-        "involvedParties": [
-          "microsoft"
-        ],
-        "entities": [
-          "microsoft"
-        ],
-        "when": "8 hours ago",
-        "sourceUrls": [
-          "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-2026-gartner-magic-quadrant-for-integration-platform-as-a-service"
-        ],
-        "freshness": 8,
-        "urgency": 4,
-        "discoveredAt": "2026-03-30T23:55:12.374Z",
-        "provider": "brave",
-        "trustedSource": false,
-        "discoveryLane": "section:tech",
-        "sectionCandidates": [
-          "tech"
-        ],
-        "topicCandidates": [],
-        "detectedSectionId": "tech",
-        "detectedTopicId": null,
-        "region": "global",
-        "angle": "general",
-        "genericPage": false,
-        "page_kind": "article",
-        "genericity_score": 0,
-        "article_likelihood": 8,
-        "normalizedTitle": "microsoft named a leader in 2026 gartner magic quadrant for integration platform as a service microsoft azure blog",
-        "canonicalUrl": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-2026-gartner-magic-quadrant-for-integration-platform-as-a-service",
-        "discoveryScore": 14.4,
-        "eventKey": "tech:microsoft named a leader in 2026 gartner magic quadrant for integration platform"
-      },
-      "discoveredAt": "2026-03-30T23:55:12.374Z",
-      "lastSeenAt": "2026-03-30T23:55:33.338Z",
-      "expiresAt": "2026-04-01T23:55:33.338Z"
     },
     {
       "identityKey": "event:business:nfl asks prediction market operators to refrain from objectionable bets",
@@ -7846,19 +5009,19 @@
     {
       "identityKey": "event:culture:movies and tv shows casting in boulder features santafenewmexican com",
       "item": {
-        "id": "brave-sec-1775045270416-4",
+        "id": "brave-sec-1775097539918-2",
         "title": "Movies and TV shows casting in Boulder | Features | santafenewmexican.com",
         "summary": "Backstage compiled a list of movies and TV shows casting in Boulder.",
         "whyItMatters": "",
         "involvedParties": [],
         "entities": [],
-        "when": "3 hours ago",
+        "when": "17 hours ago",
         "sourceUrls": [
           "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-boulder/article_f74af385-63b0-5e28-8b95-8bb2af6b77d1.html"
         ],
-        "freshness": 9,
+        "freshness": 7,
         "urgency": 4,
-        "discoveredAt": "2026-04-01T12:07:50.419Z",
+        "discoveredAt": "2026-04-02T02:38:59.920Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -7878,7 +5041,7 @@
         "article_likelihood": 8,
         "normalizedTitle": "movies and tv shows casting in boulder features santafenewmexican com",
         "canonicalUrl": "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-boulder/article_f74af385-63b0-5e28-8b95-8bb2af6b77d1.html",
-        "discoveryScore": 16.4,
+        "discoveryScore": 14.4,
         "targetedCoverage": false,
         "eventKey": "culture:movies and tv shows casting in boulder features santafenewmexican com",
         "signalSpecificityScore": 7,
@@ -7890,9 +5053,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-04-01T12:07:50.419Z",
-      "lastSeenAt": "2026-04-01T12:08:14.301Z",
-      "expiresAt": "2026-04-03T12:08:14.301Z"
+      "discoveredAt": "2026-04-02T02:38:59.920Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
     },
     {
       "identityKey": "event:mental-health:breakthrough approaches in self care through mental health services near ruston ",
@@ -8709,7 +5872,7 @@
     {
       "identityKey": "event:film-tv:apple tv s 2 part comedy series is so good you can rewatch it multiple times",
       "item": {
-        "id": "brave-sec-1775076860614-3",
+        "id": "brave-sec-1775097539913-0",
         "title": "Apple TV's 2-Part Comedy Series Is So Good, You Can Rewatch It Multiple Times",
         "summary": "Seth Rogen and Rose Byrne's Apple TV comedy series Platonic is a hilarious, comforting watch about two best friends and their many misadventures.",
         "whyItMatters": "",
@@ -8719,13 +5882,13 @@
         "entities": [
           "apple"
         ],
-        "when": "8 hours ago",
+        "when": "13 hours ago",
         "sourceUrls": [
           "https://collider.com/platonic-apple-tv-streaming-seth-rogen-rose-byrne/"
         ],
-        "freshness": 8,
+        "freshness": 7,
         "urgency": 4,
-        "discoveredAt": "2026-04-01T20:54:20.617Z",
+        "discoveredAt": "2026-04-02T02:38:59.916Z",
         "provider": "brave",
         "trustedSource": false,
         "discoveryLane": "section:culture",
@@ -8745,7 +5908,7 @@
         "article_likelihood": 8,
         "normalizedTitle": "apple tv s 2 part comedy series is so good you can rewatch it multiple times",
         "canonicalUrl": "https://collider.com/platonic-apple-tv-streaming-seth-rogen-rose-byrne/",
-        "discoveryScore": 16.4,
+        "discoveryScore": 15.4,
         "targetedCoverage": false,
         "eventKey": "film-tv:apple tv s 2 part comedy series is so good you can rewatch it multiple times",
         "signalSpecificityScore": 7,
@@ -8757,9 +5920,9 @@
         ],
         "crossTopicRisk": false
       },
-      "discoveredAt": "2026-04-01T20:54:20.617Z",
-      "lastSeenAt": "2026-04-01T20:54:59.972Z",
-      "expiresAt": "2026-04-03T20:54:59.972Z"
+      "discoveredAt": "2026-04-02T02:38:59.916Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
     },
     {
       "identityKey": "event:tech:ai systems are redefining the enterprise attack surface",
@@ -8865,6 +6028,1510 @@
       "discoveredAt": "2026-04-01T20:54:20.620Z",
       "lastSeenAt": "2026-04-01T20:54:59.972Z",
       "expiresAt": "2026-04-03T20:54:59.972Z"
+    },
+    {
+      "identityKey": "event:mental-health:the future of business sustainability why mental health parity is a competitive ",
+      "item": {
+        "id": "brave-sec-1775097539887-1",
+        "title": "The Future of Business Sustainability: Why Mental Health Parity is a Competitive Advantage - mentalhealthparitypartners",
+        "summary": "Here’s the HTML content for your blog post within the `` tags: Contents hide 1 The Future of Business Sustainability: Why Mental Health Parity is a Competitive Advantage 1.1 1.…",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "2 hours ago",
+        "sourceUrls": [
+          "https://www.mentalhealthparitypartners.com/2026/04/01/the-future-of-busine/"
+        ],
+        "freshness": 9,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.890Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:health",
+        "sectionCandidates": [
+          "health",
+          "business"
+        ],
+        "topicCandidates": [
+          "mental-health"
+        ],
+        "detectedSectionId": "health",
+        "detectedTopicId": "mental-health",
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "the future of business sustainability why mental health parity is a competitive advantage mentalhealthparitypartners",
+        "canonicalUrl": "https://www.mentalhealthparitypartners.com/2026/04/01/the-future-of-busine/",
+        "discoveryScore": 18.6,
+        "targetedCoverage": false,
+        "eventKey": "mental-health:the future of business sustainability why mental health parity is a competitive ",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.890Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:cybersecurity:28 million ai driven cyberattacks expected this year are security leaders prepar",
+      "item": {
+        "id": "brave-sec-1775097539859-1",
+        "title": "28 Million AI-Driven Cyberattacks Expected This Year—Are Security Leaders Prepared?",
+        "summary": "As AI adoption accelerates, security leaders are being forced to rethink how they approach cyber risk. Traditional models built for static environments are",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "4 hours ago",
+        "sourceUrls": [
+          "https://bankinfosecurity.com/28-million-ai-driven-cyberattacks-expected-this-yearare-security-leaders-a-31165"
+        ],
+        "freshness": 8,
+        "urgency": 6,
+        "discoveredAt": "2026-04-02T02:38:59.870Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:tech",
+        "sectionCandidates": [
+          "tech"
+        ],
+        "topicCandidates": [
+          "cybersecurity",
+          "ai-big-tech"
+        ],
+        "detectedSectionId": "tech",
+        "detectedTopicId": "cybersecurity",
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "28 million ai driven cyberattacks expected this year are security leaders prepared",
+        "canonicalUrl": "https://bankinfosecurity.com/28-million-ai-driven-cyberattacks-expected-this-yearare-security-leaders-a-31165",
+        "discoveryScore": 18.4,
+        "targetedCoverage": false,
+        "eventKey": "cybersecurity:28 million ai driven cyberattacks expected this year are security leaders prepar",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.870Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:health:meeting unmet medical needs the disparity dilemma pharmexec",
+      "item": {
+        "id": "brave-sec-1775097539895-4",
+        "title": "Meeting Unmet Medical Needs: The Disparity Dilemma | PharmExec",
+        "summary": "The US drug regulatory system fails to address the country’s most urgent medical needs with the resources appropriate for the task. But change is possible, say Christopher-Paul Milne and Kenneth I. Kaitin.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "2 hours ago",
+        "sourceUrls": [
+          "https://www.pharmexec.com/view/meeting-unmet-medical-needs-disparity-dilemma"
+        ],
+        "freshness": 9,
+        "urgency": 6,
+        "discoveredAt": "2026-04-02T02:38:59.898Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:health",
+        "sectionCandidates": [
+          "health"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "health",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "meeting unmet medical needs the disparity dilemma pharmexec",
+        "canonicalUrl": "https://www.pharmexec.com/view/meeting-unmet-medical-needs-disparity-dilemma",
+        "discoveryScore": 17.4,
+        "targetedCoverage": false,
+        "eventKey": "health:meeting unmet medical needs the disparity dilemma pharmexec",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.898Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:sports:ncaa makes transfer portal rule changes with huge penalties newsweek",
+      "item": {
+        "id": "brave-sec-1775097539901-1",
+        "title": "NCAA Makes Transfer Portal Rule Changes With Huge Penalties - Newsweek",
+        "summary": "Effective immediately, college football programs could face steep penalties for breaking the new transfer portal rules.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "4 hours ago",
+        "sourceUrls": [
+          "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417"
+        ],
+        "freshness": 8,
+        "urgency": 6,
+        "discoveredAt": "2026-04-02T02:38:59.903Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:sports",
+        "sectionCandidates": [
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "transfers",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 2,
+        "article_likelihood": 8,
+        "normalizedTitle": "ncaa makes transfer portal rule changes with huge penalties newsweek",
+        "canonicalUrl": "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
+        "discoveryScore": 17.4,
+        "targetedCoverage": false,
+        "eventKey": "sports:ncaa makes transfer portal rule changes with huge penalties newsweek",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.903Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:public-health:measles and other consequences of a leaderless cdc healthbeat",
+      "item": {
+        "id": "brave-targeted-1775097540005-3",
+        "title": "Measles and other consequences of a leaderless CDC - Healthbeat",
+        "summary": "Vaccine policy is mired in confusion, states are losing public health funding, and measles is spreading as the Trump administration struggles to find a new CDC director.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "15 hours ago",
+        "sourceUrls": [
+          "https://healthbeat.org/2026/04/01/leaderless-cdc-affects-health"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:39:00.007Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "targeted:section:health:topic:public-health",
+        "sectionCandidates": [
+          "health"
+        ],
+        "topicCandidates": [
+          "public-health"
+        ],
+        "detectedSectionId": "health",
+        "detectedTopicId": "public-health",
+        "region": "global",
+        "angle": "policy",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "measles and other consequences of a leaderless cdc healthbeat",
+        "canonicalUrl": "https://healthbeat.org/2026/04/01/leaderless-cdc-affects-health",
+        "discoveryScore": 17.4,
+        "targetedCoverage": true,
+        "eventKey": "public-health:measles and other consequences of a leaderless cdc healthbeat",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:39:00.007Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:business:amazon in talks to buy 9 billion satellite group globalstar report moneycontrol ",
+      "item": {
+        "id": "brave-sec-1775097539948-4",
+        "title": "Amazon in talks to buy $9 billion satellite group Globalstar: Report- Moneycontrol.com",
+        "summary": "Globalstar's shares, which have more than doubled in market value over the past year, rose 24% to $85 in extended trading. The company's market cap was $8.81 billion, as of last close.",
+        "whyItMatters": "",
+        "involvedParties": [
+          "amazon"
+        ],
+        "entities": [
+          "amazon"
+        ],
+        "when": "1 hour ago",
+        "sourceUrls": [
+          "https://www.moneycontrol.com/news/business/companies/amazon-in-talks-to-buy-9-billion-satellite-group-globalstar-ft-reports-13877330.html"
+        ],
+        "freshness": 9,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.950Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:business",
+        "sectionCandidates": [
+          "business",
+          "news"
+        ],
+        "topicCandidates": [
+          "companies-deals"
+        ],
+        "detectedSectionId": "business",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "markets",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 9,
+        "normalizedTitle": "amazon in talks to buy 9 billion satellite group globalstar report moneycontrol com",
+        "canonicalUrl": "https://www.moneycontrol.com/news/business/companies/amazon-in-talks-to-buy-9-billion-satellite-group-globalstar-ft-reports-13877330.html",
+        "discoveryScore": 17,
+        "targetedCoverage": false,
+        "eventKey": "business:amazon in talks to buy 9 billion satellite group globalstar report moneycontrol ",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.950Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:mental-health:unlocking mental wellbeing through quantum computing the future of mental health",
+      "item": {
+        "id": "brave-sec-1775097539890-2",
+        "title": "Unlocking Mental Wellbeing Through Quantum Computing: The Future of Mental Health Innovation - mentalhealthparitypartner",
+        "summary": "Contents hide 1 Unlocking Mental Wellbeing Through Quantum Computing: The Future of Mental Health Innovation 1.1 The Intersection of Quantum Computing and Mental Health 1.2 Advancements and Challenges 1.3 Conclusion…",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "18 hours ago",
+        "sourceUrls": [
+          "https://www.mentalhealthparitypartners.com/2026/04/01/unlocking-mental-wel/"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.893Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:health",
+        "sectionCandidates": [
+          "health"
+        ],
+        "topicCandidates": [
+          "mental-health"
+        ],
+        "detectedSectionId": "health",
+        "detectedTopicId": "mental-health",
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "unlocking mental wellbeing through quantum computing the future of mental health innovation mentalhealthparitypartner",
+        "canonicalUrl": "https://www.mentalhealthparitypartners.com/2026/04/01/unlocking-mental-wel/",
+        "discoveryScore": 16.6,
+        "targetedCoverage": false,
+        "eventKey": "mental-health:unlocking mental wellbeing through quantum computing the future of mental health",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.893Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:tech:ai gives attackers superpowers so defenders must use it too techzine global",
+      "item": {
+        "id": "brave-sec-1775097539870-2",
+        "title": "AI gives attackers superpowers, so defenders must use it too - Techzine Global",
+        "summary": "AI collapsed vulnerability exploitation from years to hours. Learn about runtime security, the Zero Day Clock, and why Sysdig thinks defense needs full automation.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "14 hours ago",
+        "sourceUrls": [
+          "https://techzine.eu/blogs/security/140116/ai-gives-attackers-superpowers-but-defenders-can-use-it-too"
+        ],
+        "freshness": 7,
+        "urgency": 6,
+        "discoveredAt": "2026-04-02T02:38:59.876Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:tech",
+        "sectionCandidates": [
+          "tech"
+        ],
+        "topicCandidates": [
+          "ai-big-tech",
+          "cybersecurity"
+        ],
+        "detectedSectionId": "tech",
+        "detectedTopicId": null,
+        "region": "europe",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "ai gives attackers superpowers so defenders must use it too techzine global",
+        "canonicalUrl": "https://techzine.eu/blogs/security/140116/ai-gives-attackers-superpowers-but-defenders-can-use-it-too",
+        "discoveryScore": 16.4,
+        "targetedCoverage": false,
+        "eventKey": "tech:ai gives attackers superpowers so defenders must use it too techzine global",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.876Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:business:should you book holiday flights now considering jet fuel price spikes",
+      "item": {
+        "id": "brave-sec-1775097539942-2",
+        "title": "Should you book holiday flights now considering jet fuel price spikes?",
+        "summary": "Jet fuel prices have more than doubled in recent weeks amid the ongoing Iran war. Airlines have responded with fare increases and temporary surcharges, so should you secure tickets now or wait?View on euronews",
+        "whyItMatters": "",
+        "involvedParties": [
+          "iran"
+        ],
+        "entities": [
+          "iran"
+        ],
+        "when": "1 day ago",
+        "sourceUrls": [
+          "https://travel.yahoo.com/flights/articles/book-holiday-flights-now-considering-050130269.html"
+        ],
+        "freshness": 6,
+        "urgency": 7,
+        "discoveredAt": "2026-04-02T02:38:59.945Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:business",
+        "sectionCandidates": [
+          "business"
+        ],
+        "topicCandidates": [
+          "travel-consumer-issues"
+        ],
+        "detectedSectionId": "business",
+        "detectedTopicId": null,
+        "region": "iran",
+        "angle": "conflict",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "should you book holiday flights now considering jet fuel price spikes",
+        "canonicalUrl": "https://travel.yahoo.com/flights/articles/book-holiday-flights-now-considering-050130269.html",
+        "discoveryScore": 16.4,
+        "targetedCoverage": false,
+        "eventKey": "business:should you book holiday flights now considering jet fuel price spikes",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.945Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:sports:ncaa approves major penalties for programs that circumvent",
+      "item": {
+        "id": "google-sec-1775097539954-1",
+        "title": "NCAA approves major penalties for programs that circumvent ...",
+        "summary": "7 hours ago ... FBS programs that add or sign players who withdraw from their schools but bypass the transfer portal window will have their head coaches suspended for six games ...",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "",
+        "sourceUrls": [
+          "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/"
+        ],
+        "freshness": 4,
+        "urgency": 6,
+        "discoveredAt": "2026-04-02T02:38:59.956Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:sports",
+        "sectionCandidates": [
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "transfers",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "ncaa approves major penalties for programs that circumvent",
+        "canonicalUrl": "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
+        "discoveryScore": 15.6,
+        "targetedCoverage": false,
+        "eventKey": "sports:ncaa approves major penalties for programs that circumvent",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.956Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:public-health:speed scale of antiviral prevention may cut hospitalizations during flu outbreak",
+      "item": {
+        "id": "brave-targeted-1775097539997-0",
+        "title": "Speed, scale of antiviral prevention may cut hospitalizations during flu outbreaks in nursing homes | CIDRAP",
+        "summary": "Prompt administration of preventive antiviral treatment to a large share of nursing home residents during flu outbreaks was associated with significantly fewer hospitalizations, according to a new study in JAMA Internal Medicine.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "7 hours ago",
+        "sourceUrls": [
+          "https://cidrap.umn.edu/influenza-general/speed-scale-antiviral-prevention-may-cut-hospitalizations-during-flu-outbreaks"
+        ],
+        "freshness": 8,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:39:00.000Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "targeted:section:health:topic:public-health",
+        "sectionCandidates": [
+          "health"
+        ],
+        "topicCandidates": [
+          "public-health"
+        ],
+        "detectedSectionId": "health",
+        "detectedTopicId": "public-health",
+        "region": "global",
+        "angle": "research",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "speed scale of antiviral prevention may cut hospitalizations during flu outbreaks in nursing homes cidrap",
+        "canonicalUrl": "https://cidrap.umn.edu/influenza-general/speed-scale-antiviral-prevention-may-cut-hospitalizations-during-flu-outbreaks",
+        "discoveryScore": 15.2,
+        "targetedCoverage": true,
+        "eventKey": "public-health:speed scale of antiviral prevention may cut hospitalizations during flu outbreak",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:39:00.000Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:public-health:demoralized cdc workforce reels from year of firings funding cuts and a shooting",
+      "item": {
+        "id": "brave-targeted-1775097540007-4",
+        "title": "Demoralized CDC workforce reels from year of firings, funding cuts, and a shooting | National News | hanfordsentinel.com",
+        "summary": "On the coffee table at her home in Atlanta, Sarah Boim has a pile of documents from her old job at the Centers for Disease Control and Prevention. They are",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "18 hours ago",
+        "sourceUrls": [
+          "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:39:00.010Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "targeted:section:health:topic:public-health",
+        "sectionCandidates": [
+          "news",
+          "health"
+        ],
+        "topicCandidates": [
+          "public-health"
+        ],
+        "detectedSectionId": "news",
+        "detectedTopicId": "public-health",
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "demoralized cdc workforce reels from year of firings funding cuts and a shooting national news hanfordsentinel com",
+        "canonicalUrl": "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html",
+        "discoveryScore": 15.2,
+        "targetedCoverage": true,
+        "eventKey": "public-health:demoralized cdc workforce reels from year of firings funding cuts and a shooting",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:39:00.010Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:news:jaden ivey on ig live after being waived by bulls they re liars bro",
+      "item": {
+        "id": "google-sec-1775097539963-5",
+        "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+        "summary": "1 day ago ... Ivey, whose season was shut down on Thursday while he manages left knee pain, has taken to Instagram live three times since the Bulls announced the news of him ...",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "",
+        "sourceUrls": [
+          "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.965Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:sports",
+        "sectionCandidates": [
+          "news",
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "news",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "announcement",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "jaden ivey on ig live after being waived by bulls they re liars bro",
+        "canonicalUrl": "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
+        "discoveryScore": 14.6,
+        "targetedCoverage": false,
+        "eventKey": "news:jaden ivey on ig live after being waived by bulls they re liars bro",
+        "signalSpecificityScore": 6,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.965Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:health:everyday wellness is becoming more intentional and integrated wisconsin scorpion",
+      "item": {
+        "id": "brave-sec-1775097539893-3",
+        "title": "Everyday Wellness Is Becoming More Intentional and Integrated - Wisconsin Scorpions",
+        "summary": "Wellness is no longer built around isolated habits or occasional efforts. Instead, it is becoming a structured part of daily life, shaped by routines that",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "12 hours ago",
+        "sourceUrls": [
+          "https://www.wisconsinscorpions.com/everyday-wellness-is-becoming-more-intentional-and-integrated/"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.895Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:health",
+        "sectionCandidates": [
+          "health"
+        ],
+        "topicCandidates": [
+          "wellness-fitness"
+        ],
+        "detectedSectionId": "health",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "everyday wellness is becoming more intentional and integrated wisconsin scorpions",
+        "canonicalUrl": "https://www.wisconsinscorpions.com/everyday-wellness-is-becoming-more-intentional-and-integrated/",
+        "discoveryScore": 14.4,
+        "targetedCoverage": false,
+        "eventKey": "health:everyday wellness is becoming more intentional and integrated wisconsin scorpion",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.895Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:culture:movies and tv shows casting across the us entertainment dailygazette com",
+      "item": {
+        "id": "brave-sec-1775097539916-1",
+        "title": "Movies and TV shows casting across the US | Entertainment | dailygazette.com",
+        "summary": "Backstage compiled a list of movies and TV shows casting across the US.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "17 hours ago",
+        "sourceUrls": [
+          "https://dailygazette.com/the_recorder/life_and_arts/entertainment/movies-and-tv-shows-casting-across-the-us/article_b5dc2c6d-6a8e-5607-9f6a-6aa538ffaf07.html"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.918Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:culture",
+        "sectionCandidates": [
+          "culture"
+        ],
+        "topicCandidates": [
+          "film-tv"
+        ],
+        "detectedSectionId": "culture",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "movies and tv shows casting across the us entertainment dailygazette com",
+        "canonicalUrl": "https://dailygazette.com/the_recorder/life_and_arts/entertainment/movies-and-tv-shows-casting-across-the-us/article_b5dc2c6d-6a8e-5607-9f6a-6aa538ffaf07.html",
+        "discoveryScore": 14.4,
+        "targetedCoverage": false,
+        "eventKey": "culture:movies and tv shows casting across the us entertainment dailygazette com",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.918Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:culture:movies and tv shows casting in san francisco features santafenewmexican com",
+      "item": {
+        "id": "brave-sec-1775097539920-3",
+        "title": "Movies and TV shows casting in San Francisco | Features | santafenewmexican.com",
+        "summary": "Backstage compiled a list of movies and TV shows casting in San Francisco.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "17 hours ago",
+        "sourceUrls": [
+          "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-san-francisco/article_1ef8bdb4-b3e8-5d8f-9832-3be56f5d803a.html"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.922Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:culture",
+        "sectionCandidates": [
+          "culture"
+        ],
+        "topicCandidates": [
+          "film-tv"
+        ],
+        "detectedSectionId": "culture",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "movies and tv shows casting in san francisco features santafenewmexican com",
+        "canonicalUrl": "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-san-francisco/article_1ef8bdb4-b3e8-5d8f-9832-3be56f5d803a.html",
+        "discoveryScore": 14.4,
+        "targetedCoverage": false,
+        "eventKey": "culture:movies and tv shows casting in san francisco features santafenewmexican com",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.922Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:news:movies and tv shows casting in clarksville tn state news elkvalleytimes com",
+      "item": {
+        "id": "brave-sec-1775097539922-4",
+        "title": "Movies and TV shows casting in Clarksville | TN State News | elkvalleytimes.com",
+        "summary": "Backstage compiled a list of movies and TV shows casting in Clarksville.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "17 hours ago",
+        "sourceUrls": [
+          "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.924Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:culture",
+        "sectionCandidates": [
+          "news",
+          "culture"
+        ],
+        "topicCandidates": [
+          "film-tv"
+        ],
+        "detectedSectionId": "news",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "movies and tv shows casting in clarksville tn state news elkvalleytimes com",
+        "canonicalUrl": "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html",
+        "discoveryScore": 14.4,
+        "targetedCoverage": false,
+        "eventKey": "news:movies and tv shows casting in clarksville tn state news elkvalleytimes com",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.924Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:business:booking holdings inc bkng d e shaw is buying this travel stock",
+      "item": {
+        "id": "brave-sec-1775097539940-1",
+        "title": "Booking Holdings Inc. (BKNG): D. E. Shaw Is Buying This Travel Stock",
+        "summary": "Booking Holdings Inc. (NASDAQ:BKNG) features on the D. E. Shaw Stock Portfolio: Top 10 Stocks to Buy. Booking Holdings Inc. (NASDAQ:BKNG) represents another long-term bet by D. E. Shaw. The fund has held a position in the company since the first quarter of 2018.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "11 hours ago",
+        "sourceUrls": [
+          "https://finance.yahoo.com/markets/stocks/articles/booking-holdings-inc-bkng-d-152300286.html"
+        ],
+        "freshness": 7,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.942Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "section:business",
+        "sectionCandidates": [
+          "business"
+        ],
+        "topicCandidates": [
+          "economy-markets",
+          "travel-consumer-issues"
+        ],
+        "detectedSectionId": "business",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "markets",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "booking holdings inc bkng d e shaw is buying this travel stock",
+        "canonicalUrl": "https://finance.yahoo.com/markets/stocks/articles/booking-holdings-inc-bkng-d-152300286.html",
+        "discoveryScore": 14.4,
+        "targetedCoverage": false,
+        "eventKey": "business:booking holdings inc bkng d e shaw is buying this travel stock",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.942Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:sports:world cup 2026 groups bracket and predictions with all 48 teams",
+      "item": {
+        "id": "google-sec-1775097539952-0",
+        "title": "World Cup 2026 – Groups, bracket and predictions with all 48 teams ...",
+        "summary": "20 hours ago ... With little more than two months until the start of the World Cup, we finally know the full 48-team line-up for this summer's tournament.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "",
+        "sourceUrls": [
+          "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.954Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:sports",
+        "sectionCandidates": [
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "events",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "world cup 2026 groups bracket and predictions with all 48 teams",
+        "canonicalUrl": "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/",
+        "discoveryScore": 13.6,
+        "targetedCoverage": false,
+        "eventKey": "sports:world cup 2026 groups bracket and predictions with all 48 teams",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.954Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:sports:leeds 2024 25 accounts ninth highest commercial income in",
+      "item": {
+        "id": "google-sec-1775097539956-2",
+        "title": "Leeds' 2024-25 accounts: Ninth-highest commercial income in ...",
+        "summary": "9 hours ago ... Leeds United generated record Championship revenues for the second year running in their 100-point 2024-25 promotion season, even as the club continued to ...",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "",
+        "sourceUrls": [
+          "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.959Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:sports",
+        "sectionCandidates": [
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "leeds 2024 25 accounts ninth highest commercial income in",
+        "canonicalUrl": "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/",
+        "discoveryScore": 13.6,
+        "targetedCoverage": false,
+        "eventKey": "sports:leeds 2024 25 accounts ninth highest commercial income in",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.959Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:sports:chelsea announce largest pre tax loss in english football history",
+      "item": {
+        "id": "google-sec-1775097539959-3",
+        "title": "Chelsea announce largest pre-tax loss in English football history",
+        "summary": "11 hours ago ... The club are yet to release their full accounts for 2024-25 but announced a £262.4million deficit for that period on Wednesday.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "",
+        "sourceUrls": [
+          "https://www.nytimes.com/athletic/7164314/2026/04/01/chelsea-accounts-loss-latest/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.961Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:sports",
+        "sectionCandidates": [
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "announcement",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "chelsea announce largest pre tax loss in english football history",
+        "canonicalUrl": "https://www.nytimes.com/athletic/7164314/2026/04/01/chelsea-accounts-loss-latest/",
+        "discoveryScore": 13.6,
+        "targetedCoverage": false,
+        "eventKey": "sports:chelsea announce largest pre tax loss in english football history",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.961Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:sports:eddie howe s future player sales and the stadium ny times",
+      "item": {
+        "id": "google-sec-1775097539961-4",
+        "title": "Eddie Howe's future, player sales and the stadium - ny times",
+        "summary": "2 days ago ... David Hopkinson, Newcastle's chief executive, sat down with journalists to discuss the club's latest accounts.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "",
+        "sourceUrls": [
+          "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.963Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:sports",
+        "sectionCandidates": [
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 2,
+        "article_likelihood": 10,
+        "normalizedTitle": "eddie howe s future player sales and the stadium ny times",
+        "canonicalUrl": "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/",
+        "discoveryScore": 13.6,
+        "targetedCoverage": false,
+        "eventKey": "sports:eddie howe s future player sales and the stadium ny times",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.963Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:sports:why everton qualifying for europe could give them a financial",
+      "item": {
+        "id": "google-sec-1775097539965-6",
+        "title": "Why Everton qualifying for Europe could give them a financial ...",
+        "summary": "1 day ago ... David Moyes' side could achieve European football for the first time since 2017-18, but they will need to comply with UEFA financial rules.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "",
+        "sourceUrls": [
+          "https://www.nytimes.com/athletic/7161203/2026/03/31/everton-european-football-financial-analysis/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.968Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:sports",
+        "sectionCandidates": [
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "europe",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "why everton qualifying for europe could give them a financial",
+        "canonicalUrl": "https://www.nytimes.com/athletic/7161203/2026/03/31/everton-european-football-financial-analysis/",
+        "discoveryScore": 13.6,
+        "targetedCoverage": false,
+        "eventKey": "sports:why everton qualifying for europe could give them a financial",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.968Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:sports:the 48 world cup teams are set we ve filled in the bracket and",
+      "item": {
+        "id": "google-sec-1775097539968-7",
+        "title": "The 48 World Cup teams are set. We've filled in the bracket and ...",
+        "summary": "8 hours ago ... The final six teams have secured their place at the tournament this summer. So now is the perfect time to work out who wins it...",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "",
+        "sourceUrls": [
+          "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.970Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:sports",
+        "sectionCandidates": [
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "events",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "the 48 world cup teams are set we ve filled in the bracket and",
+        "canonicalUrl": "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/",
+        "discoveryScore": 13.6,
+        "targetedCoverage": false,
+        "eventKey": "sports:the 48 world cup teams are set we ve filled in the bracket and",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.970Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:sports:fsg is allowing liverpool to drift and that is dangerous the athletic",
+      "item": {
+        "id": "google-sec-1775097539970-8",
+        "title": "FSG is allowing Liverpool to drift – and that is dangerous - The Athletic",
+        "summary": "22 hours ago ... Whether that stance persists if Liverpool are knocked out of the FA Cup and the Champions League and fall away from the Premier League top five over the next ...",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "",
+        "sourceUrls": [
+          "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.973Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:sports",
+        "sectionCandidates": [
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "fsg is allowing liverpool to drift and that is dangerous the athletic",
+        "canonicalUrl": "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/",
+        "discoveryScore": 13.6,
+        "targetedCoverage": false,
+        "eventKey": "sports:fsg is allowing liverpool to drift and that is dangerous the athletic",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.973Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:sports:plotting canada s path through the world cup could it be mexico in",
+      "item": {
+        "id": "google-sec-1775097539973-9",
+        "title": "Plotting Canada's path through the World Cup. Could it be Mexico in ...",
+        "summary": "14 hours ago ... Let's break down their path… Group stage. Canada will start their World Cup in Toronto in just the third game of the tournament. They had to wait until the 11th ...",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "",
+        "sourceUrls": [
+          "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.975Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:sports",
+        "sectionCandidates": [
+          "sports"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "sports",
+        "detectedTopicId": null,
+        "region": "canada",
+        "angle": "events",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 10,
+        "normalizedTitle": "plotting canada s path through the world cup could it be mexico in",
+        "canonicalUrl": "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/",
+        "discoveryScore": 13.6,
+        "targetedCoverage": false,
+        "eventKey": "sports:plotting canada s path through the world cup could it be mexico in",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.975Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:business:rule breaker investing 2026 march market cap game semifinals",
+      "item": {
+        "id": "google-sec-1775097539976-0",
+        "title": "Rule Breaker Investing: 2026 March Market Cap Game Semifinals",
+        "summary": "2 days ago ... David Gardner: Stock Number 1 is Adyen NV, ticker symbol ADYEY. The Amsterdam-based company provides a global payments platform that lets merchants accept cards ...",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "",
+        "sourceUrls": [
+          "https://www.theglobeandmail.com/investing/markets/stocks/NOW/pressreleases/1062921/rule-breaker-investing-2026-march-market-cap-game-semifinals/"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.978Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:culture",
+        "sectionCandidates": [
+          "business",
+          "culture"
+        ],
+        "topicCandidates": [
+          "economy-markets"
+        ],
+        "detectedSectionId": "business",
+        "detectedTopicId": null,
+        "region": "global",
+        "angle": "markets",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "rule breaker investing 2026 march market cap game semifinals",
+        "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/now/pressreleases/1062921/rule-breaker-investing-2026-march-market-cap-game-semifinals/",
+        "discoveryScore": 13.4,
+        "targetedCoverage": false,
+        "eventKey": "business:rule breaker investing 2026 march market cap game semifinals",
+        "signalSpecificityScore": 7,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "topic_hint",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.978Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:public-health:measles update march 27 2026 contagion live",
+      "item": {
+        "id": "brave-targeted-1775097540000-1",
+        "title": "Measles Update: March 27, 2026 | Contagion Live",
+        "summary": "The latest CDC numbers show a 5.92% increase of measles cases from week-to-week. This is a decrease in the percentage of cases from last week where there was a 9.18% increase.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "1 day ago",
+        "sourceUrls": [
+          "https://www.contagionlive.com/view/measles-update-march-27-2026"
+        ],
+        "freshness": 6,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:39:00.002Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "targeted:section:health:topic:public-health",
+        "sectionCandidates": [
+          "health"
+        ],
+        "topicCandidates": [
+          "public-health"
+        ],
+        "detectedSectionId": "health",
+        "detectedTopicId": "public-health",
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 2,
+        "article_likelihood": 8,
+        "normalizedTitle": "measles update march 27 2026 contagion live",
+        "canonicalUrl": "https://www.contagionlive.com/view/measles-update-march-27-2026",
+        "discoveryScore": 13.2,
+        "targetedCoverage": true,
+        "eventKey": "public-health:measles update march 27 2026 contagion live",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:39:00.002Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:public-health:us flu hospitalizations reach highest levels in over a decade ajmc",
+      "item": {
+        "id": "brave-targeted-1775097540002-2",
+        "title": "US Flu Hospitalizations Reach Highest Levels in Over a Decade | AJMC",
+        "summary": "The 2024-2025 influenza season saw record-high hospitalization rates, prompting the CDC to emphasize the importance of vaccination and early antiviral treatment.",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "1 day ago",
+        "sourceUrls": [
+          "https://ajmc.com/view/us-flu-hospitalizations-reach-highest-levels-in-over-a-decade"
+        ],
+        "freshness": 6,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:39:00.005Z",
+        "provider": "brave",
+        "trustedSource": false,
+        "discoveryLane": "targeted:section:health:topic:public-health",
+        "sectionCandidates": [
+          "health"
+        ],
+        "topicCandidates": [
+          "public-health"
+        ],
+        "detectedSectionId": "health",
+        "detectedTopicId": "public-health",
+        "region": "global",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "article",
+        "genericity_score": 0,
+        "article_likelihood": 8,
+        "normalizedTitle": "us flu hospitalizations reach highest levels in over a decade ajmc",
+        "canonicalUrl": "https://ajmc.com/view/us-flu-hospitalizations-reach-highest-levels-in-over-a-decade",
+        "discoveryScore": 13.2,
+        "targetedCoverage": true,
+        "eventKey": "public-health:us flu hospitalizations reach highest levels in over a decade ajmc",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:39:00.005Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
+    },
+    {
+      "identityKey": "event:culture:the story is with elex michaelson cnn com transcripts",
+      "item": {
+        "id": "google-sec-1775097539978-1",
+        "title": "The Story Is with Elex Michaelson - CNN.com - Transcripts",
+        "summary": "2 days ago ... MICHAELSON: A Russian flagged oil tanker has now reached the waters off of Cuba after President Trump allowed it to break a U.S. fuel blockade. The tanker is ...",
+        "whyItMatters": "",
+        "involvedParties": [],
+        "entities": [],
+        "when": "",
+        "sourceUrls": [
+          "https://transcripts.cnn.com/show/tsiem/date/2026-03-31/segment/02"
+        ],
+        "freshness": 4,
+        "urgency": 4,
+        "discoveredAt": "2026-04-02T02:38:59.980Z",
+        "provider": "google_trusted",
+        "trustedSource": true,
+        "discoveryLane": "google:culture",
+        "sectionCandidates": [
+          "culture"
+        ],
+        "topicCandidates": [],
+        "detectedSectionId": "culture",
+        "detectedTopicId": null,
+        "region": "us",
+        "angle": "general",
+        "genericPage": false,
+        "page_kind": "official_release",
+        "genericity_score": 1,
+        "article_likelihood": 6,
+        "normalizedTitle": "the story is with elex michaelson cnn com transcripts",
+        "canonicalUrl": "https://transcripts.cnn.com/show/tsiem/date/2026-03-31/segment/02",
+        "discoveryScore": 11.2,
+        "targetedCoverage": false,
+        "eventKey": "culture:the story is with elex michaelson cnn com transcripts",
+        "signalSpecificityScore": 5,
+        "signalSpecificityNotes": [
+          "title_specificity",
+          "article_likelihood",
+          "named_marker"
+        ],
+        "crossTopicRisk": false
+      },
+      "discoveredAt": "2026-04-02T02:38:59.980Z",
+      "lastSeenAt": "2026-04-02T02:39:00.014Z",
+      "expiresAt": "2026-04-04T02:39:00.013Z"
     }
   ]
 }

@@ -1,0 +1,760 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-04-02T02-38-59-828Z",
+  "started_at": "2026-04-02T02:38:59.828Z",
+  "generated_at": "2026-04-02T02:39:27.996Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "discovery_candidates": 34,
+    "event_clusters": 10,
+    "briefs_normalized": 6,
+    "source_packs_assembled": 19,
+    "publishable_candidates": 1,
+    "selected_topic": "NCAA approves major penalties for programs that circumvent ...",
+    "selected_topics": [
+      "NCAA approves major penalties for programs that circumvent ..."
+    ],
+    "articles_attempted": 1,
+    "articles_published": 1,
+    "news_pool": {
+      "total": 42,
+      "active": 34,
+      "published": 8,
+      "ready_candidates": 0
+    },
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 10000,
+      "live_quota": {
+        "brave": 15,
+        "gdelt": 6,
+        "google": 30
+      },
+      "live_rescue_reserved": {
+        "brave": 1,
+        "gdelt": 0,
+        "google": 0
+      },
+      "live_phase_caps": {
+        "brave": {
+          "discovery": 14,
+          "rescue": 1
+        },
+        "gdelt": {
+          "discovery": 6,
+          "rescue": 6
+        },
+        "google": {
+          "discovery": 30,
+          "rescue": 30
+        }
+      },
+      "brave_rescue_max_live_queries": 1,
+      "live_usage": {
+        "brave": 1,
+        "gdelt": 0,
+        "google": 0
+      },
+      "live_usage_by_phase": {
+        "brave": {
+          "discovery": 0,
+          "rescue": 1
+        },
+        "gdelt": {
+          "discovery": 0,
+          "rescue": 0
+        },
+        "google": {
+          "discovery": 0,
+          "rescue": 0
+        }
+      },
+      "provider_circuits": {
+        "gdelt": {
+          "open": true,
+          "locked_until": "2026-04-03T02:01:51.976Z",
+          "reason": "API error: 429 Please limit requests to one every 5 seconds or contact kalev.leetaru5@gmail.com for larger queries.\n\n"
+        }
+      },
+      "cache": {
+        "ttl_hours": 6,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 8,
+            "fresh_files": 8,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 91821
+          },
+          "gdelt": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          },
+          "google": {
+            "files": 12,
+            "fresh_files": 12,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 179004
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 28166,
+    "ready_candidates": 0,
+    "additional_ready_candidates": 0,
+    "source_pack_attempts": 1,
+    "source_pack_retry_external_queries": 0,
+    "source_pack_retry_brave_queries": 0,
+    "source_pack_retry_estimated_tokens": 0,
+    "pre_draft_rejected": 0
+  },
+  "provider_stats": {
+    "mode": "cache_refresh_with_live_quota",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": true,
+    "min_search_interval_ms": 10000,
+    "live_quota": {
+      "brave": 15,
+      "gdelt": 6,
+      "google": 30
+    },
+    "live_rescue_reserved": {
+      "brave": 1,
+      "gdelt": 0,
+      "google": 0
+    },
+    "live_phase_caps": {
+      "brave": {
+        "discovery": 14,
+        "rescue": 1
+      },
+      "gdelt": {
+        "discovery": 6,
+        "rescue": 6
+      },
+      "google": {
+        "discovery": 30,
+        "rescue": 30
+      }
+    },
+    "brave_rescue_max_live_queries": 1,
+    "live_usage": {
+      "brave": 1,
+      "gdelt": 0,
+      "google": 0
+    },
+    "live_usage_by_phase": {
+      "brave": {
+        "discovery": 0,
+        "rescue": 1
+      },
+      "gdelt": {
+        "discovery": 0,
+        "rescue": 0
+      },
+      "google": {
+        "discovery": 0,
+        "rescue": 0
+      }
+    },
+    "provider_circuits": {
+      "gdelt": {
+        "open": true,
+        "locked_until": "2026-04-03T02:01:51.976Z",
+        "reason": "API error: 429 Please limit requests to one every 5 seconds or contact kalev.leetaru5@gmail.com for larger queries.\n\n"
+      }
+    },
+    "cache": {
+      "ttl_hours": 6,
+      "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+      "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 8,
+          "fresh_files": 8,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 91821
+        },
+        "gdelt": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        },
+        "google": {
+          "files": 12,
+          "fresh_files": 12,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 179004
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14135
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6189
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 285008
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "preDraftPreparation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claimMapCreation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "articleDrafting": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "imageSupport": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "publishing": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "localVerification": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "preWriteQualityGate": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 1,
+    "editorial_pass_count": 1,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "NCAA Adopts Harsh Penalties for Teams Skirting Transfer Portal Rules",
+      "slug": "ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "sports",
+          "topic_id": "transfers-business",
+          "placement_confidence": "medium",
+          "placement_reason": [
+            "kept_existing_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 2,
+          "unique_domains": 2,
+          "direct_event_source_count": 2,
+          "independent_event_domains": 2,
+          "source_consistency_score": 5,
+          "strong_match_count": 2,
+          "core_source_count": 2,
+          "supporting_source_count": 0,
+          "background_source_count": 3,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 2,
+          "background": 12
+        },
+        "publish_ready_sources": [
+          {
+            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "domain": "nytimes.com",
+            "url": "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          },
+          {
+            "title": "NCAA Makes Transfer Portal Rule Changes With Huge Penalties",
+            "domain": "newsweek.com",
+            "url": "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "sports"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": 3,
+            "source_quality_score": 37.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "NCAA Makes Transfer Portal Rule Changes With Huge Penalties",
+            "domain": "newsweek.com",
+            "page_kind": "article",
+            "same_event_score": 7,
+            "topic_fit_score": 3,
+            "source_quality_score": 16,
+            "article_likelihood": 8,
+            "genericity_score": 2
+          },
+          {
+            "role": "background",
+            "title": "The 48 World Cup teams are set. We've filled in the bracket and ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 2,
+            "topic_fit_score": 4,
+            "source_quality_score": 12.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Plotting Canada's path through the World Cup. Could it be Mexico in ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 2,
+            "topic_fit_score": 3,
+            "source_quality_score": 11.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Chelsea announce largest pre-tax loss in English football history",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 2,
+            "topic_fit_score": 3,
+            "source_quality_score": 11.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "FSG is allowing Liverpool to drift",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 2,
+            "topic_fit_score": 3,
+            "source_quality_score": 9,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Leeds' 2024-25 accounts: Ninth-highest commercial income in ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 11.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "World Cup 2026 – Groups, bracket and predictions with all 48 teams ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 10,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Like MLB, College Basketball Is Also Now More Popular Than The NBA",
+            "domain": "outkick.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 10,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "UNC star Caleb Wilson, a projected top",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 9,
+            "article_likelihood": 10,
+            "genericity_score": 2
+          },
+          {
+            "role": "background",
+            "title": "Are these Manchester United's summer transfer priorities?",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 9,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Tiger Woods arrested, charged with DUI after rollover crash in Florida",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 9,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 2,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": []
+        }
+      },
+      "tags": {
+        "tags": [
+          "Transfers & Business",
+          "Report"
+        ],
+        "tag_slugs": [
+          "transfers-business",
+          "report"
+        ],
+        "primary_topic_tag": "Transfers & Business",
+        "primary_topic_slug": "transfers-business",
+        "warnings": [
+          "Canonical tag set is thin (2)"
+        ],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "Transfers & Business",
+            "slug": "transfers-business",
+            "score": 24,
+            "reason": "Primary topic fallback locked to canonical topic_id=transfers-business",
+            "fallback": false
+          },
+          {
+            "label": "Report",
+            "slug": "report",
+            "score": 10,
+            "reason": "Format from article type: report",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "Canonical tag set is below target floor (3), accepted due sparse evidence"
+          ]
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "transfers-business",
+              "label": "Transfers & Business",
+              "type": "topic"
+            },
+            {
+              "slug": "report",
+              "label": "Report",
+              "type": "format"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "transfers-business",
+            "topic_label": "Transfers & Business",
+            "supported": true,
+            "matched_aliases": [
+              "transfers"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pexels",
+        "image_path": "~/assets/images/library/pexels/15338951/cover.jpg",
+        "source_url": "https://www.pexels.com/photo/coach-with-players-in-stadium-15338951/",
+        "selection_mode": "provider_download_new:pexels:usable:strict",
+        "query_used": "NCAA photo",
+        "relevance_tier": "usable",
+        "article_relevance_score": 36,
+        "asset_quality_score": 94,
+        "editorial_fit_score": 52,
+        "scene_type": "stadium",
+        "visual_type": "photo",
+        "entity_hints": [
+          "football",
+          "coach",
+          "motivating",
+          "players",
+          "field",
+          "during",
+          "game",
+          "idaho"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "NCAA football photo",
+          "NCAA photo",
+          "NCAA portrait",
+          "global NCAA photo",
+          "NCAA Adopts Harsh football photo",
+          "rules photo",
+          "football photo",
+          "NCAA Adopts Harsh photo",
+          "sports arena photo",
+          "athlete portrait"
+        ],
+        "decision_log": [
+          {
+            "query": "NCAA football photo",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 15
+          },
+          {
+            "query": "NCAA photo",
+            "queryLevel": "strict",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "15338951",
+            "finalScore": 46,
+            "articleRelevanceScore": 28,
+            "assetQualityScore": 94,
+            "tier": "usable"
+          },
+          {
+            "query": "NCAA portrait",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 15
+          },
+          {
+            "query": "global NCAA photo",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 15
+          },
+          {
+            "query": "NCAA Adopts Harsh football photo",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 15
+          },
+          {
+            "queryLevel": "strict",
+            "status": "level_complete",
+            "attemptedQueries": 5,
+            "rankedCandidates": 1,
+            "bestProvider": "pexels",
+            "bestFinalScore": 46,
+            "bestTier": "usable"
+          },
+          {
+            "query": "rules photo",
+            "queryLevel": "relaxed",
+            "status": "no_eligible_candidate",
+            "candidateCount": 15
+          },
+          {
+            "query": "football photo",
+            "queryLevel": "relaxed",
+            "status": "no_eligible_candidate",
+            "candidateCount": 15
+          },
+          {
+            "query": "NCAA Adopts Harsh photo",
+            "queryLevel": "relaxed",
+            "status": "no_eligible_candidate",
+            "candidateCount": 15
+          },
+          {
+            "queryLevel": "relaxed",
+            "status": "level_complete",
+            "attemptedQueries": 3,
+            "rankedCandidates": 0,
+            "bestProvider": null,
+            "bestFinalScore": null,
+            "bestTier": null
+          },
+          {
+            "query": "sports arena photo",
+            "queryLevel": "broad",
+            "status": "no_eligible_candidate",
+            "candidateCount": 15
+          },
+          {
+            "query": "athlete portrait",
+            "queryLevel": "broad",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "13967254",
+            "finalScore": 41,
+            "articleRelevanceScore": 20,
+            "assetQualityScore": 94,
+            "tier": "weak"
+          }
+        ],
+        "best_online_decision": {
+          "query": "NCAA photo",
+          "provider": "pexels",
+          "providerAssetId": "15338951",
+          "queryLevel": "strict",
+          "finalScore": 46,
+          "articleRelevanceScore": 28,
+          "assetQualityScore": 94,
+          "tier": "usable"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pexels",
+          "query_used": "NCAA photo",
+          "article_relevance_score": 36,
+          "relevance_tier": "usable",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "ncaa"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.json",
+        "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.mdx",
+        "expected_url": "/article/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
+        "verified_url": null
+      }
+    }
+  ]
+}

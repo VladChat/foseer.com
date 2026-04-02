@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-04-01T20:56:17.175Z",
+  "updatedAt": "2026-04-02T02:39:27.934Z",
   "assets": [
     {
       "assetKey": "legacy:7-social-media-trends-you-need-to-know-in-2026",
@@ -7928,16 +7928,156 @@
       "sceneType": "office",
       "geoHints": [],
       "visualType": "photo",
-      "editorialFitScore": 100,
+      "editorialFitScore": 98,
       "firstSeenAt": "2026-04-01T20:56:17.175Z",
       "lastFetchedAt": "2026-04-01T20:56:17.175Z",
       "lastUsedAt": "2026-04-01T20:56:17.175Z",
       "useCount": 1,
       "status": "ready",
       "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pixabay:1940691",
+      "provider": "pixabay",
+      "providerAssetId": "1940691",
+      "sourcePageUrl": "https://pixabay.com/photos/city-people-underground-metro-1940691/",
+      "sourceDownloadUrl": "https://pixabay.com/get/gad582e6d82ae1af92794220d7d332869566703a80c770a58f9537102fa68fa0942dbd6ce67c64ca69f89f12eb036b74a88d8a59a38e9d8e4537b4d0859cbeaa6_1280.jpg",
+      "authorName": "JESHOOTS-com",
+      "authorUrl": "https://pixabay.com/users/JESHOOTS-com-264599/",
+      "license": "Pixabay Content License",
+      "altText": "city, people, underground, metro, transport, transfer, traffic, transportation, prague, czech, business, man, motion, lights, station, train, stop, architecture, metro, metro, transportation, business, train, train, train, train, train",
+      "width": 4200,
+      "height": 2800,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pixabay/1940691/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pixabay/1940691/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pixabay/1940691/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "Sports"
+      ],
+      "queryHistory": [
+        "Transfers and Business photo"
+      ],
+      "tags": [
+        "transfers-business",
+        "Unspecified",
+        "city",
+        "people",
+        "underground",
+        "metro",
+        "transport",
+        "transfer",
+        "traffic",
+        "transportation",
+        "prague",
+        "czech",
+        "business",
+        "man",
+        "motion",
+        "lights",
+        "station",
+        "train",
+        "stop",
+        "architecture"
+      ],
+      "topicHints": [
+        "transfers-business"
+      ],
+      "entityHints": [
+        "underground",
+        "metro",
+        "transport",
+        "transfer",
+        "traffic",
+        "transportation",
+        "prague",
+        "czech"
+      ],
+      "sceneType": "portrait",
+      "geoHints": [],
+      "visualType": "photo",
+      "editorialFitScore": 98,
+      "firstSeenAt": "2026-04-02T02:39:25.511Z",
+      "lastFetchedAt": "2026-04-02T02:39:25.511Z",
+      "lastUsedAt": "2026-04-02T02:39:25.511Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pexels:15338951",
+      "provider": "pexels",
+      "providerAssetId": "15338951",
+      "sourcePageUrl": "https://www.pexels.com/photo/coach-with-players-in-stadium-15338951/",
+      "sourceDownloadUrl": "https://images.pexels.com/photos/15338951/pexels-photo-15338951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "authorName": "Tim Mossholder",
+      "authorUrl": "https://www.pexels.com/@timmossholder",
+      "license": "Pexels License",
+      "altText": "Football coach motivating players on field during a game in Idaho Falls.",
+      "width": 6814,
+      "height": 4543,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pexels/15338951/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pexels/15338951/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pexels/15338951/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "Sports"
+      ],
+      "queryHistory": [
+        "NCAA photo"
+      ],
+      "tags": [
+        "Unspecified",
+        "Football coach motivating players on field during a game in Idaho Falls."
+      ],
+      "topicHints": [],
+      "entityHints": [
+        "football",
+        "coach",
+        "motivating",
+        "players",
+        "field",
+        "during",
+        "game",
+        "idaho"
+      ],
+      "sceneType": "stadium",
+      "geoHints": [],
+      "visualType": "photo",
+      "editorialFitScore": 94,
+      "firstSeenAt": "2026-04-02T02:39:27.934Z",
+      "lastFetchedAt": "2026-04-02T02:39:27.934Z",
+      "lastUsedAt": "2026-04-02T02:39:27.934Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
     }
   ],
   "usage": [
+    {
+      "assetKey": "pexels:15338951",
+      "articleSlug": "ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
+      "articleTitle": "NCAA Adopts Harsh Penalties for Teams Skirting Transfer Portal Rules",
+      "section": "Sports",
+      "topicId": null,
+      "query": "NCAA photo",
+      "usedAt": "2026-04-02T02:39:27.934Z",
+      "selectionMode": "provider_download_new:pexels:usable:strict"
+    },
+    {
+      "assetKey": "pixabay:1940691",
+      "articleSlug": "ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
+      "articleTitle": "NCAA Adopts Harsh Penalties for Teams Skirting Transfer Portal Rules",
+      "section": "Sports",
+      "topicId": "transfers-business",
+      "query": "Transfers and Business photo",
+      "usedAt": "2026-04-02T02:39:25.511Z",
+      "selectionMode": "provider_download_new:pixabay:acceptable:relaxed"
+    },
     {
       "assetKey": "pixabay:6688945",
       "articleSlug": "crypto-mortgages-explained-what-to-know-before-using-crypto-",
@@ -8752,6 +8892,6 @@
   "maintenance": {
     "lastLegacyImportAt": "2026-03-26T18:24:48.254Z",
     "lastCooldownBackfillAt": null,
-    "lastMetadataEnrichmentAt": "2026-04-01T20:56:16.677Z"
+    "lastMetadataEnrichmentAt": "2026-04-02T02:39:25.550Z"
   }
 }

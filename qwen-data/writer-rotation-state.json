@@ -1,5 +1,5 @@
 {
-  "totalArticles": 99,
+  "totalArticles": 100,
   "lastReset": null,
   "byWriter": {
     "reporter": {
@@ -12,7 +12,7 @@
     "explainer": {
       "count": 15,
       "lastAssigned": 1775076941695,
-      "streak": 1,
+      "streak": 0,
       "authorCursor": 1,
       "lastAuthorId": "olivia_brooks"
     },
@@ -24,22 +24,14 @@
       "lastAuthorId": "jacob_ellis"
     },
     "features": {
-      "count": 32,
-      "lastAssigned": 1774981314047,
-      "streak": 0,
-      "authorCursor": 3,
-      "lastAuthorId": "owen_foster"
+      "count": 33,
+      "lastAssigned": 1775097541322,
+      "streak": 1,
+      "authorCursor": 0,
+      "lastAuthorId": "chloe_warren"
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "features",
-      "timestamp": 1774644970414,
-      "articleType": "report",
-      "beat": "sports",
-      "section": "Sports",
-      "topic_id": "events-tournaments"
-    },
     {
       "writerId": "reporter",
       "timestamp": 1774650514490,
@@ -431,6 +423,14 @@
       "beat": "markets",
       "section": "Business",
       "topic_id": "crypto-bitcoin"
+    },
+    {
+      "writerId": "features",
+      "timestamp": 1775097541322,
+      "articleType": "report",
+      "beat": "sports",
+      "section": "Sports",
+      "topic_id": "transfers-business"
     }
   ]
 }

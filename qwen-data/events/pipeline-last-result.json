@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-04-01T20:56:17.294Z",
+  "timestamp": "2026-04-02T02:39:27.997Z",
   "success": true,
   "hard_blocker": null,
-  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto.mdx",
-  "verified_url": "/article/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto",
+  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.mdx",
+  "verified_url": "/article/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
   "stages": {
     "discovery": {
       "stage": "discovery",
       "success": true,
       "error": null,
       "data": {
-        "candidatesCount": 24,
-        "discoveredPoolTotal": 188,
+        "candidatesCount": 34,
+        "discoveredPoolTotal": 151,
         "queryUsage": {
           "brave": 7,
           "google": 2,
@@ -20,23 +20,23 @@
         },
         "targetedCoverage": {
           "triggered": true,
-          "reason": "recent_section_imbalance:health:0_vs_5",
+          "reason": "recent_section_imbalance:health:0_vs_4",
           "section_id": "health",
           "topic_id": "public-health",
           "recent_window_hours": 48,
-          "recent_sample_size": 10,
+          "recent_sample_size": 9,
           "section_counts": {
-            "news": 5,
-            "business": 1,
+            "news": 4,
+            "business": 2,
             "tech": 1,
             "health": 0,
-            "sports": 3,
+            "sports": 2,
             "culture": 0
           },
           "viable_in_target_section_before": 3,
-          "viable_in_target_section_after": 3,
-          "viable_share_before": 0.214,
-          "viable_share_after": 0.214,
+          "viable_in_target_section_after": 5,
+          "viable_share_before": 0.176,
+          "viable_share_after": 0.263,
           "skipped_reason": null
         }
       }
@@ -46,8 +46,8 @@
       "success": true,
       "error": null,
       "data": {
-        "briefsCount": 6,
-        "clusterCount": 8
+        "briefsCount": 5,
+        "clusterCount": 10
       }
     },
     "sourcePackAssembly": {
@@ -58,7 +58,7 @@
         "attempts": [
           {
             "attempt": "initial",
-            "source_packs_assembled": 15,
+            "source_packs_assembled": 19,
             "publishable_candidates": 1,
             "selected_candidates": 1
           }
@@ -69,7 +69,7 @@
           "maxBraveQueries": 1,
           "maxTokenBudget": 0
         },
-        "sourcePackSelectionCandidateLimit": 6,
+        "sourcePackSelectionCandidateLimit": 16,
         "retryDiagnostics": [],
         "retryUsage": {
           "external_queries": 0,
@@ -79,13 +79,14 @@
         "selectedCount": 1,
         "selectedTopics": [
           {
-            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
-            "eventId": "evt-2026-03-30-crypto-bitcoin-general-global",
-            "sources": 4,
-            "uniqueDomains": 4,
-            "section_id": "business",
-            "topic_id": "crypto-bitcoin",
+            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "eventId": "evt-2026-04-02-sports-general-global",
+            "sources": 2,
+            "uniqueDomains": 2,
+            "section_id": "sports",
+            "topic_id": "transfers-business",
             "gate_notes": [
+              "Large cluster retained extra materials as background/signal; publishable pack remains thin",
               "Role-aware one-event source-pack gate passed"
             ],
             "stage3_editorial_gate": {
@@ -100,42 +101,43 @@
           "additionalReadyCandidates": [],
           "selectedCandidates": [
             {
-              "identityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
-              "briefId": "evt-2026-03-30-crypto-bitcoin-general-global",
-              "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
-              "normalizedTitle": "crypto mortgage explained buying home crypto here s what no one tells you you make move",
-              "section_id": "business",
-              "topic_id": "crypto-bitcoin",
+              "identityKey": "cluster:evt-2026-04-02-sports-general-global",
+              "briefId": "evt-2026-04-02-sports-general-global",
+              "title": "NCAA approves major penalties for programs that circumvent ...",
+              "normalizedTitle": "ncaa approves major penalties programs that circumvent",
+              "section_id": "sports",
+              "topic_id": "transfers-business",
               "articleType": "analysis",
-              "selectionOrigin": "ready_backlog",
-              "poolIdentityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
+              "selectionOrigin": "pool",
+              "poolIdentityKey": "cluster:evt-2026-04-02-sports-general-global",
               "rank": 1,
-              "score": 75,
+              "score": 53.8,
               "scoreNotes": [
-                "section_penalty:10",
-                "topic_penalty:5",
-                "region_penalty:50",
-                "angle_penalty:43",
+                "undercovered_section:sports",
+                "section_penalty:4",
+                "topic_penalty:18",
+                "region_penalty:36",
                 "cluster_repeat:1",
-                "entity_penalty:33",
-                "domains:4",
-                "consistency:9.4",
-                "core:3",
-                "supporting:1"
+                "entity_penalty:24",
+                "domains:2",
+                "consistency:5",
+                "core:2",
+                "supporting:0"
               ],
-              "sourceCount": 4,
-              "uniqueDomains": 4,
-              "directEventSourceCount": 4,
-              "independentEventDomains": 4,
+              "sourceCount": 2,
+              "uniqueDomains": 2,
+              "directEventSourceCount": 2,
+              "independentEventDomains": 2,
               "gateDecision": "PASS",
               "gateNotes": [
+                "Large cluster retained extra materials as background/signal; publishable pack remains thin",
                 "Role-aware one-event source-pack gate passed"
               ],
-              "discoveredAt": "2026-03-30T23:55:33.331Z",
-              "firstQueuedAt": "2026-03-30T23:19:53.820Z",
-              "lastQueuedAt": "2026-04-01T20:55:41.469Z",
+              "discoveredAt": "2026-04-02T02:38:59.975Z",
+              "firstQueuedAt": "2026-04-02T02:39:01.124Z",
+              "lastQueuedAt": "2026-04-02T02:39:01.124Z",
               "status": "selected",
-              "lastSelectedAt": "2026-04-01T20:55:41.469Z",
+              "lastSelectedAt": "2026-04-02T02:39:01.124Z",
               "lastPublishedAt": null,
               "publishedSlug": null,
               "selectedByWorkflow": null,
@@ -146,7 +148,7 @@
           ],
           "filePath": "/home/runner/work/foseer.com/foseer.com/qwen-data/events/ready-article-candidates.json",
           "selectedIdentityKeys": [
-            "cluster:evt-2026-03-30-crypto-bitcoin-general-global"
+            "cluster:evt-2026-04-02-sports-general-global"
           ]
         },
         "duplicateRejectedCandidates": [],
@@ -164,19 +166,19 @@
         "rejected": [],
         "items": [
           {
-            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+            "title": "NCAA approves major penalties for programs that circumvent ...",
             "success": true,
             "error": null,
             "data": {
-              "section_id": "business",
-              "topic_id": "crypto-bitcoin",
+              "section_id": "sports",
+              "topic_id": "transfers-business",
               "tags": [
-                "Crypto",
-                "Mortgages"
+                "Transfers & Business",
+                "Report"
               ],
               "tag_slugs": [
-                "crypto-bitcoin",
-                "mortgages"
+                "transfers-business",
+                "report"
               ],
               "thin_tag_set_before_draft": false,
               "warnings": [
@@ -197,7 +199,7 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+            "title": "NCAA approves major penalties for programs that circumvent ...",
             "success": true,
             "error": null,
             "data": {
@@ -220,12 +222,12 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+            "title": "NCAA approves major penalties for programs that circumvent ...",
             "success": true,
             "error": null,
             "data": {
-              "wordCount": 1697,
-              "articleType": "explainer",
+              "wordCount": 1249,
+              "articleType": "report",
               "quality": "strong",
               "safeForPublishing": true
             }
@@ -243,12 +245,12 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+            "title": "NCAA approves major penalties for programs that circumvent ...",
             "success": true,
             "error": null,
             "data": {
               "provider": "pixabay",
-              "imagePath": "~/assets/images/library/pixabay/6688945/cover.jpg",
+              "imagePath": "~/assets/images/library/pixabay/1940691/cover.jpg",
               "hasAltText": true
             }
           }
@@ -265,17 +267,17 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+            "title": "NCAA approves major penalties for programs that circumvent ...",
             "success": true,
             "error": null,
             "data": {
-              "filename": "2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto.mdx",
-              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto.mdx",
-              "canonicalSlug": "2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto",
-              "expectedUrl": "/article/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto",
-              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/crypto-mortgages-explained-what-to-know-before-using-crypto-.json",
-              "section_id": "business",
-              "topic_id": "crypto-bitcoin"
+              "filename": "2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.mdx",
+              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.mdx",
+              "canonicalSlug": "2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
+              "expectedUrl": "/article/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
+              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.json",
+              "section_id": "sports",
+              "topic_id": "transfers-business"
             }
           }
         ]
@@ -291,13 +293,54 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+            "title": "NCAA approves major penalties for programs that circumvent ...",
             "success": true,
             "error": null,
             "data": {
               "skipped": true,
               "reason": "CI environment: localhost verification skipped; publish + build checks passed",
-              "expectedUrl": "/article/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto"
+              "expectedUrl": "/article/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port"
+            }
+          }
+        ]
+      }
+    },
+    "preWriteQualityGate": {
+      "stage": "preWriteQualityGate",
+      "success": true,
+      "error": null,
+      "data": {
+        "total": 1,
+        "successCount": 1,
+        "failureCount": 0,
+        "items": [
+          {
+            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "success": true,
+            "error": null,
+            "data": {
+              "mode": "article",
+              "source_count": 2,
+              "unique_domains": 2,
+              "trusted_reporting_sources": 1,
+              "official_primary_sources": 0,
+              "coherence_score": 1,
+              "min_sources": 2,
+              "min_domains": 2,
+              "min_coherence": 0.45,
+              "gate_passed": true,
+              "gate_notes": [
+                "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+                "Role-aware one-event source-pack gate passed"
+              ],
+              "stage3_blocking_errors": [],
+              "has_entity_signal": true,
+              "single_source_whitelist": {
+                "enabled": false,
+                "pass": false,
+                "reason": "disabled"
+              },
+              "brief_title": "NCAA approves major penalties for programs that circumvent ..."
             }
           }
         ]
@@ -306,9 +349,9 @@
   },
   "selected": {
     "brief": {
-      "id": "evt-2026-03-30-crypto-bitcoin-general-global",
-      "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
-      "whatHappened": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+      "id": "evt-2026-04-02-sports-general-global",
+      "title": "NCAA approves major penalties for programs that circumvent ...",
+      "whatHappened": "7 hours ago ... FBS programs that add or sign players who withdraw from their schools but bypass the transfer portal window will have their head coaches suspended for six games ...",
       "whoIsInvolved": "Unspecified",
       "involvedParties": [
         "Unspecified"
@@ -316,1885 +359,132 @@
       "entities": [
         "Unspecified"
       ],
-      "when": "5 hours ago",
+      "when": "2026-04-02T02:38:59.975Z",
       "where": "Not specified",
-      "whyItMatters": "The development could shape public services, public policy, or institutional decision-making.",
-      "developmentStage": "breaking",
+      "whyItMatters": "The development could reshape competition, fan attention, or the business side of sports.",
+      "developmentStage": "resolved",
       "sourceUrls": [
-        "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-        "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-        "https://www.wsj.com/economy/central-banking/rba-board-members-harper-hewson-to-deliver-public-speeches-in-coming-months-804d04b2?gaa_at=eafs&gaa_n=AWEtsqeVsHk9VWwsV0uuc3PVzuhmSqB4QhF32HAgp--kn6H0sTmExiTLUerM&gaa_ts=69cade0b&gaa_sig=MfKo95mqMoZpJ1Zek0CRGu0hwfQ68iSHt3E37OyRp5rfTMDTnlMndu93NaYacKPcUZTQFrmbbYGjsqnL7mX6aA%3D%3D",
-        "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
-        "https://www.economist.com/topics/finance-and-economics?after=d211d2f5-dc21-49e0-a014-6d88f81c7e1f",
-        "https://www.foxbusiness.com/media/delta-ceo-ed-bastian-rips-lawmakers-lack-leadership-dhs-shutdown",
-        "https://www.themarketsdaily.com/2026/03/30/honey-badger-silver-cvetuf-stock-price-up-13-6-time-to-buy.html",
-        "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163",
-        "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines",
-        "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next",
-        "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
-        "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162",
-        "https://www.theglobeandmail.com/investing/markets/stocks/CUE/pressreleases/1013060/cue-biopharma-announces-ceo-transition/",
-        "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
-        "https://bitcoinmagazine.com/news/crypto-stocks-near-a-bottom-after-selling",
-        "https://www.bloomberg.com/businessweek",
-        "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
-        "https://www.nytimes.com/topic/don-lemon"
+        "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
+        "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
+        "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/",
+        "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/",
+        "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/",
+        "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/",
+        "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/",
+        "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/"
       ],
-      "publishabilityScore": 10,
+      "publishabilityScore": 9,
       "publishabilityNotes": [
         "Has a usable summary sentence",
         "Parties remain unclear",
-        "Very fresh development",
+        "Freshness is moderate",
         "Multiple source URLs already attached",
         "Clustered across multiple discovery hits",
         "Cluster contains multiple article-like materials",
-        "Taxonomy topic match is specific enough for routing",
         "At least one trusted source hit is present"
       ],
-      "discoveredAt": "2026-03-30T23:55:33.331Z",
-      "provider": "brave",
-      "section_id": "business",
-      "topic_id": "crypto-bitcoin",
+      "discoveredAt": "2026-04-02T02:38:59.975Z",
+      "provider": "google_trusted",
+      "section_id": "sports",
+      "topic_id": "transfers-business",
       "region": "global",
-      "angle": "general",
-      "cluster_id": "evt-2026-03-30-crypto-bitcoin-general-global",
-      "eventKey": "2026-03-30:crypto-bitcoin-general-global",
-      "cluster_size": 7,
-      "article_rich_count": 6,
-      "generic_page_count": 1,
+      "angle": "events",
+      "cluster_id": "evt-2026-04-02-sports-general-global",
+      "eventKey": "2026-04-02:sports-general-global",
+      "cluster_size": 8,
+      "article_rich_count": 8,
+      "generic_page_count": 0,
       "discoveryContext": [
         {
-          "id": "brave-sec-1774901865856-0",
-          "title": "Intellectia",
-          "summary": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "8 hours ago",
-          "sourceUrls": [
-            "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis"
-          ],
-          "freshness": 8,
-          "urgency": 6,
-          "discoveredAt": "2026-03-30T20:17:45.872Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:business",
-          "sectionCandidates": [
-            "business",
-            "tech"
-          ],
-          "topicCandidates": [
-            "crypto-bitcoin",
-            "ai-big-tech"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": "crypto-bitcoin",
-          "region": "global",
-          "angle": "markets",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 2,
-          "article_likelihood": 8,
-          "normalizedTitle": "intellectia",
-          "canonicalUrl": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "discoveryScore": 18.4,
-          "eventKey": "crypto-bitcoin:intellectia",
-          "source_id": "brave-sec-1774901865856-0",
-          "url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "canonical_url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "domain": "intellectia.ai",
-          "canonical_domain": "intellectia.ai",
-          "normalized_title": "intellectia",
-          "snippet": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
-          "published_at": "8 hours ago",
-          "section_id": "business",
-          "topic_id": "crypto-bitcoin",
-          "section_candidates": [
-            "business",
-            "tech"
-          ],
-          "topic_candidates": [
-            "crypto-bitcoin",
-            "ai-big-tech"
-          ],
-          "cluster_id": null,
-          "event_key": "crypto-bitcoin:intellectia",
-          "keywords": [
-            "intellectia",
-            "cryptocurrency",
-            "market",
-            "sending",
-            "contradictory",
-            "signals",
-            "left",
-            "investors",
-            "both",
-            "nervous",
-            "curious",
-            "bitcoin"
-          ],
-          "title_signal_tokens": [
-            "intellectia"
-          ],
-          "url_signal_tokens": [
-            "blog",
-            "crypto",
-            "market",
-            "crash",
-            "bitcoin",
-            "rebound"
-          ],
-          "title_url_overlap": 0,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "intellectia"
-          ]
-        },
-        {
-          "id": "brave-sec-1774901865872-1",
-          "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
-          "summary": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "1 hour ago",
-          "sourceUrls": [
-            "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms"
-          ],
-          "freshness": 9,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T20:17:45.882Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:business",
-          "sectionCandidates": [
-            "business",
-            "news"
-          ],
-          "topicCandidates": [
-            "crypto-bitcoin"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": "crypto-bitcoin",
-          "region": "global",
-          "angle": "policy",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move the econom",
-          "canonicalUrl": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "discoveryScore": 17.4,
-          "eventKey": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
-          "source_id": "brave-sec-1774901865872-1",
-          "url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "canonical_url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "domain": "economictimes.indiatimes.com",
-          "canonical_domain": "economictimes.indiatimes.com",
-          "normalized_title": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move",
-          "snippet": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
-          "published_at": "1 hour ago",
-          "section_id": "business",
-          "topic_id": "crypto-bitcoin",
-          "section_candidates": [
-            "business",
-            "news"
-          ],
-          "topic_candidates": [
-            "crypto-bitcoin"
-          ],
-          "cluster_id": null,
-          "event_key": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
-          "keywords": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move",
-            "explore"
-          ],
-          "title_signal_tokens": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move"
-          ],
-          "url_signal_tokens": [
-            "international",
-            "buying",
-            "home",
-            "crypto",
-            "heres",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move",
-            "articleshow"
-          ],
-          "title_url_overlap": 0.7272727272727273,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move"
-          ]
-        },
-        {
-          "id": "google-sec-1774901895563-5",
-          "title": "RBA Board Members to Deliver Public Speeches, Breaking ...",
-          "summary": "18 hours ago ... SYDNEY—The Reserve Bank of Australia has approved two public-speaking events by external members of its policy-setting board, breaking with past practice where ...",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.wsj.com/economy/central-banking/rba-board-members-harper-hewson-to-deliver-public-speeches-in-coming-months-804d04b2?gaa_at=eafs&gaa_n=AWEtsqeVsHk9VWwsV0uuc3PVzuhmSqB4QhF32HAgp--kn6H0sTmExiTLUerM&gaa_ts=69cade0b&gaa_sig=MfKo95mqMoZpJ1Zek0CRGu0hwfQ68iSHt3E37OyRp5rfTMDTnlMndu93NaYacKPcUZTQFrmbbYGjsqnL7mX6aA%3D%3D"
-          ],
-          "freshness": 4,
-          "urgency": 6,
-          "discoveredAt": "2026-03-30T20:18:15.567Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:news",
-          "sectionCandidates": [
-            "business",
-            "sports",
-            "news"
-          ],
-          "topicCandidates": [
-            "economy-markets",
-            "events-tournaments"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "australia",
-          "angle": "policy",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 2,
-          "article_likelihood": 8,
-          "normalizedTitle": "rba board members to deliver public speeches breaking wsj",
-          "canonicalUrl": "https://www.wsj.com/economy/central-banking/rba-board-members-harper-hewson-to-deliver-public-speeches-in-coming-months-804d04b2",
-          "discoveryScore": 15.4,
-          "eventKey": "business:rba board members to deliver public speeches breaking wsj",
-          "source_id": "google-sec-1774901895563-5",
-          "url": "https://www.wsj.com/economy/central-banking/rba-board-members-harper-hewson-to-deliver-public-speeches-in-coming-months-804d04b2",
-          "canonical_url": "https://www.wsj.com/economy/central-banking/rba-board-members-harper-hewson-to-deliver-public-speeches-in-coming-months-804d04b2",
-          "domain": "wsj.com",
-          "canonical_domain": "wsj.com",
-          "normalized_title": "rba board members to deliver public speeches",
-          "snippet": "18 hours ago ... SYDNEY—The Reserve Bank of Australia has approved two public-speaking events by external members of its policy-setting board, breaking with past practice where ...",
-          "published_at": "2026-03-30T20:18:15.567Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business",
-            "sports",
-            "news"
-          ],
-          "topic_candidates": [
-            "economy-markets",
-            "events-tournaments"
-          ],
-          "cluster_id": null,
-          "event_key": "business:rba board members to deliver public speeches breaking wsj",
-          "keywords": [
-            "board",
-            "members",
-            "deliver",
-            "public",
-            "speeches",
-            "hours",
-            "sydney",
-            "reserve",
-            "bank",
-            "australia",
-            "approved",
-            "speaking"
-          ],
-          "title_signal_tokens": [
-            "board",
-            "members",
-            "deliver",
-            "public",
-            "speeches"
-          ],
-          "url_signal_tokens": [
-            "economy",
-            "central",
-            "banking",
-            "board",
-            "members",
-            "harper",
-            "hewson",
-            "deliver",
-            "public",
-            "speeches",
-            "coming",
-            "months"
-          ],
-          "title_url_overlap": 1,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "australia",
-          "titleTokens": [
-            "board",
-            "members",
-            "deliver",
-            "public",
-            "speeches"
-          ]
-        },
-        {
-          "id": "google-sec-1774901895551-1",
-          "title": "Constantino's sticky ad spending problem",
-          "summary": "10 hours ago ... Greenberger has spent the past two years as POLITICO's Executive Vice President, where he built a team of top journalists and newsroom leaders and lifted the ...",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T20:18:15.555Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:news",
-          "sectionCandidates": [
-            "business",
-            "news"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 10,
-          "normalizedTitle": "constantino s sticky ad spending problem politico",
-          "canonicalUrl": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
-          "discoveryScore": 14.6,
-          "eventKey": "business:constantino s sticky ad spending problem politico",
-          "source_id": "google-sec-1774901895551-1",
-          "url": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
-          "canonical_url": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
-          "domain": "politico.com",
-          "canonical_domain": "politico.com",
-          "normalized_title": "constantino s sticky ad spending problem",
-          "snippet": "10 hours ago ... Greenberger has spent the past two years as POLITICO's Executive Vice President, where he built a team of top journalists and newsroom leaders and lifted the ...",
-          "published_at": "2026-03-30T20:18:15.555Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business",
-            "news"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "business:constantino s sticky ad spending problem politico",
-          "keywords": [
-            "constantino",
-            "sticky",
-            "spending",
-            "problem",
-            "hours",
-            "greenberger",
-            "spent",
-            "past",
-            "years",
-            "politico",
-            "executive",
-            "vice"
-          ],
-          "title_signal_tokens": [
-            "constantino",
-            "sticky",
-            "spending",
-            "problem"
-          ],
-          "url_signal_tokens": [
-            "newsletters",
-            "york",
-            "playbook",
-            "candidates",
-            "were",
-            "paid",
-            "campaign"
-          ],
-          "title_url_overlap": 0,
-          "title_url_mismatch": true,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "constantino",
-            "sticky",
-            "spending",
-            "problem"
-          ]
-        },
-        {
-          "id": "google-sec-1774901895594-6",
-          "title": "Finance & economics | Latest news and analysis from The Economist",
-          "summary": "1 day ago ... ... consumer prices. 3 min read. Finance & economics. Chinese companies suffer an intense cash crunch in offshore bond markets. Spreads on junk bonds are at their ...",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.economist.com/topics/finance-and-economics?after=d211d2f5-dc21-49e0-a014-6d88f81c7e1f"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T20:18:15.596Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:business",
-          "sectionCandidates": [
-            "business",
-            "news"
-          ],
-          "topicCandidates": [
-            "economy-markets",
-            "companies-deals"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": true,
-          "page_kind": "topic",
-          "genericity_score": 8,
-          "article_likelihood": 0,
-          "normalizedTitle": "finance economics latest news and analysis from the economist",
-          "canonicalUrl": "https://www.economist.com/topics/finance-and-economics",
-          "discoveryScore": 8,
-          "eventKey": "business:finance economics latest news and analysis from the economist",
-          "source_id": "google-sec-1774901895594-6",
-          "url": "https://www.economist.com/topics/finance-and-economics",
-          "canonical_url": "https://www.economist.com/topics/finance-and-economics",
-          "domain": "economist.com",
-          "canonical_domain": "economist.com",
-          "normalized_title": "finance economics news and from the economist",
-          "snippet": "1 day ago ... ... consumer prices. 3 min read. Finance & economics. Chinese companies suffer an intense cash crunch in offshore bond markets. Spreads on junk bonds are at their ...",
-          "published_at": "2026-03-30T20:18:15.596Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business",
-            "news"
-          ],
-          "topic_candidates": [
-            "economy-markets",
-            "companies-deals"
-          ],
-          "cluster_id": null,
-          "event_key": "business:finance economics latest news and analysis from the economist",
-          "keywords": [
-            "finance",
-            "economics",
-            "economist",
-            "consumer",
-            "prices",
-            "read",
-            "chinese",
-            "companies",
-            "suffer",
-            "intense",
-            "cash",
-            "crunch"
-          ],
-          "title_signal_tokens": [
-            "finance",
-            "economics",
-            "economist"
-          ],
-          "url_signal_tokens": [
-            "topics",
-            "finance",
-            "economics"
-          ],
-          "title_url_overlap": 0.6666666666666666,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "finance",
-            "economics",
-            "analysis",
-            "economist"
-          ]
-        },
-        {
-          "id": "brave-sec-1774908172491-0",
-          "title": "Intellectia",
-          "summary": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "10 hours ago",
-          "sourceUrls": [
-            "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis"
-          ],
-          "freshness": 7,
-          "urgency": 6,
-          "discoveredAt": "2026-03-30T22:02:52.497Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:business",
-          "sectionCandidates": [
-            "business",
-            "tech"
-          ],
-          "topicCandidates": [
-            "crypto-bitcoin",
-            "ai-big-tech"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": "crypto-bitcoin",
-          "region": "global",
-          "angle": "markets",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 2,
-          "article_likelihood": 8,
-          "normalizedTitle": "intellectia",
-          "canonicalUrl": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "discoveryScore": 17.4,
-          "eventKey": "crypto-bitcoin:intellectia",
-          "source_id": "brave-sec-1774908172491-0",
-          "url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "canonical_url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "domain": "intellectia.ai",
-          "canonical_domain": "intellectia.ai",
-          "normalized_title": "intellectia",
-          "snippet": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
-          "published_at": "10 hours ago",
-          "section_id": "business",
-          "topic_id": "crypto-bitcoin",
-          "section_candidates": [
-            "business",
-            "tech"
-          ],
-          "topic_candidates": [
-            "crypto-bitcoin",
-            "ai-big-tech"
-          ],
-          "cluster_id": null,
-          "event_key": "crypto-bitcoin:intellectia",
-          "keywords": [
-            "intellectia",
-            "cryptocurrency",
-            "market",
-            "sending",
-            "contradictory",
-            "signals",
-            "left",
-            "investors",
-            "both",
-            "nervous",
-            "curious",
-            "bitcoin"
-          ],
-          "title_signal_tokens": [
-            "intellectia"
-          ],
-          "url_signal_tokens": [
-            "blog",
-            "crypto",
-            "market",
-            "crash",
-            "bitcoin",
-            "rebound"
-          ],
-          "title_url_overlap": 0,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "intellectia"
-          ]
-        },
-        {
-          "id": "brave-sec-1774908172497-1",
-          "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
-          "summary": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "3 hours ago",
-          "sourceUrls": [
-            "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms"
-          ],
-          "freshness": 9,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T22:02:52.502Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:business",
-          "sectionCandidates": [
-            "business",
-            "news"
-          ],
-          "topicCandidates": [
-            "crypto-bitcoin"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": "crypto-bitcoin",
-          "region": "global",
-          "angle": "policy",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move the econom",
-          "canonicalUrl": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "discoveryScore": 17.4,
-          "eventKey": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
-          "source_id": "brave-sec-1774908172497-1",
-          "url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "canonical_url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "domain": "economictimes.indiatimes.com",
-          "canonical_domain": "economictimes.indiatimes.com",
-          "normalized_title": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move",
-          "snippet": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
-          "published_at": "3 hours ago",
-          "section_id": "business",
-          "topic_id": "crypto-bitcoin",
-          "section_candidates": [
-            "business",
-            "news"
-          ],
-          "topic_candidates": [
-            "crypto-bitcoin"
-          ],
-          "cluster_id": null,
-          "event_key": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
-          "keywords": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move",
-            "explore"
-          ],
-          "title_signal_tokens": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move"
-          ],
-          "url_signal_tokens": [
-            "international",
-            "buying",
-            "home",
-            "crypto",
-            "heres",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move",
-            "articleshow"
-          ],
-          "title_url_overlap": 0.7272727272727273,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move"
-          ]
-        },
-        {
-          "id": "gdelt-sec-1774908214199-4",
-          "title": "Delta CEO Ed Bastian rips lawmakers for lack of leadership in DHS shutdown",
-          "summary": "",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "20260330T213000Z",
-          "sourceUrls": [
-            "https://www.foxbusiness.com/media/delta-ceo-ed-bastian-rips-lawmakers-lack-leadership-dhs-shutdown"
-          ],
-          "freshness": 4,
-          "urgency": 6,
-          "discoveredAt": "2026-03-30T22:03:34.201Z",
-          "provider": "gdelt",
-          "trustedSource": false,
-          "discoveryLane": "gdelt:business",
-          "sectionCandidates": [
-            "business"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "policy",
-          "genericPage": false,
-          "page_kind": "official_release",
-          "genericity_score": 1,
-          "article_likelihood": 7,
-          "normalizedTitle": "delta ceo ed bastian rips lawmakers for lack of leadership in dhs shutdown",
-          "canonicalUrl": "https://www.foxbusiness.com/media/delta-ceo-ed-bastian-rips-lawmakers-lack-leadership-dhs-shutdown",
-          "discoveryScore": 11.8,
-          "eventKey": "business:delta ceo ed bastian rips lawmakers for lack of leadership in dhs shutdown",
-          "source_id": "gdelt-sec-1774908214199-4",
-          "url": "https://www.foxbusiness.com/media/delta-ceo-ed-bastian-rips-lawmakers-lack-leadership-dhs-shutdown",
-          "canonical_url": "https://www.foxbusiness.com/media/delta-ceo-ed-bastian-rips-lawmakers-lack-leadership-dhs-shutdown",
-          "domain": "foxbusiness.com",
-          "canonical_domain": "foxbusiness.com",
-          "normalized_title": "delta ceo ed bastian rips lawmakers for lack of leadership in dhs shutdown",
-          "snippet": "",
-          "published_at": "20260330T213000Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "business:delta ceo ed bastian rips lawmakers for lack of leadership in dhs shutdown",
-          "keywords": [
-            "delta",
-            "bastian",
-            "rips",
-            "lawmakers",
-            "lack",
-            "leadership",
-            "shutdown"
-          ],
-          "title_signal_tokens": [
-            "delta",
-            "bastian",
-            "rips",
-            "lawmakers",
-            "lack",
-            "leadership",
-            "shutdown"
-          ],
-          "url_signal_tokens": [
-            "media",
-            "delta",
-            "bastian",
-            "rips",
-            "lawmakers",
-            "lack",
-            "leadership",
-            "shutdown"
-          ],
-          "title_url_overlap": 1,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "shutdown",
-          "place": "global",
-          "titleTokens": [
-            "delta",
-            "bastian",
-            "rips",
-            "lawmakers",
-            "lack",
-            "leadership",
-            "shutdown"
-          ]
-        },
-        {
-          "id": "gdelt-sec-1774908214193-2",
-          "title": "Honey Badger Silver ( CVE : TUF ) Stock Price Up 13 . 6 %",
-          "summary": "",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "20260330T213000Z",
-          "sourceUrls": [
-            "https://www.themarketsdaily.com/2026/03/30/honey-badger-silver-cvetuf-stock-price-up-13-6-time-to-buy.html"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T22:03:34.196Z",
-          "provider": "gdelt",
-          "trustedSource": false,
-          "discoveryLane": "gdelt:business",
-          "sectionCandidates": [
-            "business"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 10,
-          "normalizedTitle": "honey badger silver cve tuf stock price up 13 6 time to buy",
-          "canonicalUrl": "https://www.themarketsdaily.com/2026/03/30/honey-badger-silver-cvetuf-stock-price-up-13-6-time-to-buy.html",
-          "discoveryScore": 11.6,
-          "eventKey": "business:honey badger silver cve tuf stock price up 13 6 time to buy",
-          "source_id": "gdelt-sec-1774908214193-2",
-          "url": "https://www.themarketsdaily.com/2026/03/30/honey-badger-silver-cvetuf-stock-price-up-13-6-time-to-buy.html",
-          "canonical_url": "https://www.themarketsdaily.com/2026/03/30/honey-badger-silver-cvetuf-stock-price-up-13-6-time-to-buy.html",
-          "domain": "themarketsdaily.com",
-          "canonical_domain": "themarketsdaily.com",
-          "normalized_title": "honey badger silver cve tuf stock price up 13 6",
-          "snippet": "",
-          "published_at": "20260330T213000Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "business:honey badger silver cve tuf stock price up 13 6 time to buy",
-          "keywords": [
-            "honey",
-            "badger",
-            "silver",
-            "stock",
-            "price"
-          ],
-          "title_signal_tokens": [
-            "honey",
-            "badger",
-            "silver",
-            "stock",
-            "price"
-          ],
-          "url_signal_tokens": [
-            "honey",
-            "badger",
-            "silver",
-            "cvetuf",
-            "stock",
-            "price",
-            "time"
-          ],
-          "title_url_overlap": 1,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "honey",
-            "badger",
-            "silver",
-            "stock",
-            "price"
-          ]
-        },
-        {
-          "id": "gdelt-sec-1774908214204-6",
-          "title": "Girl Scout cookie prices doubled since 2000 , analysis finds",
-          "summary": "",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "20260330T213000Z",
-          "sourceUrls": [
-            "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T22:03:34.206Z",
-          "provider": "gdelt",
-          "trustedSource": false,
-          "discoveryLane": "gdelt:business",
-          "sectionCandidates": [
-            "business"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "analysis",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "girl scout cookie prices doubled since 2000 analysis finds",
-          "canonicalUrl": "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163",
-          "discoveryScore": 10.4,
-          "eventKey": "business:girl scout cookie prices doubled since 2000 analysis finds",
-          "source_id": "gdelt-sec-1774908214204-6",
-          "url": "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163",
-          "canonical_url": "https://www.wlky.com/article/girl-scout-cookie-price-increase/70818163",
-          "domain": "wlky.com",
-          "canonical_domain": "wlky.com",
-          "normalized_title": "girl scout cookie prices doubled since 2000 finds",
-          "snippet": "",
-          "published_at": "20260330T213000Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "business:girl scout cookie prices doubled since 2000 analysis finds",
-          "keywords": [
-            "girl",
-            "scout",
-            "cookie",
-            "prices",
-            "doubled",
-            "since",
-            "2000",
-            "finds"
-          ],
-          "title_signal_tokens": [
-            "girl",
-            "scout",
-            "cookie",
-            "prices",
-            "doubled",
-            "since",
-            "2000",
-            "finds"
-          ],
-          "url_signal_tokens": [
-            "girl",
-            "scout",
-            "cookie",
-            "price",
-            "increase"
-          ],
-          "title_url_overlap": 0.6,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "girl",
-            "scout",
-            "cookie",
-            "prices",
-            "doubled",
-            "since",
-            "2000",
-            "analysis",
-            "finds"
-          ]
-        },
-        {
-          "id": "gdelt-sec-1774908214209-8",
-          "title": "Victorian property professionals face $12k fines",
-          "summary": "",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "20260330T213000Z",
-          "sourceUrls": [
-            "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T22:03:34.210Z",
-          "provider": "gdelt",
-          "trustedSource": false,
-          "discoveryLane": "gdelt:business",
-          "sectionCandidates": [
-            "business"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "victorian property professionals face 12k fines",
-          "canonicalUrl": "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines",
-          "discoveryScore": 10.4,
-          "eventKey": "business:victorian property professionals face 12k fines",
-          "source_id": "gdelt-sec-1774908214209-8",
-          "url": "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines",
-          "canonical_url": "https://www.realestatebusiness.com.au/industry/31602-victorian-property-professionals-face-12k-fines",
-          "domain": "realestatebusiness.com.au",
-          "canonical_domain": "realestatebusiness.com.au",
-          "normalized_title": "victorian property professionals face 12k fines",
-          "snippet": "",
-          "published_at": "20260330T213000Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "business:victorian property professionals face 12k fines",
-          "keywords": [
-            "victorian",
-            "property",
-            "professionals",
-            "face",
-            "fines"
-          ],
-          "title_signal_tokens": [
-            "victorian",
-            "property",
-            "professionals",
-            "face",
-            "fines"
-          ],
-          "url_signal_tokens": [
-            "industry",
-            "victorian",
-            "property",
-            "professionals",
-            "face",
-            "fines"
-          ],
-          "title_url_overlap": 1,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "victorian",
-            "property",
-            "professionals",
-            "face",
-            "fines"
-          ]
-        },
-        {
-          "id": "gdelt-sec-1774908214210-9",
-          "title": "Figure skating season ends with redemption and heartbreak . What do fans watch next ?",
-          "summary": "",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "20260330T213000Z",
-          "sourceUrls": [
-            "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T22:03:34.212Z",
-          "provider": "gdelt",
-          "trustedSource": false,
-          "discoveryLane": "gdelt:business",
-          "sectionCandidates": [
-            "business"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "figure skating season ends with redemption and heartbreak what do fans watch next",
-          "canonicalUrl": "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next",
-          "discoveryScore": 10.4,
-          "eventKey": "business:figure skating season ends with redemption and heartbreak what do fans watch nex",
-          "source_id": "gdelt-sec-1774908214210-9",
-          "url": "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next",
-          "canonical_url": "https://www.ideastream.org/2026-03-30/figure-skating-season-ends-with-redemption-and-heartbreak-what-do-fans-watch-next",
-          "domain": "ideastream.org",
-          "canonical_domain": "ideastream.org",
-          "normalized_title": "figure skating season ends with redemption and heartbreak what do fans watch next",
-          "snippet": "",
-          "published_at": "20260330T213000Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "business:figure skating season ends with redemption and heartbreak what do fans watch nex",
-          "keywords": [
-            "figure",
-            "skating",
-            "season",
-            "ends",
-            "redemption",
-            "heartbreak",
-            "what",
-            "fans",
-            "watch",
-            "next"
-          ],
-          "title_signal_tokens": [
-            "figure",
-            "skating",
-            "season",
-            "ends",
-            "redemption",
-            "heartbreak",
-            "what",
-            "fans",
-            "next"
-          ],
-          "url_signal_tokens": [
-            "figure",
-            "skating",
-            "season",
-            "ends",
-            "redemption",
-            "heartbreak",
-            "what",
-            "fans",
-            "next"
-          ],
-          "title_url_overlap": 1,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "figure",
-            "skating",
-            "season",
-            "ends",
-            "redemption",
-            "heartbreak",
-            "what",
-            "fans",
-            "watch",
-            "next"
-          ]
-        },
-        {
-          "id": "brave-sec-1774912717004-0",
-          "title": "Intellectia",
-          "summary": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "11 hours ago",
-          "sourceUrls": [
-            "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis"
-          ],
-          "freshness": 7,
-          "urgency": 6,
-          "discoveredAt": "2026-03-30T23:18:37.008Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:business",
-          "sectionCandidates": [
-            "business",
-            "tech"
-          ],
-          "topicCandidates": [
-            "crypto-bitcoin",
-            "ai-big-tech"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": "crypto-bitcoin",
-          "region": "global",
-          "angle": "markets",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 2,
-          "article_likelihood": 8,
-          "normalizedTitle": "intellectia",
-          "canonicalUrl": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "discoveryScore": 17.4,
-          "eventKey": "crypto-bitcoin:intellectia",
-          "source_id": "brave-sec-1774912717004-0",
-          "url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "canonical_url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "domain": "intellectia.ai",
-          "canonical_domain": "intellectia.ai",
-          "normalized_title": "intellectia",
-          "snippet": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
-          "published_at": "11 hours ago",
-          "section_id": "business",
-          "topic_id": "crypto-bitcoin",
-          "section_candidates": [
-            "business",
-            "tech"
-          ],
-          "topic_candidates": [
-            "crypto-bitcoin",
-            "ai-big-tech"
-          ],
-          "cluster_id": null,
-          "event_key": "crypto-bitcoin:intellectia",
-          "keywords": [
-            "intellectia",
-            "cryptocurrency",
-            "market",
-            "sending",
-            "contradictory",
-            "signals",
-            "left",
-            "investors",
-            "both",
-            "nervous",
-            "curious",
-            "bitcoin"
-          ],
-          "title_signal_tokens": [
-            "intellectia"
-          ],
-          "url_signal_tokens": [
-            "blog",
-            "crypto",
-            "market",
-            "crash",
-            "bitcoin",
-            "rebound"
-          ],
-          "title_url_overlap": 0,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "intellectia"
-          ]
-        },
-        {
-          "id": "brave-sec-1774912717008-1",
-          "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
-          "summary": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+          "id": "brave-sec-1775097539901-1",
+          "title": "NCAA Makes Transfer Portal Rule Changes With Huge Penalties",
+          "summary": "Effective immediately, college football programs could face steep penalties for breaking the new transfer portal rules.",
           "whyItMatters": "",
           "involvedParties": [],
           "entities": [],
           "when": "4 hours ago",
           "sourceUrls": [
-            "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms"
+            "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417"
           ],
           "freshness": 8,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T23:18:37.013Z",
+          "urgency": 6,
+          "discoveredAt": "2026-04-02T02:38:59.903Z",
           "provider": "brave",
           "trustedSource": false,
-          "discoveryLane": "section:business",
+          "discoveryLane": "section:sports",
           "sectionCandidates": [
-            "business",
-            "news"
-          ],
-          "topicCandidates": [
-            "crypto-bitcoin"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": "crypto-bitcoin",
-          "region": "global",
-          "angle": "policy",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move the econom",
-          "canonicalUrl": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "discoveryScore": 16.4,
-          "eventKey": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
-          "source_id": "brave-sec-1774912717008-1",
-          "url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "canonical_url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "domain": "economictimes.indiatimes.com",
-          "canonical_domain": "economictimes.indiatimes.com",
-          "normalized_title": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move",
-          "snippet": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
-          "published_at": "4 hours ago",
-          "section_id": "business",
-          "topic_id": "crypto-bitcoin",
-          "section_candidates": [
-            "business",
-            "news"
-          ],
-          "topic_candidates": [
-            "crypto-bitcoin"
-          ],
-          "cluster_id": null,
-          "event_key": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
-          "keywords": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move",
-            "explore"
-          ],
-          "title_signal_tokens": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move"
-          ],
-          "url_signal_tokens": [
-            "international",
-            "buying",
-            "home",
-            "crypto",
-            "heres",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move",
-            "articleshow"
-          ],
-          "title_url_overlap": 0.7272727272727273,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move"
-          ]
-        },
-        {
-          "id": "google-sec-1774912722996-1",
-          "title": "MAHA fans want action Trump hasn't delivered",
-          "summary": "1 day ago ... A supermajority of American adults favor challenging big pharmaceutical companies, according to a new POLITICO poll, but they're closely divided on which ...",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T23:18:42.998Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:health",
-          "sectionCandidates": [
-            "business",
-            "health"
-          ],
-          "topicCandidates": [
-            "companies-deals"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 10,
-          "normalizedTitle": "maha fans want action trump hasn t delivered politico",
-          "canonicalUrl": "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
-          "discoveryScore": 14.6,
-          "eventKey": "business:maha fans want action trump hasn t delivered politico",
-          "source_id": "google-sec-1774912722996-1",
-          "url": "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
-          "canonical_url": "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
-          "domain": "politico.com",
-          "canonical_domain": "politico.com",
-          "normalized_title": "maha fans want action trump hasn t delivered",
-          "snippet": "1 day ago ... A supermajority of American adults favor challenging big pharmaceutical companies, according to a new POLITICO poll, but they're closely divided on which ...",
-          "published_at": "2026-03-30T23:18:42.998Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business",
-            "health"
-          ],
-          "topic_candidates": [
-            "companies-deals"
-          ],
-          "cluster_id": null,
-          "event_key": "business:maha fans want action trump hasn t delivered politico",
-          "keywords": [
-            "maha",
-            "fans",
-            "want",
-            "action",
-            "trump",
-            "hasn",
-            "delivered",
-            "supermajority",
-            "american",
-            "adults",
-            "favor",
-            "challenging"
-          ],
-          "title_signal_tokens": [
-            "maha",
-            "fans",
-            "want",
-            "action",
-            "trump",
-            "hasn",
-            "delivered"
-          ],
-          "url_signal_tokens": [
-            "newsletters",
-            "prescription",
-            "pulse",
-            "maha",
-            "fans",
-            "want",
-            "action",
-            "trump",
-            "hasnt",
-            "delivered"
-          ],
-          "title_url_overlap": 0.8571428571428571,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "maha",
-            "fans",
-            "want",
-            "action",
-            "trump",
-            "hasn",
-            "delivered"
-          ]
-        },
-        {
-          "id": "google-sec-1774912723001-3",
-          "title": "MAHA fans want action Trump hasn't delivered",
-          "summary": "1 day ago ... The Make America Healthy Again movement joined forces with Republicans in 2024, helping hand Donald Trump the presidency. The midterms might look different.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T23:18:43.004Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:health",
-          "sectionCandidates": [
-            "health"
+            "sports"
           ],
           "topicCandidates": [],
-          "detectedSectionId": "health",
-          "detectedTopicId": null,
-          "region": "us",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 10,
-          "normalizedTitle": "maha fans want action trump hasn t delivered politico",
-          "canonicalUrl": "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162",
-          "discoveryScore": 13.6,
-          "eventKey": "health:maha fans want action trump hasn t delivered politico",
-          "source_id": "google-sec-1774912723001-3",
-          "url": "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162",
-          "canonical_url": "https://www.politico.com/newsletters/politico-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847162",
-          "domain": "politico.com",
-          "canonical_domain": "politico.com",
-          "normalized_title": "maha fans want action trump hasn t delivered",
-          "snippet": "1 day ago ... The Make America Healthy Again movement joined forces with Republicans in 2024, helping hand Donald Trump the presidency. The midterms might look different.",
-          "published_at": "2026-03-30T23:18:43.004Z",
-          "section_id": "health",
-          "topic_id": null,
-          "section_candidates": [
-            "health"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "health:maha fans want action trump hasn t delivered politico",
-          "keywords": [
-            "maha",
-            "fans",
-            "want",
-            "action",
-            "trump",
-            "hasn",
-            "delivered",
-            "make",
-            "america",
-            "healthy",
-            "again",
-            "movement"
-          ],
-          "title_signal_tokens": [
-            "maha",
-            "fans",
-            "want",
-            "action",
-            "trump",
-            "hasn",
-            "delivered"
-          ],
-          "url_signal_tokens": [
-            "newsletters",
-            "politico",
-            "pulse",
-            "maha",
-            "fans",
-            "want",
-            "action",
-            "trump",
-            "hasnt",
-            "delivered"
-          ],
-          "title_url_overlap": 0.8571428571428571,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "us",
-          "titleTokens": [
-            "maha",
-            "fans",
-            "want",
-            "action",
-            "trump",
-            "hasn",
-            "delivered"
-          ]
-        },
-        {
-          "id": "google-sec-1774912723036-6",
-          "title": "Finance & economics | Latest news and analysis from The Economist",
-          "summary": "1 day ago ... ... consumer prices. 3 min read. Finance & economics. Chinese companies suffer an intense cash crunch in offshore bond markets. Spreads on junk bonds are at their ...",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.economist.com/topics/finance-and-economics?after=d211d2f5-dc21-49e0-a014-6d88f81c7e1f"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T23:18:43.039Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:business",
-          "sectionCandidates": [
-            "business",
-            "news"
-          ],
-          "topicCandidates": [
-            "economy-markets",
-            "companies-deals"
-          ],
-          "detectedSectionId": "business",
+          "detectedSectionId": "sports",
           "detectedTopicId": null,
           "region": "global",
-          "angle": "general",
-          "genericPage": true,
-          "page_kind": "topic",
-          "genericity_score": 8,
-          "article_likelihood": 0,
-          "normalizedTitle": "finance economics latest news and analysis from the economist",
-          "canonicalUrl": "https://www.economist.com/topics/finance-and-economics",
-          "discoveryScore": 8,
-          "eventKey": "business:finance economics latest news and analysis from the economist",
-          "source_id": "google-sec-1774912723036-6",
-          "url": "https://www.economist.com/topics/finance-and-economics",
-          "canonical_url": "https://www.economist.com/topics/finance-and-economics",
-          "domain": "economist.com",
-          "canonical_domain": "economist.com",
-          "normalized_title": "finance economics news and from the economist",
-          "snippet": "1 day ago ... ... consumer prices. 3 min read. Finance & economics. Chinese companies suffer an intense cash crunch in offshore bond markets. Spreads on junk bonds are at their ...",
-          "published_at": "2026-03-30T23:18:43.039Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business",
-            "news"
-          ],
-          "topic_candidates": [
-            "economy-markets",
-            "companies-deals"
-          ],
-          "cluster_id": null,
-          "event_key": "business:finance economics latest news and analysis from the economist",
-          "keywords": [
-            "finance",
-            "economics",
-            "economist",
-            "consumer",
-            "prices",
-            "read",
-            "chinese",
-            "companies",
-            "suffer",
-            "intense",
-            "cash",
-            "crunch"
-          ],
-          "title_signal_tokens": [
-            "finance",
-            "economics",
-            "economist"
-          ],
-          "url_signal_tokens": [
-            "topics",
-            "finance",
-            "economics"
-          ],
-          "title_url_overlap": 0.6666666666666666,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "finance",
-            "economics",
-            "analysis",
-            "economist"
-          ]
-        },
-        {
-          "id": "brave-sec-1774913080440-0",
-          "title": "Intellectia",
-          "summary": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "12 hours ago",
-          "sourceUrls": [
-            "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis"
-          ],
-          "freshness": 7,
-          "urgency": 6,
-          "discoveredAt": "2026-03-30T23:24:40.443Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:business",
-          "sectionCandidates": [
-            "business",
-            "tech"
-          ],
-          "topicCandidates": [
-            "crypto-bitcoin",
-            "ai-big-tech"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": "crypto-bitcoin",
-          "region": "global",
-          "angle": "markets",
+          "angle": "transfers",
           "genericPage": false,
           "page_kind": "article",
           "genericity_score": 2,
           "article_likelihood": 8,
-          "normalizedTitle": "intellectia",
-          "canonicalUrl": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
+          "normalizedTitle": "ncaa makes transfer portal rule changes with huge penalties newsweek",
+          "canonicalUrl": "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
           "discoveryScore": 17.4,
-          "eventKey": "crypto-bitcoin:intellectia",
-          "source_id": "brave-sec-1774913080440-0",
-          "url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "canonical_url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "domain": "intellectia.ai",
-          "canonical_domain": "intellectia.ai",
-          "normalized_title": "intellectia",
-          "snippet": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
-          "published_at": "12 hours ago",
-          "section_id": "business",
-          "topic_id": "crypto-bitcoin",
-          "section_candidates": [
-            "business",
-            "tech"
+          "targetedCoverage": false,
+          "eventKey": "sports:ncaa makes transfer portal rule changes with huge penalties newsweek",
+          "signalSpecificityScore": 6,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "article_likelihood",
+            "named_marker"
           ],
-          "topic_candidates": [
-            "crypto-bitcoin",
-            "ai-big-tech"
-          ],
-          "cluster_id": null,
-          "event_key": "crypto-bitcoin:intellectia",
-          "keywords": [
-            "intellectia",
-            "cryptocurrency",
-            "market",
-            "sending",
-            "contradictory",
-            "signals",
-            "left",
-            "investors",
-            "both",
-            "nervous",
-            "curious",
-            "bitcoin"
-          ],
-          "title_signal_tokens": [
-            "intellectia"
-          ],
-          "url_signal_tokens": [
-            "blog",
-            "crypto",
-            "market",
-            "crash",
-            "bitcoin",
-            "rebound"
-          ],
-          "title_url_overlap": 0,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "intellectia"
-          ]
-        },
-        {
-          "id": "google-sec-1774913092456-3",
-          "title": "Cue Biopharma Announces CEO Transition",
-          "summary": "1 day ago ... (Nasdaq: CUE), a clinical-stage biopharmaceutical company developing a novel class of therapeutic biologics to selectively engage and modulate disease-specific ...",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.theglobeandmail.com/investing/markets/stocks/CUE/pressreleases/1013060/cue-biopharma-announces-ceo-transition/"
-          ],
-          "freshness": 4,
-          "urgency": 8,
-          "discoveredAt": "2026-03-30T23:24:52.458Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:health",
-          "sectionCandidates": [
-            "business",
-            "health"
-          ],
-          "topicCandidates": [
-            "economy-markets"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "cue biopharma announces ceo transition the globe and mail",
-          "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/cue/pressreleases/1013060/cue-biopharma-announces-ceo-transition/",
-          "discoveryScore": 17.4,
-          "eventKey": "business:cue biopharma announces ceo transition the globe and mail",
-          "source_id": "google-sec-1774913092456-3",
-          "url": "https://www.theglobeandmail.com/investing/markets/stocks/cue/pressreleases/1013060/cue-biopharma-announces-ceo-transition/",
-          "canonical_url": "https://www.theglobeandmail.com/investing/markets/stocks/cue/pressreleases/1013060/cue-biopharma-announces-ceo-transition/",
-          "domain": "theglobeandmail.com",
-          "canonical_domain": "theglobeandmail.com",
-          "normalized_title": "cue biopharma announces ceo transition",
-          "snippet": "1 day ago ... (Nasdaq: CUE), a clinical-stage biopharmaceutical company developing a novel class of therapeutic biologics to selectively engage and modulate disease-specific ...",
-          "published_at": "2026-03-30T23:24:52.458Z",
-          "section_id": "business",
+          "crossTopicRisk": false,
+          "source_id": "brave-sec-1775097539901-1",
+          "url": "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
+          "canonical_url": "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
+          "domain": "newsweek.com",
+          "canonical_domain": "newsweek.com",
+          "normalized_title": "ncaa makes transfer portal rule changes with huge penalties",
+          "snippet": "Effective immediately, college football programs could face steep penalties for breaking the new transfer portal rules.",
+          "published_at": "4 hours ago",
+          "section_id": "sports",
           "topic_id": null,
           "section_candidates": [
-            "business",
-            "health"
+            "sports"
           ],
-          "topic_candidates": [
-            "economy-markets"
-          ],
+          "topic_candidates": [],
           "cluster_id": null,
-          "event_key": "business:cue biopharma announces ceo transition the globe and mail",
+          "event_key": "sports:ncaa makes transfer portal rule changes with huge penalties newsweek",
           "keywords": [
-            "biopharma",
-            "announces",
-            "transition",
-            "nasdaq",
-            "clinical",
-            "stage",
-            "biopharmaceutical",
-            "company",
-            "developing",
-            "novel",
-            "class",
-            "therapeutic"
+            "ncaa",
+            "makes",
+            "transfer",
+            "portal",
+            "rule",
+            "changes",
+            "huge",
+            "penalties",
+            "effective",
+            "immediately",
+            "college",
+            "football"
           ],
           "title_signal_tokens": [
-            "biopharma",
-            "announces",
-            "transition"
+            "ncaa",
+            "makes",
+            "transfer",
+            "portal",
+            "rule",
+            "changes",
+            "huge",
+            "penalties"
           ],
           "url_signal_tokens": [
-            "investing",
-            "markets",
-            "stocks",
-            "pressreleases",
-            "biopharma",
-            "announces",
-            "transition"
+            "ncaa",
+            "makes",
+            "transfer",
+            "portal",
+            "rule",
+            "changes",
+            "huge",
+            "penalties"
           ],
           "title_url_overlap": 1,
           "title_url_mismatch": false,
@@ -2202,965 +492,754 @@
           "action": "general",
           "place": "global",
           "titleTokens": [
-            "biopharma",
-            "announces",
-            "transition"
+            "ncaa",
+            "makes",
+            "transfer",
+            "portal",
+            "rule",
+            "changes",
+            "huge",
+            "penalties"
           ]
         },
         {
-          "id": "brave-sec-1774913080443-1",
-          "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
-          "summary": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
+          "id": "google-sec-1775097539954-1",
+          "title": "NCAA approves major penalties for programs that circumvent ...",
+          "summary": "7 hours ago ... FBS programs that add or sign players who withdraw from their schools but bypass the transfer portal window will have their head coaches suspended for six games ...",
           "whyItMatters": "",
           "involvedParties": [],
           "entities": [],
-          "when": "4 hours ago",
+          "when": "",
           "sourceUrls": [
-            "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms"
-          ],
-          "freshness": 8,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T23:24:40.446Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:business",
-          "sectionCandidates": [
-            "business",
-            "news"
-          ],
-          "topicCandidates": [
-            "crypto-bitcoin"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": "crypto-bitcoin",
-          "region": "global",
-          "angle": "policy",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move the econom",
-          "canonicalUrl": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "discoveryScore": 16.4,
-          "eventKey": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
-          "source_id": "brave-sec-1774913080443-1",
-          "url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "canonical_url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "domain": "economictimes.indiatimes.com",
-          "canonical_domain": "economictimes.indiatimes.com",
-          "normalized_title": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move",
-          "snippet": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
-          "published_at": "4 hours ago",
-          "section_id": "business",
-          "topic_id": "crypto-bitcoin",
-          "section_candidates": [
-            "business",
-            "news"
-          ],
-          "topic_candidates": [
-            "crypto-bitcoin"
-          ],
-          "cluster_id": null,
-          "event_key": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
-          "keywords": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move",
-            "explore"
-          ],
-          "title_signal_tokens": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move"
-          ],
-          "url_signal_tokens": [
-            "international",
-            "buying",
-            "home",
-            "crypto",
-            "heres",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move",
-            "articleshow"
-          ],
-          "title_url_overlap": 0.7272727272727273,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move"
-          ]
-        },
-        {
-          "id": "gdelt-sec-1774913092478-7",
-          "title": "Jim Cramer on Paychex : This Is a Stock That Strangely Has Been Crushed By AI Disruption Worries , I Think Theyre Overbl",
-          "summary": "",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "20260329T004500Z",
-          "sourceUrls": [
-            "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html"
+            "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/"
           ],
           "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T23:24:52.480Z",
-          "provider": "gdelt",
-          "trustedSource": false,
-          "discoveryLane": "gdelt:sports",
-          "sectionCandidates": [
-            "business",
-            "tech",
-            "sports"
-          ],
-          "topicCandidates": [
-            "economy-markets",
-            "ai-big-tech"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "jim cramer on paychex this is a stock that strangely has been crushed by ai disruption worries i think theyre overbl",
-          "canonicalUrl": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
-          "discoveryScore": 11.4,
-          "eventKey": "business:jim cramer on paychex this is a stock that strangely has been crushed by ai disr",
-          "source_id": "gdelt-sec-1774913092478-7",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
-          "canonical_url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
-          "domain": "finance.yahoo.com",
-          "canonical_domain": "finance.yahoo.com",
-          "normalized_title": "jim cramer on paychex this is a stock that strangely has been crushed by ai disruption worries i think theyre overbl",
-          "snippet": "",
-          "published_at": "20260329T004500Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business",
-            "tech",
-            "sports"
-          ],
-          "topic_candidates": [
-            "economy-markets",
-            "ai-big-tech"
-          ],
-          "cluster_id": null,
-          "event_key": "business:jim cramer on paychex this is a stock that strangely has been crushed by ai disr",
-          "keywords": [
-            "cramer",
-            "paychex",
-            "stock",
-            "strangely",
-            "been",
-            "crushed",
-            "disruption",
-            "worries",
-            "think",
-            "theyre",
-            "overbl"
-          ],
-          "title_signal_tokens": [
-            "cramer",
-            "paychex",
-            "stock",
-            "strangely",
-            "been",
-            "crushed",
-            "disruption",
-            "worries",
-            "think",
-            "theyre",
-            "overbl"
-          ],
-          "url_signal_tokens": [
-            "markets",
-            "stocks",
-            "cramer",
-            "paychex",
-            "stock",
-            "strangely"
-          ],
-          "title_url_overlap": 0.6666666666666666,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "cramer",
-            "paychex",
-            "stock",
-            "strangely",
-            "been",
-            "crushed",
-            "disruption",
-            "worries",
-            "think",
-            "theyre",
-            "overbl"
-          ]
-        },
-        {
-          "id": "brave-sec-1774914906279-0",
-          "title": "Intellectia",
-          "summary": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "12 hours ago",
-          "sourceUrls": [
-            "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis"
-          ],
-          "freshness": 7,
           "urgency": 6,
-          "discoveredAt": "2026-03-30T23:55:06.284Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:business",
-          "sectionCandidates": [
-            "business",
-            "tech"
-          ],
-          "topicCandidates": [
-            "crypto-bitcoin",
-            "ai-big-tech"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": "crypto-bitcoin",
-          "region": "global",
-          "angle": "markets",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 2,
-          "article_likelihood": 8,
-          "normalizedTitle": "intellectia",
-          "canonicalUrl": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "discoveryScore": 17.4,
-          "eventKey": "crypto-bitcoin:intellectia",
-          "source_id": "brave-sec-1774914906279-0",
-          "url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "canonical_url": "https://intellectia.ai/blog/crypto-market-crash-2026-bitcoin-rebound-analysis",
-          "domain": "intellectia.ai",
-          "canonical_domain": "intellectia.ai",
-          "normalized_title": "intellectia",
-          "snippet": "The cryptocurrency market is sending contradictory signals that have left investors both nervous and curious. Bitcoin has tumbled to approximately $66,400, marking its lowest level in March 2026, while simultaneously experiencing record-breaking ETF inflows exceeding $1.5 billion.",
-          "published_at": "12 hours ago",
-          "section_id": "business",
-          "topic_id": "crypto-bitcoin",
-          "section_candidates": [
-            "business",
-            "tech"
-          ],
-          "topic_candidates": [
-            "crypto-bitcoin",
-            "ai-big-tech"
-          ],
-          "cluster_id": null,
-          "event_key": "crypto-bitcoin:intellectia",
-          "keywords": [
-            "intellectia",
-            "cryptocurrency",
-            "market",
-            "sending",
-            "contradictory",
-            "signals",
-            "left",
-            "investors",
-            "both",
-            "nervous",
-            "curious",
-            "bitcoin"
-          ],
-          "title_signal_tokens": [
-            "intellectia"
-          ],
-          "url_signal_tokens": [
-            "blog",
-            "crypto",
-            "market",
-            "crash",
-            "bitcoin",
-            "rebound"
-          ],
-          "title_url_overlap": 0,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "intellectia"
-          ]
-        },
-        {
-          "id": "brave-sec-1774914906284-1",
-          "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
-          "summary": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "5 hours ago",
-          "sourceUrls": [
-            "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms"
-          ],
-          "freshness": 8,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T23:55:06.295Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:business",
-          "sectionCandidates": [
-            "business",
-            "news"
-          ],
-          "topicCandidates": [
-            "crypto-bitcoin"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": "crypto-bitcoin",
-          "region": "global",
-          "angle": "policy",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move the econom",
-          "canonicalUrl": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "discoveryScore": 16.4,
-          "eventKey": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
-          "source_id": "brave-sec-1774914906284-1",
-          "url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "canonical_url": "https://economictimes.indiatimes.com/news/international/us/buying-a-home-with-crypto-heres-what-no-one-tells-you-before-you-make-the-move/articleshow/129909169.cms",
-          "domain": "economictimes.indiatimes.com",
-          "canonical_domain": "economictimes.indiatimes.com",
-          "normalized_title": "crypto mortgage explained buying a home with crypto here s what no one tells you before you make the move",
-          "snippet": "Crypto mortgage explained: Explore the realities of using cryptocurrency to purchase a home, including potential risks, policy changes, and financing options.",
-          "published_at": "5 hours ago",
-          "section_id": "business",
-          "topic_id": "crypto-bitcoin",
-          "section_candidates": [
-            "business",
-            "news"
-          ],
-          "topic_candidates": [
-            "crypto-bitcoin"
-          ],
-          "cluster_id": null,
-          "event_key": "crypto-bitcoin:crypto mortgage explained buying a home with crypto here s what no one tells you",
-          "keywords": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move",
-            "explore"
-          ],
-          "title_signal_tokens": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move"
-          ],
-          "url_signal_tokens": [
-            "international",
-            "buying",
-            "home",
-            "crypto",
-            "heres",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move",
-            "articleshow"
-          ],
-          "title_url_overlap": 0.7272727272727273,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "crypto",
-            "mortgage",
-            "explained",
-            "buying",
-            "home",
-            "here",
-            "what",
-            "tells",
-            "before",
-            "make",
-            "move"
-          ]
-        },
-        {
-          "id": "brave-sec-1774914906302-4",
-          "title": "Crypto Stocks Near A Bottom After 60% Selloff: Analyst",
-          "summary": "Wall Street broker Bernstein says crypto-linked equities are approaching a cyclical bottom following a steep ~60% drawdown from 2025 highs",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "4 hours ago",
-          "sourceUrls": [
-            "https://bitcoinmagazine.com/news/crypto-stocks-near-a-bottom-after-selling"
-          ],
-          "freshness": 8,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T23:55:06.304Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:business",
-          "sectionCandidates": [
-            "business",
-            "news"
-          ],
-          "topicCandidates": [
-            "crypto-bitcoin"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": "crypto-bitcoin",
-          "region": "global",
-          "angle": "markets",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "crypto stocks near a bottom after 60 selloff analyst",
-          "canonicalUrl": "https://bitcoinmagazine.com/news/crypto-stocks-near-a-bottom-after-selling",
-          "discoveryScore": 16.4,
-          "eventKey": "crypto-bitcoin:crypto stocks near a bottom after 60 selloff analyst",
-          "source_id": "brave-sec-1774914906302-4",
-          "url": "https://bitcoinmagazine.com/news/crypto-stocks-near-a-bottom-after-selling",
-          "canonical_url": "https://bitcoinmagazine.com/news/crypto-stocks-near-a-bottom-after-selling",
-          "domain": "bitcoinmagazine.com",
-          "canonical_domain": "bitcoinmagazine.com",
-          "normalized_title": "crypto stocks near a bottom after 60 selloff analyst",
-          "snippet": "Wall Street broker Bernstein says crypto-linked equities are approaching a cyclical bottom following a steep ~60% drawdown from 2025 highs",
-          "published_at": "4 hours ago",
-          "section_id": "business",
-          "topic_id": "crypto-bitcoin",
-          "section_candidates": [
-            "business",
-            "news"
-          ],
-          "topic_candidates": [
-            "crypto-bitcoin"
-          ],
-          "cluster_id": null,
-          "event_key": "crypto-bitcoin:crypto stocks near a bottom after 60 selloff analyst",
-          "keywords": [
-            "crypto",
-            "stocks",
-            "near",
-            "bottom",
-            "selloff",
-            "analyst",
-            "wall",
-            "street",
-            "broker",
-            "bernstein",
-            "linked",
-            "equities"
-          ],
-          "title_signal_tokens": [
-            "crypto",
-            "stocks",
-            "near",
-            "bottom",
-            "selloff",
-            "analyst"
-          ],
-          "url_signal_tokens": [
-            "crypto",
-            "stocks",
-            "near",
-            "bottom",
-            "selling"
-          ],
-          "title_url_overlap": 0.8,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "crypto",
-            "stocks",
-            "near",
-            "bottom",
-            "selloff",
-            "analyst"
-          ]
-        },
-        {
-          "id": "google-sec-1774914924267-3",
-          "title": "Bloomberg Businessweek",
-          "summary": "17 hours ago ... Bloomberg Businessweek helps global leaders stay ahead with insights and in-depth analysis on the people, companies, events, and trends shaping today's ...",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.bloomberg.com/businessweek"
-          ],
-          "freshness": 4,
-          "urgency": 5,
-          "discoveredAt": "2026-03-30T23:55:24.269Z",
+          "discoveredAt": "2026-04-02T02:38:59.956Z",
           "provider": "google_trusted",
           "trustedSource": true,
-          "discoveryLane": "google:culture",
+          "discoveryLane": "google:sports",
           "sectionCandidates": [
-            "business",
-            "sports",
-            "culture"
-          ],
-          "topicCandidates": [
-            "companies-deals",
-            "events-tournaments"
-          ],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "analysis",
-          "genericity_score": 0,
-          "article_likelihood": 7,
-          "normalizedTitle": "bloomberg businessweek",
-          "canonicalUrl": "https://www.bloomberg.com/businessweek",
-          "discoveryScore": 13.8,
-          "eventKey": "business:bloomberg businessweek",
-          "source_id": "google-sec-1774914924267-3",
-          "url": "https://www.bloomberg.com/businessweek",
-          "canonical_url": "https://www.bloomberg.com/businessweek",
-          "domain": "bloomberg.com",
-          "canonical_domain": "bloomberg.com",
-          "normalized_title": "bloomberg businessweek",
-          "snippet": "17 hours ago ... Bloomberg Businessweek helps global leaders stay ahead with insights and in-depth analysis on the people, companies, events, and trends shaping today's ...",
-          "published_at": "2026-03-30T23:55:24.269Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business",
-            "sports",
-            "culture"
-          ],
-          "topic_candidates": [
-            "companies-deals",
-            "events-tournaments"
-          ],
-          "cluster_id": null,
-          "event_key": "business:bloomberg businessweek",
-          "keywords": [
-            "bloomberg",
-            "businessweek",
-            "hours",
-            "helps",
-            "global",
-            "leaders",
-            "stay",
-            "ahead",
-            "insights",
-            "depth",
-            "analysis",
-            "people"
-          ],
-          "title_signal_tokens": [
-            "bloomberg",
-            "businessweek"
-          ],
-          "url_signal_tokens": [
-            "businessweek"
-          ],
-          "title_url_overlap": 1,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "bloomberg",
-            "businessweek"
-          ]
-        },
-        {
-          "id": "google-sec-1774914924291-3",
-          "title": "2026 Donald J. Trump Executive Orders",
-          "summary": "22 hours ago ... Once received, OFR gives presidential documents priority processing and documents will appear on public inspection the business day before publication. These 26 ...",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T23:55:24.294Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:news",
-          "sectionCandidates": [
-            "business",
-            "news"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "official_release",
-          "genericity_score": 1,
-          "article_likelihood": 7,
-          "normalizedTitle": "2026 donald j trump executive orders federal register",
-          "canonicalUrl": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
-          "discoveryScore": 12.8,
-          "eventKey": "business:2026 donald j trump executive orders federal register",
-          "source_id": "google-sec-1774914924291-3",
-          "url": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
-          "canonical_url": "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026",
-          "domain": "federalregister.gov",
-          "canonical_domain": "federalregister.gov",
-          "normalized_title": "2026 donald j trump executive orders",
-          "snippet": "22 hours ago ... Once received, OFR gives presidential documents priority processing and documents will appear on public inspection the business day before publication. These 26 ...",
-          "published_at": "2026-03-30T23:55:24.294Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business",
-            "news"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "business:2026 donald j trump executive orders federal register",
-          "keywords": [
-            "2026",
-            "donald",
-            "trump",
-            "executive",
-            "orders",
-            "hours",
-            "once",
-            "received",
-            "gives",
-            "presidential",
-            "documents",
-            "priority"
-          ],
-          "title_signal_tokens": [
-            "2026",
-            "donald",
-            "trump",
-            "executive",
-            "orders"
-          ],
-          "url_signal_tokens": [
-            "presidential",
-            "documents",
-            "executive",
-            "orders",
-            "donald",
-            "trump"
-          ],
-          "title_url_overlap": 0.8,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "2026",
-            "donald",
-            "trump",
-            "executive",
-            "orders"
-          ]
-        },
-        {
-          "id": "gdelt-sec-1774914933329-7",
-          "title": "Jim Cramer on Paychex : This Is a Stock That Strangely Has Been Crushed By AI Disruption Worries , I Think Theyre Overbl",
-          "summary": "",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "20260329T004500Z",
-          "sourceUrls": [
-            "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T23:55:33.331Z",
-          "provider": "gdelt",
-          "trustedSource": false,
-          "discoveryLane": "gdelt:sports",
-          "sectionCandidates": [
-            "business",
-            "tech",
             "sports"
           ],
-          "topicCandidates": [
-            "economy-markets",
-            "ai-big-tech"
-          ],
-          "detectedSectionId": "business",
+          "topicCandidates": [],
+          "detectedSectionId": "sports",
           "detectedTopicId": null,
           "region": "global",
-          "angle": "general",
+          "angle": "transfers",
           "genericPage": false,
           "page_kind": "article",
           "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "jim cramer on paychex this is a stock that strangely has been crushed by ai disruption worries i think theyre overbl",
-          "canonicalUrl": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
-          "discoveryScore": 11.4,
-          "eventKey": "business:jim cramer on paychex this is a stock that strangely has been crushed by ai disr",
-          "source_id": "gdelt-sec-1774914933329-7",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
-          "canonical_url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-paychex-stock-strangely-180121258.html",
-          "domain": "finance.yahoo.com",
-          "canonical_domain": "finance.yahoo.com",
-          "normalized_title": "jim cramer on paychex this is a stock that strangely has been crushed by ai disruption worries i think theyre overbl",
-          "snippet": "",
-          "published_at": "20260329T004500Z",
-          "section_id": "business",
-          "topic_id": null,
-          "section_candidates": [
-            "business",
-            "tech",
-            "sports"
+          "article_likelihood": 10,
+          "normalizedTitle": "ncaa approves major penalties for programs that circumvent",
+          "canonicalUrl": "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
+          "discoveryScore": 15.6,
+          "targetedCoverage": false,
+          "eventKey": "sports:ncaa approves major penalties for programs that circumvent",
+          "signalSpecificityScore": 5,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "article_likelihood",
+            "named_marker"
           ],
-          "topic_candidates": [
-            "economy-markets",
-            "ai-big-tech"
-          ],
-          "cluster_id": null,
-          "event_key": "business:jim cramer on paychex this is a stock that strangely has been crushed by ai disr",
-          "keywords": [
-            "cramer",
-            "paychex",
-            "stock",
-            "strangely",
-            "been",
-            "crushed",
-            "disruption",
-            "worries",
-            "think",
-            "theyre",
-            "overbl"
-          ],
-          "title_signal_tokens": [
-            "cramer",
-            "paychex",
-            "stock",
-            "strangely",
-            "been",
-            "crushed",
-            "disruption",
-            "worries",
-            "think",
-            "theyre",
-            "overbl"
-          ],
-          "url_signal_tokens": [
-            "markets",
-            "stocks",
-            "cramer",
-            "paychex",
-            "stock",
-            "strangely"
-          ],
-          "title_url_overlap": 0.6666666666666666,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "cramer",
-            "paychex",
-            "stock",
-            "strangely",
-            "been",
-            "crushed",
-            "disruption",
-            "worries",
-            "think",
-            "theyre",
-            "overbl"
-          ]
-        },
-        {
-          "id": "google-sec-1774914924274-6",
-          "title": "Don Lemon",
-          "summary": "2 days ago ... The former CNN anchor released a wide-ranging interview with the billionaire about business, politics, online hate speech and more.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.nytimes.com/topic/don-lemon"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-03-30T23:55:24.276Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:culture",
-          "sectionCandidates": [
-            "business",
-            "culture"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "business",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "product",
-          "genericPage": false,
-          "page_kind": "topic",
-          "genericity_score": 6,
-          "article_likelihood": 0,
-          "normalizedTitle": "don lemon the new york times",
-          "canonicalUrl": "https://www.nytimes.com/topic/don-lemon",
-          "discoveryScore": 10,
-          "eventKey": "business:don lemon the new york times",
-          "source_id": "google-sec-1774914924274-6",
-          "url": "https://www.nytimes.com/topic/don-lemon",
-          "canonical_url": "https://www.nytimes.com/topic/don-lemon",
+          "crossTopicRisk": false,
+          "source_id": "google-sec-1775097539954-1",
+          "url": "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
+          "canonical_url": "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
           "domain": "nytimes.com",
           "canonical_domain": "nytimes.com",
-          "normalized_title": "don lemon",
-          "snippet": "2 days ago ... The former CNN anchor released a wide-ranging interview with the billionaire about business, politics, online hate speech and more.",
-          "published_at": "2026-03-30T23:55:24.276Z",
-          "section_id": "business",
+          "normalized_title": "ncaa approves major penalties for programs that circumvent",
+          "snippet": "7 hours ago ... FBS programs that add or sign players who withdraw from their schools but bypass the transfer portal window will have their head coaches suspended for six games ...",
+          "published_at": "2026-04-02T02:38:59.956Z",
+          "section_id": "sports",
           "topic_id": null,
           "section_candidates": [
-            "business",
-            "culture"
+            "sports"
           ],
           "topic_candidates": [],
           "cluster_id": null,
-          "event_key": "business:don lemon the new york times",
+          "event_key": "sports:ncaa approves major penalties for programs that circumvent",
           "keywords": [
-            "lemon",
-            "days",
-            "former",
-            "anchor",
-            "released",
-            "wide",
-            "ranging",
-            "interview",
-            "billionaire",
-            "about",
-            "business",
-            "politics"
+            "ncaa",
+            "approves",
+            "major",
+            "penalties",
+            "programs",
+            "circumvent",
+            "hours",
+            "sign",
+            "players",
+            "withdraw",
+            "their",
+            "schools"
           ],
           "title_signal_tokens": [
-            "lemon"
+            "ncaa",
+            "approves",
+            "major",
+            "penalties",
+            "programs",
+            "circumvent"
           ],
           "url_signal_tokens": [
-            "topic",
-            "lemon"
+            "athletic",
+            "ncaa",
+            "rules",
+            "transfer",
+            "portal",
+            "spring",
+            "window",
+            "roster"
           ],
-          "title_url_overlap": 1,
+          "title_url_overlap": 0.16666666666666666,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "signing",
+          "place": "global",
+          "titleTokens": [
+            "ncaa",
+            "approves",
+            "major",
+            "penalties",
+            "programs",
+            "circumvent"
+          ]
+        },
+        {
+          "id": "google-sec-1775097539952-0",
+          "title": "World Cup 2026 – Groups, bracket and predictions with all 48 teams ...",
+          "summary": "20 hours ago ... With little more than two months until the start of the World Cup, we finally know the full 48-team line-up for this summer's tournament.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-04-02T02:38:59.954Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:sports",
+          "sectionCandidates": [
+            "sports"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "sports",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "events",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 10,
+          "normalizedTitle": "world cup 2026 groups bracket and predictions with all 48 teams",
+          "canonicalUrl": "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/",
+          "discoveryScore": 13.6,
+          "targetedCoverage": false,
+          "eventKey": "sports:world cup 2026 groups bracket and predictions with all 48 teams",
+          "signalSpecificityScore": 5,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "article_likelihood",
+            "named_marker"
+          ],
+          "crossTopicRisk": false,
+          "source_id": "google-sec-1775097539952-0",
+          "url": "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/",
+          "canonical_url": "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/",
+          "domain": "nytimes.com",
+          "canonical_domain": "nytimes.com",
+          "normalized_title": "world cup 2026 groups bracket and predictions with all 48 teams",
+          "snippet": "20 hours ago ... With little more than two months until the start of the World Cup, we finally know the full 48-team line-up for this summer's tournament.",
+          "published_at": "2026-04-02T02:38:59.954Z",
+          "section_id": "sports",
+          "topic_id": null,
+          "section_candidates": [
+            "sports"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "sports:world cup 2026 groups bracket and predictions with all 48 teams",
+          "keywords": [
+            "world",
+            "2026",
+            "groups",
+            "bracket",
+            "predictions",
+            "teams",
+            "hours",
+            "little",
+            "more",
+            "than",
+            "months",
+            "until"
+          ],
+          "title_signal_tokens": [
+            "2026",
+            "groups",
+            "bracket",
+            "predictions",
+            "teams"
+          ],
+          "url_signal_tokens": [
+            "athletic",
+            "bracket",
+            "predictions"
+          ],
+          "title_url_overlap": 0.6666666666666666,
           "title_url_mismatch": false,
           "source_quality_score": 0,
           "action": "general",
           "place": "global",
           "titleTokens": [
-            "lemon"
+            "world",
+            "2026",
+            "groups",
+            "bracket",
+            "predictions",
+            "teams"
+          ]
+        },
+        {
+          "id": "google-sec-1775097539956-2",
+          "title": "Leeds' 2024-25 accounts: Ninth-highest commercial income in ...",
+          "summary": "9 hours ago ... Leeds United generated record Championship revenues for the second year running in their 100-point 2024-25 promotion season, even as the club continued to ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-04-02T02:38:59.959Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:sports",
+          "sectionCandidates": [
+            "sports"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "sports",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 10,
+          "normalizedTitle": "leeds 2024 25 accounts ninth highest commercial income in",
+          "canonicalUrl": "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/",
+          "discoveryScore": 13.6,
+          "targetedCoverage": false,
+          "eventKey": "sports:leeds 2024 25 accounts ninth highest commercial income in",
+          "signalSpecificityScore": 5,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "article_likelihood",
+            "named_marker"
+          ],
+          "crossTopicRisk": false,
+          "source_id": "google-sec-1775097539956-2",
+          "url": "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/",
+          "canonical_url": "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/",
+          "domain": "nytimes.com",
+          "canonical_domain": "nytimes.com",
+          "normalized_title": "leeds 2024 25 accounts ninth highest commercial income in",
+          "snippet": "9 hours ago ... Leeds United generated record Championship revenues for the second year running in their 100-point 2024-25 promotion season, even as the club continued to ...",
+          "published_at": "2026-04-02T02:38:59.959Z",
+          "section_id": "sports",
+          "topic_id": null,
+          "section_candidates": [
+            "sports"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "sports:leeds 2024 25 accounts ninth highest commercial income in",
+          "keywords": [
+            "leeds",
+            "2024",
+            "accounts",
+            "ninth",
+            "highest",
+            "commercial",
+            "income",
+            "hours",
+            "united",
+            "generated",
+            "record",
+            "championship"
+          ],
+          "title_signal_tokens": [
+            "leeds",
+            "2024",
+            "accounts",
+            "ninth",
+            "highest",
+            "commercial",
+            "income"
+          ],
+          "url_signal_tokens": [
+            "athletic",
+            "leeds",
+            "accounts"
+          ],
+          "title_url_overlap": 0.6666666666666666,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "leeds",
+            "2024",
+            "accounts",
+            "ninth",
+            "highest",
+            "commercial",
+            "income"
+          ]
+        },
+        {
+          "id": "google-sec-1775097539961-4",
+          "title": "Eddie Howe's future, player sales and the stadium",
+          "summary": "2 days ago ... David Hopkinson, Newcastle's chief executive, sat down with journalists to discuss the club's latest accounts.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-04-02T02:38:59.963Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:sports",
+          "sectionCandidates": [
+            "sports"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "sports",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 2,
+          "article_likelihood": 10,
+          "normalizedTitle": "eddie howe s future player sales and the stadium ny times",
+          "canonicalUrl": "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/",
+          "discoveryScore": 13.6,
+          "targetedCoverage": false,
+          "eventKey": "sports:eddie howe s future player sales and the stadium ny times",
+          "signalSpecificityScore": 5,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "article_likelihood",
+            "named_marker"
+          ],
+          "crossTopicRisk": false,
+          "source_id": "google-sec-1775097539961-4",
+          "url": "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/",
+          "canonical_url": "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/",
+          "domain": "nytimes.com",
+          "canonical_domain": "nytimes.com",
+          "normalized_title": "eddie howe s future player sales and the stadium",
+          "snippet": "2 days ago ... David Hopkinson, Newcastle's chief executive, sat down with journalists to discuss the club's latest accounts.",
+          "published_at": "2026-04-02T02:38:59.963Z",
+          "section_id": "sports",
+          "topic_id": null,
+          "section_candidates": [
+            "sports"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "sports:eddie howe s future player sales and the stadium ny times",
+          "keywords": [
+            "eddie",
+            "howe",
+            "future",
+            "player",
+            "sales",
+            "stadium",
+            "days",
+            "david",
+            "hopkinson",
+            "newcastle",
+            "chief",
+            "executive"
+          ],
+          "title_signal_tokens": [
+            "eddie",
+            "howe",
+            "future",
+            "player",
+            "sales",
+            "stadium"
+          ],
+          "url_signal_tokens": [
+            "athletic",
+            "newcastle",
+            "eddie",
+            "howe",
+            "future",
+            "player",
+            "sales"
+          ],
+          "title_url_overlap": 0.8333333333333334,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "eddie",
+            "howe",
+            "future",
+            "player",
+            "sales",
+            "stadium"
+          ]
+        },
+        {
+          "id": "google-sec-1775097539968-7",
+          "title": "The 48 World Cup teams are set. We've filled in the bracket and ...",
+          "summary": "8 hours ago ... The final six teams have secured their place at the tournament this summer. So now is the perfect time to work out who wins it...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-04-02T02:38:59.970Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:sports",
+          "sectionCandidates": [
+            "sports"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "sports",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "events",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 10,
+          "normalizedTitle": "the 48 world cup teams are set we ve filled in the bracket and",
+          "canonicalUrl": "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/",
+          "discoveryScore": 13.6,
+          "targetedCoverage": false,
+          "eventKey": "sports:the 48 world cup teams are set we ve filled in the bracket and",
+          "signalSpecificityScore": 5,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "article_likelihood",
+            "named_marker"
+          ],
+          "crossTopicRisk": false,
+          "source_id": "google-sec-1775097539968-7",
+          "url": "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/",
+          "canonical_url": "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/",
+          "domain": "nytimes.com",
+          "canonical_domain": "nytimes.com",
+          "normalized_title": "the 48 world cup teams are set we ve filled in the bracket and",
+          "snippet": "8 hours ago ... The final six teams have secured their place at the tournament this summer. So now is the perfect time to work out who wins it...",
+          "published_at": "2026-04-02T02:38:59.970Z",
+          "section_id": "sports",
+          "topic_id": null,
+          "section_candidates": [
+            "sports"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "sports:the 48 world cup teams are set we ve filled in the bracket and",
+          "keywords": [
+            "world",
+            "teams",
+            "filled",
+            "bracket",
+            "hours",
+            "final",
+            "secured",
+            "their",
+            "place",
+            "tournament",
+            "summer",
+            "perfect"
+          ],
+          "title_signal_tokens": [
+            "teams",
+            "filled",
+            "bracket"
+          ],
+          "url_signal_tokens": [
+            "athletic",
+            "predictions",
+            "groups",
+            "bracket"
+          ],
+          "title_url_overlap": 0.3333333333333333,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "world",
+            "teams",
+            "filled",
+            "bracket"
+          ]
+        },
+        {
+          "id": "google-sec-1775097539970-8",
+          "title": "FSG is allowing Liverpool to drift – and that is dangerous",
+          "summary": "22 hours ago ... Whether that stance persists if Liverpool are knocked out of the FA Cup and the Champions League and fall away from the Premier League top five over the next ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-04-02T02:38:59.973Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:sports",
+          "sectionCandidates": [
+            "sports"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "sports",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 10,
+          "normalizedTitle": "fsg is allowing liverpool to drift and that is dangerous the athletic",
+          "canonicalUrl": "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/",
+          "discoveryScore": 13.6,
+          "targetedCoverage": false,
+          "eventKey": "sports:fsg is allowing liverpool to drift and that is dangerous the athletic",
+          "signalSpecificityScore": 5,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "article_likelihood",
+            "named_marker"
+          ],
+          "crossTopicRisk": false,
+          "source_id": "google-sec-1775097539970-8",
+          "url": "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/",
+          "canonical_url": "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/",
+          "domain": "nytimes.com",
+          "canonical_domain": "nytimes.com",
+          "normalized_title": "fsg is allowing liverpool to drift",
+          "snippet": "22 hours ago ... Whether that stance persists if Liverpool are knocked out of the FA Cup and the Champions League and fall away from the Premier League top five over the next ...",
+          "published_at": "2026-04-02T02:38:59.973Z",
+          "section_id": "sports",
+          "topic_id": null,
+          "section_candidates": [
+            "sports"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "sports:fsg is allowing liverpool to drift and that is dangerous the athletic",
+          "keywords": [
+            "allowing",
+            "liverpool",
+            "drift",
+            "hours",
+            "whether",
+            "stance",
+            "persists",
+            "knocked",
+            "champions",
+            "league",
+            "fall",
+            "away"
+          ],
+          "title_signal_tokens": [
+            "allowing",
+            "liverpool",
+            "drift"
+          ],
+          "url_signal_tokens": [
+            "athletic",
+            "liverpool",
+            "michael",
+            "edwards",
+            "richard",
+            "hughes"
+          ],
+          "title_url_overlap": 0.3333333333333333,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "allowing",
+            "liverpool",
+            "drift",
+            "dangerous"
+          ]
+        },
+        {
+          "id": "google-sec-1775097539973-9",
+          "title": "Plotting Canada's path through the World Cup. Could it be Mexico in ...",
+          "summary": "14 hours ago ... Let's break down their path… Group stage. Canada will start their World Cup in Toronto in just the third game of the tournament. They had to wait until the 11th ...",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "",
+          "sourceUrls": [
+            "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/"
+          ],
+          "freshness": 4,
+          "urgency": 4,
+          "discoveredAt": "2026-04-02T02:38:59.975Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:sports",
+          "sectionCandidates": [
+            "sports"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "sports",
+          "detectedTopicId": null,
+          "region": "canada",
+          "angle": "events",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 10,
+          "normalizedTitle": "plotting canada s path through the world cup could it be mexico in",
+          "canonicalUrl": "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/",
+          "discoveryScore": 13.6,
+          "targetedCoverage": false,
+          "eventKey": "sports:plotting canada s path through the world cup could it be mexico in",
+          "signalSpecificityScore": 5,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "article_likelihood",
+            "named_marker"
+          ],
+          "crossTopicRisk": false,
+          "source_id": "google-sec-1775097539973-9",
+          "url": "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/",
+          "canonical_url": "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/",
+          "domain": "nytimes.com",
+          "canonical_domain": "nytimes.com",
+          "normalized_title": "plotting canada s path through the world cup could it be mexico in",
+          "snippet": "14 hours ago ... Let's break down their path… Group stage. Canada will start their World Cup in Toronto in just the third game of the tournament. They had to wait until the 11th ...",
+          "published_at": "2026-04-02T02:38:59.975Z",
+          "section_id": "sports",
+          "topic_id": null,
+          "section_candidates": [
+            "sports"
+          ],
+          "topic_candidates": [],
+          "cluster_id": null,
+          "event_key": "sports:plotting canada s path through the world cup could it be mexico in",
+          "keywords": [
+            "plotting",
+            "canada",
+            "path",
+            "through",
+            "world",
+            "mexico",
+            "hours",
+            "break",
+            "down",
+            "their",
+            "group",
+            "stage"
+          ],
+          "title_signal_tokens": [
+            "plotting",
+            "canada",
+            "path",
+            "through",
+            "could",
+            "mexico"
+          ],
+          "url_signal_tokens": [
+            "athletic",
+            "canada",
+            "path"
+          ],
+          "title_url_overlap": 0.6666666666666666,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "canada",
+          "titleTokens": [
+            "plotting",
+            "canada",
+            "path",
+            "through",
+            "world",
+            "mexico"
           ]
         }
       ],
-      "poolIdentityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
-      "selectionScore": 56.2,
+      "poolIdentityKey": "cluster:evt-2026-04-02-sports-general-global",
+      "selectionScore": 14.699990624999998,
       "selectionNotes": [
-        "section_penalty:9",
-        "topic_penalty:4",
-        "region_penalty:49",
-        "angle_penalty:42",
-        "entity_penalty:32",
-        "ready-backlog:2"
+        "undercovered_section:sports",
+        "section_penalty:3",
+        "topic_penalty:17",
+        "region_penalty:35",
+        "entity_penalty:23"
       ],
-      "readyCandidateStatus": "ready",
-      "readyCandidateRank": 2,
-      "readyCandidateScore": 50.2,
-      "_selectionOrigin": "ready_backlog",
-      "section": "Business",
-      "subsection": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+      "readyCandidateStatus": null,
+      "readyCandidateRank": null,
+      "_selectionOrigin": "pool",
+      "section": "Sports",
+      "subsection": "NCAA approves major penalties for programs that circumvent ...",
       "topics": [
-        "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move"
+        "NCAA approves major penalties for programs that circumvent ..."
       ]
     },
     "sourcePack": {
-      "eventId": "evt-2026-03-30-crypto-bitcoin-general-global",
-      "topic": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
-      "sources": 4,
-      "uniqueDomains": 4,
+      "eventId": "evt-2026-04-02-sports-general-global",
+      "topic": "NCAA approves major penalties for programs that circumvent ...",
+      "sources": 2,
+      "uniqueDomains": 2,
       "credibilityScore": null,
       "passesGate": true,
       "gateNotes": [
+        "Large cluster retained extra materials as background/signal; publishable pack remains thin",
         "Role-aware one-event source-pack gate passed"
       ]
     }
   },
   "stats": {
-    "discovery_candidates": 24,
-    "event_clusters": 8,
+    "discovery_candidates": 34,
+    "event_clusters": 10,
     "briefs_normalized": 6,
-    "source_packs_assembled": 15,
+    "source_packs_assembled": 19,
     "publishable_candidates": 1,
-    "selected_topic": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
+    "selected_topic": "NCAA approves major penalties for programs that circumvent ...",
     "selected_topics": [
-      "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move"
+      "NCAA approves major penalties for programs that circumvent ..."
     ],
     "articles_attempted": 1,
     "articles_published": 1,
     "news_pool": {
-      "total": 60,
-      "active": 49,
-      "published": 11,
+      "total": 42,
+      "active": 34,
+      "published": 8,
       "ready_candidates": 0
     },
     "cache_stats": {
@@ -3172,28 +1251,69 @@
         "jitter_ms": 250
       },
       "search_network_enabled": true,
-      "min_search_interval_ms": 6000,
+      "min_search_interval_ms": 10000,
       "live_quota": {
-        "brave": 5,
-        "gdelt": 2,
-        "google": 2
+        "brave": 15,
+        "gdelt": 6,
+        "google": 30
       },
+      "live_rescue_reserved": {
+        "brave": 1,
+        "gdelt": 0,
+        "google": 0
+      },
+      "live_phase_caps": {
+        "brave": {
+          "discovery": 14,
+          "rescue": 1
+        },
+        "gdelt": {
+          "discovery": 6,
+          "rescue": 6
+        },
+        "google": {
+          "discovery": 30,
+          "rescue": 30
+        }
+      },
+      "brave_rescue_max_live_queries": 1,
       "live_usage": {
-        "brave": 5,
-        "gdelt": 2,
-        "google": 2
+        "brave": 1,
+        "gdelt": 0,
+        "google": 0
+      },
+      "live_usage_by_phase": {
+        "brave": {
+          "discovery": 0,
+          "rescue": 1
+        },
+        "gdelt": {
+          "discovery": 0,
+          "rescue": 0
+        },
+        "google": {
+          "discovery": 0,
+          "rescue": 0
+        }
+      },
+      "provider_circuits": {
+        "gdelt": {
+          "open": true,
+          "locked_until": "2026-04-03T02:01:51.976Z",
+          "reason": "API error: 429 Please limit requests to one every 5 seconds or contact kalev.leetaru5@gmail.com for larger queries.\n\n"
+        }
       },
       "cache": {
-        "ttl_hours": 8,
+        "ttl_hours": 6,
         "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
         "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
         "runtime": {
           "brave": {
-            "files": 5,
-            "fresh_files": 5,
+            "files": 8,
+            "fresh_files": 8,
             "expired_files": 0,
             "corrupt_files": 0,
-            "size_bytes": 71098
+            "size_bytes": 91821
           },
           "gdelt": {
             "files": 0,
@@ -3203,11 +1323,11 @@
             "size_bytes": 0
           },
           "google": {
-            "files": 2,
-            "fresh_files": 2,
+            "files": 12,
+            "fresh_files": 12,
             "expired_files": 0,
             "corrupt_files": 0,
-            "size_bytes": 60439
+            "size_bytes": 179004
           }
         },
         "seed": {
@@ -3235,7 +1355,7 @@
         }
       }
     },
-    "duration_ms": 141294,
+    "duration_ms": 28166,
     "ready_candidates": 0,
     "additional_ready_candidates": 0,
     "source_pack_attempts": 1,
@@ -3243,27 +1363,27 @@
     "source_pack_retry_brave_queries": 0,
     "source_pack_retry_estimated_tokens": 0,
     "pre_draft_rejected": 0,
-    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-01T20-53-55-997Z.json"
+    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-02T02-38-59-828Z.json"
   },
-  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-01T20-53-55-997Z.json",
+  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-02T02-38-59-828Z.json",
   "published_paths": [
-    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto.mdx"
+    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.mdx"
   ],
   "verified_urls": [
-    "/article/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto"
+    "/article/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port"
   ],
   "selected_candidates": [
     {
-      "title": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
-      "topic": "Crypto mortgage explained: Buying a home with crypto? Here’s what no one tells you before you make the move",
-      "section_id": "business",
-      "topic_id": "crypto-bitcoin"
+      "title": "NCAA approves major penalties for programs that circumvent ...",
+      "topic": "NCAA approves major penalties for programs that circumvent ...",
+      "section_id": "sports",
+      "topic_id": "transfers-business"
     }
   ],
   "published_articles": [
     {
-      "title": "Crypto mortgages, explained: what to know before using crypto for a home",
-      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto.mdx",
+      "title": "NCAA Adopts Harsh Penalties for Teams Skirting Transfer Portal Rules",
+      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.mdx",
       "verifiedUrl": null
     }
   ]

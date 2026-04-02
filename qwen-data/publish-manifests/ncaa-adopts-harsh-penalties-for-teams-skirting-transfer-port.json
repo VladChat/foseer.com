@@ -1,0 +1,113 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-02T02:39:27.952Z",
+  "event_id": "evt-2026-04-02-sports-general-global",
+  "cluster_id": "evt-2026-04-02-sports-general-global",
+  "article_type": "report",
+  "title": "NCAA Adopts Harsh Penalties for Teams Skirting Transfer Portal Rules",
+  "slug": "ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
+  "canonical_slug": "2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
+  "expected_url": "/article/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.mdx",
+  "published_at": "2026-04-02T02:39:27.950Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Transfers & Business",
+  "topics": [
+    "NCAA approves major penalties for programs that circumvent ...",
+    "Transfers & Business"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/15338951/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/15338951/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/coach-with-players-in-stadium-15338951/",
+    "asset_key": "pexels:15338951",
+    "alt_text": "Illustration for NCAA Adopts Harsh Penalties for Teams Skirting Transfer Portal Rules",
+    "selection_mode": "provider_download_new:pexels:usable:strict",
+    "query_used": "NCAA photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 36,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 52,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "NCAA approves major penalties for programs that circumvent ...",
+        "url": "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "NCAA Makes Transfer Portal Rule Changes With Huge Penalties",
+        "url": "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
+        "domain": "newsweek.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": true,
+        "matched_aliases": [
+          "transfers"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "NCAA photo",
+      "article_relevance_score": 36,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "ncaa"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
