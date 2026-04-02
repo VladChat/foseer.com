@@ -125,6 +125,12 @@ node scripts/fetch-pexels-image.js <slug> --force
 
 Get your Pexels API key at: https://www.pexels.com/api/
 
+Runtime provider keys for current pipeline:
+- `PEXELS_API_KEY`
+- `PIXABAY_API_KEY`
+- `UNSPLASH_ACCESS_KEY` (or `UNSPLASH_API_KEY` alias in workflows)
+- `UNSPLASH_SECRET_KEY` may be stored for account completeness, but current runtime search flow does not use it.
+
 ### Option 3: Frontmatter Reference
 
 Add to article frontmatter:

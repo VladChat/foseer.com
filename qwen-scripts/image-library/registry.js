@@ -396,7 +396,7 @@ export function recordImageUsage(registry, { asset, articleSlug, articleTitle, s
   }
 }
 
-export function findReusableAsset(registry, { articleSlug, section, topicId, title, excerpt, queries, entityHints = [] }) {
+export function findReusableAsset(registry, { articleSlug, section, topicId, title, excerpt, queries, entityHints = [], returnDiagnostics = false }) {
   const articleProfile = buildArticleSearchProfile({
     title,
     excerpt,
@@ -408,19 +408,41 @@ export function findReusableAsset(registry, { articleSlug, section, topicId, tit
   const searchTokens = new Set(articleProfile.tokens);
   const now = new Date();
   const candidates = [];
+  const diagnostics = {
+    scanned: 0,
+    missingFile: 0,
+    skippedCooldown: 0,
+    skippedAlreadyUsedByArticle: 0,
+    skippedWeakSemantic: 0,
+    semanticCandidates: 0,
+  };
 
   for (const asset of registry.assets) {
-    if (!asset.localPath || !assetFileExists(asset)) continue;
-    if (isAssetWithinCooldown(asset, now)) continue;
+    diagnostics.scanned += 1;
+    if (!asset.localPath || !assetFileExists(asset)) {
+      diagnostics.missingFile += 1;
+      continue;
+    }
+    if (isAssetWithinCooldown(asset, now)) {
+      diagnostics.skippedCooldown += 1;
+      continue;
+    }
 
     const usedByArticle = registry.usage.some((entry) => entry.articleSlug === articleSlug && entry.assetKey === asset.assetKey);
-    if (usedByArticle) continue;
+    if (usedByArticle) {
+      diagnostics.skippedAlreadyUsedByArticle += 1;
+      continue;
+    }
 
     const assetTokens = new Set(buildAssetSearchText(asset).toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').split(/\s+/).filter(Boolean));
     const overlap = Array.from(searchTokens).filter((token) => assetTokens.has(token)).length;
     const fit = computeContextualEditorialFit(asset, articleProfile);
     const strongSemanticMatch = overlap >= 2 || fit.entityOverlap >= 1 || fit.finalScore >= 68;
-    if (!strongSemanticMatch) continue;
+    if (!strongSemanticMatch) {
+      diagnostics.skippedWeakSemantic += 1;
+      continue;
+    }
+    diagnostics.semanticCandidates += 1;
 
     const sizeScore = Number(asset.width || 0) * Number(asset.height || 0);
     const ageDays = asset.lastUsedAt ? Math.max(0, (now.getTime() - new Date(asset.lastUsedAt).getTime()) / (24 * 60 * 60 * 1000)) : 365;
@@ -431,7 +453,17 @@ export function findReusableAsset(registry, { articleSlug, section, topicId, tit
   }
 
   candidates.sort((a, b) => b.score - a.score);
-  return candidates[0]?.asset || null;
+  const selected = candidates[0]?.asset || null;
+  if (returnDiagnostics) {
+    return {
+      asset: selected,
+      diagnostics: {
+        ...diagnostics,
+        candidateCount: candidates.length,
+      },
+    };
+  }
+  return selected;
 }
 
 export function getRegistryPath() {

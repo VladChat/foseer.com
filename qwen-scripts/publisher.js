@@ -503,6 +503,25 @@ draft: false
     if (image.altText) {
       fm += `imageAlt: "${escapeQuotes(image.altText)}"\n`;
     }
+    const imageProvider = String(image.provider || image?.metadata?.provider || '').trim().toLowerCase();
+    const imageAuthorName = String(image.authorName || image?.metadata?.authorName || '').trim();
+    const imageAuthorUrl = String(image.authorUrl || image?.metadata?.authorUrl || '').trim();
+    const imageSourceUrl = String(image.sourcePageUrl || image.sourceUrl || image?.metadata?.sourcePageUrl || image?.metadata?.sourceDownloadUrl || '').trim();
+    if (imageProvider) {
+      fm += `imageProvider: "${escapeQuotes(imageProvider)}"\n`;
+    }
+    if (imageAuthorName) {
+      fm += `imageAuthorName: "${escapeQuotes(imageAuthorName)}"\n`;
+    }
+    if (imageAuthorUrl) {
+      fm += `imageAuthorUrl: "${escapeQuotes(imageAuthorUrl)}"\n`;
+    }
+    if (imageSourceUrl) {
+      fm += `imageSourceUrl: "${escapeQuotes(imageSourceUrl)}"\n`;
+    }
+    if (imageProvider === 'unsplash' && imageAuthorName) {
+      fm += `imageCaption: "${escapeQuotes(`Photo by ${imageAuthorName} on Unsplash`)}"\n`;
+    }
   }
 
   // Add canonical URL hint if available

@@ -30,6 +30,7 @@ const IMAGE_CONFIG = {
   libraryBase: '~/assets/images/library',
   searchPerQuery: Number(process.env.QWEN_IMAGE_SEARCH_PER_QUERY || 15),
   maxQueriesPerRun: Number(process.env.QWEN_IMAGE_MAX_QUERIES || 12),
+  archiveAlternativeLimit: Math.max(0, Number(process.env.QWEN_IMAGE_ARCHIVE_ALTERNATIVES || 2)),
 };
 
 const SECTION_FALLBACK_KEYWORDS = {
@@ -81,9 +82,72 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
     topicHints: [topicRecord?.label, topicId].filter(Boolean),
   });
 
+  const reasonCodes = [];
+  const precheckResult = findReusableAsset(registry, {
+    articleSlug,
+    section,
+    topicId,
+    title: article.title,
+    excerpt: article.excerpt || article.content || '',
+    queries,
+    entityHints: imageContext.entityHints,
+    returnDiagnostics: true,
+  });
+  const archivePrecheck = normalizeReusableAssetResult(precheckResult);
+  const archiveDiagnostics = archivePrecheck.diagnostics || null;
+  if (archiveDiagnostics?.skippedCooldown > 0) {
+    pushReasonCode(reasonCodes, 'archive_cooldown_block');
+  }
+  if (archivePrecheck.asset) {
+    const precheckAsset = archivePrecheck.asset;
+    console.log(`[image] Reusing local asset via archive pre-check: ${precheckAsset.assetKey}`);
+    recordImageUsage(registry, {
+      asset: precheckAsset,
+      articleSlug,
+      articleTitle: article.title,
+      section,
+      topicId,
+      query: queries[0] || section,
+      selectionMode: 'local_registry_reuse_precheck',
+    });
+    saveImageRegistry(registry);
+    return buildResultFromAsset(precheckAsset, article, {
+      articleSlug,
+      queryUsed: queries[0] || null,
+      queryLevel: 'archive-precheck',
+      selectionMode: 'local_registry_reuse_precheck',
+      sectionId,
+      topicId,
+      articleProfile,
+      outcomeReasonCode: 'archive_reuse',
+      outcomeStage: 'archive-precheck',
+      reasonCodes: ['archive_reuse'],
+      auditTrail: buildImageAuditTrail({
+        queries,
+        queryLevels,
+        providers,
+        decisionLog: [{
+          queryLevel: 'archive-precheck',
+          status: 'archive_reuse_hit',
+          assetKey: precheckAsset.assetKey || null,
+        }],
+        bestOnlineDecision: null,
+        onlineAttempted: false,
+        imageQueryPlan,
+      }),
+    });
+  }
+  pushReasonCode(reasonCodes, 'reuse_not_found');
+
   let bestOnlineDecision = null;
   const onlineDecisions = [];
   const decisionLog = [];
+  const onlineDiagnostics = {
+    candidatePoolsWithResults: 0,
+    noCandidates: 0,
+    noEligible: 0,
+    persistFailures: 0,
+  };
 
   for (const levelEntry of queryLevels) {
     const level = levelEntry.level;
@@ -114,9 +178,11 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
       }
 
       if (!candidatePool.length) {
+        onlineDiagnostics.noCandidates += 1;
         decisionLog.push({ query, queryLevel: level, status: 'no_candidates', providersTried: providers.map((provider) => provider.id) });
         continue;
       }
+      onlineDiagnostics.candidatePoolsWithResults += 1;
 
       const decision = selectProviderCandidate(candidatePool, registry, {
         query,
@@ -127,6 +193,7 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
         articleProfile,
       });
       if (!decision) {
+        onlineDiagnostics.noEligible += 1;
         console.log(`[image] No eligible fresh online candidate across providers for level=${level} query="${query}"`);
         decisionLog.push({ query, queryLevel: level, status: 'no_eligible_candidate', candidateCount: candidatePool.length });
         continue;
@@ -171,6 +238,7 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
   }
 
   if (providers.length === 0) {
+    pushReasonCode(reasonCodes, 'no_provider_keys');
     console.warn('[image] No online image providers configured; using local-registry/fallback only');
   }
 
@@ -197,6 +265,7 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
         entityHints: imageContext.entityHints,
       });
       if (!storedAsset) {
+        onlineDiagnostics.persistFailures += 1;
         console.warn(`[image] Online candidate persistence failed provider=${decision.candidate.provider || 'unknown'} query="${decision.query || ''}"`);
         continue;
       }
@@ -211,6 +280,17 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
         query: decision.query,
         selectionMode: `provider_download_new:${decision.candidate.provider}:${decision.fit.tier}:${decision.queryLevel || 'unknown'}`,
       });
+      const alternatives = await persistAlternativeCandidates({
+        decisions: rankedOnlineDecisions.filter((candidateDecision) => candidateDecision !== decision),
+        registry,
+        section,
+        topicId,
+        entityHints: imageContext.entityHints,
+        limit: IMAGE_CONFIG.archiveAlternativeLimit,
+      });
+      if (alternatives.failed > 0) {
+        onlineDiagnostics.persistFailures += alternatives.failed;
+      }
       saveImageRegistry(registry);
       return buildResultFromAsset(assetRecord, article, {
         articleSlug,
@@ -220,6 +300,9 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
         sectionId,
         topicId,
         articleProfile,
+        outcomeReasonCode: 'online_selected',
+        outcomeStage: decision.queryLevel || 'strict',
+        reasonCodes: buildReasonCodeList(reasonCodes, ['online_selected']),
         auditTrail: buildImageAuditTrail({
           queries,
           queryLevels,
@@ -232,52 +315,20 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
       });
     }
 
-    console.warn('[image] No online candidates could be persisted; trying local registry reuse before fallback');
+    pushReasonCode(reasonCodes, 'persist_failed');
+    console.warn('[image] No online candidates could be persisted; using fallback');
   }
 
-  const localAsset = findReusableAsset(registry, {
-    articleSlug,
-    section,
-    topicId,
-    title: article.title,
-    excerpt: article.excerpt || article.content || '',
-    queries,
-    entityHints: imageContext.entityHints,
-  });
-
-  if (localAsset) {
-    console.log(`[image] Reusing local asset after online miss: ${localAsset.assetKey}`);
-    recordImageUsage(registry, {
-      asset: localAsset,
-      articleSlug,
-      articleTitle: article.title,
-      section,
-      topicId,
-      query: queries[0] || section,
-      selectionMode: `local_registry_reuse_after_online_miss:${bestOnlineDecision?.queryLevel || 'none'}`,
-    });
-    saveImageRegistry(registry);
-    return buildResultFromAsset(localAsset, article, {
-      articleSlug,
-      queryUsed: queries[0] || null,
-      queryLevel: bestOnlineDecision?.queryLevel || null,
-      selectionMode: `local_registry_reuse_after_online_miss:${bestOnlineDecision?.queryLevel || 'none'}`,
-      sectionId,
-      topicId,
-      articleProfile,
-      auditTrail: buildImageAuditTrail({
-        queries,
-        queryLevels,
-        providers,
-        decisionLog,
-        bestOnlineDecision,
-        onlineAttempted: providers.length > 0,
-        imageQueryPlan,
-      }),
-    });
+  if (providers.length > 0 && onlineDiagnostics.candidatePoolsWithResults === 0) {
+    pushReasonCode(reasonCodes, 'no_candidates_all_levels');
+  }
+  if (providers.length > 0 && onlineDiagnostics.candidatePoolsWithResults > 0 && onlineDiagnostics.noEligible > 0) {
+    pushReasonCode(reasonCodes, 'all_rejected_by_semantics');
   }
 
   const fallbackAlt = generateAltText(article.title, article.excerpt, section);
+  pushReasonCode(reasonCodes, 'fallback_used');
+  const fallbackReasonCode = selectFallbackReasonCode(reasonCodes);
   console.warn(`[image] Query levels exhausted; using fallback image (level=fallback) for article=${articleSlug}`);
   return {
     articleSlug,
@@ -296,8 +347,12 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
       queriesTried: queries,
       queryLevelsTried: queryLevels.map((entry) => entry.level),
       queryLevel: 'fallback',
+      outcomeReasonCode: fallbackReasonCode,
+      outcomeStage: 'fallback',
+      reasonCodes,
       onlineAttempted: providers.length > 0,
       onlineCandidateFound: Boolean(bestOnlineDecision),
+      archivePrecheck: archiveDiagnostics,
       auditTrail: buildImageAuditTrail({
         queries,
         queryLevels,
@@ -573,15 +628,15 @@ function shouldAcceptByQueryLevel(fit = {}, queryLevel = 'strict') {
   }
 
   if (level === 'relaxed') {
-    if (fit.tier === 'weak' && fit.articleRelevanceScore < 22) return false;
+    if (fit.tier === 'weak' && fit.articleRelevanceScore < 20) return false;
     if (fit.contextRequired && Number(fit.contextOverlap || 0) === 0 && Number(fit.sourceOverlap || 0) === 0 && Number(fit.primaryEntityOverlap || 0) === 0) return false;
     if (semanticAnchor === 0) return false;
-    return Number(fit.articleRelevanceScore || 0) >= 22;
+    return Number(fit.articleRelevanceScore || 0) >= 20;
   }
 
   // broad: still require at least one semantic anchor, but allow wider imagery.
   if (semanticAnchor === 0) return false;
-  if (Number(fit.articleRelevanceScore || 0) < 20 && Number(fit.finalScore || 0) < 40) return false;
+  if (Number(fit.articleRelevanceScore || 0) < 18 && Number(fit.finalScore || 0) < 36) return false;
   return true;
 }
 
@@ -639,7 +694,7 @@ function isLowEvidenceGenericCandidate(candidate = {}, fit = {}, section = '', {
   const hasSpecificTopic = Boolean(String(topicId || '').trim());
   const entityHintCount = Array.isArray(articleProfile?.entityHints) ? articleProfile.entityHints.length : 0;
   const contextPhraseCount = Array.isArray(articleProfile?.contextPhrases) ? articleProfile.contextPhrases.length : 0;
-  const requiredAnchorScore = (hasSpecificTopic || entityHintCount > 0 || contextPhraseCount > 0) ? 2 : 1;
+  const requiredAnchorScore = hasSpecificTopic ? 2 : (entityHintCount > 0 || contextPhraseCount > 0 ? 1 : 1);
   if (anchorScore >= requiredAnchorScore) return false;
 
   const strictSection = ['news', 'business', 'culture'].includes(String(section || '').toLowerCase());
@@ -842,7 +897,7 @@ async function persistProviderCandidate(candidate, { section, query, topicId, en
   }
 }
 
-function buildResultFromAsset(asset, article, { articleSlug, queryUsed, queryLevel = null, selectionMode, sectionId, topicId, articleProfile, auditTrail = null }) {
+function buildResultFromAsset(asset, article, { articleSlug, queryUsed, queryLevel = null, selectionMode, sectionId, topicId, articleProfile, outcomeReasonCode = null, outcomeStage = null, reasonCodes = [], auditTrail = null }) {
   const altText = generateAltText(article.title, article.excerpt, asset.altText);
   const fit = downgradeUnconfirmedFit(computeContextualEditorialFit(asset, articleProfile || buildArticleSearchProfile({ title: article.title, excerpt: article.excerpt || article.content || '' })));
   return {
@@ -851,6 +906,9 @@ function buildResultFromAsset(asset, article, { articleSlug, queryUsed, queryLev
     altText,
     imageAlt: altText,
     provider: asset.provider,
+    authorName: asset.authorName || null,
+    authorUrl: asset.authorUrl || null,
+    sourcePageUrl: asset.sourcePageUrl || null,
     sourceUrl: asset.sourcePageUrl || asset.sourceDownloadUrl || null,
     metadata: {
       assetKey: asset.assetKey,
@@ -859,8 +917,15 @@ function buildResultFromAsset(asset, article, { articleSlug, queryUsed, queryLev
       format: asset.format || 'jpg',
       queryUsed: queryUsed || null,
       queryLevel: queryLevel || null,
+      provider: asset.provider || null,
       authorName: asset.authorName || null,
+      authorUrl: asset.authorUrl || null,
+      sourcePageUrl: asset.sourcePageUrl || null,
+      sourceDownloadUrl: asset.sourceDownloadUrl || null,
       selectionMode,
+      outcomeReasonCode: outcomeReasonCode || null,
+      outcomeStage: outcomeStage || null,
+      reasonCodes: buildReasonCodeList(reasonCodes),
       section_id: sectionId || null,
       topic_id: topicId || null,
       entityHints: asset.entityHints || [],
@@ -903,6 +968,100 @@ function buildImageAuditTrail({ queries = [], queryLevels = [], providers = [], 
     } : null,
     onlineAttempted: Boolean(onlineAttempted),
   };
+}
+
+function normalizeReusableAssetResult(result) {
+  if (!result) {
+    return { asset: null, diagnostics: null };
+  }
+  if (result.asset !== undefined || result.diagnostics !== undefined) {
+    return {
+      asset: result.asset || null,
+      diagnostics: result.diagnostics || null,
+    };
+  }
+  return { asset: result, diagnostics: null };
+}
+
+function pushReasonCode(codes = [], code = '') {
+  const normalized = String(code || '').trim();
+  if (!normalized) return;
+  if (!codes.includes(normalized)) {
+    codes.push(normalized);
+  }
+}
+
+function buildReasonCodeList(base = [], extras = []) {
+  const output = [];
+  for (const code of [...base, ...extras]) {
+    pushReasonCode(output, code);
+  }
+  return output;
+}
+
+function selectFallbackReasonCode(reasonCodes = []) {
+  const priority = [
+    'no_provider_keys',
+    'no_candidates_all_levels',
+    'all_rejected_by_semantics',
+    'archive_cooldown_block',
+    'persist_failed',
+    'reuse_not_found',
+    'fallback_used',
+  ];
+  for (const code of priority) {
+    if (reasonCodes.includes(code)) return code;
+  }
+  return 'fallback_used';
+}
+
+async function persistAlternativeCandidates({
+  decisions = [],
+  registry,
+  section,
+  topicId,
+  entityHints = [],
+  limit = 2,
+} = {}) {
+  const maxToPersist = Math.max(0, Number(limit || 0));
+  if (maxToPersist === 0) {
+    return { saved: 0, failed: 0 };
+  }
+  const seenCandidates = new Set();
+  let saved = 0;
+  let failed = 0;
+  for (const decision of decisions) {
+    if (saved >= maxToPersist) break;
+    if (!decision?.candidate || !decision?.fit) continue;
+    if (Number(decision?.fit?.finalScore || 0) < 60) continue;
+    if (!['strong', 'acceptable', 'usable'].includes(String(decision.fit.tier || '').toLowerCase())) continue;
+    const dedupeKey = `${decision.candidate.provider || 'provider'}:${decision.candidate.providerAssetId || decision.candidate.sourceDownloadUrl || ''}`;
+    if (!dedupeKey || seenCandidates.has(dedupeKey)) continue;
+    seenCandidates.add(dedupeKey);
+
+    const storedAsset = await persistProviderCandidate(decision.candidate, {
+      section,
+      query: decision.query,
+      topicId,
+      entityHints,
+    });
+    if (!storedAsset) {
+      failed += 1;
+      continue;
+    }
+
+    const assetRecord = registerAssetRecord(registry, {
+      ...storedAsset,
+      status: 'standby',
+      provenance: 'provider_download_alternative',
+    });
+    if (assetRecord) {
+      assetRecord.status = 'standby';
+      assetRecord.provenance = 'provider_download_alternative';
+    }
+    saved += 1;
+  }
+  return { saved, failed };
 }
 
 function generateAltText(title, excerpt, photoAlt) {

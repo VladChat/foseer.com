@@ -628,6 +628,139 @@ export async function gdeltSearch(query, options = {}) {
   return result;
 }
 
+async function searchImageProviderWithCache({
+  provider,
+  cacheKey,
+  label,
+  configPresent,
+  buildRequest,
+  parseResponse = async (response) => response.json(),
+}) {
+  const result = baseResult(provider);
+  if (!configPresent) {
+    result.status = PROVIDER_STATUS.SKIPPED_CONFIG;
+    result.error = `${provider} configuration missing`;
+    logProvider(provider, { label, status: result.status, error: result.error });
+    return result;
+  }
+
+  const entry = readCacheEntry(provider, cacheKey, { includeExpiredData: true });
+  if (entry.hit) {
+    result.status = PROVIDER_STATUS.CACHE_HIT;
+    result.cacheHit = true;
+    result.data = entry.data;
+    logProvider(provider, { label, status: result.status, age_ms: entry.ageMs, ttl_hours: DEFAULT_TTL_HOURS, mode: 'fresh_cache' });
+    return result;
+  }
+
+  const hasExpiredEntry = entry.reason === 'expired' && entry.data;
+  if (hasExpiredEntry && !SEARCH_NETWORK_ENABLED) {
+    result.status = PROVIDER_STATUS.STALE_CACHE_HIT;
+    result.cacheHit = true;
+    result.data = entry.data;
+    logProvider(provider, { label, status: result.status, age_ms: entry.ageMs, ttl_hours: DEFAULT_TTL_HOURS, mode: 'stale_cache' });
+    return result;
+  }
+
+  if (!SEARCH_NETWORK_ENABLED) {
+    result.status = PROVIDER_STATUS.CACHE_MISS_NO_NETWORK;
+    result.error = `search network disabled: ${entry.reason}`;
+    logProvider(provider, { label, status: result.status, reason: entry.reason, network: 'disabled', mode: SEARCH_NETWORK_MODE });
+    return result;
+  }
+
+  await waitForSearchThrottle(provider, label);
+
+  let request;
+  try {
+    request = buildRequest();
+  } catch (error) {
+    result.status = PROVIDER_STATUS.REQUEST_CONSTRUCTION_FAILURE;
+    result.error = `Failed to build request: ${error.message}`;
+    result.errorType = 'request_construction';
+    logProvider(provider, { label, status: result.status, error: result.error });
+    return result;
+  }
+
+  result.networkCall = true;
+  logProvider(provider, { label, status: 'calling', cache_reason: entry.reason, url: request.url });
+
+  let response;
+  try {
+    const fetchResult = await fetchWithRetry({ provider, label, url: request.url, options: request.options, log: logProvider });
+    response = fetchResult.response;
+    result.httpResponseCode = response.status;
+    result.rateLimit = extractRateLimitHeaders(response);
+    result.retryCount = fetchResult.retryCount;
+    result.retryDelayMs = fetchResult.totalDelayMs;
+  } catch (error) {
+    result.status = PROVIDER_STATUS.UPSTREAM_RESPONSE_FAILURE;
+    result.error = `Network error: ${error.message}`;
+    result.retryCount = Number(error?.retryMeta?.retryCount || 0);
+    result.retryDelayMs = Number(error?.retryMeta?.totalDelayMs || 0);
+    result.errorType = 'network';
+    const staleFallback = getStaleFallbackResult({
+      provider,
+      label,
+      normalize: (value) => value,
+      entry,
+      result,
+      reason: result.error,
+    });
+    if (staleFallback) return staleFallback;
+    logProvider(provider, { label, status: result.status, error: result.error });
+    return result;
+  }
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    result.status = response.status === 401 || response.status === 403
+      ? PROVIDER_STATUS.AUTH_FAILURE
+      : response.status === 429
+        ? PROVIDER_STATUS.RATE_LIMIT
+        : PROVIDER_STATUS.UPSTREAM_RESPONSE_FAILURE;
+    result.errorType = response.status === 401 || response.status === 403
+      ? 'auth'
+      : response.status === 429
+        ? 'rate_limit'
+        : 'upstream';
+    result.error = `API error: ${response.status} ${errorText}`;
+    const staleFallback = getStaleFallbackResult({
+      provider,
+      label,
+      normalize: (value) => value,
+      entry,
+      result,
+      reason: result.error,
+    });
+    if (staleFallback) return staleFallback;
+    logProvider(provider, {
+      label,
+      status: result.status,
+      code: response.status,
+      rate_limit_remaining: result.rateLimit?.remaining,
+      rate_limit_reset: result.rateLimit?.reset,
+      error: result.error,
+    });
+    return result;
+  }
+
+  const rawData = await parseResponse(response);
+  writeCache(provider, cacheKey, rawData);
+  result.status = PROVIDER_STATUS.CALLED_SUCCESS;
+  result.data = rawData;
+  logProvider(provider, {
+    label,
+    status: result.status,
+    code: response.status,
+    rate_limit_remaining: result.rateLimit?.remaining,
+    rate_limit_reset: result.rateLimit?.reset,
+    retry_count: result.retryCount,
+    retry_delay_ms: result.retryDelayMs,
+  });
+  return result;
+}
+
 export async function googleSearch(query, apiKey, cx, options = {}) {
   const normalizedOptions = {
     num: Math.min(options.num || 10, 10),
@@ -668,275 +801,136 @@ export async function googleSearch(query, apiKey, cx, options = {}) {
 }
 
 export async function pexelsSearch(query, apiKey, options = {}) {
-  const result = baseResult('pexels');
   const label = options.logLabel || 'pexels_search';
-  if (!apiKey) {
-    result.status = PROVIDER_STATUS.SKIPPED_CONFIG;
-    result.error = 'Pexels API key not configured';
-    logProvider('pexels', { label, status: result.status, error: result.error });
-    return result;
-  }
-
-  let endpoint;
-  try {
-    endpoint = new URL('https://api.pexels.com/v1/search');
-    endpoint.searchParams.set('query', query);
-    endpoint.searchParams.set('per_page', options.perPage || 10);
-    endpoint.searchParams.set('orientation', options.orientation || 'landscape');
-  } catch (error) {
-    result.status = PROVIDER_STATUS.REQUEST_CONSTRUCTION_FAILURE;
-    result.error = `Failed to build request: ${error.message}`;
-    result.errorType = 'request_construction';
-    logProvider('pexels', { label, status: result.status, error: result.error });
-    return result;
-  }
-
-  result.networkCall = true;
-  logProvider('pexels', { label, status: 'calling', query });
-  let response;
-  try {
-    const fetchResult = await fetchWithRetry({
-      provider: 'pexels',
-      label,
-      url: endpoint.toString(),
-      options: {
-        headers: {
-          Accept: 'application/json',
-          Authorization: apiKey,
-          'User-Agent': 'Foseer/1.0 (News Pipeline)',
+  const normalizedOptions = {
+    perPage: Number(options.perPage || 10),
+    orientation: options.orientation || 'landscape',
+  };
+  const cacheKey = JSON.stringify({ query, options: normalizedOptions, source: 'api' });
+  const result = await searchImageProviderWithCache({
+    provider: 'pexels',
+    cacheKey,
+    label,
+    configPresent: Boolean(apiKey),
+    buildRequest: () => {
+      const endpoint = new URL('https://api.pexels.com/v1/search');
+      endpoint.searchParams.set('query', query);
+      endpoint.searchParams.set('per_page', String(normalizedOptions.perPage));
+      endpoint.searchParams.set('orientation', normalizedOptions.orientation);
+      return {
+        url: endpoint.toString(),
+        options: {
+          headers: {
+            Accept: 'application/json',
+            Authorization: apiKey,
+            'User-Agent': 'Foseer/1.0 (News Pipeline)',
+          },
         },
-      },
-      log: logProvider,
-    });
-    response = fetchResult.response;
-    result.httpResponseCode = response.status;
-    result.retryCount = fetchResult.retryCount;
-    result.retryDelayMs = fetchResult.totalDelayMs;
-  } catch (error) {
-    result.status = PROVIDER_STATUS.UPSTREAM_RESPONSE_FAILURE;
-    result.error = `Network error: ${error.message}`;
-    result.retryCount = Number(error?.retryMeta?.retryCount || 0);
-    result.retryDelayMs = Number(error?.retryMeta?.totalDelayMs || 0);
-    result.errorType = 'network';
-    logProvider('pexels', { label, status: result.status, error: result.error });
-    return result;
+      };
+    },
+  });
+  if (result.status === PROVIDER_STATUS.CALLED_SUCCESS || result.status === PROVIDER_STATUS.CACHE_HIT || result.status === PROVIDER_STATUS.STALE_CACHE_HIT || result.status === 'stale_cache_fallback') {
+    logProvider('pexels', { label, status: result.status, photos: result.data?.photos?.length || 0 });
   }
-
-  if (!response.ok) {
-    result.status = response.status === 401 || response.status === 403 ? PROVIDER_STATUS.AUTH_FAILURE : response.status === 429 ? PROVIDER_STATUS.RATE_LIMIT : PROVIDER_STATUS.UPSTREAM_RESPONSE_FAILURE;
-    result.errorType = response.status === 401 || response.status === 403 ? 'auth' : response.status === 429 ? 'rate_limit' : 'upstream';
-    result.error = `API error: ${response.status} ${response.statusText}`;
-    logProvider('pexels', { label, status: result.status, code: response.status, error: result.error });
-    return result;
-  }
-
-  result.status = PROVIDER_STATUS.CALLED_SUCCESS;
-  result.data = await response.json();
-  logProvider('pexels', { label, status: result.status, code: response.status, photos: result.data?.photos?.length || 0, retry_count: result.retryCount, retry_delay_ms: result.retryDelayMs });
   return result;
 }
 
 
 export async function pixabaySearch(query, apiKey, options = {}) {
-  const result = baseResult('pixabay');
   const label = options.logLabel || 'pixabay_search';
-  if (!apiKey) {
-    result.status = PROVIDER_STATUS.SKIPPED_CONFIG;
-    result.error = 'Pixabay API key not configured';
-    logProvider('pixabay', { label, status: result.status, error: result.error });
-    return result;
-  }
-
-  let endpoint;
-  try {
-    endpoint = new URL(options.video === true ? 'https://pixabay.com/api/videos/' : 'https://pixabay.com/api/');
-    endpoint.searchParams.set('key', apiKey);
-    if (query) endpoint.searchParams.set('q', query);
-    endpoint.searchParams.set('per_page', String(options.perPage || 10));
-    endpoint.searchParams.set('safesearch', options.safesearch === false ? 'false' : 'true');
-    endpoint.searchParams.set('order', options.order || 'popular');
-    endpoint.searchParams.set('lang', options.lang || 'en');
-    if (!options.video) {
-      endpoint.searchParams.set('image_type', options.imageType || 'photo');
-      endpoint.searchParams.set('orientation', options.orientation === 'portrait' ? 'vertical' : options.orientation === 'landscape' ? 'horizontal' : (options.orientation || 'horizontal'));
-      endpoint.searchParams.set('min_width', String(options.minWidth || 1200));
-      endpoint.searchParams.set('min_height', String(options.minHeight || 675));
-      if (options.category) endpoint.searchParams.set('category', options.category);
-      if (options.editorsChoice) endpoint.searchParams.set('editors_choice', 'true');
-    }
-  } catch (error) {
-    result.status = PROVIDER_STATUS.REQUEST_CONSTRUCTION_FAILURE;
-    result.error = `Failed to build request: ${error.message}`;
-    result.errorType = 'request_construction';
-    logProvider('pixabay', { label, status: result.status, error: result.error });
-    return result;
-  }
-
-  result.networkCall = true;
-  logProvider('pixabay', { label, status: 'calling', query, video: options.video === true });
-  let response;
-  try {
-    const fetchResult = await fetchWithRetry({
-      provider: 'pixabay',
-      label,
-      url: endpoint.toString(),
-      options: {
-        headers: {
-          Accept: 'application/json',
-          'User-Agent': 'Foseer/1.0 (News Pipeline)',
-        },
-      },
-      log: logProvider,
-    });
-    response = fetchResult.response;
-    result.httpResponseCode = response.status;
-    result.rateLimit = extractRateLimitHeaders(response);
-    result.retryCount = fetchResult.retryCount;
-    result.retryDelayMs = fetchResult.totalDelayMs;
-  } catch (error) {
-    result.status = PROVIDER_STATUS.UPSTREAM_RESPONSE_FAILURE;
-    result.error = `Network error: ${error.message}`;
-    result.retryCount = Number(error?.retryMeta?.retryCount || 0);
-    result.retryDelayMs = Number(error?.retryMeta?.totalDelayMs || 0);
-    result.errorType = 'network';
-    logProvider('pixabay', { label, status: result.status, error: result.error });
-    return result;
-  }
-
-  if (!response.ok) {
-    const errorText = await response.text();
-    result.status = response.status === 401 || response.status === 403
-      ? PROVIDER_STATUS.AUTH_FAILURE
-      : response.status === 429
-        ? PROVIDER_STATUS.RATE_LIMIT
-        : PROVIDER_STATUS.UPSTREAM_RESPONSE_FAILURE;
-    result.errorType = response.status === 401 || response.status === 403
-      ? 'auth'
-      : response.status === 429
-        ? 'rate_limit'
-        : 'upstream';
-    result.error = `API error: ${response.status} ${errorText}`;
-    logProvider('pixabay', {
-      label,
-      status: result.status,
-      code: response.status,
-      rate_limit_remaining: result.rateLimit?.remaining,
-      rate_limit_reset: result.rateLimit?.reset,
-      error: result.error,
-    });
-    return result;
-  }
-
-  result.status = PROVIDER_STATUS.CALLED_SUCCESS;
-  result.data = await response.json();
-  logProvider('pixabay', {
+  const normalizedOptions = {
+    video: options.video === true,
+    perPage: Number(options.perPage || 10),
+    safesearch: options.safesearch === false ? false : true,
+    order: options.order || 'popular',
+    lang: options.lang || 'en',
+    imageType: options.imageType || 'photo',
+    orientation: options.orientation === 'portrait'
+      ? 'vertical'
+      : options.orientation === 'landscape'
+        ? 'horizontal'
+        : (options.orientation || 'horizontal'),
+    minWidth: Number(options.minWidth || 1200),
+    minHeight: Number(options.minHeight || 675),
+    category: options.category || null,
+    editorsChoice: options.editorsChoice === true,
+  };
+  const cacheKey = JSON.stringify({ query, options: normalizedOptions, source: 'api' });
+  const result = await searchImageProviderWithCache({
+    provider: 'pixabay',
+    cacheKey,
     label,
-    status: result.status,
-    code: response.status,
-    hits: result.data?.hits?.length || 0,
-    rate_limit_remaining: result.rateLimit?.remaining,
-    rate_limit_reset: result.rateLimit?.reset,
-    retry_count: result.retryCount,
-    retry_delay_ms: result.retryDelayMs,
+    configPresent: Boolean(apiKey),
+    buildRequest: () => {
+      const endpoint = new URL(normalizedOptions.video ? 'https://pixabay.com/api/videos/' : 'https://pixabay.com/api/');
+      endpoint.searchParams.set('key', apiKey);
+      if (query) endpoint.searchParams.set('q', query);
+      endpoint.searchParams.set('per_page', String(normalizedOptions.perPage));
+      endpoint.searchParams.set('safesearch', normalizedOptions.safesearch ? 'true' : 'false');
+      endpoint.searchParams.set('order', normalizedOptions.order);
+      endpoint.searchParams.set('lang', normalizedOptions.lang);
+      if (!normalizedOptions.video) {
+        endpoint.searchParams.set('image_type', normalizedOptions.imageType);
+        endpoint.searchParams.set('orientation', normalizedOptions.orientation);
+        endpoint.searchParams.set('min_width', String(normalizedOptions.minWidth));
+        endpoint.searchParams.set('min_height', String(normalizedOptions.minHeight));
+        if (normalizedOptions.category) endpoint.searchParams.set('category', normalizedOptions.category);
+        if (normalizedOptions.editorsChoice) endpoint.searchParams.set('editors_choice', 'true');
+      }
+      return {
+        url: endpoint.toString(),
+        options: {
+          headers: {
+            Accept: 'application/json',
+            'User-Agent': 'Foseer/1.0 (News Pipeline)',
+          },
+        },
+      };
+    },
   });
+  if (result.status === PROVIDER_STATUS.CALLED_SUCCESS || result.status === PROVIDER_STATUS.CACHE_HIT || result.status === PROVIDER_STATUS.STALE_CACHE_HIT || result.status === 'stale_cache_fallback') {
+    logProvider('pixabay', { label, status: result.status, hits: result.data?.hits?.length || 0 });
+  }
   return result;
 }
 
 export async function unsplashSearch(query, apiKey, options = {}) {
-  const result = baseResult('unsplash');
   const label = options.logLabel || 'unsplash_search';
-  if (!apiKey) {
-    result.status = PROVIDER_STATUS.SKIPPED_CONFIG;
-    result.error = 'Unsplash API key not configured';
-    logProvider('unsplash', { label, status: result.status, error: result.error });
-    return result;
-  }
-
-  let endpoint;
-  try {
-    endpoint = new URL('https://api.unsplash.com/search/photos');
-    endpoint.searchParams.set('query', query);
-    endpoint.searchParams.set('per_page', String(options.perPage || 10));
-    endpoint.searchParams.set('orientation', options.orientation || 'landscape');
-    endpoint.searchParams.set('content_filter', options.contentFilter || 'high');
-    endpoint.searchParams.set('order_by', options.orderBy || 'relevant');
-  } catch (error) {
-    result.status = PROVIDER_STATUS.REQUEST_CONSTRUCTION_FAILURE;
-    result.error = `Failed to build request: ${error.message}`;
-    result.errorType = 'request_construction';
-    logProvider('unsplash', { label, status: result.status, error: result.error });
-    return result;
-  }
-
-  result.networkCall = true;
-  logProvider('unsplash', { label, status: 'calling', query });
-  let response;
-  try {
-    const fetchResult = await fetchWithRetry({
-      provider: 'unsplash',
-      label,
-      url: endpoint.toString(),
-      options: {
-        headers: {
-          Accept: 'application/json',
-          Authorization: `Client-ID ${apiKey}`,
-          'Accept-Version': 'v1',
-          'User-Agent': 'Foseer/1.0 (News Pipeline)',
-        },
-      },
-      log: logProvider,
-    });
-    response = fetchResult.response;
-    result.httpResponseCode = response.status;
-    result.rateLimit = extractRateLimitHeaders(response);
-    result.retryCount = fetchResult.retryCount;
-    result.retryDelayMs = fetchResult.totalDelayMs;
-  } catch (error) {
-    result.status = PROVIDER_STATUS.UPSTREAM_RESPONSE_FAILURE;
-    result.error = `Network error: ${error.message}`;
-    result.retryCount = Number(error?.retryMeta?.retryCount || 0);
-    result.retryDelayMs = Number(error?.retryMeta?.totalDelayMs || 0);
-    result.errorType = 'network';
-    logProvider('unsplash', { label, status: result.status, error: result.error });
-    return result;
-  }
-
-  if (!response.ok) {
-    const errorText = await response.text();
-    result.status = response.status === 401 || response.status === 403
-      ? PROVIDER_STATUS.AUTH_FAILURE
-      : response.status === 429
-        ? PROVIDER_STATUS.RATE_LIMIT
-        : PROVIDER_STATUS.UPSTREAM_RESPONSE_FAILURE;
-    result.errorType = response.status === 401 || response.status === 403
-      ? 'auth'
-      : response.status === 429
-        ? 'rate_limit'
-        : 'upstream';
-    result.error = `API error: ${response.status} ${errorText}`;
-    logProvider('unsplash', {
-      label,
-      status: result.status,
-      code: response.status,
-      rate_limit_remaining: result.rateLimit?.remaining,
-      rate_limit_reset: result.rateLimit?.reset,
-      error: result.error,
-    });
-    return result;
-  }
-
-  result.status = PROVIDER_STATUS.CALLED_SUCCESS;
-  result.data = await response.json();
-  logProvider('unsplash', {
+  const normalizedOptions = {
+    perPage: Number(options.perPage || 10),
+    orientation: options.orientation || 'landscape',
+    contentFilter: options.contentFilter || 'high',
+    orderBy: options.orderBy || 'relevant',
+  };
+  const cacheKey = JSON.stringify({ query, options: normalizedOptions, source: 'api' });
+  const result = await searchImageProviderWithCache({
+    provider: 'unsplash',
+    cacheKey,
     label,
-    status: result.status,
-    code: response.status,
-    photos: result.data?.results?.length || 0,
-    rate_limit_remaining: result.rateLimit?.remaining,
-    rate_limit_reset: result.rateLimit?.reset,
-    retry_count: result.retryCount,
-    retry_delay_ms: result.retryDelayMs,
+    configPresent: Boolean(apiKey),
+    buildRequest: () => {
+      const endpoint = new URL('https://api.unsplash.com/search/photos');
+      endpoint.searchParams.set('query', query);
+      endpoint.searchParams.set('per_page', String(normalizedOptions.perPage));
+      endpoint.searchParams.set('orientation', normalizedOptions.orientation);
+      endpoint.searchParams.set('content_filter', normalizedOptions.contentFilter);
+      endpoint.searchParams.set('order_by', normalizedOptions.orderBy);
+      return {
+        url: endpoint.toString(),
+        options: {
+          headers: {
+            Accept: 'application/json',
+            Authorization: `Client-ID ${apiKey}`,
+            'Accept-Version': 'v1',
+            'User-Agent': 'Foseer/1.0 (News Pipeline)',
+          },
+        },
+      };
+    },
   });
+  if (result.status === PROVIDER_STATUS.CALLED_SUCCESS || result.status === PROVIDER_STATUS.CACHE_HIT || result.status === PROVIDER_STATUS.STALE_CACHE_HIT || result.status === 'stale_cache_fallback') {
+    logProvider('unsplash', { label, status: result.status, photos: result.data?.results?.length || 0 });
+  }
   return result;
 }
 

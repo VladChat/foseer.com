@@ -61,6 +61,11 @@ const postCollection = defineCollection({
     excerpt: z.string().optional(),
     image: z.string().optional(),
     imagePublicUrl: z.string().optional(),
+    imageCaption: z.string().optional(),
+    imageProvider: z.string().optional(),
+    imageAuthorName: z.string().optional(),
+    imageAuthorUrl: z.string().optional(),
+    imageSourceUrl: z.string().optional(),
 
     // Legacy fields (kept for backward compatibility)
     category: z.string().optional(),
@@ -91,6 +96,11 @@ const previewPostCollection = defineCollection({
     excerpt: z.string().optional(),
     image: z.string().optional(),
     imagePublicUrl: z.string().optional(),
+    imageCaption: z.string().optional(),
+    imageProvider: z.string().optional(),
+    imageAuthorName: z.string().optional(),
+    imageAuthorUrl: z.string().optional(),
+    imageSourceUrl: z.string().optional(),
 
     // Legacy fields (kept for backward compatibility)
     category: z.string().optional(),

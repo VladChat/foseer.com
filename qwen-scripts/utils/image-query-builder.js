@@ -23,6 +23,12 @@ const LEAKY_ENTITY_TERMS = new Set([
   'white', 'black', 'red', 'blue', 'green', 'yellow', 'orange', 'purple', 'brown', 'gray', 'grey',
 ]);
 
+const ENTITY_ACTION_STOPWORDS = new Set([
+  'after', 'amid', 'against', 'approves', 'approved', 'ban', 'bans', 'before', 'behind', 'by', 'did', 'does', 'do',
+  'during', 'faces', 'for', 'from', 'has', 'have', 'in', 'into', 'is', 'law', 'laws', 'on', 'over', 'says', 'said',
+  'targets', 'targeting', 'to', 'under', 'what', 'when', 'where', 'which', 'who', 'why', 'with',
+]);
+
 const BROAD_SINGLE_TOKEN_ENTITIES = new Set([
   'ai', 'athlete', 'athletes', 'business', 'court', 'courts', 'culture', 'government',
   'health', 'legal', 'news', 'politics', 'policy', 'sports', 'tech', 'technology',
@@ -173,6 +179,7 @@ function scoreEntityPhrase(phrase, evidence = {}) {
   if (!key || isPlaceholderPhrase(phrase) || LEAKY_ENTITY_TERMS.has(key)) return -1;
   const parts = key.split(' ').filter(Boolean);
   if (parts.length === 1 && !isUsefulSingleToken(parts[0])) return -1;
+  if (parts.some((part) => ENTITY_ACTION_STOPWORDS.has(part))) return -1;
 
   const titleSupport = phraseSupportedInEvidence(evidence.titleKey, key);
   const sourceSupport = phraseSupportedInEvidence(evidence.sourceTitleKey, key);
@@ -209,8 +216,16 @@ function extractTitledPhrases(text) {
     if (!buffer.length) return;
     const phrase = buffer.join(' ').trim();
     const key = normalizeKey(phrase);
-    const first = key.split(' ')[0] || '';
-    if (phrase && !isPlaceholderPhrase(phrase) && !QUESTION_LEAD_TERMS.has(first)) {
+    const parts = key.split(' ').filter(Boolean);
+    const first = parts[0] || '';
+    const last = parts[parts.length - 1] || '';
+    if (
+      phrase
+      && !isPlaceholderPhrase(phrase)
+      && !QUESTION_LEAD_TERMS.has(first)
+      && !ENTITY_ACTION_STOPWORDS.has(first)
+      && !ENTITY_ACTION_STOPWORDS.has(last)
+    ) {
       phrases.push(phrase);
     }
     buffer = [];
@@ -222,13 +237,17 @@ function extractTitledPhrases(text) {
     if (!buffer.length && QUESTION_LEAD_TERMS.has(lower)) {
       continue;
     }
+    if (ENTITY_ACTION_STOPWORDS.has(lower)) {
+      flush();
+      continue;
+    }
     if (['of', 'and', 'the', 'for', 'vs', 'v'].includes(lower) && buffer.length > 0) {
       buffer.push(cleaned);
       continue;
     }
     if (isCandidateEntityWord(cleaned)) {
       buffer.push(cleaned);
-      if (buffer.length >= 3) flush();
+      if (buffer.length >= 4) flush();
       continue;
     }
     flush();

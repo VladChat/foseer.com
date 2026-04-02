@@ -44,6 +44,7 @@ const deskLabel = normalizeDeskLabel(post.authorTitle);
 const displayAuthor = post.author
   ? (deskLabel && deskLabel !== post.author ? `By ${post.author} | ${deskLabel}` : `By ${post.author}`)
   : 'By Foseer Editorial Team';
+const showUnsplashCredit = String(post.imageProvider || '').trim().toLowerCase() === 'unsplash' && Boolean(post.imageCaption);
 ---
 
 <section class="py-8 sm:py-12 lg:py-16 bg-page min-h-screen">
@@ -144,8 +145,8 @@ const displayAuthor = post.author
             loading="eager"
             decoding="async"
           />
-          {post.imageCaption && (
-            <figcaption class="text-sm text-muted dark:text-slate-400 italic pt-3 px-1 text-left">
+          {showUnsplashCredit && (
+            <figcaption class="text-xs text-slate-500 dark:text-slate-500 pt-2 px-1 text-left">
               {post.imageCaption}
             </figcaption>
           )}

@@ -26,6 +26,14 @@ export interface Post {
   imagePublicUrl?: string;
   /** Optional caption for the featured image. */
   imageCaption?: string;
+  /** Image provider id used by pipeline (pexels | unsplash | pixabay | fallback). */
+  imageProvider?: string;
+  /** Image author display name from provider metadata. */
+  imageAuthorName?: string;
+  /** Image author profile URL from provider metadata. */
+  imageAuthorUrl?: string;
+  /** Source page URL for the selected image. */
+  imageSourceUrl?: string;
 
   /**  */
   category?: Taxonomy;
