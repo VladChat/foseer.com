@@ -1,43 +1,43 @@
 {
-  "timestamp": "2026-04-02T12:09:08.554Z",
+  "timestamp": "2026-04-02T15:16:33.203Z",
   "success": true,
   "hard_blocker": null,
-  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.mdx",
-  "verified_url": "/article/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio",
+  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump.mdx",
+  "verified_url": "/article/2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump",
   "stages": {
     "discovery": {
       "stage": "discovery",
       "success": true,
       "error": null,
       "data": {
-        "candidatesCount": 34,
-        "discoveredPoolTotal": 173,
+        "candidatesCount": 29,
+        "discoveredPoolTotal": 178,
         "queryUsage": {
-          "brave": 7,
+          "brave": 6,
           "google": 2,
           "gdelt": 1,
-          "total": 10
+          "total": 9
         },
         "targetedCoverage": {
-          "triggered": true,
-          "reason": "recent_section_imbalance:health:0_vs_4",
-          "section_id": "health",
-          "topic_id": "public-health",
+          "triggered": false,
+          "reason": "recent_section_imbalance:culture:0_vs_4",
+          "section_id": "culture",
+          "topic_id": "film-tv",
           "recent_window_hours": 48,
-          "recent_sample_size": 9,
+          "recent_sample_size": 10,
           "section_counts": {
             "news": 4,
             "business": 2,
             "tech": 1,
-            "health": 0,
+            "health": 1,
             "sports": 2,
             "culture": 0
           },
-          "viable_in_target_section_before": 3,
-          "viable_in_target_section_after": 5,
-          "viable_share_before": 0.176,
-          "viable_share_after": 0.263,
-          "skipped_reason": null
+          "viable_in_target_section_before": 6,
+          "viable_in_target_section_after": 0,
+          "viable_share_before": 0.353,
+          "viable_share_after": 0,
+          "skipped_reason": "target_section_viable_ok:count=6:share=0.353"
         }
       }
     },
@@ -46,8 +46,8 @@
       "success": true,
       "error": null,
       "data": {
-        "briefsCount": 5,
-        "clusterCount": 10
+        "briefsCount": 6,
+        "clusterCount": 9
       }
     },
     "sourcePackAssembly": {
@@ -58,7 +58,13 @@
         "attempts": [
           {
             "attempt": "initial",
-            "source_packs_assembled": 15,
+            "source_packs_assembled": 23,
+            "publishable_candidates": 0,
+            "selected_candidates": 0
+          },
+          {
+            "attempt": "retry_1_cheap_refresh",
+            "source_packs_assembled": 23,
             "publishable_candidates": 1,
             "selected_candidates": 1
           }
@@ -69,22 +75,44 @@
           "maxBraveQueries": 1,
           "maxTokenBudget": 0
         },
-        "sourcePackSelectionCandidateLimit": 6,
-        "retryDiagnostics": [],
+        "sourcePackSelectionCandidateLimit": 20,
+        "retryDiagnostics": [
+          {
+            "attempt": 1,
+            "phase": "cheap_refresh",
+            "status": "ran",
+            "discovery_candidates": 11,
+            "normalized_briefs": 6,
+            "selected_candidates": 1,
+            "source_pack_attempt": {
+              "attempt": "retry_1_cheap_refresh",
+              "source_packs_assembled": 23,
+              "publishable_candidates": 1,
+              "selected_candidates": 1
+            },
+            "query_usage": {
+              "brave": 0,
+              "google": 2,
+              "gdelt": 1,
+              "total": 3
+            },
+            "estimated_tokens": 5400
+          }
+        ],
         "retryUsage": {
-          "external_queries": 0,
+          "external_queries": 3,
           "brave_queries": 0,
-          "estimated_tokens": 0
+          "estimated_tokens": 5400
         },
         "selectedCount": 1,
         "selectedTopics": [
           {
-            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
-            "eventId": "evt-2026-04-02-public-health-general-global",
-            "sources": 4,
-            "uniqueDomains": 4,
-            "section_id": "health",
-            "topic_id": "public-health",
+            "title": "Retail sales rose more than expected in February",
+            "eventId": "evt-2026-04-02-companies-deals-general-us",
+            "sources": 2,
+            "uniqueDomains": 2,
+            "section_id": "business",
+            "topic_id": "companies-deals",
             "gate_notes": [
               "Role-aware one-event source-pack gate passed"
             ],
@@ -100,42 +128,42 @@
           "additionalReadyCandidates": [],
           "selectedCandidates": [
             {
-              "identityKey": "cluster:evt-2026-04-02-public-health-general-global",
-              "briefId": "evt-2026-04-02-public-health-general-global",
-              "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
-              "normalizedTitle": "jaden ivey on ig being waived by bulls they re liars bro",
-              "section_id": "health",
-              "topic_id": "public-health",
+              "identityKey": "cluster:evt-2026-04-02-companies-deals-general-us",
+              "briefId": "evt-2026-04-02-companies-deals-general-us",
+              "title": "Retail sales rose more than expected in February",
+              "normalizedTitle": "retail sales rose more than expected in february",
+              "section_id": "business",
+              "topic_id": "companies-deals",
               "articleType": "analysis",
               "selectionOrigin": "current_run",
-              "poolIdentityKey": "cluster:evt-2026-04-02-public-health-general-global",
+              "poolIdentityKey": "cluster:evt-2026-04-02-companies-deals-general-us",
               "rank": 1,
-              "score": 73.6,
+              "score": 44.7,
               "scoreNotes": [
-                "section_penalty:16",
-                "topic_penalty:2",
-                "region_penalty:40",
-                "angle_penalty:34",
+                "section_penalty:11",
+                "topic_penalty:4",
+                "region_penalty:43",
+                "angle_penalty:40",
                 "cluster_repeat:1",
-                "entity_penalty:26",
-                "domains:4",
-                "consistency:8.8",
-                "core:3",
-                "supporting:1"
+                "entity_penalty:28",
+                "domains:2",
+                "consistency:6.3",
+                "core:2",
+                "supporting:0"
               ],
-              "sourceCount": 4,
-              "uniqueDomains": 4,
-              "directEventSourceCount": 4,
-              "independentEventDomains": 4,
+              "sourceCount": 2,
+              "uniqueDomains": 2,
+              "directEventSourceCount": 2,
+              "independentEventDomains": 2,
               "gateDecision": "PASS",
               "gateNotes": [
                 "Role-aware one-event source-pack gate passed"
               ],
-              "discoveredAt": "2026-04-02T12:06:45.608Z",
-              "firstQueuedAt": "2026-04-02T12:07:06.682Z",
-              "lastQueuedAt": "2026-04-02T12:07:06.682Z",
+              "discoveredAt": "2026-04-02T15:16:02.175Z",
+              "firstQueuedAt": "2026-04-02T15:16:02.847Z",
+              "lastQueuedAt": "2026-04-02T15:16:02.847Z",
               "status": "selected",
-              "lastSelectedAt": "2026-04-02T12:07:06.682Z",
+              "lastSelectedAt": "2026-04-02T15:16:02.847Z",
               "lastPublishedAt": null,
               "publishedSlug": null,
               "selectedByWorkflow": null,
@@ -146,7 +174,7 @@
           ],
           "filePath": "/home/runner/work/foseer.com/foseer.com/qwen-data/events/ready-article-candidates.json",
           "selectedIdentityKeys": [
-            "cluster:evt-2026-04-02-public-health-general-global"
+            "cluster:evt-2026-04-02-companies-deals-general-us"
           ]
         },
         "duplicateRejectedCandidates": [
@@ -156,6 +184,13 @@
             "origin": "current_run",
             "reason": "identity_already_published",
             "attempt": "initial"
+          },
+          {
+            "identityKey": "cluster:evt-2026-04-02-sports-general-global",
+            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "origin": "current_run",
+            "reason": "identity_already_published",
+            "attempt": "retry_1_cheap_refresh"
           }
         ],
         "candidatesEvaluated": 1
@@ -172,18 +207,18 @@
         "rejected": [],
         "items": [
           {
-            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+            "title": "Retail sales rose more than expected in February",
             "success": true,
             "error": null,
             "data": {
               "section_id": "tech",
               "topic_id": "cybersecurity",
               "tags": [
-                "Public Health",
+                "Companies & Deals",
                 "Report"
               ],
               "tag_slugs": [
-                "public-health",
+                "companies-deals",
                 "report"
               ],
               "thin_tag_set_before_draft": false,
@@ -205,12 +240,12 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+            "title": "Retail sales rose more than expected in February",
             "success": true,
             "error": null,
             "data": {
-              "totalClaims": 3,
-              "supportedClaims": 3,
+              "totalClaims": 2,
+              "supportedClaims": 2,
               "passesGate": true,
               "issues": []
             }
@@ -228,11 +263,11 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+            "title": "Retail sales rose more than expected in February",
             "success": true,
             "error": null,
             "data": {
-              "wordCount": 1062,
+              "wordCount": 761,
               "articleType": "report",
               "quality": "strong",
               "safeForPublishing": true
@@ -251,12 +286,12 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+            "title": "Retail sales rose more than expected in February",
             "success": true,
             "error": null,
             "data": {
               "provider": "unsplash",
-              "imagePath": "~/assets/images/library/unsplash/aytvc9yptpo/cover.jpg",
+              "imagePath": "~/assets/images/library/unsplash/hqbr-kfgr8o/cover.jpg",
               "hasAltText": true
             }
           }
@@ -273,15 +308,15 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+            "title": "Retail sales rose more than expected in February",
             "success": true,
             "error": null,
             "data": {
-              "filename": "2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.mdx",
-              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.mdx",
-              "canonicalSlug": "2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio",
-              "expectedUrl": "/article/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio",
-              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.json",
+              "filename": "2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump.mdx",
+              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump.mdx",
+              "canonicalSlug": "2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump",
+              "expectedUrl": "/article/2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump",
+              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/us-retail-sales-rebound-in-february-after-three-month-slump.json",
               "section_id": "tech",
               "topic_id": "cybersecurity"
             }
@@ -299,13 +334,13 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+            "title": "Retail sales rose more than expected in February",
             "success": true,
             "error": null,
             "data": {
               "skipped": true,
               "reason": "CI environment: localhost verification skipped; publish + build checks passed",
-              "expectedUrl": "/article/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio"
+              "expectedUrl": "/article/2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump"
             }
           }
         ]
@@ -321,16 +356,16 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+            "title": "Retail sales rose more than expected in February",
             "success": true,
             "error": null,
             "data": {
               "mode": "article",
-              "source_count": 4,
-              "unique_domains": 4,
-              "trusted_reporting_sources": 1,
+              "source_count": 2,
+              "unique_domains": 2,
+              "trusted_reporting_sources": 2,
               "official_primary_sources": 1,
-              "coherence_score": 1,
+              "coherence_score": 0.5,
               "min_sources": 2,
               "min_domains": 2,
               "min_coherence": 0.45,
@@ -345,7 +380,7 @@
                 "pass": false,
                 "reason": "disabled"
               },
-              "brief_title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ..."
+              "brief_title": "Retail sales rose more than expected in February"
             }
           }
         ]
@@ -354,9 +389,9 @@
   },
   "selected": {
     "brief": {
-      "id": "evt-2026-04-02-public-health-general-global",
-      "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
-      "whatHappened": "1 day ago ... Ivey, whose season was shut down on Thursday while he manages left knee pain, has taken to Instagram live three times since the Bulls announced the news of him ...",
+      "id": "evt-2026-04-02-companies-deals-general-us",
+      "title": "Retail sales rose more than expected in February",
+      "whatHappened": "14 hours ago ... Americans stepped up their spending at US retailers in February, after three consecutive months of declines, showing the US consumer hasn't tapped out yet ...",
       "whoIsInvolved": "Unspecified",
       "involvedParties": [
         "Unspecified"
@@ -364,77 +399,180 @@
       "entities": [
         "Unspecified"
       ],
-      "when": "2026-04-02T12:06:45.608Z",
-      "where": "Not specified",
+      "when": "2026-04-01T12:34:10.493Z",
+      "where": "February",
       "whyItMatters": "The development matters because it may affect technology adoption, competition, regulation, or security decisions.",
-      "developmentStage": "confirmed",
+      "developmentStage": "developing",
       "sourceUrls": [
-        "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html",
-        "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
-        "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html",
-        "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
-        "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever"
+        "https://www.cnn.com/2026/04/01/economy/us-retail-sales-consumer-spending-february",
+        "https://www.cnn.com/2026/04/01/business/uber-lyft-doordash-drivers-gas",
+        "https://www.theglobeandmail.com/investing/markets/stocks/RCL/pressreleases/1056995/a-look-back-at-consumer-discretionary-travel-and-vacation-providers-stocks-q4-earnings-royal-caribbean-nysercl-vs-the-rest-of-the-pack/"
       ],
       "publishabilityScore": 10,
       "publishabilityNotes": [
         "Has a usable summary sentence",
         "Parties remain unclear",
-        "Freshness is moderate",
+        "Fresh enough for same-day editorial use",
         "Multiple source URLs already attached",
         "Clustered across multiple discovery hits",
         "Cluster contains multiple article-like materials",
         "Taxonomy topic match is specific enough for routing",
         "At least one trusted source hit is present"
       ],
-      "discoveredAt": "2026-04-02T12:06:45.608Z",
+      "discoveredAt": "2026-04-02T15:16:02.175Z",
       "provider": "google_trusted",
       "section_id": "tech",
       "topic_id": "cybersecurity",
       "region": "global",
       "angle": "general",
-      "cluster_id": "evt-2026-04-02-public-health-general-global",
-      "eventKey": "2026-04-02:public-health-general-global",
-      "cluster_size": 5,
-      "article_rich_count": 5,
+      "cluster_id": "evt-2026-04-02-companies-deals-general-us",
+      "eventKey": "2026-04-02:companies-deals-general-us",
+      "cluster_size": 3,
+      "article_rich_count": 3,
       "generic_page_count": 0,
       "discoveryContext": [
         {
-          "id": "brave-targeted-1775131605605-4",
-          "title": "Demoralized CDC workforce reels from year of firings, funding cuts, and a shooting | National News",
-          "summary": "On the coffee table at her home in Atlanta, Sarah Boim has a pile of documents from her old job at the Centers for Disease Control and Prevention. They are",
+          "id": "google-sec-1775142962159-3",
+          "title": "Retail sales rose more than expected in February",
+          "summary": "14 hours ago ... Americans stepped up their spending at US retailers in February, after three consecutive months of declines, showing the US consumer hasn't tapped out yet ...",
           "whyItMatters": "",
           "involvedParties": [],
           "entities": [],
-          "when": "18 hours ago",
+          "when": "2026-04-01T12:34:10.493Z",
           "sourceUrls": [
-            "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html"
+            "https://www.cnn.com/2026/04/01/economy/us-retail-sales-consumer-spending-february"
           ],
-          "freshness": 7,
+          "freshness": 6,
           "urgency": 4,
-          "discoveredAt": "2026-04-02T12:06:45.608Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "targeted:section:health:topic:public-health",
+          "discoveredAt": "2026-04-02T15:16:02.161Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:business",
           "sectionCandidates": [
-            "news",
-            "health"
+            "business"
           ],
           "topicCandidates": [
-            "public-health"
+            "economy-markets"
           ],
-          "detectedSectionId": "news",
-          "detectedTopicId": "public-health",
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
           "region": "global",
           "angle": "general",
           "genericPage": false,
           "page_kind": "article",
           "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "demoralized cdc workforce reels from year of firings funding cuts and a shooting national news hanfordsentinel com",
-          "canonicalUrl": "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html",
-          "discoveryScore": 15.2,
-          "targetedCoverage": true,
-          "eventKey": "public-health:demoralized cdc workforce reels from year of firings funding cuts and a shooting",
+          "article_likelihood": 10,
+          "normalizedTitle": "retail sales rose more than expected in february cnn business",
+          "canonicalUrl": "https://www.cnn.com/2026/04/01/economy/us-retail-sales-consumer-spending-february",
+          "discoveryScore": 16.6,
+          "targetedCoverage": false,
+          "eventKey": "business:retail sales rose more than expected in february cnn business",
+          "signalSpecificityScore": 7,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "article_likelihood",
+            "topic_hint",
+            "named_marker"
+          ],
+          "crossTopicRisk": false,
+          "source_id": "google-sec-1775142962159-3",
+          "url": "https://www.cnn.com/2026/04/01/economy/us-retail-sales-consumer-spending-february",
+          "canonical_url": "https://www.cnn.com/2026/04/01/economy/us-retail-sales-consumer-spending-february",
+          "domain": "cnn.com",
+          "canonical_domain": "cnn.com",
+          "normalized_title": "retail sales rose more than expected in february",
+          "snippet": "14 hours ago ... Americans stepped up their spending at US retailers in February, after three consecutive months of declines, showing the US consumer hasn't tapped out yet ...",
+          "published_at": "2026-04-01T12:34:10.493Z",
+          "section_id": "business",
+          "topic_id": null,
+          "section_candidates": [
+            "business"
+          ],
+          "topic_candidates": [
+            "economy-markets"
+          ],
+          "cluster_id": null,
+          "event_key": "business:retail sales rose more than expected in february cnn business",
+          "keywords": [
+            "retail",
+            "sales",
+            "rose",
+            "more",
+            "than",
+            "expected",
+            "february",
+            "hours",
+            "americans",
+            "stepped",
+            "their",
+            "spending"
+          ],
+          "title_signal_tokens": [
+            "retail",
+            "sales",
+            "rose",
+            "more",
+            "than",
+            "expected",
+            "february"
+          ],
+          "url_signal_tokens": [
+            "economy",
+            "retail",
+            "sales",
+            "consumer",
+            "spending",
+            "february"
+          ],
+          "title_url_overlap": 0.5,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "us",
+          "titleTokens": [
+            "retail",
+            "sales",
+            "rose",
+            "more",
+            "than",
+            "expected",
+            "february"
+          ]
+        },
+        {
+          "id": "google-sec-1775142962173-9",
+          "title": "Rideshare drivers on the brink of quitting over higher gas prices",
+          "summary": "16 hours ago ... Millions of Uber, Lyft, DoorDash and Instacart drivers have no choice but to pay higher gas prices if they want to keep earning a living.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "2026-04-01T11:00:55.526Z",
+          "sourceUrls": [
+            "https://www.cnn.com/2026/04/01/business/uber-lyft-doordash-drivers-gas"
+          ],
+          "freshness": 6,
+          "urgency": 4,
+          "discoveredAt": "2026-04-02T15:16:02.175Z",
+          "provider": "google_trusted",
+          "trustedSource": true,
+          "discoveryLane": "google:business",
+          "sectionCandidates": [
+            "business"
+          ],
+          "topicCandidates": [],
+          "detectedSectionId": "business",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 10,
+          "normalizedTitle": "rideshare drivers on the brink of quitting over higher gas prices cnn",
+          "canonicalUrl": "https://www.cnn.com/2026/04/01/business/uber-lyft-doordash-drivers-gas",
+          "discoveryScore": 16.6,
+          "targetedCoverage": false,
+          "eventKey": "business:rideshare drivers on the brink of quitting over higher gas prices cnn",
           "signalSpecificityScore": 6,
           "signalSpecificityNotes": [
             "title_specificity",
@@ -442,223 +580,102 @@
             "named_marker"
           ],
           "crossTopicRisk": false,
-          "source_id": "brave-targeted-1775131605605-4",
-          "url": "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html",
-          "canonical_url": "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html",
-          "domain": "hanfordsentinel.com",
-          "canonical_domain": "hanfordsentinel.com",
-          "normalized_title": "demoralized cdc workforce reels from year of firings funding cuts and a shooting",
-          "snippet": "On the coffee table at her home in Atlanta, Sarah Boim has a pile of documents from her old job at the Centers for Disease Control and Prevention. They are",
-          "published_at": "18 hours ago",
-          "section_id": "news",
-          "topic_id": "public-health",
+          "source_id": "google-sec-1775142962173-9",
+          "url": "https://www.cnn.com/2026/04/01/business/uber-lyft-doordash-drivers-gas",
+          "canonical_url": "https://www.cnn.com/2026/04/01/business/uber-lyft-doordash-drivers-gas",
+          "domain": "cnn.com",
+          "canonical_domain": "cnn.com",
+          "normalized_title": "rideshare drivers on the brink of quitting over higher gas prices",
+          "snippet": "16 hours ago ... Millions of Uber, Lyft, DoorDash and Instacart drivers have no choice but to pay higher gas prices if they want to keep earning a living.",
+          "published_at": "2026-04-01T11:00:55.526Z",
+          "section_id": "business",
+          "topic_id": null,
           "section_candidates": [
-            "news",
-            "health"
+            "business"
           ],
-          "topic_candidates": [
-            "public-health"
-          ],
+          "topic_candidates": [],
           "cluster_id": null,
-          "event_key": "public-health:demoralized cdc workforce reels from year of firings funding cuts and a shooting",
+          "event_key": "business:rideshare drivers on the brink of quitting over higher gas prices cnn",
           "keywords": [
-            "demoralized",
-            "workforce",
-            "reels",
-            "year",
-            "firings",
-            "funding",
-            "cuts",
-            "shooting",
-            "coffee",
-            "table",
-            "home",
-            "atlanta"
+            "rideshare",
+            "drivers",
+            "brink",
+            "quitting",
+            "higher",
+            "prices",
+            "hours",
+            "millions",
+            "uber",
+            "lyft",
+            "doordash",
+            "instacart"
           ],
           "title_signal_tokens": [
-            "demoralized",
-            "workforce",
-            "reels",
-            "year",
-            "firings",
-            "funding",
-            "cuts",
-            "shooting"
+            "rideshare",
+            "drivers",
+            "brink",
+            "quitting",
+            "higher",
+            "prices"
           ],
           "url_signal_tokens": [
-            "national",
-            "demoralized",
-            "workforce",
-            "reels",
-            "year",
-            "firings",
-            "funding",
-            "cuts",
-            "shooting",
-            "5d700b87",
-            "510f",
-            "b958"
+            "uber",
+            "lyft",
+            "doordash",
+            "drivers"
           ],
-          "title_url_overlap": 1,
+          "title_url_overlap": 0.25,
           "title_url_mismatch": false,
           "source_quality_score": 0,
           "action": "general",
           "place": "global",
           "titleTokens": [
-            "demoralized",
-            "workforce",
-            "reels",
-            "year",
-            "firings",
-            "funding",
-            "cuts",
-            "shooting",
-            "national"
+            "rideshare",
+            "drivers",
+            "brink",
+            "quitting",
+            "higher",
+            "prices"
           ]
         },
         {
-          "id": "google-sec-1775131605564-5",
-          "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
-          "summary": "1 day ago ... Ivey, whose season was shut down on Thursday while he manages left knee pain, has taken to Instagram live three times since the Bulls announced the news of him ...",
+          "id": "google-sec-1775142962154-1",
+          "title": "Travel and Vacation Providers Stocks' Q4 Earnings: Royal ...",
+          "summary": "2 days ago ... With Q4 behind us, let's have a look at Royal Caribbean (NYSE:RCL) and its peers. The Consumer Discretionary sector, by definition, is made up of companies ...",
           "whyItMatters": "",
           "involvedParties": [],
           "entities": [],
           "when": "",
           "sourceUrls": [
-            "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/"
+            "https://www.theglobeandmail.com/investing/markets/stocks/RCL/pressreleases/1056995/a-look-back-at-consumer-discretionary-travel-and-vacation-providers-stocks-q4-earnings-royal-caribbean-nysercl-vs-the-rest-of-the-pack/"
           ],
           "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-04-02T12:06:45.567Z",
+          "urgency": 6,
+          "discoveredAt": "2026-04-02T15:16:02.157Z",
           "provider": "google_trusted",
           "trustedSource": true,
-          "discoveryLane": "google:sports",
+          "discoveryLane": "google:business",
           "sectionCandidates": [
-            "news",
-            "sports"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "news",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "announcement",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 10,
-          "normalizedTitle": "jaden ivey on ig live after being waived by bulls they re liars bro",
-          "canonicalUrl": "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
-          "discoveryScore": 14.6,
-          "targetedCoverage": false,
-          "eventKey": "news:jaden ivey on ig live after being waived by bulls they re liars bro",
-          "signalSpecificityScore": 6,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "google-sec-1775131605564-5",
-          "url": "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
-          "canonical_url": "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
-          "domain": "nytimes.com",
-          "canonical_domain": "nytimes.com",
-          "normalized_title": "jaden ivey on ig live after being waived by bulls they re liars bro",
-          "snippet": "1 day ago ... Ivey, whose season was shut down on Thursday while he manages left knee pain, has taken to Instagram live three times since the Bulls announced the news of him ...",
-          "published_at": "2026-04-02T12:06:45.567Z",
-          "section_id": "news",
-          "topic_id": null,
-          "section_candidates": [
-            "news",
-            "sports"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "news:jaden ivey on ig live after being waived by bulls they re liars bro",
-          "keywords": [
-            "jaden",
-            "ivey",
-            "being",
-            "waived",
-            "bulls",
-            "they",
-            "liars",
-            "whose",
-            "season",
-            "shut",
-            "down",
-            "thursday"
-          ],
-          "title_signal_tokens": [
-            "jaden",
-            "ivey",
-            "being",
-            "waived",
-            "bulls",
-            "they",
-            "liars"
-          ],
-          "url_signal_tokens": [
-            "athletic",
-            "jaden",
-            "ivey",
-            "waived",
-            "bulls",
-            "pride",
-            "month"
-          ],
-          "title_url_overlap": 0.5714285714285714,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "jaden",
-            "ivey",
-            "being",
-            "waived",
-            "bulls",
-            "they",
-            "liars"
-          ]
-        },
-        {
-          "id": "brave-sec-1775131605465-4",
-          "title": "Movies and TV shows casting in Clarksville | TN State News",
-          "summary": "Backstage compiled a list of movies and TV shows casting in Clarksville.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "17 hours ago",
-          "sourceUrls": [
-            "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html"
-          ],
-          "freshness": 7,
-          "urgency": 4,
-          "discoveredAt": "2026-04-02T12:06:45.468Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:culture",
-          "sectionCandidates": [
-            "news",
-            "culture"
+            "business"
           ],
           "topicCandidates": [
-            "film-tv"
+            "companies-deals",
+            "economy-markets",
+            "travel-consumer-issues"
           ],
-          "detectedSectionId": "news",
-          "detectedTopicId": null,
+          "detectedSectionId": "business",
+          "detectedTopicId": "companies-deals",
           "region": "global",
-          "angle": "general",
+          "angle": "earnings",
           "genericPage": false,
           "page_kind": "article",
           "genericity_score": 0,
           "article_likelihood": 8,
-          "normalizedTitle": "movies and tv shows casting in clarksville tn state news elkvalleytimes com",
-          "canonicalUrl": "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html",
-          "discoveryScore": 14.4,
+          "normalizedTitle": "travel and vacation providers stocks q4 earnings royal",
+          "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/rcl/pressreleases/1056995/a-look-back-at-consumer-discretionary-travel-and-vacation-providers-stocks-q4-earnings-royal-caribbean-nysercl-vs-the-rest-of-the-pack/",
+          "discoveryScore": 16.4,
           "targetedCoverage": false,
-          "eventKey": "news:movies and tv shows casting in clarksville tn state news elkvalleytimes com",
+          "eventKey": "companies-deals:travel and vacation providers stocks q4 earnings royal",
           "signalSpecificityScore": 7,
           "signalSpecificityNotes": [
             "title_specificity",
@@ -667,294 +684,90 @@
             "named_marker"
           ],
           "crossTopicRisk": false,
-          "source_id": "brave-sec-1775131605465-4",
-          "url": "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html",
-          "canonical_url": "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html",
-          "domain": "elkvalleytimes.com",
-          "canonical_domain": "elkvalleytimes.com",
-          "normalized_title": "movies and tv shows casting in clarksville",
-          "snippet": "Backstage compiled a list of movies and TV shows casting in Clarksville.",
-          "published_at": "17 hours ago",
-          "section_id": "news",
-          "topic_id": null,
+          "source_id": "google-sec-1775142962154-1",
+          "url": "https://www.theglobeandmail.com/investing/markets/stocks/rcl/pressreleases/1056995/a-look-back-at-consumer-discretionary-travel-and-vacation-providers-stocks-q4-earnings-royal-caribbean-nysercl-vs-the-rest-of-the-pack/",
+          "canonical_url": "https://www.theglobeandmail.com/investing/markets/stocks/rcl/pressreleases/1056995/a-look-back-at-consumer-discretionary-travel-and-vacation-providers-stocks-q4-earnings-royal-caribbean-nysercl-vs-the-rest-of-the-pack/",
+          "domain": "theglobeandmail.com",
+          "canonical_domain": "theglobeandmail.com",
+          "normalized_title": "travel and vacation providers stocks q4 earnings royal",
+          "snippet": "2 days ago ... With Q4 behind us, let's have a look at Royal Caribbean (NYSE:RCL) and its peers. The Consumer Discretionary sector, by definition, is made up of companies ...",
+          "published_at": "2026-04-02T15:16:02.157Z",
+          "section_id": "business",
+          "topic_id": "companies-deals",
           "section_candidates": [
-            "news",
-            "culture"
+            "business"
           ],
           "topic_candidates": [
-            "film-tv"
+            "companies-deals",
+            "economy-markets",
+            "travel-consumer-issues"
           ],
           "cluster_id": null,
-          "event_key": "news:movies and tv shows casting in clarksville tn state news elkvalleytimes com",
+          "event_key": "companies-deals:travel and vacation providers stocks q4 earnings royal",
           "keywords": [
-            "movies",
-            "shows",
-            "casting",
-            "clarksville",
-            "backstage",
-            "compiled",
-            "list"
+            "travel",
+            "vacation",
+            "providers",
+            "stocks",
+            "earnings",
+            "royal",
+            "days",
+            "behind",
+            "look",
+            "caribbean",
+            "nyse",
+            "peers"
           ],
           "title_signal_tokens": [
-            "movies",
-            "shows",
-            "casting",
-            "clarksville"
+            "travel",
+            "vacation",
+            "providers",
+            "stocks",
+            "earnings",
+            "royal"
           ],
           "url_signal_tokens": [
-            "state",
-            "movies",
-            "shows",
-            "casting",
-            "clarksville",
-            "64d66046",
-            "ced2",
-            "5c03",
-            "88e4",
-            "1c1f03abb4ca"
+            "investing",
+            "markets",
+            "stocks",
+            "pressreleases",
+            "look",
+            "back",
+            "consumer",
+            "discretionary",
+            "travel",
+            "vacation",
+            "providers",
+            "earnings"
           ],
-          "title_url_overlap": 1,
+          "title_url_overlap": 0.8333333333333334,
           "title_url_mismatch": false,
           "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
+          "action": "earnings",
+          "place": "us",
           "titleTokens": [
-            "movies",
-            "shows",
-            "casting",
-            "clarksville",
-            "state"
-          ]
-        },
-        {
-          "id": "brave-sec-1775131605469-0",
-          "title": "Ofcom to investigate complaints of climate change denial",
-          "summary": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "2 days ago",
-          "sourceUrls": [
-            "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/"
-          ],
-          "freshness": 5,
-          "urgency": 4,
-          "discoveredAt": "2026-04-02T12:06:45.479Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:news",
-          "sectionCandidates": [
-            "news"
-          ],
-          "topicCandidates": [
-            "climate-extreme-weather"
-          ],
-          "detectedSectionId": "news",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "official_release",
-          "genericity_score": 1,
-          "article_likelihood": 9,
-          "normalizedTitle": "ofcom to investigate complaints of climate change denial watts up with that",
-          "canonicalUrl": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
-          "discoveryScore": 13,
-          "targetedCoverage": false,
-          "eventKey": "news:ofcom to investigate complaints of climate change denial watts up with that",
-          "signalSpecificityScore": 7,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "topic_hint",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "brave-sec-1775131605469-0",
-          "url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
-          "canonical_url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
-          "domain": "wattsupwiththat.com",
-          "canonical_domain": "wattsupwiththat.com",
-          "normalized_title": "ofcom to investigate complaints of climate change denial",
-          "snippet": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
-          "published_at": "2 days ago",
-          "section_id": "news",
-          "topic_id": null,
-          "section_candidates": [
-            "news"
-          ],
-          "topic_candidates": [
-            "climate-extreme-weather"
-          ],
-          "cluster_id": null,
-          "event_key": "news:ofcom to investigate complaints of climate change denial watts up with that",
-          "keywords": [
-            "ofcom",
-            "investigate",
-            "complaints",
-            "climate",
-            "change",
-            "denial",
-            "stop",
-            "long",
-            "before",
-            "allowed",
-            "call",
-            "starmer"
-          ],
-          "title_signal_tokens": [
-            "ofcom",
-            "investigate",
-            "complaints",
-            "climate",
-            "change",
-            "denial"
-          ],
-          "url_signal_tokens": [
-            "ofcom",
-            "investigate",
-            "complaints",
-            "climate",
-            "change",
-            "denial"
-          ],
-          "title_url_overlap": 1,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "ofcom",
-            "investigate",
-            "complaints",
-            "climate",
-            "change",
-            "denial"
-          ]
-        },
-        {
-          "id": "brave-sec-1775131605484-3",
-          "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever",
-          "summary": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "2 days ago",
-          "sourceUrls": [
-            "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever"
-          ],
-          "freshness": 5,
-          "urgency": 4,
-          "discoveredAt": "2026-04-02T12:06:45.487Z",
-          "provider": "brave",
-          "trustedSource": false,
-          "discoveryLane": "section:news",
-          "sectionCandidates": [
-            "news"
-          ],
-          "topicCandidates": [
-            "climate-extreme-weather"
-          ],
-          "detectedSectionId": "news",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 8,
-          "normalizedTitle": "in the age of misinformation climate literacy matters more than ever honolulu civil beat",
-          "canonicalUrl": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
-          "discoveryScore": 12.4,
-          "targetedCoverage": false,
-          "eventKey": "news:in the age of misinformation climate literacy matters more than ever honolulu ci",
-          "signalSpecificityScore": 7,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "topic_hint",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "brave-sec-1775131605484-3",
-          "url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
-          "canonical_url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
-          "domain": "civilbeat.org",
-          "canonical_domain": "civilbeat.org",
-          "normalized_title": "in the age of misinformation climate literacy matters more than ever",
-          "snippet": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
-          "published_at": "2 days ago",
-          "section_id": "news",
-          "topic_id": null,
-          "section_candidates": [
-            "news"
-          ],
-          "topic_candidates": [
-            "climate-extreme-weather"
-          ],
-          "cluster_id": null,
-          "event_key": "news:in the age of misinformation climate literacy matters more than ever honolulu ci",
-          "keywords": [
-            "misinformation",
-            "climate",
-            "literacy",
-            "matters",
-            "more",
-            "than",
-            "ever",
-            "education",
-            "remains",
-            "inconsistent",
-            "optional",
-            "disconnected"
-          ],
-          "title_signal_tokens": [
-            "misinformation",
-            "climate",
-            "literacy",
-            "matters",
-            "more",
-            "than",
-            "ever"
-          ],
-          "url_signal_tokens": [
-            "misinformation",
-            "climate",
-            "literacy",
-            "matters",
-            "more",
-            "than",
-            "ever"
-          ],
-          "title_url_overlap": 1,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "misinformation",
-            "climate",
-            "literacy",
-            "matters",
-            "more",
-            "than",
-            "ever"
+            "travel",
+            "vacation",
+            "providers",
+            "stocks",
+            "earnings",
+            "royal"
           ]
         }
       ],
       "_selectionOrigin": "current_run",
-      "poolIdentityKey": "cluster:evt-2026-04-02-public-health-general-global",
+      "poolIdentityKey": "cluster:evt-2026-04-02-companies-deals-general-us",
       "section": "Tech",
-      "subsection": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+      "subsection": "Retail sales rose more than expected in February",
       "topics": [
-        "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ..."
+        "Retail sales rose more than expected in February"
       ]
     },
     "sourcePack": {
-      "eventId": "evt-2026-04-02-public-health-general-global",
-      "topic": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
-      "sources": 4,
-      "uniqueDomains": 4,
+      "eventId": "evt-2026-04-02-companies-deals-general-us",
+      "topic": "Retail sales rose more than expected in February",
+      "sources": 2,
+      "uniqueDomains": 2,
       "credibilityScore": null,
       "passesGate": true,
       "gateNotes": [
@@ -963,21 +776,21 @@
     }
   },
   "stats": {
-    "discovery_candidates": 34,
-    "event_clusters": 10,
-    "briefs_normalized": 6,
-    "source_packs_assembled": 15,
+    "discovery_candidates": 29,
+    "event_clusters": 9,
+    "briefs_normalized": 12,
+    "source_packs_assembled": 46,
     "publishable_candidates": 1,
-    "selected_topic": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+    "selected_topic": "Retail sales rose more than expected in February",
     "selected_topics": [
-      "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ..."
+      "Retail sales rose more than expected in February"
     ],
     "articles_attempted": 1,
     "articles_published": 1,
     "news_pool": {
-      "total": 48,
-      "active": 38,
-      "published": 10,
+      "total": 53,
+      "active": 42,
+      "published": 11,
       "ready_candidates": 0
     },
     "cache_stats": {
@@ -1016,14 +829,14 @@
       },
       "brave_rescue_max_live_queries": 1,
       "live_usage": {
-        "brave": 1,
+        "brave": 0,
         "gdelt": 0,
-        "google": 2
+        "google": 0
       },
       "live_usage_by_phase": {
         "brave": {
           "discovery": 0,
-          "rescue": 1
+          "rescue": 0
         },
         "gdelt": {
           "discovery": 0,
@@ -1031,7 +844,7 @@
         },
         "google": {
           "discovery": 0,
-          "rescue": 2
+          "rescue": 0
         }
       },
       "provider_circuits": {
@@ -1047,11 +860,11 @@
         "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
         "runtime": {
           "brave": {
-            "files": 10,
-            "fresh_files": 1,
+            "files": 12,
+            "fresh_files": 3,
             "expired_files": 9,
             "corrupt_files": 0,
-            "size_bytes": 108677
+            "size_bytes": 145807
           },
           "gdelt": {
             "files": 0,
@@ -1061,11 +874,11 @@
             "size_bytes": 0
           },
           "google": {
-            "files": 20,
-            "fresh_files": 2,
+            "files": 22,
+            "fresh_files": 4,
             "expired_files": 18,
             "corrupt_files": 0,
-            "size_bytes": 422456
+            "size_bytes": 434404
           }
         },
         "seed": {
@@ -1093,35 +906,35 @@
         }
       }
     },
-    "duration_ms": 143133,
+    "duration_ms": 32064,
     "ready_candidates": 0,
     "additional_ready_candidates": 0,
-    "source_pack_attempts": 1,
-    "source_pack_retry_external_queries": 0,
+    "source_pack_attempts": 2,
+    "source_pack_retry_external_queries": 3,
     "source_pack_retry_brave_queries": 0,
-    "source_pack_retry_estimated_tokens": 0,
+    "source_pack_retry_estimated_tokens": 5400,
     "pre_draft_rejected": 0,
-    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-02T12-06-45-418Z.json"
+    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-02T15-16-01-136Z.json"
   },
-  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-02T12-06-45-418Z.json",
+  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-02T15-16-01-136Z.json",
   "published_paths": [
-    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.mdx"
+    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump.mdx"
   ],
   "verified_urls": [
-    "/article/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio"
+    "/article/2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump"
   ],
   "selected_candidates": [
     {
-      "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
-      "topic": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+      "title": "Retail sales rose more than expected in February",
+      "topic": "Retail sales rose more than expected in February",
       "section_id": "tech",
       "topic_id": "cybersecurity"
     }
   ],
   "published_articles": [
     {
-      "title": "Jaden Ivey Rips Bulls on Instagram Live After Waiver Decision",
-      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.mdx",
+      "title": "US Retail Sales Rebound in February After Three-Month Slump",
+      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump.mdx",
       "verifiedUrl": null
     }
   ]

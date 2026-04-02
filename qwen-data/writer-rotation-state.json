@@ -1,20 +1,20 @@
 {
-  "totalArticles": 102,
+  "totalArticles": 103,
   "lastReset": null,
   "byWriter": {
     "reporter": {
       "count": 36,
       "lastAssigned": 1775131626934,
-      "streak": 1,
+      "streak": 0,
       "authorCursor": 2,
       "lastAuthorId": "emma_carter"
     },
     "explainer": {
-      "count": 15,
-      "lastAssigned": 1775076941695,
-      "streak": 0,
-      "authorCursor": 1,
-      "lastAuthorId": "olivia_brooks"
+      "count": 16,
+      "lastAssigned": 1775142963058,
+      "streak": 1,
+      "authorCursor": 2,
+      "lastAuthorId": "ethan_hall"
     },
     "analyst": {
       "count": 18,
@@ -32,14 +32,6 @@
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "explainer",
-      "timestamp": 1774661431627,
-      "articleType": "report",
-      "beat": "technology",
-      "section": "Tech",
-      "topic_id": "cybersecurity"
-    },
     {
       "writerId": "analyst",
       "timestamp": 1774664365744,
@@ -429,6 +421,14 @@
       "timestamp": 1775131626934,
       "articleType": "report",
       "beat": "breaking news",
+      "section": "Tech",
+      "topic_id": "cybersecurity"
+    },
+    {
+      "writerId": "explainer",
+      "timestamp": 1775142963058,
+      "articleType": "report",
+      "beat": "technology",
       "section": "Tech",
       "topic_id": "cybersecurity"
     }

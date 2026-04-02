@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-02T15:16:33.136Z",
+  "event_id": "evt-2026-04-02-companies-deals-general-us",
+  "cluster_id": "evt-2026-04-02-companies-deals-general-us",
+  "article_type": "report",
+  "title": "US Retail Sales Rebound in February After Three-Month Slump",
+  "slug": "us-retail-sales-rebound-in-february-after-three-month-slump",
+  "canonical_slug": "2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump",
+  "expected_url": "/article/2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump.mdx",
+  "published_at": "2026-04-02T15:16:33.133Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Cybersecurity",
+  "topics": [
+    "Retail sales rose more than expected in February",
+    "Cybersecurity"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/hqbr-kfgr8o/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/hqbr-kfgr8o/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-computer-monitor-sitting-on-top-of-a-table-hqBr-KfgR8o",
+    "asset_key": "unsplash:hqBr-KfgR8o",
+    "alt_text": "Illustration for US Retail Sales Rebound in February After Three-Month Slump",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "February data center photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Retail sales rose more than expected in February",
+        "url": "https://www.cnn.com/2026/04/01/economy/us-retail-sales-consumer-spending-february",
+        "domain": "cnn.com"
+      },
+      {
+        "title": "How one family's bipolar disorder experience led to more than $1 ...",
+        "url": "https://abcnews.com/business/wirestory/familys-bipolar-disorder-experience-led-1-billion-broad-131563367",
+        "domain": "abcnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "How one family's bipolar disorder experience led to more than $1 ...",
+          "url": "https://abcnews.com/business/wirestory/familys-bipolar-disorder-experience-led-1-billion-broad-131563367",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "February data center photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "february",
+        "data"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

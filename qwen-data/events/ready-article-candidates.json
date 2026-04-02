@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-02T12:09:08.512Z",
+  "updatedAt": "2026-04-02T15:16:33.161Z",
   "items": [
     {
       "identityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
@@ -351,6 +351,50 @@
       "lastSelectedAt": "2026-03-31T15:35:19.513Z",
       "lastPublishedAt": "2026-03-31T15:35:19.513Z",
       "publishedSlug": "2026-03-31-nfl-urges-prediction-markets-to-avoid-objectionable-football",
+      "selectedByWorkflow": null,
+      "selectedByRunId": null,
+      "selectedAt": null,
+      "selectionExpiresAt": null
+    },
+    {
+      "identityKey": "cluster:evt-2026-04-02-companies-deals-general-us",
+      "briefId": "evt-2026-04-02-companies-deals-general-us",
+      "title": "Retail sales rose more than expected in February",
+      "normalizedTitle": "retail sales rose more than expected in february",
+      "section_id": "business",
+      "topic_id": "companies-deals",
+      "articleType": "analysis",
+      "selectionOrigin": "current_run",
+      "poolIdentityKey": "cluster:evt-2026-04-02-companies-deals-general-us",
+      "rank": 1,
+      "score": 44.7,
+      "scoreNotes": [
+        "section_penalty:11",
+        "topic_penalty:4",
+        "region_penalty:43",
+        "angle_penalty:40",
+        "cluster_repeat:1",
+        "entity_penalty:28",
+        "domains:2",
+        "consistency:6.3",
+        "core:2",
+        "supporting:0"
+      ],
+      "sourceCount": 2,
+      "uniqueDomains": 2,
+      "directEventSourceCount": 2,
+      "independentEventDomains": 2,
+      "gateDecision": "PASS",
+      "gateNotes": [
+        "Role-aware one-event source-pack gate passed"
+      ],
+      "discoveredAt": "2026-04-02T15:16:02.175Z",
+      "firstQueuedAt": "2026-04-02T15:16:02.847Z",
+      "lastQueuedAt": "2026-04-02T15:16:33.148Z",
+      "status": "published",
+      "lastSelectedAt": "2026-04-02T15:16:33.148Z",
+      "lastPublishedAt": "2026-04-02T15:16:33.148Z",
+      "publishedSlug": "2026-04-02-us-retail-sales-rebound-in-february-after-three-month-slump",
       "selectedByWorkflow": null,
       "selectedByRunId": null,
       "selectedAt": null,
