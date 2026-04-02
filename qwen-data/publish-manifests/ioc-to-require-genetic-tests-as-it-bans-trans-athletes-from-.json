@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-02T01:11:43.272Z",
+  "event_id": "evt-2026-04-01-sports-general-global",
+  "cluster_id": "evt-2026-04-01-sports-general-global",
+  "article_type": "report",
+  "title": "IOC to Require Genetic Tests as It Bans Trans Athletes from Women’s Events",
+  "slug": "ioc-to-require-genetic-tests-as-it-bans-trans-athletes-from-",
+  "canonical_slug": "2026-04-02-ioc-to-require-genetic-tests-as-it-bans-trans-athletes-from",
+  "expected_url": "/article/2026-04-02-ioc-to-require-genetic-tests-as-it-bans-trans-athletes-from",
+  "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-04-02-ioc-to-require-genetic-tests-as-it-bans-trans-athletes-from.mdx",
+  "published_at": "2026-04-02T01:11:43.256Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "events-tournaments",
+  "topic_label": "Events & Tournaments",
+  "subsection": "Events & Tournaments",
+  "topics": [
+    "Olympic committee bans trans athletes from women's events",
+    "Events & Tournaments"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/5849201/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/5849201/cover.jpg",
+    "source_url": "https://pixabay.com/photos/women-skydivers-athlete-sports-5849201/",
+    "asset_key": "pixabay:5849201",
+    "alt_text": "Illustration for IOC to Require Genetic Tests as It Bans Trans Athletes from Women’s Events",
+    "selection_mode": "provider_download_new:pixabay:strong:strict",
+    "query_used": "Athletes portrait",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Events & Tournaments",
+    "Olympics",
+    "Trans Athlete Policy"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "Olympic committee bans trans athletes from women's events",
+        "url": "https://www.npr.org/2026/03/26/nx-s1-5762579/ioc-bans-trans-women-events-genetic-testing",
+        "domain": "npr.org"
+      },
+      {
+        "title": "Alert: Olympic Committee Steps up to Protect Women, Bans Trans Athletes from Female Events",
+        "url": "https://www.thegatewaypundit.com/2026/03/alert-olympic-committee-steps-protect-women-bans-trans/",
+        "domain": "thegatewaypundit.com"
+      },
+      {
+        "title": "Trump administration sues Minnesota over trans athletes in girls sports as Pam Bondi slams 'flawed policies'",
+        "url": "https://www.dailymail.co.uk/sport/othersports/article-15692757/trump-administration-sues-minnesota-trans-athletes-girls-sports.html",
+        "domain": "dailymail.co.uk"
+      },
+      {
+        "title": "Trump administration sues Minnesota for allowing trans athletes in ...",
+        "url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "events-tournaments",
+          "label": "Events & Tournaments",
+          "type": "topic"
+        },
+        {
+          "slug": "olympics",
+          "label": "Olympics",
+          "type": "theme"
+        },
+        {
+          "slug": "trans-athlete-policy",
+          "label": "Trans Athlete Policy",
+          "type": "theme"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "events-tournaments",
+        "topic_label": "Events & Tournaments",
+        "supported": true,
+        "matched_aliases": [
+          "events",
+          "olympic",
+          "ioc"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Athletes portrait",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "athletes"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

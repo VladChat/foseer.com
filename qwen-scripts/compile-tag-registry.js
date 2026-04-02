@@ -42,6 +42,39 @@ const TOPIC_THEME_MAP = {
   'creators-platforms': ['influencer-economy', 'creator-monetization', 'platform-moderation', 'youtube', 'tiktok', 'instagram', 'podcasting', 'social-media'],
 };
 
+const TOPIC_THEME_MAP_EXPANSION = {
+  'us-politics': ['executive-orders', 'immigration-policy', 'budget-bill', 'voting-rights'],
+  'world-geopolitics': ['sanctions', 'ceasefire', 'peace-talks', 'national-security'],
+  'law-crime': ['court-ruling', 'sentencing', 'civil-rights', 'police-reform'],
+  'climate-extreme-weather': ['climate-policy', 'emissions', 'drought', 'disaster-response'],
+  'society-social-trends': ['cost-of-living', 'demographics', 'social-policy'],
+  'economy-markets': ['recession-risk', 'treasury-yields', 'central-banks'],
+  'companies-deals': ['ipo', 'corporate-governance', 'shareholder-activism'],
+  'consumer-money': ['personal-finance', 'savings', 'household-budgets'],
+  'housing-real-estate': ['housing-affordability', 'homebuilding', 'zoning-policy'],
+  'crypto-bitcoin': ['ethereum', 'stablecoins', 'crypto-regulation', 'digital-assets'],
+  'travel-consumer-issues': ['travel-disruption', 'consumer-protection', 'refunds'],
+  'ai-big-tech': ['ai-regulation', 'model-safety', 'data-centers'],
+  'consumer-tech': ['product-launch', 'app-economy', 'hardware'],
+  'cybersecurity': ['cyber-espionage', 'critical-infrastructure', 'incident-response'],
+  'mobility-evs': ['battery-supply-chain', 'ev-policy'],
+  'space-astronomy': ['lunar-mission', 'commercial-space', 'space-policy'],
+  'enterprise-platforms': ['saas', 'developer-tools', 'enterprise-security'],
+  'public-health': ['vaccination', 'healthcare-access', 'public-health-emergency'],
+  'medical-research': ['peer-reviewed-research', 'genomics'],
+  'pharma-fda': ['drug-pricing', 'fda-advisory-committee'],
+  'mental-health': ['addiction-recovery', 'youth-mental-health'],
+  'wellness-fitness': ['preventive-care', 'longevity'],
+  'major-leagues': ['coaching-changes', 'injuries', 'standings'],
+  'events-tournaments': ['qualification-rules', 'host-city'],
+  'transfers-business': ['salary-cap', 'sponsorship-deals'],
+  'athletes-culture': ['player-safety', 'gender-eligibility'],
+  'film-tv': ['tv-ratings', 'production-delays', 'adaptation'],
+  'music-celebrities': ['music-industry', 'chart-performance', 'artist-rights'],
+  'internet-culture': ['online-safety', 'platform-algorithms'],
+  'creators-platforms': ['creator-rights', 'ad-revenue', 'subscription-models', 'platform-policy'],
+};
+
 const THEME_DEFINITIONS = [
   ['congress', 'Congress', ['Congress', 'House', 'Senate']],
   ['white-house', 'White House', ['White House']],
@@ -145,6 +178,96 @@ const THEME_DEFINITIONS = [
   ['social-media', 'Social Media', ['social media', 'social platform', 'social platforms']],
 ];
 
+const THEME_DEFINITIONS_EXPANSION = [
+  ['executive-orders', 'Executive Orders', ['executive order', 'executive orders']],
+  ['immigration-policy', 'Immigration Policy', ['immigration policy', 'border policy', 'asylum policy']],
+  ['budget-bill', 'Budget Bill', ['budget bill', 'spending bill', 'appropriations bill']],
+  ['voting-rights', 'Voting Rights', ['voting rights', 'ballot access', 'voter access']],
+  ['sanctions', 'Sanctions', ['sanctions', 'economic sanctions']],
+  ['ceasefire', 'Ceasefire', ['ceasefire', 'cease-fire']],
+  ['peace-talks', 'Peace Talks', ['peace talks', 'negotiations']],
+  ['national-security', 'National Security', ['national security', 'security policy']],
+  ['court-ruling', 'Court Ruling', ['court ruling', 'court decision', 'judgment']],
+  ['sentencing', 'Sentencing', ['sentencing', 'sentence hearing']],
+  ['civil-rights', 'Civil Rights', ['civil rights', 'rights lawsuit']],
+  ['police-reform', 'Police Reform', ['police reform', 'law enforcement reform']],
+  ['climate-policy', 'Climate Policy', ['climate policy', 'environmental policy']],
+  ['emissions', 'Emissions', ['emissions', 'carbon emissions', 'greenhouse gas']],
+  ['drought', 'Drought', ['drought', 'water shortage']],
+  ['disaster-response', 'Disaster Response', ['disaster response', 'emergency response']],
+  ['cost-of-living', 'Cost of Living', ['cost of living', 'living costs']],
+  ['demographics', 'Demographics', ['demographics', 'population trends']],
+  ['social-policy', 'Social Policy', ['social policy', 'social services policy']],
+  ['recession-risk', 'Recession Risk', ['recession risk', 'economic slowdown']],
+  ['treasury-yields', 'Treasury Yields', ['treasury yields', 'bond yields', '10-year yield']],
+  ['central-banks', 'Central Banks', ['central bank', 'central banks', 'monetary policy']],
+  ['ipo', 'IPO', ['ipo', 'initial public offering']],
+  ['corporate-governance', 'Corporate Governance', ['corporate governance', 'board governance']],
+  ['shareholder-activism', 'Shareholder Activism', ['shareholder activism', 'activist investor']],
+  ['personal-finance', 'Personal Finance', ['personal finance', 'household finance']],
+  ['savings', 'Savings', ['savings', 'saving rate']],
+  ['household-budgets', 'Household Budgets', ['household budget', 'family budget']],
+  ['housing-affordability', 'Housing Affordability', ['housing affordability', 'affordable housing']],
+  ['homebuilding', 'Homebuilding', ['homebuilding', 'new home construction']],
+  ['zoning-policy', 'Zoning Policy', ['zoning policy', 'zoning reform']],
+  ['ethereum', 'Ethereum', ['ethereum', 'ether']],
+  ['stablecoins', 'Stablecoins', ['stablecoin', 'stablecoins']],
+  ['crypto-regulation', 'Crypto Regulation', ['crypto regulation', 'digital asset regulation']],
+  ['digital-assets', 'Digital Assets', ['digital assets', 'token market']],
+  ['travel-disruption', 'Travel Disruption', ['travel disruption', 'travel chaos']],
+  ['consumer-protection', 'Consumer Protection', ['consumer protection', 'consumer rights']],
+  ['refunds', 'Refunds', ['refunds', 'ticket refunds', 'travel refunds']],
+  ['ai-regulation', 'AI Regulation', ['ai regulation', 'artificial intelligence regulation']],
+  ['model-safety', 'Model Safety', ['model safety', 'ai safety']],
+  ['data-centers', 'Data Centers', ['data center', 'data centers']],
+  ['product-launch', 'Product Launch', ['product launch', 'device launch']],
+  ['app-economy', 'App Economy', ['app economy', 'app marketplace']],
+  ['hardware', 'Hardware', ['hardware', 'consumer hardware']],
+  ['cyber-espionage', 'Cyber Espionage', ['cyber espionage', 'state-backed hacking']],
+  ['critical-infrastructure', 'Critical Infrastructure', ['critical infrastructure', 'infrastructure cyberattack']],
+  ['incident-response', 'Incident Response', ['incident response', 'breach response']],
+  ['battery-supply-chain', 'Battery Supply Chain', ['battery supply chain', 'battery materials']],
+  ['ev-policy', 'EV Policy', ['ev policy', 'electric vehicle policy']],
+  ['lunar-mission', 'Lunar Mission', ['lunar mission', 'moon mission']],
+  ['commercial-space', 'Commercial Space', ['commercial space', 'private space company']],
+  ['space-policy', 'Space Policy', ['space policy', 'space regulation']],
+  ['saas', 'SaaS', ['saas', 'software as a service']],
+  ['developer-tools', 'Developer Tools', ['developer tools', 'dev tools']],
+  ['enterprise-security', 'Enterprise Security', ['enterprise security', 'corporate security']],
+  ['vaccination', 'Vaccination', ['vaccination', 'vaccine uptake']],
+  ['healthcare-access', 'Healthcare Access', ['healthcare access', 'care access']],
+  ['public-health-emergency', 'Public Health Emergency', ['public health emergency', 'health emergency']],
+  ['peer-reviewed-research', 'Peer-Reviewed Research', ['peer-reviewed research', 'peer reviewed study']],
+  ['genomics', 'Genomics', ['genomics', 'genetic study']],
+  ['drug-pricing', 'Drug Pricing', ['drug pricing', 'medicine pricing']],
+  ['fda-advisory-committee', 'FDA Advisory Committee', ['fda advisory committee', 'advisory panel']],
+  ['addiction-recovery', 'Addiction Recovery', ['addiction recovery', 'substance use treatment']],
+  ['youth-mental-health', 'Youth Mental Health', ['youth mental health', 'teen mental health']],
+  ['preventive-care', 'Preventive Care', ['preventive care', 'preventive health']],
+  ['longevity', 'Longevity', ['longevity', 'healthy aging']],
+  ['coaching-changes', 'Coaching Changes', ['coaching change', 'coach firing', 'new coach']],
+  ['injuries', 'Injuries', ['injury report', 'injuries']],
+  ['standings', 'Standings', ['standings', 'league table']],
+  ['qualification-rules', 'Qualification Rules', ['qualification rules', 'eligibility rules']],
+  ['host-city', 'Host City', ['host city', 'host nation']],
+  ['salary-cap', 'Salary Cap', ['salary cap', 'cap space']],
+  ['sponsorship-deals', 'Sponsorship Deals', ['sponsorship deal', 'sponsorship deals']],
+  ['player-safety', 'Player Safety', ['player safety', 'athlete safety']],
+  ['gender-eligibility', 'Gender Eligibility', ['gender eligibility', 'eligibility policy']],
+  ['tv-ratings', 'TV Ratings', ['tv ratings', 'viewership']],
+  ['production-delays', 'Production Delays', ['production delays', 'release delay']],
+  ['adaptation', 'Adaptation', ['adaptation', 'book adaptation', 'game adaptation']],
+  ['music-industry', 'Music Industry', ['music industry', 'record industry']],
+  ['chart-performance', 'Chart Performance', ['chart performance', 'music charts']],
+  ['artist-rights', 'Artist Rights', ['artist rights', 'music rights']],
+  ['online-safety', 'Online Safety', ['online safety', 'internet safety']],
+  ['platform-algorithms', 'Platform Algorithms', ['platform algorithm', 'algorithmic feed']],
+  ['creator-rights', 'Creator Rights', ['creator rights', 'creator protections']],
+  ['ad-revenue', 'Ad Revenue', ['ad revenue', 'advertising revenue']],
+  ['subscription-models', 'Subscription Models', ['subscription model', 'subscriber revenue']],
+  ['platform-policy', 'Platform Policy', ['platform policy', 'platform rules']],
+];
+
 const ENTITY_DEFINITIONS = [
   ['fda', 'FDA', ['fda']],
   ['cdc', 'CDC', ['cdc']],
@@ -181,6 +304,47 @@ const ENTITY_DEFINITIONS = [
   ['tsa', 'TSA', ['tsa', 'transportation security administration']],
 ];
 
+const ENTITY_DEFINITIONS_EXPANSION = [
+  ['united-nations', 'United Nations', ['united nations', 'u.n.', 'un']],
+  ['european-union-entity', 'European Union', ['european union', 'eu']],
+  ['nato', 'NATO', ['nato', 'north atlantic treaty organization']],
+  ['state-department', 'U.S. State Department', ['state department', 'u.s. state department']],
+  ['treasury-department', 'U.S. Treasury', ['u.s. treasury', 'treasury department']],
+  ['federal-reserve', 'Federal Reserve', ['federal reserve', 'the fed']],
+  ['imf', 'IMF', ['imf', 'international monetary fund']],
+  ['world-bank', 'World Bank', ['world bank']],
+  ['who', 'WHO', ['world health organization', 'who']],
+  ['hhs', 'HHS', ['hhs', 'health and human services']],
+  ['ema', 'EMA', ['ema', 'european medicines agency']],
+  ['jpmorgan', 'JPMorgan', ['jpmorgan', 'jpmorgan chase']],
+  ['goldman-sachs', 'Goldman Sachs', ['goldman sachs', 'goldman']],
+  ['blackrock', 'BlackRock', ['blackrock']],
+  ['coinbase', 'Coinbase', ['coinbase']],
+  ['binance', 'Binance', ['binance']],
+  ['strategy-company', 'Strategy', ['strategy', 'microstrategy']],
+  ['fannie-mae', 'Fannie Mae', ['fannie mae']],
+  ['freddie-mac', 'Freddie Mac', ['freddie mac']],
+  ['visa', 'Visa', ['visa', 'visa inc']],
+  ['mastercard', 'Mastercard', ['mastercard', 'master card']],
+  ['intel', 'Intel', ['intel']],
+  ['amd', 'AMD', ['amd', 'advanced micro devices']],
+  ['tsmc', 'TSMC', ['tsmc', 'taiwan semiconductor']],
+  ['samsung', 'Samsung', ['samsung']],
+  ['oracle', 'Oracle', ['oracle']],
+  ['bytedance', 'ByteDance', ['bytedance']],
+  ['x-platform', 'X', ['x platform', 'x.com', 'twitter']],
+  ['twitch', 'Twitch', ['twitch']],
+  ['nasa', 'NASA', ['nasa', 'u.s. space agency']],
+  ['ioc', 'International Olympic Committee', ['international olympic committee', 'ioc']],
+  ['uefa', 'UEFA', ['uefa']],
+  ['premier-league', 'Premier League', ['premier league', 'epl']],
+  ['manchester-united', 'Manchester United', ['manchester united', 'man utd']],
+  ['real-madrid', 'Real Madrid', ['real madrid']],
+  ['barcelona-fc', 'FC Barcelona', ['fc barcelona', 'barcelona fc']],
+  ['hamas', 'Hamas', ['hamas']],
+  ['idf', 'Israel Defense Forces', ['idf', 'israel defense forces', 'israeli military']],
+];
+
 const GEOGRAPHY_DEFINITIONS = [
   ['united-states', 'United States', ['united states', 'u.s.', 'us']],
   ['china', 'China', ['china']],
@@ -199,6 +363,26 @@ const GEOGRAPHY_DEFINITIONS = [
   ['texas', 'Texas', ['texas']],
 ];
 
+const GEOGRAPHY_DEFINITIONS_EXPANSION = [
+  ['india', 'India', ['india']],
+  ['japan', 'Japan', ['japan']],
+  ['south-korea', 'South Korea', ['south korea', 'korea']],
+  ['taiwan', 'Taiwan', ['taiwan']],
+  ['germany', 'Germany', ['germany']],
+  ['france', 'France', ['france']],
+  ['italy', 'Italy', ['italy']],
+  ['spain', 'Spain', ['spain']],
+  ['mexico', 'Mexico', ['mexico']],
+  ['brazil', 'Brazil', ['brazil']],
+  ['australia', 'Australia', ['australia']],
+  ['iran', 'Iran', ['iran']],
+  ['saudi-arabia', 'Saudi Arabia', ['saudi arabia']],
+  ['lebanon', 'Lebanon', ['lebanon']],
+  ['syria', 'Syria', ['syria']],
+  ['west-bank', 'West Bank', ['west bank']],
+  ['palestinian-territories', 'Palestinian Territories', ['palestinian territories', 'occupied territories']],
+];
+
 const FORMAT_DEFINITIONS = [
   ['analysis', 'Analysis', ['analysis']],
   ['explainer', 'Explainer', ['explainer']],
@@ -214,6 +398,83 @@ const TOPIC_ALIAS_ENRICHMENTS = {
   'creators-platforms': ['social media'],
   'major-leagues': ['mlb', 'nba', 'major league baseball', 'national basketball association', 'baseball', 'basketball'],
 };
+
+const TOPIC_ALIAS_ENRICHMENTS_EXPANSION = {
+  'us-politics': ['executive order', 'immigration policy', 'budget bill'],
+  'world-geopolitics': ['ceasefire', 'sanctions', 'middle east conflict', 'geopolitics'],
+  'law-crime': ['court ruling', 'sentencing', 'civil rights case'],
+  'climate-extreme-weather': ['climate policy', 'extreme weather', 'disaster response'],
+  'society-social-trends': ['cost of living', 'social policy', 'demographics'],
+  'companies-deals': ['ipo', 'corporate governance', 'shareholder activism'],
+  'crypto-bitcoin': ['ethereum', 'stablecoins', 'crypto regulation', 'digital assets'],
+  'travel-consumer-issues': ['consumer protection', 'travel disruption', 'refunds'],
+  'ai-big-tech': ['ai regulation', 'model safety', 'data centers'],
+  'cybersecurity': ['cyber espionage', 'critical infrastructure', 'incident response'],
+  'space-astronomy': ['nasa', 'lunar mission', 'commercial space'],
+  'public-health': ['vaccination', 'healthcare access', 'public health emergency'],
+  'pharma-fda': ['drug pricing', 'fda advisory committee'],
+  'athletes-culture': ['player safety', 'gender eligibility'],
+  'film-tv': ['tv ratings', 'production delays'],
+  'music-celebrities': ['music industry', 'chart performance'],
+  'internet-culture': ['online safety', 'platform algorithms'],
+  'creators-platforms': ['creator rights', 'ad revenue', 'subscription models', 'platform policy'],
+};
+
+const ENTITY_TOPIC_HINTS = {
+  'ai-big-tech': ['openai', 'google', 'meta', 'microsoft', 'nvidia', 'apple', 'amazon'],
+  'consumer-tech': ['apple', 'google', 'meta', 'microsoft', 'youtube-entity', 'tiktok-entity'],
+  'cybersecurity': ['microsoft', 'google', 'doj', 'ftc'],
+  'mobility-evs': ['tesla'],
+  'major-leagues': ['mlb-entity', 'nba-entity', 'nfl-entity', 'nhl-entity'],
+  'events-tournaments': ['fifa', 'olympics-entity'],
+  'transfers-business': ['mlb-entity', 'nba-entity', 'nfl-entity', 'nhl-entity'],
+  'film-tv': ['disney', 'netflix'],
+  'music-celebrities': ['spotify'],
+  'creators-platforms': ['youtube-entity', 'tiktok-entity', 'instagram', 'spotify'],
+};
+
+const ENTITY_TOPIC_HINTS_EXPANSION = {
+  'us-politics': ['state-department', 'treasury-department', 'federal-reserve', 'white-house-entity', 'congress-entity', 'doj'],
+  'world-geopolitics': ['united-nations', 'european-union-entity', 'nato', 'hamas', 'idf', 'state-department', 'imf', 'world-bank'],
+  'law-crime': ['doj', 'supreme-court-entity', 'state-department'],
+  'economy-markets': ['federal-reserve', 'treasury-department', 'imf', 'world-bank', 'jpmorgan', 'goldman-sachs', 'blackrock'],
+  'companies-deals': ['jpmorgan', 'goldman-sachs', 'blackrock', 'visa', 'mastercard', 'intel', 'amd', 'oracle', 'samsung'],
+  'consumer-money': ['visa', 'mastercard', 'jpmorgan', 'federal-reserve'],
+  'housing-real-estate': ['fannie-mae', 'freddie-mac', 'federal-reserve'],
+  'crypto-bitcoin': ['coinbase', 'binance', 'strategy-company', 'sec', 'treasury-department'],
+  'travel-consumer-issues': ['tsa', 'state-department'],
+  'ai-big-tech': ['intel', 'amd', 'tsmc', 'oracle'],
+  'consumer-tech': ['samsung', 'bytedance', 'x-platform'],
+  'cybersecurity': ['state-department'],
+  'space-astronomy': ['nasa'],
+  'enterprise-platforms': ['oracle', 'amazon', 'microsoft', 'google'],
+  'public-health': ['who', 'hhs'],
+  'medical-research': ['who', 'ema', 'nih'],
+  'pharma-fda': ['ema'],
+  'major-leagues': ['premier-league', 'manchester-united', 'real-madrid', 'barcelona-fc'],
+  'events-tournaments': ['ioc', 'uefa'],
+  'transfers-business': ['premier-league', 'uefa'],
+  'athletes-culture': ['ioc', 'premier-league'],
+  'internet-culture': ['x-platform', 'bytedance', 'twitch'],
+  'creators-platforms': ['x-platform', 'bytedance', 'twitch'],
+};
+
+function mergeTopicTagMap(base = {}, expansion = {}) {
+  const merged = {};
+  for (const layer of [base, expansion]) {
+    for (const [topicId, values] of Object.entries(layer || {})) {
+      if (!merged[topicId]) merged[topicId] = [];
+      const target = new Set(merged[topicId]);
+      for (const value of Array.isArray(values) ? values : []) {
+        const normalized = String(value || '').trim();
+        if (!normalized || target.has(normalized)) continue;
+        target.add(normalized);
+      }
+      merged[topicId] = Array.from(target);
+    }
+  }
+  return merged;
+}
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
@@ -241,20 +502,23 @@ function buildTag(tagId, label, type, aliases = [], sectionIds = [], topicIds = 
 
 export function buildTagRegistry() {
   const taxonomy = readJson(TAXONOMY_REGISTRY_PATH);
+  const topicThemeMap = mergeTopicTagMap(TOPIC_THEME_MAP, TOPIC_THEME_MAP_EXPANSION);
+  const topicAliasEnrichments = mergeTopicTagMap(TOPIC_ALIAS_ENRICHMENTS, TOPIC_ALIAS_ENRICHMENTS_EXPANSION);
+  const entityTopicHints = mergeTopicTagMap(ENTITY_TOPIC_HINTS, ENTITY_TOPIC_HINTS_EXPANSION);
   const tags = [];
   const topicTagByTopicId = {};
   const themeTagSlugsByTopicId = {};
   const entityTagSlugsByTopicId = {};
 
   for (const topic of taxonomy.topics || []) {
-    const tag = buildTag(topic.id, topic.label, 'topic', [topic.slug, ...(topic.aliases || []), ...(TOPIC_ALIAS_ENRICHMENTS[topic.id] || [])], [topic.section_id], [topic.id], { priority: 100, min_posts_to_index: 1 });
+    const tag = buildTag(topic.id, topic.label, 'topic', [topic.slug, ...(topic.aliases || []), ...(topicAliasEnrichments[topic.id] || [])], [topic.section_id], [topic.id], { priority: 100, min_posts_to_index: 1 });
     tags.push(tag);
     topicTagByTopicId[topic.id] = tag.slug;
   }
 
   const themeTagsBySlug = new Map();
-  for (const [tagId, label, aliases] of THEME_DEFINITIONS) {
-    const topicIds = Object.entries(TOPIC_THEME_MAP).filter(([, values]) => values.includes(tagId)).map(([topicId]) => topicId);
+  for (const [tagId, label, aliases] of [...THEME_DEFINITIONS, ...THEME_DEFINITIONS_EXPANSION]) {
+    const topicIds = Object.entries(topicThemeMap).filter(([, values]) => values.includes(tagId)).map(([topicId]) => topicId);
     const sectionIds = Array.from(new Set(topicIds.map((topicId) => taxonomy.sectionByTopic?.[topicId]).filter(Boolean)));
     const tag = buildTag(tagId, label, 'theme', aliases, sectionIds, topicIds, { min_posts_to_index: 3 });
     tags.push(tag);
@@ -265,20 +529,7 @@ export function buildTagRegistry() {
     }
   }
 
-  const entityTopicHints = {
-    'ai-big-tech': ['openai', 'google', 'meta', 'microsoft', 'nvidia', 'apple', 'amazon'],
-    'consumer-tech': ['apple', 'google', 'meta', 'microsoft', 'youtube-entity', 'tiktok-entity'],
-    'cybersecurity': ['microsoft', 'google', 'doj', 'ftc'],
-    'mobility-evs': ['tesla'],
-    'major-leagues': ['mlb-entity', 'nba-entity', 'nfl-entity', 'nhl-entity'],
-    'events-tournaments': ['fifa', 'olympics-entity'],
-    'transfers-business': ['mlb-entity', 'nba-entity', 'nfl-entity', 'nhl-entity'],
-    'film-tv': ['disney', 'netflix'],
-    'music-celebrities': ['spotify'],
-    'creators-platforms': ['youtube-entity', 'tiktok-entity', 'instagram', 'spotify'],
-  };
-
-  for (const [tagId, label, aliases] of ENTITY_DEFINITIONS) {
+  for (const [tagId, label, aliases] of [...ENTITY_DEFINITIONS, ...ENTITY_DEFINITIONS_EXPANSION]) {
     const topicIds = Object.entries(entityTopicHints).filter(([, values]) => values.includes(tagId)).map(([topicId]) => topicId);
     const sectionIds = Array.from(new Set(topicIds.map((topicId) => taxonomy.sectionByTopic?.[topicId]).filter(Boolean)));
     const tag = buildTag(tagId, label, 'entity', aliases, sectionIds, topicIds, { indexable: false, min_posts_to_index: 4 });
@@ -290,7 +541,7 @@ export function buildTagRegistry() {
   }
 
   const geographyTagSlugs = [];
-  for (const [tagId, label, aliases] of GEOGRAPHY_DEFINITIONS) {
+  for (const [tagId, label, aliases] of [...GEOGRAPHY_DEFINITIONS, ...GEOGRAPHY_DEFINITIONS_EXPANSION]) {
     const tag = buildTag(tagId, label, 'geography', aliases, [], [], { indexable: false, min_posts_to_index: 999 });
     tags.push(tag);
     geographyTagSlugs.push(tag.slug);

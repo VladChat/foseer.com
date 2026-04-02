@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-02T01:12:28.840Z",
+  "event_id": "evt-2026-04-01-us-politics-general-us",
+  "cluster_id": "evt-2026-04-01-us-politics-general-us",
+  "article_type": "analysis",
+  "title": "Inside the Climate Law ‘Battle Royale’ Over Affordability Politics",
+  "slug": "inside-the-climate-law-battle-royale-over-affordability-poli",
+  "canonical_slug": "2026-04-02-inside-the-climate-law-battle-royale-over-affordability-poli",
+  "expected_url": "/article/2026-04-02-inside-the-climate-law-battle-royale-over-affordability-poli",
+  "file_path": "C:\\Users\\vladi\\Documents\\vcoding\\projects\\foseer.com\\src\\data\\post\\2026-04-02-inside-the-climate-law-battle-royale-over-affordability-poli.mdx",
+  "published_at": "2026-04-02T01:12:28.831Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "climate-extreme-weather",
+  "topic_label": "Climate & Extreme Weather",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/3362198/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/3362198/cover.jpg",
+    "source_url": "https://pixabay.com/photos/kids-boys-brothers-on-the-nature-3362198/",
+    "asset_key": "pixabay:3362198",
+    "alt_text": "kids, boys, brothers, on the nature, caps, scarves, people, baby, one, clothes, portrait, black and white photo, stroll, fashion, boy, model, actor, outdoors, nature, grass, summer, the park, season, autumn, forest, tree, landscape, temperate climate, environment, scarves, actor, actor, actor, actor, actor",
+    "selection_mode": "provider_download_new:pixabay:acceptable:strict",
+    "query_used": "Climate climate photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Climate & Extreme Weather",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Climate law 'battle royale'",
+        "url": "https://www.politico.com/newsletters/weekly-new-york-new-jersey-energy/2026/03/30/climate-law-battle-royale-00849808",
+        "domain": "politico.com"
+      },
+      {
+        "title": "Climate & Energy | Sustainable Business News",
+        "url": "https://www.reuters.com/sustainability/climate-energy/",
+        "domain": "reuters.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Climate & Energy | Sustainable Business News",
+          "url": "https://www.reuters.com/sustainability/climate-energy/",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "climate"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "climate-extreme-weather",
+        "topic_label": "Climate & Extreme Weather",
+        "supported": true,
+        "matched_aliases": [
+          "climate",
+          "emissions"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Climate climate photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "climate"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
