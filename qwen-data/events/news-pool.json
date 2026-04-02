@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-02T02:42:52.768Z",
+  "updatedAt": "2026-04-02T12:09:08.512Z",
   "items": [
     {
       "identityKey": "cluster:evt-2026-03-31-us-politics-general-global-israel-meta",
@@ -28303,8 +28303,8 @@
       "identityKey": "cluster:evt-2026-04-02-public-health-general-global",
       "brief": {
         "id": "evt-2026-04-02-public-health-general-global",
-        "title": "NBC News Author Aria Bendix",
-        "whatHappened": "1 day ago ... I am a health reporter for NBC News Digital.",
+        "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+        "whatHappened": "1 day ago ... Ivey, whose season was shut down on Thursday while he manages left knee pain, has taken to Instagram live three times since the Bulls announced the news of him ...",
         "whoIsInvolved": "Unspecified",
         "involvedParties": [
           "Unspecified"
@@ -28312,9 +28312,9 @@
         "entities": [
           "Unspecified"
         ],
-        "when": "2026-04-02T02:42:02.716Z",
+        "when": "2026-04-02T12:06:45.608Z",
         "where": "Not specified",
-        "whyItMatters": "The development could matter for public health, regulation, scientific progress, or access to treatment.",
+        "whyItMatters": "The development matters because it may affect technology adoption, competition, regulation, or security decisions.",
         "developmentStage": "confirmed",
         "sourceUrls": [
           "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html",
@@ -28331,25 +28331,27 @@
           "https://ajmc.com/view/us-flu-hospitalizations-reach-highest-levels-in-over-a-decade",
           "https://www.nbcnews.com/author/aria-bendix-ncpn1294089"
         ],
-        "publishabilityScore": 6,
+        "publishabilityScore": 10,
         "publishabilityNotes": [
-          "Thin summary detail",
+          "Has a usable summary sentence",
           "Parties remain unclear",
           "Freshness is moderate",
-          "Source diversity still needs source-pack validation",
+          "Multiple source URLs already attached",
+          "Clustered across multiple discovery hits",
+          "Cluster contains multiple article-like materials",
           "Taxonomy topic match is specific enough for routing",
           "At least one trusted source hit is present"
         ],
-        "discoveredAt": "2026-04-02T02:42:02.716Z",
+        "discoveredAt": "2026-04-02T12:06:45.608Z",
         "provider": "google_trusted",
-        "section_id": "health",
+        "section_id": "news",
         "topic_id": "public-health",
         "region": "global",
         "angle": "general",
         "cluster_id": "evt-2026-04-02-public-health-general-global",
         "eventKey": "2026-04-02:public-health-general-global",
-        "cluster_size": 1,
-        "article_rich_count": 1,
+        "cluster_size": 5,
+        "article_rich_count": 5,
         "generic_page_count": 0,
         "discoveryContext": [
           {
@@ -30135,24 +30137,572 @@
               "aria",
               "bendix"
             ]
+          },
+          {
+            "id": "brave-targeted-1775131605605-4",
+            "title": "Demoralized CDC workforce reels from year of firings, funding cuts, and a shooting | National News",
+            "summary": "On the coffee table at her home in Atlanta, Sarah Boim has a pile of documents from her old job at the Centers for Disease Control and Prevention. They are",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "18 hours ago",
+            "sourceUrls": [
+              "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html"
+            ],
+            "freshness": 7,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.608Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "targeted:section:health:topic:public-health",
+            "sectionCandidates": [
+              "news",
+              "health"
+            ],
+            "topicCandidates": [
+              "public-health"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": "public-health",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "demoralized cdc workforce reels from year of firings funding cuts and a shooting national news hanfordsentinel com",
+            "canonicalUrl": "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html",
+            "discoveryScore": 15.2,
+            "targetedCoverage": true,
+            "eventKey": "public-health:demoralized cdc workforce reels from year of firings funding cuts and a shooting",
+            "signalSpecificityScore": 6,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-targeted-1775131605605-4",
+            "url": "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html",
+            "canonical_url": "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html",
+            "domain": "hanfordsentinel.com",
+            "canonical_domain": "hanfordsentinel.com",
+            "normalized_title": "demoralized cdc workforce reels from year of firings funding cuts and a shooting",
+            "snippet": "On the coffee table at her home in Atlanta, Sarah Boim has a pile of documents from her old job at the Centers for Disease Control and Prevention. They are",
+            "published_at": "18 hours ago",
+            "section_id": "news",
+            "topic_id": "public-health",
+            "section_candidates": [
+              "news",
+              "health"
+            ],
+            "topic_candidates": [
+              "public-health"
+            ],
+            "cluster_id": null,
+            "event_key": "public-health:demoralized cdc workforce reels from year of firings funding cuts and a shooting",
+            "keywords": [
+              "demoralized",
+              "workforce",
+              "reels",
+              "year",
+              "firings",
+              "funding",
+              "cuts",
+              "shooting",
+              "coffee",
+              "table",
+              "home",
+              "atlanta"
+            ],
+            "title_signal_tokens": [
+              "demoralized",
+              "workforce",
+              "reels",
+              "year",
+              "firings",
+              "funding",
+              "cuts",
+              "shooting"
+            ],
+            "url_signal_tokens": [
+              "national",
+              "demoralized",
+              "workforce",
+              "reels",
+              "year",
+              "firings",
+              "funding",
+              "cuts",
+              "shooting",
+              "5d700b87",
+              "510f",
+              "b958"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "demoralized",
+              "workforce",
+              "reels",
+              "year",
+              "firings",
+              "funding",
+              "cuts",
+              "shooting",
+              "national"
+            ]
+          },
+          {
+            "id": "google-sec-1775131605564-5",
+            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+            "summary": "1 day ago ... Ivey, whose season was shut down on Thursday while he manages left knee pain, has taken to Instagram live three times since the Bulls announced the news of him ...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.567Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:sports",
+            "sectionCandidates": [
+              "news",
+              "sports"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "announcement",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "jaden ivey on ig live after being waived by bulls they re liars bro",
+            "canonicalUrl": "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
+            "discoveryScore": 14.6,
+            "targetedCoverage": false,
+            "eventKey": "news:jaden ivey on ig live after being waived by bulls they re liars bro",
+            "signalSpecificityScore": 6,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1775131605564-5",
+            "url": "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
+            "canonical_url": "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
+            "domain": "nytimes.com",
+            "canonical_domain": "nytimes.com",
+            "normalized_title": "jaden ivey on ig live after being waived by bulls they re liars bro",
+            "snippet": "1 day ago ... Ivey, whose season was shut down on Thursday while he manages left knee pain, has taken to Instagram live three times since the Bulls announced the news of him ...",
+            "published_at": "2026-04-02T12:06:45.567Z",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "sports"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "news:jaden ivey on ig live after being waived by bulls they re liars bro",
+            "keywords": [
+              "jaden",
+              "ivey",
+              "being",
+              "waived",
+              "bulls",
+              "they",
+              "liars",
+              "whose",
+              "season",
+              "shut",
+              "down",
+              "thursday"
+            ],
+            "title_signal_tokens": [
+              "jaden",
+              "ivey",
+              "being",
+              "waived",
+              "bulls",
+              "they",
+              "liars"
+            ],
+            "url_signal_tokens": [
+              "athletic",
+              "jaden",
+              "ivey",
+              "waived",
+              "bulls",
+              "pride",
+              "month"
+            ],
+            "title_url_overlap": 0.5714285714285714,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "jaden",
+              "ivey",
+              "being",
+              "waived",
+              "bulls",
+              "they",
+              "liars"
+            ]
+          },
+          {
+            "id": "brave-sec-1775131605465-4",
+            "title": "Movies and TV shows casting in Clarksville | TN State News",
+            "summary": "Backstage compiled a list of movies and TV shows casting in Clarksville.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "17 hours ago",
+            "sourceUrls": [
+              "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html"
+            ],
+            "freshness": 7,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.468Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:culture",
+            "sectionCandidates": [
+              "news",
+              "culture"
+            ],
+            "topicCandidates": [
+              "film-tv"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "movies and tv shows casting in clarksville tn state news elkvalleytimes com",
+            "canonicalUrl": "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html",
+            "discoveryScore": 14.4,
+            "targetedCoverage": false,
+            "eventKey": "news:movies and tv shows casting in clarksville tn state news elkvalleytimes com",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605465-4",
+            "url": "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html",
+            "canonical_url": "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html",
+            "domain": "elkvalleytimes.com",
+            "canonical_domain": "elkvalleytimes.com",
+            "normalized_title": "movies and tv shows casting in clarksville",
+            "snippet": "Backstage compiled a list of movies and TV shows casting in Clarksville.",
+            "published_at": "17 hours ago",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news",
+              "culture"
+            ],
+            "topic_candidates": [
+              "film-tv"
+            ],
+            "cluster_id": null,
+            "event_key": "news:movies and tv shows casting in clarksville tn state news elkvalleytimes com",
+            "keywords": [
+              "movies",
+              "shows",
+              "casting",
+              "clarksville",
+              "backstage",
+              "compiled",
+              "list"
+            ],
+            "title_signal_tokens": [
+              "movies",
+              "shows",
+              "casting",
+              "clarksville"
+            ],
+            "url_signal_tokens": [
+              "state",
+              "movies",
+              "shows",
+              "casting",
+              "clarksville",
+              "64d66046",
+              "ced2",
+              "5c03",
+              "88e4",
+              "1c1f03abb4ca"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "movies",
+              "shows",
+              "casting",
+              "clarksville",
+              "state"
+            ]
+          },
+          {
+            "id": "brave-sec-1775131605469-0",
+            "title": "Ofcom to investigate complaints of climate change denial",
+            "summary": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "2 days ago",
+            "sourceUrls": [
+              "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/"
+            ],
+            "freshness": 5,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.479Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:news",
+            "sectionCandidates": [
+              "news"
+            ],
+            "topicCandidates": [
+              "climate-extreme-weather"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "official_release",
+            "genericity_score": 1,
+            "article_likelihood": 9,
+            "normalizedTitle": "ofcom to investigate complaints of climate change denial watts up with that",
+            "canonicalUrl": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+            "discoveryScore": 13,
+            "targetedCoverage": false,
+            "eventKey": "news:ofcom to investigate complaints of climate change denial watts up with that",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605469-0",
+            "url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+            "canonical_url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+            "domain": "wattsupwiththat.com",
+            "canonical_domain": "wattsupwiththat.com",
+            "normalized_title": "ofcom to investigate complaints of climate change denial",
+            "snippet": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
+            "published_at": "2 days ago",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news"
+            ],
+            "topic_candidates": [
+              "climate-extreme-weather"
+            ],
+            "cluster_id": null,
+            "event_key": "news:ofcom to investigate complaints of climate change denial watts up with that",
+            "keywords": [
+              "ofcom",
+              "investigate",
+              "complaints",
+              "climate",
+              "change",
+              "denial",
+              "stop",
+              "long",
+              "before",
+              "allowed",
+              "call",
+              "starmer"
+            ],
+            "title_signal_tokens": [
+              "ofcom",
+              "investigate",
+              "complaints",
+              "climate",
+              "change",
+              "denial"
+            ],
+            "url_signal_tokens": [
+              "ofcom",
+              "investigate",
+              "complaints",
+              "climate",
+              "change",
+              "denial"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "ofcom",
+              "investigate",
+              "complaints",
+              "climate",
+              "change",
+              "denial"
+            ]
+          },
+          {
+            "id": "brave-sec-1775131605484-3",
+            "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever",
+            "summary": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "2 days ago",
+            "sourceUrls": [
+              "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever"
+            ],
+            "freshness": 5,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.487Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:news",
+            "sectionCandidates": [
+              "news"
+            ],
+            "topicCandidates": [
+              "climate-extreme-weather"
+            ],
+            "detectedSectionId": "news",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "in the age of misinformation climate literacy matters more than ever honolulu civil beat",
+            "canonicalUrl": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+            "discoveryScore": 12.4,
+            "targetedCoverage": false,
+            "eventKey": "news:in the age of misinformation climate literacy matters more than ever honolulu ci",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605484-3",
+            "url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+            "canonical_url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+            "domain": "civilbeat.org",
+            "canonical_domain": "civilbeat.org",
+            "normalized_title": "in the age of misinformation climate literacy matters more than ever",
+            "snippet": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
+            "published_at": "2 days ago",
+            "section_id": "news",
+            "topic_id": null,
+            "section_candidates": [
+              "news"
+            ],
+            "topic_candidates": [
+              "climate-extreme-weather"
+            ],
+            "cluster_id": null,
+            "event_key": "news:in the age of misinformation climate literacy matters more than ever honolulu ci",
+            "keywords": [
+              "misinformation",
+              "climate",
+              "literacy",
+              "matters",
+              "more",
+              "than",
+              "ever",
+              "education",
+              "remains",
+              "inconsistent",
+              "optional",
+              "disconnected"
+            ],
+            "title_signal_tokens": [
+              "misinformation",
+              "climate",
+              "literacy",
+              "matters",
+              "more",
+              "than",
+              "ever"
+            ],
+            "url_signal_tokens": [
+              "misinformation",
+              "climate",
+              "literacy",
+              "matters",
+              "more",
+              "than",
+              "ever"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "misinformation",
+              "climate",
+              "literacy",
+              "matters",
+              "more",
+              "than",
+              "ever"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-04-02-public-health-general-global",
       "publishabilityScore": 10,
       "discoveredAt": "2026-04-02T02:39:00.010Z",
-      "lastSeenAt": "2026-04-02T02:42:02.783Z",
-      "expiresAt": "2026-04-04T02:42:02.783Z",
-      "status": "candidate",
-      "lastSelectedAt": null,
-      "lastPublishedAt": null
+      "lastSeenAt": "2026-04-02T12:06:45.649Z",
+      "expiresAt": "2026-04-04T12:06:45.648Z",
+      "status": "published",
+      "lastSelectedAt": "2026-04-02T12:09:08.500Z",
+      "lastPublishedAt": "2026-04-02T12:09:08.500Z",
+      "selectedByWorkflow": null,
+      "selectedByRunId": null,
+      "selectedAt": null,
+      "selectionExpiresAt": null,
+      "publishedSlug": "2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio"
     },
     {
       "identityKey": "cluster:evt-2026-04-02-sports-general-global",
       "brief": {
         "id": "evt-2026-04-02-sports-general-global",
-        "title": "NCAA Makes Transfer Portal Rule Changes With Huge Penalties",
-        "whatHappened": "Effective immediately, college football programs could face steep penalties for breaking the new transfer portal rules.",
+        "title": "NCAA approves major penalties for programs that circumvent ...",
+        "whatHappened": "7 hours ago ... FBS programs that add or sign players who withdraw from their schools but bypass the transfer portal window will have their head coaches suspended for six games ...",
         "whoIsInvolved": "Unspecified",
         "involvedParties": [
           "Unspecified"
@@ -30160,10 +30710,10 @@
         "entities": [
           "Unspecified"
         ],
-        "when": "4 hours ago",
+        "when": "2026-04-02T12:06:45.578Z",
         "where": "Not specified",
         "whyItMatters": "The development could reshape competition, fan attention, or the business side of sports.",
-        "developmentStage": "breaking",
+        "developmentStage": "resolved",
         "sourceUrls": [
           "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
           "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
@@ -30175,23 +30725,26 @@
           "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/",
           "https://www.reuters.com/sports/soccer/amnesty-warns-huge-human-rights-risks-2026-world-cup-2026-03-31/"
         ],
-        "publishabilityScore": 7,
+        "publishabilityScore": 9,
         "publishabilityNotes": [
           "Has a usable summary sentence",
           "Parties remain unclear",
-          "Very fresh development",
-          "Source diversity still needs source-pack validation"
+          "Freshness is moderate",
+          "Multiple source URLs already attached",
+          "Clustered across multiple discovery hits",
+          "Cluster contains multiple article-like materials",
+          "At least one trusted source hit is present"
         ],
-        "discoveredAt": "2026-04-02T02:41:43.034Z",
-        "provider": "brave",
+        "discoveredAt": "2026-04-02T12:06:45.578Z",
+        "provider": "google_trusted",
         "section_id": "sports",
         "topic_id": null,
         "region": "global",
-        "angle": "transfers",
+        "angle": "events",
         "cluster_id": "evt-2026-04-02-sports-general-global",
         "eventKey": "2026-04-02:sports-general-global",
-        "cluster_size": 1,
-        "article_rich_count": 1,
+        "cluster_size": 8,
+        "article_rich_count": 8,
         "generic_page_count": 0,
         "discoveryContext": [
           {
@@ -31316,14 +31869,811 @@
               "huge",
               "penalties"
             ]
+          },
+          {
+            "id": "brave-sec-1775131605537-1",
+            "title": "NCAA Makes Transfer Portal Rule Changes With Huge Penalties",
+            "summary": "Effective immediately, college football programs could face steep penalties for breaking the new transfer portal rules.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "4 hours ago",
+            "sourceUrls": [
+              "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417"
+            ],
+            "freshness": 8,
+            "urgency": 6,
+            "discoveredAt": "2026-04-02T12:06:45.540Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "transfers",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 2,
+            "article_likelihood": 8,
+            "normalizedTitle": "ncaa makes transfer portal rule changes with huge penalties newsweek",
+            "canonicalUrl": "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
+            "discoveryScore": 17.4,
+            "targetedCoverage": false,
+            "eventKey": "sports:ncaa makes transfer portal rule changes with huge penalties newsweek",
+            "signalSpecificityScore": 6,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605537-1",
+            "url": "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
+            "canonical_url": "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
+            "domain": "newsweek.com",
+            "canonical_domain": "newsweek.com",
+            "normalized_title": "ncaa makes transfer portal rule changes with huge penalties",
+            "snippet": "Effective immediately, college football programs could face steep penalties for breaking the new transfer portal rules.",
+            "published_at": "4 hours ago",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "sports:ncaa makes transfer portal rule changes with huge penalties newsweek",
+            "keywords": [
+              "ncaa",
+              "makes",
+              "transfer",
+              "portal",
+              "rule",
+              "changes",
+              "huge",
+              "penalties",
+              "effective",
+              "immediately",
+              "college",
+              "football"
+            ],
+            "title_signal_tokens": [
+              "ncaa",
+              "makes",
+              "transfer",
+              "portal",
+              "rule",
+              "changes",
+              "huge",
+              "penalties"
+            ],
+            "url_signal_tokens": [
+              "ncaa",
+              "makes",
+              "transfer",
+              "portal",
+              "rule",
+              "changes",
+              "huge",
+              "penalties"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "ncaa",
+              "makes",
+              "transfer",
+              "portal",
+              "rule",
+              "changes",
+              "huge",
+              "penalties"
+            ]
+          },
+          {
+            "id": "google-sec-1775131605555-1",
+            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "summary": "7 hours ago ... FBS programs that add or sign players who withdraw from their schools but bypass the transfer portal window will have their head coaches suspended for six games ...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/"
+            ],
+            "freshness": 4,
+            "urgency": 6,
+            "discoveredAt": "2026-04-02T12:06:45.557Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "transfers",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "ncaa approves major penalties for programs that circumvent",
+            "canonicalUrl": "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
+            "discoveryScore": 15.6,
+            "targetedCoverage": false,
+            "eventKey": "sports:ncaa approves major penalties for programs that circumvent",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1775131605555-1",
+            "url": "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
+            "canonical_url": "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
+            "domain": "nytimes.com",
+            "canonical_domain": "nytimes.com",
+            "normalized_title": "ncaa approves major penalties for programs that circumvent",
+            "snippet": "7 hours ago ... FBS programs that add or sign players who withdraw from their schools but bypass the transfer portal window will have their head coaches suspended for six games ...",
+            "published_at": "2026-04-02T12:06:45.557Z",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "sports:ncaa approves major penalties for programs that circumvent",
+            "keywords": [
+              "ncaa",
+              "approves",
+              "major",
+              "penalties",
+              "programs",
+              "circumvent",
+              "hours",
+              "sign",
+              "players",
+              "withdraw",
+              "their",
+              "schools"
+            ],
+            "title_signal_tokens": [
+              "ncaa",
+              "approves",
+              "major",
+              "penalties",
+              "programs",
+              "circumvent"
+            ],
+            "url_signal_tokens": [
+              "athletic",
+              "ncaa",
+              "rules",
+              "transfer",
+              "portal",
+              "spring",
+              "window",
+              "roster"
+            ],
+            "title_url_overlap": 0.16666666666666666,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "signing",
+            "place": "global",
+            "titleTokens": [
+              "ncaa",
+              "approves",
+              "major",
+              "penalties",
+              "programs",
+              "circumvent"
+            ]
+          },
+          {
+            "id": "google-sec-1775131605552-0",
+            "title": "World Cup 2026 – Groups, bracket and predictions with all 48 teams ...",
+            "summary": "20 hours ago ... With little more than two months until the start of the World Cup, we finally know the full 48-team line-up for this summer's tournament.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.555Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "events",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "world cup 2026 groups bracket and predictions with all 48 teams",
+            "canonicalUrl": "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/",
+            "discoveryScore": 13.6,
+            "targetedCoverage": false,
+            "eventKey": "sports:world cup 2026 groups bracket and predictions with all 48 teams",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1775131605552-0",
+            "url": "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/",
+            "canonical_url": "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/",
+            "domain": "nytimes.com",
+            "canonical_domain": "nytimes.com",
+            "normalized_title": "world cup 2026 groups bracket and predictions with all 48 teams",
+            "snippet": "20 hours ago ... With little more than two months until the start of the World Cup, we finally know the full 48-team line-up for this summer's tournament.",
+            "published_at": "2026-04-02T12:06:45.555Z",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "sports:world cup 2026 groups bracket and predictions with all 48 teams",
+            "keywords": [
+              "world",
+              "2026",
+              "groups",
+              "bracket",
+              "predictions",
+              "teams",
+              "hours",
+              "little",
+              "more",
+              "than",
+              "months",
+              "until"
+            ],
+            "title_signal_tokens": [
+              "2026",
+              "groups",
+              "bracket",
+              "predictions",
+              "teams"
+            ],
+            "url_signal_tokens": [
+              "athletic",
+              "bracket",
+              "predictions"
+            ],
+            "title_url_overlap": 0.6666666666666666,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "world",
+              "2026",
+              "groups",
+              "bracket",
+              "predictions",
+              "teams"
+            ]
+          },
+          {
+            "id": "google-sec-1775131605557-2",
+            "title": "Leeds' 2024-25 accounts: Ninth-highest commercial income in ...",
+            "summary": "9 hours ago ... Leeds United generated record Championship revenues for the second year running in their 100-point 2024-25 promotion season, even as the club continued to ...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.560Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "leeds 2024 25 accounts ninth highest commercial income in",
+            "canonicalUrl": "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/",
+            "discoveryScore": 13.6,
+            "targetedCoverage": false,
+            "eventKey": "sports:leeds 2024 25 accounts ninth highest commercial income in",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1775131605557-2",
+            "url": "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/",
+            "canonical_url": "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/",
+            "domain": "nytimes.com",
+            "canonical_domain": "nytimes.com",
+            "normalized_title": "leeds 2024 25 accounts ninth highest commercial income in",
+            "snippet": "9 hours ago ... Leeds United generated record Championship revenues for the second year running in their 100-point 2024-25 promotion season, even as the club continued to ...",
+            "published_at": "2026-04-02T12:06:45.560Z",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "sports:leeds 2024 25 accounts ninth highest commercial income in",
+            "keywords": [
+              "leeds",
+              "2024",
+              "accounts",
+              "ninth",
+              "highest",
+              "commercial",
+              "income",
+              "hours",
+              "united",
+              "generated",
+              "record",
+              "championship"
+            ],
+            "title_signal_tokens": [
+              "leeds",
+              "2024",
+              "accounts",
+              "ninth",
+              "highest",
+              "commercial",
+              "income"
+            ],
+            "url_signal_tokens": [
+              "athletic",
+              "leeds",
+              "accounts"
+            ],
+            "title_url_overlap": 0.6666666666666666,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "leeds",
+              "2024",
+              "accounts",
+              "ninth",
+              "highest",
+              "commercial",
+              "income"
+            ]
+          },
+          {
+            "id": "google-sec-1775131605562-4",
+            "title": "Eddie Howe's future, player sales and the stadium",
+            "summary": "2 days ago ... David Hopkinson, Newcastle's chief executive, sat down with journalists to discuss the club's latest accounts.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.564Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 2,
+            "article_likelihood": 10,
+            "normalizedTitle": "eddie howe s future player sales and the stadium ny times",
+            "canonicalUrl": "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/",
+            "discoveryScore": 13.6,
+            "targetedCoverage": false,
+            "eventKey": "sports:eddie howe s future player sales and the stadium ny times",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1775131605562-4",
+            "url": "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/",
+            "canonical_url": "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/",
+            "domain": "nytimes.com",
+            "canonical_domain": "nytimes.com",
+            "normalized_title": "eddie howe s future player sales and the stadium",
+            "snippet": "2 days ago ... David Hopkinson, Newcastle's chief executive, sat down with journalists to discuss the club's latest accounts.",
+            "published_at": "2026-04-02T12:06:45.564Z",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "sports:eddie howe s future player sales and the stadium ny times",
+            "keywords": [
+              "eddie",
+              "howe",
+              "future",
+              "player",
+              "sales",
+              "stadium",
+              "days",
+              "david",
+              "hopkinson",
+              "newcastle",
+              "chief",
+              "executive"
+            ],
+            "title_signal_tokens": [
+              "eddie",
+              "howe",
+              "future",
+              "player",
+              "sales",
+              "stadium"
+            ],
+            "url_signal_tokens": [
+              "athletic",
+              "newcastle",
+              "eddie",
+              "howe",
+              "future",
+              "player",
+              "sales"
+            ],
+            "title_url_overlap": 0.8333333333333334,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "eddie",
+              "howe",
+              "future",
+              "player",
+              "sales",
+              "stadium"
+            ]
+          },
+          {
+            "id": "google-sec-1775131605569-7",
+            "title": "The 48 World Cup teams are set. We've filled in the bracket and ...",
+            "summary": "8 hours ago ... The final six teams have secured their place at the tournament this summer. So now is the perfect time to work out who wins it...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.572Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "events",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "the 48 world cup teams are set we ve filled in the bracket and",
+            "canonicalUrl": "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/",
+            "discoveryScore": 13.6,
+            "targetedCoverage": false,
+            "eventKey": "sports:the 48 world cup teams are set we ve filled in the bracket and",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1775131605569-7",
+            "url": "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/",
+            "canonical_url": "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/",
+            "domain": "nytimes.com",
+            "canonical_domain": "nytimes.com",
+            "normalized_title": "the 48 world cup teams are set we ve filled in the bracket and",
+            "snippet": "8 hours ago ... The final six teams have secured their place at the tournament this summer. So now is the perfect time to work out who wins it...",
+            "published_at": "2026-04-02T12:06:45.572Z",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "sports:the 48 world cup teams are set we ve filled in the bracket and",
+            "keywords": [
+              "world",
+              "teams",
+              "filled",
+              "bracket",
+              "hours",
+              "final",
+              "secured",
+              "their",
+              "place",
+              "tournament",
+              "summer",
+              "perfect"
+            ],
+            "title_signal_tokens": [
+              "teams",
+              "filled",
+              "bracket"
+            ],
+            "url_signal_tokens": [
+              "athletic",
+              "predictions",
+              "groups",
+              "bracket"
+            ],
+            "title_url_overlap": 0.3333333333333333,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "world",
+              "teams",
+              "filled",
+              "bracket"
+            ]
+          },
+          {
+            "id": "google-sec-1775131605572-8",
+            "title": "FSG is allowing Liverpool to drift – and that is dangerous",
+            "summary": "22 hours ago ... Whether that stance persists if Liverpool are knocked out of the FA Cup and the Champions League and fall away from the Premier League top five over the next ...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.575Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "fsg is allowing liverpool to drift and that is dangerous the athletic",
+            "canonicalUrl": "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/",
+            "discoveryScore": 13.6,
+            "targetedCoverage": false,
+            "eventKey": "sports:fsg is allowing liverpool to drift and that is dangerous the athletic",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1775131605572-8",
+            "url": "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/",
+            "canonical_url": "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/",
+            "domain": "nytimes.com",
+            "canonical_domain": "nytimes.com",
+            "normalized_title": "fsg is allowing liverpool to drift",
+            "snippet": "22 hours ago ... Whether that stance persists if Liverpool are knocked out of the FA Cup and the Champions League and fall away from the Premier League top five over the next ...",
+            "published_at": "2026-04-02T12:06:45.575Z",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "sports:fsg is allowing liverpool to drift and that is dangerous the athletic",
+            "keywords": [
+              "allowing",
+              "liverpool",
+              "drift",
+              "hours",
+              "whether",
+              "stance",
+              "persists",
+              "knocked",
+              "champions",
+              "league",
+              "fall",
+              "away"
+            ],
+            "title_signal_tokens": [
+              "allowing",
+              "liverpool",
+              "drift"
+            ],
+            "url_signal_tokens": [
+              "athletic",
+              "liverpool",
+              "michael",
+              "edwards",
+              "richard",
+              "hughes"
+            ],
+            "title_url_overlap": 0.3333333333333333,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "allowing",
+              "liverpool",
+              "drift",
+              "dangerous"
+            ]
+          },
+          {
+            "id": "google-sec-1775131605575-9",
+            "title": "Plotting Canada's path through the World Cup. Could it be Mexico in ...",
+            "summary": "14 hours ago ... Let's break down their path… Group stage. Canada will start their World Cup in Toronto in just the third game of the tournament. They had to wait until the 11th ...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.578Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:sports",
+            "sectionCandidates": [
+              "sports"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "sports",
+            "detectedTopicId": null,
+            "region": "canada",
+            "angle": "events",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "plotting canada s path through the world cup could it be mexico in",
+            "canonicalUrl": "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/",
+            "discoveryScore": 13.6,
+            "targetedCoverage": false,
+            "eventKey": "sports:plotting canada s path through the world cup could it be mexico in",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1775131605575-9",
+            "url": "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/",
+            "canonical_url": "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/",
+            "domain": "nytimes.com",
+            "canonical_domain": "nytimes.com",
+            "normalized_title": "plotting canada s path through the world cup could it be mexico in",
+            "snippet": "14 hours ago ... Let's break down their path… Group stage. Canada will start their World Cup in Toronto in just the third game of the tournament. They had to wait until the 11th ...",
+            "published_at": "2026-04-02T12:06:45.578Z",
+            "section_id": "sports",
+            "topic_id": null,
+            "section_candidates": [
+              "sports"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "sports:plotting canada s path through the world cup could it be mexico in",
+            "keywords": [
+              "plotting",
+              "canada",
+              "path",
+              "through",
+              "world",
+              "mexico",
+              "hours",
+              "break",
+              "down",
+              "their",
+              "group",
+              "stage"
+            ],
+            "title_signal_tokens": [
+              "plotting",
+              "canada",
+              "path",
+              "through",
+              "could",
+              "mexico"
+            ],
+            "url_signal_tokens": [
+              "athletic",
+              "canada",
+              "path"
+            ],
+            "title_url_overlap": 0.6666666666666666,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "canada",
+            "titleTokens": [
+              "plotting",
+              "canada",
+              "path",
+              "through",
+              "world",
+              "mexico"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-04-02-sports-general-global",
       "publishabilityScore": 10,
       "discoveredAt": "2026-04-02T02:38:59.975Z",
-      "lastSeenAt": "2026-04-02T02:42:02.783Z",
-      "expiresAt": "2026-04-04T02:42:02.783Z",
+      "lastSeenAt": "2026-04-02T12:06:45.649Z",
+      "expiresAt": "2026-04-04T12:06:45.648Z",
       "status": "published",
       "lastSelectedAt": "2026-04-02T02:39:27.962Z",
       "lastPublishedAt": "2026-04-02T02:39:27.962Z",
@@ -31365,10 +32715,9 @@
           "Multiple source URLs already attached",
           "Clustered across multiple discovery hits",
           "Cluster contains multiple article-like materials",
-          "Taxonomy topic match is specific enough for routing",
-          "At least one trusted source hit is present"
+          "Taxonomy topic match is specific enough for routing"
         ],
-        "discoveredAt": "2026-04-02T02:42:02.719Z",
+        "discoveredAt": "2026-04-02T12:06:45.533Z",
         "provider": "brave",
         "section_id": "health",
         "topic_id": "mental-health",
@@ -31376,8 +32725,8 @@
         "angle": "general",
         "cluster_id": "evt-2026-04-02-mental-health-general-global",
         "eventKey": "2026-04-02:mental-health-general-global",
-        "cluster_size": 5,
-        "article_rich_count": 5,
+        "cluster_size": 4,
+        "article_rich_count": 4,
         "generic_page_count": 0,
         "discoveryContext": [
           {
@@ -32751,14 +34100,435 @@
               "intentional",
               "integrated"
             ]
+          },
+          {
+            "id": "brave-sec-1775131605522-1",
+            "title": "The Future of Business Sustainability: Why Mental Health Parity is a Competitive Advantage",
+            "summary": "Here’s the HTML content for your blog post within the `` tags: Contents hide 1 The Future of Business Sustainability: Why Mental Health Parity is a Competitive Advantage 1.1 1.…",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "2 hours ago",
+            "sourceUrls": [
+              "https://www.mentalhealthparitypartners.com/2026/04/01/the-future-of-busine/"
+            ],
+            "freshness": 9,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.525Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:health",
+            "sectionCandidates": [
+              "health",
+              "business"
+            ],
+            "topicCandidates": [
+              "mental-health"
+            ],
+            "detectedSectionId": "health",
+            "detectedTopicId": "mental-health",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "the future of business sustainability why mental health parity is a competitive advantage mentalhealthparitypartners",
+            "canonicalUrl": "https://www.mentalhealthparitypartners.com/2026/04/01/the-future-of-busine/",
+            "discoveryScore": 18.6,
+            "targetedCoverage": false,
+            "eventKey": "mental-health:the future of business sustainability why mental health parity is a competitive ",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605522-1",
+            "url": "https://www.mentalhealthparitypartners.com/2026/04/01/the-future-of-busine/",
+            "canonical_url": "https://www.mentalhealthparitypartners.com/2026/04/01/the-future-of-busine/",
+            "domain": "mentalhealthparitypartners.com",
+            "canonical_domain": "mentalhealthparitypartners.com",
+            "normalized_title": "the future of business sustainability why mental health parity is a competitive advantage",
+            "snippet": "Here’s the HTML content for your blog post within the `` tags: Contents hide 1 The Future of Business Sustainability: Why Mental Health Parity is a Competitive Advantage 1.1 1.…",
+            "published_at": "2 hours ago",
+            "section_id": "health",
+            "topic_id": "mental-health",
+            "section_candidates": [
+              "health",
+              "business"
+            ],
+            "topic_candidates": [
+              "mental-health"
+            ],
+            "cluster_id": null,
+            "event_key": "mental-health:the future of business sustainability why mental health parity is a competitive ",
+            "keywords": [
+              "future",
+              "business",
+              "sustainability",
+              "mental",
+              "health",
+              "parity",
+              "competitive",
+              "advantage",
+              "here",
+              "html",
+              "content",
+              "your"
+            ],
+            "title_signal_tokens": [
+              "future",
+              "sustainability",
+              "mental",
+              "parity",
+              "competitive",
+              "advantage"
+            ],
+            "url_signal_tokens": [
+              "future",
+              "busine"
+            ],
+            "title_url_overlap": 0.5,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "future",
+              "business",
+              "sustainability",
+              "mental",
+              "health",
+              "parity",
+              "competitive",
+              "advantage"
+            ]
+          },
+          {
+            "id": "brave-sec-1775131605530-4",
+            "title": "Meeting Unmet Medical Needs: The Disparity Dilemma",
+            "summary": "The US drug regulatory system fails to address the country’s most urgent medical needs with the resources appropriate for the task. But change is possible, say Christopher-Paul Milne and Kenneth I. Kaitin.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "2 hours ago",
+            "sourceUrls": [
+              "https://www.pharmexec.com/view/meeting-unmet-medical-needs-disparity-dilemma"
+            ],
+            "freshness": 9,
+            "urgency": 6,
+            "discoveredAt": "2026-04-02T12:06:45.533Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:health",
+            "sectionCandidates": [
+              "health"
+            ],
+            "topicCandidates": [],
+            "detectedSectionId": "health",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "meeting unmet medical needs the disparity dilemma pharmexec",
+            "canonicalUrl": "https://www.pharmexec.com/view/meeting-unmet-medical-needs-disparity-dilemma",
+            "discoveryScore": 17.4,
+            "targetedCoverage": false,
+            "eventKey": "health:meeting unmet medical needs the disparity dilemma pharmexec",
+            "signalSpecificityScore": 5,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605530-4",
+            "url": "https://www.pharmexec.com/view/meeting-unmet-medical-needs-disparity-dilemma",
+            "canonical_url": "https://www.pharmexec.com/view/meeting-unmet-medical-needs-disparity-dilemma",
+            "domain": "pharmexec.com",
+            "canonical_domain": "pharmexec.com",
+            "normalized_title": "meeting unmet medical needs the disparity dilemma",
+            "snippet": "The US drug regulatory system fails to address the country’s most urgent medical needs with the resources appropriate for the task. But change is possible, say Christopher-Paul Milne and Kenneth I. Kaitin.",
+            "published_at": "2 hours ago",
+            "section_id": "health",
+            "topic_id": null,
+            "section_candidates": [
+              "health"
+            ],
+            "topic_candidates": [],
+            "cluster_id": null,
+            "event_key": "health:meeting unmet medical needs the disparity dilemma pharmexec",
+            "keywords": [
+              "meeting",
+              "unmet",
+              "medical",
+              "needs",
+              "disparity",
+              "dilemma",
+              "drug",
+              "regulatory",
+              "system",
+              "fails",
+              "address",
+              "country"
+            ],
+            "title_signal_tokens": [
+              "meeting",
+              "unmet",
+              "medical",
+              "needs",
+              "disparity",
+              "dilemma"
+            ],
+            "url_signal_tokens": [
+              "view",
+              "meeting",
+              "unmet",
+              "medical",
+              "needs",
+              "disparity",
+              "dilemma"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "us",
+            "titleTokens": [
+              "meeting",
+              "unmet",
+              "medical",
+              "needs",
+              "disparity",
+              "dilemma"
+            ]
+          },
+          {
+            "id": "brave-sec-1775131605525-2",
+            "title": "Unlocking Mental Wellbeing Through Quantum Computing: The Future of Mental Health Innovation",
+            "summary": "Contents hide 1 Unlocking Mental Wellbeing Through Quantum Computing: The Future of Mental Health Innovation 1.1 The Intersection of Quantum Computing and Mental Health 1.2 Advancements and Challenges 1.3 Conclusion…",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "18 hours ago",
+            "sourceUrls": [
+              "https://www.mentalhealthparitypartners.com/2026/04/01/unlocking-mental-wel/"
+            ],
+            "freshness": 7,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.528Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:health",
+            "sectionCandidates": [
+              "health"
+            ],
+            "topicCandidates": [
+              "mental-health"
+            ],
+            "detectedSectionId": "health",
+            "detectedTopicId": "mental-health",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 10,
+            "normalizedTitle": "unlocking mental wellbeing through quantum computing the future of mental health innovation mentalhealthparitypartner",
+            "canonicalUrl": "https://www.mentalhealthparitypartners.com/2026/04/01/unlocking-mental-wel/",
+            "discoveryScore": 16.6,
+            "targetedCoverage": false,
+            "eventKey": "mental-health:unlocking mental wellbeing through quantum computing the future of mental health",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605525-2",
+            "url": "https://www.mentalhealthparitypartners.com/2026/04/01/unlocking-mental-wel/",
+            "canonical_url": "https://www.mentalhealthparitypartners.com/2026/04/01/unlocking-mental-wel/",
+            "domain": "mentalhealthparitypartners.com",
+            "canonical_domain": "mentalhealthparitypartners.com",
+            "normalized_title": "unlocking mental wellbeing through quantum computing the future of mental health innovation",
+            "snippet": "Contents hide 1 Unlocking Mental Wellbeing Through Quantum Computing: The Future of Mental Health Innovation 1.1 The Intersection of Quantum Computing and Mental Health 1.2 Advancements and Challenges 1.3 Conclusion…",
+            "published_at": "18 hours ago",
+            "section_id": "health",
+            "topic_id": "mental-health",
+            "section_candidates": [
+              "health"
+            ],
+            "topic_candidates": [
+              "mental-health"
+            ],
+            "cluster_id": null,
+            "event_key": "mental-health:unlocking mental wellbeing through quantum computing the future of mental health",
+            "keywords": [
+              "unlocking",
+              "mental",
+              "wellbeing",
+              "through",
+              "quantum",
+              "computing",
+              "future",
+              "health",
+              "innovation",
+              "contents",
+              "hide",
+              "intersection"
+            ],
+            "title_signal_tokens": [
+              "unlocking",
+              "mental",
+              "wellbeing",
+              "through",
+              "quantum",
+              "computing",
+              "future",
+              "innovation"
+            ],
+            "url_signal_tokens": [
+              "unlocking",
+              "mental"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "unlocking",
+              "mental",
+              "wellbeing",
+              "through",
+              "quantum",
+              "computing",
+              "future",
+              "health",
+              "innovation"
+            ]
+          },
+          {
+            "id": "brave-sec-1775131605528-3",
+            "title": "Everyday Wellness Is Becoming More Intentional and Integrated",
+            "summary": "Wellness is no longer built around isolated habits or occasional efforts. Instead, it is becoming a structured part of daily life, shaped by routines that",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "12 hours ago",
+            "sourceUrls": [
+              "https://www.wisconsinscorpions.com/everyday-wellness-is-becoming-more-intentional-and-integrated/"
+            ],
+            "freshness": 7,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.530Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:health",
+            "sectionCandidates": [
+              "health"
+            ],
+            "topicCandidates": [
+              "wellness-fitness"
+            ],
+            "detectedSectionId": "health",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "everyday wellness is becoming more intentional and integrated wisconsin scorpions",
+            "canonicalUrl": "https://www.wisconsinscorpions.com/everyday-wellness-is-becoming-more-intentional-and-integrated/",
+            "discoveryScore": 14.4,
+            "targetedCoverage": false,
+            "eventKey": "health:everyday wellness is becoming more intentional and integrated wisconsin scorpion",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605528-3",
+            "url": "https://www.wisconsinscorpions.com/everyday-wellness-is-becoming-more-intentional-and-integrated/",
+            "canonical_url": "https://www.wisconsinscorpions.com/everyday-wellness-is-becoming-more-intentional-and-integrated/",
+            "domain": "wisconsinscorpions.com",
+            "canonical_domain": "wisconsinscorpions.com",
+            "normalized_title": "everyday wellness is becoming more intentional and integrated",
+            "snippet": "Wellness is no longer built around isolated habits or occasional efforts. Instead, it is becoming a structured part of daily life, shaped by routines that",
+            "published_at": "12 hours ago",
+            "section_id": "health",
+            "topic_id": null,
+            "section_candidates": [
+              "health"
+            ],
+            "topic_candidates": [
+              "wellness-fitness"
+            ],
+            "cluster_id": null,
+            "event_key": "health:everyday wellness is becoming more intentional and integrated wisconsin scorpion",
+            "keywords": [
+              "everyday",
+              "wellness",
+              "becoming",
+              "more",
+              "intentional",
+              "integrated",
+              "longer",
+              "built",
+              "around",
+              "isolated",
+              "habits",
+              "occasional"
+            ],
+            "title_signal_tokens": [
+              "everyday",
+              "wellness",
+              "becoming",
+              "more",
+              "intentional",
+              "integrated"
+            ],
+            "url_signal_tokens": [
+              "everyday",
+              "wellness",
+              "becoming",
+              "more",
+              "intentional",
+              "integrated"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "everyday",
+              "wellness",
+              "becoming",
+              "more",
+              "intentional",
+              "integrated"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-04-02-mental-health-general-global",
       "publishabilityScore": 10,
       "discoveredAt": "2026-04-02T02:38:59.898Z",
-      "lastSeenAt": "2026-04-02T02:42:02.783Z",
-      "expiresAt": "2026-04-04T02:42:02.783Z",
+      "lastSeenAt": "2026-04-02T12:06:45.649Z",
+      "expiresAt": "2026-04-04T12:06:45.648Z",
       "status": "candidate",
       "lastSelectedAt": null,
       "lastPublishedAt": null
@@ -32801,7 +34571,7 @@
           "Cluster contains multiple article-like materials",
           "At least one trusted source hit is present"
         ],
-        "discoveredAt": "2026-04-02T02:42:02.727Z",
+        "discoveredAt": "2026-04-02T12:06:45.581Z",
         "provider": "brave",
         "section_id": "business",
         "topic_id": null,
@@ -32809,8 +34579,8 @@
         "angle": "markets",
         "cluster_id": "evt-2026-04-02-business-general-global-amazon-iran",
         "eventKey": "2026-04-02:business-general-global-amazon-iran",
-        "cluster_size": 6,
-        "article_rich_count": 5,
+        "cluster_size": 4,
+        "article_rich_count": 4,
         "generic_page_count": 0,
         "discoveryContext": [
           {
@@ -33914,14 +35684,463 @@
               "professional",
               "services"
             ]
+          },
+          {
+            "id": "brave-sec-1775131605502-4",
+            "title": "Amazon in talks to buy $9 billion satellite group Globalstar: Report",
+            "summary": "Globalstar's shares, which have more than doubled in market value over the past year, rose 24% to $85 in extended trading. The company's market cap was $8.81 billion, as of last close.",
+            "whyItMatters": "",
+            "involvedParties": [
+              "amazon"
+            ],
+            "entities": [
+              "amazon"
+            ],
+            "when": "1 hour ago",
+            "sourceUrls": [
+              "https://www.moneycontrol.com/news/business/companies/amazon-in-talks-to-buy-9-billion-satellite-group-globalstar-ft-reports-13877330.html"
+            ],
+            "freshness": 9,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.505Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:business",
+            "sectionCandidates": [
+              "business",
+              "news"
+            ],
+            "topicCandidates": [
+              "companies-deals"
+            ],
+            "detectedSectionId": "business",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "markets",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 9,
+            "normalizedTitle": "amazon in talks to buy 9 billion satellite group globalstar report moneycontrol com",
+            "canonicalUrl": "https://www.moneycontrol.com/news/business/companies/amazon-in-talks-to-buy-9-billion-satellite-group-globalstar-ft-reports-13877330.html",
+            "discoveryScore": 17,
+            "targetedCoverage": false,
+            "eventKey": "business:amazon in talks to buy 9 billion satellite group globalstar report moneycontrol ",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605502-4",
+            "url": "https://www.moneycontrol.com/news/business/companies/amazon-in-talks-to-buy-9-billion-satellite-group-globalstar-ft-reports-13877330.html",
+            "canonical_url": "https://www.moneycontrol.com/news/business/companies/amazon-in-talks-to-buy-9-billion-satellite-group-globalstar-ft-reports-13877330.html",
+            "domain": "moneycontrol.com",
+            "canonical_domain": "moneycontrol.com",
+            "normalized_title": "amazon in talks to buy 9 billion satellite group globalstar report",
+            "snippet": "Globalstar's shares, which have more than doubled in market value over the past year, rose 24% to $85 in extended trading. The company's market cap was $8.81 billion, as of last close.",
+            "published_at": "1 hour ago",
+            "section_id": "business",
+            "topic_id": null,
+            "section_candidates": [
+              "business",
+              "news"
+            ],
+            "topic_candidates": [
+              "companies-deals"
+            ],
+            "cluster_id": null,
+            "event_key": "business:amazon in talks to buy 9 billion satellite group globalstar report moneycontrol ",
+            "keywords": [
+              "amazon",
+              "talks",
+              "billion",
+              "satellite",
+              "group",
+              "globalstar",
+              "shares",
+              "which",
+              "more",
+              "than",
+              "doubled",
+              "market"
+            ],
+            "title_signal_tokens": [
+              "amazon",
+              "talks",
+              "billion",
+              "satellite",
+              "group",
+              "globalstar"
+            ],
+            "url_signal_tokens": [
+              "companies",
+              "amazon",
+              "talks",
+              "billion",
+              "satellite",
+              "group",
+              "globalstar"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "amazon",
+              "talks",
+              "billion",
+              "satellite",
+              "group",
+              "globalstar"
+            ]
+          },
+          {
+            "id": "brave-sec-1775131605496-2",
+            "title": "Should you book holiday flights now considering jet fuel price spikes?",
+            "summary": "Jet fuel prices have more than doubled in recent weeks amid the ongoing Iran war. Airlines have responded with fare increases and temporary surcharges, so should you secure tickets now or wait?View on euronews",
+            "whyItMatters": "",
+            "involvedParties": [
+              "iran"
+            ],
+            "entities": [
+              "iran"
+            ],
+            "when": "1 day ago",
+            "sourceUrls": [
+              "https://travel.yahoo.com/flights/articles/book-holiday-flights-now-considering-050130269.html"
+            ],
+            "freshness": 6,
+            "urgency": 7,
+            "discoveredAt": "2026-04-02T12:06:45.499Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:business",
+            "sectionCandidates": [
+              "business"
+            ],
+            "topicCandidates": [
+              "travel-consumer-issues"
+            ],
+            "detectedSectionId": "business",
+            "detectedTopicId": null,
+            "region": "iran",
+            "angle": "conflict",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "should you book holiday flights now considering jet fuel price spikes",
+            "canonicalUrl": "https://travel.yahoo.com/flights/articles/book-holiday-flights-now-considering-050130269.html",
+            "discoveryScore": 16.4,
+            "targetedCoverage": false,
+            "eventKey": "business:should you book holiday flights now considering jet fuel price spikes",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605496-2",
+            "url": "https://travel.yahoo.com/flights/articles/book-holiday-flights-now-considering-050130269.html",
+            "canonical_url": "https://travel.yahoo.com/flights/articles/book-holiday-flights-now-considering-050130269.html",
+            "domain": "travel.yahoo.com",
+            "canonical_domain": "travel.yahoo.com",
+            "normalized_title": "should you book holiday flights now considering jet fuel price spikes",
+            "snippet": "Jet fuel prices have more than doubled in recent weeks amid the ongoing Iran war. Airlines have responded with fare increases and temporary surcharges, so should you secure tickets now or wait?View on euronews",
+            "published_at": "1 day ago",
+            "section_id": "business",
+            "topic_id": null,
+            "section_candidates": [
+              "business"
+            ],
+            "topic_candidates": [
+              "travel-consumer-issues"
+            ],
+            "cluster_id": null,
+            "event_key": "business:should you book holiday flights now considering jet fuel price spikes",
+            "keywords": [
+              "book",
+              "holiday",
+              "flights",
+              "considering",
+              "fuel",
+              "price",
+              "spikes",
+              "prices",
+              "more",
+              "than",
+              "doubled",
+              "recent"
+            ],
+            "title_signal_tokens": [
+              "should",
+              "book",
+              "holiday",
+              "flights",
+              "considering",
+              "fuel",
+              "price",
+              "spikes"
+            ],
+            "url_signal_tokens": [
+              "flights",
+              "book",
+              "holiday",
+              "considering"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "iran",
+            "titleTokens": [
+              "book",
+              "holiday",
+              "flights",
+              "considering",
+              "fuel",
+              "price",
+              "spikes"
+            ]
+          },
+          {
+            "id": "brave-sec-1775131605493-1",
+            "title": "Booking Holdings Inc. (BKNG): D. E. Shaw Is Buying This Travel Stock",
+            "summary": "Booking Holdings Inc. (NASDAQ:BKNG) features on the D. E. Shaw Stock Portfolio: Top 10 Stocks to Buy. Booking Holdings Inc. (NASDAQ:BKNG) represents another long-term bet by D. E. Shaw. The fund has held a position in the company since the first quarter of 2018.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "11 hours ago",
+            "sourceUrls": [
+              "https://finance.yahoo.com/markets/stocks/articles/booking-holdings-inc-bkng-d-152300286.html"
+            ],
+            "freshness": 7,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.496Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:business",
+            "sectionCandidates": [
+              "business"
+            ],
+            "topicCandidates": [
+              "economy-markets",
+              "travel-consumer-issues"
+            ],
+            "detectedSectionId": "business",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "markets",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "booking holdings inc bkng d e shaw is buying this travel stock",
+            "canonicalUrl": "https://finance.yahoo.com/markets/stocks/articles/booking-holdings-inc-bkng-d-152300286.html",
+            "discoveryScore": 14.4,
+            "targetedCoverage": false,
+            "eventKey": "business:booking holdings inc bkng d e shaw is buying this travel stock",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605493-1",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/booking-holdings-inc-bkng-d-152300286.html",
+            "canonical_url": "https://finance.yahoo.com/markets/stocks/articles/booking-holdings-inc-bkng-d-152300286.html",
+            "domain": "finance.yahoo.com",
+            "canonical_domain": "finance.yahoo.com",
+            "normalized_title": "booking holdings inc bkng d e shaw is buying this travel stock",
+            "snippet": "Booking Holdings Inc. (NASDAQ:BKNG) features on the D. E. Shaw Stock Portfolio: Top 10 Stocks to Buy. Booking Holdings Inc. (NASDAQ:BKNG) represents another long-term bet by D. E. Shaw. The fund has held a position in the company since the first quarter of 2018.",
+            "published_at": "11 hours ago",
+            "section_id": "business",
+            "topic_id": null,
+            "section_candidates": [
+              "business"
+            ],
+            "topic_candidates": [
+              "economy-markets",
+              "travel-consumer-issues"
+            ],
+            "cluster_id": null,
+            "event_key": "business:booking holdings inc bkng d e shaw is buying this travel stock",
+            "keywords": [
+              "booking",
+              "holdings",
+              "bkng",
+              "shaw",
+              "buying",
+              "travel",
+              "stock",
+              "nasdaq",
+              "features",
+              "portfolio",
+              "stocks",
+              "represents"
+            ],
+            "title_signal_tokens": [
+              "booking",
+              "holdings",
+              "bkng",
+              "shaw",
+              "buying",
+              "travel",
+              "stock"
+            ],
+            "url_signal_tokens": [
+              "markets",
+              "stocks",
+              "booking",
+              "holdings",
+              "bkng"
+            ],
+            "title_url_overlap": 0.6,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "booking",
+              "holdings",
+              "bkng",
+              "shaw",
+              "buying",
+              "travel",
+              "stock"
+            ]
+          },
+          {
+            "id": "google-sec-1775131605578-0",
+            "title": "Rule Breaker Investing: 2026 March Market Cap Game Semifinals",
+            "summary": "2 days ago ... David Gardner: Stock Number 1 is Adyen NV, ticker symbol ADYEY. The Amsterdam-based company provides a global payments platform that lets merchants accept cards ...",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "",
+            "sourceUrls": [
+              "https://www.theglobeandmail.com/investing/markets/stocks/NOW/pressreleases/1062921/rule-breaker-investing-2026-march-market-cap-game-semifinals/"
+            ],
+            "freshness": 4,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.581Z",
+            "provider": "google_trusted",
+            "trustedSource": true,
+            "discoveryLane": "google:culture",
+            "sectionCandidates": [
+              "business",
+              "culture"
+            ],
+            "topicCandidates": [
+              "economy-markets"
+            ],
+            "detectedSectionId": "business",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "markets",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "rule breaker investing 2026 march market cap game semifinals",
+            "canonicalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/now/pressreleases/1062921/rule-breaker-investing-2026-march-market-cap-game-semifinals/",
+            "discoveryScore": 13.4,
+            "targetedCoverage": false,
+            "eventKey": "business:rule breaker investing 2026 march market cap game semifinals",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "google-sec-1775131605578-0",
+            "url": "https://www.theglobeandmail.com/investing/markets/stocks/now/pressreleases/1062921/rule-breaker-investing-2026-march-market-cap-game-semifinals/",
+            "canonical_url": "https://www.theglobeandmail.com/investing/markets/stocks/now/pressreleases/1062921/rule-breaker-investing-2026-march-market-cap-game-semifinals/",
+            "domain": "theglobeandmail.com",
+            "canonical_domain": "theglobeandmail.com",
+            "normalized_title": "rule breaker investing 2026 march market cap game semifinals",
+            "snippet": "2 days ago ... David Gardner: Stock Number 1 is Adyen NV, ticker symbol ADYEY. The Amsterdam-based company provides a global payments platform that lets merchants accept cards ...",
+            "published_at": "2026-04-02T12:06:45.581Z",
+            "section_id": "business",
+            "topic_id": null,
+            "section_candidates": [
+              "business",
+              "culture"
+            ],
+            "topic_candidates": [
+              "economy-markets"
+            ],
+            "cluster_id": null,
+            "event_key": "business:rule breaker investing 2026 march market cap game semifinals",
+            "keywords": [
+              "rule",
+              "breaker",
+              "investing",
+              "2026",
+              "march",
+              "market",
+              "game",
+              "semifinals",
+              "days",
+              "david",
+              "gardner",
+              "stock"
+            ],
+            "title_signal_tokens": [
+              "rule",
+              "breaker",
+              "investing",
+              "2026",
+              "march",
+              "market",
+              "game",
+              "semifinals"
+            ],
+            "url_signal_tokens": [
+              "investing",
+              "markets",
+              "stocks",
+              "pressreleases",
+              "rule",
+              "breaker",
+              "march",
+              "market",
+              "game",
+              "semifinals"
+            ],
+            "title_url_overlap": 0.875,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "rule",
+              "breaker",
+              "investing",
+              "2026",
+              "march",
+              "market",
+              "game",
+              "semifinals"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-04-02-business-general-global-amazon-iran",
       "publishabilityScore": 10,
       "discoveredAt": "2026-04-02T02:38:59.978Z",
-      "lastSeenAt": "2026-04-02T02:42:02.783Z",
-      "expiresAt": "2026-04-04T02:42:02.783Z",
+      "lastSeenAt": "2026-04-02T12:06:45.649Z",
+      "expiresAt": "2026-04-04T12:06:45.648Z",
       "status": "candidate",
       "lastSelectedAt": null,
       "lastPublishedAt": null
@@ -33959,7 +36178,7 @@
           "Cluster contains multiple article-like materials",
           "Taxonomy topic match is specific enough for routing"
         ],
-        "discoveredAt": "2026-04-02T02:41:43.056Z",
+        "discoveredAt": "2026-04-02T12:06:45.465Z",
         "provider": "brave",
         "section_id": "culture",
         "topic_id": "film-tv",
@@ -35242,14 +37461,438 @@
               "francisco",
               "features"
             ]
+          },
+          {
+            "id": "brave-sec-1775131605432-0",
+            "title": "Apple TV's 2-Part Comedy Series Is So Good, You Can Rewatch It Multiple Times",
+            "summary": "Seth Rogen and Rose Byrne's Apple TV comedy series Platonic is a hilarious, comforting watch about two best friends and their many misadventures.",
+            "whyItMatters": "",
+            "involvedParties": [
+              "apple"
+            ],
+            "entities": [
+              "apple"
+            ],
+            "when": "13 hours ago",
+            "sourceUrls": [
+              "https://collider.com/platonic-apple-tv-streaming-seth-rogen-rose-byrne/"
+            ],
+            "freshness": 7,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.451Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:culture",
+            "sectionCandidates": [
+              "culture"
+            ],
+            "topicCandidates": [
+              "film-tv"
+            ],
+            "detectedSectionId": "culture",
+            "detectedTopicId": "film-tv",
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "apple tv s 2 part comedy series is so good you can rewatch it multiple times",
+            "canonicalUrl": "https://collider.com/platonic-apple-tv-streaming-seth-rogen-rose-byrne/",
+            "discoveryScore": 15.4,
+            "targetedCoverage": false,
+            "eventKey": "film-tv:apple tv s 2 part comedy series is so good you can rewatch it multiple times",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605432-0",
+            "url": "https://collider.com/platonic-apple-tv-streaming-seth-rogen-rose-byrne/",
+            "canonical_url": "https://collider.com/platonic-apple-tv-streaming-seth-rogen-rose-byrne/",
+            "domain": "collider.com",
+            "canonical_domain": "collider.com",
+            "normalized_title": "apple tv s 2 part comedy series is so good you can rewatch it multiple times",
+            "snippet": "Seth Rogen and Rose Byrne's Apple TV comedy series Platonic is a hilarious, comforting watch about two best friends and their many misadventures.",
+            "published_at": "13 hours ago",
+            "section_id": "culture",
+            "topic_id": "film-tv",
+            "section_candidates": [
+              "culture"
+            ],
+            "topic_candidates": [
+              "film-tv"
+            ],
+            "cluster_id": null,
+            "event_key": "film-tv:apple tv s 2 part comedy series is so good you can rewatch it multiple times",
+            "keywords": [
+              "apple",
+              "part",
+              "comedy",
+              "series",
+              "good",
+              "rewatch",
+              "multiple",
+              "times",
+              "seth",
+              "rogen",
+              "rose",
+              "byrne"
+            ],
+            "title_signal_tokens": [
+              "apple",
+              "part",
+              "comedy",
+              "series",
+              "good",
+              "rewatch",
+              "multiple",
+              "times"
+            ],
+            "url_signal_tokens": [
+              "platonic",
+              "apple",
+              "streaming",
+              "seth",
+              "rogen",
+              "rose",
+              "byrne"
+            ],
+            "title_url_overlap": 0.14285714285714285,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "apple",
+              "part",
+              "comedy",
+              "series",
+              "good",
+              "rewatch",
+              "multiple",
+              "times"
+            ]
+          },
+          {
+            "id": "brave-sec-1775131605451-1",
+            "title": "Movies and TV shows casting across the US | Entertainment",
+            "summary": "Backstage compiled a list of movies and TV shows casting across the US.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "17 hours ago",
+            "sourceUrls": [
+              "https://dailygazette.com/the_recorder/life_and_arts/entertainment/movies-and-tv-shows-casting-across-the-us/article_b5dc2c6d-6a8e-5607-9f6a-6aa538ffaf07.html"
+            ],
+            "freshness": 7,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.459Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:culture",
+            "sectionCandidates": [
+              "culture"
+            ],
+            "topicCandidates": [
+              "film-tv"
+            ],
+            "detectedSectionId": "culture",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "movies and tv shows casting across the us entertainment dailygazette com",
+            "canonicalUrl": "https://dailygazette.com/the_recorder/life_and_arts/entertainment/movies-and-tv-shows-casting-across-the-us/article_b5dc2c6d-6a8e-5607-9f6a-6aa538ffaf07.html",
+            "discoveryScore": 14.4,
+            "targetedCoverage": false,
+            "eventKey": "culture:movies and tv shows casting across the us entertainment dailygazette com",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605451-1",
+            "url": "https://dailygazette.com/the_recorder/life_and_arts/entertainment/movies-and-tv-shows-casting-across-the-us/article_b5dc2c6d-6a8e-5607-9f6a-6aa538ffaf07.html",
+            "canonical_url": "https://dailygazette.com/the_recorder/life_and_arts/entertainment/movies-and-tv-shows-casting-across-the-us/article_b5dc2c6d-6a8e-5607-9f6a-6aa538ffaf07.html",
+            "domain": "dailygazette.com",
+            "canonical_domain": "dailygazette.com",
+            "normalized_title": "movies and tv shows casting across the us",
+            "snippet": "Backstage compiled a list of movies and TV shows casting across the US.",
+            "published_at": "17 hours ago",
+            "section_id": "culture",
+            "topic_id": null,
+            "section_candidates": [
+              "culture"
+            ],
+            "topic_candidates": [
+              "film-tv"
+            ],
+            "cluster_id": null,
+            "event_key": "culture:movies and tv shows casting across the us entertainment dailygazette com",
+            "keywords": [
+              "movies",
+              "shows",
+              "casting",
+              "across",
+              "backstage",
+              "compiled",
+              "list"
+            ],
+            "title_signal_tokens": [
+              "movies",
+              "shows",
+              "casting",
+              "across"
+            ],
+            "url_signal_tokens": [
+              "recorder",
+              "life",
+              "arts",
+              "entertainment",
+              "movies",
+              "shows",
+              "casting",
+              "across",
+              "b5dc2c6d",
+              "6a8e",
+              "9f6a",
+              "6aa538ffaf07"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "us",
+            "titleTokens": [
+              "movies",
+              "shows",
+              "casting",
+              "across",
+              "entertainment"
+            ]
+          },
+          {
+            "id": "brave-sec-1775131605459-2",
+            "title": "Movies and TV shows casting in Boulder | Features",
+            "summary": "Backstage compiled a list of movies and TV shows casting in Boulder.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "17 hours ago",
+            "sourceUrls": [
+              "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-boulder/article_f74af385-63b0-5e28-8b95-8bb2af6b77d1.html"
+            ],
+            "freshness": 7,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.462Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:culture",
+            "sectionCandidates": [
+              "culture"
+            ],
+            "topicCandidates": [
+              "film-tv"
+            ],
+            "detectedSectionId": "culture",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "movies and tv shows casting in boulder features santafenewmexican com",
+            "canonicalUrl": "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-boulder/article_f74af385-63b0-5e28-8b95-8bb2af6b77d1.html",
+            "discoveryScore": 14.4,
+            "targetedCoverage": false,
+            "eventKey": "culture:movies and tv shows casting in boulder features santafenewmexican com",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605459-2",
+            "url": "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-boulder/article_f74af385-63b0-5e28-8b95-8bb2af6b77d1.html",
+            "canonical_url": "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-boulder/article_f74af385-63b0-5e28-8b95-8bb2af6b77d1.html",
+            "domain": "santafenewmexican.com",
+            "canonical_domain": "santafenewmexican.com",
+            "normalized_title": "movies and tv shows casting in boulder",
+            "snippet": "Backstage compiled a list of movies and TV shows casting in Boulder.",
+            "published_at": "17 hours ago",
+            "section_id": "culture",
+            "topic_id": null,
+            "section_candidates": [
+              "culture"
+            ],
+            "topic_candidates": [
+              "film-tv"
+            ],
+            "cluster_id": null,
+            "event_key": "culture:movies and tv shows casting in boulder features santafenewmexican com",
+            "keywords": [
+              "movies",
+              "shows",
+              "casting",
+              "boulder",
+              "backstage",
+              "compiled",
+              "list"
+            ],
+            "title_signal_tokens": [
+              "movies",
+              "shows",
+              "casting",
+              "boulder"
+            ],
+            "url_signal_tokens": [
+              "life",
+              "features",
+              "movies",
+              "shows",
+              "casting",
+              "boulder",
+              "f74af385",
+              "63b0",
+              "5e28",
+              "8b95",
+              "8bb2af6b77d1"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "movies",
+              "shows",
+              "casting",
+              "boulder",
+              "features"
+            ]
+          },
+          {
+            "id": "brave-sec-1775131605462-3",
+            "title": "Movies and TV shows casting in San Francisco | Features",
+            "summary": "Backstage compiled a list of movies and TV shows casting in San Francisco.",
+            "whyItMatters": "",
+            "involvedParties": [],
+            "entities": [],
+            "when": "17 hours ago",
+            "sourceUrls": [
+              "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-san-francisco/article_1ef8bdb4-b3e8-5d8f-9832-3be56f5d803a.html"
+            ],
+            "freshness": 7,
+            "urgency": 4,
+            "discoveredAt": "2026-04-02T12:06:45.465Z",
+            "provider": "brave",
+            "trustedSource": false,
+            "discoveryLane": "section:culture",
+            "sectionCandidates": [
+              "culture"
+            ],
+            "topicCandidates": [
+              "film-tv"
+            ],
+            "detectedSectionId": "culture",
+            "detectedTopicId": null,
+            "region": "global",
+            "angle": "general",
+            "genericPage": false,
+            "page_kind": "article",
+            "genericity_score": 0,
+            "article_likelihood": 8,
+            "normalizedTitle": "movies and tv shows casting in san francisco features santafenewmexican com",
+            "canonicalUrl": "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-san-francisco/article_1ef8bdb4-b3e8-5d8f-9832-3be56f5d803a.html",
+            "discoveryScore": 14.4,
+            "targetedCoverage": false,
+            "eventKey": "culture:movies and tv shows casting in san francisco features santafenewmexican com",
+            "signalSpecificityScore": 7,
+            "signalSpecificityNotes": [
+              "title_specificity",
+              "article_likelihood",
+              "topic_hint",
+              "named_marker"
+            ],
+            "crossTopicRisk": false,
+            "source_id": "brave-sec-1775131605462-3",
+            "url": "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-san-francisco/article_1ef8bdb4-b3e8-5d8f-9832-3be56f5d803a.html",
+            "canonical_url": "https://santafenewmexican.com/life/features/movies-and-tv-shows-casting-in-san-francisco/article_1ef8bdb4-b3e8-5d8f-9832-3be56f5d803a.html",
+            "domain": "santafenewmexican.com",
+            "canonical_domain": "santafenewmexican.com",
+            "normalized_title": "movies and tv shows casting in san francisco",
+            "snippet": "Backstage compiled a list of movies and TV shows casting in San Francisco.",
+            "published_at": "17 hours ago",
+            "section_id": "culture",
+            "topic_id": null,
+            "section_candidates": [
+              "culture"
+            ],
+            "topic_candidates": [
+              "film-tv"
+            ],
+            "cluster_id": null,
+            "event_key": "culture:movies and tv shows casting in san francisco features santafenewmexican com",
+            "keywords": [
+              "movies",
+              "shows",
+              "casting",
+              "francisco",
+              "backstage",
+              "compiled",
+              "list"
+            ],
+            "title_signal_tokens": [
+              "movies",
+              "shows",
+              "casting",
+              "francisco"
+            ],
+            "url_signal_tokens": [
+              "life",
+              "features",
+              "movies",
+              "shows",
+              "casting",
+              "francisco",
+              "1ef8bdb4",
+              "b3e8",
+              "5d8f",
+              "3be56f5d803a"
+            ],
+            "title_url_overlap": 1,
+            "title_url_mismatch": false,
+            "source_quality_score": 0,
+            "action": "general",
+            "place": "global",
+            "titleTokens": [
+              "movies",
+              "shows",
+              "casting",
+              "francisco",
+              "features"
+            ]
           }
         ]
       },
       "briefId": "evt-2026-04-02-film-tv-general-global-apple",
       "publishabilityScore": 10,
       "discoveredAt": "2026-04-02T02:38:59.922Z",
-      "lastSeenAt": "2026-04-02T02:42:02.783Z",
-      "expiresAt": "2026-04-04T02:42:02.783Z",
+      "lastSeenAt": "2026-04-02T12:06:45.649Z",
+      "expiresAt": "2026-04-04T12:06:45.648Z",
       "status": "candidate",
       "lastSelectedAt": null,
       "lastPublishedAt": null

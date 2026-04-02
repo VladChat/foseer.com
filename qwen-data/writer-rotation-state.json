@@ -1,13 +1,13 @@
 {
-  "totalArticles": 101,
+  "totalArticles": 102,
   "lastReset": null,
   "byWriter": {
     "reporter": {
-      "count": 35,
-      "lastAssigned": 1775045340364,
-      "streak": 0,
-      "authorCursor": 1,
-      "lastAuthorId": "john_smith"
+      "count": 36,
+      "lastAssigned": 1775131626934,
+      "streak": 1,
+      "authorCursor": 2,
+      "lastAuthorId": "emma_carter"
     },
     "explainer": {
       "count": 15,
@@ -19,7 +19,7 @@
     "analyst": {
       "count": 18,
       "lastAssigned": 1775097743283,
-      "streak": 1,
+      "streak": 0,
       "authorCursor": 0,
       "lastAuthorId": "ava_mitchell"
     },
@@ -32,14 +32,6 @@
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "analyst",
-      "timestamp": 1774651098434,
-      "articleType": "report",
-      "beat": "markets",
-      "section": "Business",
-      "topic_id": "crypto-bitcoin"
-    },
     {
       "writerId": "explainer",
       "timestamp": 1774661431627,
@@ -431,6 +423,14 @@
       "beat": "business",
       "section": "Business",
       "topic_id": "companies-deals"
+    },
+    {
+      "writerId": "reporter",
+      "timestamp": 1775131626934,
+      "articleType": "report",
+      "beat": "breaking news",
+      "section": "Tech",
+      "topic_id": "cybersecurity"
     }
   ]
 }

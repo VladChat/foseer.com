@@ -1,0 +1,850 @@
+{
+  "version": 2,
+  "run_id": "pipeline-2026-04-02T12-06-45-418Z",
+  "started_at": "2026-04-02T12:06:45.418Z",
+  "generated_at": "2026-04-02T12:09:08.553Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "discovery_candidates": 34,
+    "event_clusters": 10,
+    "briefs_normalized": 6,
+    "source_packs_assembled": 15,
+    "publishable_candidates": 1,
+    "selected_topic": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+    "selected_topics": [
+      "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ..."
+    ],
+    "articles_attempted": 1,
+    "articles_published": 1,
+    "news_pool": {
+      "total": 48,
+      "active": 38,
+      "published": 10,
+      "ready_candidates": 0
+    },
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 10000,
+      "live_quota": {
+        "brave": 15,
+        "gdelt": 6,
+        "google": 30
+      },
+      "live_rescue_reserved": {
+        "brave": 1,
+        "gdelt": 0,
+        "google": 0
+      },
+      "live_phase_caps": {
+        "brave": {
+          "discovery": 14,
+          "rescue": 1
+        },
+        "gdelt": {
+          "discovery": 6,
+          "rescue": 6
+        },
+        "google": {
+          "discovery": 30,
+          "rescue": 30
+        }
+      },
+      "brave_rescue_max_live_queries": 1,
+      "live_usage": {
+        "brave": 1,
+        "gdelt": 0,
+        "google": 2
+      },
+      "live_usage_by_phase": {
+        "brave": {
+          "discovery": 0,
+          "rescue": 1
+        },
+        "gdelt": {
+          "discovery": 0,
+          "rescue": 0
+        },
+        "google": {
+          "discovery": 0,
+          "rescue": 2
+        }
+      },
+      "provider_circuits": {
+        "gdelt": {
+          "open": true,
+          "locked_until": "2026-04-03T02:01:51.976Z",
+          "reason": "API error: 429 Please limit requests to one every 5 seconds or contact kalev.leetaru5@gmail.com for larger queries.\n\n"
+        }
+      },
+      "cache": {
+        "ttl_hours": 6,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 10,
+            "fresh_files": 1,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 108677
+          },
+          "gdelt": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          },
+          "google": {
+            "files": 20,
+            "fresh_files": 2,
+            "expired_files": 18,
+            "corrupt_files": 0,
+            "size_bytes": 422456
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 143133,
+    "ready_candidates": 0,
+    "additional_ready_candidates": 0,
+    "source_pack_attempts": 1,
+    "source_pack_retry_external_queries": 0,
+    "source_pack_retry_brave_queries": 0,
+    "source_pack_retry_estimated_tokens": 0,
+    "pre_draft_rejected": 0
+  },
+  "provider_stats": {
+    "mode": "cache_refresh_with_live_quota",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": true,
+    "min_search_interval_ms": 10000,
+    "live_quota": {
+      "brave": 15,
+      "gdelt": 6,
+      "google": 30
+    },
+    "live_rescue_reserved": {
+      "brave": 1,
+      "gdelt": 0,
+      "google": 0
+    },
+    "live_phase_caps": {
+      "brave": {
+        "discovery": 14,
+        "rescue": 1
+      },
+      "gdelt": {
+        "discovery": 6,
+        "rescue": 6
+      },
+      "google": {
+        "discovery": 30,
+        "rescue": 30
+      }
+    },
+    "brave_rescue_max_live_queries": 1,
+    "live_usage": {
+      "brave": 1,
+      "gdelt": 0,
+      "google": 2
+    },
+    "live_usage_by_phase": {
+      "brave": {
+        "discovery": 0,
+        "rescue": 1
+      },
+      "gdelt": {
+        "discovery": 0,
+        "rescue": 0
+      },
+      "google": {
+        "discovery": 0,
+        "rescue": 2
+      }
+    },
+    "provider_circuits": {
+      "gdelt": {
+        "open": true,
+        "locked_until": "2026-04-03T02:01:51.976Z",
+        "reason": "API error: 429 Please limit requests to one every 5 seconds or contact kalev.leetaru5@gmail.com for larger queries.\n\n"
+      }
+    },
+    "cache": {
+      "ttl_hours": 6,
+      "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+      "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 10,
+          "fresh_files": 1,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 108677
+        },
+        "gdelt": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        },
+        "google": {
+          "files": 20,
+          "fresh_files": 2,
+          "expired_files": 18,
+          "corrupt_files": 0,
+          "size_bytes": 422456
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14135
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6189
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 285008
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "briefNormalization": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sourcePackAssembly": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "preDraftPreparation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claimMapCreation": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "articleDrafting": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "imageSupport": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "publishing": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "localVerification": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    },
+    "preWriteQualityGate": {
+      "success": true,
+      "error": null,
+      "total": 1,
+      "success_count": 1,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 1,
+    "editorial_pass_count": 1,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "Jaden Ivey Rips Bulls on Instagram Live After Waiver Decision",
+      "slug": "jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "tech",
+          "topic_id": "cybersecurity",
+          "placement_confidence": "high",
+          "placement_reason": [
+            "dominant_publishable_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 4,
+          "unique_domains": 4,
+          "direct_event_source_count": 4,
+          "independent_event_domains": 4,
+          "source_consistency_score": 8.8,
+          "strong_match_count": 4,
+          "core_source_count": 3,
+          "supporting_source_count": 1,
+          "background_source_count": 4,
+          "rejected_source_count": 12
+        },
+        "role_counts": {
+          "core": 4,
+          "background": 6,
+          "signal_only": 4,
+          "reject": 12
+        },
+        "publish_ready_sources": [
+          {
+            "title": "Jaden Ivey Waived by Bulls for Conduct Detrimental to Team",
+            "domain": "bleacherreport.com",
+            "url": "https://bleacherreport.com/articles/25412593-jaden-ivey-waived-bulls-conduct-detrimental-team",
+            "page_kind": "official_release",
+            "topic_id": "public-health",
+            "section_id": "news"
+          },
+          {
+            "title": "Bulls waive Jaden Ivey over anti-LGBTQ rant, citing conduct detrimental to team",
+            "domain": "foxnews.com",
+            "url": "https://www.foxnews.com/sports/bulls-waive-jaden-ivey-after-he-called-nbas-pride-month-celebration-unrighteousness",
+            "page_kind": "article",
+            "topic_id": "public-health",
+            "section_id": "news"
+          },
+          {
+            "title": "Bulls Coach Gives Public Explanation On Team Cutting Jaden Ivey",
+            "domain": "heavy.com",
+            "url": "https://heavy.com/sports/nba/chicago-bulls/bulls-coach-explanation-cutting-jaden-ivey/",
+            "page_kind": "article",
+            "topic_id": "public-health",
+            "section_id": "news"
+          },
+          {
+            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+            "domain": "nytimes.com",
+            "url": "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "news"
+          }
+        ],
+        "excluded_sources": [
+          {
+            "title": "Constantino's sticky ad spending problem",
+            "domain": "politico.com",
+            "url": "https://www.politico.com/newsletters/new-york-playbook/2026/03/30/this-candidates-business-ads-were-paid-for-by-his-campaign-00849835",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "news"
+          },
+          {
+            "title": "Israel passes death penalty law for Palestinians convicted ...",
+            "domain": "reuters.com",
+            "url": "https://www.reuters.com/world/middle-east/israeli-death-penalty-bill-palestinian-murder-convicts-faces-vote-2026-03-30/",
+            "page_kind": "official_release",
+            "topic_id": null,
+            "section_id": "news"
+          },
+          {
+            "title": "Trump administration sues Minnesota for allowing trans athletes in ...",
+            "domain": "theguardian.com",
+            "url": "https://www.theguardian.com/us-news/2026/mar/30/minnesota-trans-athletes-lawsuit-trump-administration",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "news"
+          },
+          {
+            "title": "MAHA fans want action Trump hasn't delivered",
+            "domain": "politico.com",
+            "url": "https://www.politico.com/newsletters/prescription-pulse/2026/03/27/maha-fans-want-action-trump-hasnt-delivered-00847696",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "business"
+          },
+          {
+            "title": "Movies and TV shows casting in Clarksville",
+            "domain": "elkvalleytimes.com",
+            "url": "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "news"
+          },
+          {
+            "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever",
+            "domain": "civilbeat.org",
+            "url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "news"
+          }
+        ],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "Jaden Ivey Waived by Bulls for Conduct Detrimental to Team",
+            "domain": "bleacherreport.com",
+            "page_kind": "official_release",
+            "same_event_score": 22,
+            "topic_fit_score": 3,
+            "source_quality_score": 36,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          },
+          {
+            "role": "core",
+            "title": "Bulls waive Jaden Ivey over anti-LGBTQ rant, citing conduct detrimental to team",
+            "domain": "foxnews.com",
+            "page_kind": "article",
+            "same_event_score": 21,
+            "topic_fit_score": 3,
+            "source_quality_score": 32,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Bulls Coach Gives Public Explanation On Team Cutting Jaden Ivey",
+            "domain": "heavy.com",
+            "page_kind": "article",
+            "same_event_score": 21,
+            "topic_fit_score": 3,
+            "source_quality_score": 29.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+            "domain": "nytimes.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": -2,
+            "source_quality_score": 39,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "US Flu Hospitalizations Reach Highest Levels in Over a Decade",
+            "domain": "ajmc.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 8,
+            "source_quality_score": 13,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Demoralized CDC workforce reels from year of firings, funding cuts, and a shooting",
+            "domain": "hanfordsentinel.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 3,
+            "source_quality_score": 11.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "NBC News Author Aria Bendix",
+            "domain": "nbcnews.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 8,
+            "source_quality_score": 10.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Measles Update: March 27, 2026",
+            "domain": "contagionlive.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 8,
+            "source_quality_score": 10.5,
+            "article_likelihood": 8,
+            "genericity_score": 2
+          },
+          {
+            "role": "background",
+            "title": "Measles and other consequences of a leaderless CDC",
+            "domain": "healthbeat.org",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 7,
+            "source_quality_score": 9.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Speed, scale of antiviral prevention may cut hospitalizations during flu outbreaks in nursing homes",
+            "domain": "cidrap.umn.edu",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 7,
+            "source_quality_score": 9.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "signal_only",
+            "title": "Ofcom to investigate complaints of climate change denial",
+            "domain": "wattsupwiththat.com",
+            "page_kind": "official_release",
+            "same_event_score": 0,
+            "topic_fit_score": -1,
+            "source_quality_score": 9,
+            "article_likelihood": 9,
+            "genericity_score": 1
+          },
+          {
+            "role": "signal_only",
+            "title": "How one family’s bipolar disorder experience led to more than $1 billion for the Broad Institute",
+            "domain": "rochesterfirst.com",
+            "page_kind": "official_release",
+            "same_event_score": 0,
+            "topic_fit_score": -1,
+            "source_quality_score": 9,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 4,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": []
+        }
+      },
+      "tags": {
+        "tags": [
+          "Cybersecurity",
+          "Report"
+        ],
+        "tag_slugs": [
+          "cybersecurity",
+          "report"
+        ],
+        "primary_topic_tag": "Cybersecurity",
+        "primary_topic_slug": "cybersecurity",
+        "warnings": [
+          "Canonical tag set is thin (2)"
+        ],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "Cybersecurity",
+            "slug": "cybersecurity",
+            "score": 40,
+            "reason": "Primary topic tag validated from topic_id=cybersecurity",
+            "fallback": false
+          },
+          {
+            "label": "Report",
+            "slug": "report",
+            "score": 10,
+            "reason": "Format from article type: report",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "Canonical tag set is below target floor (3), accepted due sparse evidence"
+          ]
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "cybersecurity",
+              "label": "Cybersecurity",
+              "type": "topic"
+            },
+            {
+              "slug": "report",
+              "label": "Report",
+              "type": "format"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "cybersecurity",
+            "topic_label": "Cybersecurity",
+            "supported": true,
+            "matched_aliases": [
+              "security"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "unsplash",
+        "image_path": "~/assets/images/library/unsplash/aytvc9yptpo/cover.jpg",
+        "source_url": "https://unsplash.com/photos/group-of-women-holding-black-and-white-banner-aytvc9YPtpo",
+        "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+        "query_used": "rips waiver decision photo",
+        "relevance_tier": "acceptable",
+        "article_relevance_score": 100,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 100,
+        "scene_type": "office",
+        "visual_type": "photo",
+        "entity_hints": [
+          "group",
+          "women",
+          "holding",
+          "black",
+          "white",
+          "banner",
+          "tech",
+          "rips"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "Jaden Ivey technology photo",
+          "Jaden Ivey photo",
+          "Jaden Ivey portrait",
+          "global Jaden Ivey photo",
+          "Bulls technology photo",
+          "rips waiver decision photo",
+          "technology photo",
+          "Bulls photo",
+          "Cybersecurity photo",
+          "cyber photo",
+          "technology office photo",
+          "computer hardware photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Jaden Ivey technology photo",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "Jaden Ivey photo",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "Jaden Ivey portrait",
+            "queryLevel": "strict",
+            "status": "ranked_candidate",
+            "provider": "unsplash",
+            "providerAssetId": "yb8hFlMGcZ8",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "global Jaden Ivey photo",
+            "queryLevel": "strict",
+            "status": "ranked_candidate",
+            "provider": "unsplash",
+            "providerAssetId": "A0yymZ4eEkU",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Bulls technology photo",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "queryLevel": "strict",
+            "status": "level_complete",
+            "attemptedQueries": 5,
+            "rankedCandidates": 2,
+            "bestProvider": "unsplash",
+            "bestFinalScore": 100,
+            "bestTier": "acceptable"
+          },
+          {
+            "query": "rips waiver decision photo",
+            "queryLevel": "relaxed",
+            "status": "ranked_candidate",
+            "provider": "unsplash",
+            "providerAssetId": "aytvc9YPtpo",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "technology photo",
+            "queryLevel": "relaxed",
+            "status": "no_eligible_candidate",
+            "candidateCount": 45
+          },
+          {
+            "query": "Bulls photo",
+            "queryLevel": "relaxed",
+            "status": "ranked_candidate",
+            "provider": "unsplash",
+            "providerAssetId": "ffqsBpHWsp4",
+            "finalScore": 100,
+            "articleRelevanceScore": 100,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "Cybersecurity photo",
+            "queryLevel": "relaxed",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "5473960",
+            "finalScore": 70,
+            "articleRelevanceScore": 59,
+            "assetQualityScore": 100,
+            "tier": "acceptable"
+          },
+          {
+            "query": "cyber photo",
+            "queryLevel": "relaxed",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "5380597",
+            "finalScore": 55,
+            "articleRelevanceScore": 38,
+            "assetQualityScore": 100,
+            "tier": "usable"
+          },
+          {
+            "queryLevel": "relaxed",
+            "status": "level_complete",
+            "attemptedQueries": 5,
+            "rankedCandidates": 4,
+            "bestProvider": "unsplash",
+            "bestFinalScore": 100,
+            "bestTier": "acceptable"
+          }
+        ],
+        "best_online_decision": {
+          "query": "rips waiver decision photo",
+          "provider": "unsplash",
+          "providerAssetId": "aytvc9YPtpo",
+          "queryLevel": "relaxed",
+          "finalScore": 100,
+          "articleRelevanceScore": 100,
+          "assetQualityScore": 100,
+          "tier": "acceptable"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "unsplash",
+          "query_used": "rips waiver decision photo",
+          "article_relevance_score": 100,
+          "relevance_tier": "acceptable",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "rips",
+            "waiver",
+            "decision"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.json",
+        "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.mdx",
+        "expected_url": "/article/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio",
+        "verified_url": null
+      }
+    }
+  ]
+}

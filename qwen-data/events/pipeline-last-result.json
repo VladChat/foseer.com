@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-04-02T02:39:27.997Z",
+  "timestamp": "2026-04-02T12:09:08.554Z",
   "success": true,
   "hard_blocker": null,
-  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.mdx",
-  "verified_url": "/article/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
+  "published_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.mdx",
+  "verified_url": "/article/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio",
   "stages": {
     "discovery": {
       "stage": "discovery",
@@ -11,7 +11,7 @@
       "error": null,
       "data": {
         "candidatesCount": 34,
-        "discoveredPoolTotal": 151,
+        "discoveredPoolTotal": 173,
         "queryUsage": {
           "brave": 7,
           "google": 2,
@@ -58,7 +58,7 @@
         "attempts": [
           {
             "attempt": "initial",
-            "source_packs_assembled": 19,
+            "source_packs_assembled": 15,
             "publishable_candidates": 1,
             "selected_candidates": 1
           }
@@ -69,7 +69,7 @@
           "maxBraveQueries": 1,
           "maxTokenBudget": 0
         },
-        "sourcePackSelectionCandidateLimit": 16,
+        "sourcePackSelectionCandidateLimit": 6,
         "retryDiagnostics": [],
         "retryUsage": {
           "external_queries": 0,
@@ -79,14 +79,13 @@
         "selectedCount": 1,
         "selectedTopics": [
           {
-            "title": "NCAA approves major penalties for programs that circumvent ...",
-            "eventId": "evt-2026-04-02-sports-general-global",
-            "sources": 2,
-            "uniqueDomains": 2,
-            "section_id": "sports",
-            "topic_id": "transfers-business",
+            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+            "eventId": "evt-2026-04-02-public-health-general-global",
+            "sources": 4,
+            "uniqueDomains": 4,
+            "section_id": "health",
+            "topic_id": "public-health",
             "gate_notes": [
-              "Large cluster retained extra materials as background/signal; publishable pack remains thin",
               "Role-aware one-event source-pack gate passed"
             ],
             "stage3_editorial_gate": {
@@ -101,43 +100,42 @@
           "additionalReadyCandidates": [],
           "selectedCandidates": [
             {
-              "identityKey": "cluster:evt-2026-04-02-sports-general-global",
-              "briefId": "evt-2026-04-02-sports-general-global",
-              "title": "NCAA approves major penalties for programs that circumvent ...",
-              "normalizedTitle": "ncaa approves major penalties programs that circumvent",
-              "section_id": "sports",
-              "topic_id": "transfers-business",
+              "identityKey": "cluster:evt-2026-04-02-public-health-general-global",
+              "briefId": "evt-2026-04-02-public-health-general-global",
+              "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+              "normalizedTitle": "jaden ivey on ig being waived by bulls they re liars bro",
+              "section_id": "health",
+              "topic_id": "public-health",
               "articleType": "analysis",
-              "selectionOrigin": "pool",
-              "poolIdentityKey": "cluster:evt-2026-04-02-sports-general-global",
+              "selectionOrigin": "current_run",
+              "poolIdentityKey": "cluster:evt-2026-04-02-public-health-general-global",
               "rank": 1,
-              "score": 53.8,
+              "score": 73.6,
               "scoreNotes": [
-                "undercovered_section:sports",
-                "section_penalty:4",
-                "topic_penalty:18",
-                "region_penalty:36",
+                "section_penalty:16",
+                "topic_penalty:2",
+                "region_penalty:40",
+                "angle_penalty:34",
                 "cluster_repeat:1",
-                "entity_penalty:24",
-                "domains:2",
-                "consistency:5",
-                "core:2",
-                "supporting:0"
+                "entity_penalty:26",
+                "domains:4",
+                "consistency:8.8",
+                "core:3",
+                "supporting:1"
               ],
-              "sourceCount": 2,
-              "uniqueDomains": 2,
-              "directEventSourceCount": 2,
-              "independentEventDomains": 2,
+              "sourceCount": 4,
+              "uniqueDomains": 4,
+              "directEventSourceCount": 4,
+              "independentEventDomains": 4,
               "gateDecision": "PASS",
               "gateNotes": [
-                "Large cluster retained extra materials as background/signal; publishable pack remains thin",
                 "Role-aware one-event source-pack gate passed"
               ],
-              "discoveredAt": "2026-04-02T02:38:59.975Z",
-              "firstQueuedAt": "2026-04-02T02:39:01.124Z",
-              "lastQueuedAt": "2026-04-02T02:39:01.124Z",
+              "discoveredAt": "2026-04-02T12:06:45.608Z",
+              "firstQueuedAt": "2026-04-02T12:07:06.682Z",
+              "lastQueuedAt": "2026-04-02T12:07:06.682Z",
               "status": "selected",
-              "lastSelectedAt": "2026-04-02T02:39:01.124Z",
+              "lastSelectedAt": "2026-04-02T12:07:06.682Z",
               "lastPublishedAt": null,
               "publishedSlug": null,
               "selectedByWorkflow": null,
@@ -148,10 +146,18 @@
           ],
           "filePath": "/home/runner/work/foseer.com/foseer.com/qwen-data/events/ready-article-candidates.json",
           "selectedIdentityKeys": [
-            "cluster:evt-2026-04-02-sports-general-global"
+            "cluster:evt-2026-04-02-public-health-general-global"
           ]
         },
-        "duplicateRejectedCandidates": [],
+        "duplicateRejectedCandidates": [
+          {
+            "identityKey": "cluster:evt-2026-04-02-sports-general-global",
+            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "origin": "current_run",
+            "reason": "identity_already_published",
+            "attempt": "initial"
+          }
+        ],
         "candidatesEvaluated": 1
       }
     },
@@ -166,18 +172,18 @@
         "rejected": [],
         "items": [
           {
-            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
             "success": true,
             "error": null,
             "data": {
-              "section_id": "sports",
-              "topic_id": "transfers-business",
+              "section_id": "tech",
+              "topic_id": "cybersecurity",
               "tags": [
-                "Transfers & Business",
+                "Public Health",
                 "Report"
               ],
               "tag_slugs": [
-                "transfers-business",
+                "public-health",
                 "report"
               ],
               "thin_tag_set_before_draft": false,
@@ -199,7 +205,7 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
             "success": true,
             "error": null,
             "data": {
@@ -222,11 +228,11 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
             "success": true,
             "error": null,
             "data": {
-              "wordCount": 1249,
+              "wordCount": 1062,
               "articleType": "report",
               "quality": "strong",
               "safeForPublishing": true
@@ -245,12 +251,12 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
             "success": true,
             "error": null,
             "data": {
-              "provider": "pixabay",
-              "imagePath": "~/assets/images/library/pixabay/1940691/cover.jpg",
+              "provider": "unsplash",
+              "imagePath": "~/assets/images/library/unsplash/aytvc9yptpo/cover.jpg",
               "hasAltText": true
             }
           }
@@ -267,17 +273,17 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
             "success": true,
             "error": null,
             "data": {
-              "filename": "2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.mdx",
-              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.mdx",
-              "canonicalSlug": "2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
-              "expectedUrl": "/article/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
-              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.json",
-              "section_id": "sports",
-              "topic_id": "transfers-business"
+              "filename": "2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.mdx",
+              "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.mdx",
+              "canonicalSlug": "2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio",
+              "expectedUrl": "/article/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio",
+              "manifestPath": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.json",
+              "section_id": "tech",
+              "topic_id": "cybersecurity"
             }
           }
         ]
@@ -293,13 +299,13 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
             "success": true,
             "error": null,
             "data": {
               "skipped": true,
               "reason": "CI environment: localhost verification skipped; publish + build checks passed",
-              "expectedUrl": "/article/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port"
+              "expectedUrl": "/article/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio"
             }
           }
         ]
@@ -315,22 +321,21 @@
         "failureCount": 0,
         "items": [
           {
-            "title": "NCAA approves major penalties for programs that circumvent ...",
+            "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
             "success": true,
             "error": null,
             "data": {
               "mode": "article",
-              "source_count": 2,
-              "unique_domains": 2,
+              "source_count": 4,
+              "unique_domains": 4,
               "trusted_reporting_sources": 1,
-              "official_primary_sources": 0,
+              "official_primary_sources": 1,
               "coherence_score": 1,
               "min_sources": 2,
               "min_domains": 2,
               "min_coherence": 0.45,
               "gate_passed": true,
               "gate_notes": [
-                "Large cluster retained extra materials as background/signal; publishable pack remains thin",
                 "Role-aware one-event source-pack gate passed"
               ],
               "stage3_blocking_errors": [],
@@ -340,7 +345,7 @@
                 "pass": false,
                 "reason": "disabled"
               },
-              "brief_title": "NCAA approves major penalties for programs that circumvent ..."
+              "brief_title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ..."
             }
           }
         ]
@@ -349,9 +354,9 @@
   },
   "selected": {
     "brief": {
-      "id": "evt-2026-04-02-sports-general-global",
-      "title": "NCAA approves major penalties for programs that circumvent ...",
-      "whatHappened": "7 hours ago ... FBS programs that add or sign players who withdraw from their schools but bypass the transfer portal window will have their head coaches suspended for six games ...",
+      "id": "evt-2026-04-02-public-health-general-global",
+      "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+      "whatHappened": "1 day ago ... Ivey, whose season was shut down on Thursday while he manages left knee pain, has taken to Instagram live three times since the Bulls announced the news of him ...",
       "whoIsInvolved": "Unspecified",
       "involvedParties": [
         "Unspecified"
@@ -359,21 +364,18 @@
       "entities": [
         "Unspecified"
       ],
-      "when": "2026-04-02T02:38:59.975Z",
+      "when": "2026-04-02T12:06:45.608Z",
       "where": "Not specified",
-      "whyItMatters": "The development could reshape competition, fan attention, or the business side of sports.",
-      "developmentStage": "resolved",
+      "whyItMatters": "The development matters because it may affect technology adoption, competition, regulation, or security decisions.",
+      "developmentStage": "confirmed",
       "sourceUrls": [
-        "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
-        "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
-        "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/",
-        "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/",
-        "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/",
-        "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/",
-        "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/",
-        "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/"
+        "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html",
+        "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
+        "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html",
+        "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+        "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever"
       ],
-      "publishabilityScore": 9,
+      "publishabilityScore": 10,
       "publishabilityNotes": [
         "Has a usable summary sentence",
         "Parties remain unclear",
@@ -381,54 +383,58 @@
         "Multiple source URLs already attached",
         "Clustered across multiple discovery hits",
         "Cluster contains multiple article-like materials",
+        "Taxonomy topic match is specific enough for routing",
         "At least one trusted source hit is present"
       ],
-      "discoveredAt": "2026-04-02T02:38:59.975Z",
+      "discoveredAt": "2026-04-02T12:06:45.608Z",
       "provider": "google_trusted",
-      "section_id": "sports",
-      "topic_id": "transfers-business",
+      "section_id": "tech",
+      "topic_id": "cybersecurity",
       "region": "global",
-      "angle": "events",
-      "cluster_id": "evt-2026-04-02-sports-general-global",
-      "eventKey": "2026-04-02:sports-general-global",
-      "cluster_size": 8,
-      "article_rich_count": 8,
+      "angle": "general",
+      "cluster_id": "evt-2026-04-02-public-health-general-global",
+      "eventKey": "2026-04-02:public-health-general-global",
+      "cluster_size": 5,
+      "article_rich_count": 5,
       "generic_page_count": 0,
       "discoveryContext": [
         {
-          "id": "brave-sec-1775097539901-1",
-          "title": "NCAA Makes Transfer Portal Rule Changes With Huge Penalties",
-          "summary": "Effective immediately, college football programs could face steep penalties for breaking the new transfer portal rules.",
+          "id": "brave-targeted-1775131605605-4",
+          "title": "Demoralized CDC workforce reels from year of firings, funding cuts, and a shooting | National News",
+          "summary": "On the coffee table at her home in Atlanta, Sarah Boim has a pile of documents from her old job at the Centers for Disease Control and Prevention. They are",
           "whyItMatters": "",
           "involvedParties": [],
           "entities": [],
-          "when": "4 hours ago",
+          "when": "18 hours ago",
           "sourceUrls": [
-            "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417"
+            "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html"
           ],
-          "freshness": 8,
-          "urgency": 6,
-          "discoveredAt": "2026-04-02T02:38:59.903Z",
+          "freshness": 7,
+          "urgency": 4,
+          "discoveredAt": "2026-04-02T12:06:45.608Z",
           "provider": "brave",
           "trustedSource": false,
-          "discoveryLane": "section:sports",
+          "discoveryLane": "targeted:section:health:topic:public-health",
           "sectionCandidates": [
-            "sports"
+            "news",
+            "health"
           ],
-          "topicCandidates": [],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
+          "topicCandidates": [
+            "public-health"
+          ],
+          "detectedSectionId": "news",
+          "detectedTopicId": "public-health",
           "region": "global",
-          "angle": "transfers",
+          "angle": "general",
           "genericPage": false,
           "page_kind": "article",
-          "genericity_score": 2,
+          "genericity_score": 0,
           "article_likelihood": 8,
-          "normalizedTitle": "ncaa makes transfer portal rule changes with huge penalties newsweek",
-          "canonicalUrl": "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
-          "discoveryScore": 17.4,
-          "targetedCoverage": false,
-          "eventKey": "sports:ncaa makes transfer portal rule changes with huge penalties newsweek",
+          "normalizedTitle": "demoralized cdc workforce reels from year of firings funding cuts and a shooting national news hanfordsentinel com",
+          "canonicalUrl": "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html",
+          "discoveryScore": 15.2,
+          "targetedCoverage": true,
+          "eventKey": "public-health:demoralized cdc workforce reels from year of firings funding cuts and a shooting",
           "signalSpecificityScore": 6,
           "signalSpecificityNotes": [
             "title_specificity",
@@ -436,55 +442,62 @@
             "named_marker"
           ],
           "crossTopicRisk": false,
-          "source_id": "brave-sec-1775097539901-1",
-          "url": "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
-          "canonical_url": "https://newsweek.com/sports/ncaa/ncaa-makes-transfer-portal-rule-changes-with-huge-penalties-11771417",
-          "domain": "newsweek.com",
-          "canonical_domain": "newsweek.com",
-          "normalized_title": "ncaa makes transfer portal rule changes with huge penalties",
-          "snippet": "Effective immediately, college football programs could face steep penalties for breaking the new transfer portal rules.",
-          "published_at": "4 hours ago",
-          "section_id": "sports",
-          "topic_id": null,
+          "source_id": "brave-targeted-1775131605605-4",
+          "url": "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html",
+          "canonical_url": "https://hanfordsentinel.com/news/national/demoralized-cdc-workforce-reels-from-year-of-firings-funding-cuts-and-a-shooting/article_5d700b87-6320-510f-b958-83e9428d3e04.html",
+          "domain": "hanfordsentinel.com",
+          "canonical_domain": "hanfordsentinel.com",
+          "normalized_title": "demoralized cdc workforce reels from year of firings funding cuts and a shooting",
+          "snippet": "On the coffee table at her home in Atlanta, Sarah Boim has a pile of documents from her old job at the Centers for Disease Control and Prevention. They are",
+          "published_at": "18 hours ago",
+          "section_id": "news",
+          "topic_id": "public-health",
           "section_candidates": [
-            "sports"
+            "news",
+            "health"
           ],
-          "topic_candidates": [],
+          "topic_candidates": [
+            "public-health"
+          ],
           "cluster_id": null,
-          "event_key": "sports:ncaa makes transfer portal rule changes with huge penalties newsweek",
+          "event_key": "public-health:demoralized cdc workforce reels from year of firings funding cuts and a shooting",
           "keywords": [
-            "ncaa",
-            "makes",
-            "transfer",
-            "portal",
-            "rule",
-            "changes",
-            "huge",
-            "penalties",
-            "effective",
-            "immediately",
-            "college",
-            "football"
+            "demoralized",
+            "workforce",
+            "reels",
+            "year",
+            "firings",
+            "funding",
+            "cuts",
+            "shooting",
+            "coffee",
+            "table",
+            "home",
+            "atlanta"
           ],
           "title_signal_tokens": [
-            "ncaa",
-            "makes",
-            "transfer",
-            "portal",
-            "rule",
-            "changes",
-            "huge",
-            "penalties"
+            "demoralized",
+            "workforce",
+            "reels",
+            "year",
+            "firings",
+            "funding",
+            "cuts",
+            "shooting"
           ],
           "url_signal_tokens": [
-            "ncaa",
-            "makes",
-            "transfer",
-            "portal",
-            "rule",
-            "changes",
-            "huge",
-            "penalties"
+            "national",
+            "demoralized",
+            "workforce",
+            "reels",
+            "year",
+            "firings",
+            "funding",
+            "cuts",
+            "shooting",
+            "5d700b87",
+            "510f",
+            "b958"
           ],
           "title_url_overlap": 1,
           "title_url_mismatch": false,
@@ -492,734 +505,459 @@
           "action": "general",
           "place": "global",
           "titleTokens": [
-            "ncaa",
-            "makes",
-            "transfer",
-            "portal",
-            "rule",
-            "changes",
-            "huge",
-            "penalties"
+            "demoralized",
+            "workforce",
+            "reels",
+            "year",
+            "firings",
+            "funding",
+            "cuts",
+            "shooting",
+            "national"
           ]
         },
         {
-          "id": "google-sec-1775097539954-1",
-          "title": "NCAA approves major penalties for programs that circumvent ...",
-          "summary": "7 hours ago ... FBS programs that add or sign players who withdraw from their schools but bypass the transfer portal window will have their head coaches suspended for six games ...",
+          "id": "google-sec-1775131605564-5",
+          "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+          "summary": "1 day ago ... Ivey, whose season was shut down on Thursday while he manages left knee pain, has taken to Instagram live three times since the Bulls announced the news of him ...",
           "whyItMatters": "",
           "involvedParties": [],
           "entities": [],
           "when": "",
           "sourceUrls": [
-            "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/"
-          ],
-          "freshness": 4,
-          "urgency": 6,
-          "discoveredAt": "2026-04-02T02:38:59.956Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:sports",
-          "sectionCandidates": [
-            "sports"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "transfers",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 10,
-          "normalizedTitle": "ncaa approves major penalties for programs that circumvent",
-          "canonicalUrl": "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
-          "discoveryScore": 15.6,
-          "targetedCoverage": false,
-          "eventKey": "sports:ncaa approves major penalties for programs that circumvent",
-          "signalSpecificityScore": 5,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "google-sec-1775097539954-1",
-          "url": "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
-          "canonical_url": "https://www.nytimes.com/athletic/7164602/2026/04/01/ncaa-rules-transfer-portal-spring-window-roster/",
-          "domain": "nytimes.com",
-          "canonical_domain": "nytimes.com",
-          "normalized_title": "ncaa approves major penalties for programs that circumvent",
-          "snippet": "7 hours ago ... FBS programs that add or sign players who withdraw from their schools but bypass the transfer portal window will have their head coaches suspended for six games ...",
-          "published_at": "2026-04-02T02:38:59.956Z",
-          "section_id": "sports",
-          "topic_id": null,
-          "section_candidates": [
-            "sports"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "sports:ncaa approves major penalties for programs that circumvent",
-          "keywords": [
-            "ncaa",
-            "approves",
-            "major",
-            "penalties",
-            "programs",
-            "circumvent",
-            "hours",
-            "sign",
-            "players",
-            "withdraw",
-            "their",
-            "schools"
-          ],
-          "title_signal_tokens": [
-            "ncaa",
-            "approves",
-            "major",
-            "penalties",
-            "programs",
-            "circumvent"
-          ],
-          "url_signal_tokens": [
-            "athletic",
-            "ncaa",
-            "rules",
-            "transfer",
-            "portal",
-            "spring",
-            "window",
-            "roster"
-          ],
-          "title_url_overlap": 0.16666666666666666,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "signing",
-          "place": "global",
-          "titleTokens": [
-            "ncaa",
-            "approves",
-            "major",
-            "penalties",
-            "programs",
-            "circumvent"
-          ]
-        },
-        {
-          "id": "google-sec-1775097539952-0",
-          "title": "World Cup 2026 – Groups, bracket and predictions with all 48 teams ...",
-          "summary": "20 hours ago ... With little more than two months until the start of the World Cup, we finally know the full 48-team line-up for this summer's tournament.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/"
+            "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/"
           ],
           "freshness": 4,
           "urgency": 4,
-          "discoveredAt": "2026-04-02T02:38:59.954Z",
+          "discoveredAt": "2026-04-02T12:06:45.567Z",
           "provider": "google_trusted",
           "trustedSource": true,
           "discoveryLane": "google:sports",
           "sectionCandidates": [
+            "news",
             "sports"
           ],
           "topicCandidates": [],
-          "detectedSectionId": "sports",
+          "detectedSectionId": "news",
           "detectedTopicId": null,
           "region": "global",
-          "angle": "events",
+          "angle": "announcement",
           "genericPage": false,
           "page_kind": "article",
           "genericity_score": 0,
           "article_likelihood": 10,
-          "normalizedTitle": "world cup 2026 groups bracket and predictions with all 48 teams",
-          "canonicalUrl": "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/",
-          "discoveryScore": 13.6,
+          "normalizedTitle": "jaden ivey on ig live after being waived by bulls they re liars bro",
+          "canonicalUrl": "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
+          "discoveryScore": 14.6,
           "targetedCoverage": false,
-          "eventKey": "sports:world cup 2026 groups bracket and predictions with all 48 teams",
-          "signalSpecificityScore": 5,
+          "eventKey": "news:jaden ivey on ig live after being waived by bulls they re liars bro",
+          "signalSpecificityScore": 6,
           "signalSpecificityNotes": [
             "title_specificity",
             "article_likelihood",
             "named_marker"
           ],
           "crossTopicRisk": false,
-          "source_id": "google-sec-1775097539952-0",
-          "url": "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/",
-          "canonical_url": "https://www.nytimes.com/athletic/7159194/2026/04/01/world-cup-2026-bracket-predictions/",
+          "source_id": "google-sec-1775131605564-5",
+          "url": "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
+          "canonical_url": "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
           "domain": "nytimes.com",
           "canonical_domain": "nytimes.com",
-          "normalized_title": "world cup 2026 groups bracket and predictions with all 48 teams",
-          "snippet": "20 hours ago ... With little more than two months until the start of the World Cup, we finally know the full 48-team line-up for this summer's tournament.",
-          "published_at": "2026-04-02T02:38:59.954Z",
-          "section_id": "sports",
+          "normalized_title": "jaden ivey on ig live after being waived by bulls they re liars bro",
+          "snippet": "1 day ago ... Ivey, whose season was shut down on Thursday while he manages left knee pain, has taken to Instagram live three times since the Bulls announced the news of him ...",
+          "published_at": "2026-04-02T12:06:45.567Z",
+          "section_id": "news",
           "topic_id": null,
           "section_candidates": [
+            "news",
             "sports"
           ],
           "topic_candidates": [],
           "cluster_id": null,
-          "event_key": "sports:world cup 2026 groups bracket and predictions with all 48 teams",
+          "event_key": "news:jaden ivey on ig live after being waived by bulls they re liars bro",
           "keywords": [
-            "world",
-            "2026",
-            "groups",
-            "bracket",
-            "predictions",
-            "teams",
-            "hours",
-            "little",
+            "jaden",
+            "ivey",
+            "being",
+            "waived",
+            "bulls",
+            "they",
+            "liars",
+            "whose",
+            "season",
+            "shut",
+            "down",
+            "thursday"
+          ],
+          "title_signal_tokens": [
+            "jaden",
+            "ivey",
+            "being",
+            "waived",
+            "bulls",
+            "they",
+            "liars"
+          ],
+          "url_signal_tokens": [
+            "athletic",
+            "jaden",
+            "ivey",
+            "waived",
+            "bulls",
+            "pride",
+            "month"
+          ],
+          "title_url_overlap": 0.5714285714285714,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "jaden",
+            "ivey",
+            "being",
+            "waived",
+            "bulls",
+            "they",
+            "liars"
+          ]
+        },
+        {
+          "id": "brave-sec-1775131605465-4",
+          "title": "Movies and TV shows casting in Clarksville | TN State News",
+          "summary": "Backstage compiled a list of movies and TV shows casting in Clarksville.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "17 hours ago",
+          "sourceUrls": [
+            "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html"
+          ],
+          "freshness": 7,
+          "urgency": 4,
+          "discoveredAt": "2026-04-02T12:06:45.468Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:culture",
+          "sectionCandidates": [
+            "news",
+            "culture"
+          ],
+          "topicCandidates": [
+            "film-tv"
+          ],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "movies and tv shows casting in clarksville tn state news elkvalleytimes com",
+          "canonicalUrl": "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html",
+          "discoveryScore": 14.4,
+          "targetedCoverage": false,
+          "eventKey": "news:movies and tv shows casting in clarksville tn state news elkvalleytimes com",
+          "signalSpecificityScore": 7,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "article_likelihood",
+            "topic_hint",
+            "named_marker"
+          ],
+          "crossTopicRisk": false,
+          "source_id": "brave-sec-1775131605465-4",
+          "url": "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html",
+          "canonical_url": "https://elkvalleytimes.com/news/state/movies-and-tv-shows-casting-in-clarksville/article_64d66046-ced2-5c03-88e4-1c1f03abb4ca.html",
+          "domain": "elkvalleytimes.com",
+          "canonical_domain": "elkvalleytimes.com",
+          "normalized_title": "movies and tv shows casting in clarksville",
+          "snippet": "Backstage compiled a list of movies and TV shows casting in Clarksville.",
+          "published_at": "17 hours ago",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news",
+            "culture"
+          ],
+          "topic_candidates": [
+            "film-tv"
+          ],
+          "cluster_id": null,
+          "event_key": "news:movies and tv shows casting in clarksville tn state news elkvalleytimes com",
+          "keywords": [
+            "movies",
+            "shows",
+            "casting",
+            "clarksville",
+            "backstage",
+            "compiled",
+            "list"
+          ],
+          "title_signal_tokens": [
+            "movies",
+            "shows",
+            "casting",
+            "clarksville"
+          ],
+          "url_signal_tokens": [
+            "state",
+            "movies",
+            "shows",
+            "casting",
+            "clarksville",
+            "64d66046",
+            "ced2",
+            "5c03",
+            "88e4",
+            "1c1f03abb4ca"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "movies",
+            "shows",
+            "casting",
+            "clarksville",
+            "state"
+          ]
+        },
+        {
+          "id": "brave-sec-1775131605469-0",
+          "title": "Ofcom to investigate complaints of climate change denial",
+          "summary": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "2 days ago",
+          "sourceUrls": [
+            "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/"
+          ],
+          "freshness": 5,
+          "urgency": 4,
+          "discoveredAt": "2026-04-02T12:06:45.479Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:news",
+          "sectionCandidates": [
+            "news"
+          ],
+          "topicCandidates": [
+            "climate-extreme-weather"
+          ],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "official_release",
+          "genericity_score": 1,
+          "article_likelihood": 9,
+          "normalizedTitle": "ofcom to investigate complaints of climate change denial watts up with that",
+          "canonicalUrl": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+          "discoveryScore": 13,
+          "targetedCoverage": false,
+          "eventKey": "news:ofcom to investigate complaints of climate change denial watts up with that",
+          "signalSpecificityScore": 7,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "article_likelihood",
+            "topic_hint",
+            "named_marker"
+          ],
+          "crossTopicRisk": false,
+          "source_id": "brave-sec-1775131605469-0",
+          "url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+          "canonical_url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+          "domain": "wattsupwiththat.com",
+          "canonical_domain": "wattsupwiththat.com",
+          "normalized_title": "ofcom to investigate complaints of climate change denial",
+          "snippet": "And it won’t stop with climate change. How long before we are not allowed to call Starmer the worst PM ever? Or dare to criticise his Government?",
+          "published_at": "2 days ago",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news"
+          ],
+          "topic_candidates": [
+            "climate-extreme-weather"
+          ],
+          "cluster_id": null,
+          "event_key": "news:ofcom to investigate complaints of climate change denial watts up with that",
+          "keywords": [
+            "ofcom",
+            "investigate",
+            "complaints",
+            "climate",
+            "change",
+            "denial",
+            "stop",
+            "long",
+            "before",
+            "allowed",
+            "call",
+            "starmer"
+          ],
+          "title_signal_tokens": [
+            "ofcom",
+            "investigate",
+            "complaints",
+            "climate",
+            "change",
+            "denial"
+          ],
+          "url_signal_tokens": [
+            "ofcom",
+            "investigate",
+            "complaints",
+            "climate",
+            "change",
+            "denial"
+          ],
+          "title_url_overlap": 1,
+          "title_url_mismatch": false,
+          "source_quality_score": 0,
+          "action": "general",
+          "place": "global",
+          "titleTokens": [
+            "ofcom",
+            "investigate",
+            "complaints",
+            "climate",
+            "change",
+            "denial"
+          ]
+        },
+        {
+          "id": "brave-sec-1775131605484-3",
+          "title": "In The Age Of Misinformation, Climate Literacy Matters More Than Ever",
+          "summary": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
+          "whyItMatters": "",
+          "involvedParties": [],
+          "entities": [],
+          "when": "2 days ago",
+          "sourceUrls": [
+            "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever"
+          ],
+          "freshness": 5,
+          "urgency": 4,
+          "discoveredAt": "2026-04-02T12:06:45.487Z",
+          "provider": "brave",
+          "trustedSource": false,
+          "discoveryLane": "section:news",
+          "sectionCandidates": [
+            "news"
+          ],
+          "topicCandidates": [
+            "climate-extreme-weather"
+          ],
+          "detectedSectionId": "news",
+          "detectedTopicId": null,
+          "region": "global",
+          "angle": "general",
+          "genericPage": false,
+          "page_kind": "article",
+          "genericity_score": 0,
+          "article_likelihood": 8,
+          "normalizedTitle": "in the age of misinformation climate literacy matters more than ever honolulu civil beat",
+          "canonicalUrl": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+          "discoveryScore": 12.4,
+          "targetedCoverage": false,
+          "eventKey": "news:in the age of misinformation climate literacy matters more than ever honolulu ci",
+          "signalSpecificityScore": 7,
+          "signalSpecificityNotes": [
+            "title_specificity",
+            "article_likelihood",
+            "topic_hint",
+            "named_marker"
+          ],
+          "crossTopicRisk": false,
+          "source_id": "brave-sec-1775131605484-3",
+          "url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+          "canonical_url": "https://civilbeat.org/2026/03/in-the-age-of-misinformation-climate-literacy-matters-more-than-ever",
+          "domain": "civilbeat.org",
+          "canonical_domain": "civilbeat.org",
+          "normalized_title": "in the age of misinformation climate literacy matters more than ever",
+          "snippet": "Climate education remains inconsistent, optional and disconnected from the realities students face every day.",
+          "published_at": "2 days ago",
+          "section_id": "news",
+          "topic_id": null,
+          "section_candidates": [
+            "news"
+          ],
+          "topic_candidates": [
+            "climate-extreme-weather"
+          ],
+          "cluster_id": null,
+          "event_key": "news:in the age of misinformation climate literacy matters more than ever honolulu ci",
+          "keywords": [
+            "misinformation",
+            "climate",
+            "literacy",
+            "matters",
             "more",
             "than",
-            "months",
-            "until"
+            "ever",
+            "education",
+            "remains",
+            "inconsistent",
+            "optional",
+            "disconnected"
           ],
           "title_signal_tokens": [
-            "2026",
-            "groups",
-            "bracket",
-            "predictions",
-            "teams"
+            "misinformation",
+            "climate",
+            "literacy",
+            "matters",
+            "more",
+            "than",
+            "ever"
           ],
           "url_signal_tokens": [
-            "athletic",
-            "bracket",
-            "predictions"
+            "misinformation",
+            "climate",
+            "literacy",
+            "matters",
+            "more",
+            "than",
+            "ever"
           ],
-          "title_url_overlap": 0.6666666666666666,
+          "title_url_overlap": 1,
           "title_url_mismatch": false,
           "source_quality_score": 0,
           "action": "general",
           "place": "global",
           "titleTokens": [
-            "world",
-            "2026",
-            "groups",
-            "bracket",
-            "predictions",
-            "teams"
-          ]
-        },
-        {
-          "id": "google-sec-1775097539956-2",
-          "title": "Leeds' 2024-25 accounts: Ninth-highest commercial income in ...",
-          "summary": "9 hours ago ... Leeds United generated record Championship revenues for the second year running in their 100-point 2024-25 promotion season, even as the club continued to ...",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-04-02T02:38:59.959Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:sports",
-          "sectionCandidates": [
-            "sports"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 10,
-          "normalizedTitle": "leeds 2024 25 accounts ninth highest commercial income in",
-          "canonicalUrl": "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/",
-          "discoveryScore": 13.6,
-          "targetedCoverage": false,
-          "eventKey": "sports:leeds 2024 25 accounts ninth highest commercial income in",
-          "signalSpecificityScore": 5,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "google-sec-1775097539956-2",
-          "url": "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/",
-          "canonical_url": "https://www.nytimes.com/athletic/7163813/2026/04/01/leeds-2024-25-accounts-analysis/",
-          "domain": "nytimes.com",
-          "canonical_domain": "nytimes.com",
-          "normalized_title": "leeds 2024 25 accounts ninth highest commercial income in",
-          "snippet": "9 hours ago ... Leeds United generated record Championship revenues for the second year running in their 100-point 2024-25 promotion season, even as the club continued to ...",
-          "published_at": "2026-04-02T02:38:59.959Z",
-          "section_id": "sports",
-          "topic_id": null,
-          "section_candidates": [
-            "sports"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "sports:leeds 2024 25 accounts ninth highest commercial income in",
-          "keywords": [
-            "leeds",
-            "2024",
-            "accounts",
-            "ninth",
-            "highest",
-            "commercial",
-            "income",
-            "hours",
-            "united",
-            "generated",
-            "record",
-            "championship"
-          ],
-          "title_signal_tokens": [
-            "leeds",
-            "2024",
-            "accounts",
-            "ninth",
-            "highest",
-            "commercial",
-            "income"
-          ],
-          "url_signal_tokens": [
-            "athletic",
-            "leeds",
-            "accounts"
-          ],
-          "title_url_overlap": 0.6666666666666666,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "leeds",
-            "2024",
-            "accounts",
-            "ninth",
-            "highest",
-            "commercial",
-            "income"
-          ]
-        },
-        {
-          "id": "google-sec-1775097539961-4",
-          "title": "Eddie Howe's future, player sales and the stadium",
-          "summary": "2 days ago ... David Hopkinson, Newcastle's chief executive, sat down with journalists to discuss the club's latest accounts.",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-04-02T02:38:59.963Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:sports",
-          "sectionCandidates": [
-            "sports"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 2,
-          "article_likelihood": 10,
-          "normalizedTitle": "eddie howe s future player sales and the stadium ny times",
-          "canonicalUrl": "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/",
-          "discoveryScore": 13.6,
-          "targetedCoverage": false,
-          "eventKey": "sports:eddie howe s future player sales and the stadium ny times",
-          "signalSpecificityScore": 5,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "google-sec-1775097539961-4",
-          "url": "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/",
-          "canonical_url": "https://www.nytimes.com/athletic/7157384/2026/03/31/newcastle-eddie-howe-future-player-sales/",
-          "domain": "nytimes.com",
-          "canonical_domain": "nytimes.com",
-          "normalized_title": "eddie howe s future player sales and the stadium",
-          "snippet": "2 days ago ... David Hopkinson, Newcastle's chief executive, sat down with journalists to discuss the club's latest accounts.",
-          "published_at": "2026-04-02T02:38:59.963Z",
-          "section_id": "sports",
-          "topic_id": null,
-          "section_candidates": [
-            "sports"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "sports:eddie howe s future player sales and the stadium ny times",
-          "keywords": [
-            "eddie",
-            "howe",
-            "future",
-            "player",
-            "sales",
-            "stadium",
-            "days",
-            "david",
-            "hopkinson",
-            "newcastle",
-            "chief",
-            "executive"
-          ],
-          "title_signal_tokens": [
-            "eddie",
-            "howe",
-            "future",
-            "player",
-            "sales",
-            "stadium"
-          ],
-          "url_signal_tokens": [
-            "athletic",
-            "newcastle",
-            "eddie",
-            "howe",
-            "future",
-            "player",
-            "sales"
-          ],
-          "title_url_overlap": 0.8333333333333334,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "eddie",
-            "howe",
-            "future",
-            "player",
-            "sales",
-            "stadium"
-          ]
-        },
-        {
-          "id": "google-sec-1775097539968-7",
-          "title": "The 48 World Cup teams are set. We've filled in the bracket and ...",
-          "summary": "8 hours ago ... The final six teams have secured their place at the tournament this summer. So now is the perfect time to work out who wins it...",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-04-02T02:38:59.970Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:sports",
-          "sectionCandidates": [
-            "sports"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "events",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 10,
-          "normalizedTitle": "the 48 world cup teams are set we ve filled in the bracket and",
-          "canonicalUrl": "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/",
-          "discoveryScore": 13.6,
-          "targetedCoverage": false,
-          "eventKey": "sports:the 48 world cup teams are set we ve filled in the bracket and",
-          "signalSpecificityScore": 5,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "google-sec-1775097539968-7",
-          "url": "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/",
-          "canonical_url": "https://www.nytimes.com/athletic/7160367/2026/04/01/world-cup-predictions-groups-bracket/",
-          "domain": "nytimes.com",
-          "canonical_domain": "nytimes.com",
-          "normalized_title": "the 48 world cup teams are set we ve filled in the bracket and",
-          "snippet": "8 hours ago ... The final six teams have secured their place at the tournament this summer. So now is the perfect time to work out who wins it...",
-          "published_at": "2026-04-02T02:38:59.970Z",
-          "section_id": "sports",
-          "topic_id": null,
-          "section_candidates": [
-            "sports"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "sports:the 48 world cup teams are set we ve filled in the bracket and",
-          "keywords": [
-            "world",
-            "teams",
-            "filled",
-            "bracket",
-            "hours",
-            "final",
-            "secured",
-            "their",
-            "place",
-            "tournament",
-            "summer",
-            "perfect"
-          ],
-          "title_signal_tokens": [
-            "teams",
-            "filled",
-            "bracket"
-          ],
-          "url_signal_tokens": [
-            "athletic",
-            "predictions",
-            "groups",
-            "bracket"
-          ],
-          "title_url_overlap": 0.3333333333333333,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "world",
-            "teams",
-            "filled",
-            "bracket"
-          ]
-        },
-        {
-          "id": "google-sec-1775097539970-8",
-          "title": "FSG is allowing Liverpool to drift – and that is dangerous",
-          "summary": "22 hours ago ... Whether that stance persists if Liverpool are knocked out of the FA Cup and the Champions League and fall away from the Premier League top five over the next ...",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-04-02T02:38:59.973Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:sports",
-          "sectionCandidates": [
-            "sports"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
-          "region": "global",
-          "angle": "general",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 10,
-          "normalizedTitle": "fsg is allowing liverpool to drift and that is dangerous the athletic",
-          "canonicalUrl": "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/",
-          "discoveryScore": 13.6,
-          "targetedCoverage": false,
-          "eventKey": "sports:fsg is allowing liverpool to drift and that is dangerous the athletic",
-          "signalSpecificityScore": 5,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "google-sec-1775097539970-8",
-          "url": "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/",
-          "canonical_url": "https://www.nytimes.com/athletic/7152872/2026/04/01/liverpool-fsg-michael-edwards-richard-hughes/",
-          "domain": "nytimes.com",
-          "canonical_domain": "nytimes.com",
-          "normalized_title": "fsg is allowing liverpool to drift",
-          "snippet": "22 hours ago ... Whether that stance persists if Liverpool are knocked out of the FA Cup and the Champions League and fall away from the Premier League top five over the next ...",
-          "published_at": "2026-04-02T02:38:59.973Z",
-          "section_id": "sports",
-          "topic_id": null,
-          "section_candidates": [
-            "sports"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "sports:fsg is allowing liverpool to drift and that is dangerous the athletic",
-          "keywords": [
-            "allowing",
-            "liverpool",
-            "drift",
-            "hours",
-            "whether",
-            "stance",
-            "persists",
-            "knocked",
-            "champions",
-            "league",
-            "fall",
-            "away"
-          ],
-          "title_signal_tokens": [
-            "allowing",
-            "liverpool",
-            "drift"
-          ],
-          "url_signal_tokens": [
-            "athletic",
-            "liverpool",
-            "michael",
-            "edwards",
-            "richard",
-            "hughes"
-          ],
-          "title_url_overlap": 0.3333333333333333,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "global",
-          "titleTokens": [
-            "allowing",
-            "liverpool",
-            "drift",
-            "dangerous"
-          ]
-        },
-        {
-          "id": "google-sec-1775097539973-9",
-          "title": "Plotting Canada's path through the World Cup. Could it be Mexico in ...",
-          "summary": "14 hours ago ... Let's break down their path… Group stage. Canada will start their World Cup in Toronto in just the third game of the tournament. They had to wait until the 11th ...",
-          "whyItMatters": "",
-          "involvedParties": [],
-          "entities": [],
-          "when": "",
-          "sourceUrls": [
-            "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/"
-          ],
-          "freshness": 4,
-          "urgency": 4,
-          "discoveredAt": "2026-04-02T02:38:59.975Z",
-          "provider": "google_trusted",
-          "trustedSource": true,
-          "discoveryLane": "google:sports",
-          "sectionCandidates": [
-            "sports"
-          ],
-          "topicCandidates": [],
-          "detectedSectionId": "sports",
-          "detectedTopicId": null,
-          "region": "canada",
-          "angle": "events",
-          "genericPage": false,
-          "page_kind": "article",
-          "genericity_score": 0,
-          "article_likelihood": 10,
-          "normalizedTitle": "plotting canada s path through the world cup could it be mexico in",
-          "canonicalUrl": "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/",
-          "discoveryScore": 13.6,
-          "targetedCoverage": false,
-          "eventKey": "sports:plotting canada s path through the world cup could it be mexico in",
-          "signalSpecificityScore": 5,
-          "signalSpecificityNotes": [
-            "title_specificity",
-            "article_likelihood",
-            "named_marker"
-          ],
-          "crossTopicRisk": false,
-          "source_id": "google-sec-1775097539973-9",
-          "url": "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/",
-          "canonical_url": "https://www.nytimes.com/athletic/7159729/2026/04/01/canada-world-cup-path/",
-          "domain": "nytimes.com",
-          "canonical_domain": "nytimes.com",
-          "normalized_title": "plotting canada s path through the world cup could it be mexico in",
-          "snippet": "14 hours ago ... Let's break down their path… Group stage. Canada will start their World Cup in Toronto in just the third game of the tournament. They had to wait until the 11th ...",
-          "published_at": "2026-04-02T02:38:59.975Z",
-          "section_id": "sports",
-          "topic_id": null,
-          "section_candidates": [
-            "sports"
-          ],
-          "topic_candidates": [],
-          "cluster_id": null,
-          "event_key": "sports:plotting canada s path through the world cup could it be mexico in",
-          "keywords": [
-            "plotting",
-            "canada",
-            "path",
-            "through",
-            "world",
-            "mexico",
-            "hours",
-            "break",
-            "down",
-            "their",
-            "group",
-            "stage"
-          ],
-          "title_signal_tokens": [
-            "plotting",
-            "canada",
-            "path",
-            "through",
-            "could",
-            "mexico"
-          ],
-          "url_signal_tokens": [
-            "athletic",
-            "canada",
-            "path"
-          ],
-          "title_url_overlap": 0.6666666666666666,
-          "title_url_mismatch": false,
-          "source_quality_score": 0,
-          "action": "general",
-          "place": "canada",
-          "titleTokens": [
-            "plotting",
-            "canada",
-            "path",
-            "through",
-            "world",
-            "mexico"
+            "misinformation",
+            "climate",
+            "literacy",
+            "matters",
+            "more",
+            "than",
+            "ever"
           ]
         }
       ],
-      "poolIdentityKey": "cluster:evt-2026-04-02-sports-general-global",
-      "selectionScore": 14.699990624999998,
-      "selectionNotes": [
-        "undercovered_section:sports",
-        "section_penalty:3",
-        "topic_penalty:17",
-        "region_penalty:35",
-        "entity_penalty:23"
-      ],
-      "readyCandidateStatus": null,
-      "readyCandidateRank": null,
-      "_selectionOrigin": "pool",
-      "section": "Sports",
-      "subsection": "NCAA approves major penalties for programs that circumvent ...",
+      "_selectionOrigin": "current_run",
+      "poolIdentityKey": "cluster:evt-2026-04-02-public-health-general-global",
+      "section": "Tech",
+      "subsection": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
       "topics": [
-        "NCAA approves major penalties for programs that circumvent ..."
+        "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ..."
       ]
     },
     "sourcePack": {
-      "eventId": "evt-2026-04-02-sports-general-global",
-      "topic": "NCAA approves major penalties for programs that circumvent ...",
-      "sources": 2,
-      "uniqueDomains": 2,
+      "eventId": "evt-2026-04-02-public-health-general-global",
+      "topic": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+      "sources": 4,
+      "uniqueDomains": 4,
       "credibilityScore": null,
       "passesGate": true,
       "gateNotes": [
-        "Large cluster retained extra materials as background/signal; publishable pack remains thin",
         "Role-aware one-event source-pack gate passed"
       ]
     }
@@ -1228,18 +966,18 @@
     "discovery_candidates": 34,
     "event_clusters": 10,
     "briefs_normalized": 6,
-    "source_packs_assembled": 19,
+    "source_packs_assembled": 15,
     "publishable_candidates": 1,
-    "selected_topic": "NCAA approves major penalties for programs that circumvent ...",
+    "selected_topic": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
     "selected_topics": [
-      "NCAA approves major penalties for programs that circumvent ..."
+      "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ..."
     ],
     "articles_attempted": 1,
     "articles_published": 1,
     "news_pool": {
-      "total": 42,
-      "active": 34,
-      "published": 8,
+      "total": 48,
+      "active": 38,
+      "published": 10,
       "ready_candidates": 0
     },
     "cache_stats": {
@@ -1280,7 +1018,7 @@
       "live_usage": {
         "brave": 1,
         "gdelt": 0,
-        "google": 0
+        "google": 2
       },
       "live_usage_by_phase": {
         "brave": {
@@ -1293,7 +1031,7 @@
         },
         "google": {
           "discovery": 0,
-          "rescue": 0
+          "rescue": 2
         }
       },
       "provider_circuits": {
@@ -1309,11 +1047,11 @@
         "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
         "runtime": {
           "brave": {
-            "files": 8,
-            "fresh_files": 8,
-            "expired_files": 0,
+            "files": 10,
+            "fresh_files": 1,
+            "expired_files": 9,
             "corrupt_files": 0,
-            "size_bytes": 91821
+            "size_bytes": 108677
           },
           "gdelt": {
             "files": 0,
@@ -1323,11 +1061,11 @@
             "size_bytes": 0
           },
           "google": {
-            "files": 12,
-            "fresh_files": 12,
-            "expired_files": 0,
+            "files": 20,
+            "fresh_files": 2,
+            "expired_files": 18,
             "corrupt_files": 0,
-            "size_bytes": 179004
+            "size_bytes": 422456
           }
         },
         "seed": {
@@ -1355,7 +1093,7 @@
         }
       }
     },
-    "duration_ms": 28166,
+    "duration_ms": 143133,
     "ready_candidates": 0,
     "additional_ready_candidates": 0,
     "source_pack_attempts": 1,
@@ -1363,27 +1101,27 @@
     "source_pack_retry_brave_queries": 0,
     "source_pack_retry_estimated_tokens": 0,
     "pre_draft_rejected": 0,
-    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-02T02-38-59-828Z.json"
+    "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-02T12-06-45-418Z.json"
   },
-  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-02T02-38-59-828Z.json",
+  "quality_audit_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/quality-audits/pipeline-2026-04-02T12-06-45-418Z.json",
   "published_paths": [
-    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.mdx"
+    "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.mdx"
   ],
   "verified_urls": [
-    "/article/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port"
+    "/article/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio"
   ],
   "selected_candidates": [
     {
-      "title": "NCAA approves major penalties for programs that circumvent ...",
-      "topic": "NCAA approves major penalties for programs that circumvent ...",
-      "section_id": "sports",
-      "topic_id": "transfers-business"
+      "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+      "topic": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+      "section_id": "tech",
+      "topic_id": "cybersecurity"
     }
   ],
   "published_articles": [
     {
-      "title": "NCAA Adopts Harsh Penalties for Teams Skirting Transfer Portal Rules",
-      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port.mdx",
+      "title": "Jaden Ivey Rips Bulls on Instagram Live After Waiver Decision",
+      "filePath": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.mdx",
       "verifiedUrl": null
     }
   ]

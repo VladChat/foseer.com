@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-02T02:42:52.768Z",
+  "updatedAt": "2026-04-02T12:09:08.512Z",
   "items": [
     {
       "identityKey": "cluster:evt-2026-03-30-crypto-bitcoin-general-global",
@@ -40,6 +40,50 @@
       "lastSelectedAt": "2026-04-01T20:56:17.230Z",
       "lastPublishedAt": "2026-04-01T20:56:17.230Z",
       "publishedSlug": "2026-04-01-crypto-mortgages-explained-what-to-know-before-using-crypto",
+      "selectedByWorkflow": null,
+      "selectedByRunId": null,
+      "selectedAt": null,
+      "selectionExpiresAt": null
+    },
+    {
+      "identityKey": "cluster:evt-2026-04-02-public-health-general-global",
+      "briefId": "evt-2026-04-02-public-health-general-global",
+      "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+      "normalizedTitle": "jaden ivey on ig being waived by bulls they re liars bro",
+      "section_id": "health",
+      "topic_id": "public-health",
+      "articleType": "analysis",
+      "selectionOrigin": "current_run",
+      "poolIdentityKey": "cluster:evt-2026-04-02-public-health-general-global",
+      "rank": 1,
+      "score": 73.6,
+      "scoreNotes": [
+        "section_penalty:16",
+        "topic_penalty:2",
+        "region_penalty:40",
+        "angle_penalty:34",
+        "cluster_repeat:1",
+        "entity_penalty:26",
+        "domains:4",
+        "consistency:8.8",
+        "core:3",
+        "supporting:1"
+      ],
+      "sourceCount": 4,
+      "uniqueDomains": 4,
+      "directEventSourceCount": 4,
+      "independentEventDomains": 4,
+      "gateDecision": "PASS",
+      "gateNotes": [
+        "Role-aware one-event source-pack gate passed"
+      ],
+      "discoveredAt": "2026-04-02T12:06:45.608Z",
+      "firstQueuedAt": "2026-04-02T12:07:06.682Z",
+      "lastQueuedAt": "2026-04-02T12:09:08.500Z",
+      "status": "published",
+      "lastSelectedAt": "2026-04-02T12:09:08.500Z",
+      "lastPublishedAt": "2026-04-02T12:09:08.500Z",
+      "publishedSlug": "2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio",
       "selectedByWorkflow": null,
       "selectedByRunId": null,
       "selectedAt": null,

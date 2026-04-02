@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-02T12:09:08.492Z",
+  "event_id": "evt-2026-04-02-public-health-general-global",
+  "cluster_id": "evt-2026-04-02-public-health-general-global",
+  "article_type": "report",
+  "title": "Jaden Ivey Rips Bulls on Instagram Live After Waiver Decision",
+  "slug": "jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio",
+  "canonical_slug": "2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio",
+  "expected_url": "/article/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-jaden-ivey-rips-bulls-on-instagram-live-after-waiver-decisio.mdx",
+  "published_at": "2026-04-02T12:09:08.490Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Cybersecurity",
+  "topics": [
+    "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+    "Cybersecurity"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/aytvc9yptpo/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/aytvc9yptpo/cover.jpg",
+    "source_url": "https://unsplash.com/photos/group-of-women-holding-black-and-white-banner-aytvc9YPtpo",
+    "asset_key": "unsplash:aytvc9YPtpo",
+    "alt_text": "Illustration for Jaden Ivey Rips Bulls on Instagram Live After Waiver Decision",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "rips waiver decision photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "Jaden Ivey Waived by Bulls for Conduct Detrimental to Team",
+        "url": "https://bleacherreport.com/articles/25412593-jaden-ivey-waived-bulls-conduct-detrimental-team",
+        "domain": "bleacherreport.com"
+      },
+      {
+        "title": "Bulls waive Jaden Ivey over anti-LGBTQ rant, citing conduct detrimental to team",
+        "url": "https://www.foxnews.com/sports/bulls-waive-jaden-ivey-after-he-called-nbas-pride-month-celebration-unrighteousness",
+        "domain": "foxnews.com"
+      },
+      {
+        "title": "Bulls Coach Gives Public Explanation On Team Cutting Jaden Ivey",
+        "url": "https://heavy.com/sports/nba/chicago-bulls/bulls-coach-explanation-cutting-jaden-ivey/",
+        "domain": "heavy.com"
+      },
+      {
+        "title": "Jaden Ivey on IG Live after being waived by Bulls: 'They're liars, bro ...",
+        "url": "https://www.nytimes.com/athletic/7159179/2026/03/30/jaden-ivey-waived-bulls-nba-pride-month/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "rips waiver decision photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "rips",
+        "waiver",
+        "decision"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
