@@ -1,0 +1,901 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-04-02T00:13:28.323Z",
+  "source": "qwen-scripts/compile-source-trust-registry.js",
+  "groups": {
+    "trusted_reporting_high": [
+      "reuters.com",
+      "apnews.com",
+      "bloomberg.com",
+      "ft.com",
+      "wsj.com",
+      "bbc.com",
+      "bbc.co.uk",
+      "nytimes.com",
+      "theguardian.com",
+      "washingtonpost.com",
+      "economist.com"
+    ],
+    "trusted_reporting": [
+      "reuters.com",
+      "apnews.com",
+      "bloomberg.com",
+      "ft.com",
+      "wsj.com",
+      "bbc.com",
+      "bbc.co.uk",
+      "nytimes.com",
+      "theguardian.com",
+      "washingtonpost.com",
+      "economist.com",
+      "cnbc.com",
+      "politico.com",
+      "axios.com",
+      "npr.org",
+      "abcnews.go.com",
+      "abcnews.com",
+      "cbsnews.com",
+      "nbcnews.com",
+      "cnn.com",
+      "nikkei.com",
+      "asia.nikkei.com",
+      "theglobeandmail.com",
+      "aljazeera.com",
+      "dw.com",
+      "france24.com"
+    ],
+    "official_primary": [
+      "whitehouse.gov",
+      "congress.gov",
+      "supremecourt.gov",
+      "uscourts.gov",
+      "justice.gov",
+      "state.gov",
+      "treasury.gov",
+      "commerce.gov",
+      "dol.gov",
+      "energy.gov",
+      "education.gov",
+      "hhs.gov",
+      "cdc.gov",
+      "nih.gov",
+      "cms.gov",
+      "epa.gov",
+      "fda.gov",
+      "dhs.gov",
+      "cisa.gov",
+      "fema.gov",
+      "faa.gov",
+      "nhtsa.gov",
+      "usda.gov",
+      "nasa.gov",
+      "sec.gov",
+      "cftc.gov",
+      "ftc.gov",
+      "fcc.gov",
+      "federalreserve.gov",
+      "federalregister.gov",
+      "govinfo.gov",
+      "gov.uk",
+      "parliament.uk",
+      "ec.europa.eu",
+      "europa.eu",
+      "un.org",
+      "who.int",
+      "oecd.org"
+    ],
+    "official_context": [
+      "fifa.com",
+      "uefa.com",
+      "nba.com",
+      "nfl.com",
+      "mlb.com",
+      "nhl.com",
+      "olympics.com",
+      "ncaa.com",
+      "nature.com",
+      "science.org",
+      "nejm.org",
+      "thelancet.com",
+      "jamanetwork.com",
+      "cell.com",
+      "pnas.org"
+    ],
+    "discovery_whitelist": [
+      "reuters.com",
+      "apnews.com",
+      "bloomberg.com",
+      "ft.com",
+      "wsj.com",
+      "bbc.com",
+      "bbc.co.uk",
+      "nytimes.com",
+      "theguardian.com",
+      "washingtonpost.com",
+      "economist.com",
+      "cnbc.com",
+      "politico.com",
+      "axios.com",
+      "npr.org",
+      "abcnews.go.com",
+      "abcnews.com",
+      "cbsnews.com",
+      "nbcnews.com",
+      "cnn.com",
+      "nikkei.com",
+      "asia.nikkei.com",
+      "theglobeandmail.com",
+      "aljazeera.com",
+      "dw.com",
+      "france24.com",
+      "whitehouse.gov",
+      "congress.gov",
+      "supremecourt.gov",
+      "uscourts.gov",
+      "justice.gov",
+      "state.gov",
+      "treasury.gov",
+      "commerce.gov",
+      "dol.gov",
+      "energy.gov",
+      "education.gov",
+      "hhs.gov",
+      "cdc.gov",
+      "nih.gov",
+      "cms.gov",
+      "epa.gov",
+      "fda.gov",
+      "dhs.gov",
+      "cisa.gov",
+      "fema.gov",
+      "faa.gov",
+      "nhtsa.gov",
+      "usda.gov",
+      "nasa.gov",
+      "sec.gov",
+      "cftc.gov",
+      "ftc.gov",
+      "fcc.gov",
+      "federalreserve.gov",
+      "federalregister.gov",
+      "govinfo.gov",
+      "gov.uk",
+      "parliament.uk",
+      "ec.europa.eu",
+      "europa.eu",
+      "un.org",
+      "who.int",
+      "oecd.org"
+    ],
+    "strict_single_source_whitelist": [
+      "reuters.com",
+      "apnews.com",
+      "bloomberg.com",
+      "ft.com",
+      "wsj.com",
+      "bbc.com",
+      "bbc.co.uk",
+      "nytimes.com",
+      "theguardian.com",
+      "washingtonpost.com",
+      "economist.com",
+      "whitehouse.gov",
+      "congress.gov",
+      "supremecourt.gov",
+      "uscourts.gov",
+      "justice.gov",
+      "state.gov",
+      "treasury.gov",
+      "commerce.gov",
+      "dol.gov",
+      "energy.gov",
+      "education.gov",
+      "hhs.gov",
+      "cdc.gov",
+      "nih.gov",
+      "cms.gov",
+      "epa.gov",
+      "fda.gov",
+      "dhs.gov",
+      "cisa.gov",
+      "fema.gov",
+      "faa.gov",
+      "nhtsa.gov",
+      "usda.gov",
+      "nasa.gov",
+      "sec.gov",
+      "cftc.gov",
+      "ftc.gov",
+      "fcc.gov",
+      "federalreserve.gov",
+      "federalregister.gov",
+      "govinfo.gov",
+      "gov.uk",
+      "parliament.uk",
+      "ec.europa.eu",
+      "europa.eu",
+      "un.org",
+      "who.int",
+      "oecd.org"
+    ]
+  },
+  "entries": [
+    {
+      "domain": "reuters.com",
+      "role": "trusted_reporting",
+      "tier": "high",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "apnews.com",
+      "role": "trusted_reporting",
+      "tier": "high",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "bloomberg.com",
+      "role": "trusted_reporting",
+      "tier": "high",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "ft.com",
+      "role": "trusted_reporting",
+      "tier": "high",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "wsj.com",
+      "role": "trusted_reporting",
+      "tier": "high",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "bbc.com",
+      "role": "trusted_reporting",
+      "tier": "high",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "bbc.co.uk",
+      "role": "trusted_reporting",
+      "tier": "high",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "nytimes.com",
+      "role": "trusted_reporting",
+      "tier": "high",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "theguardian.com",
+      "role": "trusted_reporting",
+      "tier": "high",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "washingtonpost.com",
+      "role": "trusted_reporting",
+      "tier": "high",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "economist.com",
+      "role": "trusted_reporting",
+      "tier": "high",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "cnbc.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "politico.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "axios.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "npr.org",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "abcnews.go.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "abcnews.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "cbsnews.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "nbcnews.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "cnn.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "nikkei.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "asia.nikkei.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "theglobeandmail.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "aljazeera.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "dw.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "france24.com",
+      "role": "trusted_reporting",
+      "tier": "standard",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "whitehouse.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "congress.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "supremecourt.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "uscourts.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "justice.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "state.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "treasury.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "commerce.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "dol.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "energy.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "education.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "hhs.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "cdc.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "nih.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "cms.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "epa.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "fda.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "dhs.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "cisa.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "fema.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "faa.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "nhtsa.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "usda.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "nasa.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "sec.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "cftc.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "ftc.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "fcc.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "federalreserve.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "federalregister.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "govinfo.gov",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "gov.uk",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "parliament.uk",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "ec.europa.eu",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "europa.eu",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "un.org",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "who.int",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "oecd.org",
+      "role": "official_primary",
+      "tier": "official",
+      "desks": [
+        "all"
+      ]
+    },
+    {
+      "domain": "fifa.com",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "uefa.com",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "nba.com",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "nfl.com",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "mlb.com",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "nhl.com",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "olympics.com",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "ncaa.com",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "nature.com",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "science.org",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "nejm.org",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "thelancet.com",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "jamanetwork.com",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "cell.com",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    },
+    {
+      "domain": "pnas.org",
+      "role": "official_context",
+      "tier": "context",
+      "desks": [
+        "sports",
+        "health",
+        "news",
+        "business"
+      ]
+    }
+  ]
+}

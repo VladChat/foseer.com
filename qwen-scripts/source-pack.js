@@ -6,7 +6,12 @@ import { buildCoverageContext, scoreCandidateWithSourcePack } from './nodes/sele
 import { normalizeSourceMaterial } from './utils/source-normalization.js';
 import { classifySourceRole } from './nodes/source-role-node.js';
 import { loadTaxonomyRegistry, matchTaxonomyHints } from './utils/taxonomy-registry.js';
-import { TRUSTED_PUBLISHER_DOMAINS, OFFICIAL_PRIMARY_DOMAINS, normalizeDomain } from './config/trusted-publishers.js';
+import {
+  isOfficialPrimaryDomain,
+  isStrictSingleSourceWhitelistDomain,
+  isTrustedReportingDomain,
+  normalizeDomain,
+} from './config/trusted-publishers.js';
 
 const GENERIC_TOPIC_TOKENS = new Set([
   'the', 'a', 'an', 'and', 'or', 'for', 'from', 'with', 'amid', 'over', 'under', 'after', 'before', 'into', 'onto', 'across', 'about',
@@ -104,6 +109,7 @@ export async function assembleSourcePack(eventBrief, options = {}) {
     uniqueDomains,
     strongMatchCount,
     sourceConsistencyScore,
+    options,
   });
 
   return {
@@ -197,22 +203,40 @@ function collectDiscoveryItem(item, collected, seenUrls, forceKeep = false) {
   });
 }
 
-function applySourcePackGate({ eventBrief, sources, coreSources, supportingSources, backgroundSources, roleResults, publishableRoleResults = [], directEventRoleResults = [], uniqueDomains, strongMatchCount, sourceConsistencyScore }) {
+function applySourcePackGate({ eventBrief, sources, coreSources, supportingSources, backgroundSources, roleResults, publishableRoleResults = [], directEventRoleResults = [], uniqueDomains, strongMatchCount, sourceConsistencyScore, options = {} }) {
   const notes = [];
   let passes = true;
   const articleType = String(eventBrief?.articleType || eventBrief?.article_type || 'report').toLowerCase();
   const crossTopicMismatchCount = publishableRoleResults.filter((result) => isHardCrossTopicMismatch(result, eventBrief)).length;
   const storyCoherenceScore = computePublishableStoryCoherence(eventBrief, publishableRoleResults);
+  const publishableCount = coreSources.length + supportingSources.length;
+  const singleSourceDecision = evaluateSingleSourceWhitelistEligibility({
+    eventBrief,
+    publishableSources: [...coreSources, ...supportingSources],
+    articleType,
+    storyCoherenceScore,
+    crossTopicMismatchCount,
+    sourceConsistencyScore,
+    directEventSourceCount: directEventRoleResults.length,
+    options,
+  });
 
   if (coreSources.length < 1) {
     passes = false;
     notes.push(`Need at least 1 core source, found ${coreSources.length}`);
   }
-  if ((coreSources.length + supportingSources.length) < 2) {
-    passes = false;
-    notes.push(`Need at least 2 publishable sources, found ${coreSources.length + supportingSources.length}`);
+  if (publishableCount < 2) {
+    if (singleSourceDecision.pass) {
+      notes.push(`Single-source whitelist exception passed (${singleSourceDecision.reason})`);
+    } else {
+      passes = false;
+      notes.push(`Need at least 2 publishable sources, found ${publishableCount}`);
+      if (singleSourceDecision.enabled && publishableCount === 1 && singleSourceDecision.reason) {
+        notes.push(`Single-source whitelist rejected: ${singleSourceDecision.reason}`);
+      }
+    }
   }
-  if (uniqueDomains < 2 && (coreSources.length + supportingSources.length) >= 2) {
+  if (uniqueDomains < 2 && publishableCount >= 2) {
     passes = false;
     notes.push(`Need at least 2 different domains among publishable sources, found ${uniqueDomains}`);
   }
@@ -259,7 +283,7 @@ function applySourcePackGate({ eventBrief, sources, coreSources, supportingSourc
     notes.push(`Publishable pack contains invalid evidence: ${Array.from(new Set(publishIntegrityIssues)).join(', ')}`);
   }
 
-  if ((eventBrief.cluster_size || 1) >= 4 && (coreSources.length + supportingSources.length) < 3) {
+  if ((eventBrief.cluster_size || 1) >= 4 && publishableCount < 3) {
     notes.push('Large cluster retained extra materials as background/signal; publishable pack remains thin');
   }
   if (passes) notes.push('Role-aware one-event source-pack gate passed');
@@ -296,18 +320,91 @@ function isDirectEventRoleResult(result) {
   return Number(result.same_event_score || 0) >= 3;
 }
 
-function matchesAllowedDomain(domain, allowedDomains) {
-  const normalized = normalizeDomain(domain);
-  if (!normalized) return false;
-  return allowedDomains.some((allowed) => normalized === allowed || normalized.endsWith(`.${allowed}`));
+function evaluateSingleSourceWhitelistEligibility({
+  eventBrief = {},
+  publishableSources = [],
+  articleType = 'analysis',
+  storyCoherenceScore = 0,
+  crossTopicMismatchCount = 0,
+  sourceConsistencyScore = 0,
+  directEventSourceCount = 0,
+  options = {},
+} = {}) {
+  const enabled = parseBooleanFlag(
+    options.enableSingleSourceWhitelist
+    ?? options.singleSourceWhitelist
+    ?? process.env.QWEN_ENABLE_SINGLE_SOURCE_WHITELIST
+  ) === true;
+
+  if (!enabled) return { enabled: false, pass: false, reason: 'disabled' };
+  if (!Array.isArray(publishableSources) || publishableSources.length !== 1) {
+    return { enabled: true, pass: false, reason: 'publishable_count_not_one' };
+  }
+  if (String(articleType || '').toLowerCase() === 'report') {
+    return { enabled: true, pass: false, reason: 'report_requires_multi_source' };
+  }
+  if (isHighRiskBrief(eventBrief)) {
+    return { enabled: true, pass: false, reason: 'high_risk_topic_requires_multi_source' };
+  }
+
+  const source = publishableSources[0] || {};
+  const sourceDomain = source?.canonical_domain || source?.domain || source?.canonical_url || source?.url || '';
+  if (!isStrictSingleSourceWhitelistDomain(sourceDomain)) {
+    return { enabled: true, pass: false, reason: 'domain_not_in_strict_single_source_whitelist' };
+  }
+  if (!isTrustedReportingDomain(sourceDomain) && !isOfficialPrimaryDomain(sourceDomain)) {
+    return { enabled: true, pass: false, reason: 'domain_not_trusted_or_official' };
+  }
+  if (getPublishableIntegrityIssues(source).length > 0) {
+    return { enabled: true, pass: false, reason: 'source_integrity_not_publishable' };
+  }
+  if (crossTopicMismatchCount > 0) {
+    return { enabled: true, pass: false, reason: 'cross_topic_mismatch_detected' };
+  }
+  if (directEventSourceCount < 1) {
+    return { enabled: true, pass: false, reason: 'direct_event_signal_missing' };
+  }
+
+  const minSingleSourceCoherence = Number(
+    options.singleSourceWhitelistMinCoherence
+    ?? process.env.QWEN_SINGLE_SOURCE_WHITELIST_MIN_COHERENCE
+    ?? 0.72
+  );
+  const minSingleSourceConsistency = Number(
+    options.singleSourceWhitelistMinConsistency
+    ?? process.env.QWEN_SINGLE_SOURCE_WHITELIST_MIN_CONSISTENCY
+    ?? 6.0
+  );
+
+  if (Number.isFinite(minSingleSourceCoherence) && Number(storyCoherenceScore || 0) < minSingleSourceCoherence) {
+    return { enabled: true, pass: false, reason: `coherence_below_threshold:${Number(storyCoherenceScore || 0).toFixed(2)}<${minSingleSourceCoherence}` };
+  }
+  if (Number.isFinite(minSingleSourceConsistency) && Number(sourceConsistencyScore || 0) < minSingleSourceConsistency) {
+    return { enabled: true, pass: false, reason: `consistency_below_threshold:${Number(sourceConsistencyScore || 0).toFixed(2)}<${minSingleSourceConsistency}` };
+  }
+
+  return { enabled: true, pass: true, reason: 'strict_whitelist_single_source_ok' };
 }
 
-function isTrustedReportingDomain(domain) {
-  return matchesAllowedDomain(domain, TRUSTED_PUBLISHER_DOMAINS);
+function isHighRiskBrief(brief = {}) {
+  const highRiskTopicIds = new Set([
+    'world-geopolitics',
+    'us-politics',
+    'law-crime',
+    'climate-extreme-weather',
+  ]);
+  if (highRiskTopicIds.has(String(brief?.topic_id || '').toLowerCase())) return true;
+  const text = `${brief?.title || ''} ${brief?.whatHappened || ''} ${brief?.whyItMatters || ''}`.toLowerCase();
+  return /(killed|dead|deaths|war|attack|airstrike|hostage|terror|indicted|charged|sanction|lawsuit|verdict|court)/.test(text);
 }
 
-function isOfficialPrimaryDomain(domain) {
-  return matchesAllowedDomain(domain, OFFICIAL_PRIMARY_DOMAINS);
+function parseBooleanFlag(value) {
+  if (value === undefined || value === null || value === '') return null;
+  if (typeof value === 'boolean') return value;
+  const normalized = String(value).trim().toLowerCase();
+  if (['1', 'true', 'yes', 'y', 'on'].includes(normalized)) return true;
+  if (['0', 'false', 'no', 'n', 'off'].includes(normalized)) return false;
+  return null;
 }
 
 function containsAny(text, terms) {

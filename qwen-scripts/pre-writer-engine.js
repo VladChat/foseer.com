@@ -13,10 +13,18 @@ import { mergeDiscoveredNews, mergeBriefsIntoPool, getSelectableBriefs, getReady
 import { braveNewsSearch, gdeltSearch, googleSearch } from './utils/api-clients.js';
 import { normalizeSourceMaterial } from './utils/source-normalization.js';
 import { classifySourceRole } from './nodes/source-role-node.js';
-import { OFFICIAL_PRIMARY_DOMAINS, TRUSTED_PUBLISHER_DOMAINS, normalizeDomain } from './config/trusted-publishers.js';
+import {
+  OFFICIAL_CONTEXT_DOMAINS,
+  OFFICIAL_PRIMARY_DOMAINS,
+  isOfficialPrimaryDomain,
+  isTrustedReportingDomain,
+  normalizeDomain,
+} from './config/trusted-publishers.js';
 
 const ARTICLE_INVENTORY_PATH = path.resolve(process.cwd(), 'qwen-project-governance', 'article_inventory.md');
 const RECENT_DUPLICATE_WINDOW_MS = 4 * 24 * 60 * 60 * 1000;
+const RESCUE_QUERY_DEDUPE_TTL_MS = Math.max(60_000, Number(process.env.QWEN_RESCUE_QUERY_DEDUPE_TTL_MS || 20 * 60 * 1000));
+const RECENT_RESCUE_QUERY_USAGE = new Map();
 
 export function loadSharedBriefCandidatesFromPool(limit, { leaseOwner = null } = {}) {
   return loadSharedBriefCandidatesFromPoolInternal(limit, { leaseOwner });
@@ -436,15 +444,11 @@ function classifySourcePackFailureCodes({ reasons = [], sourcePack = null } = {}
 }
 
 function isTrustedReportingDomainForRescue(domain) {
-  const normalized = normalizeDomain(domain);
-  if (!normalized) return false;
-  return TRUSTED_PUBLISHER_DOMAINS.some((allowed) => normalized === allowed || normalized.endsWith(`.${allowed}`));
+  return isTrustedReportingDomain(domain);
 }
 
 function isOfficialPrimaryDomainForRescue(domain) {
-  const normalized = normalizeDomain(domain);
-  if (!normalized) return false;
-  return OFFICIAL_PRIMARY_DOMAINS.some((allowed) => normalized === allowed || normalized.endsWith(`.${allowed}`));
+  return isOfficialPrimaryDomain(domain);
 }
 
 function isGenericOnlySourcePack(sourcePack = null) {
@@ -610,7 +614,7 @@ async function runNearMissSourcePackRescue({
   }
 
   if (rescueNeedsBraveFallback(diagnostics.role_coverage) && !braveRescueUsed && shouldRunBraveRescueFallback({ diagnostics, entityProfile })) {
-    const braveQuery = queryPlan.find((entry) => entry.level === 'broad') || queryPlan[queryPlan.length - 1] || null;
+    const braveQuery = selectBraveRescueFallbackQuery(queryPlan, diagnostics);
     if (braveQuery?.query) {
       braveRescueUsed = true;
       const bravePass = await runRescueSearchPass({
@@ -833,6 +837,14 @@ async function runRescueSearchPass({
   let genericFiltered = 0;
 
   if (googleApiKey && googleCx) {
+    if (shouldSkipDuplicateRescueQuery('google', query, level, intent)) {
+      providerStatus.push({
+        provider: 'google',
+        status: 'dedupe_recent_query',
+        items: 0,
+      });
+    } else {
+      let googleStatus = 'exception';
     try {
       const googleResult = await googleSearch(query, googleApiKey, googleCx, {
         num: 8,
@@ -840,6 +852,7 @@ async function runRescueSearchPass({
         logLabel: `qna_rescue_google_${level}`,
         livePhase,
       });
+      googleStatus = googleResult.status;
       providerStatus.push({
         provider: 'google',
         status: googleResult.status,
@@ -862,9 +875,19 @@ async function runRescueSearchPass({
         error: error.message,
       });
     }
+      recordRescueQueryUsage('google', query, level, intent, googleStatus);
+    }
   }
 
   if (includeGdelt) {
+    if (shouldSkipDuplicateRescueQuery('gdelt', query, level, intent)) {
+      providerStatus.push({
+        provider: 'gdelt',
+        status: 'dedupe_recent_query',
+        items: 0,
+      });
+    } else {
+      let gdeltStatus = 'exception';
     try {
       const gdeltResult = await gdeltSearch(query, {
         maxRecords: 12,
@@ -873,6 +896,7 @@ async function runRescueSearchPass({
         logLabel: `qna_rescue_gdelt_${level}`,
         livePhase,
       });
+      gdeltStatus = gdeltResult.status;
       providerStatus.push({
         provider: 'gdelt',
         status: gdeltResult.status,
@@ -895,9 +919,19 @@ async function runRescueSearchPass({
         error: error.message,
       });
     }
+      recordRescueQueryUsage('gdelt', query, level, intent, gdeltStatus);
+    }
   }
 
   if (includeBrave && braveApiKey) {
+    if (shouldSkipDuplicateRescueQuery('brave', query, level, intent)) {
+      providerStatus.push({
+        provider: 'brave',
+        status: 'dedupe_recent_query',
+        items: 0,
+      });
+    } else {
+      let braveStatus = 'exception';
     try {
       const braveResult = await braveNewsSearch(query, braveApiKey, {
         count: 8,
@@ -905,6 +939,7 @@ async function runRescueSearchPass({
         logLabel: `qna_rescue_brave_${level}`,
         livePhase,
       });
+      braveStatus = braveResult.status;
       providerStatus.push({
         provider: 'brave',
         status: braveResult.status,
@@ -926,6 +961,8 @@ async function runRescueSearchPass({
         items: 0,
         error: error.message,
       });
+    }
+      recordRescueQueryUsage('brave', query, level, intent, braveStatus);
     }
   }
 
@@ -1329,6 +1366,37 @@ function shouldRunBraveRescueFallback({ diagnostics = {}, entityProfile = null }
   if (missingRoles.length === 0) return false;
   if (String(entityProfile?.confidence || 'low') !== 'low') return true;
   return Array.isArray(diagnostics?.worked_queries) && diagnostics.worked_queries.length > 0;
+}
+
+function selectBraveRescueFallbackQuery(queryPlan = [], diagnostics = {}) {
+  const attemptedQueries = new Set(
+    (Array.isArray(diagnostics?.query_results) ? diagnostics.query_results : [])
+      .filter((entry) => !entry?.skipped)
+      .map((entry) => String(entry?.query || '').trim())
+      .filter(Boolean)
+  );
+  const missingRoles = Array.isArray(diagnostics?.missing_roles) ? diagnostics.missing_roles : [];
+  const preferredIntents = [];
+  if (missingRoles.includes('primary_or_official')) preferredIntents.push('official_primary');
+  if (missingRoles.includes('trusted_reporting')) preferredIntents.push('trusted_reporting');
+  if (missingRoles.includes('independent_confirming')) preferredIntents.push('independent_confirming');
+  if (preferredIntents.length === 0) preferredIntents.push('trusted_reporting', 'official_primary', 'independent_confirming');
+
+  const byIntent = Array.isArray(queryPlan)
+    ? queryPlan.filter((entry) => preferredIntents.includes(String(entry?.intent || '').toLowerCase()))
+    : [];
+  const byIntentUntried = byIntent.filter((entry) => !attemptedQueries.has(String(entry?.query || '').trim()));
+  const broadPreferred = byIntentUntried.find((entry) => String(entry?.level || '').toLowerCase() === 'broad');
+  if (broadPreferred) return broadPreferred;
+  if (byIntentUntried.length > 0) return byIntentUntried[0];
+
+  const broadAny = (Array.isArray(queryPlan) ? queryPlan : [])
+    .find((entry) => String(entry?.level || '').toLowerCase() === 'broad' && !attemptedQueries.has(String(entry?.query || '').trim()));
+  if (broadAny) return broadAny;
+
+  const anyUntried = (Array.isArray(queryPlan) ? queryPlan : [])
+    .find((entry) => !attemptedQueries.has(String(entry?.query || '').trim()));
+  return anyUntried || (Array.isArray(queryPlan) ? queryPlan[queryPlan.length - 1] : null);
 }
 
 function collectRescueQuotaSignals(queryResults = []) {
@@ -1744,8 +1812,12 @@ function buildRescueOfficialDomainTargets(brief = {}, { requireOfficial = false,
   const entity = entityProfile || inferRescueEntityProfile(brief);
   const entityTokens = tokenizeEntityCore(entity?.canonical || '');
   const entityAliasTokens = new Set((entity?.aliases || []).flatMap((alias) => tokenizeEntityCore(alias)));
+  const eventType = inferRescueEventType(brief);
   if (requireOfficial) {
     for (const domain of OFFICIAL_PRIMARY_DOMAINS) domains.add(domain);
+    for (const domain of OFFICIAL_CONTEXT_DOMAINS) domains.add(domain);
+  } else if (/(sports development|research update)/.test(String(eventType || ''))) {
+    for (const domain of OFFICIAL_CONTEXT_DOMAINS) domains.add(domain);
   }
 
   const sourceUrls = [
@@ -1787,6 +1859,42 @@ function compactRescueText(value = '', maxTokens = 24) {
     .slice(0, maxTokens)
     .join(' ')
     .trim();
+}
+
+function buildRescueQueryDedupeKey(provider = '', query = '', level = '', intent = '') {
+  const normalizedProvider = String(provider || '').trim().toLowerCase();
+  const normalizedLevel = String(level || '').trim().toLowerCase();
+  const normalizedIntent = String(intent || '').trim().toLowerCase();
+  const normalizedQuery = String(query || '')
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .trim();
+  return `${normalizedProvider}::${normalizedLevel}::${normalizedIntent}::${normalizedQuery}`;
+}
+
+function shouldSkipDuplicateRescueQuery(provider = '', query = '', level = '', intent = '') {
+  const key = buildRescueQueryDedupeKey(provider, query, level, intent);
+  const entry = RECENT_RESCUE_QUERY_USAGE.get(key);
+  if (!entry) return false;
+  const ageMs = Date.now() - Number(entry?.ts || 0);
+  return Number.isFinite(ageMs) && ageMs >= 0 && ageMs <= RESCUE_QUERY_DEDUPE_TTL_MS;
+}
+
+function recordRescueQueryUsage(provider = '', query = '', level = '', intent = '', status = '') {
+  const key = buildRescueQueryDedupeKey(provider, query, level, intent);
+  RECENT_RESCUE_QUERY_USAGE.set(key, {
+    ts: Date.now(),
+    status: String(status || '').toLowerCase(),
+  });
+  if (RECENT_RESCUE_QUERY_USAGE.size > 1500) {
+    const entries = Array.from(RECENT_RESCUE_QUERY_USAGE.entries())
+      .sort((left, right) => Number(left?.[1]?.ts || 0) - Number(right?.[1]?.ts || 0));
+    while (entries.length > 1200) {
+      const oldest = entries.shift();
+      if (!oldest) break;
+      RECENT_RESCUE_QUERY_USAGE.delete(oldest[0]);
+    }
+  }
 }
 
 function estimateSourcePackCoherence(sourcePack = {}, brief = {}) {

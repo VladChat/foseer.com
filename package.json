@@ -26,7 +26,8 @@
     "qwen:replace-duplicate-images": "node qwen-scripts/replace-duplicate-images.js",
     "qwen:backfill-image-metadata": "node qwen-scripts/backfill-image-metadata.js",
     "qwen:backfill-fallback-images": "node qwen-scripts/backfill-fallback-images.js",
-    "qwen:build-seed-cache": "node qwen-scripts/build-seed-cache.js"
+    "qwen:build-seed-cache": "node qwen-scripts/build-seed-cache.js",
+    "qwen:compile-source-trust": "node qwen-scripts/compile-source-trust-registry.js"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",

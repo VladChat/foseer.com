@@ -32,6 +32,20 @@ const LIVE_RESCUE_RESERVED = {
   google: Number(process.env.QWEN_GOOGLE_RESCUE_RESERVED ?? 0),
 };
 const BRAVE_RESCUE_MAX_LIVE_QUERIES = Number(process.env.QWEN_BRAVE_RESCUE_MAX_LIVE_QUERIES ?? 1);
+const LIVE_PHASE_CAPS = {
+  brave: {
+    discovery: Number(process.env.QWEN_BRAVE_DISCOVERY_MAX_LIVE_QUERIES ?? Number.NaN),
+    rescue: Number(process.env.QWEN_BRAVE_RESCUE_MAX_LIVE_QUERIES ?? Number.NaN),
+  },
+  gdelt: {
+    discovery: Number(process.env.QWEN_GDELT_DISCOVERY_MAX_LIVE_QUERIES ?? Number.NaN),
+    rescue: Number(process.env.QWEN_GDELT_RESCUE_MAX_LIVE_QUERIES ?? Number.NaN),
+  },
+  google: {
+    discovery: Number(process.env.QWEN_GOOGLE_DISCOVERY_MAX_LIVE_QUERIES ?? Number.NaN),
+    rescue: Number(process.env.QWEN_GOOGLE_RESCUE_MAX_LIVE_QUERIES ?? Number.NaN),
+  },
+};
 const LIVE_USAGE = {
   brave: 0,
   gdelt: 0,
@@ -145,6 +159,35 @@ function getRescueReserved(provider) {
   return Math.max(0, Math.min(quota, requested));
 }
 
+function getConfiguredPhaseCap(provider, phase) {
+  const configured = Number(LIVE_PHASE_CAPS?.[provider]?.[phase]);
+  if (!Number.isFinite(configured)) return null;
+  return Math.max(0, Math.floor(configured));
+}
+
+function getLivePhaseCap(provider, phase) {
+  const quota = getQuota(provider);
+  const rescueReserved = getRescueReserved(provider);
+  const configured = getConfiguredPhaseCap(provider, phase);
+  if (configured !== null) return Math.min(quota, configured);
+
+  if (phase === 'discovery') {
+    return Math.max(0, quota - rescueReserved);
+  }
+
+  if (provider === 'brave') {
+    const braveRescueCap = Math.max(0, Math.floor(Number.isFinite(BRAVE_RESCUE_MAX_LIVE_QUERIES) ? BRAVE_RESCUE_MAX_LIVE_QUERIES : 1));
+    return Math.min(quota, braveRescueCap);
+  }
+
+  if (rescueReserved > 0) {
+    return Math.min(quota, rescueReserved);
+  }
+
+  // Preserve prior behavior for non-Brave providers when no explicit rescue reservation exists.
+  return quota;
+}
+
 function normalizeLivePhase(phase, label) {
   const normalized = String(phase || '').toLowerCase();
   if (normalized === 'rescue' || normalized === 'discovery') return normalized;
@@ -170,33 +213,21 @@ async function reserveLiveQuery(provider, label, { phase = null } = {}) {
   const quota = getQuota(provider);
   const livePhase = normalizeLivePhase(phase, label);
   const rescueReserved = getRescueReserved(provider);
-  const discoveryCap = Math.max(0, quota - rescueReserved);
+  const phaseCap = getLivePhaseCap(provider, livePhase);
+  const phaseUsed = Number(LIVE_USAGE_BY_PHASE?.[provider]?.[livePhase] || 0);
 
-  if (livePhase !== 'rescue' && rescueReserved > 0 && LIVE_USAGE[provider] >= discoveryCap) {
+  if (phaseUsed >= phaseCap) {
     logProvider(provider, {
       label,
-      status: 'live_quota_reserved_for_rescue',
+      status: 'phase_quota_exhausted',
       live_phase: livePhase,
+      phase_used: phaseUsed,
+      phase_cap: phaseCap,
       live_used: LIVE_USAGE[provider],
       live_quota: quota,
       rescue_reserved: rescueReserved,
     });
     return false;
-  }
-
-  if (provider === 'brave' && livePhase === 'rescue') {
-    const rescueCap = Math.max(0, Math.floor(Number.isFinite(BRAVE_RESCUE_MAX_LIVE_QUERIES) ? BRAVE_RESCUE_MAX_LIVE_QUERIES : 1));
-    const rescueUsed = Number(LIVE_USAGE_BY_PHASE?.brave?.rescue || 0);
-    if (rescueUsed >= rescueCap) {
-      logProvider(provider, {
-        label,
-        status: 'rescue_phase_cap_reached',
-        live_phase: livePhase,
-        rescue_used: rescueUsed,
-        rescue_cap: rescueCap,
-      });
-      return false;
-    }
   }
 
   if (LIVE_USAGE[provider] >= quota) {
@@ -877,6 +908,20 @@ export function getProviderStats() {
       brave: getRescueReserved('brave'),
       gdelt: getRescueReserved('gdelt'),
       google: getRescueReserved('google'),
+    },
+    live_phase_caps: {
+      brave: {
+        discovery: getLivePhaseCap('brave', 'discovery'),
+        rescue: getLivePhaseCap('brave', 'rescue'),
+      },
+      gdelt: {
+        discovery: getLivePhaseCap('gdelt', 'discovery'),
+        rescue: getLivePhaseCap('gdelt', 'rescue'),
+      },
+      google: {
+        discovery: getLivePhaseCap('google', 'discovery'),
+        rescue: getLivePhaseCap('google', 'rescue'),
+      },
     },
     brave_rescue_max_live_queries: Math.max(0, Math.floor(Number.isFinite(BRAVE_RESCUE_MAX_LIVE_QUERIES) ? BRAVE_RESCUE_MAX_LIVE_QUERIES : 1)),
     live_usage: { ...LIVE_USAGE },
