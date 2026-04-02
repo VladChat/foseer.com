@@ -32,6 +32,22 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Compute cache bucket (6h)
+        id: cache_bucket
+        run: echo "bucket=$(( $(date +%s) / 21600 ))" >> "$GITHUB_OUTPUT"
+
+      - name: Restore runtime search cache
+        id: restore_runtime_cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            qwen-cache
+            qwen-data/events/provider-circuit-state.json
+          key: foseer-runtime-search-cache-${{ runner.os }}-${{ steps.cache_bucket.outputs.bucket }}-${{ github.run_id }}
+          restore-keys: |
+            foseer-runtime-search-cache-${{ runner.os }}-${{ steps.cache_bucket.outputs.bucket }}-
+            foseer-runtime-search-cache-${{ runner.os }}-
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -146,3 +162,12 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy.yml/dispatches \
             -d '{"ref":"main"}'
+
+      - name: Save runtime search cache
+        if: ${{ always() }}
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            qwen-cache
+            qwen-data/events/provider-circuit-state.json
+          key: foseer-runtime-search-cache-${{ runner.os }}-${{ steps.cache_bucket.outputs.bucket }}-${{ github.run_id }}
