@@ -1,9 +1,9 @@
 // File: qwen-scripts/utils/api-clients.js
-// Purpose: Provider wrappers for Brave/GDELT/Google with 8-hour cache TTL, offline-first reads, and optional manual live refresh.
+// Purpose: Provider wrappers for Brave/GDELT/Google with shared cache TTL, offline-first reads, and optional manual live refresh.
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { readCacheEntry, writeCache, getCacheStats } from './cache-manager.js';
+import { readCacheEntry, writeCache, getCacheStats, DEFAULT_TTL_HOURS } from './cache-manager.js';
 import { fetchWithRetry, getRetryPolicyStats, isRetryableHttpStatus } from './retry-policy.js';
 
 const PROVIDER_STATUS = {
@@ -367,7 +367,7 @@ async function searchWithCacheRefresh({ provider, cacheKey, label, configPresent
     result.status = PROVIDER_STATUS.CACHE_HIT;
     result.cacheHit = true;
     result.data = normalize(entry.data);
-    logProvider(provider, { label, status: result.status, age_ms: entry.ageMs, ttl_hours: 8, mode: 'fresh_cache' });
+    logProvider(provider, { label, status: result.status, age_ms: entry.ageMs, ttl_hours: DEFAULT_TTL_HOURS, mode: 'fresh_cache' });
     return result;
   }
 
@@ -375,7 +375,7 @@ async function searchWithCacheRefresh({ provider, cacheKey, label, configPresent
     result.status = PROVIDER_STATUS.STALE_CACHE_HIT;
     result.cacheHit = true;
     result.data = normalize(entry.data);
-    logProvider(provider, { label, status: result.status, age_ms: entry.ageMs, ttl_hours: 8, mode: 'stale_cache' });
+    logProvider(provider, { label, status: result.status, age_ms: entry.ageMs, ttl_hours: DEFAULT_TTL_HOURS, mode: 'stale_cache' });
     return result;
   }
 

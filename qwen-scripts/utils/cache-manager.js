@@ -11,7 +11,7 @@ const PROJECT_ROOT = path.resolve(__dirname, '../..');
 const RUNTIME_CACHE_ROOT = path.resolve(PROJECT_ROOT, 'qwen-cache');
 const SEED_CACHE_ROOT = path.resolve(PROJECT_ROOT, 'qwen-data/cache-seed');
 
-const DEFAULT_TTL_HOURS = 8;
+const DEFAULT_TTL_HOURS = Math.max(1, Number(process.env.QWEN_CACHE_TTL_HOURS || 6));
 const TTL_MS = DEFAULT_TTL_HOURS * 60 * 60 * 1000;
 
 function ensureDir(dirPath) {

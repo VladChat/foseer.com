@@ -268,6 +268,15 @@ const THEME_DEFINITIONS_EXPANSION = [
   ['platform-policy', 'Platform Policy', ['platform policy', 'platform rules']],
 ];
 
+const SECTION_CATEGORY_THEME_DEFINITIONS = {
+  news: ['news-category', 'News Category', ['news category', 'news desk']],
+  business: ['business-category', 'Business Category', ['business category', 'business desk']],
+  tech: ['tech-category', 'Tech Category', ['tech category', 'technology desk']],
+  health: ['health-category', 'Health Category', ['health category', 'health desk']],
+  sports: ['sports-category', 'Sports Category', ['sports category', 'sports desk']],
+  culture: ['culture-category', 'Culture Category', ['culture category', 'culture desk']],
+};
+
 const ENTITY_DEFINITIONS = [
   ['fda', 'FDA', ['fda']],
   ['cdc', 'CDC', ['cdc']],
@@ -384,6 +393,7 @@ const GEOGRAPHY_DEFINITIONS_EXPANSION = [
 ];
 
 const FORMAT_DEFINITIONS = [
+  ['report', 'Report', ['report']],
   ['analysis', 'Analysis', ['analysis']],
   ['explainer', 'Explainer', ['explainer']],
   ['timeline', 'Timeline', ['timeline']],
@@ -521,6 +531,27 @@ export function buildTagRegistry() {
     const topicIds = Object.entries(topicThemeMap).filter(([, values]) => values.includes(tagId)).map(([topicId]) => topicId);
     const sectionIds = Array.from(new Set(topicIds.map((topicId) => taxonomy.sectionByTopic?.[topicId]).filter(Boolean)));
     const tag = buildTag(tagId, label, 'theme', aliases, sectionIds, topicIds, { min_posts_to_index: 3 });
+    tags.push(tag);
+    themeTagsBySlug.set(tag.slug, tag);
+    for (const topicId of topicIds) {
+      if (!themeTagSlugsByTopicId[topicId]) themeTagSlugsByTopicId[topicId] = [];
+      themeTagSlugsByTopicId[topicId].push(tag.slug);
+    }
+  }
+
+  for (const section of taxonomy.sections || []) {
+    const definition = SECTION_CATEGORY_THEME_DEFINITIONS[section.id];
+    if (!definition) continue;
+    const [tagId, label, aliases] = definition;
+    const topicIds = (taxonomy.topics || [])
+      .filter((topic) => topic.section_id === section.id)
+      .map((topic) => topic.id);
+    const sectionIds = [section.id];
+    const tag = buildTag(tagId, label, 'theme', aliases, sectionIds, topicIds, {
+      indexable: false,
+      min_posts_to_index: 999,
+      priority: 20,
+    });
     tags.push(tag);
     themeTagsBySlug.set(tag.slug, tag);
     for (const topicId of topicIds) {

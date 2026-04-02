@@ -10,6 +10,14 @@ const PROJECT_ROOT = resolveProjectRoot(import.meta.url);
 const TAG_REGISTRY_PATH = path.resolve(PROJECT_ROOT, 'qwen-data/contracts/tag-registry.json');
 const MIN_CANONICAL_TAGS = 3;
 const MAX_CANONICAL_TAGS = 6;
+const SECTION_CATEGORY_FALLBACK_SLUG = {
+  news: 'news-category',
+  business: 'business-category',
+  tech: 'tech-category',
+  health: 'health-category',
+  sports: 'sports-category',
+  culture: 'culture-category',
+};
 
 let cachedRegistry = null;
 
@@ -376,9 +384,18 @@ function pushFirstMatchingSelection(target, pool, predicate) {
 
 function buildFormatTagSelection(registry, articleType) {
   const normalized = String(articleType || '').trim().toLowerCase();
-  if (!normalized || normalized === 'report') return null;
+  if (!normalized) return null;
   const formatTag = Object.values(registry.bySlug || {}).find((tag) => tag.type === 'format' && normalizeText(tag.label) === normalizeText(normalized));
   return formatTag ? { ...formatTag, score: 10, reason: `Format from article type: ${articleType}` } : null;
+}
+
+function buildSectionCategoryFallbackSelection(registry, sectionId, topicId) {
+  const slug = SECTION_CATEGORY_FALLBACK_SLUG[String(sectionId || '').trim().toLowerCase()];
+  if (!slug) return null;
+  const tag = registry.bySlug?.[slug];
+  if (!tag) return null;
+  if (topicId && Array.isArray(tag.topic_ids) && tag.topic_ids.length > 0 && !tag.topic_ids.includes(topicId)) return null;
+  return buildSelectionItem(tag, 14, `Section category fallback (${sectionId})`, null, true);
 }
 
 function selectPrimaryTopicTag(registry, topicId, corpus, sectionId) {
@@ -404,6 +421,15 @@ function selectPrimaryTopicTag(registry, topicId, corpus, sectionId) {
       score: Math.max(mappedEntry.score, 40),
       reason: `Primary topic tag validated from topic_id=${topicId}`,
       evidence: mappedEntry.evidence,
+    };
+  }
+
+  if (mappedTag) {
+    return {
+      tag: mappedTag,
+      score: Math.max(mappedEntry?.score || 0, 24),
+      reason: `Primary topic fallback locked to canonical topic_id=${topicId}`,
+      evidence: mappedEntry?.evidence || null,
     };
   }
 
@@ -747,7 +773,15 @@ export function pickArticleTags(context = {}) {
 
   if (!hasAnyNonTopicTag(deduped)) {
     const added = pushFirstMatchingSelection(deduped, nonTopicFallbackPool, (item) => String(item?.type || '').toLowerCase() !== 'topic');
-    if (!added) warnings.push('Missing non-topic evidence tag (entity/theme/geography/format)');
+    if (!added) {
+      const sectionFallback = buildSectionCategoryFallbackSelection(registry, sectionId, topicId);
+      if (sectionFallback) {
+        deduped.push(sectionFallback);
+        warnings.push(`Non-topic evidence tag fallback applied from section category (${sectionId})`);
+      } else {
+        warnings.push('Missing non-topic evidence tag (entity/theme/geography/format)');
+      }
+    }
   }
 
   if (deduped.length < MIN_CANONICAL_TAGS) {

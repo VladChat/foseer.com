@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-04-02T00:49:39.663Z",
+  "generated_at": "2026-04-02T01:45:19.708Z",
   "source_taxonomy_registry": "qwen-data/contracts/taxonomy-registry.json",
   "tags": [
     {
@@ -4737,6 +4737,156 @@
       "related_tags": []
     },
     {
+      "tag_id": "news-category",
+      "slug": "news-category",
+      "label": "News Category",
+      "type": "theme",
+      "section_ids": [
+        "news"
+      ],
+      "topic_ids": [
+        "us-politics",
+        "world-geopolitics",
+        "law-crime",
+        "climate-extreme-weather",
+        "society-social-trends"
+      ],
+      "aliases": [
+        "News Category",
+        "news category",
+        "news desk"
+      ],
+      "indexable": false,
+      "priority": 20,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
+    {
+      "tag_id": "business-category",
+      "slug": "business-category",
+      "label": "Business Category",
+      "type": "theme",
+      "section_ids": [
+        "business"
+      ],
+      "topic_ids": [
+        "economy-markets",
+        "companies-deals",
+        "consumer-money",
+        "housing-real-estate",
+        "crypto-bitcoin",
+        "travel-consumer-issues"
+      ],
+      "aliases": [
+        "Business Category",
+        "business category",
+        "business desk"
+      ],
+      "indexable": false,
+      "priority": 20,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
+    {
+      "tag_id": "tech-category",
+      "slug": "tech-category",
+      "label": "Tech Category",
+      "type": "theme",
+      "section_ids": [
+        "tech"
+      ],
+      "topic_ids": [
+        "ai-big-tech",
+        "consumer-tech",
+        "cybersecurity",
+        "mobility-evs",
+        "space-astronomy",
+        "enterprise-platforms"
+      ],
+      "aliases": [
+        "Tech Category",
+        "tech category",
+        "technology desk"
+      ],
+      "indexable": false,
+      "priority": 20,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
+    {
+      "tag_id": "health-category",
+      "slug": "health-category",
+      "label": "Health Category",
+      "type": "theme",
+      "section_ids": [
+        "health"
+      ],
+      "topic_ids": [
+        "public-health",
+        "medical-research",
+        "pharma-fda",
+        "mental-health",
+        "wellness-fitness"
+      ],
+      "aliases": [
+        "Health Category",
+        "health category",
+        "health desk"
+      ],
+      "indexable": false,
+      "priority": 20,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
+    {
+      "tag_id": "sports-category",
+      "slug": "sports-category",
+      "label": "Sports Category",
+      "type": "theme",
+      "section_ids": [
+        "sports"
+      ],
+      "topic_ids": [
+        "major-leagues",
+        "events-tournaments",
+        "transfers-business",
+        "athletes-culture"
+      ],
+      "aliases": [
+        "Sports Category",
+        "sports category",
+        "sports desk"
+      ],
+      "indexable": false,
+      "priority": 20,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
+    {
+      "tag_id": "culture-category",
+      "slug": "culture-category",
+      "label": "Culture Category",
+      "type": "theme",
+      "section_ids": [
+        "culture"
+      ],
+      "topic_ids": [
+        "film-tv",
+        "music-celebrities",
+        "internet-culture",
+        "creators-platforms"
+      ],
+      "aliases": [
+        "Culture Category",
+        "culture category",
+        "culture desk"
+      ],
+      "indexable": false,
+      "priority": 20,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
+    {
       "tag_id": "fda",
       "slug": "fda",
       "label": "FDA",
@@ -6761,6 +6911,22 @@
       "related_tags": []
     },
     {
+      "tag_id": "report",
+      "slug": "report",
+      "label": "Report",
+      "type": "format",
+      "section_ids": [],
+      "topic_ids": [],
+      "aliases": [
+        "Report",
+        "report"
+      ],
+      "indexable": false,
+      "priority": 40,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
+    {
       "tag_id": "analysis",
       "slug": "analysis",
       "label": "Analysis",
@@ -6868,7 +7034,8 @@
       "executive-orders",
       "immigration-policy",
       "budget-bill",
-      "voting-rights"
+      "voting-rights",
+      "news-category"
     ],
     "world-geopolitics": [
       "diplomacy",
@@ -6877,14 +7044,16 @@
       "sanctions",
       "ceasefire",
       "peace-talks",
-      "national-security"
+      "national-security",
+      "news-category"
     ],
     "law-crime": [
       "criminal-investigation",
       "court-ruling",
       "sentencing",
       "civil-rights",
-      "police-reform"
+      "police-reform",
+      "news-category"
     ],
     "climate-extreme-weather": [
       "wildfire",
@@ -6894,14 +7063,16 @@
       "climate-policy",
       "emissions",
       "drought",
-      "disaster-response"
+      "disaster-response",
+      "news-category"
     ],
     "society-social-trends": [
       "labor-strike",
       "education-policy",
       "cost-of-living",
       "demographics",
-      "social-policy"
+      "social-policy",
+      "news-category"
     ],
     "economy-markets": [
       "inflation",
@@ -6911,7 +7082,8 @@
       "wall-street",
       "recession-risk",
       "treasury-yields",
-      "central-banks"
+      "central-banks",
+      "business-category"
     ],
     "companies-deals": [
       "earnings",
@@ -6920,14 +7092,16 @@
       "layoffs",
       "ipo",
       "corporate-governance",
-      "shareholder-activism"
+      "shareholder-activism",
+      "business-category"
     ],
     "consumer-money": [
       "consumer-debt",
       "credit-cards",
       "personal-finance",
       "savings",
-      "household-budgets"
+      "household-budgets",
+      "business-category"
     ],
     "housing-real-estate": [
       "mortgage-rates",
@@ -6936,14 +7110,16 @@
       "mortgages",
       "housing-affordability",
       "homebuilding",
-      "zoning-policy"
+      "zoning-policy",
+      "business-category"
     ],
     "crypto-bitcoin": [
       "bitcoin",
       "ethereum",
       "stablecoins",
       "crypto-regulation",
-      "digital-assets"
+      "digital-assets",
+      "business-category"
     ],
     "travel-consumer-issues": [
       "airport-security",
@@ -6952,7 +7128,8 @@
       "airline-fees",
       "travel-disruption",
       "consumer-protection",
-      "refunds"
+      "refunds",
+      "business-category"
     ],
     "ai-big-tech": [
       "artificial-intelligence",
@@ -6960,7 +7137,8 @@
       "antitrust",
       "ai-regulation",
       "model-safety",
-      "data-centers"
+      "data-centers",
+      "tech-category"
     ],
     "cybersecurity": [
       "privacy",
@@ -6968,35 +7146,40 @@
       "ransomware",
       "cyber-espionage",
       "critical-infrastructure",
-      "incident-response"
+      "incident-response",
+      "tech-category"
     ],
     "consumer-tech": [
       "smartphones",
       "wearables",
       "product-launch",
       "app-economy",
-      "hardware"
+      "hardware",
+      "tech-category"
     ],
     "mobility-evs": [
       "electric-vehicles",
       "charging-network",
       "autonomous-driving",
       "battery-supply-chain",
-      "ev-policy"
+      "ev-policy",
+      "tech-category"
     ],
     "space-astronomy": [
       "rocket-launch",
       "satellite",
       "lunar-mission",
       "commercial-space",
-      "space-policy"
+      "space-policy",
+      "tech-category"
     ],
     "enterprise-platforms": [
       "cloud-computing",
       "software-platforms",
       "saas",
       "developer-tools",
-      "enterprise-security"
+      "enterprise-security",
+      "tech-category"
     ],
     "public-health": [
       "outbreak",
@@ -7005,14 +7188,16 @@
       "health-insurance",
       "vaccination",
       "healthcare-access",
-      "public-health-emergency"
+      "public-health-emergency",
+      "health-category"
     ],
     "medical-research": [
       "medical-study",
       "clinical-trial",
       "pediatric-care",
       "peer-reviewed-research",
-      "genomics"
+      "genomics",
+      "health-category"
     ],
     "pharma-fda": [
       "drug-approval",
@@ -7020,20 +7205,23 @@
       "biotech",
       "therapy-access",
       "drug-pricing",
-      "fda-advisory-committee"
+      "fda-advisory-committee",
+      "health-category"
     ],
     "mental-health": [
       "depression",
       "anxiety",
       "addiction-recovery",
-      "youth-mental-health"
+      "youth-mental-health",
+      "health-category"
     ],
     "wellness-fitness": [
       "nutrition",
       "sleep",
       "exercise",
       "preventive-care",
-      "longevity"
+      "longevity",
+      "health-category"
     ],
     "major-leagues": [
       "mlb",
@@ -7047,28 +7235,32 @@
       "attendance",
       "coaching-changes",
       "injuries",
-      "standings"
+      "standings",
+      "sports-category"
     ],
     "events-tournaments": [
       "playoffs",
       "world-cup",
       "olympics",
       "qualification-rules",
-      "host-city"
+      "host-city",
+      "sports-category"
     ],
     "transfers-business": [
       "trade-rumors",
       "free-agency",
       "franchise-value",
       "salary-cap",
-      "sponsorship-deals"
+      "sponsorship-deals",
+      "sports-category"
     ],
     "athletes-culture": [
       "athlete-activism",
       "fan-culture",
       "trans-athlete-policy",
       "player-safety",
-      "gender-eligibility"
+      "gender-eligibility",
+      "sports-category"
     ],
     "film-tv": [
       "streaming",
@@ -7077,20 +7269,23 @@
       "awards-season",
       "tv-ratings",
       "production-delays",
-      "adaptation"
+      "adaptation",
+      "culture-category"
     ],
     "music-celebrities": [
       "concert-tour",
       "celebrity-scandal",
       "music-industry",
       "chart-performance",
-      "artist-rights"
+      "artist-rights",
+      "culture-category"
     ],
     "internet-culture": [
       "viral-trend",
       "meme-culture",
       "online-safety",
-      "platform-algorithms"
+      "platform-algorithms",
+      "culture-category"
     ],
     "creators-platforms": [
       "influencer-economy",
@@ -7104,7 +7299,8 @@
       "creator-rights",
       "ad-revenue",
       "subscription-models",
-      "platform-policy"
+      "platform-policy",
+      "culture-category"
     ]
   },
   "entityTagSlugsByTopicId": {
@@ -7312,6 +7508,7 @@
     "palestinian-territories"
   ],
   "formatTagSlugs": [
+    "report",
     "analysis",
     "explainer",
     "timeline",
@@ -12051,6 +12248,156 @@
       "min_posts_to_index": 3,
       "related_tags": []
     },
+    "news-category": {
+      "tag_id": "news-category",
+      "slug": "news-category",
+      "label": "News Category",
+      "type": "theme",
+      "section_ids": [
+        "news"
+      ],
+      "topic_ids": [
+        "us-politics",
+        "world-geopolitics",
+        "law-crime",
+        "climate-extreme-weather",
+        "society-social-trends"
+      ],
+      "aliases": [
+        "News Category",
+        "news category",
+        "news desk"
+      ],
+      "indexable": false,
+      "priority": 20,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
+    "business-category": {
+      "tag_id": "business-category",
+      "slug": "business-category",
+      "label": "Business Category",
+      "type": "theme",
+      "section_ids": [
+        "business"
+      ],
+      "topic_ids": [
+        "economy-markets",
+        "companies-deals",
+        "consumer-money",
+        "housing-real-estate",
+        "crypto-bitcoin",
+        "travel-consumer-issues"
+      ],
+      "aliases": [
+        "Business Category",
+        "business category",
+        "business desk"
+      ],
+      "indexable": false,
+      "priority": 20,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
+    "tech-category": {
+      "tag_id": "tech-category",
+      "slug": "tech-category",
+      "label": "Tech Category",
+      "type": "theme",
+      "section_ids": [
+        "tech"
+      ],
+      "topic_ids": [
+        "ai-big-tech",
+        "consumer-tech",
+        "cybersecurity",
+        "mobility-evs",
+        "space-astronomy",
+        "enterprise-platforms"
+      ],
+      "aliases": [
+        "Tech Category",
+        "tech category",
+        "technology desk"
+      ],
+      "indexable": false,
+      "priority": 20,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
+    "health-category": {
+      "tag_id": "health-category",
+      "slug": "health-category",
+      "label": "Health Category",
+      "type": "theme",
+      "section_ids": [
+        "health"
+      ],
+      "topic_ids": [
+        "public-health",
+        "medical-research",
+        "pharma-fda",
+        "mental-health",
+        "wellness-fitness"
+      ],
+      "aliases": [
+        "Health Category",
+        "health category",
+        "health desk"
+      ],
+      "indexable": false,
+      "priority": 20,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
+    "sports-category": {
+      "tag_id": "sports-category",
+      "slug": "sports-category",
+      "label": "Sports Category",
+      "type": "theme",
+      "section_ids": [
+        "sports"
+      ],
+      "topic_ids": [
+        "major-leagues",
+        "events-tournaments",
+        "transfers-business",
+        "athletes-culture"
+      ],
+      "aliases": [
+        "Sports Category",
+        "sports category",
+        "sports desk"
+      ],
+      "indexable": false,
+      "priority": 20,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
+    "culture-category": {
+      "tag_id": "culture-category",
+      "slug": "culture-category",
+      "label": "Culture Category",
+      "type": "theme",
+      "section_ids": [
+        "culture"
+      ],
+      "topic_ids": [
+        "film-tv",
+        "music-celebrities",
+        "internet-culture",
+        "creators-platforms"
+      ],
+      "aliases": [
+        "Culture Category",
+        "culture category",
+        "culture desk"
+      ],
+      "indexable": false,
+      "priority": 20,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
     "fda": {
       "tag_id": "fda",
       "slug": "fda",
@@ -14069,6 +14416,22 @@
         "Palestinian Territories",
         "palestinian territories",
         "occupied territories"
+      ],
+      "indexable": false,
+      "priority": 40,
+      "min_posts_to_index": 999,
+      "related_tags": []
+    },
+    "report": {
+      "tag_id": "report",
+      "slug": "report",
+      "label": "Report",
+      "type": "format",
+      "section_ids": [],
+      "topic_ids": [],
+      "aliases": [
+        "Report",
+        "report"
       ],
       "indexable": false,
       "priority": 40,
@@ -18877,6 +19240,156 @@
         "priority": 80,
         "min_posts_to_index": 3,
         "related_tags": []
+      },
+      {
+        "tag_id": "news-category",
+        "slug": "news-category",
+        "label": "News Category",
+        "type": "theme",
+        "section_ids": [
+          "news"
+        ],
+        "topic_ids": [
+          "us-politics",
+          "world-geopolitics",
+          "law-crime",
+          "climate-extreme-weather",
+          "society-social-trends"
+        ],
+        "aliases": [
+          "News Category",
+          "news category",
+          "news desk"
+        ],
+        "indexable": false,
+        "priority": 20,
+        "min_posts_to_index": 999,
+        "related_tags": []
+      },
+      {
+        "tag_id": "business-category",
+        "slug": "business-category",
+        "label": "Business Category",
+        "type": "theme",
+        "section_ids": [
+          "business"
+        ],
+        "topic_ids": [
+          "economy-markets",
+          "companies-deals",
+          "consumer-money",
+          "housing-real-estate",
+          "crypto-bitcoin",
+          "travel-consumer-issues"
+        ],
+        "aliases": [
+          "Business Category",
+          "business category",
+          "business desk"
+        ],
+        "indexable": false,
+        "priority": 20,
+        "min_posts_to_index": 999,
+        "related_tags": []
+      },
+      {
+        "tag_id": "tech-category",
+        "slug": "tech-category",
+        "label": "Tech Category",
+        "type": "theme",
+        "section_ids": [
+          "tech"
+        ],
+        "topic_ids": [
+          "ai-big-tech",
+          "consumer-tech",
+          "cybersecurity",
+          "mobility-evs",
+          "space-astronomy",
+          "enterprise-platforms"
+        ],
+        "aliases": [
+          "Tech Category",
+          "tech category",
+          "technology desk"
+        ],
+        "indexable": false,
+        "priority": 20,
+        "min_posts_to_index": 999,
+        "related_tags": []
+      },
+      {
+        "tag_id": "health-category",
+        "slug": "health-category",
+        "label": "Health Category",
+        "type": "theme",
+        "section_ids": [
+          "health"
+        ],
+        "topic_ids": [
+          "public-health",
+          "medical-research",
+          "pharma-fda",
+          "mental-health",
+          "wellness-fitness"
+        ],
+        "aliases": [
+          "Health Category",
+          "health category",
+          "health desk"
+        ],
+        "indexable": false,
+        "priority": 20,
+        "min_posts_to_index": 999,
+        "related_tags": []
+      },
+      {
+        "tag_id": "sports-category",
+        "slug": "sports-category",
+        "label": "Sports Category",
+        "type": "theme",
+        "section_ids": [
+          "sports"
+        ],
+        "topic_ids": [
+          "major-leagues",
+          "events-tournaments",
+          "transfers-business",
+          "athletes-culture"
+        ],
+        "aliases": [
+          "Sports Category",
+          "sports category",
+          "sports desk"
+        ],
+        "indexable": false,
+        "priority": 20,
+        "min_posts_to_index": 999,
+        "related_tags": []
+      },
+      {
+        "tag_id": "culture-category",
+        "slug": "culture-category",
+        "label": "Culture Category",
+        "type": "theme",
+        "section_ids": [
+          "culture"
+        ],
+        "topic_ids": [
+          "film-tv",
+          "music-celebrities",
+          "internet-culture",
+          "creators-platforms"
+        ],
+        "aliases": [
+          "Culture Category",
+          "culture category",
+          "culture desk"
+        ],
+        "indexable": false,
+        "priority": 20,
+        "min_posts_to_index": 999,
+        "related_tags": []
       }
     ],
     "entity": [
@@ -20908,6 +21421,22 @@
       }
     ],
     "format": [
+      {
+        "tag_id": "report",
+        "slug": "report",
+        "label": "Report",
+        "type": "format",
+        "section_ids": [],
+        "topic_ids": [],
+        "aliases": [
+          "Report",
+          "report"
+        ],
+        "indexable": false,
+        "priority": 40,
+        "min_posts_to_index": 999,
+        "related_tags": []
+      },
       {
         "tag_id": "analysis",
         "slug": "analysis",
