@@ -1,5 +1,5 @@
 {
-  "totalArticles": 100,
+  "totalArticles": 101,
   "lastReset": null,
   "byWriter": {
     "reporter": {
@@ -17,29 +17,21 @@
       "lastAuthorId": "olivia_brooks"
     },
     "analyst": {
-      "count": 17,
-      "lastAssigned": 1775065417399,
-      "streak": 0,
-      "authorCursor": 3,
-      "lastAuthorId": "jacob_ellis"
+      "count": 18,
+      "lastAssigned": 1775097743283,
+      "streak": 1,
+      "authorCursor": 0,
+      "lastAuthorId": "ava_mitchell"
     },
     "features": {
       "count": 33,
       "lastAssigned": 1775097541322,
-      "streak": 1,
+      "streak": 0,
       "authorCursor": 0,
       "lastAuthorId": "chloe_warren"
     }
   },
   "recentAssignments": [
-    {
-      "writerId": "reporter",
-      "timestamp": 1774650514490,
-      "articleType": "report",
-      "beat": "sports business",
-      "section": "Sports",
-      "topic_id": "transfers-business"
-    },
     {
       "writerId": "analyst",
       "timestamp": 1774651098434,
@@ -431,6 +423,14 @@
       "beat": "sports",
       "section": "Sports",
       "topic_id": "transfers-business"
+    },
+    {
+      "writerId": "analyst",
+      "timestamp": 1775097743283,
+      "articleType": "analysis",
+      "beat": "business",
+      "section": "Business",
+      "topic_id": "companies-deals"
     }
   ]
 }

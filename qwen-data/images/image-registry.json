@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-04-02T02:39:27.934Z",
+  "updatedAt": "2026-04-02T02:42:52.725Z",
   "assets": [
     {
       "assetKey": "legacy:7-social-media-trends-you-need-to-know-in-2026",
@@ -8048,16 +8048,80 @@
       "sceneType": "stadium",
       "geoHints": [],
       "visualType": "photo",
-      "editorialFitScore": 94,
+      "editorialFitScore": 92,
       "firstSeenAt": "2026-04-02T02:39:27.934Z",
       "lastFetchedAt": "2026-04-02T02:39:27.934Z",
       "lastUsedAt": "2026-04-02T02:39:27.934Z",
       "useCount": 1,
       "status": "ready",
       "provenance": "provider_download"
+    },
+    {
+      "assetKey": "pexels:32323354",
+      "provider": "pexels",
+      "providerAssetId": "32323354",
+      "sourcePageUrl": "https://www.pexels.com/photo/stacked-baskets-and-boxes-against-wooden-door-32323354/",
+      "sourceDownloadUrl": "https://images.pexels.com/photos/32323354/pexels-photo-32323354.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "authorName": "mingche lee",
+      "authorUrl": "https://www.pexels.com/@mingche-lee-2072368",
+      "license": "Pexels License",
+      "altText": "Pile of baskets and cardboard boxes with a mop leaning against a wooden door, creating an urban still life scene.",
+      "width": 4368,
+      "height": 2912,
+      "format": "jpg",
+      "localPath": "~/assets/images/library/pexels/32323354/cover.jpg",
+      "fileRelativePath": "src/assets/images/library/pexels/32323354/cover.jpg",
+      "metadataRelativePath": "src/assets/images/library/pexels/32323354/metadata.json",
+      "publicUrl": null,
+      "publicFileRelativePath": null,
+      "sectionHints": [
+        "Business"
+      ],
+      "queryHistory": [
+        "Retail photo"
+      ],
+      "tags": [
+        "companies-deals",
+        "amazon",
+        "Pile of baskets and cardboard boxes with a mop leaning against a wooden door",
+        "creating an urban still life scene."
+      ],
+      "topicHints": [
+        "companies-deals"
+      ],
+      "entityHints": [
+        "pile",
+        "baskets",
+        "cardboard",
+        "boxes",
+        "leaning",
+        "wooden",
+        "door",
+        "creating"
+      ],
+      "sceneType": "office",
+      "geoHints": [],
+      "visualType": "photo",
+      "editorialFitScore": 100,
+      "firstSeenAt": "2026-04-02T02:42:52.725Z",
+      "lastFetchedAt": "2026-04-02T02:42:52.725Z",
+      "lastUsedAt": "2026-04-02T02:42:52.725Z",
+      "useCount": 1,
+      "status": "ready",
+      "provenance": "provider_download"
     }
   ],
   "usage": [
+    {
+      "assetKey": "pexels:32323354",
+      "articleSlug": "stronger-us-retail-sales-test-the-tired-consumer-narrative",
+      "articleTitle": "Stronger US Retail Sales Test the ‘Tired Consumer’ Narrative",
+      "section": "Business",
+      "topicId": "companies-deals",
+      "query": "Retail photo",
+      "usedAt": "2026-04-02T02:42:52.725Z",
+      "selectionMode": "provider_download_new:pexels:usable:strict"
+    },
     {
       "assetKey": "pexels:15338951",
       "articleSlug": "ncaa-adopts-harsh-penalties-for-teams-skirting-transfer-port",
@@ -8892,6 +8956,6 @@
   "maintenance": {
     "lastLegacyImportAt": "2026-03-26T18:24:48.254Z",
     "lastCooldownBackfillAt": null,
-    "lastMetadataEnrichmentAt": "2026-04-02T02:39:25.550Z"
+    "lastMetadataEnrichmentAt": "2026-04-02T02:42:49.318Z"
   }
 }

@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-02T02:42:52.748Z",
+  "event_id": "evt-2026-04-02-companies-deals-general-global-amazon",
+  "cluster_id": "evt-2026-04-02-companies-deals-general-global-amazon",
+  "article_type": "analysis",
+  "title": "Stronger US Retail Sales Test the ‘Tired Consumer’ Narrative",
+  "slug": "stronger-us-retail-sales-test-the-tired-consumer-narrative",
+  "canonical_slug": "2026-04-02-stronger-us-retail-sales-test-the-tired-consumer-narrative",
+  "expected_url": "/article/2026-04-02-stronger-us-retail-sales-test-the-tired-consumer-narrative",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-stronger-us-retail-sales-test-the-tired-consumer-narrative.mdx",
+  "published_at": "2026-04-02T02:42:52.746Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "companies-deals",
+  "topic_label": "Companies & Deals",
+  "subsection": "Companies & Deals",
+  "topics": [
+    "Companies & Deals"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "ava_mitchell",
+    "author_name": "Ava Mitchell",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/32323354/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/32323354/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/stacked-baskets-and-boxes-against-wooden-door-32323354/",
+    "asset_key": "pexels:32323354",
+    "alt_text": "Illustration for Stronger US Retail Sales Test the ‘Tired Consumer’ Narrative",
+    "selection_mode": "provider_download_new:pexels:usable:strict",
+    "query_used": "Retail photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 48,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 63,
+    "is_fallback": false
+  },
+  "tags": [
+    "Companies & Deals",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Retail sales rose more than expected in February",
+        "url": "https://www.cnn.com/2026/04/01/economy/us-retail-sales-consumer-spending-february",
+        "domain": "cnn.com"
+      },
+      {
+        "title": "How one family's bipolar disorder experience led to more than $1 ...",
+        "url": "https://abcnews.com/business/wirestory/familys-bipolar-disorder-experience-led-1-billion-broad-131563367",
+        "domain": "abcnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "How one family's bipolar disorder experience led to more than $1 ...",
+          "url": "https://abcnews.com/business/wirestory/familys-bipolar-disorder-experience-led-1-billion-broad-131563367",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "companies-deals",
+          "label": "Companies & Deals",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "companies-deals",
+        "topic_label": "Companies & Deals",
+        "supported": true,
+        "matched_aliases": [
+          "companies"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Retail photo",
+      "article_relevance_score": 48,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "retail"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

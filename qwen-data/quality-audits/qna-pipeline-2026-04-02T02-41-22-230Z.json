@@ -1,0 +1,777 @@
+{
+  "version": 2,
+  "run_id": "qna-pipeline-2026-04-02T02-41-22-230Z",
+  "started_at": "2026-04-02T02:41:22.230Z",
+  "generated_at": "2026-04-02T02:42:52.798Z",
+  "success": true,
+  "hard_blocker": null,
+  "stats": {
+    "cache_stats": {
+      "mode": "cache_refresh_with_live_quota",
+      "retry_policy": {
+        "max_attempts": 3,
+        "base_delay_ms": 700,
+        "max_delay_ms": 6000,
+        "jitter_ms": 250
+      },
+      "search_network_enabled": true,
+      "min_search_interval_ms": 10000,
+      "live_quota": {
+        "brave": 15,
+        "gdelt": 6,
+        "google": 30
+      },
+      "live_rescue_reserved": {
+        "brave": 1,
+        "gdelt": 0,
+        "google": 0
+      },
+      "live_phase_caps": {
+        "brave": {
+          "discovery": 14,
+          "rescue": 1
+        },
+        "gdelt": {
+          "discovery": 6,
+          "rescue": 6
+        },
+        "google": {
+          "discovery": 30,
+          "rescue": 30
+        }
+      },
+      "brave_rescue_max_live_queries": 1,
+      "live_usage": {
+        "brave": 1,
+        "gdelt": 0,
+        "google": 6
+      },
+      "live_usage_by_phase": {
+        "brave": {
+          "discovery": 0,
+          "rescue": 1
+        },
+        "gdelt": {
+          "discovery": 0,
+          "rescue": 0
+        },
+        "google": {
+          "discovery": 4,
+          "rescue": 2
+        }
+      },
+      "provider_circuits": {
+        "gdelt": {
+          "open": true,
+          "locked_until": "2026-04-03T02:01:51.976Z",
+          "reason": "API error: 429 Please limit requests to one every 5 seconds or contact kalev.leetaru5@gmail.com for larger queries.\n\n"
+        }
+      },
+      "cache": {
+        "ttl_hours": 6,
+        "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+        "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+        "runtime": {
+          "brave": {
+            "files": 9,
+            "fresh_files": 9,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 92446
+          },
+          "gdelt": {
+            "files": 0,
+            "fresh_files": 0,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 0
+          },
+          "google": {
+            "files": 18,
+            "fresh_files": 18,
+            "expired_files": 0,
+            "corrupt_files": 0,
+            "size_bytes": 418646
+          }
+        },
+        "seed": {
+          "brave": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 14135
+          },
+          "gdelt": {
+            "files": 1,
+            "fresh_files": 0,
+            "expired_files": 1,
+            "corrupt_files": 0,
+            "size_bytes": 6189
+          },
+          "google": {
+            "files": 9,
+            "fresh_files": 0,
+            "expired_files": 9,
+            "corrupt_files": 0,
+            "size_bytes": 285008
+          }
+        }
+      }
+    },
+    "duration_ms": 90559,
+    "news_pool": {
+      "total": 48,
+      "active": 39,
+      "published": 9,
+      "ready_candidates": 0
+    },
+    "brief_candidates": 16,
+    "question_candidates": 1,
+    "source_pack_attempts": 34,
+    "source_pack_near_miss": 27,
+    "source_pack_rescue_attempts": 6,
+    "source_pack_rescue_successes": 0
+  },
+  "provider_stats": {
+    "mode": "cache_refresh_with_live_quota",
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_ms": 700,
+      "max_delay_ms": 6000,
+      "jitter_ms": 250
+    },
+    "search_network_enabled": true,
+    "min_search_interval_ms": 10000,
+    "live_quota": {
+      "brave": 15,
+      "gdelt": 6,
+      "google": 30
+    },
+    "live_rescue_reserved": {
+      "brave": 1,
+      "gdelt": 0,
+      "google": 0
+    },
+    "live_phase_caps": {
+      "brave": {
+        "discovery": 14,
+        "rescue": 1
+      },
+      "gdelt": {
+        "discovery": 6,
+        "rescue": 6
+      },
+      "google": {
+        "discovery": 30,
+        "rescue": 30
+      }
+    },
+    "brave_rescue_max_live_queries": 1,
+    "live_usage": {
+      "brave": 1,
+      "gdelt": 0,
+      "google": 6
+    },
+    "live_usage_by_phase": {
+      "brave": {
+        "discovery": 0,
+        "rescue": 1
+      },
+      "gdelt": {
+        "discovery": 0,
+        "rescue": 0
+      },
+      "google": {
+        "discovery": 4,
+        "rescue": 2
+      }
+    },
+    "provider_circuits": {
+      "gdelt": {
+        "open": true,
+        "locked_until": "2026-04-03T02:01:51.976Z",
+        "reason": "API error: 429 Please limit requests to one every 5 seconds or contact kalev.leetaru5@gmail.com for larger queries.\n\n"
+      }
+    },
+    "cache": {
+      "ttl_hours": 6,
+      "runtime_root": "/home/runner/work/foseer.com/foseer.com/qwen-cache",
+      "seed_root": "/home/runner/work/foseer.com/foseer.com/qwen-data/cache-seed",
+      "runtime": {
+        "brave": {
+          "files": 9,
+          "fresh_files": 9,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 92446
+        },
+        "gdelt": {
+          "files": 0,
+          "fresh_files": 0,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 0
+        },
+        "google": {
+          "files": 18,
+          "fresh_files": 18,
+          "expired_files": 0,
+          "corrupt_files": 0,
+          "size_bytes": 418646
+        }
+      },
+      "seed": {
+        "brave": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 14135
+        },
+        "gdelt": {
+          "files": 1,
+          "fresh_files": 0,
+          "expired_files": 1,
+          "corrupt_files": 0,
+          "size_bytes": 6189
+        },
+        "google": {
+          "files": 9,
+          "fresh_files": 0,
+          "expired_files": 9,
+          "corrupt_files": 0,
+          "size_bytes": 285008
+        }
+      }
+    }
+  },
+  "stage_overview": {
+    "discovery_refresh": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "shared_cache_load": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "brief_source_pack_gate": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "question_extraction": {
+      "success": false,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "question_filtering": {
+      "success": false,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "source_pack_selection": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "pre_write_quality_gate": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "question_refinement": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "claim_map": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "draft": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "image": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "publish": {
+      "success": true,
+      "error": null,
+      "total": 0,
+      "success_count": 0,
+      "failure_count": 0
+    }
+  },
+  "editorial_overview": {
+    "candidate_count": 1,
+    "editorial_pass_count": 1,
+    "editorial_fail_count": 0
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "title": "Stronger US Retail Sales Test the ‘Tired Consumer’ Narrative",
+      "slug": "stronger-us-retail-sales-test-the-tired-consumer-narrative",
+      "published": true,
+      "editorial_pass": true,
+      "editorial_blockers": [],
+      "editorial_warnings": [
+        "Canonical tag set is thinner than expected for publish review"
+      ],
+      "stages": {},
+      "source_pack": {
+        "passes_gate": true,
+        "gate_decision": "PASS",
+        "gate_notes": [
+          "Large cluster retained extra materials as background/signal; publishable pack remains thin",
+          "Role-aware one-event source-pack gate passed"
+        ],
+        "placement": {
+          "section_id": "business",
+          "topic_id": "companies-deals",
+          "placement_confidence": "medium",
+          "placement_reason": [
+            "kept_existing_topic"
+          ]
+        },
+        "metrics": {
+          "total_sources": 2,
+          "unique_domains": 2,
+          "direct_event_source_count": 2,
+          "independent_event_domains": 2,
+          "source_consistency_score": 6.3,
+          "strong_match_count": 2,
+          "core_source_count": 2,
+          "supporting_source_count": 0,
+          "background_source_count": 4,
+          "rejected_source_count": 0
+        },
+        "role_counts": {
+          "core": 2,
+          "supporting": 1,
+          "background": 11
+        },
+        "publish_ready_sources": [
+          {
+            "title": "Retail sales rose more than expected in February",
+            "domain": "cnn.com",
+            "url": "https://www.cnn.com/2026/04/01/economy/us-retail-sales-consumer-spending-february",
+            "page_kind": "article",
+            "topic_id": null,
+            "section_id": "business"
+          },
+          {
+            "title": "How one family's bipolar disorder experience led to more than $1 ...",
+            "domain": "abcnews.com",
+            "url": "https://abcnews.com/business/wirestory/familys-bipolar-disorder-experience-led-1-billion-broad-131563367",
+            "page_kind": "official_release",
+            "topic_id": null,
+            "section_id": "business"
+          }
+        ],
+        "excluded_sources": [],
+        "role_sample": [
+          {
+            "role": "core",
+            "title": "Retail sales rose more than expected in February",
+            "domain": "cnn.com",
+            "page_kind": "article",
+            "same_event_score": 17,
+            "topic_fit_score": 4,
+            "source_quality_score": 41.5,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "core",
+            "title": "How one family's bipolar disorder experience led to more than $1 ...",
+            "domain": "abcnews.com",
+            "page_kind": "official_release",
+            "same_event_score": 5,
+            "topic_fit_score": 3,
+            "source_quality_score": 14.5,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          },
+          {
+            "role": "supporting",
+            "title": "Amazon in talks to buy $9 billion satellite group Globalstar: Report",
+            "domain": "moneycontrol.com",
+            "page_kind": "article",
+            "same_event_score": 4,
+            "topic_fit_score": 3,
+            "source_quality_score": 16,
+            "article_likelihood": 9,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "SpaceX IPO will gauge market moxie more than depth",
+            "domain": "reuters.com",
+            "page_kind": "article",
+            "same_event_score": 5,
+            "topic_fit_score": -2,
+            "source_quality_score": 14.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "MnDOT : More than 200 projects planned statewide in 2026",
+            "domain": "keyc.com",
+            "page_kind": "article",
+            "same_event_score": 5,
+            "topic_fit_score": -1,
+            "source_quality_score": 13,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Like MLB, College Basketball Is Also Now More Popular Than The NBA",
+            "domain": "outkick.com",
+            "page_kind": "article",
+            "same_event_score": 5,
+            "topic_fit_score": -2,
+            "source_quality_score": 12,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "How one family’s bipolar disorder experience led to more than $1 billion for the Broad Institute",
+            "domain": "rochesterfirst.com",
+            "page_kind": "official_release",
+            "same_event_score": 2,
+            "topic_fit_score": -1,
+            "source_quality_score": 16,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "2026 Donald J. Trump Executive Orders",
+            "domain": "federalregister.gov",
+            "page_kind": "official_release",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 13,
+            "article_likelihood": 7,
+            "genericity_score": 1
+          },
+          {
+            "role": "background",
+            "title": "Rideshare drivers on the brink of quitting over higher gas prices",
+            "domain": "cnn.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 4,
+            "source_quality_score": 10,
+            "article_likelihood": 10,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Best Workplaces in Canada 2026: 100",
+            "domain": "theglobeandmail.com",
+            "page_kind": "article",
+            "same_event_score": 1,
+            "topic_fit_score": 3,
+            "source_quality_score": 9,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Travel and Vacation Providers Stocks' Q4 Earnings: Royal ...",
+            "domain": "theglobeandmail.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 7,
+            "source_quality_score": 9.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          },
+          {
+            "role": "background",
+            "title": "Travel and Vacation Providers Stocks' Q4 Earnings: Hyatt Hotels ...",
+            "domain": "theglobeandmail.com",
+            "page_kind": "article",
+            "same_event_score": 0,
+            "topic_fit_score": 7,
+            "source_quality_score": 9.5,
+            "article_likelihood": 8,
+            "genericity_score": 0
+          }
+        ],
+        "semantic": {
+          "publish_ready_count": 2,
+          "mismatched_sources": [],
+          "generic_sources": [],
+          "weak_title_overlap_sources": [
+            {
+              "title": "How one family's bipolar disorder experience led to more than $1 ...",
+              "url": "https://abcnews.com/business/wirestory/familys-bipolar-disorder-experience-led-1-billion-broad-131563367",
+              "overlap_ratio": 0,
+              "shared_tokens": []
+            }
+          ]
+        }
+      },
+      "tags": {
+        "tags": [
+          "Companies & Deals",
+          "Analysis"
+        ],
+        "tag_slugs": [
+          "companies-deals",
+          "analysis"
+        ],
+        "primary_topic_tag": "Companies & Deals",
+        "primary_topic_slug": "companies-deals",
+        "warnings": [
+          "Canonical tag set is thin (2)"
+        ],
+        "diagnostics": {},
+        "selected": [
+          {
+            "label": "Companies & Deals",
+            "slug": "companies-deals",
+            "score": 24,
+            "reason": "Primary topic fallback locked to canonical topic_id=companies-deals",
+            "fallback": false
+          },
+          {
+            "label": "Analysis",
+            "slug": "analysis",
+            "score": 10,
+            "reason": "Format from article type: analysis",
+            "fallback": false
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "Canonical tag set is below target floor (3), accepted due sparse evidence"
+          ]
+        },
+        "semantic": {
+          "selected_tags": [
+            {
+              "slug": "companies-deals",
+              "label": "Companies & Deals",
+              "type": "topic"
+            },
+            {
+              "slug": "analysis",
+              "label": "Analysis",
+              "type": "format"
+            }
+          ],
+          "unsupported_tags": [],
+          "primary_topic": {
+            "topic_id": "companies-deals",
+            "topic_label": "Companies & Deals",
+            "supported": true,
+            "matched_aliases": [
+              "companies"
+            ]
+          }
+        }
+      },
+      "image": {
+        "provider": "pexels",
+        "image_path": "~/assets/images/library/pexels/32323354/cover.jpg",
+        "source_url": "https://www.pexels.com/photo/stacked-baskets-and-boxes-against-wooden-door-32323354/",
+        "selection_mode": "provider_download_new:pexels:usable:strict",
+        "query_used": "Retail photo",
+        "relevance_tier": "acceptable",
+        "article_relevance_score": 48,
+        "asset_quality_score": 100,
+        "editorial_fit_score": 63,
+        "scene_type": "office",
+        "visual_type": "photo",
+        "entity_hints": [
+          "pile",
+          "baskets",
+          "cardboard",
+          "boxes",
+          "leaning",
+          "wooden",
+          "door",
+          "creating"
+        ],
+        "geo_hints": [],
+        "queries_tried": [
+          "Retail photo",
+          "global Retail photo",
+          "Stronger US Retail photo",
+          "global Stronger US Retail photo",
+          "Retail Stronger US Retail photo",
+          "Companies and Deals photo",
+          "companies deals photo",
+          "financial district photo",
+          "business office photo"
+        ],
+        "decision_log": [
+          {
+            "query": "Retail photo",
+            "queryLevel": "strict",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "32323354",
+            "finalScore": 53,
+            "articleRelevanceScore": 35,
+            "assetQualityScore": 100,
+            "tier": "usable"
+          },
+          {
+            "query": "global Retail photo",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "Stronger US Retail photo",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "global Stronger US Retail photo",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "Retail Stronger US Retail photo",
+            "queryLevel": "strict",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "queryLevel": "strict",
+            "status": "level_complete",
+            "attemptedQueries": 5,
+            "rankedCandidates": 1,
+            "bestProvider": "pexels",
+            "bestFinalScore": 53,
+            "bestTier": "usable"
+          },
+          {
+            "query": "Companies and Deals photo",
+            "queryLevel": "relaxed",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "query": "companies deals photo",
+            "queryLevel": "relaxed",
+            "status": "no_eligible_candidate",
+            "candidateCount": 30
+          },
+          {
+            "queryLevel": "relaxed",
+            "status": "level_complete",
+            "attemptedQueries": 2,
+            "rankedCandidates": 0,
+            "bestProvider": null,
+            "bestFinalScore": null,
+            "bestTier": null
+          },
+          {
+            "query": "financial district photo",
+            "queryLevel": "broad",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "30525696",
+            "finalScore": 44,
+            "articleRelevanceScore": 34,
+            "assetQualityScore": 100,
+            "tier": "usable"
+          },
+          {
+            "query": "business office photo",
+            "queryLevel": "broad",
+            "status": "ranked_candidate",
+            "provider": "pexels",
+            "providerAssetId": "5483050",
+            "finalScore": 44,
+            "articleRelevanceScore": 22,
+            "assetQualityScore": 100,
+            "tier": "weak"
+          },
+          {
+            "queryLevel": "broad",
+            "status": "level_complete",
+            "attemptedQueries": 2,
+            "rankedCandidates": 2,
+            "bestProvider": "pexels",
+            "bestFinalScore": 44,
+            "bestTier": "usable"
+          }
+        ],
+        "best_online_decision": {
+          "query": "Retail photo",
+          "provider": "pexels",
+          "providerAssetId": "32323354",
+          "queryLevel": "strict",
+          "finalScore": 53,
+          "articleRelevanceScore": 35,
+          "assetQualityScore": 100,
+          "tier": "usable"
+        },
+        "online_attempted": true,
+        "fallback_used": false,
+        "semantic": {
+          "provider": "pexels",
+          "query_used": "Retail photo",
+          "article_relevance_score": 48,
+          "relevance_tier": "acceptable",
+          "overlap_ratio": 1,
+          "shared_tokens": [
+            "retail"
+          ],
+          "placeholder_query": false
+        }
+      },
+      "publish": {
+        "manifest_path": "/home/runner/work/foseer.com/foseer.com/qwen-data/publish-manifests/stronger-us-retail-sales-test-the-tired-consumer-narrative.json",
+        "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-02-stronger-us-retail-sales-test-the-tired-consumer-narrative.mdx",
+        "expected_url": "/article/2026-04-02-stronger-us-retail-sales-test-the-tired-consumer-narrative",
+        "verified_url": null
+      }
+    }
+  ]
+}
