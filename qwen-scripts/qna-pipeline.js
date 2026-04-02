@@ -17,6 +17,7 @@ import { writeQualityAuditRun } from './utils/quality-audit.js';
 import { extractQuestionCandidate, extractQuestionCandidates } from './question-extractor.js';
 import { loadSharedBriefCandidatesFromPool, runPreWriterDiscoveryIntake, runSharedSourcePackEngine, mergeRescueDiagnostics, estimateSourcePackCoherence } from './pre-writer-engine.js';
 import { evaluatePreWriteQualityGate } from './pre-write-quality-gate.js';
+import { attemptImageRescuePass, hasImageTopicMismatchError, splitPreWriteGraphErrors } from './utils/publish-rescue.js';
 
 loadProjectEnv();
 
@@ -416,9 +417,14 @@ export async function runQnaPipeline(options = {}) {
       },
     });
     const preWriteGraphErrorsRaw = Array.isArray(preWriteGraphValidation.errors) ? preWriteGraphValidation.errors : [];
-    const preWriteGraphErrors = preWriteGraphErrorsRaw.filter((message) => isPreWriteRelevantGraphError(message));
+    const preWriteGraphErrorSplit = splitPreWriteGraphErrors(preWriteGraphErrorsRaw);
+    const preWriteGraphErrors = preWriteGraphErrorSplit.blocking.filter((message) => isPreWriteRelevantGraphError(message));
     if (preWriteGraphErrors.length > 0) {
       preWriteReasons.push(...preWriteGraphErrors);
+    }
+    if (preWriteGraphErrorSplit.rescued.length > 0) {
+      preWriteWarnings.push(...preWriteGraphErrorSplit.warnings);
+      console.log(`[qna-pipeline] PRE-WRITE TAG RESCUE: downgraded ${preWriteGraphErrorSplit.rescued.length} tag blocker(s) to warnings`);
     }
     if (preWriteGraphErrorsRaw.length > preWriteGraphErrors.length) {
       preWriteWarnings.push('Pre-publish graph reported post-draft-only errors during precheck');
@@ -437,6 +443,10 @@ export async function runQnaPipeline(options = {}) {
           valid: preWriteGraphValidation.valid,
           errors: preWriteGraphValidation.errors || [],
           warnings: preWriteGraphValidation.warnings || [],
+        },
+        tag_rescue: {
+          rescued_errors: preWriteGraphErrorSplit.rescued || [],
+          blocking_errors: preWriteGraphErrors || [],
         },
       },
     };
@@ -679,12 +689,28 @@ export async function runQnaPipeline(options = {}) {
     }
 
     try {
-      const prePublishValidation = validatePrePublishGraph(selected);
+      let prePublishValidation = validatePrePublishGraph(selected);
+      let imageRescueDiagnostics = [];
+      if (!prePublishValidation.valid && hasImageTopicMismatchError(prePublishValidation.errors || [])) {
+        const rescue = await attemptImageRescuePass({
+          candidate: selected,
+          providerApiKeys: { pexelsApiKey, unsplashApiKey, pixabayApiKey },
+          validateGraph: validatePrePublishGraph,
+          logPrefix: 'qna-pipeline',
+        });
+        imageRescueDiagnostics = Array.isArray(rescue?.diagnostics) ? rescue.diagnostics : [];
+        if (rescue?.validation) {
+          prePublishValidation = rescue.validation;
+        } else if (rescue?.applied) {
+          prePublishValidation = validatePrePublishGraph(selected);
+        }
+      }
       if (!prePublishValidation.valid) {
         result.stages.publish_validation = {
           success: false,
           errors: prePublishValidation.errors,
           warnings: prePublishValidation.warnings,
+          image_rescue: imageRescueDiagnostics,
         };
         const lateFallback = await tryLateStageFallbackSelection({
           selectedMode,

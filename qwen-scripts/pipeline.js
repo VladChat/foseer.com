@@ -21,6 +21,7 @@ import { mergeBriefsIntoPool, mergeDiscoveredNews, getSelectableBriefs, getReady
 import { writeQualityAuditRun } from './utils/quality-audit.js';
 import { runSharedSourcePackEngine, selectSharedPreWriterCandidates, normalizeDiscoveryCandidatesToBriefs, estimateSourcePackCoherence } from './pre-writer-engine.js';
 import { evaluatePreWriteQualityGate } from './pre-write-quality-gate.js';
+import { attemptImageRescuePass, hasImageTopicMismatchError } from './utils/publish-rescue.js';
 
 loadProjectEnv();
 
@@ -903,13 +904,32 @@ export async function runEditorialPipeline(options = {}) {
         continue;
       }
 
-      const prePublishValidation = validatePrePublishGraph(candidate);
+      let prePublishValidation = validatePrePublishGraph(candidate);
+      let imageRescueDiagnostics = [];
+      if (!prePublishValidation.valid && hasImageTopicMismatchError(prePublishValidation.errors || [])) {
+        const rescue = await attemptImageRescuePass({
+          candidate,
+          providerApiKeys: { pexelsApiKey, unsplashApiKey, pixabayApiKey },
+          validateGraph: validatePrePublishGraph,
+          logPrefix: 'pipeline',
+        });
+        imageRescueDiagnostics = Array.isArray(rescue?.diagnostics) ? rescue.diagnostics : [];
+        if (rescue?.validation) {
+          prePublishValidation = rescue.validation;
+        } else {
+          prePublishValidation = validatePrePublishGraph(candidate);
+        }
+      }
       if (!prePublishValidation.valid) {
         publishItems.push({
           title: articleLabel,
           success: false,
           error: `Pre-publish graph invalid: ${prePublishValidation.errors.join(', ')}`,
-          data: { warnings: prePublishValidation.warnings, placement: prePublishValidation.placement },
+          data: {
+            warnings: prePublishValidation.warnings,
+            placement: prePublishValidation.placement,
+            image_rescue: imageRescueDiagnostics,
+          },
         });
         articleErrors.push({ title: articleLabel, stage: 'publishing', error: prePublishValidation.errors.join(', ') });
         continue;
