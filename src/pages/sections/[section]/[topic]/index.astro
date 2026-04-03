@@ -160,7 +160,7 @@ const posts = await getPostsByTopicSlug(topicData.slug);
         )}
 
         <!-- Hidden container with remaining posts -->
-        <div id="hidden-posts" class="hidden">
+        <div id="hidden-posts" class="sr-only">
           {await Promise.all(posts.slice(12).map(async (post) => {
             const thumbnail = await resolvePostImage(post.data.image, post.id);
             const imageAlt = generateImageAlt(post.data.title, post.data.excerpt);

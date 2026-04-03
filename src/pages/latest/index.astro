@@ -140,8 +140,8 @@ const metadata = {
             </div>
           )}
 
-          <!-- Hidden container with remaining posts -->
-          <div id="hidden-posts" class="hidden">
+          <!-- Hidden container with remaining posts (visually hidden but DOM-accessible for mobile) -->
+          <div id="hidden-posts" class="sr-only">
             {latestPosts.slice(12).map((post) => (
               <EditorialStoryCard post={post} variant="compact" />
             ))}

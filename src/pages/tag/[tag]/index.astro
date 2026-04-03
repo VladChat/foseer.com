@@ -69,7 +69,7 @@ const metadata = {
           )}
 
           <!-- Hidden container with remaining posts -->
-          <div id="hidden-posts" class="hidden">
+          <div id="hidden-posts" class="sr-only">
             {posts.slice(12).map((post) => (
               <EditorialStoryCard post={post} variant="compact" />
             ))}
