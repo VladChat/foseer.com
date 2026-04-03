@@ -1,0 +1,158 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-03T12:07:20.224Z",
+  "event_id": "evt-2026-04-03-mental-health-general-global-fda",
+  "cluster_id": "evt-2026-04-03-mental-health-general-global-fda",
+  "article_type": "report",
+  "title": "Snap Judgments in the Brain Offer Clues to How We Read Ambiguous Moments",
+  "slug": "snap-judgments-in-the-brain-offer-clues-to-how-we-read-ambig",
+  "canonical_slug": "2026-04-03-snap-judgments-in-the-brain-offer-clues-to-how-we-read-ambig",
+  "expected_url": "/article/2026-04-03-snap-judgments-in-the-brain-offer-clues-to-how-we-read-ambig",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-03-snap-judgments-in-the-brain-offer-clues-to-how-we-read-ambig.mdx",
+  "published_at": "2026-04-03T12:07:20.222Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "mental-health",
+  "topic_label": "Mental Health",
+  "subsection": "Mental Health",
+  "topics": [
+    "Research points to brain",
+    "Mental Health"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/vd-jlio94wo/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/vd-jlio94wo/cover.jpg",
+    "source_url": "https://unsplash.com/photos/various-perspectives-of-a-human-brain-are-displayed-vd-JLio94Wo",
+    "asset_key": "unsplash:vd-JLio94Wo",
+    "alt_text": "Various perspectives of a human brain are displayed.",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "Brain Offer Clues photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Mental Health",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "UNL | Neta's research points to brain",
+        "url": "https://research.unl.edu/blog/netas-research-points-to-brain-based-clues-for-mental-health/",
+        "domain": "research.unl.edu"
+      },
+      {
+        "title": "Research points to brain",
+        "url": "https://medicalxpress.com/news/2026-04-brain-based-clues-mental-health.html",
+        "domain": "medicalxpress.com"
+      },
+      {
+        "title": "Traumatic Brain Injury Center of Excellence",
+        "url": "https://www.health.mil/military-health-topics/centers-of-excellence/traumatic-brain-injury-center-of-excellence",
+        "domain": "health.mil"
+      },
+      {
+        "title": "SuperAgers show unique cell signatures in the brain",
+        "url": "https://www.nih.gov/news-events/nih-research-matters/superagers-show-unique-cell-signatures-brain",
+        "domain": "nih.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "UNL | Neta's research points to brain",
+          "url": "https://research.unl.edu/blog/netas-research-points-to-brain-based-clues-for-mental-health/",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "brain"
+          ]
+        },
+        {
+          "title": "Research points to brain",
+          "url": "https://medicalxpress.com/news/2026-04-brain-based-clues-mental-health.html",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "brain"
+          ]
+        },
+        {
+          "title": "Traumatic Brain Injury Center of Excellence",
+          "url": "https://www.health.mil/military-health-topics/centers-of-excellence/traumatic-brain-injury-center-of-excellence",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "brain"
+          ]
+        },
+        {
+          "title": "SuperAgers show unique cell signatures in the brain",
+          "url": "https://www.nih.gov/news-events/nih-research-matters/superagers-show-unique-cell-signatures-brain",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "brain"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "mental-health",
+          "label": "Mental Health",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "mental-health",
+        "topic_label": "Mental Health",
+        "supported": true,
+        "matched_aliases": [
+          "Mental Health"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Brain Offer Clues photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "brain",
+        "offer",
+        "clues"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
