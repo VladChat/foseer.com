@@ -19,16 +19,18 @@ import { getCollection } from 'astro:content';
  */
 export async function getPostsByTopicSlug(topicSlug: string) {
   const posts = await getCollection('post');
-  
-  return posts.filter((post) => {
-    // Primary: Check explicit topic_id field (canonical taxonomy contract)
-    if (post.data.topic_id) {
-      return post.data.topic_id === topicSlug;
-    }
-    
-    // Fallback: Check tags array for backward compatibility
-    return post.data.tags?.includes(topicSlug);
-  });
+
+  return posts
+    .filter((post) => {
+      // Primary: Check explicit topic_id field (canonical taxonomy contract)
+      if (post.data.topic_id) {
+        return post.data.topic_id === topicSlug;
+      }
+
+      // Fallback: Check tags array for backward compatibility
+      return post.data.tags?.includes(topicSlug);
+    })
+    .sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf());
 }
 
 /**
@@ -40,17 +42,19 @@ export async function getPostsByTopicSlug(topicSlug: string) {
  */
 export async function getPostsBySectionSlug(sectionSlug: string) {
   const posts = await getCollection('post');
-  
-  return posts.filter((post) => {
-    // Primary: Check explicit section_id field (canonical taxonomy contract)
-    if (post.data.section_id) {
-      return post.data.section_id === sectionSlug;
-    }
-    
-    // Fallback: Check category field for backward compatibility
-    // Note: This is a loose match since category is human-readable
-    return post.data.category?.toLowerCase().includes(sectionSlug.toLowerCase());
-  });
+
+  return posts
+    .filter((post) => {
+      // Primary: Check explicit section_id field (canonical taxonomy contract)
+      if (post.data.section_id) {
+        return post.data.section_id === sectionSlug;
+      }
+
+      // Fallback: Check category field for backward compatibility
+      // Note: This is a loose match since category is human-readable
+      return post.data.category?.toLowerCase().includes(sectionSlug.toLowerCase());
+    })
+    .sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf());
 }
 
 /**
@@ -59,17 +63,19 @@ export async function getPostsBySectionSlug(sectionSlug: string) {
  */
 export async function getPostsBySectionAndTopic(sectionSlug: string, topicSlug: string) {
   const posts = await getCollection('post');
-  
-  return posts.filter((post) => {
-    const hasSectionMatch = post.data.section_id 
-      ? post.data.section_id === sectionSlug 
-      : post.data.category?.toLowerCase().includes(sectionSlug.toLowerCase());
-    
-    const hasTopicMatch = post.data.topic_id 
-      ? post.data.topic_id === topicSlug 
-      : post.data.tags?.includes(topicSlug);
-    
-    // Require both section and topic to match for precise placement
-    return hasSectionMatch && hasTopicMatch;
-  });
+
+  return posts
+    .filter((post) => {
+      const hasSectionMatch = post.data.section_id
+        ? post.data.section_id === sectionSlug
+        : post.data.category?.toLowerCase().includes(sectionSlug.toLowerCase());
+
+      const hasTopicMatch = post.data.topic_id
+        ? post.data.topic_id === topicSlug
+        : post.data.tags?.includes(topicSlug);
+
+      // Require both section and topic to match for precise placement
+      return hasSectionMatch && hasTopicMatch;
+    })
+    .sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf());
 }
