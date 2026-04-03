@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-03T15:07:37.285Z",
+  "event_id": "evt-2026-04-03-world-geopolitics-general-iran-iran",
+  "cluster_id": "evt-2026-04-03-world-geopolitics-general-iran-iran",
+  "article_type": "analysis",
+  "title": "Trump Plays Down Gas Price Spike as Allies Brace for Longer Iran Shock",
+  "slug": "trump-plays-down-gas-price-spike-as-allies-brace-for-longer-",
+  "canonical_slug": "2026-04-03-trump-plays-down-gas-price-spike-as-allies-brace-for-longer",
+  "expected_url": "/article/2026-04-03-trump-plays-down-gas-price-spike-as-allies-brace-for-longer",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-03-trump-plays-down-gas-price-spike-as-allies-brace-for-longer.mdx",
+  "published_at": "2026-04-03T15:07:37.283Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "World & Geopolitics",
+  "topics": [
+    "World & Geopolitics"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "liam_parker",
+    "author_name": "Liam Parker",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/ywgkfkpbx2y/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/ywgkfkpbx2y/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-person-holding-a-sign-that-says-justice-acconttability-leads-to-no-yWGKFKpbX2Y",
+    "asset_key": "unsplash:yWGKFKpbX2Y",
+    "alt_text": "Illustration for Trump Plays Down Gas Price Spike as Allies Brace for Longer Iran Shock",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Quickly World Leaders Are government photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "Diplomacy",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Trump Said Gas Prices Would Fall Quickly. World Leaders Are Not ...",
+        "url": "https://www.nytimes.com/2026/04/02/climate/trump-gas-prices-iran-world-leaders.html",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Trump offers murky path forward for Republicans as Iran war clouds midterm elections",
+        "url": "https://www.thehour.com/news/politics/article/trump-offers-murky-path-forward-for-republicans-22187136.php",
+        "domain": "thehour.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "middle east"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Quickly World Leaders Are government photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "quickly",
+        "world",
+        "leaders"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
