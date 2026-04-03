@@ -72,6 +72,11 @@ yarn.lock
 .temp/
 tmp/
 tmp_run_*/
+.tmp_run_*/
+.tmp-*-logs/
+tmp-*-logs/
+*.run-logs/
+*.run_logs/
 *.cache
 
 # Runtime cache (generated, not versioned)

@@ -32,9 +32,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Compute cache bucket (6h)
+      - name: Compute cache bucket (8h)
         id: cache_bucket
-        run: echo "bucket=$(( $(date +%s) / 21600 ))" >> "$GITHUB_OUTPUT"
+        run: echo "bucket=$(( $(date +%s) / 28800 ))" >> "$GITHUB_OUTPUT"
 
       - name: Restore runtime search cache
         id: restore_runtime_cache
@@ -42,7 +42,13 @@ jobs:
         with:
           path: |
             qwen-cache
+            qwen-data/events/discovered-news-pool.json
+            qwen-data/events/discovery-lane-state.json
+            qwen-data/events/news-pool.json
+            qwen-data/events/ready-article-candidates.json
             qwen-data/events/provider-circuit-state.json
+            qwen-data/images/image-registry.json
+            qwen-data/writer-rotation-state.json
           key: foseer-runtime-search-cache-${{ runner.os }}-${{ steps.cache_bucket.outputs.bucket }}-${{ github.run_id }}
           restore-keys: |
             foseer-runtime-search-cache-${{ runner.os }}-${{ steps.cache_bucket.outputs.bucket }}-
@@ -134,6 +140,10 @@ jobs:
           echo "result=failure" >> "$GITHUB_OUTPUT"
           exit "$exit_code"
 
+      - name: Prune runtime-only artifacts
+        if: ${{ always() }}
+        run: npm run qwen:prune-runtime
+
       - name: Validate site build before persistence
         if: ${{ success() && (steps.qna_pipeline.outputs.result == 'success' || steps.article_fallback.outputs.result == 'success') }}
         run: npm run build
@@ -145,7 +155,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add -A src/data/post src/assets/images/posts src/assets/images/library qwen-data/images qwen-data/publish-manifests qwen-data/events qwen-data/questions qwen-data/quality-audits qwen-data/writer-rotation-state.json
+          git add -A src/data/post src/assets/images/posts src/assets/images/library qwen-data/publish-manifests
+
+          npm run qwen:guard-runtime-artifacts
 
           if git diff --cached --quiet; then
             echo "No generated article changes to commit."
@@ -173,5 +185,11 @@ jobs:
         with:
           path: |
             qwen-cache
+            qwen-data/events/discovered-news-pool.json
+            qwen-data/events/discovery-lane-state.json
+            qwen-data/events/news-pool.json
+            qwen-data/events/ready-article-candidates.json
             qwen-data/events/provider-circuit-state.json
+            qwen-data/images/image-registry.json
+            qwen-data/writer-rotation-state.json
           key: foseer-runtime-search-cache-${{ runner.os }}-${{ steps.cache_bucket.outputs.bucket }}-${{ github.run_id }}

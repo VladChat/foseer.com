@@ -27,7 +27,9 @@
     "qwen:backfill-image-metadata": "node qwen-scripts/backfill-image-metadata.js",
     "qwen:backfill-fallback-images": "node qwen-scripts/backfill-fallback-images.js",
     "qwen:build-seed-cache": "node qwen-scripts/build-seed-cache.js",
-    "qwen:compile-source-trust": "node qwen-scripts/compile-source-trust-registry.js"
+    "qwen:compile-source-trust": "node qwen-scripts/compile-source-trust-registry.js",
+    "qwen:prune-runtime": "node qwen-scripts/prune-runtime-artifacts.js",
+    "qwen:guard-runtime-artifacts": "node qwen-scripts/ci-guard-runtime-artifacts.js"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",

@@ -51,13 +51,19 @@ jobs:
       - name: Build sanity check
         run: npm run build
 
+      - name: Prune runtime-only artifacts
+        if: ${{ always() }}
+        run: npm run qwen:prune-runtime
+
       - name: Commit generated article artifacts
         id: commit_changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add -A src/data/post src/assets/images/posts src/assets/images/library qwen-data/images qwen-data/publish-manifests qwen-data/events qwen-data/quality-audits qwen-data/writer-rotation-state.json
+          git add -A src/data/post src/assets/images/posts src/assets/images/library qwen-data/publish-manifests
+
+          npm run qwen:guard-runtime-artifacts
 
           if git diff --cached --quiet; then
             echo "No generated article changes to commit."
