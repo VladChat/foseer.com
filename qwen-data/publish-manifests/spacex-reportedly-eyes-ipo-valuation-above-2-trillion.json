@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-04T11:52:50.757Z",
+  "event_id": "evt-2026-04-04-crypto-bitcoin-general-global",
+  "cluster_id": "evt-2026-04-04-crypto-bitcoin-general-global",
+  "article_type": "report",
+  "title": "SpaceX Reportedly Eyes IPO Valuation Above $2 Trillion",
+  "slug": "spacex-reportedly-eyes-ipo-valuation-above-2-trillion",
+  "canonical_slug": "2026-04-04-spacex-reportedly-eyes-ipo-valuation-above-2-trillion",
+  "expected_url": "/article/2026-04-04-spacex-reportedly-eyes-ipo-valuation-above-2-trillion",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-04-spacex-reportedly-eyes-ipo-valuation-above-2-trillion.mdx",
+  "published_at": "2026-04-04T11:52:50.756Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Economy & Markets",
+  "topics": [
+    "SpaceX targets more than $2 trillion valuation in IPO, Bloomberg News reports",
+    "Economy & Markets"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/mtxseymqyzk/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/mtxseymqyzk/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-close-up-of-a-stock-chart-on-a-computer-screen-MTxseYMqYzk",
+    "asset_key": "unsplash:MTxseYMqYzk",
+    "alt_text": "Illustration for SpaceX Reportedly Eyes IPO Valuation Above $2 Trillion",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Trillion Valuation photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Companies & Deals",
+    "IPO",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "SpaceX targets more than $2 trillion valuation in IPO, Bloomberg ...",
+        "url": "https://www.reuters.com/business/aerospace-defense/spacex-targets-more-than-2-trillion-valuation-ipo-bloomberg-news-reports-2026-04-02/",
+        "domain": "reuters.com"
+      },
+      {
+        "title": "SpaceX Is Said to Target More Than $2 Trillion Valuation in IPO",
+        "url": "https://news.bloomberglaw.com/capital-markets/spacex-is-said-to-target-more-than-2-trillion-valuation-in-ipo",
+        "domain": "news.bloomberglaw.com"
+      },
+      {
+        "title": "Elon Musk Blasts $2 Trillion SpaceX IPO Rumor as 'BS', Reigniting ...",
+        "url": "https://www.tesery.com/blogs/news/elon-musk-blasts-2-trillion-spacex-ipo-rumor-as-bs-reigniting-debate-on-media-accuracy",
+        "domain": "tesery.com"
+      },
+      {
+        "title": "How Investors Can Access the $1.75T SpaceX IPO",
+        "url": "https://marketwise.com/investing/elon-musk-spacex-ipo-how-to-invest/",
+        "domain": "marketwise.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "companies-deals",
+          "label": "Companies & Deals",
+          "type": "topic"
+        },
+        {
+          "slug": "ipo",
+          "label": "IPO",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets",
+          "market",
+          "stock market"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Trillion Valuation photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "trillion",
+        "valuation"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
