@@ -488,7 +488,7 @@ async function runNearMissSourcePackRescue({
   initialFailureCodes = [],
 } = {}) {
   const maxQueriesRaw = Number(options.qnaRescueMaxQueries || process.env.QNA_RESCUE_MAX_QUERIES || 5);
-  const maxQueries = Math.max(3, Math.min(5, Number.isFinite(maxQueriesRaw) ? Math.floor(maxQueriesRaw) : 5));
+  const maxQueries = Math.max(3, Math.min(6, Number.isFinite(maxQueriesRaw) ? Math.floor(maxQueriesRaw) : 5));
   const retryPoolMatchLimit = Math.max(Number(options.poolMatchLimit || 14), Number(options.qnaRetryPoolMatchLimit || 24));
   const entityProfile = inferRescueEntityProfile(brief);
   const queryPlan = buildNearMissRescueQueryPlan(brief, {
@@ -754,7 +754,6 @@ function buildNearMissRescueQueryPlan(brief = {}, { maxQueries = 5, failureCodes
   const allowStrictEntity = String(entity.confidence || 'low') !== 'low';
   const lowConfidenceEntity = !allowStrictEntity;
   const requiresOfficial = Array.isArray(failureCodes) && failureCodes.includes('missing_official');
-  const requiresTrusted = Array.isArray(failureCodes) && failureCodes.includes('missing_trusted_reporting');
   const officialDomainTargets = buildRescueOfficialDomainTargets(brief, {
     requireOfficial: requiresOfficial,
     entityProfile: entity,
@@ -799,14 +798,12 @@ function buildNearMissRescueQueryPlan(brief = {}, { maxQueries = 5, failureCodes
     },
   );
 
-  if (!lowConfidenceEntity || requiresTrusted) {
-    queries.push({
-      level: lowConfidenceEntity ? 'relaxed' : 'broad',
-      intent: 'trusted_reporting',
-      query: compactRescueText(`${broadAnchor} ${mainEntity || ''} (reuters OR associated press OR apnews OR bbc OR bloomberg OR investigation OR report)`, 32),
-      targetedDomains: [],
-    });
-  }
+  queries.push({
+    level: lowConfidenceEntity ? 'relaxed' : 'broad',
+    intent: 'trusted_reporting',
+    query: compactRescueText(`${broadAnchor} ${mainEntity || ''} (reuters OR associated press OR apnews OR bbc OR bloomberg OR investigation OR report)`, 32),
+    targetedDomains: [],
+  });
 
   return queries
     .filter((entry) => {
@@ -816,7 +813,7 @@ function buildNearMissRescueQueryPlan(brief = {}, { maxQueries = 5, failureCodes
     })
     .filter((entry, index, list) => list.findIndex((candidate) => candidate.query === entry.query) === index)
     .filter((entry) => String(entry.query || '').trim().length >= 8)
-    .slice(0, Math.max(3, Math.min(lowConfidenceEntity ? 4 : 5, maxQueries)));
+    .slice(0, Math.max(3, Math.min(lowConfidenceEntity ? 5 : 6, maxQueries)));
 }
 
 async function runRescueSearchPass({

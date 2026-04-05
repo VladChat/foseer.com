@@ -31,8 +31,8 @@ const LIVE_QUOTAS = {
 };
 const LIVE_RESCUE_RESERVED = {
   brave: Number(process.env.QWEN_BRAVE_RESCUE_RESERVED ?? 1),
-  gdelt: Number(process.env.QWEN_GDELT_RESCUE_RESERVED ?? 0),
-  google: Number(process.env.QWEN_GOOGLE_RESCUE_RESERVED ?? 0),
+  gdelt: Number(process.env.QWEN_GDELT_RESCUE_RESERVED ?? 1),
+  google: Number(process.env.QWEN_GOOGLE_RESCUE_RESERVED ?? 1),
 };
 const BRAVE_RESCUE_MAX_LIVE_QUERIES = Number(process.env.QWEN_BRAVE_RESCUE_MAX_LIVE_QUERIES ?? 1);
 const LIVE_PHASE_CAPS = {

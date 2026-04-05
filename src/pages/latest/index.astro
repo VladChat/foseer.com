@@ -17,7 +17,7 @@ export const getStaticPaths = (async () => {
 
 const posts = await fetchPosts();
 
-const DUPLICATE_WINDOW_HOURS = 72;
+const DUPLICATE_WINDOW_HOURS = 168;
 const STOP_WORDS = new Set([
   'a',
   'an',
@@ -67,6 +67,51 @@ const titleSimilarityScore = (a: string, b: string): number => {
   return union === 0 ? 0 : overlap / union;
 };
 
+const normalizeSourceUrl = (rawUrl: string): string => {
+  const value = String(rawUrl || '').trim();
+  if (!value) return '';
+  try {
+    const parsed = new URL(value);
+    parsed.hash = '';
+    for (const key of Array.from(parsed.searchParams.keys())) {
+      if (/^utm_/i.test(key) || ['gclid', 'fbclid', 'ref', 'source'].includes(key.toLowerCase())) {
+        parsed.searchParams.delete(key);
+      }
+    }
+    const host = parsed.hostname.toLowerCase().replace(/^www\./, '');
+    const pathname = parsed.pathname.replace(/\/+$/, '') || '/';
+    const search = parsed.searchParams.toString();
+    return `${host}${pathname}${search ? `?${search}` : ''}`;
+  } catch {
+    return value.toLowerCase().replace(/\/+$/, '');
+  }
+};
+
+const isLikelyStorySource = (normalizedUrl: string): boolean => {
+  const value = String(normalizedUrl || '').toLowerCase();
+  if (!value) return false;
+  if (/[?&](page|start|offset)=/.test(value)) return false;
+  if (/(\/rss\/?|\/feed\/?|\/tag\/?|\/topic\/?|\/section\/?|\/category\/?|\/sitemap|\/latest|\/world\/?$|\/business\/?$|\/technology\/?$)/.test(value)) {
+    return false;
+  }
+  return value.split('/').filter(Boolean).length >= 2;
+};
+
+const getStorySources = (post: Post): Set<string> => {
+  const urls = Array.isArray(post.sources) ? post.sources.map((source) => normalizeSourceUrl(String(source?.url || ''))) : [];
+  return new Set(urls.filter((url) => url && isLikelyStorySource(url)));
+};
+
+const hasStrongSourceOverlap = (candidate: Post, existing: Post): boolean => {
+  const candidateSources = getStorySources(candidate);
+  const existingSources = getStorySources(existing);
+  if (candidateSources.size === 0 || existingSources.size === 0) return false;
+  for (const source of candidateSources) {
+    if (existingSources.has(source)) return true;
+  }
+  return false;
+};
+
 const areNearDuplicates = (candidate: Post, existing: Post): boolean => {
   const hoursApart = Math.abs(candidate.publishDate.valueOf() - existing.publishDate.valueOf()) / (1000 * 60 * 60);
   if (hoursApart > DUPLICATE_WINDOW_HOURS) return false;
@@ -74,7 +119,9 @@ const areNearDuplicates = (candidate: Post, existing: Post): boolean => {
   const similarity = titleSimilarityScore(candidate.title, existing.title);
   const sameTopic = !!candidate.topic_id && candidate.topic_id === existing.topic_id;
   const sameSection = !!candidate.section_id && candidate.section_id === existing.section_id;
+  const sourceOverlap = hasStrongSourceOverlap(candidate, existing);
 
+  if (sourceOverlap && similarity >= 0.28) return true;
   if (sameTopic && similarity >= 0.45) return true;
   if (sameSection && similarity >= 0.72) return true;
   return similarity >= 0.86;

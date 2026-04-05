@@ -11,7 +11,7 @@ import { draftArticle, hardenDraft } from './article-drafter.js';
 import { generateImagePackage } from './nodes/image-node.js';
 import { publishArticle } from './publisher.js';
 import { validatePrePublishGraph, buildCanonicalPublishPayload, buildPublishManifest, writePublishManifest, validatePublishedArtifact, evaluateSourcePackEditorialIntegrity } from './validate-publish-graph.js';
-import { markBriefSelected, markBriefPublished, getNewsPoolStats } from './utils/news-pool.js';
+import { markBriefSelected, markBriefPublished, getNewsPoolStats, getBriefIdentityKey, isIdentityAlreadyPublished } from './utils/news-pool.js';
 import { getProviderStats } from './utils/api-clients.js';
 import { writeQualityAuditRun } from './utils/quality-audit.js';
 import { extractQuestionCandidate, extractQuestionCandidates } from './question-extractor.js';
@@ -73,6 +73,22 @@ export async function runQnaPipeline(options = {}) {
 
   const candidateLimit = Math.max(4, Number(options.candidateLimit || process.env.QNA_BRIEF_CANDIDATE_LIMIT || 8));
   const sourcePackTryLimit = Math.max(1, Number(options.sourcePackTryLimit || process.env.QNA_SOURCE_PACK_TRY_LIMIT || candidateLimit));
+  const duplicateGuardRejections = [];
+
+  const trackPublishedIdentityRejection = (brief = {}, stage = 'pre_selection') => {
+    const identityKey = resolveBriefIdentityKey(brief);
+    if (!identityKey) return false;
+    if (!isIdentityAlreadyPublished(identityKey)) return false;
+    const title = String(brief?.title || '').trim() || null;
+    duplicateGuardRejections.push({
+      stage,
+      brief_title: title,
+      identity_key: identityKey,
+      reason: 'identity_already_published',
+    });
+    console.log(`[qna-pipeline] Duplicate guard: skip published identity ${identityKey} :: ${title || 'Untitled brief'}`);
+    return true;
+  };
 
   const initialIntake = await runPreWriterDiscoveryIntake({
     braveApiKey,
@@ -172,6 +188,15 @@ export async function runQnaPipeline(options = {}) {
     return finalizeRun(result, [], null, startTime);
   }
 
+  const duplicateFilteredViableBriefs = (Array.isArray(screened.viableBriefs) ? screened.viableBriefs : [])
+    .filter((brief) => !trackPublishedIdentityRejection(brief, 'brief_source_pack_gate'));
+  screened.viableBriefs = duplicateFilteredViableBriefs;
+  result.rejection_report.pre_selection.push(...duplicateGuardRejections);
+  if (screened.viableBriefs.length === 0) {
+    result.hard_blocker = 'All viable brief candidates were already published (duplicate guard)';
+    return finalizeRun(result, [], null, startTime);
+  }
+
   const useLlmBulkQuestionExtraction = String(
     options.questionExtractionUseLlm
     ?? process.env.QNA_QUESTION_EXTRACTION_USE_LLM
@@ -245,7 +270,15 @@ export async function runQnaPipeline(options = {}) {
     rejected_candidates: result.rejection_report.pre_selection,
   };
 
-  const sourcePackAttemptQuestions = rankedQuestions.slice(0, Math.max(sourcePackTryLimit, 2));
+  const sourcePackAttemptQuestions = rankedQuestions
+    .filter((candidate) => !trackPublishedIdentityRejection(candidate?.brief || {}, 'question_source_pack_gate'))
+    .slice(0, Math.max(sourcePackTryLimit, 2));
+  if (duplicateGuardRejections.length > 0) {
+    result.rejection_report.pre_selection = dedupeObjectArrayByKey(
+      [...result.rejection_report.pre_selection, ...duplicateGuardRejections],
+      (item) => `${item.stage || ''}|${item.identity_key || ''}|${item.brief_title || ''}|${item.reason || ''}`,
+    );
+  }
   let selected = null;
   let selectedMode = 'question-led';
 
@@ -764,6 +797,40 @@ export async function runQnaPipeline(options = {}) {
         selected.sourcePack.publicSources = selected.canonicalPublishPayload.sources;
         selected.sourcePack.canonicalPublicSources = selected.canonicalPublishPayload.sources;
       }
+
+      const selectedIdentityKey = resolveBriefIdentityKey(selected?.brief || {});
+      if (selectedIdentityKey && isIdentityAlreadyPublished(selectedIdentityKey)) {
+        console.log(`[qna-pipeline] Duplicate guard: publish-stage skip for already published identity ${selectedIdentityKey}`);
+        result.stages.publish = {
+          success: false,
+          error: `Duplicate guard blocked publish for already published identity: ${selectedIdentityKey}`,
+        };
+        const lateFallback = await tryLateStageFallbackSelection({
+          selectedMode,
+          selected,
+          screened,
+          options,
+          braveApiKey,
+          googleApiKey,
+          googleCx,
+          result,
+          usedBriefKeys: lateFallbackUsedBriefKeys,
+          triggerStage: 'publish_duplicate_guard',
+          triggerReason: `Duplicate guard blocked publish for already published identity: ${selectedIdentityKey}`,
+        });
+        if (lateFallback) {
+          selected = lateFallback;
+          selectedMode = 'standard-fallback';
+          result.stages.source_pack_selection = {
+            ...(result.stages.source_pack_selection || {}),
+            selected_mode: selectedMode,
+          };
+          continue;
+        }
+        result.hard_blocker = `Duplicate guard blocked publish for already published identity: ${selectedIdentityKey}`;
+        return finalizeRun(result, questionCandidates, null, startTime);
+      }
+
       selected.publishManifest = buildPublishManifest(selected);
       const publishResult = publishArticle(selected);
       selected.publishResult = publishResult;
@@ -952,7 +1019,7 @@ async function buildStandardFallbackSelection({
   reason = 'unspecified',
 } = {}) {
   const prioritizedList = Array.isArray(prioritizedBriefs) ? prioritizedBriefs : [];
-  const fallbackBrief = [
+  const fallbackCandidates = [
     ...prioritizedList.filter((brief) => !usedBriefKeys.has(getBriefCandidateKey(brief))),
     ...(Array.isArray(viableBriefs) ? viableBriefs : []),
   ]
@@ -965,58 +1032,72 @@ async function buildStandardFallbackSelection({
       const freshDiff = Number(right?.freshness || 0) - Number(left?.freshness || 0);
       if (freshDiff !== 0) return freshDiff;
       return new Date(right?.discoveredAt || 0) - new Date(left?.discoveredAt || 0);
-    })[0] || null;
-
-  if (!fallbackBrief) return null;
-
-  const briefKey = getBriefCandidateKey(fallbackBrief);
-  let sourcePack = sourcePackByKey.get(briefKey) || null;
-  if (!sourcePack) {
-    result.stats.source_pack_attempts += 1;
-    sourcePack = await assembleSourcePack({
-      ...fallbackBrief,
-      articleType: 'analysis',
-    }, {
-      ...options,
-      braveApiKey,
-      googleApiKey,
-      googleCx,
-      articleType: 'analysis',
     });
-  }
 
-  const editorialGate = evaluateSourcePackEditorialIntegrity({ brief: fallbackBrief, sourcePack });
-  const hardErrors = (editorialGate.blocking_errors || []).filter((message) => !String(message).startsWith('Primary topic_id unsupported by source-pack evidence'));
-  if (!sourcePack.passesGate || hardErrors.length > 0) {
-    const reasons = Array.from(new Set([
-      ...(Array.isArray(sourcePack.gateNotes) ? sourcePack.gateNotes : []),
-      ...hardErrors,
-    ]));
-    result.rejection_report.source_pack.push({
+  for (const fallbackBrief of fallbackCandidates) {
+    const identityKey = resolveBriefIdentityKey(fallbackBrief);
+    if (identityKey && isIdentityAlreadyPublished(identityKey)) {
+      result.rejection_report.pre_selection.push({
+        stage: 'standard_fallback',
+        brief_title: fallbackBrief.title || null,
+        identity_key: identityKey,
+        reason: 'identity_already_published',
+      });
+      console.log(`[qna-pipeline] Duplicate guard: skip standard fallback brief ${identityKey} :: ${fallbackBrief.title || 'Untitled brief'}`);
+      continue;
+    }
+
+    const briefKey = getBriefCandidateKey(fallbackBrief);
+    let sourcePack = sourcePackByKey.get(briefKey) || null;
+    if (!sourcePack) {
+      result.stats.source_pack_attempts += 1;
+      sourcePack = await assembleSourcePack({
+        ...fallbackBrief,
+        articleType: 'analysis',
+      }, {
+        ...options,
+        braveApiKey,
+        googleApiKey,
+        googleCx,
+        articleType: 'analysis',
+      });
+    }
+
+    const editorialGate = evaluateSourcePackEditorialIntegrity({ brief: fallbackBrief, sourcePack });
+    const hardErrors = (editorialGate.blocking_errors || []).filter((message) => !String(message).startsWith('Primary topic_id unsupported by source-pack evidence'));
+    if (!sourcePack.passesGate || hardErrors.length > 0) {
+      const reasons = Array.from(new Set([
+        ...(Array.isArray(sourcePack.gateNotes) ? sourcePack.gateNotes : []),
+        ...hardErrors,
+      ]));
+      result.rejection_report.source_pack.push({
+        question: null,
+        brief_title: fallbackBrief.title || null,
+        reasons: reasons.length > 0 ? reasons : [`Standard fallback source-pack failed (${reason})`],
+      });
+      continue;
+    }
+
+    const fallbackQuestionCandidate = {
       question: null,
-      brief_title: fallbackBrief.title || null,
-      reasons: reasons.length > 0 ? reasons : [`Standard fallback source-pack failed (${reason})`],
-    });
-    return null;
+      question_type: 'standard_fallback',
+      score: Number(fallbackBrief?.publishabilityScore || 6),
+      selection_score: Number(fallbackBrief?.selectionScore || fallbackBrief?.publishabilityScore || 0),
+      signal: fallbackBrief?.title || null,
+      provider: 'fallback',
+      model: null,
+      note: `Standard fallback selected (${reason})`,
+    };
+
+    return {
+      brief: fallbackBrief,
+      questionCandidate: fallbackQuestionCandidate,
+      sourcePack,
+      mode: 'standard-fallback',
+    };
   }
 
-  const fallbackQuestionCandidate = {
-    question: null,
-    question_type: 'standard_fallback',
-    score: Number(fallbackBrief?.publishabilityScore || 6),
-    selection_score: Number(fallbackBrief?.selectionScore || fallbackBrief?.publishabilityScore || 0),
-    signal: fallbackBrief?.title || null,
-    provider: 'fallback',
-    model: null,
-    note: `Standard fallback selected (${reason})`,
-  };
-
-  return {
-    brief: fallbackBrief,
-    questionCandidate: fallbackQuestionCandidate,
-    sourcePack,
-    mode: 'standard-fallback',
-  };
+  return null;
 }
 
 async function tryLateStageFallbackSelection({
@@ -1084,6 +1165,22 @@ function getBriefCandidateKey(brief = {}) {
     brief.title || '',
     sourceUrl,
   ].join('::');
+}
+
+function resolveBriefIdentityKey(brief = {}) {
+  return String(brief?.poolIdentityKey || getBriefIdentityKey(brief) || '').trim();
+}
+
+function dedupeObjectArrayByKey(values = [], keyBuilder = (value) => JSON.stringify(value)) {
+  const seen = new Set();
+  const deduped = [];
+  for (const value of Array.isArray(values) ? values : []) {
+    const key = String(keyBuilder(value) || '').trim();
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    deduped.push(value);
+  }
+  return deduped;
 }
 
 function isPreWriteRelevantGraphError(message = '') {
