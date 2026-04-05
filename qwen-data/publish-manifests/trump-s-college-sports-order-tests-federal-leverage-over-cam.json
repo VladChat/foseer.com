@@ -1,0 +1,126 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-05T14:57:25.021Z",
+  "event_id": "evt-2026-04-04-sports-general-global",
+  "cluster_id": "evt-2026-04-04-sports-general-global",
+  "article_type": "analysis",
+  "title": "Trump’s College Sports Order Tests Federal Leverage Over Campus Athletics",
+  "slug": "trump-s-college-sports-order-tests-federal-leverage-over-cam",
+  "canonical_slug": "2026-04-05-trump-s-college-sports-order-tests-federal-leverage-over-cam",
+  "expected_url": "/article/2026-04-05-trump-s-college-sports-order-tests-federal-leverage-over-cam",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-05-trump-s-college-sports-order-tests-federal-leverage-over-cam.mdx",
+  "published_at": "2026-04-05T14:57:25.019Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Transfers & Business",
+  "topics": [
+    "Transfers & Business"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "sophia_bennett",
+    "author_name": "Sophia Bennett",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/wj0wwndmj3y/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/wj0wwndmj3y/cover.jpg",
+    "source_url": "https://unsplash.com/photos/us-coronavirus-covid-19-cases-WJ0WWNdmJ3Y",
+    "asset_key": "unsplash:WJ0WWNdmJ3Y",
+    "alt_text": "Illustration for Trump’s College Sports Order Tests Federal Leverage Over Campus Athletics",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "global Trump photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Executive Orders",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Trump signs new executive order on college sports: Will it change anything, and how soon?",
+        "url": "https://nytimes.com/athletic/7169907/2026/04/03/trump-executive-order-college-sports-rules",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Trump signs new executive order on college sports",
+        "url": "https://www.nytimes.com/athletic/7169907/2026/04/03/trump-executive-order-college-sports-rules/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Trump Executive Order Could Reshape College Transfers, Eligibility and Athlete NIL Pay",
+        "url": "https://newsweek.com/trump-executive-order-college-sports-rules-athlete-pay-11781856",
+        "domain": "newsweek.com"
+      },
+      {
+        "title": "Donald Trump’s College Sports Order Raises Alarms Over Athlete Freedom",
+        "url": "https://totalprosports.com/ncaa/football/donald-trump-order-raises-alarms-over-athlete-freedom",
+        "domain": "totalprosports.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "executive-orders",
+          "label": "Executive Orders",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": true,
+        "matched_aliases": [
+          "transfers"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "global Trump photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "trump"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
