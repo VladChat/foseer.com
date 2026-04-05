@@ -55,11 +55,34 @@ export function publishArticle(article) {
   // Generate filename with date prefix and prevent silent overwrite of an existing article file
   const publishMeta = resolvePublishTarget(article);
   const { today, slug, filename, filePath, canonicalSlug, expectedUrl, collisionResolved } = publishMeta;
+  const publishableSources = resolvePublishableSources(article);
+  const duplicateAssessment = assessDuplicatePublication(article, publishMeta, publishableSources);
+  if (duplicateAssessment?.isDuplicate) {
+    const duplicateMessage = `Duplicate guard blocked publish: ${duplicateAssessment.reason}`;
+    console.log(`[publisher] ${duplicateMessage}`);
+    return {
+      success: false,
+      error: duplicateMessage,
+      duplicate_guard: {
+        blocked: true,
+        reason: duplicateAssessment.reason,
+        matched_file: duplicateAssessment.matchedFile || null,
+        matched_title: duplicateAssessment.matchedTitle || null,
+        matched_url: duplicateAssessment.matchedUrl || null,
+        title_similarity: Number.isFinite(duplicateAssessment.titleSimilarity)
+          ? Number(duplicateAssessment.titleSimilarity.toFixed(3))
+          : null,
+        source_overlap: Number.isFinite(duplicateAssessment.sourceOverlap)
+          ? duplicateAssessment.sourceOverlap
+          : 0,
+      },
+    };
+  }
 
   const relatedLinks = buildRelatedCoverageLinks(article, expectedUrl);
 
   // Build frontmatter with full placement data
-  const frontmatter = buildFrontmatter(article, expectedUrl);
+  const frontmatter = buildFrontmatter(article, expectedUrl, publishableSources);
 
   // Build full content
   const contentBody = appendRelatedCoverageSection(article.draft.content, relatedLinks);
@@ -346,7 +369,8 @@ function buildPublishSignature(article) {
 
 function parseSimpleFrontmatter(raw) {
   const data = {};
-  for (const line of String(raw || '').split(/\n+/)) {
+  for (const rawLine of String(raw || '').split(/\n+/)) {
+    const line = String(rawLine || '').replace(/\r$/, '');
     const match = line.match(/^([A-Za-z0-9_]+):\s*(.*)$/);
     if (!match) continue;
     const key = match[1];
@@ -360,7 +384,7 @@ function parseSimpleFrontmatter(raw) {
 }
 
 function buildContentSignature(raw) {
-  const frontmatterMatch = String(raw || '').match(/^---\n([\s\S]*?)\n---/);
+  const frontmatterMatch = String(raw || '').match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!frontmatterMatch) return String(raw || '').trim();
   const frontmatter = parseSimpleFrontmatter(frontmatterMatch[1]);
   return JSON.stringify({
@@ -409,7 +433,7 @@ function getResolvedPlacement(article) {
 /**
  * Build frontmatter from article with full placement data
  */
-function buildFrontmatter(article, expectedUrl = "") {
+function buildFrontmatter(article, expectedUrl = "", precomputedPublishableSources = null) {
   const draft = article.draft;
   const image = article.image;
   const placement = getResolvedPlacement(article);
@@ -431,8 +455,10 @@ function buildFrontmatter(article, expectedUrl = "") {
   const topics = Array.isArray(canonicalPayload?.placement?.topics) ? canonicalPayload.placement.topics : (Array.isArray(placement.topics) ? placement.topics : []);
 
   // Get sources from canonical publish payload if available, otherwise from sourcePack
-  const publishableSources = canonicalPayload?.sources || article.sourcePack?.canonicalPublicSources || article.sourcePack?.publicSources || article.sourcePack?.publishReadySources || article.sourcePack?.sources;
-  const sources = sanitizeSources(publishableSources, article.sourcePack);
+  const sources = Array.isArray(precomputedPublishableSources)
+    ? precomputedPublishableSources
+    : resolvePublishableSources(article);
+  const publishIdentityKey = resolvePublishIdentityKey(article);
 
   let fm = `---
 publishDate: ${new Date().toISOString()}
@@ -459,6 +485,10 @@ draft: false
 
   if (placement.topic_id) {
     fm += `topic_id: "${escapeQuotes(placement.topic_id)}"
+`;
+  }
+  if (publishIdentityKey) {
+    fm += `publish_identity_key: "${escapeQuotes(publishIdentityKey)}"
 `;
   }
 
@@ -533,6 +563,215 @@ draft: false
   fm += `---`;
 
   return fm;
+}
+
+function resolvePublishableSources(article) {
+  const canonicalPayload = article?.canonicalPublishPayload || null;
+  const rawSources = canonicalPayload?.sources
+    || article?.sourcePack?.canonicalPublicSources
+    || article?.sourcePack?.publicSources
+    || article?.sourcePack?.publishReadySources
+    || article?.sourcePack?.sources;
+  return sanitizeSources(rawSources, article?.sourcePack || null);
+}
+
+function resolvePublishIdentityKey(article = {}) {
+  const candidates = [
+    article?.brief?.poolIdentityKey,
+    article?.brief?.identityKey,
+    article?.publishIdentity?.identityKey,
+    article?.canonicalPublishPayload?.identity_key,
+    article?.canonicalPublishPayload?.identityKey,
+  ];
+  for (const candidate of candidates) {
+    const key = String(candidate || '').trim();
+    if (!key) continue;
+    return key.toLowerCase();
+  }
+  return '';
+}
+
+function assessDuplicatePublication(article, publishMeta, publishableSources) {
+  try {
+    if (!fs.existsSync(POSTS_DIR)) return null;
+
+    const incomingTitle = String(article?.draft?.title || article?.brief?.title || '').trim();
+    const incomingTopicId = String(getResolvedPlacement(article).topic_id || '').trim().toLowerCase();
+    const incomingSectionId = String(getResolvedPlacement(article).section_id || '').trim().toLowerCase();
+    const incomingIdentityKeys = buildIncomingIdentityKeySet(article);
+    const incomingSourceUrls = new Set(
+      dedupeStrings((publishableSources || [])
+        .map((source) => normalizeUrlForDedupe(source?.url))
+        .filter(Boolean))
+    );
+
+    const entries = fs.readdirSync(POSTS_DIR, { withFileTypes: true })
+      .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith('.mdx'))
+      .map((entry) => path.join(POSTS_DIR, entry.name));
+
+    for (const file of entries) {
+      if (path.resolve(file) === path.resolve(publishMeta.filePath)) continue;
+      const raw = fs.readFileSync(file, 'utf-8');
+      const parsed = extractPublishedEntry(raw, file);
+      if (!parsed) continue;
+
+      if (incomingIdentityKeys.size > 0 && parsed.publishIdentityKey && incomingIdentityKeys.has(parsed.publishIdentityKey)) {
+        return {
+          isDuplicate: true,
+          reason: `identity_key_match(${parsed.publishIdentityKey})`,
+          matchedFile: path.basename(file),
+          matchedTitle: parsed.title,
+          matchedUrl: parsed.canonicalUrl,
+          titleSimilarity: computeTitleSimilarity(incomingTitle, parsed.title),
+          sourceOverlap: 0,
+        };
+      }
+
+      const sourceOverlap = countOverlap([...incomingSourceUrls], parsed.sourceUrls);
+      const titleSimilarity = computeTitleSimilarity(incomingTitle, parsed.title);
+      const titleTokenOverlap = countOverlap(tokenizeForMatching(incomingTitle), tokenizeForMatching(parsed.title));
+      const sameTopic = incomingTopicId !== '' && incomingTopicId === parsed.topicId;
+      const sameSection = incomingSectionId !== '' && incomingSectionId === parsed.sectionId;
+      const recentHours = parsed.publishedAt ? (Date.now() - parsed.publishedAt.getTime()) / 3600000 : Infinity;
+
+      if (sourceOverlap >= 2 && recentHours <= 336) {
+        return {
+          isDuplicate: true,
+          reason: `source_overlap>=2_recent(${sourceOverlap})`,
+          matchedFile: path.basename(file),
+          matchedTitle: parsed.title,
+          matchedUrl: parsed.canonicalUrl,
+          titleSimilarity,
+          sourceOverlap,
+        };
+      }
+
+      if (sourceOverlap >= 1 && titleSimilarity >= 0.62 && recentHours <= 168) {
+        return {
+          isDuplicate: true,
+          reason: `source+title_overlap_recent(source=${sourceOverlap},sim=${titleSimilarity.toFixed(2)})`,
+          matchedFile: path.basename(file),
+          matchedTitle: parsed.title,
+          matchedUrl: parsed.canonicalUrl,
+          titleSimilarity,
+          sourceOverlap,
+        };
+      }
+
+      if ((sameTopic || sameSection) && titleSimilarity >= 0.88 && recentHours <= 336) {
+        return {
+          isDuplicate: true,
+          reason: `high_title_similarity_same_desk(sim=${titleSimilarity.toFixed(2)})`,
+          matchedFile: path.basename(file),
+          matchedTitle: parsed.title,
+          matchedUrl: parsed.canonicalUrl,
+          titleSimilarity,
+          sourceOverlap,
+        };
+      }
+
+      if (sameTopic && titleTokenOverlap >= 5 && recentHours <= 168) {
+        return {
+          isDuplicate: true,
+          reason: `topic_title_token_overlap(${titleTokenOverlap})`,
+          matchedFile: path.basename(file),
+          matchedTitle: parsed.title,
+          matchedUrl: parsed.canonicalUrl,
+          titleSimilarity,
+          sourceOverlap,
+        };
+      }
+    }
+
+    return { isDuplicate: false };
+  } catch (error) {
+    console.log(`[publisher] Duplicate guard scan skipped: ${error.message}`);
+    return null;
+  }
+}
+
+function buildIncomingIdentityKeySet(article = {}) {
+  const keys = new Set();
+  const candidates = [
+    article?.brief?.poolIdentityKey,
+    article?.brief?.identityKey,
+    article?.publishIdentity?.identityKey,
+    article?.canonicalPublishPayload?.identity_key,
+    article?.canonicalPublishPayload?.identityKey,
+  ];
+  for (const candidate of candidates) {
+    const value = String(candidate || '').trim().toLowerCase();
+    if (!value) continue;
+    keys.add(value);
+  }
+  return keys;
+}
+
+function extractPublishedEntry(raw, filePath) {
+  const frontmatterMatch = String(raw || '').match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!frontmatterMatch) return null;
+  const frontmatterRaw = frontmatterMatch[1];
+  const parsed = parseSimpleFrontmatter(frontmatterRaw);
+  const sourceUrls = extractSourceUrlsFromFrontmatter(frontmatterRaw)
+    .map((url) => normalizeUrlForDedupe(url))
+    .filter(Boolean);
+  const publishDate = parsePublishedDate(parsed.publishDate);
+
+  return {
+    filePath,
+    title: String(parsed.title || '').trim(),
+    topicId: String(parsed.topic_id || '').trim().toLowerCase(),
+    sectionId: String(parsed.section_id || '').trim().toLowerCase(),
+    canonicalUrl: String(parsed.canonicalUrl || '').trim(),
+    publishIdentityKey: String(parsed.publish_identity_key || '').trim().toLowerCase(),
+    sourceUrls,
+    publishedAt: publishDate,
+  };
+}
+
+function extractSourceUrlsFromFrontmatter(frontmatterRaw) {
+  const urls = [];
+  const patterns = [
+    /^\s*url:\s*"([^"]+)"/gm,
+    /^\s*url:\s*'([^']+)'/gm,
+    /^\s*url:\s*([^\s#]+)\s*$/gm,
+  ];
+  for (const pattern of patterns) {
+    let match = pattern.exec(frontmatterRaw);
+    while (match) {
+      urls.push(String(match[1] || '').trim());
+      match = pattern.exec(frontmatterRaw);
+    }
+  }
+  return dedupeStrings(urls);
+}
+
+function parsePublishedDate(value) {
+  const raw = String(value || '').trim();
+  if (!raw) return null;
+  const parsed = new Date(raw);
+  if (!Number.isFinite(parsed.getTime())) return null;
+  return parsed;
+}
+
+function normalizeUrlForDedupe(url) {
+  try {
+    const parsed = new URL(String(url || '').trim());
+    if (!/^https?:$/i.test(parsed.protocol)) return '';
+    parsed.hash = '';
+    for (const key of [...parsed.searchParams.keys()]) {
+      if (/^utm_/i.test(key) || /^(fbclid|gclid|mc_cid|mc_eid)$/i.test(key)) {
+        parsed.searchParams.delete(key);
+      }
+    }
+    parsed.hostname = parsed.hostname.replace(/^www\./i, '').toLowerCase();
+    if (parsed.pathname.length > 1) {
+      parsed.pathname = parsed.pathname.replace(/\/+$/, '');
+    }
+    return parsed.toString();
+  } catch {
+    return '';
+  }
 }
 
 /**
