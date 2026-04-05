@@ -1,0 +1,600 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-04-05T18:04:57.102Z",
+  "source_path": "src/data/rss-feeds.json",
+  "source_kind": "authoring_source",
+  "taxonomy_registry_path": "qwen-data/contracts/taxonomy-registry.json",
+  "feed_count": 35,
+  "feeds": [
+    {
+      "id": "fda-drugs",
+      "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/drugs/rss.xml",
+      "publisher": "FDA",
+      "sectionHints": [
+        "health"
+      ],
+      "topicHints": [
+        "pharma-fda"
+      ],
+      "enabled": true,
+      "priority": 1,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 168
+    },
+    {
+      "id": "fda-press-releases",
+      "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml",
+      "publisher": "FDA",
+      "sectionHints": [
+        "health"
+      ],
+      "topicHints": [
+        "pharma-fda",
+        "public-health"
+      ],
+      "enabled": true,
+      "priority": 1,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 168
+    },
+    {
+      "id": "guardian-business",
+      "url": "https://www.theguardian.com/business/rss",
+      "publisher": "The Guardian",
+      "sectionHints": [
+        "business"
+      ],
+      "topicHints": [
+        "economy-markets",
+        "companies-deals",
+        "consumer-money",
+        "housing-real-estate"
+      ],
+      "enabled": true,
+      "priority": 1,
+      "maxItemsPerPoll": 4,
+      "freshnessHours": 72
+    },
+    {
+      "id": "guardian-culture",
+      "url": "https://www.theguardian.com/culture/rss",
+      "publisher": "The Guardian",
+      "sectionHints": [
+        "culture"
+      ],
+      "topicHints": [
+        "film-tv",
+        "music-celebrities",
+        "internet-culture",
+        "creators-platforms"
+      ],
+      "enabled": true,
+      "priority": 1,
+      "maxItemsPerPoll": 4,
+      "freshnessHours": 72
+    },
+    {
+      "id": "guardian-environment",
+      "url": "https://www.theguardian.com/environment/rss",
+      "publisher": "The Guardian",
+      "sectionHints": [
+        "news"
+      ],
+      "topicHints": [
+        "climate-extreme-weather"
+      ],
+      "enabled": true,
+      "priority": 1,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "guardian-science",
+      "url": "https://www.theguardian.com/science/rss",
+      "publisher": "The Guardian",
+      "sectionHints": [
+        "tech",
+        "health"
+      ],
+      "topicHints": [
+        "space-astronomy",
+        "medical-research",
+        "public-health"
+      ],
+      "enabled": true,
+      "priority": 1,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "guardian-sport",
+      "url": "https://www.theguardian.com/sport/rss",
+      "publisher": "The Guardian",
+      "sectionHints": [
+        "sports"
+      ],
+      "topicHints": [
+        "major-leagues",
+        "events-tournaments",
+        "athletes-culture"
+      ],
+      "enabled": true,
+      "priority": 1,
+      "maxItemsPerPoll": 4,
+      "freshnessHours": 72
+    },
+    {
+      "id": "guardian-technology",
+      "url": "https://www.theguardian.com/technology/rss",
+      "publisher": "The Guardian",
+      "sectionHints": [
+        "tech"
+      ],
+      "topicHints": [
+        "ai-big-tech",
+        "consumer-tech",
+        "cybersecurity",
+        "enterprise-platforms"
+      ],
+      "enabled": true,
+      "priority": 1,
+      "maxItemsPerPoll": 4,
+      "freshnessHours": 72
+    },
+    {
+      "id": "guardian-us-news",
+      "url": "https://www.theguardian.com/us-news/rss",
+      "publisher": "The Guardian",
+      "sectionHints": [
+        "news"
+      ],
+      "topicHints": [
+        "us-politics",
+        "society-social-trends"
+      ],
+      "enabled": true,
+      "priority": 1,
+      "maxItemsPerPoll": 4,
+      "freshnessHours": 72
+    },
+    {
+      "id": "guardian-world",
+      "url": "https://www.theguardian.com/world/rss",
+      "publisher": "The Guardian",
+      "sectionHints": [
+        "news"
+      ],
+      "topicHints": [
+        "world-geopolitics"
+      ],
+      "enabled": true,
+      "priority": 1,
+      "maxItemsPerPoll": 4,
+      "freshnessHours": 72
+    },
+    {
+      "id": "nasa-news-releases",
+      "url": "https://www.nasa.gov/news-release/feed/",
+      "publisher": "NASA",
+      "sectionHints": [
+        "tech"
+      ],
+      "topicHints": [
+        "space-astronomy"
+      ],
+      "enabled": true,
+      "priority": 1,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 168
+    },
+    {
+      "id": "nih-news-releases",
+      "url": "https://www.nih.gov/news-releases/feed.xml",
+      "publisher": "NIH",
+      "sectionHints": [
+        "health"
+      ],
+      "topicHints": [
+        "medical-research",
+        "public-health"
+      ],
+      "enabled": true,
+      "priority": 1,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 168
+    },
+    {
+      "id": "verge-main",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "publisher": "The Verge",
+      "sectionHints": [
+        "tech",
+        "culture"
+      ],
+      "topicHints": [
+        "ai-big-tech",
+        "consumer-tech",
+        "mobility-evs",
+        "enterprise-platforms",
+        "internet-culture",
+        "creators-platforms"
+      ],
+      "enabled": true,
+      "priority": 1,
+      "maxItemsPerPoll": 4,
+      "freshnessHours": 72
+    },
+    {
+      "id": "bbc-business",
+      "url": "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/business/rss.xml",
+      "publisher": "BBC",
+      "sectionHints": [
+        "business"
+      ],
+      "topicHints": [
+        "economy-markets",
+        "companies-deals",
+        "consumer-money"
+      ],
+      "enabled": true,
+      "priority": 0.9,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "bbc-health",
+      "url": "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/health/rss.xml",
+      "publisher": "BBC",
+      "sectionHints": [
+        "health"
+      ],
+      "topicHints": [
+        "public-health",
+        "mental-health",
+        "wellness-fitness"
+      ],
+      "enabled": true,
+      "priority": 0.9,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "bbc-politics",
+      "url": "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/uk_politics/rss.xml",
+      "publisher": "BBC",
+      "sectionHints": [
+        "news"
+      ],
+      "topicHints": [
+        "us-politics",
+        "law-crime"
+      ],
+      "enabled": true,
+      "priority": 0.9,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "bbc-sport-football",
+      "url": "http://newsrss.bbc.co.uk/rss/sportonline_uk_edition/football/rss.xml",
+      "publisher": "BBC",
+      "sectionHints": [
+        "sports"
+      ],
+      "topicHints": [
+        "major-leagues",
+        "events-tournaments",
+        "transfers-business",
+        "athletes-culture"
+      ],
+      "enabled": true,
+      "priority": 0.9,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "bbc-technology",
+      "url": "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/technology/rss.xml",
+      "publisher": "BBC",
+      "sectionHints": [
+        "tech"
+      ],
+      "topicHints": [
+        "consumer-tech",
+        "cybersecurity",
+        "enterprise-platforms"
+      ],
+      "enabled": true,
+      "priority": 0.9,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "bbc-world",
+      "url": "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/world/rss.xml",
+      "publisher": "BBC",
+      "sectionHints": [
+        "news"
+      ],
+      "topicHints": [
+        "world-geopolitics"
+      ],
+      "enabled": true,
+      "priority": 0.9,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "espn-soccer",
+      "url": "https://www.espn.com/espn/rss/soccer/news",
+      "publisher": "ESPN",
+      "sectionHints": [
+        "sports"
+      ],
+      "topicHints": [
+        "events-tournaments",
+        "transfers-business",
+        "athletes-culture"
+      ],
+      "enabled": true,
+      "priority": 0.9,
+      "maxItemsPerPoll": 4,
+      "freshnessHours": 72
+    },
+    {
+      "id": "espn-top",
+      "url": "https://www.espn.com/espn/rss/news",
+      "publisher": "ESPN",
+      "sectionHints": [
+        "sports"
+      ],
+      "topicHints": [
+        "major-leagues",
+        "events-tournaments",
+        "athletes-culture"
+      ],
+      "enabled": true,
+      "priority": 0.9,
+      "maxItemsPerPoll": 4,
+      "freshnessHours": 72
+    },
+    {
+      "id": "fda-medwatch",
+      "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/medwatch/rss.xml",
+      "publisher": "FDA",
+      "sectionHints": [
+        "health"
+      ],
+      "topicHints": [
+        "pharma-fda",
+        "public-health"
+      ],
+      "enabled": true,
+      "priority": 0.9,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 168
+    },
+    {
+      "id": "sciencedaily-health",
+      "url": "https://www.sciencedaily.com/rss/top/health.xml",
+      "publisher": "ScienceDaily",
+      "sectionHints": [
+        "health"
+      ],
+      "topicHints": [
+        "public-health",
+        "medical-research",
+        "mental-health",
+        "wellness-fitness"
+      ],
+      "enabled": true,
+      "priority": 0.9,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 96
+    },
+    {
+      "id": "sciencedaily-science",
+      "url": "https://www.sciencedaily.com/rss/top/science.xml",
+      "publisher": "ScienceDaily",
+      "sectionHints": [
+        "tech",
+        "health"
+      ],
+      "topicHints": [
+        "space-astronomy",
+        "medical-research"
+      ],
+      "enabled": true,
+      "priority": 0.9,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 96
+    },
+    {
+      "id": "sciencedaily-technology",
+      "url": "https://www.sciencedaily.com/rss/top/technology.xml",
+      "publisher": "ScienceDaily",
+      "sectionHints": [
+        "tech"
+      ],
+      "topicHints": [
+        "consumer-tech",
+        "ai-big-tech",
+        "enterprise-platforms",
+        "mobility-evs"
+      ],
+      "enabled": true,
+      "priority": 0.9,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 96
+    },
+    {
+      "id": "sciencedaily-top",
+      "url": "https://www.sciencedaily.com/rss/top.xml",
+      "publisher": "ScienceDaily",
+      "sectionHints": [
+        "tech",
+        "health"
+      ],
+      "topicHints": [
+        "medical-research",
+        "public-health",
+        "space-astronomy",
+        "consumer-tech"
+      ],
+      "enabled": true,
+      "priority": 0.9,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 96
+    },
+    {
+      "id": "cbs-entertainment",
+      "url": "https://www.cbsnews.com/latest/rss/entertainment",
+      "publisher": "CBS News",
+      "sectionHints": [
+        "culture"
+      ],
+      "topicHints": [
+        "film-tv",
+        "music-celebrities"
+      ],
+      "enabled": true,
+      "priority": 0.8,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "cbs-health",
+      "url": "https://www.cbsnews.com/latest/rss/health",
+      "publisher": "CBS News",
+      "sectionHints": [
+        "health"
+      ],
+      "topicHints": [
+        "public-health",
+        "wellness-fitness",
+        "mental-health"
+      ],
+      "enabled": true,
+      "priority": 0.8,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "cbs-moneywatch",
+      "url": "https://www.cbsnews.com/latest/rss/moneywatch",
+      "publisher": "CBS News",
+      "sectionHints": [
+        "business"
+      ],
+      "topicHints": [
+        "economy-markets",
+        "consumer-money",
+        "housing-real-estate",
+        "travel-consumer-issues",
+        "crypto-bitcoin"
+      ],
+      "enabled": true,
+      "priority": 0.8,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "cbs-politics",
+      "url": "https://www.cbsnews.com/latest/rss/politics",
+      "publisher": "CBS News",
+      "sectionHints": [
+        "news"
+      ],
+      "topicHints": [
+        "us-politics",
+        "law-crime"
+      ],
+      "enabled": true,
+      "priority": 0.8,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "cbs-space",
+      "url": "https://www.cbsnews.com/latest/rss/space",
+      "publisher": "CBS News",
+      "sectionHints": [
+        "tech"
+      ],
+      "topicHints": [
+        "space-astronomy"
+      ],
+      "enabled": true,
+      "priority": 0.8,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "cbs-technology",
+      "url": "https://www.cbsnews.com/latest/rss/technology",
+      "publisher": "CBS News",
+      "sectionHints": [
+        "tech"
+      ],
+      "topicHints": [
+        "ai-big-tech",
+        "consumer-tech",
+        "cybersecurity"
+      ],
+      "enabled": true,
+      "priority": 0.8,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "cbs-world",
+      "url": "https://www.cbsnews.com/latest/rss/world",
+      "publisher": "CBS News",
+      "sectionHints": [
+        "news"
+      ],
+      "topicHints": [
+        "world-geopolitics"
+      ],
+      "enabled": true,
+      "priority": 0.8,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 72
+    },
+    {
+      "id": "nasa-recent-content",
+      "url": "https://www.nasa.gov/feed/",
+      "publisher": "NASA",
+      "sectionHints": [
+        "tech"
+      ],
+      "topicHints": [
+        "space-astronomy",
+        "enterprise-platforms"
+      ],
+      "enabled": true,
+      "priority": 0.8,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 168
+    },
+    {
+      "id": "sciencedaily-society",
+      "url": "https://www.sciencedaily.com/rss/top/society.xml",
+      "publisher": "ScienceDaily",
+      "sectionHints": [
+        "news",
+        "culture",
+        "health"
+      ],
+      "topicHints": [
+        "society-social-trends",
+        "internet-culture",
+        "mental-health"
+      ],
+      "enabled": true,
+      "priority": 0.8,
+      "maxItemsPerPoll": 3,
+      "freshnessHours": 96
+    }
+  ]
+}

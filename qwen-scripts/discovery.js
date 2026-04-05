@@ -8,6 +8,7 @@ import { buildGoogleTrustedQueries, isTrustedDiscoveryDomain } from './config/tr
 import { loadTaxonomyRegistry, getSectionDiscoveryQueries, getTopicDiscoveryQueries, getTopicIdsBySection, matchTaxonomyHints } from './utils/taxonomy-registry.js';
 import { resolveProjectRoot } from './utils/project-root.js';
 import { detectPageKind, scoreGenericity, scoreArticleLikelihood } from './utils/page-kind.js';
+import { discoverWithRss } from './rss-discovery.js';
 
 const PROJECT_ROOT = resolveProjectRoot(import.meta.url);
 const CANDIDATE_FLOOR = 10;
@@ -168,6 +169,7 @@ export async function runDiscovery(options = {}) {
   const enableBrave = !Boolean(options.disableBrave);
   const enableGoogle = !Boolean(options.disableGoogle);
   const enableGdelt = !Boolean(options.disableGdelt);
+  const enableRss = !Boolean(options.disableRss);
   const allowExpansion = !Boolean(options.disableBraveExpansion);
 
   const stats = {
@@ -177,6 +179,10 @@ export async function runDiscovery(options = {}) {
     targeted_brave_queries: 0,
     google_trusted_queries: 0,
     gdelt_queries: 0,
+    rss_feeds_polled: 0,
+    rss_items_seen: 0,
+    rss_items_accepted: 0,
+    rss_feed_failures: 0,
     total_candidates: 0,
     viable_candidates: 0,
     rejected_noise: 0,
@@ -192,6 +198,7 @@ export async function runDiscovery(options = {}) {
       brave_expansion: 0,
       google_trusted: 0,
       gdelt: 0,
+      rss: 0,
     },
     targeted_coverage: {
       triggered: false,
@@ -213,34 +220,67 @@ export async function runDiscovery(options = {}) {
 
   if (enableBrave && braveApiKey) {
     console.log('[discovery] Channel 1: Brave core discovery...');
-    const braveCore = await discoverWithBrave(braveApiKey, plan.core, options);
-    stats.brave_queries += plan.core.length;
-    stats.channels.brave_core = braveCore.briefs.length;
-    allCandidates.push(...braveCore.briefs);
-    console.log(`[discovery] Brave core found ${braveCore.briefs.length} candidates across ${plan.core.length} lanes`);
+    try {
+      const braveCore = await discoverWithBrave(braveApiKey, plan.core, options);
+      stats.brave_queries += plan.core.length;
+      stats.channels.brave_core = braveCore.briefs.length;
+      allCandidates.push(...braveCore.briefs);
+      console.log(`[discovery] Brave core found ${braveCore.briefs.length} candidates across ${plan.core.length} lanes`);
+    } catch (error) {
+      console.error(`[discovery] Brave channel failed, continuing: ${error.message}`);
+    }
   } else {
     console.log('[discovery] Skipping Brave (disabled or no API key)');
   }
 
   if (enableGoogle && googleApiKey && googleCx) {
     console.log('[discovery] Channel 2: Google trusted-source discovery...');
-    const googlePlan = plan.google.length > 0 ? plan.google : buildFallbackGooglePlan();
-    const googleTrusted = await discoverWithTrustedGoogle(googleApiKey, googleCx, googlePlan, options);
-    stats.google_trusted_queries += googlePlan.length;
-    stats.channels.google_trusted = googleTrusted.briefs.length;
-    allCandidates.push(...googleTrusted.briefs);
-    console.log(`[discovery] Google trusted-source found ${googleTrusted.briefs.length} candidates`);
+    try {
+      const googlePlan = plan.google.length > 0 ? plan.google : buildFallbackGooglePlan();
+      const googleTrusted = await discoverWithTrustedGoogle(googleApiKey, googleCx, googlePlan, options);
+      stats.google_trusted_queries += googlePlan.length;
+      stats.channels.google_trusted = googleTrusted.briefs.length;
+      allCandidates.push(...googleTrusted.briefs);
+      console.log(`[discovery] Google trusted-source found ${googleTrusted.briefs.length} candidates`);
+    } catch (error) {
+      console.error(`[discovery] Google trusted channel failed, continuing: ${error.message}`);
+    }
   } else {
     console.log('[discovery] Skipping Google trusted-source discovery (disabled or missing API key/CX)');
   }
 
   if (enableGdelt && plan.gdelt.length > 0) {
     console.log('[discovery] Channel 3: GDELT signal discovery...');
-    const gdeltSignals = await discoverWithGdelt(plan.gdelt, options);
-    stats.gdelt_queries += plan.gdelt.length;
-    stats.channels.gdelt = gdeltSignals.briefs.length;
-    allCandidates.push(...gdeltSignals.briefs);
-    console.log(`[discovery] GDELT signal discovery found ${gdeltSignals.briefs.length} candidates`);
+    try {
+      const gdeltSignals = await discoverWithGdelt(plan.gdelt, options);
+      stats.gdelt_queries += plan.gdelt.length;
+      stats.channels.gdelt = gdeltSignals.briefs.length;
+      allCandidates.push(...gdeltSignals.briefs);
+      console.log(`[discovery] GDELT signal discovery found ${gdeltSignals.briefs.length} candidates`);
+    } catch (error) {
+      console.error(`[discovery] GDELT channel failed, continuing: ${error.message}`);
+    }
+  }
+
+  if (enableRss) {
+    console.log('[discovery] Channel 4: RSS parallel discovery...');
+    try {
+      const rssResult = await discoverWithRss({
+        ...options,
+        existingCandidates: allCandidates,
+      });
+      stats.rss_feeds_polled = Number(rssResult?.stats?.rss_feeds_polled || 0);
+      stats.rss_items_seen = Number(rssResult?.stats?.rss_items_seen || 0);
+      stats.rss_items_accepted = Number(rssResult?.stats?.rss_items_accepted || 0);
+      stats.rss_feed_failures = Number(rssResult?.stats?.rss_feed_failures || 0);
+      stats.channels.rss = Array.isArray(rssResult?.briefs) ? rssResult.briefs.length : 0;
+      allCandidates.push(...(rssResult?.briefs || []));
+      console.log(`[discovery] RSS discovery accepted ${stats.channels.rss} candidates from ${stats.rss_feeds_polled} feeds`);
+    } catch (error) {
+      console.error(`[discovery] RSS channel failed, continuing: ${error.message}`);
+    }
+  } else {
+    console.log('[discovery] Skipping RSS discovery (disabled)');
   }
 
   let filteredCandidates = filterAndRankCandidates(allCandidates, stats);
