@@ -1,15 +1,15 @@
 {
   "version": 3,
-  "generated_at": "2026-04-04T14:55:59.959Z",
-  "event_id": "evt-2026-04-04-us-politics-general-us-white-house-congress",
-  "cluster_id": "evt-2026-04-04-us-politics-general-us-white-house-congress",
+  "generated_at": "2026-04-05T01:28:23.240Z",
+  "event_id": "evt-2026-04-05-us-politics-general-us-white-house",
+  "cluster_id": "evt-2026-04-05-us-politics-general-us-white-house",
   "article_type": "analysis",
   "title": "Inside the White House App Where Trump Never Loses",
   "slug": "inside-the-white-house-app-where-trump-never-loses",
-  "canonical_slug": "2026-04-04-inside-the-white-house-app-where-trump-never-loses",
-  "expected_url": "/article/2026-04-04-inside-the-white-house-app-where-trump-never-loses",
-  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-04-inside-the-white-house-app-where-trump-never-loses.mdx",
-  "published_at": "2026-04-04T14:55:59.957Z",
+  "canonical_slug": "2026-04-05-inside-the-white-house-app-where-trump-never-loses",
+  "expected_url": "/article/2026-04-05-inside-the-white-house-app-where-trump-never-loses",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-05-inside-the-white-house-app-where-trump-never-loses.mdx",
+  "published_at": "2026-04-05T01:28:23.237Z",
   "section_id": "news",
   "section_label": "News",
   "topic_id": "us-politics",
@@ -20,19 +20,19 @@
   ],
   "writer": {
     "writer_id": "features",
-    "author_id": "grace_holloway",
-    "author_name": "Grace Holloway",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
     "author_title": "Features Desk"
   },
   "image": {
     "provider": "unsplash",
-    "image_path": "~/assets/images/library/unsplash/vw78uegyw24/cover.jpg",
-    "file_relative_path": "src/assets/images/library/unsplash/vw78uegyw24/cover.jpg",
-    "source_url": "https://unsplash.com/photos/a-couple-of-bottles-of-cleaning-products-next-to-a-towel-vw78UEgyw24",
-    "asset_key": "unsplash:vw78UEgyw24",
-    "alt_text": "Illustration for Inside the White House App Where Trump Never Loses",
+    "image_path": "~/assets/images/library/unsplash/zbz0f4xbevw/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/zbz0f4xbevw/cover.jpg",
+    "source_url": "https://unsplash.com/photos/the-white-house-with-a-crowd-gathered-outside-zbz0f4xbeVw",
+    "asset_key": "unsplash:zbz0f4xbeVw",
+    "alt_text": "The white house with a crowd gathered outside.",
     "selection_mode": "provider_download_new:unsplash:acceptable:strict",
-    "query_used": "White House photo",
+    "query_used": "White House government photo",
     "relevance_tier": "acceptable",
     "article_relevance_score": 100,
     "asset_quality_score": 100,
@@ -47,10 +47,10 @@
   ],
   "source_pack": {
     "passes_gate": true,
-    "unique_domains": 3,
-    "total_sources": 3,
-    "direct_event_source_count": 3,
-    "independent_event_domains": 3,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
     "publish_ready_sources": [
       {
         "title": "On the White House's news app, Trump is always winning",
@@ -61,11 +61,6 @@
         "title": "Trump's White House ballroom gets final OK after judge's halt order",
         "url": "https://www.cnbc.com/2026/04/02/trumps-white-house-ballroom-gets-final-approval-days-after-a-judge-ordered-a-halt-to-construction.html",
         "domain": "cnbc.com"
-      },
-      {
-        "title": "House Appropriations Committee",
-        "url": "https://www.congress.gov/committee/house-appropriations/hsap00",
-        "domain": "congress.gov"
       }
     ]
   },
@@ -74,19 +69,10 @@
     "blocking_errors": [],
     "warnings": [],
     "source_checks": {
-      "publish_ready_count": 3,
+      "publish_ready_count": 2,
       "mismatched_sources": [],
       "generic_sources": [],
-      "weak_title_overlap_sources": [
-        {
-          "title": "House Appropriations Committee",
-          "url": "https://www.congress.gov/committee/house-appropriations/hsap00",
-          "overlap_ratio": 0.13,
-          "shared_tokens": [
-            "house"
-          ]
-        }
-      ]
+      "weak_title_overlap_sources": []
     },
     "tag_checks": {
       "selected_tags": [
@@ -124,10 +110,10 @@
     },
     "image_checks": {
       "provider": "unsplash",
-      "query_used": "White House photo",
+      "query_used": "White House government photo",
       "article_relevance_score": 100,
       "relevance_tier": "acceptable",
-      "overlap_ratio": 1,
+      "overlap_ratio": 0.67,
       "shared_tokens": [
         "white",
         "house"
