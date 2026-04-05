@@ -1,0 +1,126 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-05T20:42:50.567Z",
+  "event_id": "evt-2026-04-05-us-politics-general-iran-iran-white-house",
+  "cluster_id": "evt-2026-04-05-us-politics-general-iran-iran-white-house",
+  "article_type": "report",
+  "title": "U.S. Revokes Residence Visas for Family of Iranian Commander Soleimani",
+  "slug": "u-s-revokes-residence-visas-for-family-of-iranian-commander-",
+  "canonical_slug": "2026-04-05-u-s-revokes-residence-visas-for-family-of-iranian-commander",
+  "expected_url": "/article/2026-04-05-u-s-revokes-residence-visas-for-family-of-iranian-commander",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-05-u-s-revokes-residence-visas-for-family-of-iranian-commander.mdx",
+  "published_at": "2026-04-05T20:42:50.564Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "World & Geopolitics",
+  "topics": [
+    "Family of Iran military leader Soleimani has U.S. residence visas revoked",
+    "World & Geopolitics"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/u_yjcjcv-ia/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/u_yjcjcv-ia/cover.jpg",
+    "source_url": "https://unsplash.com/photos/crowd-of-people-holding-mini-flags-u_YJcJCv-iA",
+    "asset_key": "unsplash:u_YJcJCv-iA",
+    "alt_text": "Illustration for U.S. Revokes Residence Visas for Family of Iranian Commander Soleimani",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Family of Iran government photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "United States",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Family of Iran military leader Soleimani has U.S. residence visas revoked",
+        "url": "https://www.cbsnews.com/news/ex-iranian-guard-leader-soleimani-family-ice-custody/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "Universities hit as US, Israel ramp up attacks on Iran's infrastructure",
+        "url": "https://www.aljazeera.com/news/2026/4/4/universities-hit-as-us-israel-ramp-up-attacks-on-irans-infrastructure",
+        "domain": "aljazeera.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Universities hit as US, Israel ramp up attacks on Iran's infrastructure",
+          "url": "https://www.aljazeera.com/news/2026/4/4/universities-hit-as-us-israel-ramp-up-attacks-on-irans-infrastructure",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "israel",
+          "diplomatic"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Family of Iran government photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "family",
+        "iran"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
