@@ -41,20 +41,20 @@ async function enrichArticleWithVideo(article, options = {}) {
   const articleProfile = { titleTokens, entities };
 
   // Phase 1: Search for candidates across queries
-  const searchCandidates = await searchCandidates(queries, config, apiKey, article);
-  if (searchCandidates.length === 0) {
+  const allSearchCandidates = await searchCandidates(queries, config, apiKey, article);
+  if (allSearchCandidates.length === 0) {
     console.log('[youtube-enrichment] No search results for any query');
     return null;
   }
 
-  console.log(`[youtube-enrichment] Found ${searchCandidates.length} raw search candidates`);
+  console.log(`[youtube-enrichment] Found ${allSearchCandidates.length} raw search candidates`);
 
   // Phase 2: Fetch detailed metadata for top candidates
-  const videoIds = searchCandidates.slice(0, config.maxVideoDetails).map((c) => c.videoId);
+  const videoIds = allSearchCandidates.slice(0, config.maxVideoDetails).map((c) => c.videoId);
   const videoDetails = await fetchVideoDetails(videoIds, apiKey);
 
   // Phase 3: Enrich search results with detailed metadata
-  const enriched = searchCandidates.map((candidate) => {
+  const enriched = allSearchCandidates.map((candidate) => {
     const detail = videoDetails.get(candidate.videoId);
     return { ...candidate, detail };
   });

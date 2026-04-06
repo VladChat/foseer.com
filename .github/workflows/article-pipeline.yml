@@ -116,7 +116,7 @@ jobs:
 
           result_file="qwen-data/events/pipeline-last-result.json"
           if [ -f "$result_file" ]; then
-            if node -e "const fs=require('node:fs');const p='qwen-data/events/pipeline-last-result.json';const data=JSON.parse(fs.readFileSync(p,'utf8'));const blocker=String(data?.hard_blocker||'').toLowerCase();const published=Number(data?.stats?.articles_published||0);const controlled=published===0 && /(no publishable candidate|source pack gate failed|no candidates discovered|no briefs normalized|pre-draft quality gate failed)/.test(blocker);process.exit(controlled?0:1);"; then
+            if node -e "const fs=require('node:fs');const p='qwen-data/events/pipeline-last-result.json';const data=JSON.parse(fs.readFileSync(p,'utf8'));const blocker=String(data?.hard_blocker||'').toLowerCase();const published=Number(data?.stats?.articles_published||0);const controlled=published===0 && /(no publishable candidate|source pack gate failed|no candidates discovered|no briefs normalized|pre-draft quality gate failed|duplicate guard|direct-event sources|pre-draft duplicate|pre-draft direct-event source)/.test(blocker);process.exit(controlled?0:1);"; then
               echo "result=no_article" >> "$GITHUB_OUTPUT"
               echo "No publishable article this run. Skipping build/commit/push."
               exit 0
