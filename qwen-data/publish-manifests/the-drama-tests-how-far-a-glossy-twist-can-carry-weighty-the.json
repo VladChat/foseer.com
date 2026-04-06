@@ -1,0 +1,109 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T21:27:29.515Z",
+  "event_id": "evt-2026-04-06-film-tv-general-global",
+  "cluster_id": "evt-2026-04-06-film-tv-general-global",
+  "article_type": "report",
+  "title": "‘The Drama’ tests how far a glossy twist can carry weighty themes",
+  "slug": "the-drama-tests-how-far-a-glossy-twist-can-carry-weighty-the",
+  "canonical_slug": "2026-04-06-the-drama-tests-how-far-a-glossy-twist-can-carry-weighty-the",
+  "expected_url": "/article/2026-04-06-the-drama-tests-how-far-a-glossy-twist-can-carry-weighty-the",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-the-drama-tests-how-far-a-glossy-twist-can-carry-weighty-the.mdx",
+  "published_at": "2026-04-06T21:27:29.513Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "Film & TV",
+  "topics": [
+    "The Drama: sex, secrets and that gobsmacking twist",
+    "Film & TV"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/y5uuts5bqdq/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/y5uuts5bqdq/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-sign-that-says-drama-studio-painted-on-a-wall-y5UuTs5bqdQ",
+    "asset_key": "unsplash:y5UuTs5bqdQ",
+    "alt_text": "a sign that says drama studio painted on a wall",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "The Drama film photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "The Drama: sex, secrets and that gobsmacking twist",
+        "url": "https://www.theguardian.com/film/2026/apr/06/the-drama-movie-spoilers-zendaya-robert-pattinson",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": true,
+        "matched_aliases": [
+          "film"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "The Drama film photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "drama",
+        "film"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

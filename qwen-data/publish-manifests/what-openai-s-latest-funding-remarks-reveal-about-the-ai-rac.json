@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T21:34:39.366Z",
+  "event_id": "evt-2026-04-05-ai-big-tech-general-global-openai",
+  "cluster_id": "evt-2026-04-05-ai-big-tech-general-global-openai",
+  "article_type": "report",
+  "title": "What OpenAI’s latest funding remarks reveal about the AI race",
+  "slug": "what-openai-s-latest-funding-remarks-reveal-about-the-ai-rac",
+  "canonical_slug": "2026-04-06-what-openai-s-latest-funding-remarks-reveal-about-the-ai-rac",
+  "expected_url": "/article/2026-04-06-what-openai-s-latest-funding-remarks-reveal-about-the-ai-rac",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-what-openai-s-latest-funding-remarks-reveal-about-the-ai-rac.mdx",
+  "published_at": "2026-04-06T21:34:39.364Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "ai-big-tech",
+  "topic_label": "AI & Big Tech",
+  "subsection": "AI & Big Tech",
+  "topics": [
+    "Transcript",
+    "AI & Big Tech"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/6wpixg5trn4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/6wpixg5trn4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-people-standing-on-top-of-a-hill-6WpIxg5tRn4",
+    "asset_key": "unsplash:6WpIxg5tRn4",
+    "alt_text": "Illustration for What OpenAI’s latest funding remarks reveal about the AI race",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "funding remarks reveal photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "AI & Big Tech",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Transcript",
+        "url": "https://www.reuters.com/info-pages/transcript/5625058c-234b-11f1-a365-47e83529535a/",
+        "domain": "reuters.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Transcript",
+          "url": "https://www.reuters.com/info-pages/transcript/5625058c-234b-11f1-a365-47e83529535a/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "ai-big-tech",
+        "topic_label": "AI & Big Tech",
+        "supported": true,
+        "matched_aliases": [
+          "ai",
+          "artificial intelligence"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "funding remarks reveal photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "funding",
+        "remarks",
+        "reveal"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
