@@ -1,11 +1,10 @@
 // File: qwen-scripts/utils/pre-draft-gate.js
-// Purpose: Shared pre-draft gate checks — duplicate source-overlap and final evidence sanity.
+// Purpose: Shared pre-draft gate checks — duplicate source-overlap and direct-event source count.
 // Used by both pipeline.js and qna-pipeline.js to skip doomed candidates before expensive stages.
 
 import fs from 'node:fs';
 import path from 'node:path';
 import { resolveProjectRoot } from './project-root.js';
-import { isOfficialPrimaryDomain, isTrustedReportingDomain, normalizeDomain } from '../config/trusted-publishers.js';
 
 const PROJECT_ROOT = resolveProjectRoot(import.meta.url);
 const POSTS_DIR = path.resolve(PROJECT_ROOT, 'src/data/post');
@@ -103,54 +102,17 @@ export function checkPreDraftDuplicate(candidate, options = {}) {
 }
 
 /**
- * Final single-source sanity check.
- * Keeps duplicate blocking strict, but lets non-high-risk single-source stories proceed when
- * the source is trusted/official and the title alignment is good enough.
+ * Check if a report-type candidate has enough direct-event sources.
+ * Mirrors the validate-publish-graph.js rule: reports need >= 2 direct-event sources.
+ * @param {Object} candidate - Candidate with sourcePack and brief
+ * @returns {Object} { isBlocked, reason } or { isBlocked: false }
  */
-export function checkPreDraftSingleSourceEvidence(candidate) {
-  const sourcePack = candidate?.sourcePack || {};
-  const brief = candidate?.brief || {};
-  const sources = getPublishableSources(candidate);
-  const sourceCount = sources.length;
-  const directEventCount = Number(sourcePack?.metrics?.directEventSourceCount || 0);
-  const articleType = String(brief?.articleType || brief?.article_type || 'report').toLowerCase();
-  const highRisk = isHighRiskBrief(brief);
+export function checkPreDraftDirectEventSources(candidate) {
+  const directEventCount = candidate?.sourcePack?.metrics?.directEventSourceCount || 0;
+  const articleType = String(candidate?.brief?.articleType || candidate?.brief?.article_type || 'report').toLowerCase();
 
-  if (sourceCount === 0) {
-    return { isBlocked: true, reason: 'No publishable sources available for drafting' };
-  }
-  if (sourceCount >= 2) {
-    if (highRisk && directEventCount < 2) {
-      return { isBlocked: true, reason: `High-risk report still needs 2 direct-event sources, found ${directEventCount}` };
-    }
-    return { isBlocked: false };
-  }
-
-  const source = sources[0] || {};
-  const domain = normalizeDomain(source?.canonical_domain || source?.domain || source?.canonical_url || source?.url || '');
-  const pageKind = String(source?.page_kind || '').toLowerCase();
-  const briefTitle = String(brief?.title || '').trim();
-  const sourceTitle = String(source?.title || '').trim();
-  const titleOverlap = computeTitleOverlap(briefTitle, sourceTitle);
-  const hasTrustedOrOfficial = isTrustedReportingDomain(domain) || isOfficialPrimaryDomain(domain);
-
-  if (highRisk) {
-    return { isBlocked: true, reason: 'High-risk topic still requires multi-source corroboration' };
-  }
-  if (!hasTrustedOrOfficial) {
-    return { isBlocked: true, reason: 'Single-source evidence not strong enough (missing trusted or official source)' };
-  }
-  if (['homepage', 'section', 'topic', 'live', 'roundup'].includes(pageKind)) {
-    return { isBlocked: true, reason: `Single-source evidence not strong enough (non_publishable_page_kind:${pageKind})` };
-  }
-  if (isGenericBriefTitle(briefTitle)) {
-    return { isBlocked: true, reason: 'Single-source evidence not strong enough (title_too_generic)' };
-  }
-  if (articleType === 'report' && directEventCount < 1) {
-    return { isBlocked: true, reason: 'Single-source evidence not strong enough (direct_event_signal_missing)' };
-  }
-  if (titleOverlap < 0.18 && !isOfficialPrimaryDomain(domain)) {
-    return { isBlocked: true, reason: `Single-source evidence not strong enough (title_overlap_too_low:${titleOverlap.toFixed(2)})` };
+  if (articleType === 'report' && directEventCount < 2) {
+    return { isBlocked: true, reason: `Report requires at least 2 direct-event sources, found ${directEventCount}` };
   }
 
   return { isBlocked: false };
@@ -165,35 +127,12 @@ export function runPreDraftGates(candidate, options = {}) {
     return { blocked: true, reason: duplicate.reason, stage: 'pre_draft_duplicate' };
   }
 
-  const singleSource = checkPreDraftSingleSourceEvidence(candidate);
-  if (singleSource.isBlocked) {
-    return { blocked: true, reason: singleSource.reason, stage: 'pre_draft_single_source' };
+  const directEvent = checkPreDraftDirectEventSources(candidate);
+  if (directEvent.isBlocked) {
+    return { blocked: true, reason: directEvent.reason, stage: 'pre_draft_direct_event_source' };
   }
 
   return { blocked: false };
-}
-
-function isHighRiskBrief(brief = {}) {
-  const highRiskTopicIds = new Set(['world-geopolitics', 'us-politics', 'law-crime', 'climate-extreme-weather']);
-  if (highRiskTopicIds.has(String(brief?.topic_id || '').toLowerCase())) return true;
-  const text = `${brief?.title || ''} ${brief?.whatHappened || ''} ${brief?.whyItMatters || ''}`.toLowerCase();
-  return /(killed|dead|deaths|war|attack|airstrike|hostage|terror|indicted|charged|sanction|lawsuit|verdict|court)/.test(text);
-}
-
-function isGenericBriefTitle(title = '') {
-  const normalized = String(title || '').trim().toLowerCase();
-  if (!normalized) return true;
-  if (/^(transcript|live|update|updates|coverage|briefing)$/.test(normalized)) return true;
-  const tokens = normalized.split(/[^a-z0-9]+/).map((token) => token.trim()).filter((token) => token.length >= 3);
-  return tokens.length < 2;
-}
-
-function computeTitleOverlap(left = '', right = '') {
-  const leftTokens = new Set(String(left || '').toLowerCase().split(/[^a-z0-9]+/).map((token) => token.trim()).filter((token) => token.length >= 3));
-  const rightTokens = new Set(String(right || '').toLowerCase().split(/[^a-z0-9]+/).map((token) => token.trim()).filter((token) => token.length >= 3));
-  if (leftTokens.size === 0 || rightTokens.size === 0) return 0;
-  const shared = Array.from(leftTokens).filter((token) => rightTokens.has(token)).length;
-  return shared / Math.max(leftTokens.size, 1);
 }
 
 /**

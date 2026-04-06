@@ -2,7 +2,6 @@
 // Purpose: Deterministic claim map for one coherent story without burning extra LLM calls
 
 import { getPublishReadySources } from './utils/source-pack-access.js';
-import { getSingleSourceEvidenceDecision } from './utils/evidence-policy.js';
 
 const CLAIM_TYPE = { FACTUAL: 'factual', CONTEXTUAL: 'contextual', ANALYTICAL: 'analytical' };
 const CLAIM_STATUS = { SUPPORTED: 'supported', NEEDS_VERIFICATION: 'needs_verification', UNSUPPORTED: 'unsupported' };
@@ -18,10 +17,10 @@ export async function createClaimMap(sourcePack, _openAiApiKey) {
   }
 
   if (sources.length < 2) {
-    if (isSingleSourceEvidenceApproved(sourcePack, sources)) {
-      return createSingleSourceClaimMap(sourcePack, sources[0], 'Single-source claim map mode enabled by evidence policy');
+    if (isSingleSourceWhitelistApproved(sourcePack)) {
+      return createSingleSourceClaimMap(sourcePack, sources[0], 'Single-source claim map mode enabled by source-pack whitelist');
     }
-    return createFailedClaimMap(sourcePack, 'Single-source evidence not strong enough for claim map');
+    return createFailedClaimMap(sourcePack, 'Need at least 2 sources for claim map');
   }
 
   try {
@@ -223,7 +222,7 @@ function createFallbackClaimMap(sourcePack, reason) {
     status: CLAIM_STATUS.SUPPORTED,
   }));
   if (claims.length < 2) {
-    if (claims.length === 1 && isSingleSourceEvidenceApproved(sourcePack, draftReadySources)) {
+    if (claims.length === 1 && isSingleSourceWhitelistApproved(sourcePack)) {
       return createSingleSourceClaimMap(sourcePack, draftReadySources[0], reason);
     }
     return createFailedClaimMap(sourcePack, reason);
@@ -231,21 +230,9 @@ function createFallbackClaimMap(sourcePack, reason) {
   return finalizeClaimMap(sourcePack, claims, true, reason);
 }
 
-function isSingleSourceEvidenceApproved(sourcePack, sources = []) {
-  const publishableSources = Array.isArray(sources) && sources.length > 0 ? sources : getPublishReadySources(sourcePack, { minCount: 1 });
-  const decision = getSingleSourceEvidenceDecision({
-    brief: {
-      title: sourcePack?.topic || '',
-      topic_id: sourcePack?.topic_id || null,
-    },
-    articleType: sourcePack?.articleType || 'report',
-    sources: publishableSources,
-    coherenceScore: null,
-    sourceConsistencyScore: sourcePack?.metrics?.sourceConsistencyScore,
-    directEventSourceCount: sourcePack?.metrics?.directEventSourceCount || 0,
-    crossTopicMismatchCount: 0,
-  });
-  return Boolean(decision.pass);
+function isSingleSourceWhitelistApproved(sourcePack) {
+  return Array.isArray(sourcePack?.gateNotes)
+    && sourcePack.gateNotes.some((note) => String(note || '').toLowerCase().includes('single-source whitelist exception passed'));
 }
 
 function createSingleSourceClaimMap(sourcePack, source, reason = 'single_source_whitelist') {

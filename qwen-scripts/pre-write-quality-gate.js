@@ -42,8 +42,8 @@ export function evaluatePreWriteQualityGate({
   const reasons = [];
   const warnings = [];
 
-  const minSources = Math.max(1, Number(options.minSources || process.env.QWEN_PREWRITE_MIN_SOURCES || 1));
-  const minDomains = Math.max(1, Number(options.minDomains || process.env.QWEN_PREWRITE_MIN_DOMAINS || 1));
+  const minSources = Math.max(1, Number(options.minSources || process.env.QWEN_PREWRITE_MIN_SOURCES || 2));
+  const minDomains = Math.max(1, Number(options.minDomains || process.env.QWEN_PREWRITE_MIN_DOMAINS || 2));
   const minCoherence = Number(options.minCoherence || process.env.QWEN_PREWRITE_MIN_COHERENCE || 0.45);
 
   const sources = Array.isArray(sourcePack?.sources) ? sourcePack.sources : [];
@@ -92,10 +92,7 @@ export function evaluatePreWriteQualityGate({
   if (Number.isFinite(minCoherence) && Number.isFinite(Number(coherenceScore)) && Number(coherenceScore) < minCoherence) {
     const gateMentionsCoherence = gateNotes.some((note) => /coherence|mixes unrelated/i.test(String(note || '')));
     const stage3MentionsCoherence = stage3BlockingErrors.some((error) => /coherence|mixes unrelated/i.test(String(error || '')));
-    const isSingleSourcePass = sourceCount === 1 && singleSourceDecision.pass;
-    if (isSingleSourcePass) {
-      warnings.push(`Single-source candidate proceeding despite low computed coherence (${Number(coherenceScore).toFixed(2)} < ${minCoherence.toFixed(2)})`);
-    } else if (hasEntitySignal && (gateMentionsCoherence || stage3MentionsCoherence || !gatePassed)) {
+    if (hasEntitySignal && (gateMentionsCoherence || stage3MentionsCoherence || !gatePassed)) {
       reasons.push(`Source-pack coherence below pre-write threshold (${Number(coherenceScore).toFixed(2)} < ${minCoherence.toFixed(2)})`);
     } else {
       warnings.push(`Low coherence observed but not treated as blocker (${Number(coherenceScore).toFixed(2)} < ${minCoherence.toFixed(2)})`);
@@ -150,12 +147,11 @@ function evaluateSingleSourceWhitelistEligibility({
   roleCounts = { trustedReporting: 0, officialPrimary: 0 },
   options = {},
 } = {}) {
-  const rawEnabled = parseBooleanFlag(
+  const enabled = parseBooleanFlag(
     options.enableSingleSourceWhitelist
     ?? options.singleSourceWhitelist
     ?? process.env.QWEN_ENABLE_SINGLE_SOURCE_WHITELIST
-  );
-  const enabled = rawEnabled !== false;
+  ) === true;
   if (!enabled) return { enabled: false, pass: false, reason: 'disabled' };
   if (sourceCount !== 1) return { enabled: true, pass: false, reason: 'publishable_count_not_one' };
   if (domainCount !== 1) return { enabled: true, pass: false, reason: 'domain_count_not_one' };
@@ -163,13 +159,8 @@ function evaluateSingleSourceWhitelistEligibility({
 
   const source = Array.isArray(sources) ? sources[0] : null;
   const domain = source?.canonical_domain || source?.domain || source?.canonical_url || source?.url || '';
-  const briefTitle = String(brief?.title || '').trim();
-  const sourceTitle = String(source?.title || '').trim();
-  if (isGenericSingleSourceBriefTitle(briefTitle)) {
-    return { enabled: true, pass: false, reason: 'title_too_generic' };
-  }
-  if (!isStrictSingleSourceWhitelistDomain(domain) && !isTrustedReportingDomain(domain) && !isOfficialPrimaryDomain(domain)) {
-    return { enabled: true, pass: false, reason: 'domain_not_trusted_or_official' };
+  if (!isStrictSingleSourceWhitelistDomain(domain)) {
+    return { enabled: true, pass: false, reason: 'domain_not_in_strict_single_source_whitelist' };
   }
   if ((Number(roleCounts.trustedReporting || 0) + Number(roleCounts.officialPrimary || 0)) < 1) {
     return { enabled: true, pass: false, reason: 'missing_trusted_or_official_role' };
@@ -179,7 +170,7 @@ function evaluateSingleSourceWhitelistEligibility({
   if (['homepage', 'section', 'topic', 'live', 'roundup'].includes(pageKind)) {
     return { enabled: true, pass: false, reason: `non_publishable_page_kind:${pageKind}` };
   }
-  const title = sourceTitle.toLowerCase();
+  const title = String(source?.title || '').toLowerCase();
   const sourceUrl = String(source?.canonical_url || source?.url || '').toLowerCase();
   if (/(live updates?|latest news|category|tag|topics?)/.test(title) || /\/(live|category|tag|topics?)\//.test(sourceUrl)) {
     return { enabled: true, pass: false, reason: 'generic_or_container_source' };
@@ -188,33 +179,13 @@ function evaluateSingleSourceWhitelistEligibility({
   const minSingleSourceCoherence = Number(
     options.singleSourceWhitelistMinCoherence
     ?? process.env.QWEN_SINGLE_SOURCE_WHITELIST_MIN_COHERENCE
-    ?? 0.18
+    ?? 0.72
   );
-  const titleOverlap = computeSingleSourceTitleOverlap(briefTitle, sourceTitle);
-  if (Number.isFinite(minSingleSourceCoherence) && Number.isFinite(Number(coherenceScore)) && Number(coherenceScore) < minSingleSourceCoherence && titleOverlap < 0.22) {
+  if (Number.isFinite(minSingleSourceCoherence) && Number.isFinite(Number(coherenceScore)) && Number(coherenceScore) < minSingleSourceCoherence) {
     return { enabled: true, pass: false, reason: `coherence_below_threshold:${Number(coherenceScore).toFixed(2)}<${minSingleSourceCoherence}` };
   }
-  if (titleOverlap < 0.18 && !isOfficialPrimaryDomain(domain)) {
-    return { enabled: true, pass: false, reason: `title_overlap_too_low:${titleOverlap.toFixed(2)}` };
-  }
 
-  return { enabled: true, pass: true, reason: 'single_source_strong_enough' };
-}
-
-function isGenericSingleSourceBriefTitle(title = '') {
-  const normalized = String(title || '').trim().toLowerCase();
-  if (!normalized) return true;
-  if (/^(transcript|live|update|updates|coverage|briefing)$/.test(normalized)) return true;
-  const tokens = normalized.split(/[^a-z0-9]+/).map((token) => token.trim()).filter((token) => token.length >= 3);
-  return tokens.length < 2;
-}
-
-function computeSingleSourceTitleOverlap(left = '', right = '') {
-  const leftTokens = new Set(String(left || '').toLowerCase().split(/[^a-z0-9]+/).map((token) => token.trim()).filter((token) => token.length >= 3));
-  const rightTokens = new Set(String(right || '').toLowerCase().split(/[^a-z0-9]+/).map((token) => token.trim()).filter((token) => token.length >= 3));
-  if (leftTokens.size === 0 || rightTokens.size === 0) return 0;
-  const shared = Array.from(leftTokens).filter((token) => rightTokens.has(token)).length;
-  return shared / Math.max(leftTokens.size, 1);
+  return { enabled: true, pass: true, reason: 'strict_whitelist_single_source_ok' };
 }
 
 function isHighRiskBrief(brief = {}) {

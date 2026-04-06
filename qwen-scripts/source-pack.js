@@ -210,9 +210,6 @@ function applySourcePackGate({ eventBrief, sources, coreSources, supportingSourc
   const crossTopicMismatchCount = publishableRoleResults.filter((result) => isHardCrossTopicMismatch(result, eventBrief)).length;
   const storyCoherenceScore = computePublishableStoryCoherence(eventBrief, publishableRoleResults);
   const publishableCount = coreSources.length + supportingSources.length;
-  const directEventSourceCount = directEventRoleResults.length;
-  const independentEventDomains = countUniqueDomains(directEventRoleResults.map((result) => result.source));
-  const highRisk = isHighRiskBrief(eventBrief);
   const singleSourceDecision = evaluateSingleSourceWhitelistEligibility({
     eventBrief,
     publishableSources: [...coreSources, ...supportingSources],
@@ -220,7 +217,7 @@ function applySourcePackGate({ eventBrief, sources, coreSources, supportingSourc
     storyCoherenceScore,
     crossTopicMismatchCount,
     sourceConsistencyScore,
-    directEventSourceCount,
+    directEventSourceCount: directEventRoleResults.length,
     options,
   });
 
@@ -228,38 +225,24 @@ function applySourcePackGate({ eventBrief, sources, coreSources, supportingSourc
     passes = false;
     notes.push(`Need at least 1 core source, found ${coreSources.length}`);
   }
-
-  if (publishableCount < 1) {
-    passes = false;
-    notes.push('Need at least 1 publishable source');
-  } else if (publishableCount === 1) {
+  if (publishableCount < 2) {
     if (singleSourceDecision.pass) {
       notes.push(`Single-source whitelist exception passed (${singleSourceDecision.reason})`);
-    } else if (highRisk) {
-      passes = false;
-      notes.push('High-risk topic still requires multi-source corroboration');
-      notes.push(`Single-source whitelist rejected: ${singleSourceDecision.reason}`);
     } else {
       passes = false;
-      notes.push(`Need at least 1 strong publishable source, found weak single-source evidence`);
-      notes.push(`Single-source whitelist rejected: ${singleSourceDecision.reason}`);
+      notes.push(`Need at least 2 publishable sources, found ${publishableCount}`);
+      if (singleSourceDecision.enabled && publishableCount === 1 && singleSourceDecision.reason) {
+        notes.push(`Single-source whitelist rejected: ${singleSourceDecision.reason}`);
+      }
     }
   }
-
-  if (publishableCount >= 2 && uniqueDomains < 1) {
+  if (uniqueDomains < 2 && publishableCount >= 2) {
     passes = false;
-    notes.push('Publishable sources must resolve to at least 1 valid domain');
+    notes.push(`Need at least 2 different domains among publishable sources, found ${uniqueDomains}`);
   }
-  if (highRisk && publishableCount >= 2 && uniqueDomains < 2) {
-    passes = false;
-    notes.push(`High-risk topic requires at least 2 different domains among publishable sources, found ${uniqueDomains}`);
-  }
-
   const moderateMatchCount = publishableRoleResults.filter((result) => Number(result.same_event_score || 0) >= 3).length;
-  const hasStrongEventPack = publishableCount === 1
-    ? singleSourceDecision.pass
-    : (strongMatchCount >= 2 || (strongMatchCount >= 1 && moderateMatchCount >= 2));
-  if (!hasStrongEventPack && publishableCount >= 2) {
+  const hasStrongEventPack = strongMatchCount >= 2 || (strongMatchCount >= 1 && moderateMatchCount >= 2);
+  if (!hasStrongEventPack && sources.length >= 2) {
     passes = false;
     notes.push(`Need stronger same-event alignment among publishable sources, found ${strongMatchCount} strong / ${moderateMatchCount} moderate`);
   }
@@ -267,29 +250,22 @@ function applySourcePackGate({ eventBrief, sources, coreSources, supportingSourc
     passes = false;
     notes.push(`Publish-ready source pack has ${crossTopicMismatchCount} cross-topic mismatch source(s)`);
   }
-  if (publishableCount >= 2 && storyCoherenceScore < 0.45) {
+  if (storyCoherenceScore < 0.45) {
     passes = false;
     notes.push(`Publish-ready source pack coherence too low (${storyCoherenceScore.toFixed(2)})`);
   }
-  if (publishableCount === 1 && singleSourceDecision.pass && storyCoherenceScore < 0.2) {
-    notes.push(`Single-source pack proceeding with low computed coherence (${storyCoherenceScore.toFixed(2)}) because title/domain evidence is strong enough`);
-  }
-
+  const directEventSourceCount = directEventRoleResults.length;
+  const independentEventDomains = countUniqueDomains(directEventRoleResults.map((result) => result.source));
   if (articleType === 'report') {
-    if (directEventSourceCount < 1) {
+    if (directEventSourceCount < 2) {
       passes = false;
-      notes.push('Report requires at least 1 direct-event source');
+      notes.push(`Need at least 2 direct-event sources for report, found ${directEventSourceCount}`);
     }
-    if (highRisk && directEventSourceCount < 2) {
+    if (independentEventDomains < 2 && directEventSourceCount >= 2) {
       passes = false;
-      notes.push(`High-risk report requires at least 2 direct-event sources, found ${directEventSourceCount}`);
-    }
-    if (highRisk && independentEventDomains < 2 && directEventSourceCount >= 2) {
-      passes = false;
-      notes.push(`High-risk report requires at least 2 independent direct-event domains, found ${independentEventDomains}`);
+      notes.push(`Need at least 2 independent direct-event domains for report, found ${independentEventDomains}`);
     }
   }
-
   if (sourceConsistencyScore < 3.5) {
     passes = false;
     notes.push(`Source consistency too weak (${sourceConsistencyScore})`);
@@ -354,16 +330,18 @@ function evaluateSingleSourceWhitelistEligibility({
   directEventSourceCount = 0,
   options = {},
 } = {}) {
-  const rawEnabled = parseBooleanFlag(
+  const enabled = parseBooleanFlag(
     options.enableSingleSourceWhitelist
     ?? options.singleSourceWhitelist
     ?? process.env.QWEN_ENABLE_SINGLE_SOURCE_WHITELIST
-  );
-  const enabled = rawEnabled !== false;
+  ) === true;
 
   if (!enabled) return { enabled: false, pass: false, reason: 'disabled' };
   if (!Array.isArray(publishableSources) || publishableSources.length !== 1) {
     return { enabled: true, pass: false, reason: 'publishable_count_not_one' };
+  }
+  if (String(articleType || '').toLowerCase() === 'report') {
+    return { enabled: true, pass: false, reason: 'report_requires_multi_source' };
   }
   if (isHighRiskBrief(eventBrief)) {
     return { enabled: true, pass: false, reason: 'high_risk_topic_requires_multi_source' };
@@ -371,17 +349,11 @@ function evaluateSingleSourceWhitelistEligibility({
 
   const source = publishableSources[0] || {};
   const sourceDomain = source?.canonical_domain || source?.domain || source?.canonical_url || source?.url || '';
-  const briefTitle = String(eventBrief?.title || '').trim();
-  const sourceTitle = String(source?.title || '').trim();
-  const titleOverlap = computeSingleSourceTitleOverlap(briefTitle, sourceTitle);
-  if (isGenericSingleSourceBriefTitle(briefTitle)) {
-    return { enabled: true, pass: false, reason: 'title_too_generic' };
-  }
-  if (!isStrictSingleSourceWhitelistDomain(sourceDomain) && !isTrustedReportingDomain(sourceDomain) && !isOfficialPrimaryDomain(sourceDomain)) {
-    return { enabled: true, pass: false, reason: 'domain_not_trusted_or_official' };
+  if (!isStrictSingleSourceWhitelistDomain(sourceDomain)) {
+    return { enabled: true, pass: false, reason: 'domain_not_in_strict_single_source_whitelist' };
   }
   if (!isTrustedReportingDomain(sourceDomain) && !isOfficialPrimaryDomain(sourceDomain)) {
-    return { enabled: true, pass: false, reason: 'missing_trusted_or_official_role' };
+    return { enabled: true, pass: false, reason: 'domain_not_trusted_or_official' };
   }
   if (getPublishableIntegrityIssues(source).length > 0) {
     return { enabled: true, pass: false, reason: 'source_integrity_not_publishable' };
@@ -396,53 +368,22 @@ function evaluateSingleSourceWhitelistEligibility({
   const minSingleSourceCoherence = Number(
     options.singleSourceWhitelistMinCoherence
     ?? process.env.QWEN_SINGLE_SOURCE_WHITELIST_MIN_COHERENCE
-    ?? 0.18
+    ?? 0.72
   );
   const minSingleSourceConsistency = Number(
     options.singleSourceWhitelistMinConsistency
     ?? process.env.QWEN_SINGLE_SOURCE_WHITELIST_MIN_CONSISTENCY
-    ?? 3.5
+    ?? 6.0
   );
 
+  if (Number.isFinite(minSingleSourceCoherence) && Number(storyCoherenceScore || 0) < minSingleSourceCoherence) {
+    return { enabled: true, pass: false, reason: `coherence_below_threshold:${Number(storyCoherenceScore || 0).toFixed(2)}<${minSingleSourceCoherence}` };
+  }
   if (Number.isFinite(minSingleSourceConsistency) && Number(sourceConsistencyScore || 0) < minSingleSourceConsistency) {
     return { enabled: true, pass: false, reason: `consistency_below_threshold:${Number(sourceConsistencyScore || 0).toFixed(2)}<${minSingleSourceConsistency}` };
   }
-  if (Number.isFinite(minSingleSourceCoherence) && Number(storyCoherenceScore || 0) < minSingleSourceCoherence && titleOverlap < 0.22) {
-    return { enabled: true, pass: false, reason: `coherence_below_threshold:${Number(storyCoherenceScore || 0).toFixed(2)}<${minSingleSourceCoherence}` };
-  }
-  if (titleOverlap < 0.18 && !isOfficialPrimaryDomain(sourceDomain)) {
-    return { enabled: true, pass: false, reason: `title_overlap_too_low:${titleOverlap.toFixed(2)}` };
-  }
 
-  return { enabled: true, pass: true, reason: 'single_source_strong_enough' };
-}
-
-function isGenericSingleSourceBriefTitle(title = '') {
-  const normalized = String(title || '').trim().toLowerCase();
-  if (!normalized) return true;
-  if (/^(transcript|live|update|updates|coverage|briefing)$/.test(normalized)) return true;
-  const tokens = normalized.split(/[^a-z0-9]+/).map((token) => token.trim()).filter((token) => token.length >= 3);
-  return tokens.length < 2;
-}
-
-function computeSingleSourceTitleOverlap(left = '', right = '') {
-  const leftTokens = Array.from(titleTokensForSingleSource(left));
-  const rightTokens = Array.from(titleTokensForSingleSource(right));
-  if (leftTokens.length === 0 || rightTokens.length === 0) return 0;
-  const rightSet = new Set(rightTokens);
-  const shared = leftTokens.filter((token) => rightSet.has(token)).length;
-  return shared / Math.max(leftTokens.length, 1);
-}
-
-function titleTokensForSingleSource(value = '') {
-  return new Set(
-    String(value || '')
-      .toLowerCase()
-      .split(/[^a-z0-9]+/)
-      .map((token) => token.trim())
-      .filter((token) => token.length >= 3)
-      .filter((token) => !GENERIC_TOPIC_TOKENS.has(token))
-  );
+  return { enabled: true, pass: true, reason: 'strict_whitelist_single_source_ok' };
 }
 
 function isHighRiskBrief(brief = {}) {
