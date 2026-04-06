@@ -27,6 +27,9 @@ const DEFAULT_MAX_ACCEPTED_PER_FEED = 2;
 const DEFAULT_MAX_ACCEPTED_PER_PUBLISHER = 3;
 const DEFAULT_MAX_RSS_ACCEPTED = 24;
 const DEFAULT_MAX_SHARE = 0.35;
+const DEFAULT_ADAPTIVE_MAX_SHARE = 0.45;
+const DEFAULT_ADAPTIVE_UNDERCOVERAGE_RATIO = 0.34;
+const DEFAULT_ADAPTIVE_LOW_SUPPLY_THRESHOLD = 10;
 
 const REGION_PATTERNS = [
   ['united states', 'us'], ['u.s.', 'us'], ['america', 'us'], ['white house', 'us'], ['congress', 'us'], ['senate', 'us'],
@@ -88,6 +91,12 @@ export async function discoverWithRss(options = {}) {
     rss_items_skipped_coverage_caps: 0,
     rss_feeds_skipped_backoff: 0,
     rss_share_after_merge: 0,
+    rss_max_share_base: DEFAULT_MAX_SHARE,
+    rss_max_share_effective: DEFAULT_MAX_SHARE,
+    rss_share_adaptive_applied: false,
+    rss_share_adaptive_reason: 'none',
+    rss_undercoverage_ratio: 0,
+    rss_target_cap: 0,
     accepted_by_section: {},
     accepted_by_topic: {},
     skipped_feeds: [],
@@ -181,13 +190,27 @@ export async function discoverWithRss(options = {}) {
     }
   }
 
+  const rssAdaptiveShareEnabled = parseBooleanLike(
+    options.rssAdaptiveShare ?? process.env.QWEN_RSS_ADAPTIVE_SHARE ?? true,
+    true,
+  );
+  const shareConfig = resolveAdaptiveRssShareConfig({
+    coverage,
+    existingCount: existingCandidates.length,
+    baseShare: Number(options.rssMaxShare ?? process.env.QWEN_RSS_MAX_SHARE ?? DEFAULT_MAX_SHARE),
+    maxShareUpperBound: Number(options.rssAdaptiveMaxShare ?? process.env.QWEN_RSS_ADAPTIVE_MAX_SHARE ?? DEFAULT_ADAPTIVE_MAX_SHARE),
+    undercoverageRatioThreshold: Number(options.rssAdaptiveUndercoverageRatio ?? process.env.QWEN_RSS_ADAPTIVE_UNDERCOVERAGE_RATIO ?? DEFAULT_ADAPTIVE_UNDERCOVERAGE_RATIO),
+    lowSupplyThreshold: Number(options.rssAdaptiveLowSupplyThreshold ?? process.env.QWEN_RSS_ADAPTIVE_LOW_SUPPLY_THRESHOLD ?? DEFAULT_ADAPTIVE_LOW_SUPPLY_THRESHOLD),
+    adaptiveEnabled: rssAdaptiveShareEnabled,
+  });
+
   const coverageAwareAccepted = selectCoverageAwareRssEntries(viableEntries, {
     coverage,
     existingCount: existingCandidates.length,
-    maxAcceptedPerFeed: Number(options.rssMaxAcceptedPerFeed || DEFAULT_MAX_ACCEPTED_PER_FEED),
-    maxAcceptedPerPublisher: Number(options.rssMaxAcceptedPerPublisher || DEFAULT_MAX_ACCEPTED_PER_PUBLISHER),
-    maxAcceptedTotal: Number(options.rssMaxAcceptedTotal || DEFAULT_MAX_RSS_ACCEPTED),
-    maxShare: Number(options.rssMaxShare || DEFAULT_MAX_SHARE),
+    maxAcceptedPerFeed: Number(options.rssMaxAcceptedPerFeed ?? process.env.QWEN_RSS_MAX_ACCEPTED_PER_FEED ?? DEFAULT_MAX_ACCEPTED_PER_FEED),
+    maxAcceptedPerPublisher: Number(options.rssMaxAcceptedPerPublisher ?? process.env.QWEN_RSS_MAX_ACCEPTED_PER_PUBLISHER ?? DEFAULT_MAX_ACCEPTED_PER_PUBLISHER),
+    maxAcceptedTotal: Number(options.rssMaxAcceptedTotal ?? process.env.QWEN_RSS_MAX_ACCEPTED_TOTAL ?? DEFAULT_MAX_RSS_ACCEPTED),
+    maxShare: shareConfig.effectiveShare,
   });
 
   for (const entry of coverageAwareAccepted.accepted) {
@@ -215,6 +238,12 @@ export async function discoverWithRss(options = {}) {
   stats.rss_items_accepted = coverageAwareAccepted.accepted.length;
   stats.rss_items_skipped_coverage_caps = coverageAwareAccepted.rejectedByCaps;
   stats.rss_share_after_merge = computeRssShare(stats.rss_items_accepted, existingCandidates.length);
+  stats.rss_max_share_base = shareConfig.baseShare;
+  stats.rss_max_share_effective = shareConfig.effectiveShare;
+  stats.rss_share_adaptive_applied = shareConfig.adaptiveApplied;
+  stats.rss_share_adaptive_reason = shareConfig.reason;
+  stats.rss_undercoverage_ratio = shareConfig.undercoverageRatio;
+  stats.rss_target_cap = Number(coverageAwareAccepted.targetCap || 0);
 
   persistSeenEntries(state, seenToPersistByFeed);
   state.updatedAt = new Date().toISOString();
@@ -338,6 +367,101 @@ function computeMaxAcceptedFromShare(existingCount, maxShare, absoluteCap) {
 
   const shareCap = Math.floor((normalizedShare * existingCount) / Math.max(0.0001, 1 - normalizedShare));
   return Math.max(1, Math.min(cap, shareCap));
+}
+
+function resolveAdaptiveRssShareConfig({
+  coverage = {},
+  existingCount = 0,
+  baseShare = DEFAULT_MAX_SHARE,
+  maxShareUpperBound = DEFAULT_ADAPTIVE_MAX_SHARE,
+  undercoverageRatioThreshold = DEFAULT_ADAPTIVE_UNDERCOVERAGE_RATIO,
+  lowSupplyThreshold = DEFAULT_ADAPTIVE_LOW_SUPPLY_THRESHOLD,
+  adaptiveEnabled = true,
+} = {}) {
+  const normalizedBaseShare = clampNumber(baseShare, 0.1, 0.5, DEFAULT_MAX_SHARE);
+  const normalizedAdaptiveMax = clampNumber(
+    maxShareUpperBound,
+    normalizedBaseShare,
+    0.5,
+    Math.max(DEFAULT_ADAPTIVE_MAX_SHARE, normalizedBaseShare),
+  );
+  const normalizedUndercoverageThreshold = clampNumber(
+    undercoverageRatioThreshold,
+    0.05,
+    1,
+    DEFAULT_ADAPTIVE_UNDERCOVERAGE_RATIO,
+  );
+  const normalizedLowSupplyThreshold = Math.max(
+    1,
+    Math.floor(clampNumber(lowSupplyThreshold, 1, 1000, DEFAULT_ADAPTIVE_LOW_SUPPLY_THRESHOLD)),
+  );
+
+  const sectionCounts = coverage?.sectionCounts && typeof coverage.sectionCounts === 'object'
+    ? coverage.sectionCounts
+    : {};
+  const totalSections = Object.keys(sectionCounts).length;
+  const undercoveredCount = Array.isArray(coverage?.undercoveredSections) ? coverage.undercoveredSections.length : 0;
+  const undercoverageRatio = totalSections > 0 ? undercoveredCount / totalSections : 0;
+
+  if (!adaptiveEnabled) {
+    return {
+      baseShare: normalizedBaseShare,
+      effectiveShare: normalizedBaseShare,
+      adaptiveApplied: false,
+      reason: 'disabled',
+      undercoverageRatio: Math.round(undercoverageRatio * 1000) / 1000,
+    };
+  }
+
+  const reasons = [];
+  let boost = 0;
+
+  if (undercoverageRatio >= normalizedUndercoverageThreshold) {
+    boost += 0.05;
+    reasons.push('undercoverage');
+    if (undercoverageRatio >= Math.min(1, normalizedUndercoverageThreshold + 0.2)) {
+      boost += 0.03;
+      reasons.push('severe_undercoverage');
+    }
+  }
+
+  if (Number(existingCount || 0) < normalizedLowSupplyThreshold) {
+    boost += 0.05;
+    reasons.push('low_non_rss_supply');
+  }
+
+  const effectiveShare = clampNumber(
+    normalizedBaseShare + boost,
+    normalizedBaseShare,
+    normalizedAdaptiveMax,
+    normalizedBaseShare,
+  );
+
+  return {
+    baseShare: normalizedBaseShare,
+    effectiveShare,
+    adaptiveApplied: effectiveShare > normalizedBaseShare + 1e-6,
+    reason: reasons.length ? reasons.join('+') : 'none',
+    undercoverageRatio: Math.round(undercoverageRatio * 1000) / 1000,
+  };
+}
+
+function clampNumber(value, min, max, fallback) {
+  const numeric = Number(value);
+  if (!Number.isFinite(numeric)) return fallback;
+  if (numeric < min) return min;
+  if (numeric > max) return max;
+  return numeric;
+}
+
+function parseBooleanLike(value, fallback = false) {
+  if (value === null || value === undefined) return fallback;
+  if (typeof value === 'boolean') return value;
+  const normalized = String(value).trim().toLowerCase();
+  if (!normalized) return fallback;
+  if (['1', 'true', 'yes', 'on'].includes(normalized)) return true;
+  if (['0', 'false', 'no', 'off'].includes(normalized)) return false;
+  return fallback;
 }
 
 function computeRssShare(rssCount = 0, existingCount = 0) {

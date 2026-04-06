@@ -1059,6 +1059,35 @@ function selectGreedyCandidates(rankedEntries, limit, constraints, seed = null) 
   return selected;
 }
 
+function getCandidateSectionId(candidate = {}) {
+  return candidate?.sourcePack?.section_id || candidate?.brief?.section_id || 'unassigned';
+}
+
+function selectCoverageFloorEntries(rankedEntries = [], {
+  enabled = true,
+  limit = 1,
+  strictConstraints = { maxPerSection: 2, maxPerTopic: 2 },
+} = {}) {
+  if (!enabled) return [];
+  if (!Array.isArray(rankedEntries) || rankedEntries.length === 0) return [];
+  if (limit < 2) return [];
+
+  const coverageContext = buildCoverageContext(loadNewsPool().items || []);
+  const undercoveredSections = Array.isArray(coverageContext?.undercoveredSections)
+    ? coverageContext.undercoveredSections.filter(Boolean)
+    : [];
+  const sectionUniverseSize = Object.keys(coverageContext?.sectionCounts || {}).length;
+  if (undercoveredSections.length === 0) return [];
+  if (sectionUniverseSize > 0 && undercoveredSections.length >= sectionUniverseSize) return [];
+
+  const undercoveredSet = new Set(undercoveredSections);
+  const floorEntry = rankedEntries.find((entry) => undercoveredSet.has(getCandidateSectionId(entry?.candidate)));
+  if (!floorEntry) return [];
+
+  const seeded = selectGreedyCandidates([floorEntry], 1, strictConstraints);
+  return seeded.length > 0 ? seeded : [];
+}
+
 export function selectPublishableCandidates(candidates, options = {}) {
   const rankedEntries = rankPublishableCandidates(candidates);
   if (rankedEntries.length === 0) return [];
@@ -1067,23 +1096,47 @@ export function selectPublishableCandidates(candidates, options = {}) {
   const limit = Math.max(1, Math.min(5, Number.isFinite(requestedLimit) ? requestedLimit : 1));
   if (limit === 1) return [rankedEntries[0].candidate];
 
-  const strict = selectGreedyCandidates(rankedEntries, limit, {
+  const strictConstraints = {
     maxPerSection: Number(options.maxPerSection || 2),
     maxPerTopic: Number(options.maxPerTopic || 2),
-  });
-
-  if (strict.length >= limit) {
-    return strict.map((entry) => entry.candidate);
-  }
-
-  const alreadySelected = new Set(strict.map((entry) => entry.candidate));
-  const remaining = rankedEntries.filter((entry) => !alreadySelected.has(entry.candidate));
-  const relaxed = selectGreedyCandidates(remaining, limit - strict.length, {
+  };
+  const relaxedConstraints = {
     maxPerSection: Number(options.relaxedMaxPerSection || 3),
     maxPerTopic: Number(options.relaxedMaxPerTopic || 3),
-  }, buildSelectionSeed(strict));
+  };
+  const coverageFloorEnabled = parseBooleanFlag(
+    options.coverageFloorEnabled
+    ?? options.enableCoverageFloor
+    ?? process.env.QWEN_SELECTION_COVERAGE_FLOOR_ENABLED
+  ) !== false;
+  const coverageFloorMinArticlesRaw = Number(
+    options.coverageFloorMinArticles
+    ?? process.env.QWEN_SELECTION_COVERAGE_FLOOR_MIN_ARTICLES
+    ?? 3
+  );
+  const coverageFloorMinArticles = Number.isFinite(coverageFloorMinArticlesRaw)
+    ? Math.max(2, Math.min(5, Math.round(coverageFloorMinArticlesRaw)))
+    : 3;
+  const coverageFloorEntries = selectCoverageFloorEntries(rankedEntries, {
+    enabled: coverageFloorEnabled && limit >= coverageFloorMinArticles,
+    limit,
+    strictConstraints,
+  });
 
-  return [...strict, ...relaxed].map((entry) => entry.candidate).slice(0, limit);
+  const floorSeed = buildSelectionSeed(coverageFloorEntries);
+  const floorSelectedSet = new Set(coverageFloorEntries.map((entry) => entry?.candidate));
+  const strictRankedEntries = rankedEntries.filter((entry) => !floorSelectedSet.has(entry?.candidate));
+  const strict = selectGreedyCandidates(strictRankedEntries, Math.max(0, limit - coverageFloorEntries.length), strictConstraints, floorSeed);
+
+  if ((coverageFloorEntries.length + strict.length) >= limit) {
+    return [...coverageFloorEntries, ...strict].map((entry) => entry.candidate).slice(0, limit);
+  }
+
+  const alreadySelected = new Set([...coverageFloorEntries, ...strict].map((entry) => entry.candidate));
+  const remaining = rankedEntries.filter((entry) => !alreadySelected.has(entry.candidate));
+  const relaxed = selectGreedyCandidates(remaining, limit - coverageFloorEntries.length - strict.length, relaxedConstraints, buildSelectionSeed([...coverageFloorEntries, ...strict]));
+
+  return [...coverageFloorEntries, ...strict, ...relaxed].map((entry) => entry.candidate).slice(0, limit);
 }
 
 export function selectPublishableCandidate(candidates) {

@@ -22,7 +22,10 @@ import {
 } from './config/trusted-publishers.js';
 
 const ARTICLE_INVENTORY_PATH = path.resolve(process.cwd(), 'qwen-project-governance', 'article_inventory.md');
-const RECENT_DUPLICATE_WINDOW_MS = 4 * 24 * 60 * 60 * 1000;
+const RECENT_DUPLICATE_WINDOW_DAYS = Math.max(1, Number(process.env.QWEN_RECENT_DUPLICATE_WINDOW_DAYS || 3));
+const RECENT_DUPLICATE_WINDOW_MS = RECENT_DUPLICATE_WINDOW_DAYS * 24 * 60 * 60 * 1000;
+const DUPLICATE_SCORE_THRESHOLD = Math.max(70, Math.min(95, Number(process.env.QWEN_DUPLICATE_SCORE_THRESHOLD || 85)));
+const DUPLICATE_UNDERREP_TOPIC_BONUS = Math.max(0, Math.min(10, Number(process.env.QWEN_DUPLICATE_UNDERREP_TOPIC_BONUS || 4)));
 const RESCUE_QUERY_DEDUPE_TTL_MS = Math.max(60_000, Number(process.env.QWEN_RESCUE_QUERY_DEDUPE_TTL_MS || 20 * 60 * 1000));
 const RECENT_RESCUE_QUERY_USAGE = new Map();
 
@@ -1993,6 +1996,25 @@ function getCandidateSelectionTopicId(candidate) {
   return String(candidate?.sourcePack?.topic_id || candidate?.brief?.topic_id || '').trim().toLowerCase();
 }
 
+function getRecentTopicHits(topicId, inventoryEntries) {
+  if (!topicId) return 0;
+  let hits = 0;
+  for (const entry of (Array.isArray(inventoryEntries) ? inventoryEntries : [])) {
+    const entryTopicId = String(entry?.topic_id || '').trim().toLowerCase();
+    if (entryTopicId && entryTopicId === topicId) hits += 1;
+  }
+  return hits;
+}
+
+function resolveCandidateDuplicateThreshold(candidate, inventoryEntries) {
+  const topicId = getCandidateSelectionTopicId(candidate);
+  const topicHits = getRecentTopicHits(topicId, inventoryEntries);
+  const adjustedThreshold = topicHits <= 1
+    ? (DUPLICATE_SCORE_THRESHOLD + DUPLICATE_UNDERREP_TOPIC_BONUS)
+    : DUPLICATE_SCORE_THRESHOLD;
+  return Math.max(70, Math.min(98, adjustedThreshold));
+}
+
 function loadRecentPublishedInventory() {
   try {
     if (!fs.existsSync(ARTICLE_INVENTORY_PATH)) return [];
@@ -2019,6 +2041,7 @@ function isRecentDuplicateCandidate(candidate, inventoryEntries) {
     ...selectionTokens((brief.entities || brief.involvedParties || []).join(' ')),
   ]));
   const topicId = getCandidateSelectionTopicId(candidate);
+  const duplicateThreshold = resolveCandidateDuplicateThreshold(candidate, inventoryEntries);
 
   let bestMatch = null;
   let bestScore = -Infinity;
@@ -2051,11 +2074,12 @@ function isRecentDuplicateCandidate(candidate, inventoryEntries) {
           entityOverlap,
           sameTopic,
         },
+        threshold: duplicateThreshold,
       };
     }
   }
 
-  return bestScore >= 80 ? bestMatch : null;
+  return bestScore >= duplicateThreshold ? bestMatch : null;
 }
 
 function filterRecentDuplicateCandidates(candidates) {
@@ -2087,6 +2111,7 @@ function filterRecentDuplicateCandidates(candidates) {
         canonical_url: match.entry?.canonical_url || null,
       },
       score: match.score,
+      threshold: match.threshold,
       details: match.details,
     });
   }
@@ -2095,6 +2120,7 @@ function filterRecentDuplicateCandidates(candidates) {
     candidates: kept,
     rejected,
     inventorySize: recentInventory.length,
+    duplicateWindowDays: RECENT_DUPLICATE_WINDOW_DAYS,
   };
 }
 

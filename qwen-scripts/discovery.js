@@ -183,6 +183,12 @@ export async function runDiscovery(options = {}) {
     rss_items_seen: 0,
     rss_items_accepted: 0,
     rss_feed_failures: 0,
+    rss_max_share_base: 0,
+    rss_max_share_effective: 0,
+    rss_share_adaptive_applied: false,
+    rss_share_adaptive_reason: 'none',
+    rss_undercoverage_ratio: 0,
+    rss_target_cap: 0,
     total_candidates: 0,
     viable_candidates: 0,
     rejected_noise: 0,
@@ -273,6 +279,12 @@ export async function runDiscovery(options = {}) {
       stats.rss_items_seen = Number(rssResult?.stats?.rss_items_seen || 0);
       stats.rss_items_accepted = Number(rssResult?.stats?.rss_items_accepted || 0);
       stats.rss_feed_failures = Number(rssResult?.stats?.rss_feed_failures || 0);
+      stats.rss_max_share_base = Number(rssResult?.stats?.rss_max_share_base || 0);
+      stats.rss_max_share_effective = Number(rssResult?.stats?.rss_max_share_effective || 0);
+      stats.rss_share_adaptive_applied = Boolean(rssResult?.stats?.rss_share_adaptive_applied);
+      stats.rss_share_adaptive_reason = String(rssResult?.stats?.rss_share_adaptive_reason || 'none');
+      stats.rss_undercoverage_ratio = Number(rssResult?.stats?.rss_undercoverage_ratio || 0);
+      stats.rss_target_cap = Number(rssResult?.stats?.rss_target_cap || 0);
       stats.channels.rss = Array.isArray(rssResult?.briefs) ? rssResult.briefs.length : 0;
       allCandidates.push(...(rssResult?.briefs || []));
       console.log(`[discovery] RSS discovery accepted ${stats.channels.rss} candidates from ${stats.rss_feeds_polled} feeds`);

@@ -68,10 +68,16 @@ export async function runEditorialPipeline(options = {}) {
 
   const stats = {
     discovery_candidates: 0,
+    discovery_channels: null,
+    discovery_rss_feeds_polled: 0,
+    discovery_rss_items_seen: 0,
+    discovery_rss_items_accepted: 0,
+    discovery_rss_feed_failures: 0,
     event_clusters: 0,
     briefs_normalized: 0,
     source_packs_assembled: 0,
     publishable_candidates: 0,
+    min_articles_target: 1,
     selected_topic: null,
     selected_topics: [],
     articles_attempted: 0,
@@ -146,7 +152,10 @@ export async function runEditorialPipeline(options = {}) {
   });
 
   const maxArticlesPerRun = resolveMaxArticlesPerRun(options);
+  const minArticlesTarget = resolveMinArticlesTarget(options, maxArticlesPerRun);
+  stats.min_articles_target = minArticlesTarget;
   console.log(`[pipeline] Max articles per run: ${maxArticlesPerRun}`);
+  console.log(`[pipeline] Min articles target: ${minArticlesTarget}`);
   const localVerificationEnabled = resolveLocalVerificationEnabled(options);
   console.log(`[pipeline] Local verification enabled: ${localVerificationEnabled}`);
 
@@ -171,6 +180,13 @@ export async function runEditorialPipeline(options = {}) {
   try {
     discoveryResult = await runDiscovery({ ...options, braveApiKey, googleApiKey, googleCx });
     stats.discovery_candidates = discoveryResult.candidates.length;
+    const discoveryChannelStats = extractDiscoveryChannelStats(discoveryResult.stats);
+    const discoveryRssStats = extractDiscoveryRssStats(discoveryResult.stats);
+    stats.discovery_channels = discoveryChannelStats;
+    stats.discovery_rss_feeds_polled = discoveryRssStats.feeds_polled;
+    stats.discovery_rss_items_seen = discoveryRssStats.items_seen;
+    stats.discovery_rss_items_accepted = discoveryRssStats.items_accepted;
+    stats.discovery_rss_feed_failures = discoveryRssStats.feed_failures;
     console.log(`[pipeline] Discovery found ${stats.discovery_candidates} candidates`);
 
     const discoveredPoolStats = mergeDiscoveredNews(discoveryResult.candidates);
@@ -182,6 +198,8 @@ export async function runEditorialPipeline(options = {}) {
         candidatesCount: discoveryResult.candidates.length,
         discoveredPoolTotal: discoveredPoolStats.total,
         queryUsage: extractDiscoveryQueryUsage(discoveryResult.stats),
+        channelStats: discoveryChannelStats,
+        rssStats: discoveryRssStats,
         targetedCoverage: discoveryResult.stats?.targeted_coverage || null,
       },
     };
@@ -335,7 +353,7 @@ export async function runEditorialPipeline(options = {}) {
 
     await runStage3Attempt('initial');
 
-    for (let retryAttempt = 1; selectedCandidates.length === 0 && retryAttempt <= retryPolicy.maxAdditionalAttempts; retryAttempt++) {
+    for (let retryAttempt = 1; selectedCandidates.length < minArticlesTarget && retryAttempt <= retryPolicy.maxAdditionalAttempts; retryAttempt++) {
       const phase = resolveSourcePackRetryPhase(retryAttempt);
       const remainingExternal = retryPolicy.maxExternalQueries > 0
         ? Math.max(0, retryPolicy.maxExternalQueries - retryUsage.external_queries)
@@ -444,6 +462,10 @@ export async function runEditorialPipeline(options = {}) {
       });
     }
 
+    if (selectedCandidates.length > 0 && selectedCandidates.length < minArticlesTarget) {
+      console.log(`[pipeline] Stage 3 partial target: selected ${selectedCandidates.length}/${minArticlesTarget} candidate(s); proceeding with available publishable set`);
+    }
+
     const selectedIdentityKeys = selectedCandidates
       .map((candidate) => candidate?.brief?.poolIdentityKey)
       .filter(Boolean);
@@ -472,10 +494,12 @@ export async function runEditorialPipeline(options = {}) {
       data: {
         attempts: stage3AttemptSummaries,
         retryPolicy,
+        minArticlesTarget,
         sourcePackSelectionCandidateLimit,
         retryDiagnostics,
         retryUsage,
         selectedCount: selectedCandidates.length,
+        selectedMeetsMinTarget: selectedCandidates.length >= minArticlesTarget,
         selectedTopics: selectedCandidates.map((candidate) => ({
           title: candidate?.brief?.title || null,
           eventId: candidate?.sourcePack?.eventId || null,
@@ -1155,6 +1179,16 @@ function resolveMaxArticlesPerRun(options = {}) {
   return Math.max(1, Math.min(5, parsed));
 }
 
+function resolveMinArticlesTarget(options = {}, maxArticlesPerRun = 1) {
+  const raw = options.minArticlesTarget
+    ?? options.min_articles_target
+    ?? process.env.QWEN_MIN_ARTICLES_TARGET
+    ?? '1';
+  const parsed = Number.parseInt(String(raw), 10);
+  if (!Number.isFinite(parsed)) return 1;
+  return Math.max(1, Math.min(maxArticlesPerRun, parsed));
+}
+
 function resolveLocalVerificationEnabled(options = {}) {
   const explicit = parseBooleanFlag(
     options.localVerificationEnabled
@@ -1333,11 +1367,48 @@ function extractDiscoveryQueryUsage(discoveryStats = {}) {
   const brave = Number(discoveryStats?.brave_queries || 0);
   const google = Number(discoveryStats?.google_trusted_queries || 0);
   const gdelt = Number(discoveryStats?.gdelt_queries || 0);
+  const rssFeedsPolled = Number(discoveryStats?.rss_feeds_polled || 0);
+  const rssItemsSeen = Number(discoveryStats?.rss_items_seen || 0);
+  const rssItemsAccepted = Number(discoveryStats?.rss_items_accepted || 0);
+  const rssFeedFailures = Number(discoveryStats?.rss_feed_failures || 0);
   return {
     brave,
     google,
     gdelt,
+    rss_feeds_polled: rssFeedsPolled,
+    rss_items_seen: rssItemsSeen,
+    rss_items_accepted: rssItemsAccepted,
+    rss_feed_failures: rssFeedFailures,
     total: Math.max(0, brave) + Math.max(0, google) + Math.max(0, gdelt),
+  };
+}
+
+function extractDiscoveryRssStats(discoveryStats = {}) {
+  return {
+    feeds_polled: Number(discoveryStats?.rss_feeds_polled || 0),
+    items_seen: Number(discoveryStats?.rss_items_seen || 0),
+    items_accepted: Number(discoveryStats?.rss_items_accepted || 0),
+    feed_failures: Number(discoveryStats?.rss_feed_failures || 0),
+    max_share_base: Number(discoveryStats?.rss_max_share_base || 0),
+    max_share_effective: Number(discoveryStats?.rss_max_share_effective || 0),
+    adaptive_applied: Boolean(discoveryStats?.rss_share_adaptive_applied),
+    adaptive_reason: String(discoveryStats?.rss_share_adaptive_reason || 'none'),
+    undercoverage_ratio: Number(discoveryStats?.rss_undercoverage_ratio || 0),
+    target_cap: Number(discoveryStats?.rss_target_cap || 0),
+  };
+}
+
+function extractDiscoveryChannelStats(discoveryStats = {}) {
+  const channels = discoveryStats?.channels && typeof discoveryStats.channels === 'object'
+    ? discoveryStats.channels
+    : {};
+  return {
+    brave_core: Number(channels?.brave_core || 0),
+    brave_targeted: Number(channels?.brave_targeted || 0),
+    brave_expansion: Number(channels?.brave_expansion || 0),
+    google_trusted: Number(channels?.google_trusted || 0),
+    gdelt: Number(channels?.gdelt || 0),
+    rss: Number(channels?.rss || 0),
   };
 }
 
@@ -1446,10 +1517,10 @@ async function runSourcePackAssemblyAttempt({
         identityKey: null,
         title: rejected.candidateTitle || null,
         origin: 'recent_inventory_guard',
-        reason: `recent_inventory_duplicate(score=${rejected.score}, topic=${rejected.candidateTopicId || 'na'}, title_overlap=${details.titleOverlap || 0}, keyword_overlap=${details.keywordOverlap || 0}, entity_overlap=${details.entityOverlap || 0})`,
+        reason: `recent_inventory_duplicate(score=${rejected.score}, threshold=${rejected.threshold ?? 'na'}, topic=${rejected.candidateTopicId || 'na'}, title_overlap=${details.titleOverlap || 0}, keyword_overlap=${details.keywordOverlap || 0}, entity_overlap=${details.entityOverlap || 0})`,
         matched: rejected.matchedEntry || null,
       });
-      console.log(`[pipeline] Duplicate guard: drop recent-inventory candidate "${rejected.candidateTitle || 'Untitled'}" matched with "${rejected?.matchedEntry?.title || 'unknown'}" (score=${rejected.score})`);
+      console.log(`[pipeline] Duplicate guard: drop recent-inventory candidate "${rejected.candidateTitle || 'Untitled'}" matched with "${rejected?.matchedEntry?.title || 'unknown'}" (score=${rejected.score}, threshold=${rejected.threshold ?? 'na'})`);
     }
     console.log(`[pipeline] Recent inventory duplicate guard removed ${recentDuplicateRejected.length} candidate(s)`);
   }
