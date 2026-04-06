@@ -9,10 +9,17 @@ const EVIDENCE_STRENGTH = { STRONG: 'strong', MODERATE: 'moderate', WEAK: 'weak'
 const CLAIM_MAP_QUALITY = { STRONG: 'strong', DEGRADED: 'degraded', FAILED: 'failed' };
 
 export async function createClaimMap(sourcePack, _openAiApiKey) {
-  const sources = getPublishReadySources(sourcePack, { minCount: 2 });
+  const sources = getPublishReadySources(sourcePack, { minCount: 1 });
   console.log(`[claim-map] topic=${sourcePack.topic} sources=${sources.length}`);
 
+  if (sources.length < 1) {
+    return createFailedClaimMap(sourcePack, 'Need at least 1 source for claim map');
+  }
+
   if (sources.length < 2) {
+    if (isSingleSourceWhitelistApproved(sourcePack)) {
+      return createSingleSourceClaimMap(sourcePack, sources[0], 'Single-source claim map mode enabled by source-pack whitelist');
+    }
     return createFailedClaimMap(sourcePack, 'Need at least 2 sources for claim map');
   }
 
@@ -214,8 +221,47 @@ function createFallbackClaimMap(sourcePack, reason) {
     confidenceScore: 6,
     status: CLAIM_STATUS.SUPPORTED,
   }));
-  if (claims.length < 2) return createFailedClaimMap(sourcePack, reason);
+  if (claims.length < 2) {
+    if (claims.length === 1 && isSingleSourceWhitelistApproved(sourcePack)) {
+      return createSingleSourceClaimMap(sourcePack, draftReadySources[0], reason);
+    }
+    return createFailedClaimMap(sourcePack, reason);
+  }
   return finalizeClaimMap(sourcePack, claims, true, reason);
+}
+
+function isSingleSourceWhitelistApproved(sourcePack) {
+  return Array.isArray(sourcePack?.gateNotes)
+    && sourcePack.gateNotes.some((note) => String(note || '').toLowerCase().includes('single-source whitelist exception passed'));
+}
+
+function createSingleSourceClaimMap(sourcePack, source, reason = 'single_source_whitelist') {
+  const url = String(source?.url || '').trim();
+  const claimMain = {
+    id: `claim-single-${Date.now()}-0`,
+    claimText: ensureSentence(cleanClaimText(sourcePack?.topic || source?.title || 'A single-source development is being reported.')),
+    claimType: CLAIM_TYPE.FACTUAL,
+    supportingSources: url ? [url] : [],
+    supportingSourceIndices: [1],
+    evidenceExcerpt: source?.snippet || '',
+    evidenceStartOffset: null,
+    evidenceStrength: EVIDENCE_STRENGTH.MODERATE,
+    confidenceScore: 5,
+    status: CLAIM_STATUS.SUPPORTED,
+  };
+  const claimCaution = {
+    id: `claim-single-${Date.now()}-1`,
+    claimText: 'Independent corroboration is limited in this cycle and should be monitored as additional reporting arrives.',
+    claimType: CLAIM_TYPE.CONTEXTUAL,
+    supportingSources: url ? [url] : [],
+    supportingSourceIndices: [1],
+    evidenceExcerpt: source?.snippet || source?.title || '',
+    evidenceStartOffset: null,
+    evidenceStrength: EVIDENCE_STRENGTH.WEAK,
+    confidenceScore: 3,
+    status: CLAIM_STATUS.NEEDS_VERIFICATION,
+  };
+  return finalizeClaimMap(sourcePack, [claimMain, claimCaution], true, reason);
 }
 
 function createFailedClaimMap(sourcePack, reason) {
