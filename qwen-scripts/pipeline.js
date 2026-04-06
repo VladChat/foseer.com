@@ -316,6 +316,66 @@ export async function runEditorialPipeline(options = {}) {
       filePath: null,
     };
     let seedBriefs = Array.isArray(normalizedBriefs) ? normalizedBriefs.slice() : [];
+    const selectionLimits = {
+      maxPerSection: Number(options.maxPerSection || 2),
+      maxPerTopic: Number(options.maxPerTopic || 2),
+      relaxedMaxPerSection: Number(options.relaxedMaxPerSection || 3),
+      relaxedMaxPerTopic: Number(options.relaxedMaxPerTopic || 3),
+    };
+
+    const getStage3CandidateKey = (candidate = {}) => {
+      const identity = candidate?.brief?.poolIdentityKey
+        || candidate?.brief?.id
+        || candidate?.sourcePack?.eventId
+        || candidate?.brief?.cluster_id
+        || candidate?.brief?.clusterId;
+      if (identity) return String(identity);
+      return normalizeTitle(candidate?.brief?.title || candidate?.sourcePack?.topic || '');
+    };
+
+    const scoreStage3Candidate = (candidate = {}) => {
+      const metrics = candidate?.sourcePack?.metrics || {};
+      const baseScore = Number(candidate?.brief?.selectionScore || 0);
+      const core = Number(metrics.coreSourceCount || 0);
+      const supporting = Number(metrics.supportingSourceCount || 0);
+      const uniqueDomains = Number(candidate?.sourcePack?.uniqueDomains || metrics.uniqueDomains || 0);
+      const directEvent = Number(metrics.directEventSourceCount || 0);
+      const independentDomains = Number(metrics.independentEventDomains || 0);
+      const consistency = Number(metrics.sourceConsistencyScore || 0);
+      return baseScore
+        + (core * 20)
+        + (supporting * 12)
+        + (uniqueDomains * 8)
+        + (directEvent * 10)
+        + (independentDomains * 8)
+        + consistency;
+    };
+
+    const mergeSelectedCandidatesAcrossAttempts = (current = [], incoming = []) => {
+      const byKey = new Map();
+      const ingest = (candidate) => {
+        if (!candidate) return;
+        const key = getStage3CandidateKey(candidate);
+        if (!key) return;
+        const score = scoreStage3Candidate(candidate);
+        const existing = byKey.get(key);
+        if (!existing || score > existing.score) {
+          byKey.set(key, { candidate, score });
+        }
+      };
+
+      for (const candidate of (Array.isArray(current) ? current : [])) ingest(candidate);
+      for (const candidate of (Array.isArray(incoming) ? incoming : [])) ingest(candidate);
+
+      const mergedPool = Array.from(byKey.values())
+        .sort((left, right) => right.score - left.score)
+        .map((entry) => entry.candidate);
+
+      return selectSharedPreWriterCandidates(mergedPool, {
+        maxSelectionCount: maxArticlesPerRun,
+        selectionLimits,
+      });
+    };
 
     const runStage3Attempt = async (attemptLabel) => {
       const attemptResult = await runSourcePackAssemblyAttempt({
@@ -328,12 +388,16 @@ export async function runEditorialPipeline(options = {}) {
         leaseOwner: workflowLeaseOwner,
       });
       stats.source_packs_assembled += Number(attemptResult.sourcePacksAssembled || 0);
-      stats.publishable_candidates += Number(attemptResult.publishableCandidates || 0);
+      stats.publishable_candidates = Math.max(
+        Number(stats.publishable_candidates || 0),
+        Number(attemptResult.publishableCandidates || 0),
+      );
       stats.source_pack_attempts += 1;
 
       candidateSetForSelection = Array.isArray(attemptResult.candidatesWithSources) ? attemptResult.candidatesWithSources : [];
       readyBacklog = attemptResult.readyBacklog || readyBacklog;
-      selectedCandidates = Array.isArray(attemptResult.selectedCandidates) ? attemptResult.selectedCandidates : [];
+      const attemptSelectedCandidates = Array.isArray(attemptResult.selectedCandidates) ? attemptResult.selectedCandidates : [];
+      selectedCandidates = mergeSelectedCandidatesAcrossAttempts(selectedCandidates, attemptSelectedCandidates);
       selected = selectedCandidates[0] || null;
 
       for (const entry of attemptResult.duplicateRejectedAtSelection || []) {
@@ -348,6 +412,7 @@ export async function runEditorialPipeline(options = {}) {
         source_packs_assembled: Number(attemptResult.sourcePacksAssembled || 0),
         publishable_candidates: Number(attemptResult.publishableCandidates || 0),
         selected_candidates: selectedCandidates.length,
+        selected_candidates_attempt: attemptSelectedCandidates.length,
       });
     };
 
