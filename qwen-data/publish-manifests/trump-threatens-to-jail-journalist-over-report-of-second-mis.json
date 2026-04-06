@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T20:10:40.567Z",
+  "event_id": "evt-2026-04-06-world-geopolitics-general-global-iran",
+  "cluster_id": "evt-2026-04-06-world-geopolitics-general-global-iran",
+  "article_type": "report",
+  "title": "Trump threatens to jail journalist over report of second missing US airman",
+  "slug": "trump-threatens-to-jail-journalist-over-report-of-second-mis",
+  "canonical_slug": "2026-04-06-trump-threatens-to-jail-journalist-over-report-of-second-mis",
+  "expected_url": "/article/2026-04-06-trump-threatens-to-jail-journalist-over-report-of-second-mis",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-trump-threatens-to-jail-journalist-over-report-of-second-mis.mdx",
+  "published_at": "2026-04-06T20:10:40.565Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "World & Geopolitics",
+  "topics": [
+    "Trump threatens to jail journalist to find source of second missing airman report",
+    "World & Geopolitics"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/2533919/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/2533919/cover.jpg",
+    "source_url": "https://pixabay.com/photos/white-house-usa-staff-lack-of-staff-2533919/",
+    "asset_key": "pixabay:2533919",
+    "alt_text": "white house, usa, staff, lack of staff, termination, trump, government, president, america, united states, washington, choice, politics, sightseeing, head of state, staff, staff, staff, staff, staff, trump, government, president, politics",
+    "selection_mode": "provider_download_new:pixabay:strong:strict",
+    "query_used": "Trump government photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "Diplomacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Trump threatens to jail journalist to find source of second missing airman report",
+        "url": "https://www.theguardian.com/us-news/2026/apr/06/trump-threats-journalist-missing-airman-iran",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Trump warns Iran to reopen strait of Hormuz by Tuesday or face 'hell'",
+        "url": "https://www.theguardian.com/world/2026/apr/05/trump-warns-iran-to-reopen-strait-of-hormuz-by-tuesday-or-face-hell",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Trump warns Iran to reopen strait of Hormuz by Tuesday or face 'hell'",
+          "url": "https://www.theguardian.com/world/2026/apr/05/trump-warns-iran-to-reopen-strait-of-hormuz-by-tuesday-or-face-hell",
+          "overlap_ratio": 0.11,
+          "shared_tokens": [
+            "trump"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "iran",
+          "hormuz",
+          "strait"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Trump government photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "trump"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

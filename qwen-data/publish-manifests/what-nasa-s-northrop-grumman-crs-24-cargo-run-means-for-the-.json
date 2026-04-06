@@ -1,0 +1,112 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T20:09:07.251Z",
+  "event_id": "evt-2026-04-06-space-astronomy-general-global",
+  "cluster_id": "evt-2026-04-06-space-astronomy-general-global",
+  "article_type": "analysis",
+  "title": "What NASA’s Northrop Grumman CRS-24 Cargo Run Means for the ISS",
+  "slug": "what-nasa-s-northrop-grumman-crs-24-cargo-run-means-for-the-",
+  "canonical_slug": "2026-04-06-what-nasa-s-northrop-grumman-crs-24-cargo-run-means-for-the",
+  "expected_url": "/article/2026-04-06-what-nasa-s-northrop-grumman-crs-24-cargo-run-means-for-the",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-what-nasa-s-northrop-grumman-crs-24-cargo-run-means-for-the.mdx",
+  "published_at": "2026-04-06T20:09:07.248Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "Space & Astronomy",
+  "topics": [
+    "NASA’s Northrop Grumman CRS",
+    "Space & Astronomy"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/5_z3yvosrcw/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/5_z3yvosrcw/cover.jpg",
+    "source_url": "https://unsplash.com/photos/white-and-yellow-metal-machine-5_Z3YVosrCw",
+    "asset_key": "unsplash:5_Z3YVosrCw",
+    "alt_text": "Illustration for What NASA’s Northrop Grumman CRS-24 Cargo Run Means for the ISS",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "nasa photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "NASA",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "NASA’s Northrop Grumman CRS",
+        "url": "https://www.nasa.gov/missions/station/nasas-northrop-grumman-crs-24-mission-overview/",
+        "domain": "nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "nasa",
+          "label": "NASA",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "nasa photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "nasa"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
