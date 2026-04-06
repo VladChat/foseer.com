@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T13:44:13.958Z",
+  "event_id": "evt-2026-04-05-space-astronomy-general-global",
+  "cluster_id": "evt-2026-04-05-space-astronomy-general-global",
+  "article_type": "analysis",
+  "title": "What Artemis II’s new far-side Moon photo signals about NASA’s next move",
+  "slug": "what-artemis-ii-s-new-far-side-moon-photo-signals-about-nasa",
+  "canonical_slug": "2026-04-06-what-artemis-ii-s-new-far-side-moon-photo-signals-about-nasa",
+  "expected_url": "/article/2026-04-06-what-artemis-ii-s-new-far-side-moon-photo-signals-about-nasa",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-what-artemis-ii-s-new-far-side-moon-photo-signals-about-nasa.mdx",
+  "published_at": "2026-04-06T13:44:13.955Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "Space & Astronomy",
+  "topics": [
+    "Space & Astronomy"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/ogjqu-abp9k/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/ogjqu-abp9k/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-close-up-of-the-side-of-an-airplane-ogjqu-aBP9k",
+    "asset_key": "unsplash:ogjqu-aBP9k",
+    "alt_text": "Illustration for What Artemis II’s new far-side Moon photo signals about NASA’s next move",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "global Artemis photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "NASA",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Artemis II crew take new photo of far side of the moon",
+        "url": "https://www.cbsnews.com/news/artemis-ii-crew-new-photo-far-side-moon/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "Artemis crew races to set distance record from earth",
+        "url": "https://www.maitlandmercury.com.au/story/9216056/artemis-crew-races-to-set-distance-record-from-earth/",
+        "domain": "maitlandmercury.com.au"
+      },
+      {
+        "title": "Artemis II astronauts find hidden Easter eggs as they close in on the moon",
+        "url": "https://www.cbsnews.com/news/artemis-ii-astronauts-easter-eggs-sunday-near-moon/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Artemis crew races to set distance record from earth",
+          "url": "https://www.maitlandmercury.com.au/story/9216056/artemis-crew-races-to-set-distance-record-from-earth/",
+          "overlap_ratio": 0.11,
+          "shared_tokens": [
+            "artemis"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "nasa",
+          "label": "NASA",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "global Artemis photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "artemis"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
