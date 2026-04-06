@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T12:28:00.045Z",
+  "event_id": "evt-2026-04-06-world-geopolitics-general-iran-iran",
+  "cluster_id": "evt-2026-04-06-world-geopolitics-general-iran-iran",
+  "article_type": "report",
+  "title": "Trump warns Iran to reopen Strait of Hormuz by Tuesday or face 'hell'",
+  "slug": "trump-warns-iran-to-reopen-strait-of-hormuz-by-tuesday-or-fa",
+  "canonical_slug": "2026-04-06-trump-warns-iran-to-reopen-strait-of-hormuz-by-tuesday-or-fa",
+  "expected_url": "/article/2026-04-06-trump-warns-iran-to-reopen-strait-of-hormuz-by-tuesday-or-fa",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-trump-warns-iran-to-reopen-strait-of-hormuz-by-tuesday-or-fa.mdx",
+  "published_at": "2026-04-06T12:28:00.043Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "World & Geopolitics",
+  "topics": [
+    "Trump warns Iran to reopen strait of Hormuz by Tuesday or face 'hell'",
+    "World & Geopolitics"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/pitehwugor4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/pitehwugor4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-in-black-jacket-walking-on-hallway-pITeHwugOr4",
+    "asset_key": "unsplash:pITeHwugOr4",
+    "alt_text": "Illustration for Trump warns Iran to reopen Strait of Hormuz by Tuesday or face hell",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "warns iran reopen photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "Diplomacy",
+    "Iran",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Trump warns Iran to reopen strait of Hormuz by Tuesday or face 'hell'",
+        "url": "https://www.theguardian.com/world/2026/apr/05/trump-warns-iran-to-reopen-strait-of-hormuz-by-tuesday-or-face-hell",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Exclusive: US intelligence warns Iran unlikely to ease Hormuz Strait ...",
+        "url": "https://uk.mobile.reuters.com/world/middle-east/us-intelligence-warns-iran-unlikely-ease-hormuz-strait-chokehold-soon-sources-2026-04-03/",
+        "domain": "uk.mobile.reuters.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "iran",
+          "label": "Iran",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "diplomatic",
+          "iran",
+          "hormuz",
+          "strait"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "warns iran reopen photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "warns",
+        "iran",
+        "reopen"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
