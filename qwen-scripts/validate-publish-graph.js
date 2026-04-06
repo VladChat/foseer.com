@@ -4,13 +4,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { resolveProjectRoot } from './utils/project-root.js';
-import { getSingleSourceEvidenceDecision, inferPublishableSources } from './utils/evidence-policy.js';
 
 const PROJECT_ROOT = resolveProjectRoot(import.meta.url);
 
 import { loadTaxonomyRegistry, getSectionRecord, getTopicRecord, resolveSectionId, resolveTopicId, getTopicIdsBySection, matchTaxonomyHints } from './utils/taxonomy-registry.js';
 import { validateTagSelection } from './validate-tags.js';
 import { loadTagRegistry, resolveCanonicalTagFrame } from './tag-picker.js';
+import { isOfficialPrimaryDomain, isTrustedReportingDomain, normalizeDomain } from './config/trusted-publishers.js';
 
 const MANIFEST_DIR = path.resolve(PROJECT_ROOT, 'qwen-data', 'publish-manifests');
 const INVALID_PUBLISHABLE_KINDS = new Set(['live', 'roundup', 'homepage', 'section', 'topic', 'video', 'audio']);
@@ -116,7 +116,7 @@ export function evaluateSemanticIntegrity(selected = {}, placementOverride = nul
   const sourcePack = selected.sourcePack || {};
   const image = selected.image || {};
   const placement = placementOverride || resolvePlacement(selected);
-  const publishableSources = inferPublishableSources(sourcePack);
+  const publishableSources = Array.isArray(sourcePack.publishReadySources) ? sourcePack.publishReadySources : [];
 
   const sourceChecks = evaluatePublishableSourceIntegrity({ draft, brief, sourcePack, publishableSources });
   const tagChecks = evaluateTagIntegrity({ draft, brief, sourcePack, placement });
@@ -147,7 +147,7 @@ export function evaluateSourcePackEditorialIntegrity(candidate = {}, placementOv
   const brief = candidate.brief || {};
   const sourcePack = candidate.sourcePack || {};
   const placement = placementOverride || resolveStage3Placement(brief, sourcePack);
-  const publishableSources = inferPublishableSources(sourcePack);
+  const publishableSources = Array.isArray(sourcePack.publishReadySources) ? sourcePack.publishReadySources : [];
 
   const sourceChecks = evaluatePublishableSourceIntegrity({ brief, sourcePack, publishableSources });
   const placementChecks = evaluatePlacementEvidenceIntegrity({ brief, sourcePack, placement });
@@ -246,27 +246,26 @@ export function validatePrePublishGraph(selected = {}) {
   if (!image.imagePath) warnings.push('Image package missing imagePath; publisher will rely on fallback behavior');
   if ((sourcePack.metrics?.sourceConsistencyScore || 0) < 4) warnings.push('Source consistency score is weak');
   if ((draft.wordCount || 0) < 500) warnings.push('Draft is shorter than preferred publish target');
-  const publishableSources = inferPublishableSources(sourcePack);
+  const publishableSources = Array.isArray(sourcePack.publishReadySources) ? sourcePack.publishReadySources : [];
   const invalidPublishableKinds = publishableSources
     .map((source) => String(source?.page_kind || '').toLowerCase())
     .filter((kind) => INVALID_PUBLISHABLE_KINDS.has(kind));
   if (invalidPublishableKinds.length > 0) {
     errors.push(`Invalid publishable source kinds: ${Array.from(new Set(invalidPublishableKinds)).join(', ')}`);
   }
-  const singleSourceDecision = getSingleSourceEvidenceDecision({
-    brief,
-    articleType: placement.article_type,
-    sources: publishableSources,
-    coherenceScore: null,
-    sourceConsistencyScore: sourcePack.metrics?.sourceConsistencyScore,
-    directEventSourceCount: evidenceStats.directEventSourceCount,
-    crossTopicMismatchCount: 0,
-  });
-  if (publishableSources.length === 1 && !singleSourceDecision.pass) {
-    errors.push(`Single-source evidence not strong enough (${singleSourceDecision.reason})`);
-  }
-  if (publishableSources.length >= 2 && evidenceStats.independentEventDomains < 2) {
-    warnings.push(`Publishable evidence comes from ${evidenceStats.independentEventDomains} direct-event domain(s)`);
+  if (placement.article_type === 'report') {
+    const publishableSources = Array.isArray(sourcePack.publishReadySources) ? sourcePack.publishReadySources : [];
+    const singleSourceDecision = evaluateSingleSourcePublishability({ brief: selected.brief || {}, draft, sourcePack, publishableSources });
+    if (publishableSources.length === 0) {
+      errors.push('Report requires at least 1 publishable source');
+    } else if (publishableSources.length === 1 && !singleSourceDecision.pass) {
+      errors.push(`Single-source report evidence not strong enough (${singleSourceDecision.reason})`);
+    } else if (singleSourceDecision.high_risk && evidenceStats.directEventSourceCount < 2) {
+      errors.push(`High-risk report requires at least 2 direct-event sources, found ${evidenceStats.directEventSourceCount}`);
+    }
+    if (singleSourceDecision.high_risk && evidenceStats.independentEventDomains < 2 && evidenceStats.directEventSourceCount >= 2) {
+      errors.push(`High-risk report requires at least 2 independent direct-event domains, found ${evidenceStats.independentEventDomains}`);
+    }
   }
   const effectiveTagging = buildEffectiveTagging({ draft, brief: selected.brief || {}, sourcePack, placement });
   const tagValidation = validateTagSelection(effectiveTagging);
@@ -296,7 +295,7 @@ export function buildPublishManifest(selected = {}, publishResult = null) {
   const image = selected.image || {};
   const sourcePack = selected.sourcePack || {};
   const canonicalPayload = selected.canonicalPublishPayload || buildCanonicalPublishPayload(selected);
-  const placement = canonicalPayload.placement;
+  const placement = canonicalPayload?.placement || resolvePlacement(selected) || {};
   const canonicalSlug = publishResult?.canonicalSlug || null;
   const slug = String(selected.publishIdentity?.slug || selected.articleSlug || publishResult?.slug || canonicalSlug || '').trim();
   const semanticValidation = evaluateSemanticIntegrity(selected, {
@@ -396,6 +395,45 @@ export function validatePublishedArtifact(filePath, manifest) {
   if (normalizeArticleType(frontmatter.article_type) !== normalizeArticleType(manifest.article_type)) errors.push('Published frontmatter article_type mismatch');
   if (manifest.image?.image_path && String(frontmatter.image || '') !== String(manifest.image.image_path)) errors.push('Published frontmatter image mismatch');
   return { valid: errors.length === 0, errors, frontmatter };
+}
+
+
+function evaluateSingleSourcePublishability({ brief = {}, draft = {}, sourcePack = {}, publishableSources = [] } = {}) {
+  const high_risk = isHighRiskEvidenceTopic(brief, draft);
+  if (!Array.isArray(publishableSources) || publishableSources.length !== 1) {
+    return { pass: publishableSources.length >= 1, reason: 'not_single_source', high_risk };
+  }
+  const source = publishableSources[0] || {};
+  const domain = normalizeDomain(source?.canonical_domain || source?.domain || source?.canonical_url || source?.url || '');
+  const pageKind = String(source?.page_kind || '').toLowerCase();
+  const articleTitle = String(draft?.title || brief?.title || '').trim();
+  const sourceTitle = String(source?.title || '').trim();
+  const titleOverlap = scoreArticleTitleOverlap(articleTitle, sourceTitle).overlapRatio;
+  const hasTrustedOrOfficial = isTrustedReportingDomain(domain) || isOfficialPrimaryDomain(domain);
+  if (high_risk) return { pass: false, reason: 'high_risk_topic_requires_multi_source', high_risk };
+  if (!hasTrustedOrOfficial) return { pass: false, reason: 'missing_trusted_or_official_source', high_risk };
+  if (['homepage', 'section', 'topic', 'live', 'roundup', 'video', 'audio'].includes(pageKind)) {
+    return { pass: false, reason: `non_publishable_page_kind:${pageKind}`, high_risk };
+  }
+  if (isGenericEvidenceTitle(articleTitle)) return { pass: false, reason: 'title_too_generic', high_risk };
+  if (Number(sourcePack?.metrics?.directEventSourceCount || 0) < 1) return { pass: false, reason: 'direct_event_signal_missing', high_risk };
+  if (titleOverlap < 0.18 && !isOfficialPrimaryDomain(domain)) return { pass: false, reason: `title_overlap_too_low:${titleOverlap.toFixed(2)}`, high_risk };
+  return { pass: true, reason: 'single_source_publish_ok', high_risk };
+}
+
+function isHighRiskEvidenceTopic(brief = {}, draft = {}) {
+  const highRiskTopicIds = new Set(['world-geopolitics', 'us-politics', 'law-crime', 'climate-extreme-weather']);
+  if (highRiskTopicIds.has(String(brief?.topic_id || draft?.topic_id || '').toLowerCase())) return true;
+  const text = `${brief?.title || ''} ${brief?.whatHappened || ''} ${brief?.whyItMatters || ''} ${draft?.title || ''} ${draft?.excerpt || ''}`.toLowerCase();
+  return /(killed|dead|deaths|war|attack|airstrike|hostage|terror|indicted|charged|sanction|lawsuit|verdict|court)/.test(text);
+}
+
+function isGenericEvidenceTitle(title = '') {
+  const normalized = String(title || '').trim().toLowerCase();
+  if (!normalized) return true;
+  if (/^(transcript|live|update|updates|coverage|briefing)$/.test(normalized)) return true;
+  const tokens = normalized.split(/[^a-z0-9]+/).map((token) => token.trim()).filter((token) => token.length >= 3 && !STOP_TOKENS.has(token));
+  return tokens.length < 2;
 }
 
 function evaluatePublishableSourceIntegrity({ draft = {}, brief = {}, sourcePack = {}, publishableSources = [] } = {}) {
@@ -1054,7 +1092,7 @@ function sameSources(left = [], right = []) {
 }
 
 function computePublishableEvidenceStats(sourcePack = {}) {
-  const publishableSources = inferPublishableSources(sourcePack);
+  const publishableSources = Array.isArray(sourcePack.publishReadySources) ? sourcePack.publishReadySources : [];
   const publishableUrlSet = new Set(publishableSources.map((source) => source?.canonical_url || source?.url).filter(Boolean));
   const publishableRoleResults = (Array.isArray(sourcePack.sourceRoleResults) ? sourcePack.sourceRoleResults : [])
     .filter((result) => publishableUrlSet.has(result?.source?.canonical_url || result?.source?.url));

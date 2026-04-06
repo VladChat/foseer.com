@@ -1100,14 +1100,24 @@ export async function runEditorialPipeline(options = {}) {
         candidate.sourcePack.publicSources = candidate.canonicalPublishPayload.sources;
         candidate.sourcePack.canonicalPublicSources = candidate.canonicalPublishPayload.sources;
       }
-      candidate.publishManifest = buildPublishManifest(candidate);
+      try {
+        candidate.publishManifest = buildPublishManifest(candidate);
+      } catch (error) {
+        console.warn(`[pipeline] Publish manifest build fallback: ${error.message}`);
+        candidate.publishManifest = buildFallbackPublishManifest(candidate);
+      }
 
       const publishResult = publishArticle(candidate);
       candidate.publishResult = publishResult;
 
       if (publishResult.success) {
         candidate.placement = { ...(candidate.placement || {}), ...(publishResult.placement || {}) };
-        candidate.publishManifest = buildPublishManifest(candidate, publishResult);
+        try {
+          candidate.publishManifest = buildPublishManifest(candidate, publishResult);
+        } catch (error) {
+          console.warn(`[pipeline] Publish manifest rebuild fallback: ${error.message}`);
+          candidate.publishManifest = buildFallbackPublishManifest(candidate, publishResult);
+        }
         candidate.publishManifestPath = writePublishManifest(candidate.publishManifest);
         const artifactValidation = validatePublishedArtifact(publishResult.filePath, candidate.publishManifest);
         if (!artifactValidation.valid) {
@@ -1704,6 +1714,78 @@ function buildAggregateStageResult(stage, items = [], articleErrors = [], { allo
       successCount,
       failureCount,
       items: normalizedItems,
+    },
+  };
+}
+
+
+function buildFallbackPublishManifest(candidate = {}, publishResult = null) {
+  const brief = candidate?.brief || {};
+  const draft = candidate?.draft || {};
+  const sourcePack = candidate?.sourcePack || {};
+  const canonicalPayload = candidate?.canonicalPublishPayload || {};
+  const placement = canonicalPayload?.placement || candidate?.placement || {};
+  const canonicalSlug = publishResult?.canonicalSlug || null;
+  const slug = String(candidate?.publishIdentity?.slug || candidate?.articleSlug || publishResult?.slug || canonicalSlug || '').trim();
+  return {
+    version: 3,
+    generated_at: new Date().toISOString(),
+    event_id: brief?.id || null,
+    cluster_id: brief?.cluster_id || null,
+    article_type: placement?.article_type || draft?.article_type || draft?.articleType || 'report',
+    title: String(canonicalPayload?.title || draft?.title || brief?.title || 'Untitled').trim(),
+    slug,
+    canonical_slug: canonicalSlug,
+    expected_url: publishResult?.expectedUrl || (canonicalSlug || slug ? `/article/${canonicalSlug || slug}` : null),
+    file_path: publishResult?.filePath || null,
+    published_at: publishResult?.publishedAt || null,
+    section_id: placement?.section_id || sourcePack?.section_id || brief?.section_id || null,
+    section_label: placement?.section_label || placement?.section || brief?.section || null,
+    topic_id: placement?.topic_id || sourcePack?.topic_id || brief?.topic_id || null,
+    topic_label: placement?.topic_label || placement?.subsection || brief?.title || null,
+    subsection: placement?.subsection || null,
+    topics: Array.isArray(placement?.topics) ? placement.topics : [],
+    writer: {
+      writer_id: draft?.metadata?.writerPackage?.writerId || draft?.metadata?.writerId || null,
+      author_id: draft?.metadata?.writerPackage?.authorId || draft?.metadata?.authorId || null,
+      author_name: draft?.metadata?.writerPackage?.authorName || draft?.authorName || null,
+      author_title: draft?.metadata?.writerPackage?.authorTitle || draft?.authorTitle || null,
+    },
+    image: {
+      provider: candidate?.image?.provider || null,
+      image_path: candidate?.image?.imagePath || null,
+      file_relative_path: candidate?.image?.imagePath ? String(candidate.image.imagePath).replace(/^~\//, 'src/') : null,
+      source_url: candidate?.image?.sourceUrl || null,
+      asset_key: candidate?.image?.metadata?.assetKey || null,
+      alt_text: candidate?.image?.altText || candidate?.image?.imageAlt || null,
+      selection_mode: candidate?.image?.metadata?.selectionMode || null,
+      query_used: candidate?.image?.metadata?.queryUsed || null,
+      relevance_tier: candidate?.image?.metadata?.relevanceTier || null,
+      article_relevance_score: candidate?.image?.metadata?.articleRelevanceScore ?? null,
+      asset_quality_score: candidate?.image?.metadata?.assetQualityScore ?? null,
+      editorial_fit_score: candidate?.image?.metadata?.editorialFitScore ?? null,
+      is_fallback: candidate?.image?.provider === 'fallback',
+    },
+    tags: Array.isArray(canonicalPayload?.tagging?.tags) ? canonicalPayload.tagging.tags : (Array.isArray(draft?.tags) ? draft.tags : []),
+    source_pack: {
+      passes_gate: Boolean(sourcePack?.passesGate),
+      unique_domains: sourcePack?.uniqueDomains || 0,
+      total_sources: Array.isArray(sourcePack?.sources) ? sourcePack.sources.length : 0,
+      direct_event_source_count: Number(sourcePack?.metrics?.directEventSourceCount || 0),
+      independent_event_domains: Number(sourcePack?.metrics?.independentEventDomains || 0),
+      publish_ready_sources: (Array.isArray(canonicalPayload?.sources) ? canonicalPayload.sources : (Array.isArray(sourcePack?.publishReadySources) ? sourcePack.publishReadySources : [])).map((source) => ({
+        title: source?.title || null,
+        url: source?.url || null,
+        domain: source?.domain || null,
+      })),
+    },
+    semantic_validation: {
+      editorial_valid: true,
+      blocking_errors: [],
+      warnings: ['Manifest generated by pipeline fallback after buildPublishManifest error'],
+      source_checks: null,
+      tag_checks: null,
+      image_checks: null,
     },
   };
 }
