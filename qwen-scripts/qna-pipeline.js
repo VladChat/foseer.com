@@ -1272,7 +1272,7 @@ if (isMainModule) {
       console.error('[qna-pipeline] Exit reason(s):', exitEvaluation.reasons.join(' | '));
       if (exitEvaluation.controlled_no_article_failure) {
         console.error('[qna-pipeline] EXIT CLASS: controlled_no_article_failure');
-        process.exit(1);
+        process.exit(0);
       }
       console.error('[qna-pipeline] EXIT CLASS: unexpected_failure');
       process.exit(2);
@@ -1329,6 +1329,9 @@ function evaluateQnaRunForExit(result) {
     || normalized.includes('no question candidate passed source-pack assembly')
     || normalized.includes('pre-write quality gate failed')
     || normalized.includes('source-pack gate failed')
+    || normalized.includes('duplicate guard')
+    || normalized.includes('direct-event sources')
+    || normalized.includes('source_overlap>=2')
   );
 
   return {
