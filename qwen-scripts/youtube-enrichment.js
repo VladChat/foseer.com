@@ -69,10 +69,10 @@ async function enrichArticleWithVideo(article, options = {}) {
   console.log(`[youtube-enrichment] ${filtered.length} candidates after hard filters`);
 
   // Phase 5: Score and rank
-  const scored = filtered.map((candidate) => ({
-    ...candidate,
-    score: computeRelevanceScore(candidate, config, articleProfile),
-  }));
+  const scored = filtered.map((candidate) => {
+    const scoreResult = computeRelevanceScore(candidate, config, articleProfile);
+    return { ...candidate, score: scoreResult.score, matchReason: scoreResult.matchReason, scoreReasons: scoreResult.reasons };
+  });
 
   scored.sort((a, b) => b.score - a.score);
 
