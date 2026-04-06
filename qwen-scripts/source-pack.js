@@ -8,10 +8,10 @@ import { classifySourceRole } from './nodes/source-role-node.js';
 import { loadTaxonomyRegistry, matchTaxonomyHints } from './utils/taxonomy-registry.js';
 import {
   isOfficialPrimaryDomain,
-  isStrictSingleSourceWhitelistDomain,
   isTrustedReportingDomain,
   normalizeDomain,
 } from './config/trusted-publishers.js';
+import { getSingleSourceEvidenceDecision } from './utils/evidence-policy.js';
 
 const GENERIC_TOPIC_TOKENS = new Set([
   'the', 'a', 'an', 'and', 'or', 'for', 'from', 'with', 'amid', 'over', 'under', 'after', 'before', 'into', 'onto', 'across', 'about',
@@ -210,15 +210,14 @@ function applySourcePackGate({ eventBrief, sources, coreSources, supportingSourc
   const crossTopicMismatchCount = publishableRoleResults.filter((result) => isHardCrossTopicMismatch(result, eventBrief)).length;
   const storyCoherenceScore = computePublishableStoryCoherence(eventBrief, publishableRoleResults);
   const publishableCount = coreSources.length + supportingSources.length;
-  const singleSourceDecision = evaluateSingleSourceWhitelistEligibility({
-    eventBrief,
-    publishableSources: [...coreSources, ...supportingSources],
+  const singleSourceDecision = getSingleSourceEvidenceDecision({
+    brief: eventBrief,
     articleType,
-    storyCoherenceScore,
-    crossTopicMismatchCount,
+    sources: [...coreSources, ...supportingSources],
+    coherenceScore: storyCoherenceScore,
     sourceConsistencyScore,
     directEventSourceCount: directEventRoleResults.length,
-    options,
+    crossTopicMismatchCount,
   });
 
   if (coreSources.length < 1) {
@@ -237,8 +236,7 @@ function applySourcePackGate({ eventBrief, sources, coreSources, supportingSourc
     }
   }
   if (uniqueDomains < 2 && publishableCount >= 2) {
-    passes = false;
-    notes.push(`Need at least 2 different domains among publishable sources, found ${uniqueDomains}`);
+    notes.push(`Single-domain publishable pack accepted (${uniqueDomains} domain)`);
   }
   const moderateMatchCount = publishableRoleResults.filter((result) => Number(result.same_event_score || 0) >= 3).length;
   const hasStrongEventPack = strongMatchCount >= 2 || (strongMatchCount >= 1 && moderateMatchCount >= 2);
@@ -258,12 +256,14 @@ function applySourcePackGate({ eventBrief, sources, coreSources, supportingSourc
   const independentEventDomains = countUniqueDomains(directEventRoleResults.map((result) => result.source));
   if (articleType === 'report') {
     if (directEventSourceCount < 2) {
-      passes = false;
-      notes.push(`Need at least 2 direct-event sources for report, found ${directEventSourceCount}`);
+      if (singleSourceDecision.pass) {
+        notes.push(`Single-source report evidence accepted (${singleSourceDecision.reason})`);
+      } else {
+        notes.push(`Report proceeds with limited direct-event evidence (${directEventSourceCount})`);
+      }
     }
     if (independentEventDomains < 2 && directEventSourceCount >= 2) {
-      passes = false;
-      notes.push(`Need at least 2 independent direct-event domains for report, found ${independentEventDomains}`);
+      notes.push(`Report proceeds with ${independentEventDomains} independent direct-event domain(s)`);
     }
   }
   if (sourceConsistencyScore < 3.5) {
@@ -318,84 +318,6 @@ function getRoleResultsForSources(roleResults = [], sources = []) {
 function isDirectEventRoleResult(result) {
   if (!result || !['core', 'supporting'].includes(result.role)) return false;
   return Number(result.same_event_score || 0) >= 3;
-}
-
-function evaluateSingleSourceWhitelistEligibility({
-  eventBrief = {},
-  publishableSources = [],
-  articleType = 'analysis',
-  storyCoherenceScore = 0,
-  crossTopicMismatchCount = 0,
-  sourceConsistencyScore = 0,
-  directEventSourceCount = 0,
-  options = {},
-} = {}) {
-  const enabled = parseBooleanFlag(
-    options.enableSingleSourceWhitelist
-    ?? options.singleSourceWhitelist
-    ?? process.env.QWEN_ENABLE_SINGLE_SOURCE_WHITELIST
-  ) === true;
-
-  if (!enabled) return { enabled: false, pass: false, reason: 'disabled' };
-  if (!Array.isArray(publishableSources) || publishableSources.length !== 1) {
-    return { enabled: true, pass: false, reason: 'publishable_count_not_one' };
-  }
-  if (String(articleType || '').toLowerCase() === 'report') {
-    return { enabled: true, pass: false, reason: 'report_requires_multi_source' };
-  }
-  if (isHighRiskBrief(eventBrief)) {
-    return { enabled: true, pass: false, reason: 'high_risk_topic_requires_multi_source' };
-  }
-
-  const source = publishableSources[0] || {};
-  const sourceDomain = source?.canonical_domain || source?.domain || source?.canonical_url || source?.url || '';
-  if (!isStrictSingleSourceWhitelistDomain(sourceDomain)) {
-    return { enabled: true, pass: false, reason: 'domain_not_in_strict_single_source_whitelist' };
-  }
-  if (!isTrustedReportingDomain(sourceDomain) && !isOfficialPrimaryDomain(sourceDomain)) {
-    return { enabled: true, pass: false, reason: 'domain_not_trusted_or_official' };
-  }
-  if (getPublishableIntegrityIssues(source).length > 0) {
-    return { enabled: true, pass: false, reason: 'source_integrity_not_publishable' };
-  }
-  if (crossTopicMismatchCount > 0) {
-    return { enabled: true, pass: false, reason: 'cross_topic_mismatch_detected' };
-  }
-  if (directEventSourceCount < 1) {
-    return { enabled: true, pass: false, reason: 'direct_event_signal_missing' };
-  }
-
-  const minSingleSourceCoherence = Number(
-    options.singleSourceWhitelistMinCoherence
-    ?? process.env.QWEN_SINGLE_SOURCE_WHITELIST_MIN_COHERENCE
-    ?? 0.72
-  );
-  const minSingleSourceConsistency = Number(
-    options.singleSourceWhitelistMinConsistency
-    ?? process.env.QWEN_SINGLE_SOURCE_WHITELIST_MIN_CONSISTENCY
-    ?? 6.0
-  );
-
-  if (Number.isFinite(minSingleSourceCoherence) && Number(storyCoherenceScore || 0) < minSingleSourceCoherence) {
-    return { enabled: true, pass: false, reason: `coherence_below_threshold:${Number(storyCoherenceScore || 0).toFixed(2)}<${minSingleSourceCoherence}` };
-  }
-  if (Number.isFinite(minSingleSourceConsistency) && Number(sourceConsistencyScore || 0) < minSingleSourceConsistency) {
-    return { enabled: true, pass: false, reason: `consistency_below_threshold:${Number(sourceConsistencyScore || 0).toFixed(2)}<${minSingleSourceConsistency}` };
-  }
-
-  return { enabled: true, pass: true, reason: 'strict_whitelist_single_source_ok' };
-}
-
-function isHighRiskBrief(brief = {}) {
-  const highRiskTopicIds = new Set([
-    'world-geopolitics',
-    'us-politics',
-    'law-crime',
-    'climate-extreme-weather',
-  ]);
-  if (highRiskTopicIds.has(String(brief?.topic_id || '').toLowerCase())) return true;
-  const text = `${brief?.title || ''} ${brief?.whatHappened || ''} ${brief?.whyItMatters || ''}`.toLowerCase();
-  return /(killed|dead|deaths|war|attack|airstrike|hostage|terror|indicted|charged|sanction|lawsuit|verdict|court)/.test(text);
 }
 
 function parseBooleanFlag(value) {

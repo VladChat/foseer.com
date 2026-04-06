@@ -4,6 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { resolveProjectRoot } from './utils/project-root.js';
+import { getSingleSourceEvidenceDecision, inferPublishableSources } from './utils/evidence-policy.js';
 
 const PROJECT_ROOT = resolveProjectRoot(import.meta.url);
 
@@ -115,7 +116,7 @@ export function evaluateSemanticIntegrity(selected = {}, placementOverride = nul
   const sourcePack = selected.sourcePack || {};
   const image = selected.image || {};
   const placement = placementOverride || resolvePlacement(selected);
-  const publishableSources = Array.isArray(sourcePack.publishReadySources) ? sourcePack.publishReadySources : [];
+  const publishableSources = inferPublishableSources(sourcePack);
 
   const sourceChecks = evaluatePublishableSourceIntegrity({ draft, brief, sourcePack, publishableSources });
   const tagChecks = evaluateTagIntegrity({ draft, brief, sourcePack, placement });
@@ -146,7 +147,7 @@ export function evaluateSourcePackEditorialIntegrity(candidate = {}, placementOv
   const brief = candidate.brief || {};
   const sourcePack = candidate.sourcePack || {};
   const placement = placementOverride || resolveStage3Placement(brief, sourcePack);
-  const publishableSources = Array.isArray(sourcePack.publishReadySources) ? sourcePack.publishReadySources : [];
+  const publishableSources = inferPublishableSources(sourcePack);
 
   const sourceChecks = evaluatePublishableSourceIntegrity({ brief, sourcePack, publishableSources });
   const placementChecks = evaluatePlacementEvidenceIntegrity({ brief, sourcePack, placement });
@@ -245,20 +246,27 @@ export function validatePrePublishGraph(selected = {}) {
   if (!image.imagePath) warnings.push('Image package missing imagePath; publisher will rely on fallback behavior');
   if ((sourcePack.metrics?.sourceConsistencyScore || 0) < 4) warnings.push('Source consistency score is weak');
   if ((draft.wordCount || 0) < 500) warnings.push('Draft is shorter than preferred publish target');
-  const publishableSources = Array.isArray(sourcePack.publishReadySources) ? sourcePack.publishReadySources : [];
+  const publishableSources = inferPublishableSources(sourcePack);
   const invalidPublishableKinds = publishableSources
     .map((source) => String(source?.page_kind || '').toLowerCase())
     .filter((kind) => INVALID_PUBLISHABLE_KINDS.has(kind));
   if (invalidPublishableKinds.length > 0) {
     errors.push(`Invalid publishable source kinds: ${Array.from(new Set(invalidPublishableKinds)).join(', ')}`);
   }
-  if (placement.article_type === 'report') {
-    if (evidenceStats.directEventSourceCount < 2) {
-      errors.push(`Report requires at least 2 direct-event sources, found ${evidenceStats.directEventSourceCount}`);
-    }
-    if (evidenceStats.independentEventDomains < 2 && evidenceStats.directEventSourceCount >= 2) {
-      errors.push(`Report requires at least 2 independent direct-event domains, found ${evidenceStats.independentEventDomains}`);
-    }
+  const singleSourceDecision = getSingleSourceEvidenceDecision({
+    brief,
+    articleType: placement.article_type,
+    sources: publishableSources,
+    coherenceScore: null,
+    sourceConsistencyScore: sourcePack.metrics?.sourceConsistencyScore,
+    directEventSourceCount: evidenceStats.directEventSourceCount,
+    crossTopicMismatchCount: 0,
+  });
+  if (publishableSources.length === 1 && !singleSourceDecision.pass) {
+    errors.push(`Single-source evidence not strong enough (${singleSourceDecision.reason})`);
+  }
+  if (publishableSources.length >= 2 && evidenceStats.independentEventDomains < 2) {
+    warnings.push(`Publishable evidence comes from ${evidenceStats.independentEventDomains} direct-event domain(s)`);
   }
   const effectiveTagging = buildEffectiveTagging({ draft, brief: selected.brief || {}, sourcePack, placement });
   const tagValidation = validateTagSelection(effectiveTagging);
@@ -1046,7 +1054,7 @@ function sameSources(left = [], right = []) {
 }
 
 function computePublishableEvidenceStats(sourcePack = {}) {
-  const publishableSources = Array.isArray(sourcePack.publishReadySources) ? sourcePack.publishReadySources : [];
+  const publishableSources = inferPublishableSources(sourcePack);
   const publishableUrlSet = new Set(publishableSources.map((source) => source?.canonical_url || source?.url).filter(Boolean));
   const publishableRoleResults = (Array.isArray(sourcePack.sourceRoleResults) ? sourcePack.sourceRoleResults : [])
     .filter((result) => publishableUrlSet.has(result?.source?.canonical_url || result?.source?.url));

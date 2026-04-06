@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "mcp__github__get_file_contents",
-      "mcp__github__list_pull_requests"
+      "mcp__github__list_pull_requests",
+      "Bash(git stash)",
+      "Bash(git pull *)",
+      "Bash(git stash *)",
+      "Bash(git push)",
+      "mcp__git__git_status",
+      "mcp__git__git_diff_unstaged",
+      "mcp__git__git_diff_staged"
     ]
   },
   "$version": 3

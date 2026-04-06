@@ -1,8 +1,8 @@
 Patch purpose:
-- split cache into runtime cache (qwen-cache) and versioned seed cache (qwen-data/cache-seed)
-- add seed-cache fallback in cache readers
-- add seed-cache builder script
-- harden .gitignore for secrets/runtime artifacts while keeping package-lock.json versionable
+* split cache into runtime cache (qwen-cache) and versioned seed cache (qwen-data/cache-seed) [APPLIED]
+* add seed-cache fallback in cache readers [APPLIED]
+* add seed-cache builder script [APPLIED]
+* harden .gitignore for secrets/runtime artifacts while keeping package-lock.json versionable [APPLIED]
 
 Apply by extracting over repo root.
 After extract:

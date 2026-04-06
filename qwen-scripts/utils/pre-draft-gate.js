@@ -5,6 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { resolveProjectRoot } from './project-root.js';
+import { getSingleSourceEvidenceDecision, inferPublishableSources } from './evidence-policy.js';
 
 const PROJECT_ROOT = resolveProjectRoot(import.meta.url);
 const POSTS_DIR = path.resolve(PROJECT_ROOT, 'src/data/post');
@@ -102,17 +103,27 @@ export function checkPreDraftDuplicate(candidate, options = {}) {
 }
 
 /**
- * Check if a report-type candidate has enough direct-event sources.
- * Mirrors the validate-publish-graph.js rule: reports need >= 2 direct-event sources.
+ * Check if a candidate with only one publishable source still has strong enough evidence.
+ * Mirrors the relaxed single-source policy used by source-pack, pre-write, and publish validation.
  * @param {Object} candidate - Candidate with sourcePack and brief
  * @returns {Object} { isBlocked, reason } or { isBlocked: false }
  */
-export function checkPreDraftDirectEventSources(candidate) {
-  const directEventCount = candidate?.sourcePack?.metrics?.directEventSourceCount || 0;
-  const articleType = String(candidate?.brief?.articleType || candidate?.brief?.article_type || 'report').toLowerCase();
+export function checkPreDraftSingleSourceEvidence(candidate) {
+  const sources = inferPublishableSources(candidate?.sourcePack);
+  if (sources.length !== 1) return { isBlocked: false };
 
-  if (articleType === 'report' && directEventCount < 2) {
-    return { isBlocked: true, reason: `Report requires at least 2 direct-event sources, found ${directEventCount}` };
+  const decision = getSingleSourceEvidenceDecision({
+    brief: candidate?.brief || {},
+    articleType: candidate?.brief?.articleType || candidate?.brief?.article_type || candidate?.sourcePack?.articleType || 'report',
+    sources,
+    coherenceScore: null,
+    sourceConsistencyScore: candidate?.sourcePack?.metrics?.sourceConsistencyScore,
+    directEventSourceCount: candidate?.sourcePack?.metrics?.directEventSourceCount || 0,
+    crossTopicMismatchCount: 0,
+  });
+
+  if (!decision.pass) {
+    return { isBlocked: true, reason: `Single-source evidence not strong enough (${decision.reason})` };
   }
 
   return { isBlocked: false };
@@ -127,9 +138,9 @@ export function runPreDraftGates(candidate, options = {}) {
     return { blocked: true, reason: duplicate.reason, stage: 'pre_draft_duplicate' };
   }
 
-  const directEvent = checkPreDraftDirectEventSources(candidate);
-  if (directEvent.isBlocked) {
-    return { blocked: true, reason: directEvent.reason, stage: 'pre_draft_direct_event_source' };
+  const singleSource = checkPreDraftSingleSourceEvidence(candidate);
+  if (singleSource.isBlocked) {
+    return { blocked: true, reason: singleSource.reason, stage: 'pre_draft_single_source' };
   }
 
   return { blocked: false };
@@ -139,12 +150,5 @@ export function runPreDraftGates(candidate, options = {}) {
  * Extract publishable sources from a candidate.
  */
 function getPublishableSources(candidate) {
-  const sourcePack = candidate?.sourcePack;
-  if (Array.isArray(sourcePack?.publishReadySources) && sourcePack.publishReadySources.length > 0) {
-    return sourcePack.publishReadySources;
-  }
-  if (Array.isArray(sourcePack?.sources) && sourcePack.sources.length > 0) {
-    return sourcePack.sources;
-  }
-  return [];
+  return inferPublishableSources(candidate?.sourcePack);
 }
