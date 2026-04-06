@@ -458,7 +458,7 @@ export async function runQnaPipeline(options = {}) {
         articleType: selected.briefForDraft?.articleType || selected.brief?.articleType || 'analysis',
         article_type: selected.briefForDraft?.articleType || selected.brief?.articleType || 'analysis',
       },
-    });
+    }, options);
     const preWriteGraphErrorsRaw = Array.isArray(preWriteGraphValidation.errors) ? preWriteGraphValidation.errors : [];
     const preWriteGraphErrorSplit = splitPreWriteGraphErrors(preWriteGraphErrorsRaw);
     const preWriteGraphErrors = preWriteGraphErrorSplit.blocking.filter((message) => isPreWriteRelevantGraphError(message));
@@ -732,7 +732,7 @@ export async function runQnaPipeline(options = {}) {
     }
 
     try {
-      let prePublishValidation = validatePrePublishGraph(selected);
+      let prePublishValidation = validatePrePublishGraph(selected, options);
       let imageRescueDiagnostics = [];
       if (!prePublishValidation.valid && hasImageTopicMismatchError(prePublishValidation.errors || [])) {
         const rescue = await attemptImageRescuePass({

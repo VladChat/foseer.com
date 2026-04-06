@@ -9,6 +9,7 @@ const PROJECT_ROOT = resolveProjectRoot(import.meta.url);
 
 import { loadTaxonomyRegistry, getSectionRecord, getTopicRecord, resolveSectionId, resolveTopicId, getTopicIdsBySection, matchTaxonomyHints } from './utils/taxonomy-registry.js';
 import { validateTagSelection } from './validate-tags.js';
+import { isRelaxedPipelineMode } from './utils/pipeline-mode.js';
 import { loadTagRegistry, resolveCanonicalTagFrame } from './tag-picker.js';
 
 const MANIFEST_DIR = path.resolve(PROJECT_ROOT, 'qwen-data', 'publish-manifests');
@@ -213,7 +214,7 @@ export function buildCanonicalPublishPayload(selected = {}, validated = null) {
   };
 }
 
-export function validatePrePublishGraph(selected = {}) {
+export function validatePrePublishGraph(selected = {}, options = {}) {
   const errors = [];
   const warnings = [];
   const placement = resolvePlacement(selected);
@@ -252,12 +253,21 @@ export function validatePrePublishGraph(selected = {}) {
   if (invalidPublishableKinds.length > 0) {
     errors.push(`Invalid publishable source kinds: ${Array.from(new Set(invalidPublishableKinds)).join(', ')}`);
   }
+  const relaxedMode = isRelaxedPipelineMode(options);
   if (placement.article_type === 'report') {
     if (evidenceStats.directEventSourceCount < 2) {
-      errors.push(`Report requires at least 2 direct-event sources, found ${evidenceStats.directEventSourceCount}`);
+      if (relaxedMode) {
+        warnings.push(`Relaxed mode allows report with fewer direct-event sources (${evidenceStats.directEventSourceCount})`);
+      } else {
+        errors.push(`Report requires at least 2 direct-event sources, found ${evidenceStats.directEventSourceCount}`);
+      }
     }
     if (evidenceStats.independentEventDomains < 2 && evidenceStats.directEventSourceCount >= 2) {
-      errors.push(`Report requires at least 2 independent direct-event domains, found ${evidenceStats.independentEventDomains}`);
+      if (relaxedMode) {
+        warnings.push(`Relaxed mode allows report with single independent direct-event domain (${evidenceStats.independentEventDomains})`);
+      } else {
+        errors.push(`Report requires at least 2 independent direct-event domains, found ${evidenceStats.independentEventDomains}`);
+      }
     }
   }
   const effectiveTagging = buildEffectiveTagging({ draft, brief: selected.brief || {}, sourcePack, placement });

@@ -24,6 +24,7 @@ import { runSharedSourcePackEngine, selectSharedPreWriterCandidates, normalizeDi
 import { evaluatePreWriteQualityGate } from './pre-write-quality-gate.js';
 import { attemptImageRescuePass, hasImageTopicMismatchError } from './utils/publish-rescue.js';
 import { runPreDraftGates } from './utils/pre-draft-gate.js';
+import { resolvePipelineMode } from './utils/pipeline-mode.js';
 
 loadProjectEnv();
 
@@ -155,9 +156,15 @@ export async function runEditorialPipeline(options = {}) {
     google: !!googleApiKey && !!googleCx,
   });
 
+  options.pipelineMode = resolvePipelineMode(options);
+  options.preWriteGate = {
+    pipelineMode: options.pipelineMode,
+    ...(options.preWriteGate || {}),
+  };
   const maxArticlesPerRun = resolveMaxArticlesPerRun(options);
   const minArticlesTarget = resolveMinArticlesTarget(options, maxArticlesPerRun);
   stats.min_articles_target = minArticlesTarget;
+  console.log(`[pipeline] Run mode: ${options.pipelineMode}`);
   console.log(`[pipeline] Max articles per run: ${maxArticlesPerRun}`);
   console.log(`[pipeline] Min articles target: ${minArticlesTarget}`);
   const localVerificationEnabled = resolveLocalVerificationEnabled(options);
@@ -1043,7 +1050,7 @@ export async function runEditorialPipeline(options = {}) {
         continue;
       }
 
-      let prePublishValidation = validatePrePublishGraph(candidate);
+      let prePublishValidation = validatePrePublishGraph(candidate, options);
       let imageRescueDiagnostics = [];
       if (!prePublishValidation.valid && hasImageTopicMismatchError(prePublishValidation.errors || [])) {
         const rescue = await attemptImageRescuePass({

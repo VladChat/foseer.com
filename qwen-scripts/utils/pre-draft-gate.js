@@ -5,6 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { resolveProjectRoot } from './project-root.js';
+import { isRelaxedPipelineMode } from './pipeline-mode.js';
 
 const PROJECT_ROOT = resolveProjectRoot(import.meta.url);
 const POSTS_DIR = path.resolve(PROJECT_ROOT, 'src/data/post');
@@ -65,6 +66,7 @@ function extractPublishedDate(filePath) {
  * @returns {Object} { isDuplicate, reason } or { isDuplicate: false }
  */
 export function checkPreDraftDuplicate(candidate, options = {}) {
+  const relaxedMode = isRelaxedPipelineMode(options);
   const RECENT_HOURS = Number(options.recentDuplicateWindowHours || process.env.QWEN_RECENT_DUPLICATE_WINDOW_DAYS || 3) * 24;
 
   try {
@@ -91,6 +93,9 @@ export function checkPreDraftDuplicate(candidate, options = {}) {
 
       const overlap = incomingSourceUrls.filter((url) => publishedUrls.includes(url)).length;
       if (overlap >= 2 && recentHours <= RECENT_HOURS) {
+        if (relaxedMode) {
+          return { isDuplicate: false };
+        }
         return { isDuplicate: true, reason: `source_overlap>=2_recent(${overlap})` };
       }
     }
@@ -107,11 +112,15 @@ export function checkPreDraftDuplicate(candidate, options = {}) {
  * @param {Object} candidate - Candidate with sourcePack and brief
  * @returns {Object} { isBlocked, reason } or { isBlocked: false }
  */
-export function checkPreDraftDirectEventSources(candidate) {
+export function checkPreDraftDirectEventSources(candidate, options = {}) {
+  const relaxedMode = isRelaxedPipelineMode(options);
   const directEventCount = candidate?.sourcePack?.metrics?.directEventSourceCount || 0;
   const articleType = String(candidate?.brief?.articleType || candidate?.brief?.article_type || 'report').toLowerCase();
 
   if (articleType === 'report' && directEventCount < 2) {
+    if (relaxedMode) {
+      return { isBlocked: false };
+    }
     return { isBlocked: true, reason: `Report requires at least 2 direct-event sources, found ${directEventCount}` };
   }
 
@@ -127,7 +136,7 @@ export function runPreDraftGates(candidate, options = {}) {
     return { blocked: true, reason: duplicate.reason, stage: 'pre_draft_duplicate' };
   }
 
-  const directEvent = checkPreDraftDirectEventSources(candidate);
+  const directEvent = checkPreDraftDirectEventSources(candidate, options);
   if (directEvent.isBlocked) {
     return { blocked: true, reason: directEvent.reason, stage: 'pre_draft_direct_event_source' };
   }

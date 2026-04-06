@@ -7,6 +7,7 @@ import {
   isTrustedReportingDomain,
   normalizeDomain,
 } from './config/trusted-publishers.js';
+import { isRelaxedPipelineMode } from './utils/pipeline-mode.js';
 
 function inferUniqueDomains(sources = []) {
   return new Set(
@@ -42,9 +43,10 @@ export function evaluatePreWriteQualityGate({
   const reasons = [];
   const warnings = [];
 
-  const minSources = Math.max(1, Number(options.minSources || process.env.QWEN_PREWRITE_MIN_SOURCES || 2));
-  const minDomains = Math.max(1, Number(options.minDomains || process.env.QWEN_PREWRITE_MIN_DOMAINS || 2));
-  const minCoherence = Number(options.minCoherence || process.env.QWEN_PREWRITE_MIN_COHERENCE || 0.45);
+  const relaxedMode = isRelaxedPipelineMode(options);
+  const minSources = Math.max(1, Number(options.minSources || process.env.QWEN_PREWRITE_MIN_SOURCES || (relaxedMode ? 1 : 2)));
+  const minDomains = Math.max(1, Number(options.minDomains || process.env.QWEN_PREWRITE_MIN_DOMAINS || (relaxedMode ? 1 : 2)));
+  const minCoherence = Number(options.minCoherence || process.env.QWEN_PREWRITE_MIN_COHERENCE || (relaxedMode ? 0.3 : 0.45));
 
   const sources = Array.isArray(sourcePack?.sources) ? sourcePack.sources : [];
   const sourceCount = sources.length;
@@ -54,6 +56,10 @@ export function evaluatePreWriteQualityGate({
   const roleCounts = countSourcesByRole(sources);
   const stage3BlockingErrors = (sourcePack?.stage3EditorialGate?.blocking_errors || [])
     .filter((message) => !String(message || '').startsWith('Primary topic_id unsupported by source-pack evidence'));
+  const relaxedStage3BlockingErrors = stage3BlockingErrors.filter((message) => {
+    const text = String(message || '').toLowerCase();
+    return !(relaxedMode && text.includes('entity_confidence_low'));
+  });
   const entitySignals = [
     ...(Array.isArray(brief?.entities) ? brief.entities : []),
     ...(Array.isArray(brief?.involvedParties) ? brief.involvedParties : []),
@@ -78,7 +84,11 @@ export function evaluatePreWriteQualityGate({
     if (!singleSourceDecision.pass) reasons.push(`Not enough independent domains (${domainCount}/${minDomains})`);
   }
   if (roleCounts.trustedReporting < 1 && roleCounts.officialPrimary < 1) {
-    reasons.push('Missing trusted reporting or official primary source');
+    if (relaxedMode) {
+      warnings.push('Missing trusted reporting or official primary source');
+    } else {
+      reasons.push('Missing trusted reporting or official primary source');
+    }
   }
   if (singleSourceDecision.enabled && !singleSourceDecision.pass && sourceCount === 1) {
     warnings.push(`single_source_whitelist_rejected:${singleSourceDecision.reason}`);
@@ -86,8 +96,11 @@ export function evaluatePreWriteQualityGate({
   if (singleSourceDecision.pass) {
     warnings.push(`single_source_whitelist_pass:${singleSourceDecision.reason}`);
   }
-  if (stage3BlockingErrors.length > 0) {
-    reasons.push(...stage3BlockingErrors.map((error) => `Stage-3 editorial blocker: ${error}`));
+  if (relaxedMode && stage3BlockingErrors.length > 0 && relaxedStage3BlockingErrors.length !== stage3BlockingErrors.length) {
+    warnings.push('Relaxed mode ignored entity_confidence_low blocker from source-pack stage');
+  }
+  if (relaxedStage3BlockingErrors.length > 0) {
+    reasons.push(...relaxedStage3BlockingErrors.map((error) => `Stage-3 editorial blocker: ${error}`));
   }
   if (Number.isFinite(minCoherence) && Number.isFinite(Number(coherenceScore)) && Number(coherenceScore) < minCoherence) {
     const gateMentionsCoherence = gateNotes.some((note) => /coherence|mixes unrelated/i.test(String(note || '')));
@@ -147,11 +160,13 @@ function evaluateSingleSourceWhitelistEligibility({
   roleCounts = { trustedReporting: 0, officialPrimary: 0 },
   options = {},
 } = {}) {
-  const enabled = parseBooleanFlag(
+  const relaxedMode = isRelaxedPipelineMode(options);
+  let enabled = parseBooleanFlag(
     options.enableSingleSourceWhitelist
     ?? options.singleSourceWhitelist
     ?? process.env.QWEN_ENABLE_SINGLE_SOURCE_WHITELIST
-  ) === true;
+  );
+  if (enabled === null) enabled = relaxedMode;
   if (!enabled) return { enabled: false, pass: false, reason: 'disabled' };
   if (sourceCount !== 1) return { enabled: true, pass: false, reason: 'publishable_count_not_one' };
   if (domainCount !== 1) return { enabled: true, pass: false, reason: 'domain_count_not_one' };
@@ -159,11 +174,18 @@ function evaluateSingleSourceWhitelistEligibility({
 
   const source = Array.isArray(sources) ? sources[0] : null;
   const domain = source?.canonical_domain || source?.domain || source?.canonical_url || source?.url || '';
-  if (!isStrictSingleSourceWhitelistDomain(domain)) {
+  const allowedByRelaxedWhitelist = relaxedMode && (
+    isTrustedReportingDomain(domain)
+    || isOfficialPrimaryDomain(domain)
+    || String(source?.provider || '').toLowerCase() === 'rss'
+  );
+  if (!isStrictSingleSourceWhitelistDomain(domain) && !allowedByRelaxedWhitelist) {
     return { enabled: true, pass: false, reason: 'domain_not_in_strict_single_source_whitelist' };
   }
   if ((Number(roleCounts.trustedReporting || 0) + Number(roleCounts.officialPrimary || 0)) < 1) {
-    return { enabled: true, pass: false, reason: 'missing_trusted_or_official_role' };
+    if (!allowedByRelaxedWhitelist) {
+      return { enabled: true, pass: false, reason: 'missing_trusted_or_official_role' };
+    }
   }
 
   const pageKind = String(source?.page_kind || '').toLowerCase();
@@ -179,7 +201,7 @@ function evaluateSingleSourceWhitelistEligibility({
   const minSingleSourceCoherence = Number(
     options.singleSourceWhitelistMinCoherence
     ?? process.env.QWEN_SINGLE_SOURCE_WHITELIST_MIN_COHERENCE
-    ?? 0.72
+    ?? (relaxedMode ? 0.6 : 0.72)
   );
   if (Number.isFinite(minSingleSourceCoherence) && Number.isFinite(Number(coherenceScore)) && Number(coherenceScore) < minSingleSourceCoherence) {
     return { enabled: true, pass: false, reason: `coherence_below_threshold:${Number(coherenceScore).toFixed(2)}<${minSingleSourceCoherence}` };

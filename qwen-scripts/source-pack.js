@@ -12,6 +12,7 @@ import {
   isTrustedReportingDomain,
   normalizeDomain,
 } from './config/trusted-publishers.js';
+import { isRelaxedPipelineMode } from './utils/pipeline-mode.js';
 
 const GENERIC_TOPIC_TOKENS = new Set([
   'the', 'a', 'an', 'and', 'or', 'for', 'from', 'with', 'amid', 'over', 'under', 'after', 'before', 'into', 'onto', 'across', 'about',
@@ -204,6 +205,7 @@ function collectDiscoveryItem(item, collected, seenUrls, forceKeep = false) {
 }
 
 function applySourcePackGate({ eventBrief, sources, coreSources, supportingSources, backgroundSources, roleResults, publishableRoleResults = [], directEventRoleResults = [], uniqueDomains, strongMatchCount, sourceConsistencyScore, options = {} }) {
+  const relaxedMode = isRelaxedPipelineMode(options);
   const notes = [];
   let passes = true;
   const articleType = String(eventBrief?.articleType || eventBrief?.article_type || 'report').toLowerCase();
@@ -237,8 +239,14 @@ function applySourcePackGate({ eventBrief, sources, coreSources, supportingSourc
     }
   }
   if (uniqueDomains < 2 && publishableCount >= 2) {
-    passes = false;
-    notes.push(`Need at least 2 different domains among publishable sources, found ${uniqueDomains}`);
+    const hasTrustedReporting = sources.some((source) => isTrustedReportingDomain(source?.canonical_domain || source?.domain));
+    const hasOfficialPrimary = sources.some((source) => isOfficialPrimaryDomain(source?.canonical_domain || source?.domain));
+    if (relaxedMode && (hasTrustedReporting || hasOfficialPrimary)) {
+      notes.push('Relaxed mode allows same-domain publishable pack with trusted/official evidence');
+    } else {
+      passes = false;
+      notes.push(`Need at least 2 different domains among publishable sources, found ${uniqueDomains}`);
+    }
   }
   const moderateMatchCount = publishableRoleResults.filter((result) => Number(result.same_event_score || 0) >= 3).length;
   const hasStrongEventPack = strongMatchCount >= 2 || (strongMatchCount >= 1 && moderateMatchCount >= 2);
@@ -258,15 +266,24 @@ function applySourcePackGate({ eventBrief, sources, coreSources, supportingSourc
   const independentEventDomains = countUniqueDomains(directEventRoleResults.map((result) => result.source));
   if (articleType === 'report') {
     if (directEventSourceCount < 2) {
-      passes = false;
-      notes.push(`Need at least 2 direct-event sources for report, found ${directEventSourceCount}`);
+      if (relaxedMode) {
+        notes.push(`Relaxed mode allows report with fewer direct-event sources (${directEventSourceCount})`);
+      } else {
+        passes = false;
+        notes.push(`Need at least 2 direct-event sources for report, found ${directEventSourceCount}`);
+      }
     }
     if (independentEventDomains < 2 && directEventSourceCount >= 2) {
-      passes = false;
-      notes.push(`Need at least 2 independent direct-event domains for report, found ${independentEventDomains}`);
+      if (relaxedMode) {
+        notes.push(`Relaxed mode allows report with single independent direct-event domain (${independentEventDomains})`);
+      } else {
+        passes = false;
+        notes.push(`Need at least 2 independent direct-event domains for report, found ${independentEventDomains}`);
+      }
     }
   }
-  if (sourceConsistencyScore < 3.5) {
+  const minConsistency = relaxedMode ? 2.8 : 3.5;
+  if (sourceConsistencyScore < minConsistency) {
     passes = false;
     notes.push(`Source consistency too weak (${sourceConsistencyScore})`);
   }
@@ -330,11 +347,13 @@ function evaluateSingleSourceWhitelistEligibility({
   directEventSourceCount = 0,
   options = {},
 } = {}) {
-  const enabled = parseBooleanFlag(
+  const relaxedMode = isRelaxedPipelineMode(options);
+  let enabled = parseBooleanFlag(
     options.enableSingleSourceWhitelist
     ?? options.singleSourceWhitelist
     ?? process.env.QWEN_ENABLE_SINGLE_SOURCE_WHITELIST
-  ) === true;
+  );
+  if (enabled === null) enabled = relaxedMode;
 
   if (!enabled) return { enabled: false, pass: false, reason: 'disabled' };
   if (!Array.isArray(publishableSources) || publishableSources.length !== 1) {
@@ -349,10 +368,17 @@ function evaluateSingleSourceWhitelistEligibility({
 
   const source = publishableSources[0] || {};
   const sourceDomain = source?.canonical_domain || source?.domain || source?.canonical_url || source?.url || '';
-  if (!isStrictSingleSourceWhitelistDomain(sourceDomain)) {
+  const sourceFromRss = String(source?.provider || '').toLowerCase() === 'rss';
+  const allowedByRelaxedWhitelist = relaxedMode && (
+    isTrustedReportingDomain(sourceDomain)
+    || isOfficialPrimaryDomain(sourceDomain)
+    || sourceFromRss
+  );
+
+  if (!isStrictSingleSourceWhitelistDomain(sourceDomain) && !allowedByRelaxedWhitelist) {
     return { enabled: true, pass: false, reason: 'domain_not_in_strict_single_source_whitelist' };
   }
-  if (!isTrustedReportingDomain(sourceDomain) && !isOfficialPrimaryDomain(sourceDomain)) {
+  if (!isTrustedReportingDomain(sourceDomain) && !isOfficialPrimaryDomain(sourceDomain) && !sourceFromRss) {
     return { enabled: true, pass: false, reason: 'domain_not_trusted_or_official' };
   }
   if (getPublishableIntegrityIssues(source).length > 0) {
@@ -368,7 +394,7 @@ function evaluateSingleSourceWhitelistEligibility({
   const minSingleSourceCoherence = Number(
     options.singleSourceWhitelistMinCoherence
     ?? process.env.QWEN_SINGLE_SOURCE_WHITELIST_MIN_COHERENCE
-    ?? 0.72
+    ?? (relaxedMode ? 0.58 : 0.72)
   );
   const minSingleSourceConsistency = Number(
     options.singleSourceWhitelistMinConsistency
