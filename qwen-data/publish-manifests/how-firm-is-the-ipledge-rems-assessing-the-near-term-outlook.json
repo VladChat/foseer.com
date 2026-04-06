@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T20:53:48.270Z",
+  "event_id": "evt-2026-04-06-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-04-06-pharma-fda-general-global-fda",
+  "article_type": "analysis",
+  "title": "How Firm Is the iPLEDGE REMS? Assessing the Near-Term Outlook",
+  "slug": "how-firm-is-the-ipledge-rems-assessing-the-near-term-outlook",
+  "canonical_slug": "2026-04-06-how-firm-is-the-ipledge-rems-assessing-the-near-term-outlook",
+  "expected_url": "/article/2026-04-06-how-firm-is-the-ipledge-rems-assessing-the-near-term-outlook",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-how-firm-is-the-ipledge-rems-assessing-the-near-term-outlook.mdx",
+  "published_at": "2026-04-06T20:53:48.267Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Pharma & FDA",
+  "topics": [
+    "Pharma & FDA"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "jacob_ellis",
+    "author_name": "Jacob Ellis",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/3lt2peqdq5g/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/3lt2peqdq5g/cover.jpg",
+    "source_url": "https://unsplash.com/photos/child-lying-on-bed-while-doctor-checking-his-mouth-3Lt2PEQdq5g",
+    "asset_key": "unsplash:3Lt2PEQdq5g",
+    "alt_text": "Illustration for How Firm Is the iPLEDGE REMS? Assessing the Near-Term Outlook",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Risk Evaluation and Mitigation medical photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Strategy",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "iPLEDGE Risk Evaluation and Mitigation Strategy (REMS)",
+        "url": "http://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/ipledge-risk-evaluation-and-mitigation-strategy-rems",
+        "domain": "fda.gov"
+      },
+      {
+        "title": "Opioid Analgesic Risk Evaluation and Mitigation Strategy (REMS)",
+        "url": "http://www.fda.gov/drugs/information-drug-class/opioid-analgesic-risk-evaluation-and-mitigation-strategy-rems",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Opioid Analgesic Risk Evaluation and Mitigation Strategy (REMS)",
+          "url": "http://www.fda.gov/drugs/information-drug-class/opioid-analgesic-risk-evaluation-and-mitigation-strategy-rems",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "rems"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "strategy-company",
+          "label": "Strategy",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Risk Evaluation and Mitigation medical photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "risk",
+        "evaluation",
+        "mitigation"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
