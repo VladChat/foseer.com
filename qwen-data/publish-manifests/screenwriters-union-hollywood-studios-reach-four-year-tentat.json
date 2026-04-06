@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T12:08:49.605Z",
+  "event_id": "evt-2026-04-06-business-general-global-israel-india",
+  "cluster_id": "evt-2026-04-06-business-general-global-israel-india",
+  "article_type": "report",
+  "title": "Screenwriters Union, Hollywood Studios Reach Four-Year Tentative Deal",
+  "slug": "screenwriters-union-hollywood-studios-reach-four-year-tentat",
+  "canonical_slug": "2026-04-06-screenwriters-union-hollywood-studios-reach-four-year-tentat",
+  "expected_url": "/article/2026-04-06-screenwriters-union-hollywood-studios-reach-four-year-tentat",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-screenwriters-union-hollywood-studios-reach-four-year-tentat.mdx",
+  "published_at": "2026-04-06T12:08:49.603Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Economy & Markets",
+  "topics": [
+    "Screenwriters union and Hollywood studios reach four-year tentative agreement | Ap-business",
+    "Economy & Markets"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/kkx72tedjlc/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/kkx72tedjlc/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-people-posing-for-a-picture-kkx72TedJlc",
+    "asset_key": "unsplash:kkx72TedJlc",
+    "alt_text": "Illustration for Screenwriters Union, Hollywood Studios Reach Four-Year Tentative Deal",
+    "selection_mode": "provider_download_new:unsplash:strong:relaxed",
+    "query_used": "four tentative deal photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "Screenwriters union and Hollywood studios reach four",
+        "url": "https://www.counton2.com/news/ap-screenwriters-union-and-hollywood-studios-reach-four-year-tentative-agreement/",
+        "domain": "counton2.com"
+      },
+      {
+        "title": "Screenwriters union and Hollywood studios reach four",
+        "url": "https://fox5sandiego.com/entertainment/ap-screenwriters-union-and-hollywood-studios-reach-four-year-tentative-agreement/",
+        "domain": "fox5sandiego.com"
+      },
+      {
+        "title": "In Lebanon on Palm Sunday, Churches Fill as Hezbollah ...",
+        "url": "https://apnews.com/photo-gallery/lebanon-palm-sunday-mideast-war-israel-hezbollah-c8ea74135b1b83a2dc98a304862d87cb",
+        "domain": "apnews.com"
+      },
+      {
+        "title": "Screenwriters union and Hollywood studios reach four-year tentative agreement | Ap",
+        "url": "https://wfmz.com/business/screenwriters-union-and-hollywood-studios-reach-four-year-tentative-agreement/article_c947012a-f0b6-59a2-9f5a-83e4a074e1dd.html",
+        "domain": "wfmz.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "One publish-ready source has weak title overlap with the article title",
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "In Lebanon on Palm Sunday, Churches Fill as Hezbollah ...",
+          "url": "https://apnews.com/photo-gallery/lebanon-palm-sunday-mideast-war-israel-hezbollah-c8ea74135b1b83a2dc98a304862d87cb",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets",
+          "market"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "four tentative deal photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "four",
+        "tentative",
+        "deal"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
