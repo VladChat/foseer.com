@@ -23,93 +23,7 @@ import { writeQualityAuditRun } from './utils/quality-audit.js';
 import { runSharedSourcePackEngine, selectSharedPreWriterCandidates, normalizeDiscoveryCandidatesToBriefs, estimateSourcePackCoherence } from './pre-writer-engine.js';
 import { evaluatePreWriteQualityGate } from './pre-write-quality-gate.js';
 import { attemptImageRescuePass, hasImageTopicMismatchError } from './utils/publish-rescue.js';
-import { resolveProjectRoot } from './utils/project-root.js';
-
-const PIPELINE_POSTS_DIR = path.resolve(resolveProjectRoot(import.meta.url), 'src/data/post');
-
-/**
- * Pre-draft duplicate-source check.
- * Reuses the same source-overlap logic as publisher.js assessDuplicatePublication().
- * Returns { isDuplicate, reason } or { isDuplicate: false }.
- */
-function checkPreDraftDuplicate(candidate, options = {}) {
-  const RECENT_HOURS = Number(options.recentDuplicateWindowHours || process.env.QWEN_RECENT_DUPLICATE_WINDOW_DAYS || 3) * 24;
-
-  try {
-    if (!fs.existsSync(PIPELINE_POSTS_DIR)) return { isDuplicate: false };
-
-    const publishableSources = Array.isArray(candidate?.sourcePack?.publishReadySources)
-      ? candidate.sourcePack.publishReadySources
-      : Array.isArray(candidate?.sourcePack?.sources)
-        ? candidate.sourcePack.sources
-        : [];
-
-    const rawUrls = publishableSources
-      .map((s) => s?.url || s?.canonicalUrl || s?.canonical_url || '')
-      .filter(Boolean);
-    const incomingSourceUrls = new Set(
-      [...new Set(rawUrls.map(normalizePreDraftUrl))]
-    );
-    if (incomingSourceUrls.size === 0) return { isDuplicate: false };
-
-    const entries = fs.readdirSync(PIPELINE_POSTS_DIR, { withFileTypes: true })
-      .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith('.mdx'))
-      .map((entry) => path.join(PIPELINE_POSTS_DIR, entry.name));
-
-    for (const file of entries) {
-      const raw = fs.readFileSync(file, 'utf-8');
-      const parsed = extractPublishedFrontmatter(raw);
-      if (!parsed) continue;
-
-      const sourceOverlap = countPreDraftOverlap([...incomingSourceUrls], parsed.sourceUrls);
-      if (sourceOverlap >= 2 && parsed.recentHours <= RECENT_HOURS) {
-        return { isDuplicate: true, reason: `source_overlap>=2_recent(${sourceOverlap})` };
-      }
-    }
-  } catch {
-    // Non-blocking: if the scan fails, proceed to drafting; publisher will catch it later
-  }
-
-  return { isDuplicate: false };
-}
-
-function normalizePreDraftUrl(url) {
-  try {
-    const u = new URL(String(url).trim());
-    return `${u.hostname}${u.pathname}`.toLowerCase();
-  } catch {
-    return String(url).trim().toLowerCase();
-  }
-}
-
-function extractPublishedFrontmatter(raw) {
-  const frontmatterMatch = String(raw || '').match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  if (!frontmatterMatch) return null;
-  const fm = frontmatterMatch[1];
-
-  // Extract sources
-  const sourceUrls = [];
-  const urlPattern = /^\s*url:\s*"?([^"\n]+)"?$/gm;
-  let m;
-  while ((m = urlPattern.exec(fm)) !== null) {
-    const rawUrl = m[1].trim();
-    if (rawUrl && rawUrl.startsWith('http')) sourceUrls.push(normalizePreDraftUrl(rawUrl));
-  }
-
-  // Extract publishedAt
-  const pubMatch = fm.match(/^publishDate:\s*"?(.+?)"?$/m);
-  const publishedAt = pubMatch ? new Date(pubMatch[1].trim()) : null;
-  const recentHours = publishedAt && Number.isFinite(publishedAt.getTime())
-    ? (Date.now() - publishedAt.getTime()) / 3600000
-    : Infinity;
-
-  return { sourceUrls, recentHours };
-}
-
-function countPreDraftOverlap(left, right) {
-  const rightSet = new Set(right);
-  return left.filter((url) => rightSet.has(url)).length;
-}
+import { runPreDraftGates } from './utils/pre-draft-gate.js';
 
 loadProjectEnv();
 
@@ -968,30 +882,15 @@ export async function runEditorialPipeline(options = {}) {
     }
     console.log(`[pipeline] PRE-WRITE GATE: PASS :: ${articleLabel} :: coherence=${preWriteCoherence}`);
 
-    // Stage 3.8: Pre-draft duplicate-source gate (skip before LLM drafting + image + YouTube)
-    const duplicateCheck = checkPreDraftDuplicate(candidate, options);
-    if (duplicateCheck.isDuplicate) {
-      console.log(`[pipeline] PRE-DRAFT DUPLICATE: SKIP :: ${articleLabel} :: ${duplicateCheck.reason}`);
-      articleErrors.push({ title: articleLabel, stage: 'preDraftDuplicate', error: duplicateCheck.reason });
+    // Stage 3.8: Pre-draft gates — duplicate source-overlap + direct-event source count (skip before LLM drafting)
+    const preDraftGates = runPreDraftGates(candidate, options);
+    if (preDraftGates.blocked) {
+      console.log(`[pipeline] PRE-DRAFT GATE: SKIP :: ${articleLabel} :: ${preDraftGates.reason}`);
+      articleErrors.push({ title: articleLabel, stage: preDraftGates.stage, error: preDraftGates.reason });
       preWriteItems.push({
         title: articleLabel,
         success: false,
-        error: duplicateCheck.reason,
-        data: null,
-      });
-      continue;
-    }
-
-    // Stage 3.9: Pre-draft direct-event source gate for report-type candidates
-    const directEventCount = candidate?.sourcePack?.metrics?.directEventSourceCount || 0;
-    const candidateArticleType = String(candidate?.brief?.articleType || candidate?.brief?.article_type || 'report').toLowerCase();
-    if (candidateArticleType === 'report' && directEventCount < 2) {
-      console.log(`[pipeline] PRE-DRAFT DIRECT-EVENT SOURCE: SKIP :: ${articleLabel} :: Report requires at least 2 direct-event sources, found ${directEventCount}`);
-      articleErrors.push({ title: articleLabel, stage: 'preDraftDirectEventSource', error: `Report requires at least 2 direct-event sources, found ${directEventCount}` });
-      preWriteItems.push({
-        title: articleLabel,
-        success: false,
-        error: `Report requires at least 2 direct-event sources, found ${directEventCount}`,
+        error: preDraftGates.reason,
         data: null,
       });
       continue;

@@ -18,6 +18,7 @@ import { extractQuestionCandidate, extractQuestionCandidates } from './question-
 import { loadSharedBriefCandidatesFromPool, runPreWriterDiscoveryIntake, runSharedSourcePackEngine, mergeRescueDiagnostics, estimateSourcePackCoherence } from './pre-writer-engine.js';
 import { evaluatePreWriteQualityGate } from './pre-write-quality-gate.js';
 import { attemptImageRescuePass, hasImageTopicMismatchError, splitPreWriteGraphErrors } from './utils/publish-rescue.js';
+import { runPreDraftGates } from './utils/pre-draft-gate.js';
 
 loadProjectEnv();
 
@@ -421,6 +422,15 @@ export async function runQnaPipeline(options = {}) {
 
   const lateFallbackUsedBriefKeys = new Set(sourcePackAttemptQuestions.map((candidate) => getBriefCandidateKey(candidate?.brief || {})));
   if (selected?.brief) lateFallbackUsedBriefKeys.add(getBriefCandidateKey(selected.brief));
+
+  // Pre-draft gates — skip doomed candidates before any LLM drafting, image, or YouTube work
+  const preDraftGates = runPreDraftGates(selected, options);
+  if (preDraftGates.blocked) {
+    console.log(`[qna-pipeline] PRE-DRAFT GATE: SKIP :: ${selected.brief?.title || 'Untitled'} :: ${preDraftGates.reason}`);
+    result.hard_blocker = preDraftGates.reason;
+    return finalizeRun(result, questionCandidates, null, startTime);
+  }
+
   let completed = false;
 
   while (!completed) {
