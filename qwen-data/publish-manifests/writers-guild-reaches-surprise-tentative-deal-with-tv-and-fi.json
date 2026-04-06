@@ -1,0 +1,117 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T00:43:35.545Z",
+  "event_id": "evt-2026-04-06-us-politics-general-us-white-house",
+  "cluster_id": "evt-2026-04-06-us-politics-general-us-white-house",
+  "article_type": "report",
+  "title": "Writers Guild Reaches Surprise Tentative Deal With TV and Film Producers",
+  "slug": "writers-guild-reaches-surprise-tentative-deal-with-tv-and-fi",
+  "canonical_slug": "2026-04-06-writers-guild-reaches-surprise-tentative-deal-with-tv-and-fi",
+  "expected_url": "/article/2026-04-06-writers-guild-reaches-surprise-tentative-deal-with-tv-and-fi",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-writers-guild-reaches-surprise-tentative-deal-with-tv-and-fi.mdx",
+  "published_at": "2026-04-06T00:43:35.542Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "Film & TV",
+  "topics": [
+    "Writers Guild reaches surprise labor deal with TV, movie producers",
+    "Film & TV"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/j8jvy8j_z1c/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/j8jvy8j_z1c/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-black-and-white-photo-of-a-man-and-a-woman-j8JvY8J_Z1c",
+    "asset_key": "unsplash:j8JvY8J_Z1c",
+    "alt_text": "a black and white photo of a man and a woman",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Tentative Deal film photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Writers Guild reaches surprise labor deal with TV, movie producers",
+        "url": "https://upi.com/entertainment_news/2026/04/05/writers-guild-reaches-surprise-labor-deal-tv-movie-producers/2251775413590",
+        "domain": "upi.com"
+      },
+      {
+        "title": "Writers Guild of America strikes tentative deal with studios",
+        "url": "https://nbcnews.com/news/us-news/writers-guild-america-strikes-tentative-deal-studios-rcna266733",
+        "domain": "nbcnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": true,
+        "matched_aliases": [
+          "film",
+          "tv",
+          "streaming"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Tentative Deal film photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "tentative",
+        "deal",
+        "film"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
