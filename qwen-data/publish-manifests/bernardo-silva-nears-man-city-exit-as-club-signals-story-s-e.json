@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T05:39:36.767Z",
+  "event_id": "evt-2026-04-06-events-tournaments-general-global",
+  "cluster_id": "evt-2026-04-06-events-tournaments-general-global",
+  "article_type": "analysis",
+  "title": "Bernardo Silva Nears Man City Exit as Club Signals Story’s ‘End’",
+  "slug": "bernardo-silva-nears-man-city-exit-as-club-signals-story-s-e",
+  "canonical_slug": "2026-04-06-bernardo-silva-nears-man-city-exit-as-club-signals-story-s-e",
+  "expected_url": "/article/2026-04-06-bernardo-silva-nears-man-city-exit-as-club-signals-story-s-e",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-bernardo-silva-nears-man-city-exit-as-club-signals-story-s-e.mdx",
+  "published_at": "2026-04-06T05:39:36.764Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "travel-consumer-issues",
+  "topic_label": "Travel & Consumer Issues",
+  "subsection": "Events & Tournaments",
+  "topics": [
+    "Man City expect Silva's story coming 'to an end'",
+    "Events & Tournaments"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/h4hnbppnjce/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/h4hnbppnjce/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-dark-room-with-neon-lights-and-a-sign-that-says-our-h-house-h4hnBPpNJcE",
+    "asset_key": "unsplash:h4hnBPpNJcE",
+    "alt_text": "Illustration for Bernardo Silva Nears Man City Exit as Club Signals Story’s ‘End’",
+    "selection_mode": "provider_download_new:unsplash:strong:relaxed",
+    "query_used": "nears exit club photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Travel & Consumer Issues",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Man City expect Silva's story coming 'to an end'",
+        "url": "https://www.espn.com/soccer/story/_/id/48404937/manchester-city-bernardo-silva-story-coming-end",
+        "domain": "espn.com"
+      },
+      {
+        "title": "Bernardo Silva will leave Manchester City this summer, reveals Pep Lijnders",
+        "url": "https://www.theguardian.com/football/2026/apr/05/bernardo-silva-pep-lijnders-manchester-city-captain-leaving-summer",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Bernardo Silva will leave Manchester City as free agent this summer ...",
+        "url": "https://www.nytimes.com/athletic/7173307/2026/04/05/bernardo-silva-man-city-transfer-news/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "travel-consumer-issues",
+          "label": "Travel & Consumer Issues",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "travel-consumer-issues",
+        "topic_label": "Travel & Consumer Issues",
+        "supported": true,
+        "matched_aliases": [
+          "travel"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "nears exit club photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "nears",
+        "exit",
+        "club"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
