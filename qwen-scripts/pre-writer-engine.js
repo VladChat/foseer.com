@@ -391,6 +391,105 @@ function isNearMissSourcePackFailure(failureCodes = []) {
     || codes.has('thin_pack_after_rescue');
 }
 
+function normalizeFailureCodeSet(failureCodes = []) {
+  return new Set((Array.isArray(failureCodes) ? failureCodes : []).map((code) => String(code || '').trim()).filter(Boolean));
+}
+
+function isGenericRescueBriefTitle(brief = {}) {
+  const title = String(brief?.title || '').trim();
+  if (!title) return true;
+  if (title.split(/\s+/).length <= 2) return true;
+  return /^(transcript|statement|update|live updates?|latest|recap|analysis)$/i.test(title);
+}
+
+function collectBriefRescueSeedSources(brief = {}) {
+  const context = Array.isArray(brief?.discoveryContext) ? brief.discoveryContext : [];
+  return context
+    .map((item) => ({
+      title: item?.title || '',
+      snippet: item?.snippet || item?.summary || '',
+      url: item?.canonical_url || item?.canonicalUrl || item?.url || item?.link || '',
+      canonical_url: item?.canonical_url || item?.canonicalUrl || item?.url || item?.link || '',
+      canonical_domain: item?.canonical_domain || item?.domain || '',
+      domain: item?.canonical_domain || item?.domain || '',
+      page_kind: item?.page_kind || item?.pageKind || '',
+      entities: Array.isArray(item?.entities) ? item.entities : (Array.isArray(brief?.entities) ? brief.entities : []),
+      article_likelihood: item?.article_likelihood,
+      genericity_score: item?.genericity_score,
+      event_key: item?.event_key || item?.eventKey || brief?.eventKey || null,
+      cluster_id: item?.cluster_id || brief?.cluster_id || null,
+    }))
+    .filter((item) => item.url || item.title || item.snippet);
+}
+
+function estimateBriefRescueSeedCoherence(brief = {}, entityProfile = null) {
+  const entity = entityProfile || inferRescueEntityProfile(brief);
+  const seeds = collectBriefRescueSeedSources(brief)
+    .filter((source) => !getGenericRescueReason(source))
+    .map((source) => computeRescueEntityCoherence(source, brief, entity));
+  if (seeds.length === 0) return 0;
+  const avg = seeds.reduce((sum, value) => sum + value, 0) / Math.max(seeds.length, 1);
+  return Math.round(avg * 100) / 100;
+}
+
+function hasEventAlignedRescueSeed(brief = {}, entityProfile = null) {
+  const entity = entityProfile || inferRescueEntityProfile(brief);
+  const seedSources = collectBriefRescueSeedSources(brief);
+  const titleTokens = titleTokensForCoherence(brief?.title || '');
+  for (const source of seedSources) {
+    if (getGenericRescueReason(source)) continue;
+    const entityCoherence = computeRescueEntityCoherence(source, brief, entity);
+    const sourceTitleTokens = titleTokensForCoherence(source?.title || '');
+    const titleOverlap = Array.from(sourceTitleTokens).filter((token) => titleTokens.has(token)).length;
+    if (entityCoherence >= 0.45 || titleOverlap >= 2) return true;
+  }
+  return false;
+}
+
+function evaluateNearMissRescueEligibility({ brief = {}, failureCodes = [], entityProfile = null } = {}) {
+  const codes = normalizeFailureCodeSet(failureCodes);
+  const allowedNearMissCodes = new Set(['only_one_publishable_source', 'missing_official', 'missing_trusted_reporting']);
+  const fatalCodes = [
+    'low_story_coherence',
+    'generic_sources_only',
+    'title_mismatch',
+    'unrelated_event_mix',
+    'entity_alias_collision',
+    'entity_confidence_low',
+    'thin_pack_after_rescue',
+  ];
+  const entity = entityProfile || inferRescueEntityProfile(brief);
+  const seedCoherence = estimateBriefRescueSeedCoherence(brief, entity);
+  const hasSeedSignal = hasEventAlignedRescueSeed(brief, entity);
+
+  let skipReason = null;
+  if (codes.size === 0) {
+    skipReason = 'no_near_miss_codes';
+  } else if (![...codes].every((code) => allowedNearMissCodes.has(code))) {
+    skipReason = `unsupported_failure_codes:${[...codes].filter((code) => !allowedNearMissCodes.has(code)).join(',')}`;
+  } else if (fatalCodes.some((code) => codes.has(code))) {
+    skipReason = `fatal_failure_codes:${fatalCodes.filter((code) => codes.has(code)).join(',')}`;
+  } else if (String(entity?.confidence || 'low') === 'low') {
+    skipReason = 'entity_confidence_low';
+  } else if (Array.isArray(entity?.diagnostics) && entity.diagnostics.includes('entity_alias_collision')) {
+    skipReason = 'entity_alias_collision';
+  } else if (isGenericRescueBriefTitle(brief)) {
+    skipReason = 'generic_brief_title';
+  } else if (!hasSeedSignal) {
+    skipReason = 'no_event_aligned_seed_source';
+  } else if (seedCoherence < 0.35) {
+    skipReason = `seed_coherence_too_low:${seedCoherence}`;
+  }
+
+  return {
+    eligible: !skipReason,
+    skipReason,
+    seedCoherence,
+    hasSeedSignal,
+    normalizedFailureCodes: [...codes],
+  };
+}
+
 function mergeRescueDiagnostics(existing = null, incoming = null) {
   if (!existing && !incoming) return null;
   const left = existing || {};
@@ -506,11 +605,18 @@ async function runNearMissSourcePackRescue({
   const maxQueries = Math.max(3, Math.min(6, Number.isFinite(maxQueriesRaw) ? Math.floor(maxQueriesRaw) : 5));
   const retryPoolMatchLimit = Math.max(Number(options.poolMatchLimit || 14), Number(options.qnaRetryPoolMatchLimit || 24));
   const entityProfile = inferRescueEntityProfile(brief);
-  const queryPlan = buildNearMissRescueQueryPlan(brief, {
-    maxQueries,
+  const rescueEligibility = evaluateNearMissRescueEligibility({
+    brief,
     failureCodes: initialFailureCodes,
     entityProfile,
   });
+  const queryPlan = rescueEligibility.eligible
+    ? buildNearMissRescueQueryPlan(brief, {
+        maxQueries,
+        failureCodes: rescueEligibility.normalizedFailureCodes,
+        entityProfile,
+      })
+    : [];
 
   const diagnostics = {
     brief_title: brief?.title || null,
@@ -522,6 +628,10 @@ async function runNearMissSourcePackRescue({
       evidence: entityProfile.evidence || {},
     },
     entity_diagnostics: entityProfile.diagnostics || [],
+    rescue_eligible: rescueEligibility.eligible,
+    rescue_skip_reason: rescueEligibility.skipReason || null,
+    rescue_seed_signal: rescueEligibility.hasSeedSignal,
+    pre_rescue_coherence: rescueEligibility.seedCoherence,
     query_plan: queryPlan.map((query) => ({
       level: query.level,
       intent: query.intent,
@@ -536,6 +646,28 @@ async function runNearMissSourcePackRescue({
     failure_codes: [],
     rescue_failure_summary: null,
   };
+
+  if (!rescueEligibility.eligible) {
+    diagnostics.failure_codes = rescueEligibility.normalizedFailureCodes;
+    diagnostics.rescue_failure_summary = summarizeRescueFailure({
+      diagnostics,
+      failureCodes: diagnostics.failure_codes,
+      queryPlan,
+      roleCoverage: null,
+    });
+    return {
+      rescued: false,
+      sourcePack: null,
+      failureCodes: diagnostics.failure_codes,
+      failureReasons: [
+        rescueEligibility.skipReason
+          ? `Rescue skipped: ${rescueEligibility.skipReason}`
+          : 'Rescue skipped by eligibility gate',
+      ],
+      diagnostics,
+      workedQueries: [],
+    };
+  }
 
   const rescuedCandidates = [];
   let braveRescueUsed = false;
@@ -722,9 +854,28 @@ async function runNearMissSourcePackRescue({
     poolMatchLimit: retryPoolMatchLimit,
   });
 
+  const postRescueCoherence = estimateSourcePackCoherence(sourcePack, augmentedBrief);
+  diagnostics.post_rescue_coherence = postRescueCoherence;
+  if (postRescueCoherence < Math.max(0.45, Number(diagnostics.pre_rescue_coherence || 0))) {
+    diagnostics.failure_codes = Array.from(new Set(['low_story_coherence', 'thin_pack_after_rescue']));
+    diagnostics.rescue_failure_summary = summarizeRescueFailure({
+      diagnostics,
+      failureCodes: diagnostics.failure_codes,
+      queryPlan,
+      roleCoverage,
+    });
+    return {
+      rescued: false,
+      sourcePack,
+      failureCodes: diagnostics.failure_codes,
+      failureReasons: [`Rescue coherence did not improve enough (${postRescueCoherence})`],
+      diagnostics,
+      workedQueries: diagnostics.worked_queries,
+    };
+  }
+
   const gateOutcome = evaluateSourcePackGateOutcome({ brief: augmentedBrief, sourcePack });
   if (gateOutcome.pass) {
-    diagnostics.post_rescue_coherence = estimateSourcePackCoherence(sourcePack, augmentedBrief);
     return {
       rescued: true,
       sourcePack,
@@ -740,7 +891,6 @@ async function runNearMissSourcePackRescue({
     ...deriveMissingCoverageCodes(roleCoverage),
   ]));
   diagnostics.failure_codes = failureCodes;
-  diagnostics.post_rescue_coherence = estimateSourcePackCoherence(sourcePack, augmentedBrief);
   diagnostics.rescue_failure_summary = summarizeRescueFailure({
     diagnostics,
     failureCodes,
@@ -768,7 +918,10 @@ function buildNearMissRescueQueryPlan(brief = {}, { maxQueries = 5, failureCodes
   const broadTopic = buildBroadRescueTopic(brief);
   const allowStrictEntity = String(entity.confidence || 'low') !== 'low';
   const lowConfidenceEntity = !allowStrictEntity;
-  const requiresOfficial = Array.isArray(failureCodes) && failureCodes.includes('missing_official');
+  const codes = normalizeFailureCodeSet(failureCodes);
+  const requiresOfficial = codes.has('missing_official');
+  const requiresTrusted = codes.has('missing_trusted_reporting');
+  const needsSecondSourceOnly = codes.has('only_one_publishable_source') && !requiresOfficial && !requiresTrusted;
   const officialDomainTargets = buildRescueOfficialDomainTargets(brief, {
     requireOfficial: requiresOfficial,
     entityProfile: entity,
@@ -782,43 +935,60 @@ function buildNearMissRescueQueryPlan(brief = {}, { maxQueries = 5, failureCodes
   const broadAnchor = compactRescueText([mainEntity || '', broadTopic || title || 'developing story'].filter(Boolean).join(' '), 16);
   const aliasClause = aliases.length > 0 ? `(${aliases.slice(0, 2).join(' OR ')})` : '';
 
+  const preferredIntents = [];
+  if (requiresOfficial) preferredIntents.push('official_primary');
+  if (requiresTrusted) preferredIntents.push('trusted_reporting');
+  if (needsSecondSourceOnly) preferredIntents.push('independent_confirming');
+  if (preferredIntents.length === 0) preferredIntents.push('official_primary', 'trusted_reporting');
+  if (!preferredIntents.includes('independent_confirming')) preferredIntents.push('independent_confirming');
+
   const queries = [];
-  if (allowStrictEntity) {
-    queries.push({
-      level: 'strict',
-      intent: 'official_primary',
-      query: compactRescueText(`${strictAnchor} ${aliasClause} ${officialDomainClause} (official statement OR press release OR court filing OR regulator OR agency OR newsroom OR investor relations)`, 42),
-      targetedDomains: officialDomainTargets,
-    });
-    queries.push({
-      level: 'strict',
-      intent: 'trusted_reporting',
-      query: compactRescueText(`${strictAnchor} (reuters OR associated press OR apnews OR bbc OR bloomberg)`, 38),
-      targetedDomains: [],
-    });
+  for (const intent of preferredIntents) {
+    if (intent === 'official_primary') {
+      if (allowStrictEntity) {
+        queries.push({
+          level: 'strict',
+          intent,
+          query: compactRescueText(`${strictAnchor} ${aliasClause} ${officialDomainClause} (official statement OR press release OR court filing OR regulator OR agency OR newsroom OR investor relations)`, 42),
+          targetedDomains: officialDomainTargets,
+        });
+      }
+      queries.push({
+        level: needsSecondSourceOnly ? 'relaxed' : 'broad',
+        intent,
+        query: compactRescueText(`${mainEntity || title || broadAnchor} ${eventType} (newsroom OR regulator OR agency OR court OR league OR team OR university OR journal OR investor relations) ${officialDomainClause}`, 36),
+        targetedDomains: officialDomainTargets,
+      });
+      continue;
+    }
+
+    if (intent === 'trusted_reporting') {
+      if (allowStrictEntity) {
+        queries.push({
+          level: 'strict',
+          intent,
+          query: compactRescueText(`${strictAnchor} (reuters OR associated press OR apnews OR bbc OR bloomberg)`, 38),
+          targetedDomains: [],
+        });
+      }
+      queries.push({
+        level: lowConfidenceEntity ? 'relaxed' : (requiresTrusted ? 'relaxed' : 'broad'),
+        intent,
+        query: compactRescueText(`${broadAnchor} ${mainEntity || ''} (reuters OR associated press OR apnews OR bbc OR bloomberg OR investigation OR report)`, 32),
+        targetedDomains: [],
+      });
+      continue;
+    }
+
+    if (intent === 'independent_confirming') {
+      queries.push({
+        level: needsSecondSourceOnly ? 'strict' : 'relaxed',
+        intent,
+        query: compactRescueText(`${relaxedAnchor} ${dateToken} (confirmed OR report OR filing OR statement)`, 34),
+        targetedDomains: [],
+      });
+    }
   }
-
-  queries.push(
-    {
-      level: 'relaxed',
-      intent: 'independent_confirming',
-      query: compactRescueText(`${relaxedAnchor} ${dateToken} (confirmed OR report OR filing OR statement)`, 34),
-      targetedDomains: [],
-    },
-    {
-      level: 'broad',
-      intent: 'official_primary',
-      query: compactRescueText(`${mainEntity || title || broadAnchor} ${eventType} (newsroom OR regulator OR agency OR court OR league OR team OR university OR journal OR investor relations) ${officialDomainClause}`, 36),
-      targetedDomains: officialDomainTargets,
-    },
-  );
-
-  queries.push({
-    level: lowConfidenceEntity ? 'relaxed' : 'broad',
-    intent: 'trusted_reporting',
-    query: compactRescueText(`${broadAnchor} ${mainEntity || ''} (reuters OR associated press OR apnews OR bbc OR bloomberg OR investigation OR report)`, 32),
-    targetedDomains: [],
-  });
 
   return queries
     .filter((entry) => {
@@ -828,7 +998,7 @@ function buildNearMissRescueQueryPlan(brief = {}, { maxQueries = 5, failureCodes
     })
     .filter((entry, index, list) => list.findIndex((candidate) => candidate.query === entry.query) === index)
     .filter((entry) => String(entry.query || '').trim().length >= 8)
-    .slice(0, Math.max(3, Math.min(lowConfidenceEntity ? 5 : 6, maxQueries)));
+    .slice(0, Math.max(2, Math.min(lowConfidenceEntity ? 4 : 5, maxQueries)));
 }
 
 async function runRescueSearchPass({
@@ -1376,6 +1546,7 @@ function evaluateRescueEarlyStop({
 function shouldRunBraveRescueFallback({ diagnostics = {}, entityProfile = null } = {}) {
   const missingRoles = Array.isArray(diagnostics?.missing_roles) ? diagnostics.missing_roles : [];
   if (missingRoles.length === 0) return false;
+  if (diagnostics?.rescue_eligible === false) return false;
   if (String(entityProfile?.confidence || 'low') !== 'low') return true;
   return Array.isArray(diagnostics?.worked_queries) && diagnostics.worked_queries.length > 0;
 }
