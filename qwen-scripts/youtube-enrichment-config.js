@@ -26,9 +26,9 @@ const STALE_PENALTY_DAYS = 30;
 const STALE_PENALTY_VALUE = 8;
 const LONG_VIDEO_PENALTY_MINUTES = 20;
 const LONG_VIDEO_PENALTY_VALUE = 4;
-const MIN_ATTACH_SCORE = 18;
-const MAX_SEARCH_RESULTS = 10;
-const MAX_VIDEO_DETAILS = 5;
+const MIN_ATTACH_SCORE = 15; // Lowered from 18 to allow more quality matches
+const MAX_SEARCH_RESULTS = 15; // Increased from 10 for better candidate pool
+const MAX_VIDEO_DETAILS = 10; // Increased from 5 to evaluate more candidates
 const MAX_DURATION_SECONDS = 3600;
 const MIN_DURATION_SECONDS = 30;
 
@@ -59,6 +59,7 @@ function buildSearchQueries(article) {
   const excerpt = String(article?.draft?.excerpt || article?.brief?.summary || '').trim();
   const entities = extractEntities(article);
   const topicId = article?.brief?.topic_id || article?.placement?.topic_id || '';
+  const articleType = String(article?.draft?.article_type || article?.brief?.articleType || 'report').toLowerCase();
   const queries = [];
   const seen = new Set();
 
@@ -69,32 +70,44 @@ function buildSearchQueries(article) {
     queries.push(normalized);
   };
 
-  // Primary: title-derived query (most specific)
-  if (title) {
-    const titleTokens = tokenize(title);
-    if (titleTokens.length >= 2) {
-      addQuery(`${titleTokens.slice(0, 4).join(' ')} news`);
-    }
-    if (titleTokens.length >= 3) {
-      addQuery(titleTokens.slice(0, 5).join(' '));
-    }
-    // Add entity-aware variant
-    if (entities.length > 0 && titleTokens.length >= 2) {
-      addQuery(`${entities[0]} ${titleTokens.slice(0, 3).join(' ')}`);
+  // Extract core event phrase (first 4-6 meaningful tokens)
+  const titleTokens = tokenize(title);
+  const coreTokens = titleTokens.slice(0, 4).filter((t) => !TOKEN_STOPWORDS.has(t.toLowerCase()));
+
+  // Primary: Core event + entities (most specific, event-aware)
+  if (coreTokens.length >= 2) {
+    const corePhrase = coreTokens.join(' ');
+    addQuery(corePhrase); // Event without "news" for focused results
+    if (entities.length > 0) {
+      addQuery(`${entities[0]} ${corePhrase}`); // Entity + event
     }
   }
 
-  // Secondary: entity-focused query
-  if (entities.length > 0) {
-    addQuery(`${entities.slice(0, 2).join(' ')} news`);
+  // Secondary: Full title phrase (if meaningful)
+  if (titleTokens.length >= 3) {
+    const fullPhrase = titleTokens.slice(0, 6).join(' ');
+    if (!seen.has(fullPhrase.toLowerCase())) {
+      addQuery(fullPhrase);
+    }
   }
 
-  // Tertiary: section/topic fallback
-  if (topicId) {
-    addQuery(topicId.replace(/-/g, ' '));
+  // Tertiary: Primary entities alone (if article type is news/report)
+  if ((articleType === 'report' || articleType === 'news') && entities.length >= 1) {
+    addQuery(entities[0]);
+    if (entities.length >= 2) {
+      addQuery(`${entities[0]} ${entities[1]}`);
+    }
   }
 
-  return queries.slice(0, 3);
+  // Fallback: Meaningful section/topic terms
+  if (topicId && queries.length < 2) {
+    const topicPhrase = topicId.replace(/-/g, ' ');
+    if (!TOKEN_STOPWORDS.has(topicPhrase.toLowerCase())) {
+      addQuery(topicPhrase);
+    }
+  }
+
+  return queries.slice(0, 4); // Up to 4 queries for better coverage
 }
 
 function extractEntities(article) {

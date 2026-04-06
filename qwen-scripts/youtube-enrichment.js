@@ -25,33 +25,41 @@ const YOUTUBE_NOCOOKIE_BASE = 'https://www.youtube-nocookie.com';
 async function enrichArticleWithVideo(article, options = {}) {
   const apiKey = resolveApiKey();
   if (!apiKey) {
-    console.log('[youtube-enrichment] No API key configured; skipping YouTube enrichment');
+    console.log('[youtube] No API key configured; skipping YouTube enrichment');
     return null;
   }
+
+  const articleSlug = article?.articleSlug || 'unknown';
+  const articleTitle = article?.draft?.title || article?.brief?.title || 'Untitled';
+  console.log(`[youtube] Article: slug=${articleSlug}, title="${articleTitle}"`);
 
   const config = resolveConfig(options);
   const queries = buildSearchQueries(article);
   if (queries.length === 0) {
-    console.log('[youtube-enrichment] No search queries derived; skipping');
+    console.log('[youtube] No search queries derived; skipping');
     return null;
   }
 
-  const titleTokens = tokenize(article?.draft?.title || article?.brief?.title || '');
+  console.log(`[youtube] Generated ${queries.length} queries: ${queries.map((q) => `"${q}"`).join(', ')}`);
+
+  const titleTokens = tokenize(articleTitle);
   const entities = extractEntities(article);
   const articleProfile = { titleTokens, entities };
+  console.log(`[youtube] Profile: ${titleTokens.length} title tokens, ${entities.length} entities`);
 
   // Phase 1: Search for candidates across queries
   const allSearchCandidates = await searchCandidates(queries, config, apiKey, article);
   if (allSearchCandidates.length === 0) {
-    console.log('[youtube-enrichment] No search results for any query');
+    console.log('[youtube] No search results for any query');
     return null;
   }
 
-  console.log(`[youtube-enrichment] Found ${allSearchCandidates.length} raw search candidates`);
+  console.log(`[youtube] Phase 1: ${allSearchCandidates.length} candidates`);
 
   // Phase 2: Fetch detailed metadata for top candidates
   const videoIds = allSearchCandidates.slice(0, config.maxVideoDetails).map((c) => c.videoId);
-  const videoDetails = await fetchVideoDetails(videoIds, apiKey);
+  console.log(`[youtube] Fetching details for ${videoIds.length} videos`);
+  const videoDetails = await fetchVideoDetails(videoIds, apiKey, config);
 
   // Phase 3: Enrich search results with detailed metadata
   const enriched = allSearchCandidates.map((candidate) => {
@@ -62,11 +70,11 @@ async function enrichArticleWithVideo(article, options = {}) {
   // Phase 4: Filter by hard constraints
   const filtered = applyHardFilters(enriched, config, articleProfile);
   if (filtered.length === 0) {
-    console.log('[youtube-enrichment] No candidates passed hard filters');
+    console.log('[youtube] No candidates passed hard filters');
     return null;
   }
 
-  console.log(`[youtube-enrichment] ${filtered.length} candidates after hard filters`);
+  console.log(`[youtube] Phase 4: ${filtered.length} after filters`);
 
   // Phase 5: Score and rank
   const scored = filtered.map((candidate) => {
@@ -79,11 +87,12 @@ async function enrichArticleWithVideo(article, options = {}) {
   // Phase 6: Threshold gate
   const best = scored[0];
   if (best.score < config.minAttachScore) {
-    console.log(`[youtube-enrichment] Best score ${best.score.toFixed(1)} below threshold ${config.minAttachScore}; attaching nothing`);
+    console.log(`[youtube] Best score ${best.score.toFixed(1)} < threshold ${config.minAttachScore}; no attach`);
     return null;
   }
 
-  console.log(`[youtube-enrichment] Attaching video: "${best.detail?.title || best.snippet?.title}" (score: ${best.score.toFixed(1)})`);
+  const videoId = best.detail?.id || best.videoId || 'unknown';
+  console.log(`[youtube] ATTACH: video="${best.detail?.title}" channel="${best.detail?.channelTitle}" score=${best.score.toFixed(1)} videoId=${videoId}`);
 
   return normalizeVideoObject(best, article);
 }
@@ -98,18 +107,31 @@ async function searchCandidates(queries, config, apiKey, article) {
   const seenIds = new Set();
 
   for (const query of queries) {
+    console.log(`[youtube] Searching for: "${query}"`);
     const searchUrl = buildSearchUrl(query, config, apiKey);
+    // Log sanitized URL (without key for security)
+    const sanitizedUrl = searchUrl.replace(/key=[^&]*/, 'key=REDACTED');
+    console.log(`[youtube] Request URL (sanitized): ${sanitizedUrl.substring(0, 200)}...`);
+
     try {
       const response = await fetch(searchUrl);
+      console.log(`[youtube] Response status: ${response.status}`);
+
       if (!response.ok) {
-        console.warn(`[youtube-enrichment] Search failed for query "${query}": ${response.status}`);
+        const errorBody = await response.text().catch(() => '');
+        console.warn(`[youtube] HTTP ${response.status} for "${query}": ${errorBody.substring(0, 200)}`);
         continue;
       }
+
       const data = await response.json();
       if (data.error) {
-        console.warn(`[youtube-enrichment] API error for query "${query}": ${data.error.message}`);
+        console.warn(`[youtube] API error for "${query}": code=${data.error.code} message=${data.error.message}`);
         continue;
       }
+
+      const resultCount = (data.items || []).length;
+      console.log(`[youtube] Query "${query}": ${resultCount} results`);
+
       for (const item of (data.items || [])) {
         if (item.id?.kind !== 'youtube#video') continue;
         const videoId = item.id.videoId;
@@ -122,44 +144,59 @@ async function searchCandidates(queries, config, apiKey, article) {
         });
       }
     } catch (error) {
-      console.warn(`[youtube-enrichment] Network error for query "${query}": ${error.message}`);
+      console.error(`[youtube] Network error for "${query}": ${error.message}`);
     }
   }
 
+  console.log(`[youtube] searchCandidates: ${allCandidates.length} total candidates`);
   return allCandidates;
-}
 
 function buildSearchUrl(query, config, apiKey) {
+  // Add publishedAfter for recent news (past 72 hours for reports/analysis)
+  const now = new Date();
+  const pastTime = new Date(now.getTime() - 72 * 60 * 60 * 1000);
+  const publishedAfter = pastTime.toISOString();
+
   const params = new URLSearchParams({
     part: 'snippet',
     q: query,
     type: 'video',
     maxResults: String(config.maxSearchResults),
     relevanceLanguage: 'en',
-    videoEmbeddable: 'true',
+    videoEmbeddable: true, // Boolean parameter
     order: 'relevance',
+    publishedAfter, // Freshness control
     key: apiKey,
   });
   return `${YOUTUBE_SEARCH_URL}?${params.toString()}`;
 }
 
-async function fetchVideoDetails(videoIds, apiKey) {
+async function fetchVideoDetails(videoIds, apiKey, config = {}) {
   const detailsMap = new Map();
   if (videoIds.length === 0) return detailsMap;
 
-  const detailsUrl = `${YOUTUBE_VIDEOS_URL}?part=snippet,contentDetails,status,statistics&id=${videoIds.join(',')}&key=${apiKey}`;
+  const idString = videoIds.join(',');
+  console.log(`[youtube] Fetching details for: ${idString.substring(0, 100)}${idString.length > 100 ? '...' : ''}`);
+
+  const detailsUrl = `${YOUTUBE_VIDEOS_URL}?part=snippet,contentDetails,status,statistics&id=${idString}&key=${apiKey}`;
+  const sanitizedUrl = detailsUrl.replace(/key=[^&]*/, 'key=REDACTED');
+  console.log(`[youtube] Details URL (sanitized): ${sanitizedUrl.substring(0, 200)}...`);
 
   try {
     const response = await fetch(detailsUrl);
+    console.log(`[youtube] Details response status: ${response.status}`);
     if (!response.ok) {
-      console.warn(`[youtube-enrichment] Video details fetch failed: ${response.status}`);
+      const errorBody = await response.text().catch(() => '(no body)');
+      console.warn(`[youtube] Details HTTP ${response.status}: ${errorBody.substring(0, 200)}`);
       return detailsMap;
     }
     const data = await response.json();
     if (data.error) {
-      console.warn(`[youtube-enrichment] API error for video details: ${data.error.message}`);
+      console.warn(`[youtube] Details API error: code=${data.error.code} message=${data.error.message}`);
       return detailsMap;
     }
+    const itemsCount = (data.items || []).length;
+    console.log(`[youtube] Got ${itemsCount} details`);
     for (const item of (data.items || [])) {
       detailsMap.set(item.id, {
         title: item.snippet?.title || '',
@@ -174,7 +211,7 @@ async function fetchVideoDetails(videoIds, apiKey) {
       });
     }
   } catch (error) {
-    console.warn(`[youtube-enrichment] Network error for video details: ${error.message}`);
+    console.error(`[youtube] Details fetch exception: ${error.message}`);
   }
 
   return detailsMap;
