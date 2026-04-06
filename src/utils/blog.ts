@@ -94,6 +94,14 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     section_id,
     topic_id,
     article_type,
+    youtube_video_id,
+    youtube_video_title,
+    youtube_video_channel,
+    youtube_video_published,
+    youtube_video_duration,
+    youtube_video_thumbnail,
+    youtube_video_score,
+    youtube_video_match_reason,
   } = data;
 
   const slug = cleanSlug(id); // cleanSlug(rawSlug.split('/').pop());
@@ -147,6 +155,14 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     section_id,
     topic_id,
     article_type,
+    youtube_video_id,
+    youtube_video_title,
+    youtube_video_channel,
+    youtube_video_published,
+    youtube_video_duration,
+    youtube_video_thumbnail,
+    youtube_video_score,
+    youtube_video_match_reason,
   };
 };
 
