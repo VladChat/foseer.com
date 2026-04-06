@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T05:58:07.445Z",
+  "event_id": "evt-2026-04-06-news-general-global",
+  "cluster_id": "evt-2026-04-06-news-general-global",
+  "article_type": "report",
+  "title": "Iowa State Star Audi Crooks Enters Transfer Portal Amid Mass Exodus",
+  "slug": "iowa-state-star-audi-crooks-enters-transfer-portal-amid-mass",
+  "canonical_slug": "2026-04-06-iowa-state-star-audi-crooks-enters-transfer-portal-amid-mass",
+  "expected_url": "/article/2026-04-06-iowa-state-star-audi-crooks-enters-transfer-portal-amid-mass",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-iowa-state-star-audi-crooks-enters-transfer-portal-amid-mass.mdx",
+  "published_at": "2026-04-06T05:58:07.443Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Transfers & Business",
+  "topics": [
+    "Iowa State star Audi Crooks to enter transfer portal",
+    "Transfers & Business"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/pqrjzftqky8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/pqrjzftqky8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-globe-shows-north-america-in-detail-pQrJzfTQkY8",
+    "asset_key": "unsplash:pQrJzfTQkY8",
+    "alt_text": "Illustration for Iowa State Star Audi Crooks Enters Transfer Portal Amid Mass Exodus",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "global Iowa State photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Iowa State star Audi Crooks to enter transfer portal",
+        "url": "https://www.nytimes.com/athletic/7166788/2026/04/02/iowa-state-audi-crooks-transfer-portal/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Where will Audi Crooks go as a transfer after leaving Iowa State?",
+        "url": "https://www.nytimes.com/athletic/7167559/2026/04/02/audi-crooks-transfer-iowa-state/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "The transfer portal obliterated stability in the NCAA. Here's a fix",
+        "url": "https://bleedingheartland.com/2026/04/04/the-transfer-portal-obliterated-stability-in-the-ncaa-heres-a-fix",
+        "domain": "bleedingheartland.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": true,
+        "matched_aliases": [
+          "transfers"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "global Iowa State photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "iowa",
+        "state"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
