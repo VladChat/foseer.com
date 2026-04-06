@@ -1,0 +1,89 @@
+---
+// File: src/components/article/ArticleVideoBlock.astro
+// Purpose: Render a supplementary YouTube video block inline inside an article.
+// Uses youtube-nocookie.com for privacy. Lazy-loads the iframe.
+// Never replaces the hero image. Never appears on homepage/archive/list views.
+
+export interface Props {
+  videoId: string;
+  title: string;
+  channelTitle?: string;
+  duration?: string;
+  matchReason?: string;
+}
+
+const { videoId, title, channelTitle, duration, matchReason } = Astro.props;
+const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
+const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+const playerUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+---
+
+<aside
+  class="my-10 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/40 overflow-hidden"
+  aria-label="Related video"
+>
+  <div class="flex items-center gap-2 px-4 py-2.5 border-b border-slate-200 dark:border-slate-700">
+    <span class="text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400 dark:text-slate-500">
+      Related video
+    </span>
+    {duration && (
+      <span class="text-[10px] text-slate-400 dark:text-slate-500">
+        {duration}
+      </span>
+    )}
+    {channelTitle && (
+      <span class="text-[10px] text-slate-400 dark:text-slate-500 truncate">
+        {channelTitle}
+      </span>
+    )}
+  </div>
+
+  <div class="relative aspect-video bg-slate-100 dark:bg-slate-900">
+    <!-- Thumbnail with play button overlay, swaps to iframe on click -->
+    <div
+      class="absolute inset-0 cursor-pointer group"
+      data-youtube-embed={videoId}
+      data-youtube-player={playerUrl}
+    >
+      <img
+        src={thumbnailUrl}
+        alt={title}
+        width="1280"
+        height="720"
+        loading="lazy"
+        decoding="async"
+        class="w-full h-full object-cover transition-opacity group-hover:opacity-90"
+      />
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-red-600/90 flex items-center justify-center shadow-lg group-hover:bg-red-600 transition-colors">
+          <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<script>
+  // Lazy-load YouTube iframe only when user clicks play
+  document.querySelectorAll('[data-youtube-embed]').forEach((container) => {
+    container.addEventListener('click', () => {
+      const videoId = container.getAttribute('data-youtube-embed');
+      const playerUrl = container.getAttribute('data-youtube-player');
+      if (!videoId || !playerUrl) return;
+
+      const iframe = document.createElement('iframe');
+      iframe.setAttribute('src', playerUrl);
+      iframe.setAttribute('title', 'Related video');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('loading', 'lazy');
+      iframe.className = 'absolute inset-0 w-full h-full border-0';
+
+      const wrapper = container.parentElement;
+      wrapper.innerHTML = '';
+      wrapper.appendChild(iframe);
+    }, { once: true });
+  });
+</script>

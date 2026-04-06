@@ -61,6 +61,7 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           SEARCH_WEB_API: ${{ secrets.SEARCH_WEB_API }}
           SEARCH_WEB_CX: ${{ secrets.SEARCH_WEB_CX }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           QWEN_API_RETRY_MAX_ATTEMPTS: '3'
           QWEN_API_RETRY_BASE_DELAY_MS: '700'
           QWEN_API_RETRY_MAX_DELAY_MS: '6000'

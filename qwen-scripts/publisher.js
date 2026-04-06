@@ -554,6 +554,23 @@ draft: false
     }
   }
 
+  // Add YouTube video metadata if available (supplementary, never replaces hero image)
+  const youtubeVideo = article?.youtubeVideo || null;
+  if (youtubeVideo && youtubeVideo.videoId) {
+    fm += `youtube_video_id: "${escapeQuotes(youtubeVideo.videoId)}"\n`;
+    fm += `youtube_video_title: "${escapeQuotes(youtubeVideo.title)}"\n`;
+    fm += `youtube_video_channel: "${escapeQuotes(youtubeVideo.channelTitle)}"\n`;
+    fm += `youtube_video_published: "${escapeQuotes(youtubeVideo.publishedAt)}"\n`;
+    if (youtubeVideo.duration) {
+      fm += `youtube_video_duration: "${escapeQuotes(youtubeVideo.duration)}"\n`;
+    }
+    if (youtubeVideo.thumbnail) {
+      fm += `youtube_video_thumbnail: "${escapeQuotes(youtubeVideo.thumbnail)}"\n`;
+    }
+    fm += `youtube_video_score: ${youtubeVideo.score}\n`;
+    fm += `youtube_video_match_reason: "${escapeQuotes(youtubeVideo.matchReason)}"\n`;
+  }
+
   // Add canonical URL hint if available
   const canonicalUrl = article.canonicalUrl || expectedUrl;
   if (canonicalUrl) {

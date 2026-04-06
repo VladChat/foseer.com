@@ -10,6 +10,7 @@ import { selectBestTopic } from './event-brief-builder.js';
 import { createClaimMap, validateClaimMap } from './claim-map.js';
 import { draftArticle, hardenDraft } from './article-drafter.js';
 import { generateImagePackage } from './nodes/image-node.js';
+import { enrichCandidateWithVideo } from './nodes/youtube-enrichment-node.js';
 import { publishArticle } from './publisher.js';
 import { validatePrePublishGraph, buildCanonicalPublishPayload, buildPublishManifest, writePublishManifest, validatePublishedArtifact } from './validate-publish-graph.js';
 import { validateTagSelection } from './validate-tags.js';
@@ -56,8 +57,9 @@ loadProjectEnv();
  *   4. Claim Map Creation (GATE: must pass)
  *   5. Article Drafting
  *   6. Image Support
- *   7. Publish Article (GATE: must succeed)
- *   8. Verify Local Visibility (GATE for local/dev runs, CI-safe skip online)
+ *   7. YouTube Enrichment (non-blocking, optional)
+ *   8. Publish Article (GATE: must succeed)
+ *   9. Verify Local Visibility (GATE for local/dev runs, CI-safe skip online)
  * 
  * @param {Object} options - Pipeline options
  * @returns {Promise<PipelineResult>} Pipeline result with honest success reporting
@@ -102,6 +104,7 @@ export async function runEditorialPipeline(options = {}) {
     claimMapCreation: null,
     articleDrafting: null,
     imageSupport: null,
+    youtubeEnrichment: null,
     publishing: null,
     localVerification: null,
   };
@@ -844,6 +847,7 @@ export async function runEditorialPipeline(options = {}) {
   const claimMapItems = [];
   const draftItems = [];
   const imageItems = [];
+  const youtubeItems = [];
   const publishItems = [];
   const verificationItems = [];
   const articleErrors = [];
@@ -977,8 +981,39 @@ export async function runEditorialPipeline(options = {}) {
       // Image is not a hard gate - continue
     }
 
-    // Stage 7: Publish Article (GATE)
-    console.log('[pipeline] Stage 7: Publishing article...');
+    // Stage 7: YouTube Enrichment (non-blocking, optional)
+    console.log('[pipeline] Stage 7: YouTube enrichment...');
+    try {
+      const videoResult = await enrichCandidateWithVideo(candidate);
+      candidate.youtubeVideo = videoResult;
+      youtubeItems.push({
+        title: articleLabel,
+        success: videoResult !== null,
+        error: null,
+        data: videoResult
+          ? {
+              videoId: videoResult.videoId,
+              title: videoResult.title,
+              channelTitle: videoResult.channelTitle,
+              score: videoResult.score,
+              matchReason: videoResult.matchReason,
+            }
+          : null,
+      });
+
+      if (videoResult) {
+        console.log(`[pipeline] YouTube video attached: "${videoResult.title}" (score: ${videoResult.score})`);
+      } else {
+        console.log(`[pipeline] YouTube: no strong match for "${articleLabel}"`);
+      }
+    } catch (error) {
+      console.warn(`[pipeline] YouTube enrichment failed: ${error.message}`);
+      youtubeItems.push({ title: articleLabel, success: false, error: error.message, data: null });
+      // YouTube is not a hard gate - continue
+    }
+
+    // Stage 8: Publish Article (GATE)
+    console.log('[pipeline] Stage 8: Publishing article...');
     try {
       if (candidateIdentityKey && isIdentityAlreadyPublished(candidateIdentityKey)) {
         const duplicateError = `Duplicate guard blocked publish for already published identity: ${candidateIdentityKey}`;
@@ -1180,6 +1215,7 @@ export async function runEditorialPipeline(options = {}) {
   stageResults.claimMapCreation = buildAggregateStageResult('claimMapCreation', claimMapItems, articleErrors);
   stageResults.articleDrafting = buildAggregateStageResult('articleDrafting', draftItems, articleErrors);
   stageResults.imageSupport = buildAggregateStageResult('imageSupport', imageItems, articleErrors, { allowFailures: true });
+  stageResults.youtubeEnrichment = buildAggregateStageResult('youtubeEnrichment', youtubeItems, articleErrors, { allowFailures: true });
   stageResults.publishing = buildAggregateStageResult('publishing', publishItems, articleErrors);
   stageResults.localVerification = buildAggregateStageResult('localVerification', verificationItems, articleErrors);
 
