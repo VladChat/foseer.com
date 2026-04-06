@@ -150,6 +150,7 @@ async function searchCandidates(queries, config, apiKey, article) {
 
   console.log(`[youtube] searchCandidates: ${allCandidates.length} total candidates`);
   return allCandidates;
+}
 
 function buildSearchUrl(query, config, apiKey) {
   // Add publishedAfter for recent news (past 72 hours for reports/analysis)
