@@ -1,7 +1,7 @@
 // File: qwen-scripts/nodes/youtube-enrichment-node.js
 // Purpose: Pipeline node wrapper for YouTube enrichment. Non-blocking — failure never stops article publishing.
 
-const { enrichArticleWithVideo } = require('../youtube-enrichment.js');
+import { enrichArticleWithVideo } from '../youtube-enrichment.js';
 
 /**
  * Enrich one article candidate with a YouTube video if a strong match exists.

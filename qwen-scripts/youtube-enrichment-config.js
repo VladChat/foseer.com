@@ -37,7 +37,7 @@ function resolveConfig(overrides = {}) {
     trustedChannels: TRUSTED_CHANNELS,
     trustedChannelBoost: Number(process.env.QWEN_YT_TRUSTED_CHANNEL_BOOST ?? TRUSTED_CHANNEL_BOOST),
     exactTitleMatchBoost: Number(process.env.QWEN_YT_EXACT_TITLE_BOOST ?? EXACT_TITLE_MATCH_BOOST),
-    entityOverlapBoostPerHit: Number(process.env.QWEN_YT_ENTITY_BOOST ?? ENTITY_OVERLAP_PER_HIT),
+    entityOverlapBoostPerHit: Number(process.env.QWEN_YT_ENTITY_BOOST ?? ENTITY_OVERLAP_BOOST_PER_HIT),
     freshnessBoostHours: Number(process.env.QWEN_YT_FRESHNESS_HOURS ?? FRESHNESS_BOOST_HOURS),
     freshnessBoostValue: Number(process.env.QWEN_YT_FRESHNESS_BOOST ?? FRESHNESS_BOOST_VALUE),
     stalePenaltyDays: Number(process.env.QWEN_YT_STALE_DAYS ?? STALE_PENALTY_DAYS),
@@ -58,7 +58,6 @@ function buildSearchQueries(article) {
   const title = String(article?.draft?.title || article?.brief?.title || '').trim();
   const excerpt = String(article?.draft?.excerpt || article?.brief?.summary || '').trim();
   const entities = extractEntities(article);
-  const sectionId = article?.brief?.section_id || article?.placement?.section_id || '';
   const topicId = article?.brief?.topic_id || article?.placement?.topic_id || '';
   const queries = [];
   const seen = new Set();
@@ -142,7 +141,7 @@ function formatDuration(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`;
 }
 
-module.exports = {
+export {
   resolveConfig,
   buildSearchQueries,
   extractEntities,

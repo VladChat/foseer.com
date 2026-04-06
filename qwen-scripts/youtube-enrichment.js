@@ -2,14 +2,15 @@
 // Purpose: Server-side YouTube enrichment — search, rank, filter, and normalize one best video per article.
 // Uses YouTube Data API v3 (search.list + videos.list). Never exposes the API key to client code.
 
-const {
+import {
   resolveConfig,
   buildSearchQueries,
   extractEntities,
   tokenize,
   parseIsoDuration,
   formatDuration,
-} = require('./youtube-enrichment-config.js');
+  TRUSTED_CHANNELS,
+} from './youtube-enrichment-config.js';
 
 const YOUTUBE_SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search';
 const YOUTUBE_VIDEOS_URL = 'https://www.googleapis.com/youtube/v3/videos';
@@ -347,7 +348,7 @@ function selectBestThumbnail(thumbnails) {
   return thumbnails.medium || thumbnails.default || null;
 }
 
-module.exports = {
+export {
   enrichArticleWithVideo,
   computeRelevanceScore,
   applyHardFilters,
