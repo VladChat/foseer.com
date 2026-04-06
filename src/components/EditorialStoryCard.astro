@@ -44,80 +44,136 @@ const imageSizes = isLead
     },
   ]}
 >
-  {coverImage && (
-    <div class:list={[
-      'relative w-full overflow-hidden rounded-t-2xl bg-slate-100 dark:bg-slate-900',
-      {
-        'aspect-video': true,
-      },
-    ]}>
-      <Image
-        src={coverImage}
-        alt={imageAlt}
-        width={imageWidth}
-        height={imageHeight}
-        sizes={imageSizes}
-        loading={imageLoading}
-        fetchpriority={isLead ? 'high' : 'auto'}
-        quality={85}
-        class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-      />
+  {isLead ? (
+    <div class="flex flex-col flex-grow">
+      <div class="mb-3 flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-slate-500 dark:text-slate-400">
+        {isLead ? (
+          <span class="text-accent">Lead Story</span>
+        ) : post.category && categoryHref ? (
+          <>
+            <a class="text-accent hover:text-primary transition" href={categoryHref}>{post.category.title}</a>
+            <span aria-hidden="true">•</span>
+          </>
+        ) : null}
+        <time datetime={String(post.publishDate)}>{getFormattedDate(post.publishDate)}</time>
+      </div>
+
+      <h2
+        class="mb-4 font-heading text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 leading-tight"
+      >
+        <a class="hover:text-primary transition" href={postHref}>{post.title}</a>
+      </h2>
+
+      {coverImage && (
+        <div class="relative w-full overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-900 aspect-video mb-5">
+          <Image
+            src={coverImage}
+            alt={imageAlt}
+            width={imageWidth}
+            height={imageHeight}
+            sizes={imageSizes}
+            loading={imageLoading}
+            fetchpriority={isLead ? 'high' : 'auto'}
+            quality={85}
+            class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+      )}
+
+      {showExcerpt && post.excerpt && (
+        <p class="text-slate-600 dark:text-slate-300 text-lg leading-8 max-w-2xl mb-6">
+          {post.excerpt}
+        </p>
+      )}
+
+      <div class="mt-auto pt-2">
+        <a
+          class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.06em] text-primary hover:text-secondary transition"
+          href={postHref}
+        >
+          <span>Read story</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
-  )}
+  ) : (
+    <>
+      {coverImage && (
+        <div class:list={[
+          'relative w-full overflow-hidden rounded-t-2xl bg-slate-100 dark:bg-slate-900',
+          {
+            'aspect-video': true,
+          },
+        ]}>
+          <Image
+            src={coverImage}
+            alt={imageAlt}
+            width={imageWidth}
+            height={imageHeight}
+            sizes={imageSizes}
+            loading={imageLoading}
+            fetchpriority={isLead ? 'high' : 'auto'}
+            quality={85}
+            class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+      )}
 
-  <div class:list={[
-    'flex flex-col flex-grow',
-    {
-      'p-6 md:p-8': isLead && !coverImage,
-      'p-5': !isLead && !coverImage,
-      'pt-5': coverImage,
-    },
-  ]}>
-    <div class="mb-4 flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-slate-500 dark:text-slate-400">
-      {isLead ? (
-        <span class="text-accent">Lead Story</span>
-      ) : post.category && categoryHref ? (
-        <>
-          <a class="text-accent hover:text-primary transition" href={categoryHref}>{post.category.title}</a>
-          <span aria-hidden="true">•</span>
-        </>
-      ) : null}
-      <time datetime={String(post.publishDate)}>{getFormattedDate(post.publishDate)}</time>
-    </div>
-
-    <h2
-      class:list={[
-        'font-heading font-bold tracking-tight text-slate-900 dark:text-slate-100',
+      <div class:list={[
+        'flex flex-col flex-grow',
         {
-          'text-3xl md:text-4xl leading-tight': isLead,
-          'text-2xl leading-snug': !isLead,
-          'text-xl leading-snug': isCompact,
-        },
-      ]}
-    >
-      <a class="hover:text-primary transition" href={postHref}>{post.title}</a>
-    </h2>
-
-    {showExcerpt && post.excerpt && (
-      <p class:list={[
-        'mt-4 text-slate-600 dark:text-slate-300',
-        {
-          'text-lg leading-8 max-w-2xl': isLead,
-          'text-base leading-7': !isLead,
+          'p-6 md:p-8': isLead && !coverImage,
+          'p-5': !isLead && !coverImage,
+          'pt-5': coverImage,
         },
       ]}>
-        {post.excerpt}
-      </p>
-    )}
+        <div class="mb-4 flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-slate-500 dark:text-slate-400">
+          {isLead ? (
+            <span class="text-accent">Lead Story</span>
+          ) : post.category && categoryHref ? (
+            <>
+              <a class="text-accent hover:text-primary transition" href={categoryHref}>{post.category.title}</a>
+              <span aria-hidden="true">•</span>
+            </>
+          ) : null}
+          <time datetime={String(post.publishDate)}>{getFormattedDate(post.publishDate)}</time>
+        </div>
 
-    <div class="mt-auto pt-5">
-      <a
-        class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.06em] text-primary hover:text-secondary transition"
-        href={postHref}
-      >
-        <span>Read story</span>
-        <span aria-hidden="true">→</span>
-      </a>
-    </div>
-  </div>
+        <h2
+          class:list={[
+            'font-heading font-bold tracking-tight text-slate-900 dark:text-slate-100',
+            {
+              'text-3xl md:text-4xl leading-tight': isLead,
+              'text-2xl leading-snug': !isLead,
+              'text-xl leading-snug': isCompact,
+            },
+          ]}
+        >
+          <a class="hover:text-primary transition" href={postHref}>{post.title}</a>
+        </h2>
+
+        {showExcerpt && post.excerpt && (
+          <p class:list={[
+            'mt-4 text-slate-600 dark:text-slate-300',
+            {
+              'text-lg leading-8 max-w-2xl': isLead,
+              'text-base leading-7': !isLead,
+            },
+          ]}>
+            {post.excerpt}
+          </p>
+        )}
+
+        <div class="mt-auto pt-5">
+          <a
+            class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.06em] text-primary hover:text-secondary transition"
+            href={postHref}
+          >
+            <span>Read story</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </>
+  )}
 </article>
