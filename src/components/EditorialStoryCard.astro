@@ -77,11 +77,11 @@ const imageSizes = isLead
       {isLead ? (
         <span class="text-accent">Lead Story</span>
       ) : post.category && categoryHref ? (
-        <a class="text-accent hover:text-primary transition" href={categoryHref}>{post.category.title}</a>
-      ) : (
-        <span>Coverage</span>
-      )}
-      <span aria-hidden="true">•</span>
+        <>
+          <a class="text-accent hover:text-primary transition" href={categoryHref}>{post.category.title}</a>
+          <span aria-hidden="true">•</span>
+        </>
+      ) : null}
       <time datetime={String(post.publishDate)}>{getFormattedDate(post.publishDate)}</time>
     </div>
 
