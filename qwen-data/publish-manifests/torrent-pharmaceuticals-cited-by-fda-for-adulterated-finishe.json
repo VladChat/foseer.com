@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T20:10:08.450Z",
+  "event_id": "evt-2026-04-06-pharma-fda-general-global",
+  "cluster_id": "evt-2026-04-06-pharma-fda-general-global",
+  "article_type": "report",
+  "title": "Torrent Pharmaceuticals Cited by FDA for Adulterated Finished Drugs",
+  "slug": "torrent-pharmaceuticals-cited-by-fda-for-adulterated-finishe",
+  "canonical_slug": "2026-04-06-torrent-pharmaceuticals-cited-by-fda-for-adulterated-finishe",
+  "expected_url": "/article/2026-04-06-torrent-pharmaceuticals-cited-by-fda-for-adulterated-finishe",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-torrent-pharmaceuticals-cited-by-fda-for-adulterated-finishe.mdx",
+  "published_at": "2026-04-06T20:10:08.448Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Pharma & FDA",
+  "topics": [
+    "Torrent Pharmaceuticals Limited",
+    "Pharma & FDA"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/x9_mmr7ehka/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/x9_mmr7ehka/cover.jpg",
+    "source_url": "https://unsplash.com/photos/workers-sort-and-package-items-in-a-factory-x9_MmR7EhkA",
+    "asset_key": "unsplash:x9_MmR7EhkA",
+    "alt_text": "Illustration for Torrent Pharmaceuticals Cited by FDA for Adulterated Finished Drugs",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Torrent Pharmaceuticals Limited photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Torrent Pharmaceuticals Limited",
+        "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/torrent-pharmaceuticals-limited-585255-09042024",
+        "domain": "fda.gov"
+      },
+      {
+        "title": "Azurity Pharmaceuticals, Inc.",
+        "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/azurity-pharmaceuticals-inc-656489-09202024",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Azurity Pharmaceuticals, Inc.",
+          "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/azurity-pharmaceuticals-inc-656489-09202024",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "pharmaceuticals"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Torrent Pharmaceuticals Limited photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "torrent",
+        "pharmaceuticals",
+        "limited"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

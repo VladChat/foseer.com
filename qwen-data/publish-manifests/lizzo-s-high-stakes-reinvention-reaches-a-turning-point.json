@@ -1,0 +1,109 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T20:11:22.724Z",
+  "event_id": "evt-2026-04-06-film-tv-signing-global",
+  "cluster_id": "evt-2026-04-06-film-tv-signing-global",
+  "article_type": "report",
+  "title": "Lizzo’s High-Stakes Reinvention Reaches a Turning Point",
+  "slug": "lizzo-s-high-stakes-reinvention-reaches-a-turning-point",
+  "canonical_slug": "2026-04-06-lizzo-s-high-stakes-reinvention-reaches-a-turning-point",
+  "expected_url": "/article/2026-04-06-lizzo-s-high-stakes-reinvention-reaches-a-turning-point",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-lizzo-s-high-stakes-reinvention-reaches-a-turning-point.mdx",
+  "published_at": "2026-04-06T20:11:22.722Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Cybersecurity",
+  "topics": [
+    "Lizzo’s reinvention faces its greatest test yet",
+    "Cybersecurity"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/zqgassqz9l8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/zqgassqz9l8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-people-that-are-on-stage-zqgASSqZ9L8",
+    "asset_key": "unsplash:zqgASSqZ9L8",
+    "alt_text": "Illustration for Lizzo’s High-Stakes Reinvention Reaches a Turning Point",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Reinvention Reaches concert photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Lizzo’s reinvention faces its greatest test yet",
+        "url": "https://www.theguardian.com/music/commentisfree/2026/apr/03/what-does-lizzo-stand-for-now",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Reinvention Reaches concert photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "reinvention",
+        "reaches"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
