@@ -44,8 +44,11 @@ function checkPreDraftDuplicate(candidate, options = {}) {
         ? candidate.sourcePack.sources
         : [];
 
+    const rawUrls = publishableSources
+      .map((s) => s?.url || s?.canonicalUrl || s?.canonical_url || '')
+      .filter(Boolean);
     const incomingSourceUrls = new Set(
-      [...new Set(publishableSources.map((s) => normalizePreDraftUrl(s?.url || s?.canonicalUrl || s?.canonical_url || ''))].filter(Boolean)
+      [...new Set(rawUrls.map(normalizePreDraftUrl))]
     );
     if (incomingSourceUrls.size === 0) return { isDuplicate: false };
 
