@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T00:30:08.294Z",
+  "event_id": "evt-2026-04-05-major-leagues-general-global-nfl-nba",
+  "cluster_id": "evt-2026-04-05-major-leagues-general-global-nfl-nba",
+  "article_type": "analysis",
+  "title": "Leeds Edge West Ham on Penalties After a Comeback That Changed Nothing",
+  "slug": "leeds-edge-west-ham-on-penalties-after-a-comeback-that-chang",
+  "canonical_slug": "2026-04-06-leeds-edge-west-ham-on-penalties-after-a-comeback-that-chang",
+  "expected_url": "/article/2026-04-06-leeds-edge-west-ham-on-penalties-after-a-comeback-that-chang",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-leeds-edge-west-ham-on-penalties-after-a-comeback-that-chang.mdx",
+  "published_at": "2026-04-06T00:30:08.291Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Major Leagues",
+  "topics": [
+    "Leeds hold nerve to win shootout after West Ham’s dramatic fightback",
+    "Major Leagues"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/pcymyv83w30/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/pcymyv83w30/cover.jpg",
+    "source_url": "https://unsplash.com/photos/woman-trying-to-catch-the-ball-pcYMYV83w30",
+    "asset_key": "unsplash:pcYMYV83w30",
+    "alt_text": "Illustration for Leeds Edge West Ham on Penalties After a Comeback That Changed Nothing",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "edge penalties comeback photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "NBA",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "Leeds beat West Ham in penalty shootout to reach FA Cup ...",
+        "url": "https://www.beaumontenterprise.com/sports/article/leeds-beat-west-ham-in-penalty-shootout-to-reach-22190436.php",
+        "domain": "beaumontenterprise.com"
+      },
+      {
+        "title": "Leeds beat West Ham in penalty shootout to reach FA Cup ...",
+        "url": "https://www.seattlepi.com/sports/leeds-beat-west-ham-in-penalty-shootout-to-reach-a22190436",
+        "domain": "seattlepi.com"
+      },
+      {
+        "title": "Leeds hold nerve to win shootout after West Ham’s dramatic fightback",
+        "url": "https://www.theguardian.com/football/2026/apr/05/west-ham-leeds-fa-cup-quarter-final-match-report",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "NBA says investigation into dispute between Bucks and Antetokounmpo is ongoing",
+        "url": "https://www.greenwichtime.com/sports/article/nba-says-investigation-into-dispute-between-bucks-22189479.php",
+        "domain": "greenwichtime.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "One publish-ready source has weak title overlap with the article title"
+    ],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "NBA says investigation into dispute between Bucks and Antetokounmpo is ongoing",
+          "url": "https://www.greenwichtime.com/sports/article/nba-says-investigation-into-dispute-between-bucks-22189479.php",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "nba",
+          "label": "NBA",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "nba"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "edge penalties comeback photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "edge",
+        "penalties",
+        "comeback"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
