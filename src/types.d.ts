@@ -72,6 +72,23 @@ export interface Post {
   topic_id?: string;
   /** Canonical taxonomy: article type (explainer | analysis | report) */
   article_type?: 'explainer' | 'analysis' | 'report';
+
+  /** YouTube video enrichment: video ID (supplementary, never replaces hero image) */
+  youtube_video_id?: string;
+  /** YouTube video enrichment: video title */
+  youtube_video_title?: string;
+  /** YouTube video enrichment: channel name */
+  youtube_video_channel?: string;
+  /** YouTube video enrichment: publish date in ISO format */
+  youtube_video_published?: string;
+  /** YouTube video enrichment: duration in HH:MM:SS format */
+  youtube_video_duration?: string;
+  /** YouTube video enrichment: thumbnail URL */
+  youtube_video_thumbnail?: string;
+  /** YouTube video enrichment: relevance score (0-100) */
+  youtube_video_score?: number;
+  /** YouTube video enrichment: match reason (exact_title_match | entity_match | title_relevance | etc) */
+  youtube_video_match_reason?: string;
 }
 
 export interface Taxonomy {
