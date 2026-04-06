@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-06T00:50:54.704Z",
+  "event_id": "evt-2026-04-06-world-geopolitics-general-global",
+  "cluster_id": "evt-2026-04-06-world-geopolitics-general-global",
+  "article_type": "report",
+  "title": "Pope Leo XIV urges hope and dialogue in first Easter Mass as pontiff",
+  "slug": "pope-leo-xiv-urges-hope-and-dialogue-in-first-easter-mass-as",
+  "canonical_slug": "2026-04-06-pope-leo-xiv-urges-hope-and-dialogue-in-first-easter-mass-as",
+  "expected_url": "/article/2026-04-06-pope-leo-xiv-urges-hope-and-dialogue-in-first-easter-mass-as",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-06-pope-leo-xiv-urges-hope-and-dialogue-in-first-easter-mass-as.mdx",
+  "published_at": "2026-04-06T00:50:54.702Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "World & Geopolitics",
+  "topics": [
+    "Pope Leo calls for hope amid global conflicts on his first Easter as pontiff",
+    "World & Geopolitics"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/36841315/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/36841315/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/adorable-baby-s-first-easter-celebration-36841315/",
+    "asset_key": "pexels:36841315",
+    "alt_text": "Charming baby with Easter decorations, plush bunny, and festive setting. Perfect for celebrating baby's first Easter.",
+    "selection_mode": "provider_download_new:pexels:strong:strict",
+    "query_used": "Easter Mass photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 99,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "Diplomacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "Pope Leo marks first Easter as pontiff with call for hope amid global ...",
+        "url": "https://nypost.com/2026/04/05/world-news/pope-leo-marks-first-easter-as-pontiff-with-call-for-hope-amid-global-conflicts/",
+        "domain": "nypost.com"
+      },
+      {
+        "title": "Pope Leo marks first Easter as pontiff with call for hope amid global ...",
+        "url": "https://www.ksat.com/gallery/news/2026/04/05/pope-leo-marks-first-easter-as-pontiff-with-call-for-hope-amid-global-conflicts/",
+        "domain": "ksat.com"
+      },
+      {
+        "title": "Pope Leo marks first Easter as pontiff with call for hope amid global ...",
+        "url": "https://abcnews.com/international/wirestory/pope-leo-marks-easter-pontiff-call-hope-amid-131740375",
+        "domain": "abcnews.com"
+      },
+      {
+        "title": "Pope Leo's first Easter Mass calls for peace through dialogue",
+        "url": "https://apnews.com/article/vatican-pope-easter-urbi-et-orbi-611de44cf58ffa153f00ae1145ad3130",
+        "domain": "apnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "global conflicts",
+          "diplomatic"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Easter Mass photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "easter",
+        "mass"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
