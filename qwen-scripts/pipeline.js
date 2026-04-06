@@ -1338,6 +1338,7 @@ function resolveSourcePackRetryPhase(attemptNumber = 1) {
       phase: 'cheap_refresh',
       description: 'refresh discovery with cheaper channels first (google/gdelt, brave disabled)',
       discoveryOptions: {
+        livePhase: 'rescue',
         disableBrave: true,
         disableBraveExpansion: true,
         disableTargetedCoverage: true,
@@ -1353,6 +1354,7 @@ function resolveSourcePackRetryPhase(attemptNumber = 1) {
     phase: 'limited_brave_refresh',
     description: 'single constrained brave retry after cheap refresh',
     discoveryOptions: {
+      livePhase: 'rescue',
       disableBrave: false,
       disableBraveExpansion: true,
       disableTargetedCoverage: true,

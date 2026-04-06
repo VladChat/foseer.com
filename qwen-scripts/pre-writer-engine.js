@@ -385,6 +385,9 @@ function isNearMissSourcePackFailure(failureCodes = []) {
   return codes.has('only_one_publishable_source')
     || codes.has('missing_official')
     || codes.has('missing_trusted_reporting')
+    || codes.has('weak_event_alignment')
+    || codes.has('low_story_coherence')
+    || codes.has('low_source_consistency')
     || codes.has('thin_pack_after_rescue');
 }
 
@@ -420,6 +423,15 @@ function classifySourcePackFailureCodes({ reasons = [], sourcePack = null } = {}
 
   if (text.includes('need at least 2 publishable sources, found 1') || text.includes('need at least 2 different domains among publishable sources, found 1')) {
     codes.add('only_one_publishable_source');
+  }
+  if (text.includes('need stronger same-event alignment among publishable sources')) {
+    codes.add('weak_event_alignment');
+  }
+  if (text.includes('publish-ready source pack coherence too low')) {
+    codes.add('low_story_coherence');
+  }
+  if (text.includes('source consistency too weak')) {
+    codes.add('low_source_consistency');
   }
   if (text.includes('publishable pack remains thin') || text.includes('publishable evidence remained thin')) {
     codes.add('thin_pack_after_rescue');
@@ -2056,7 +2068,8 @@ function isRecentDuplicateCandidate(candidate, inventoryEntries) {
     const sameTopic = topicId && topicId === String(entry.topic_id || '').trim().toLowerCase();
 
     let score = 0;
-    if (titleOverlap >= 4) score = Math.max(score, 100);
+    if (titleOverlap >= 5) score = Math.max(score, 100);
+    if (titleOverlap >= 4 && (keywordOverlap >= 4 || entityOverlap >= 2)) score = Math.max(score, 96);
     if (sameTopic && titleOverlap >= 3) score = Math.max(score, 95);
     if (sameTopic && titleOverlap >= 2 && entityOverlap >= 1) score = Math.max(score, 90);
     if (sameTopic && titleOverlap >= 2 && keywordOverlap >= 2) score = Math.max(score, 85);

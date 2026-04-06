@@ -536,12 +536,51 @@ function buildEvidenceText({ draft = {}, brief = {}, sourcePack = {} } = {}) {
 }
 
 function buildEffectiveTagging({ draft = {}, brief = {}, sourcePack = {}, placement = {} } = {}) {
+  const registry = loadTagRegistry();
   const picked = resolveCanonicalTagFrame({ draft, brief, sourcePack, placement });
   if (picked && Array.isArray(picked.tags) && picked.tags.length > 0 && picked.primary_topic_slug) {
+    const placementTopicId = resolveTopicId(placement?.topic_id || null);
+    const pickedPrimaryTopicId = resolveTopicId(picked.primary_topic_slug || null);
+    if (
+      placementTopicId
+      && pickedPrimaryTopicId
+      && placementTopicId !== pickedPrimaryTopicId
+      && registry?.bySlug?.[placementTopicId]
+    ) {
+      const repairedPrimary = registry.bySlug[placementTopicId];
+      const retained = Array.isArray(picked.selected)
+        ? picked.selected.filter((entry) => String(entry?.slug || '').trim().toLowerCase() !== pickedPrimaryTopicId)
+        : [];
+      const retainedSlugs = Array.isArray(picked.tag_slugs)
+        ? picked.tag_slugs.filter((slug) => resolveTopicId(slug) !== pickedPrimaryTopicId)
+        : [];
+      const retainedLabels = Array.isArray(picked.tags)
+        ? picked.tags.filter((label, index) => resolveTopicId(picked.tag_slugs?.[index]) !== pickedPrimaryTopicId)
+        : [];
+      return {
+        ...picked,
+        tags: dedupeStrings([repairedPrimary.label, ...retainedLabels]).slice(0, 6),
+        tag_slugs: dedupeStrings([repairedPrimary.slug, ...retainedSlugs]).slice(0, 6),
+        primary_topic_tag: repairedPrimary.label,
+        primary_topic_slug: repairedPrimary.slug,
+        selected: [
+          {
+            slug: repairedPrimary.slug,
+            label: repairedPrimary.label,
+            score: 100,
+            reason: `Primary topic tag realigned to repaired placement topic_id=${placementTopicId}`,
+          },
+          ...retained,
+        ].slice(0, 6),
+        warnings: dedupeStrings([
+          ...(Array.isArray(picked.warnings) ? picked.warnings : []),
+          `Primary topic tag realigned from ${pickedPrimaryTopicId} to ${placementTopicId}`,
+        ]).slice(0, 6),
+      };
+    }
     return picked;
   }
 
-  const registry = loadTagRegistry();
   const primary = placement?.topic_id ? registry.bySlug?.[placement.topic_id] : null;
   if (primary) {
     return {

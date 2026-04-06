@@ -61,6 +61,7 @@ export async function discoverWithBrave(apiKey, queryEntries, options = {}) {
         count: entry.count || options.count || 5,
         freshness: options.freshness || 'pd',
         logLabel: options.logLabel || entry.logLabel || 'discovery_brave_news',
+        livePhase: options.livePhase || null,
       });
       const items = results.results || [];
       statuses.push({ query: entry.query, lane: entry.lane, status: results.status, items: items.length });
@@ -98,6 +99,7 @@ export async function discoverWithGdelt(queryEntries, options = {}) {
         sort: 'DateDesc',
         timespan: options.timespan || entry.timespan || '2days',
         logLabel: options.logLabel || entry.logLabel || 'discovery_gdelt',
+        livePhase: options.livePhase || null,
       });
       const items = results.articles || [];
       statuses.push({ query: entry.query, lane: entry.lane, status: results.status, items: items.length });
@@ -134,6 +136,7 @@ export async function discoverWithTrustedGoogle(apiKey, cx, queryEntries, option
         num: entry.num || 10,
         dateRestrict: options.dateRestrict || entry.dateRestrict || 'd2',
         logLabel: options.logLabel || entry.logLabel || 'discovery_google_trusted',
+        livePhase: options.livePhase || null,
       });
       const items = results.items || [];
       statuses.push({ query: entry.query, lane: entry.lane, status: results.status, items: items.length });
