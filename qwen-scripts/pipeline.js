@@ -1879,6 +1879,11 @@ function evaluatePipelineRunForExit(result) {
       || normalizedBlocker.includes('no candidates discovered')
       || normalizedBlocker.includes('no briefs normalized')
       || normalizedBlocker.includes('pre-draft quality gate failed')
+      || normalizedBlocker.includes('duplicate guard')
+      || normalizedBlocker.includes('direct-event sources')
+      || normalizedBlocker.includes('pre-draft duplicate')
+      || normalizedBlocker.includes('pre-draft direct-event source')
+      || normalizedBlocker.includes('source_overlap>=2')
     );
 
   return {
