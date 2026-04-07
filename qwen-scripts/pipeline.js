@@ -14,6 +14,7 @@ import { enrichCandidateWithVideo } from './nodes/youtube-enrichment-node.js';
 import { publishArticle } from './publisher.js';
 import { validatePrePublishGraph, buildCanonicalPublishPayload, buildPublishManifest, writePublishManifest, validatePublishedArtifact } from './validate-publish-graph.js';
 import { validateTagSelection } from './validate-tags.js';
+import { repairAndEnrichTags } from './tag-picker.js';
 import { resolvePlacementMetadata } from '../qwen-project-governance/shared/article-placement.js';
 import { repairContentPosts } from './repair-content-posts.js';
 import { verifyLocalVisibility, generateVerificationReport } from './local-verification.js';
