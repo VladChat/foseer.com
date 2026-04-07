@@ -192,25 +192,30 @@ const showUnsplashCredit = imageProvider === 'unsplash' && Boolean(imageAuthorNa
     </div>
 
     {youtubeVideo && (
-      <script>
+      <script is:inline>
         // Insert YouTube block before the second H2 heading in the article body.
         // Falls back to end of article if fewer than 2 H2s exist.
-        document.addEventListener('DOMContentLoaded', () => {
-          const body = document.getElementById('article-body');
-          const block = document.getElementById('article-youtube-block');
+        // Runs immediately on parse (script is at bottom of component, DOM is ready).
+        // Also listens to astro:page-load for Astro client-side navigation.
+        (function moveYoutubeBlock() {
+          var body = document.getElementById('article-body');
+          var block = document.getElementById('article-youtube-block');
           if (!body || !block) return;
 
-          const h2s = body.querySelectorAll(':scope > h2');
+          // Only move if block is still inside article-body (hasn't been moved yet)
+          if (block.parentElement !== body) return;
+
+          var h2s = body.querySelectorAll(':scope > h2');
           if (h2s.length >= 2) {
-            // Insert before the second H2
             h2s[1].insertAdjacentElement('beforebegin', block);
           } else if (h2s.length === 1) {
-            // Only one H2 — insert before it
             h2s[0].insertAdjacentElement('beforebegin', block);
-          } else {
-            // No H2s — keep at end (default slot position)
-            return;
           }
+        })();
+
+        // Re-run after Astro client-side navigation (view transitions or page swap)
+        document.addEventListener('astro:page-load', function() {
+          moveYoutubeBlock();
         });
       </script>
     )}
