@@ -1,0 +1,141 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-07T03:26:19.550Z",
+  "event_id": "evt-2026-04-06-ai-big-tech-general-global-openai",
+  "cluster_id": "evt-2026-04-06-ai-big-tech-general-global-openai",
+  "article_type": "analysis",
+  "title": "Why David Bianco Says the Pullback Is a Chance to Buy Big Tech",
+  "slug": "why-david-bianco-says-the-pullback-is-a-chance-to-buy-big-te",
+  "canonical_slug": "2026-04-07-why-david-bianco-says-the-pullback-is-a-chance-to-buy-big-te",
+  "expected_url": "/article/2026-04-07-why-david-bianco-says-the-pullback-is-a-chance-to-buy-big-te",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-07-why-david-bianco-says-the-pullback-is-a-chance-to-buy-big-te.mdx",
+  "published_at": "2026-04-07T03:26:19.547Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "ai-big-tech",
+  "topic_label": "AI & Big Tech",
+  "subsection": "AI & Big Tech",
+  "topics": [
+    "AI & Big Tech"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/t-2pzrskjb4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/t-2pzrskjb4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-sign-on-the-ground-t-2pZRSKJb4",
+    "asset_key": "unsplash:t-2pZRSKJb4",
+    "alt_text": "a sign on the ground",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "pullback chance photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "david",
+      "bianco",
+      "pullback"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.6,
+    "is_fallback": false
+  },
+  "tags": [
+    "AI & Big Tech",
+    "Stock Market",
+    "Strategy",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Stock Market Strategy: Why David Bianco It's Says Time to Buy Big Tech",
+        "url": "https://businessinsider.com/stock-market-strategy-buy-the-dip-big-tech-ai-names-2026-4",
+        "domain": "businessinsider.com"
+      },
+      {
+        "title": "Stock market news for April 6, 2026",
+        "url": "https://www.cnbc.com/2026/04/05/stock-market-today-live-updates.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Stock market news for April 6, 2026",
+          "url": "https://www.cnbc.com/2026/04/05/stock-market-today-live-updates.html",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "stock-market",
+          "label": "Stock Market",
+          "type": "theme"
+        },
+        {
+          "slug": "strategy-company",
+          "label": "Strategy",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "ai-big-tech",
+        "topic_label": "AI & Big Tech",
+        "supported": true,
+        "matched_aliases": [
+          "big tech"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "pullback chance photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "pullback",
+        "chance"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
