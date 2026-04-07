@@ -1157,22 +1157,17 @@ export async function runEditorialPipeline(options = {}) {
       // YouTube is not a hard gate - continue
     }
 
-    // Stage 8: Publish Article (GATE)
+    // Stage 8: Publish Article (non-blocking finalizer — all editorial gates done before draft)
     console.log('[pipeline] Stage 8: Publishing article...');
     try {
+      // Identity duplicate check was moved to pre-draft gate.
+      // Post-draft we only log a warning if identity was already published.
       if (candidateIdentityKey && isIdentityAlreadyPublished(candidateIdentityKey)) {
-        const duplicateError = `Duplicate guard blocked publish for already published identity: ${candidateIdentityKey}`;
-        console.log(`[pipeline] ${duplicateError}`);
-        publishItems.push({
-          title: articleLabel,
-          success: false,
-          error: duplicateError,
-          data: { identityKey: candidateIdentityKey },
-        });
-        articleErrors.push({ title: articleLabel, stage: 'publishing', error: duplicateError });
-        continue;
+        console.warn(`[pipeline] DUPLICATE WARNING: identity already published: ${candidateIdentityKey} — publishing anyway`);
       }
 
+      // Pre-publish validation: warnings/autofix only, no editorial blocking after draft.
+      // All editorial checks (duplicate, taxonomy, editorial quality) happen in pre-draft gates.
       let prePublishValidation = validatePrePublishGraph(candidate, options);
       let imageRescueDiagnostics = [];
       if (!prePublishValidation.valid && hasImageTopicMismatchError(prePublishValidation.errors || [])) {
@@ -1189,11 +1184,16 @@ export async function runEditorialPipeline(options = {}) {
           prePublishValidation = validatePrePublishGraph(candidate);
         }
       }
+      // Log warnings but do not block — editorial checks happened before drafting
+      if (prePublishValidation.warnings && prePublishValidation.warnings.length > 0) {
+        console.warn(`[pipeline] Publish warnings (non-blocking): ${prePublishValidation.warnings.slice(0, 3).join(', ')}`);
+      }
       if (!prePublishValidation.valid) {
+        // Technical errors still block (missing title, missing section_id, etc.)
         publishItems.push({
           title: articleLabel,
           success: false,
-          error: `Pre-publish graph invalid: ${prePublishValidation.errors.join(', ')}`,
+          error: `Pre-publish graph invalid (technical): ${prePublishValidation.errors.join(', ')}`,
           data: {
             warnings: prePublishValidation.warnings,
             placement: prePublishValidation.placement,
@@ -1204,32 +1204,25 @@ export async function runEditorialPipeline(options = {}) {
         continue;
       }
 
-      candidate.canonicalPublishPayload = prePublishValidation.canonical_publish_payload
-        || buildCanonicalPublishPayload(candidate, prePublishValidation);
-      candidate.placement = {
-        ...(candidate.placement || {}),
-        ...(candidate.canonicalPublishPayload?.placement || {}),
-      };
-      if (candidate.canonicalPublishPayload?.tagging) {
-        const tagging = candidate.canonicalPublishPayload.tagging;
-        candidate.draft = {
-          ...(candidate.draft || {}),
-          tags: Array.isArray(tagging.tags) ? tagging.tags : (candidate.draft?.tags || []),
-          tag_slugs: Array.isArray(tagging.tag_slugs) ? tagging.tag_slugs : (candidate.draft?.tag_slugs || []),
-          subsection: candidate.canonicalPublishPayload?.placement?.subsection || candidate.draft?.subsection,
-          topics: Array.isArray(candidate.canonicalPublishPayload?.placement?.topics)
-            ? candidate.canonicalPublishPayload.placement.topics
-            : (candidate.draft?.topics || []),
-          metadata: {
-            ...(candidate.draft?.metadata || {}),
-            tagging,
-          },
-        };
+      // CRITICAL: Do NOT overwrite placement/tags from pre-publish validation.
+      // Taxonomy was locked and possibly repaired in pre-draft gates (Stage 3.4/3.5).
+      // Re-writing placement here would undo taxonomy repair.
+      // Only sync fields that are safe to sync (tags from tag repair, not taxonomy).
+      if (candidate.canonicalPublishPayload?.tagging && !candidate.canonicalPublishPayload?.tagging?.tags) {
+        // Tag repair hasn't run yet — run it now
+        const tagRepairResult = repairAndEnrichTags({
+          tags: [],
+          draft: candidate.draft || {},
+          brief: candidate.brief || {},
+          sourcePack: candidate.sourcePack || {},
+          sectionId: candidate.placement?.section_id || candidate.sourcePack?.section_id || '',
+          topicId: candidate.placement?.topic_id || candidate.sourcePack?.topic_id || '',
+        });
+        if (tagRepairResult.repaired) {
+          console.log(`[pipeline] Late tag repair: removed=[${tagRepairResult.removedTags?.join(',') || 'none'}]`);
+        }
       }
-      if (candidate.sourcePack && Array.isArray(candidate.canonicalPublishPayload?.sources)) {
-        candidate.sourcePack.publicSources = candidate.canonicalPublishPayload.sources;
-        candidate.sourcePack.canonicalPublicSources = candidate.canonicalPublishPayload.sources;
-      }
+
       candidate.publishManifest = buildPublishManifest(candidate);
 
       const publishResult = publishArticle(candidate);

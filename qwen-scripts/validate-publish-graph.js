@@ -226,15 +226,16 @@ export function validatePrePublishGraph(selected = {}, options = {}) {
   const actualSlug = String(selected.publishIdentity?.slug || selected.articleSlug || '').trim();
   const evidenceStats = computePublishableEvidenceStats(sourcePack);
 
-  if (!selected.brief) errors.push('Missing brief payload');
+  // Technical checks only (no editorial blocking after draft)
+  // Editorial/duplicate/taxonomy/duplicate checks happen BEFORE drafting in pre-draft-gate.js
+  if (!selected.brief) warnings.push('Missing brief payload');
   if (!draft.title || !String(draft.title).trim()) errors.push('Missing draft title');
   if (!draft.content || !String(draft.content).trim()) errors.push('Missing draft content');
   if (draft.safeForPublishing === false) errors.push('Draft is marked unsafe for publishing');
-  if (!sourcePack.passesGate) errors.push('Source pack did not pass gate');
-  if (!expectedSlug) errors.push('Missing expected slug from final draft title');
-  if (!actualSlug) errors.push('Missing selected article slug');
+  if (!expectedSlug) warnings.push('Missing expected slug from final draft title');
+  if (!actualSlug) warnings.push('Missing selected article slug');
   if (expectedSlug && actualSlug && expectedSlug !== actualSlug) {
-    errors.push(`Slug mismatch: expected ${expectedSlug}, got ${actualSlug}`);
+    warnings.push(`Slug mismatch: expected ${expectedSlug}, got ${actualSlug}`);
   }
   if (!placement.section_id) errors.push('Missing canonical section_id');
   if (!placement.topic_id) errors.push('Missing canonical topic_id');
@@ -253,35 +254,26 @@ export function validatePrePublishGraph(selected = {}, options = {}) {
   if (invalidPublishableKinds.length > 0) {
     errors.push(`Invalid publishable source kinds: ${Array.from(new Set(invalidPublishableKinds)).join(', ')}`);
   }
-  const relaxedMode = isRelaxedPipelineMode(options);
-  if (placement.article_type === 'report') {
-    if (evidenceStats.directEventSourceCount < 2) {
-      if (relaxedMode) {
-        warnings.push(`Relaxed mode allows report with fewer direct-event sources (${evidenceStats.directEventSourceCount})`);
-      } else {
-        errors.push(`Report requires at least 2 direct-event sources, found ${evidenceStats.directEventSourceCount}`);
-      }
-    }
-    if (evidenceStats.independentEventDomains < 2 && evidenceStats.directEventSourceCount >= 2) {
-      if (relaxedMode) {
-        warnings.push(`Relaxed mode allows report with single independent direct-event domain (${evidenceStats.independentEventDomains})`);
-      } else {
-        errors.push(`Report requires at least 2 independent direct-event domains, found ${evidenceStats.independentEventDomains}`);
-      }
-    }
+
+  // Note: editorial checks (direct-event source count, independent domains) are done
+  // in pre-draft-gate.js BEFORE drafting. Post-draft we only warn, never block.
+  if (placement.article_type === 'report' && evidenceStats.directEventSourceCount < 2) {
+    warnings.push(`Report has fewer than 2 direct-event sources (${evidenceStats.directEventSourceCount}) — pre-draft gate should have caught this`);
   }
+
   const effectiveTagging = buildEffectiveTagging({ draft, brief: selected.brief || {}, sourcePack, placement });
   const tagValidation = validateTagSelection(effectiveTagging);
-  if (!tagValidation.valid) errors.push(`Canonical tags invalid: ${tagValidation.errors.join('; ')}`);
+  if (!tagValidation.valid) warnings.push(`Canonical tags have issues: ${tagValidation.errors.join('; ')}`);
   warnings.push(...tagValidation.warnings.map((item) => `Canonical tags: ${item}`));
 
   const semantic_report = evaluateSemanticIntegrity(selected, placement);
-  errors.push(...semantic_report.blocking_errors);
+  // Semantic blocking errors are warnings post-draft (pre-draft gate should have caught them)
+  warnings.push(...semantic_report.blocking_errors.map((e) => `Editorial: ${e}`));
   warnings.push(...semantic_report.warnings);
 
   return {
     valid: errors.length === 0,
-    technical_valid: errors.length === semantic_report.blocking_errors.length,
+    technical_valid: errors.length === 0,
     editorial_valid: semantic_report.editorial_valid,
     errors,
     warnings,

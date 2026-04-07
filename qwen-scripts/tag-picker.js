@@ -837,34 +837,29 @@ export function pickArticleTags(context = {}) {
 
 /**
  * Sport-specific tag maps for cross-validation and enrichment.
+ * Used ONLY for conservative removal of clearly wrong sport tags.
+ * NOT used for auto-adding sport tags based on keyword collision.
  */
 const SPORT_TAG_MAP = {
-  // American football (NFL + college football)
   'american-football': {
     tags: ['Football', 'NFL', 'College Football', 'NCAA Football'],
     wrongTags: ['Soccer', 'Premier League', 'FA Cup', 'Champions League', 'NBA', 'MLB', 'NHL'],
-    keywords: ['nfl', 'college football', 'ncaa football', 'super bowl', 'touchdown', 'quarterback', 'football', 'executive order', 'college sports', 'campus athletics', 'ncaa', 'football player', 'head coach', 'college athlete'],
+    keywords: ['nfl', 'college football', 'ncaa football', 'super bowl', 'touchdown', 'quarterback'],
   },
-  // Soccer/football (global)
   'soccer': {
     tags: ['Football', 'Soccer', 'Premier League', 'FA Cup', 'Champions League'],
     wrongTags: ['NBA', 'NFL', 'MLB', 'NHL', 'Basketball', 'College Football'],
-    keywords: ['premier league', 'fa cup', 'champions league', 'la liga', 'serie a', 'bundesliga', 'ligue 1', 'soccer', 'football club', 'goal', 'penalty shootout', 'red card', 'striker', 'midfielder', 'defender', 'goalkeeper', 'pitch', 'manchester', 'liverpool', 'arsenal', 'chelsea', 'tottenham', 'west ham', 'leeds', 'guardiola'],
+    keywords: ['premier league', 'fa cup', 'champions league', 'la liga', 'serie a', 'bundesliga', 'ligue 1'],
   },
   'basketball': {
     tags: ['Basketball', 'NBA', 'NCAA Basketball'],
-    wrongTags: ['NFL', 'MLB', 'NHL', 'Soccer', 'Premier League'],
-    keywords: ['basketball', 'nba', 'ncaa', 'dunk', 'three-pointer', 'point guard', 'center', 'power forward', 'court', 'arena', 'ucla', 'south carolina', 'rout', 'hoops'],
+    wrongTags: ['NFL', 'MLB', 'NHL', 'Soccer', 'Premier League', 'FA Cup'],
+    keywords: ['basketball', 'nba', 'ncaa basketball', 'dunk', 'three-pointer', 'point guard'],
   },
   'cycling': {
     tags: ['Cycling'],
     wrongTags: ['Cybersecurity', 'NBA', 'NFL', 'Soccer'],
-    keywords: ['cycling', 'cyclist', 'rider', 'peloton', 'tour de france', 'tour of flanders', 'giro', 'vuelta', 'time trial', 'sprint', 'stage', 'mountain stage', 'yellow jersey', 'pogačar', 'pogacar', 'red light', 'railway crossing'],
-  },
-  'college-sports': {
-    tags: ['College Sports', 'NCAA'],
-    wrongTags: ['Travel & Consumer Issues', 'Economy & Markets', 'Soccer', 'Premier League'],
-    keywords: ['ncaa', 'college sports', 'transfer portal', 'college athletics', 'campus athletics', 'iowa state', 'audi crooks', 'college athlete', 'college football', 'ncaa football', 'ncaa basketball'],
+    keywords: ['cycling', 'cyclist', 'rider', 'peloton', 'tour de france', 'tour of flanders'],
   },
 };
 
@@ -890,6 +885,11 @@ function extractContentText(draft, brief, sourcePack) {
 
 /**
  * Detect and repair wrong tags based on actual content.
+ * Conservative approach:
+ *   - Remove clearly invalid tags (sport tags in non-sport articles, vague tags)
+ *   - DO NOT auto-add sport tags based on keyword collision
+ *   - Tag additions only from locked taxonomy context (handled by caller)
+ *
  * @param {Object} params - { tags, draft, brief, sourcePack, sectionId, topicId }
  * @returns {Object} { tags, tag_slugs, repaired, repairedTags, addedTags, removedTags, warnings }
  */
@@ -901,16 +901,25 @@ export function repairAndEnrichTags({ tags = [], draft = {}, brief = {}, sourceP
   const finalTags = [...tags];
   const wrongTagSet = new Set();
 
-  // 1. Detect sport-specific wrong tags
-  for (const [sport, config] of Object.entries(SPORT_TAG_MAP)) {
-    const hasSportKeywords = config.keywords.some((kw) => content.includes(kw.toLowerCase()));
-    if (!hasSportKeywords) continue;
-    for (const wrongTag of config.wrongTags) {
-      if (finalTags.includes(wrongTag)) wrongTagSet.add(wrongTag);
+  // 1. Conservative remove: detect clearly wrong sport tags
+  // Require BOTH: tag is a known wrongTag AND content strongly confirms a DIFFERENT sport
+  const contentWords = new Set(content.split(/\s+/).filter((w) => w.length > 2));
+
+  for (const tag of finalTags) {
+    // Check if this tag is a sport tag that doesn't belong
+    for (const [sport, config] of Object.entries(SPORT_TAG_MAP)) {
+      if (!config.wrongTags.includes(tag)) continue;
+
+      // Only remove if content strongly indicates a DIFFERENT sport
+      const matchCount = config.keywords.filter((kw) => content.includes(kw.toLowerCase())).length;
+      if (matchCount >= 2) {
+        // Content matches this sport's keywords, so the wrong tag is genuinely wrong
+        wrongTagSet.add(tag);
+      }
     }
   }
 
-  // 2. Detect vague/meaningless tags
+  // 2. Remove vague/meaningless tags
   for (const tag of finalTags) {
     if (['Strategy', 'General', 'Overview', 'Summary'].includes(tag)) {
       wrongTagSet.add(tag);
@@ -924,17 +933,9 @@ export function repairAndEnrichTags({ tags = [], draft = {}, brief = {}, sourceP
     warnings.push(`Removed wrong tag: "${wrongTag}"`);
   }
 
-  // 4. Add missing sport/topic-specific tags
-  for (const [sport, config] of Object.entries(SPORT_TAG_MAP)) {
-    const hasSportKeywords = config.keywords.some((kw) => content.includes(kw.toLowerCase()));
-    if (!hasSportKeywords) continue;
-    for (const sportTag of config.tags) {
-      if (!filteredTags.includes(sportTag) && !addedTags.includes(sportTag)) {
-        addedTags.push(sportTag);
-      }
-    }
-    break; // Only one sport applies
-  }
+  // 4. DO NOT auto-add sport tags based on keyword collision.
+  // Tag additions should come from locked taxonomy context, not free-text matching.
+  // If the caller needs sport tags, they should be added based on locked section/topic.
 
   // 5. Ensure reasonable tag count
   const enrichedTags = [...filteredTags, ...addedTags];

@@ -56,27 +56,12 @@ export function publishArticle(article) {
   const publishMeta = resolvePublishTarget(article);
   const { today, slug, filename, filePath, canonicalSlug, expectedUrl, collisionResolved } = publishMeta;
   const publishableSources = resolvePublishableSources(article);
+
+  // Duplicate check was moved to pre-draft gate (pre-draft-gate.js).
+  // Publisher is a near-dumb writer/finalizer — it only logs duplicate warnings, never blocks.
   const duplicateAssessment = assessDuplicatePublication(article, publishMeta, publishableSources);
   if (duplicateAssessment?.isDuplicate) {
-    const duplicateMessage = `Duplicate guard blocked publish: ${duplicateAssessment.reason}`;
-    console.log(`[publisher] ${duplicateMessage}`);
-    return {
-      success: false,
-      error: duplicateMessage,
-      duplicate_guard: {
-        blocked: true,
-        reason: duplicateAssessment.reason,
-        matched_file: duplicateAssessment.matchedFile || null,
-        matched_title: duplicateAssessment.matchedTitle || null,
-        matched_url: duplicateAssessment.matchedUrl || null,
-        title_similarity: Number.isFinite(duplicateAssessment.titleSimilarity)
-          ? Number(duplicateAssessment.titleSimilarity.toFixed(3))
-          : null,
-        source_overlap: Number.isFinite(duplicateAssessment.sourceOverlap)
-          ? duplicateAssessment.sourceOverlap
-          : 0,
-      },
-    };
+    console.warn(`[publisher] DUPLICATE WARNING: ${duplicateAssessment.reason} — publishing anyway (pre-draft gate should have caught this)`);
   }
 
   const relatedLinks = buildRelatedCoverageLinks(article, expectedUrl);

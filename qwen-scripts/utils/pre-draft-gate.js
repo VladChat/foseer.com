@@ -146,11 +146,52 @@ function getPublishableSources(candidate) {
 }
 
 /**
- * Check if a candidate would be blocked by the publisher's duplicate guard.
- * Reuses the same source_overlap>=2_recent threshold as publisher.js.
+ * Count overlap between two arrays.
+ */
+function countOverlap(arrA, arrB) {
+  const setB = new Set(arrB);
+  return arrA.filter((x) => setB.has(x)).length;
+}
+
+/**
+ * Tokenize text for matching.
+ */
+function tokenizeForMatching(text) {
+  return String(text || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter((w) => w.length > 2);
+}
+
+/**
+ * Compute title similarity (Jaccard).
+ */
+function computeTitleSimilarity(titleA, titleB) {
+  const wordsA = new Set(tokenizeForMatching(titleA));
+  const wordsB = new Set(tokenizeForMatching(titleB));
+  if (wordsA.size === 0 && wordsB.size === 0) return 1;
+  if (wordsA.size === 0 || wordsB.size === 0) return 0;
+  const intersection = new Set([...wordsA].filter((w) => wordsB.has(w)));
+  const union = new Set([...wordsA, ...wordsB]);
+  return intersection.size / union.size;
+}
+
+/**
+ * Unified pre-draft duplicate check.
+ * This is the SINGLE source of truth for duplicate blocking in the pipeline.
+ * Uses a combination of signals:
+ *   1. Event identity / cluster identity (strongest)
+ *   2. Same main entities + strong headline similarity
+ *   3. Same section/topic intent + same event framing
+ *   4. Source overlap as supporting evidence only (not primary signal)
+ *
+ * Shared Reuters/AP/official sources are normal for legitimate news coverage.
+ * Source overlap alone (even 2+ sources) is NOT sufficient to block.
+ *
  * @param {Object} candidate - Candidate with sourcePack or sources
  * @param {Object} options - Options (recentDuplicateWindowHours)
- * @returns {Object} { isDuplicate, reason } or { isDuplicate: false }
+ * @returns {Object} { isDuplicate, reason, signals } or { isDuplicate: false }
  */
 export function checkPreDraftDuplicate(candidate, options = {}) {
   const relaxedMode = isRelaxedPipelineMode(options);
@@ -159,10 +200,18 @@ export function checkPreDraftDuplicate(candidate, options = {}) {
   try {
     if (!fs.existsSync(POSTS_DIR)) return { isDuplicate: false };
 
+    const candidateTitle = candidate?.brief?.title || '';
+    const candidateClusterId = candidate?.brief?.cluster_id || candidate?.brief?.eventId || '';
+    const candidateSection = candidate?.sourcePack?.section_id || candidate?.brief?.section_id || '';
+    const candidateTopic = candidate?.sourcePack?.topic_id || candidate?.brief?.topic_id || '';
     const incomingSourceUrls = getPublishableSources(candidate)
       .map((s) => normalizeSourceUrl(s?.url || s?.canonicalUrl || s?.canonical_url || ''))
       .filter(Boolean);
-    if (incomingSourceUrls.length === 0) return { isDuplicate: false };
+
+    if (!candidateTitle) return { isDuplicate: false };
+
+    // Extract candidate entities for similarity comparison
+    const candidateWords = new Set(candidateTitle.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter((w) => w.length > 3));
 
     const entries = fs.readdirSync(POSTS_DIR, { withFileTypes: true })
       .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith('.mdx'));
@@ -170,23 +219,52 @@ export function checkPreDraftDuplicate(candidate, options = {}) {
     for (const entry of entries) {
       const file = path.join(POSTS_DIR, entry.name);
       const publishedUrls = extractPublishedSourceUrls(file);
-      if (publishedUrls.length === 0) continue;
-
       const publishedAt = extractPublishedDate(file);
+      const publishedTitle = extractPublishedTitle(file);
+      const publishedTaxonomy = extractPublishedTaxonomy(file);
+
+      if (!publishedTitle) continue;
+
       const recentHours = publishedAt && Number.isFinite(publishedAt.getTime())
         ? (Date.now() - publishedAt.getTime()) / 3600000
         : Infinity;
 
-      const overlap = incomingSourceUrls.filter((url) => publishedUrls.includes(url)).length;
-      if (overlap >= 2 && recentHours <= RECENT_HOURS) {
-        if (relaxedMode) {
-          return { isDuplicate: false };
+      // Skip articles outside the recent window
+      if (recentHours > RECENT_HOURS) continue;
+
+      // Signal 1: Exact same title (identity collision)
+      if (publishedTitle.toLowerCase() === candidateTitle.toLowerCase()) {
+        return { isDuplicate: true, reason: `exact_title_match: "${publishedTitle}"` };
+      }
+
+      // Signal 2: Strong headline similarity + same section/topic + recent
+      const publishedWords = new Set(publishedTitle.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter((w) => w.length > 3));
+      const headlineOverlap = countOverlap([...candidateWords], [...publishedWords]);
+      const headlineSim = candidateWords.size > 0 && publishedWords.size > 0 ? headlineOverlap / Math.max(candidateWords.size, publishedWords.size) : 0;
+
+      const sameTopic = candidateTopic !== '' && publishedTaxonomy.topic_id === candidateTopic;
+      const sameSection = candidateSection !== '' && publishedTaxonomy.section_id === candidateSection;
+
+      // Block if very high headline overlap + same topic + recent
+      if (headlineSim >= 0.75 && sameTopic && recentHours <= 168) {
+        return { isDuplicate: true, reason: `near_duplicate_headline(sim=${headlineSim.toFixed(2)},same_topic) vs "${publishedTitle}"` };
+      }
+
+      // Signal 3: Source overlap as supporting evidence (need 3+ shared sources, NOT 2)
+      // Shared wire sources (AP, Reuters) are normal — require 3+ to block
+      if (incomingSourceUrls.length > 0 && publishedUrls.length > 0) {
+        const sourceOverlap = incomingSourceUrls.filter((url) => publishedUrls.includes(url)).length;
+        if (sourceOverlap >= 3 && recentHours <= RECENT_HOURS) {
+          return { isDuplicate: true, reason: `source_overlap>=3_recent(${sourceOverlap})` };
         }
-        return { isDuplicate: true, reason: `source_overlap>=2_recent(${overlap})` };
+        // Source overlap + high headline similarity
+        if (sourceOverlap >= 1 && headlineSim >= 0.80 && recentHours <= 168) {
+          return { isDuplicate: true, reason: `source+headline_overlap(source=${sourceOverlap},sim=${headlineSim.toFixed(2)}) vs "${publishedTitle}"` };
+        }
       }
     }
   } catch {
-    // Non-blocking: if the scan fails, proceed to drafting; publisher will catch it later
+    // Non-blocking: if the scan fails, proceed to drafting
   }
 
   return { isDuplicate: false };
@@ -330,12 +408,45 @@ export function checkPreDraftDirectEventSources(candidate, options = {}) {
 }
 
 /**
+ * Check editorial quality before drafting.
+ * Moved from validate-publish-graph.js to prevent late editorial blocking after draft.
+ * @param {Object} candidate - Candidate with sourcePack and brief
+ * @param {Object} options - Options (pipelineMode)
+ * @returns {Object} { isBlocked, reason } or { isBlocked: false }
+ */
+export function checkPreDraftEditorialQuality(candidate, options = {}) {
+  const relaxedMode = isRelaxedPipelineMode(options);
+  const sourcePack = candidate?.sourcePack || {};
+  const articleType = String(candidate?.brief?.articleType || candidate?.brief?.article_type || 'report').toLowerCase();
+  const directEventCount = sourcePack?.metrics?.directEventSourceCount || 0;
+  const independentDomains = sourcePack?.metrics?.independentEventDomains || 0;
+
+  // Editorial checks that would previously block at publish time
+  if (articleType === 'report') {
+    if (directEventCount < 2) {
+      if (relaxedMode) {
+        return { isBlocked: false, note: `relaxed_mode_allows_fewer_direct_sources(${directEventCount})` };
+      }
+      return { isBlocked: true, reason: `Report requires at least 2 direct-event sources, found ${directEventCount}` };
+    }
+    if (independentDomains < 2 && directEventCount >= 2) {
+      if (relaxedMode) {
+        return { isBlocked: false, note: `relaxed_mode_allows_single_domain(${independentDomains})` };
+      }
+      return { isBlocked: true, reason: `Report requires at least 2 independent direct-event domains, found ${independentDomains}` };
+    }
+  }
+
+  return { isBlocked: false };
+}
+
+/**
  * Run all pre-draft gates. Returns combined result.
- * Order: URL duplicate → event duplicate → direct-event sources.
- * Event duplicate is advisory (warning) unless high confidence.
+ * Order: duplicate → event duplicate → editorial quality → direct-event sources.
+ * All blocking happens BEFORE drafting.
  */
 export function runPreDraftGates(candidate, options = {}) {
-  // 1. URL-based duplicate check (hard block)
+  // 1. Unified duplicate check (SINGLE source of truth)
   const duplicate = checkPreDraftDuplicate(candidate, options);
   if (duplicate.isDuplicate) {
     return { blocked: true, reason: duplicate.reason, stage: 'pre_draft_duplicate', isWarning: false };
@@ -347,10 +458,10 @@ export function runPreDraftGates(candidate, options = {}) {
     return { blocked: true, reason: eventDup.reason, stage: 'pre_draft_event_duplicate', isWarning: false, matchedFile: eventDup.matchedFile, matchedTitle: eventDup.matchedTitle };
   }
 
-  // 3. Direct-event source check
-  const directEvent = checkPreDraftDirectEventSources(candidate, options);
-  if (directEvent.isBlocked) {
-    return { blocked: true, reason: directEvent.reason, stage: 'pre_draft_direct_event_source', isWarning: false };
+  // 3. Editorial quality check (moved from validate-publish-graph.js)
+  const editorial = checkPreDraftEditorialQuality(candidate, options);
+  if (editorial.isBlocked) {
+    return { blocked: true, reason: editorial.reason, stage: 'pre_draft_editorial_quality', isWarning: false };
   }
 
   // 4. Event similarity warning (non-blocking)
