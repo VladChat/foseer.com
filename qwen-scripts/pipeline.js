@@ -14,6 +14,7 @@ import { enrichCandidateWithVideo } from './nodes/youtube-enrichment-node.js';
 import { publishArticle } from './publisher.js';
 import { validatePrePublishGraph, buildCanonicalPublishPayload, buildPublishManifest, writePublishManifest, validatePublishedArtifact } from './validate-publish-graph.js';
 import { validateTagSelection } from './validate-tags.js';
+import { repairAndEnrichTags } from './tag-picker.js';
 import { resolvePlacementMetadata } from '../qwen-project-governance/shared/article-placement.js';
 import { repairContentPosts } from './repair-content-posts.js';
 import { verifyLocalVisibility, generateVerificationReport } from './local-verification.js';
@@ -24,6 +25,8 @@ import { runSharedSourcePackEngine, selectSharedPreWriterCandidates, normalizeDi
 import { evaluatePreWriteQualityGate } from './pre-write-quality-gate.js';
 import { attemptImageRescuePass, hasImageTopicMismatchError } from './utils/publish-rescue.js';
 import { runPreDraftGates } from './utils/pre-draft-gate.js';
+import { evaluatePreDraftCoherence, applyCoherenceRepair } from './utils/pre-draft-coherence-gate.js';
+import { checkPostDraftFiller } from './utils/post-draft-filler-check.js';
 import { resolvePipelineMode } from './utils/pipeline-mode.js';
 
 loadProjectEnv();
@@ -633,6 +636,82 @@ export async function runEditorialPipeline(options = {}) {
     });
   }
 
+  // Stage 3.4: Pre-Draft Coherence Gate (UPSTREAM hard gate — before canonical lock)
+  console.log('[pipeline] Stage 3.4: Pre-draft coherence gate...');
+  const coherenceGateResults = [];
+  const coherenceRejected = [];
+  const coherenceRepaired = [];
+  const coherencePassed = [];
+
+  for (const candidate of selectedCandidates) {
+    const articleLabel = candidate?.brief?.title || candidate?.sourcePack?.topic || 'Untitled candidate';
+    const coherenceResult = evaluatePreDraftCoherence(candidate, options);
+    coherenceGateResults.push({
+      title: articleLabel,
+      ...coherenceResult,
+    });
+
+    if (coherenceResult.action === 'reject') {
+      console.log(`[pipeline] COHERENCE GATE: REJECT :: ${articleLabel} :: ${coherenceResult.reasons.join(' | ')}`);
+      coherenceRejected.push({ title: articleLabel, reasons: coherenceResult.reasons });
+      continue;
+    }
+
+    if (coherenceResult.action === 'repair') {
+      const repaired = applyCoherenceRepair(candidate, coherenceResult);
+      if (repaired) {
+        console.log(`[pipeline] COHERENCE GATE: REPAIRED :: ${articleLabel} → section=${candidate.sourcePack?.section_id || candidate.brief?.section_id || 'unknown'}`);
+        coherenceRepaired.push({ title: articleLabel, repairs: coherenceResult.repairs });
+        // Re-evaluate after repair to confirm
+        const recheck = evaluatePreDraftCoherence(candidate, options);
+        if (recheck.action === 'reject') {
+          console.log(`[pipeline] COHERENCE GATE: REPAIR FAILED for ${articleLabel} :: ${recheck.reasons.join(' | ')}`);
+          coherenceRejected.push({ title: articleLabel, reasons: recheck.reasons });
+          continue;
+        }
+      } else {
+        console.log(`[pipeline] COHERENCE GATE: REJECT (unrepairable) :: ${articleLabel} :: ${coherenceResult.reasons.join(' | ')}`);
+        coherenceRejected.push({ title: articleLabel, reasons: coherenceResult.reasons });
+        continue;
+      }
+    }
+
+    // Pass or repaired successfully
+    if (coherenceResult.warnings.length > 0) {
+      console.log(`[pipeline] COHERENCE GATE: PASS (with warnings) :: ${articleLabel} :: ${coherenceResult.warnings.join('; ')}`);
+    } else {
+      console.log(`[pipeline] COHERENCE GATE: PASS :: ${articleLabel}`);
+    }
+    coherencePassed.push(candidate);
+  }
+
+  stageResults.coherenceGate = {
+    stage: 'coherenceGate',
+    success: coherencePassed.length > 0,
+    error: coherencePassed.length === 0 ? 'All candidates failed coherence gate' : null,
+    data: {
+      total: coherenceGateResults.length,
+      passed: coherencePassed.length,
+      repaired: coherenceRepaired.length,
+      rejected: coherenceRejected.length,
+      results: coherenceGateResults,
+    },
+  };
+
+  // Update selectedCandidates with only coherence-passing candidates
+  selectedCandidates = coherencePassed;
+  selected = selectedCandidates[0] || null;
+  stats.articles_attempted = selectedCandidates.length;
+
+  if (selectedCandidates.length === 0) {
+    return finalizePipelineResult(false, `Coherence gate failed: all ${coherenceGateResults.length} candidate(s) rejected`, null, {
+      published_paths: [],
+      verified_urls: [],
+      selected_candidates: [],
+      published_articles: [],
+    });
+  }
+
   // Stage 3.5: Pre-draft canonical lock (taxonomy + tags before writing)
   console.log('[pipeline] Stage 3.5: Pre-draft canonical placement and tag lock...');
   const preDraftItems = [];
@@ -791,6 +870,34 @@ export async function runEditorialPipeline(options = {}) {
 
     candidate.preDraftCanonicalPayload = canonicalPayload;
     candidate.canonicalPublishPayload = canonicalPayload;
+
+    // Tag repair/enrichment: fix wrong tags before they become permanent
+    const currentTags = Array.isArray(canonicalPayload?.tagging?.tags) ? canonicalPayload.tagging.tags : [];
+    const sectionIdForTags = canonicalPayload?.placement?.section_id || candidate?.sourcePack?.section_id || '';
+    const topicIdForTags = canonicalPayload?.placement?.topic_id || candidate?.sourcePack?.topic_id || '';
+    const tagRepairResult = repairAndEnrichTags({
+      tags: currentTags,
+      draft: {
+        title: candidate?.brief?.title || '',
+        content: `${candidate?.brief?.whatHappened || ''} ${candidate?.brief?.whyItMatters || ''}`.trim(),
+        excerpt: candidate?.brief?.summary || candidate?.brief?.whyItMatters || '',
+      },
+      brief: candidate?.brief || {},
+      sourcePack: candidate?.sourcePack || {},
+      sectionId: sectionIdForTags,
+      topicId: topicIdForTags,
+    });
+    if (tagRepairResult.repaired) {
+      console.log(`[pipeline] TAG REPAIR :: ${articleLabel} :: removed=[${tagRepairResult.removedTags?.join(', ') || 'none'}] added=[${tagRepairResult.addedTags?.join(', ') || 'none'}]`);
+      canonicalPayload.tagging = {
+        ...(canonicalPayload.tagging || {}),
+        tags: tagRepairResult.tags,
+        tag_slugs: tagRepairResult.tag_slugs,
+        warnings: [...(canonicalPayload.tagging?.warnings || []), ...tagRepairResult.warnings],
+      };
+      candidate.canonicalPublishPayload = canonicalPayload;
+    }
+
     candidate.placement = {
       ...(candidate.placement || {}),
       ...(canonicalPayload.placement || {}),
@@ -967,6 +1074,22 @@ export async function runEditorialPipeline(options = {}) {
       if (!hardened.safeForPublishing) {
         articleErrors.push({ title: articleLabel, stage: 'articleDrafting', error: hardened.qualityIssues.join('; ') });
         continue;
+      }
+
+      // Stage 5.5: Post-Draft Filler Check (advisory — flags but does not block)
+      try {
+        const fillerCheck = checkPostDraftFiller({
+          content: hardened.content || '',
+          sourcePack: candidate.sourcePack || {},
+          claimMap: candidate.claimMap || {},
+          brief: candidate.brief || {},
+        });
+        if (fillerCheck.hasFiller) {
+          console.log(`[pipeline] FILLER CHECK: ${articleLabel} — ${fillerCheck.warnings.join('; ')}`);
+          draftItems[draftItems.length - 1].fillerWarnings = fillerCheck.warnings;
+        }
+      } catch (error) {
+        console.warn(`[pipeline] Filler check failed: ${error.message}`);
       }
     } catch (error) {
       console.error(`[pipeline] Article drafting failed: ${error.message}`);

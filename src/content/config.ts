@@ -81,6 +81,16 @@ const postCollection = defineCollection({
     section_id: z.string().optional(),
     topic_id: z.string().optional(),
 
+    // YouTube video enrichment (supplementary, never replaces hero image)
+    youtube_video_id: z.string().optional(),
+    youtube_video_title: z.string().optional(),
+    youtube_video_channel: z.string().optional(),
+    youtube_video_published: z.string().optional(),
+    youtube_video_duration: z.string().optional(),
+    youtube_video_thumbnail: z.string().optional(),
+    youtube_video_score: z.number().optional(),
+    youtube_video_match_reason: z.string().optional(),
+
     metadata: metadataDefinition(),
   }),
 });
@@ -115,6 +125,16 @@ const previewPostCollection = defineCollection({
     article_type: z.enum(['explainer', 'analysis', 'report']).optional(),
     section_id: z.string().optional(),
     topic_id: z.string().optional(),
+
+    // YouTube video enrichment (supplementary, never replaces hero image)
+    youtube_video_id: z.string().optional(),
+    youtube_video_title: z.string().optional(),
+    youtube_video_channel: z.string().optional(),
+    youtube_video_published: z.string().optional(),
+    youtube_video_duration: z.string().optional(),
+    youtube_video_thumbnail: z.string().optional(),
+    youtube_video_score: z.number().optional(),
+    youtube_video_match_reason: z.string().optional(),
 
     metadata: metadataDefinition(),
   }),

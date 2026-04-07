@@ -179,7 +179,7 @@ const showUnsplashCredit = imageProvider === 'unsplash' && Boolean(imageAuthorNa
     <div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-none dark:prose-invert prose-headings:font-heading prose-headings:font-bold prose-headings:leading-tight prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-slate-300 prose-p:leading-[1.8] prose-p:text-lg prose-p:mb-6 prose-p:text-justify prose-h2:text-3xl sm:text-4xl prose-h2:font-bold prose-h2:mt-14 prose-h2:mb-8 prose-h2:pt-8 prose-h2:border-t prose-h2:border-slate-200 dark:prose-h2:border-slate-700 prose-h3:text-2xl sm:text-3xl prose-h3:font-semibold prose-h3:mt-10 prose-h3:mb-5 prose-h3:text-blue-600 dark:prose-h3:text-blue-400 prose-h4:text-xl prose-h4:font-semibold prose-h4:mt-7 prose-h4:mb-3 prose-strong:font-semibold prose-em:italic prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:pr-4 prose-blockquote:py-3 prose-blockquote:italic prose-blockquote:text-gray-700 dark:prose-blockquote:text-slate-300 prose-blockquote:text-lg prose-blockquote:my-8 prose-blockquote:rounded-r-lg prose-blockquote:bg-slate-50 dark:prose-blockquote:bg-slate-800/50 prose-blockquote:shadow-sm prose-ul:mb-6 prose-ol:mb-6 prose-li:mb-3 prose-a:text-primary prose-a:underline hover:prose-a:no-underline prose-img:rounded-lg prose-img:shadow-lg prose-img:mx-auto prose-code:text-gray-800 dark:prose-code:text-slate-200 prose-pre:bg-gray-50 dark:prose-pre:bg-slate-800 prose-pre:rounded-lg prose-pre:p-4 prose-table:text-left prose-th:bg-gray-100 dark:prose-th:bg-slate-700 prose-td:border prose-td:border-gray-200 dark:prose-td:border-slate-600 prose-figure:mb-6 prose-figcaption:text-sm prose-figcaption:text-muted dark:prose-figcaption:text-slate-400 prose-figcaption:mt-2 prose-hr:border-t prose-hr:border-gray-200 dark:prose-hr:border-slate-700 prose-hr:my-10 prose-hr:opacity-50" id="article-body">
       <slot />
       {youtubeVideo && (
-        <div id="article-youtube-block" class="not-prose my-8 -mx-4 sm:mx-0">
+        <div id="article-youtube-block" class="not-prose my-10 -mx-4 sm:mx-0 sm:rounded-xl sm:border sm:border-slate-200 sm:dark:border-slate-700 sm:bg-slate-50 sm:dark:bg-slate-800/30 sm:px-4 sm:py-6">
           <ArticleVideoBlock
             videoId={youtubeVideo.videoId}
             title={youtubeVideo.title}
@@ -193,16 +193,23 @@ const showUnsplashCredit = imageProvider === 'unsplash' && Boolean(imageAuthorNa
 
     {youtubeVideo && (
       <script>
+        // Insert YouTube block before the second H2 heading in the article body.
+        // Falls back to end of article if fewer than 2 H2s exist.
         document.addEventListener('DOMContentLoaded', () => {
           const body = document.getElementById('article-body');
           const block = document.getElementById('article-youtube-block');
           if (!body || !block) return;
 
-          const paragraphs = body.querySelectorAll(':scope > p');
-          const insertAfter = paragraphs.length >= 2 ? paragraphs[1] : paragraphs[0];
-
-          if (insertAfter) {
-            insertAfter.insertAdjacentElement('afterend', block);
+          const h2s = body.querySelectorAll(':scope > h2');
+          if (h2s.length >= 2) {
+            // Insert before the second H2
+            h2s[1].insertAdjacentElement('beforebegin', block);
+          } else if (h2s.length === 1) {
+            // Only one H2 — insert before it
+            h2s[0].insertAdjacentElement('beforebegin', block);
+          } else {
+            // No H2s — keep at end (default slot position)
+            return;
           }
         });
       </script>

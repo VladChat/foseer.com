@@ -828,3 +828,126 @@ export function pickArticleTags(context = {}) {
     },
   };
 }
+
+// ============================================================
+// TAG REPAIR/ENRICHMENT — Future-facing tag correction
+// Detects wrong tags based on actual content, replaces them with
+// correct ones from the registry, adds missing relevant tags.
+// ============================================================
+
+/**
+ * Sport-specific tag maps for cross-validation and enrichment.
+ */
+const SPORT_TAG_MAP = {
+  // American football (NFL + college football)
+  'american-football': {
+    tags: ['Football', 'NFL', 'College Football', 'NCAA Football'],
+    wrongTags: ['Soccer', 'Premier League', 'FA Cup', 'Champions League', 'NBA', 'MLB', 'NHL'],
+    keywords: ['nfl', 'college football', 'ncaa football', 'super bowl', 'touchdown', 'quarterback', 'football', 'executive order', 'college sports', 'campus athletics', 'ncaa', 'football player', 'head coach', 'college athlete'],
+  },
+  // Soccer/football (global)
+  'soccer': {
+    tags: ['Football', 'Soccer', 'Premier League', 'FA Cup', 'Champions League'],
+    wrongTags: ['NBA', 'NFL', 'MLB', 'NHL', 'Basketball', 'College Football'],
+    keywords: ['premier league', 'fa cup', 'champions league', 'la liga', 'serie a', 'bundesliga', 'ligue 1', 'soccer', 'football club', 'goal', 'penalty shootout', 'red card', 'striker', 'midfielder', 'defender', 'goalkeeper', 'pitch', 'manchester', 'liverpool', 'arsenal', 'chelsea', 'tottenham', 'west ham', 'leeds', 'guardiola'],
+  },
+  'basketball': {
+    tags: ['Basketball', 'NBA', 'NCAA Basketball'],
+    wrongTags: ['NFL', 'MLB', 'NHL', 'Soccer', 'Premier League'],
+    keywords: ['basketball', 'nba', 'ncaa', 'dunk', 'three-pointer', 'point guard', 'center', 'power forward', 'court', 'arena', 'ucla', 'south carolina', 'rout', 'hoops'],
+  },
+  'cycling': {
+    tags: ['Cycling'],
+    wrongTags: ['Cybersecurity', 'NBA', 'NFL', 'Soccer'],
+    keywords: ['cycling', 'cyclist', 'rider', 'peloton', 'tour de france', 'tour of flanders', 'giro', 'vuelta', 'time trial', 'sprint', 'stage', 'mountain stage', 'yellow jersey', 'pogačar', 'pogacar', 'red light', 'railway crossing'],
+  },
+  'college-sports': {
+    tags: ['College Sports', 'NCAA'],
+    wrongTags: ['Travel & Consumer Issues', 'Economy & Markets', 'Soccer', 'Premier League'],
+    keywords: ['ncaa', 'college sports', 'transfer portal', 'college athletics', 'campus athletics', 'iowa state', 'audi crooks', 'college athlete', 'college football', 'ncaa football', 'ncaa basketball'],
+  },
+};
+
+/**
+ * Content extraction for tag validation.
+ */
+function extractContentText(draft, brief, sourcePack) {
+  const parts = [];
+  if (draft?.title) parts.push(draft.title);
+  if (draft?.content) parts.push(draft.content);
+  if (draft?.excerpt) parts.push(draft.excerpt);
+  if (brief?.title) parts.push(brief.title);
+  if (brief?.whatHappened) parts.push(brief.whatHappened);
+  if (brief?.summary) parts.push(brief.summary);
+  if (sourcePack?.sources) {
+    for (const src of sourcePack.sources) {
+      if (src?.title) parts.push(src.title);
+      if (src?.summary) parts.push(src.summary);
+    }
+  }
+  return parts.join(' ').toLowerCase();
+}
+
+/**
+ * Detect and repair wrong tags based on actual content.
+ * @param {Object} params - { tags, draft, brief, sourcePack, sectionId, topicId }
+ * @returns {Object} { tags, tag_slugs, repaired, repairedTags, addedTags, removedTags, warnings }
+ */
+export function repairAndEnrichTags({ tags = [], draft = {}, brief = {}, sourcePack = {}, sectionId = '', topicId = '' } = {}) {
+  const content = extractContentText(draft, brief, sourcePack);
+  const removedTags = [];
+  const addedTags = [];
+  const warnings = [];
+  const finalTags = [...tags];
+  const wrongTagSet = new Set();
+
+  // 1. Detect sport-specific wrong tags
+  for (const [sport, config] of Object.entries(SPORT_TAG_MAP)) {
+    const hasSportKeywords = config.keywords.some((kw) => content.includes(kw.toLowerCase()));
+    if (!hasSportKeywords) continue;
+    for (const wrongTag of config.wrongTags) {
+      if (finalTags.includes(wrongTag)) wrongTagSet.add(wrongTag);
+    }
+  }
+
+  // 2. Detect vague/meaningless tags
+  for (const tag of finalTags) {
+    if (['Strategy', 'General', 'Overview', 'Summary'].includes(tag)) {
+      wrongTagSet.add(tag);
+    }
+  }
+
+  // 3. Remove wrong tags
+  const filteredTags = finalTags.filter((tag) => !wrongTagSet.has(tag));
+  for (const wrongTag of wrongTagSet) {
+    removedTags.push(wrongTag);
+    warnings.push(`Removed wrong tag: "${wrongTag}"`);
+  }
+
+  // 4. Add missing sport/topic-specific tags
+  for (const [sport, config] of Object.entries(SPORT_TAG_MAP)) {
+    const hasSportKeywords = config.keywords.some((kw) => content.includes(kw.toLowerCase()));
+    if (!hasSportKeywords) continue;
+    for (const sportTag of config.tags) {
+      if (!filteredTags.includes(sportTag) && !addedTags.includes(sportTag)) {
+        addedTags.push(sportTag);
+      }
+    }
+    break; // Only one sport applies
+  }
+
+  // 5. Ensure reasonable tag count
+  const enrichedTags = [...filteredTags, ...addedTags];
+  const finalResult = enrichedTags.slice(0, 8);
+  const slugs = finalResult.map((t) => String(t || '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60));
+
+  return {
+    tags: finalResult,
+    tag_slugs: slugs,
+    repaired: wrongTagSet.size > 0 || addedTags.length > 0,
+    repairedTags: [...removedTags.map((t) => ({ from: t, to: null })), ...addedTags.map((t) => ({ from: null, to: t }))],
+    addedTags,
+    removedTags: Array.from(wrongTagSet),
+    warnings,
+  };
+}

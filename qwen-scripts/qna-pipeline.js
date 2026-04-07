@@ -19,6 +19,10 @@ import { loadSharedBriefCandidatesFromPool, runPreWriterDiscoveryIntake, runShar
 import { evaluatePreWriteQualityGate } from './pre-write-quality-gate.js';
 import { attemptImageRescuePass, hasImageTopicMismatchError, splitPreWriteGraphErrors } from './utils/publish-rescue.js';
 import { runPreDraftGates } from './utils/pre-draft-gate.js';
+import { evaluatePreDraftCoherence, applyCoherenceRepair } from './utils/pre-draft-coherence-gate.js';
+import { enrichCandidateWithVideo } from './nodes/youtube-enrichment-node.js';
+import { repairAndEnrichTags } from './tag-picker.js';
+import { checkPostDraftFiller } from './utils/post-draft-filler-check.js';
 
 loadProjectEnv();
 
@@ -585,6 +589,44 @@ export async function runQnaPipeline(options = {}) {
       markBriefSelected(selected.brief.poolIdentityKey, workflowLeaseOwner);
     }
 
+    // === QNA Coherence Gate (parity with article pipeline) ===
+    console.log('[qna-pipeline] Coherence gate...');
+    const coherenceResult = evaluatePreDraftCoherence(selected, options);
+    result.stages.coherenceGate = {
+      success: coherenceResult.action !== 'reject',
+      action: coherenceResult.action,
+      sectionCheck: coherenceResult.sectionCheck,
+      domainMismatch: coherenceResult.domainMismatch,
+      warnings: coherenceResult.warnings,
+    };
+
+    if (coherenceResult.action === 'repair') {
+      const repaired = applyCoherenceRepair(selected, coherenceResult);
+      if (repaired) {
+        console.log(`[qna-pipeline] COHERENCE REPAIRED: section=${selected.sourcePack?.section_id || selected.brief?.section_id}`);
+        result.stages.coherenceGate.repaired = true;
+      }
+    } else if (coherenceResult.action === 'reject') {
+      result.hard_blocker = `Coherence gate rejected: ${coherenceResult.reasons.join('; ')}`;
+      return finalizeRun(result, questionCandidates, null, startTime);
+    }
+
+    // Tag repair after coherence
+    const currentQnaTags = selected?.canonicalPublishPayload?.tagging?.tags || [];
+    const qnaSectionId = selected?.sourcePack?.section_id || selected?.brief?.section_id || '';
+    const qnaTopicId = selected?.sourcePack?.topic_id || selected?.brief?.topic_id || '';
+    const qnaTagRepair = repairAndEnrichTags({
+      tags: currentQnaTags,
+      draft: selected.draft || {},
+      brief: selected.brief || {},
+      sourcePack: selected.sourcePack || {},
+      sectionId: qnaSectionId,
+      topicId: qnaTopicId,
+    });
+    if (qnaTagRepair.repaired) {
+      console.log(`[qna-pipeline] TAG REPAIR: removed=[${qnaTagRepair.removedTags?.join(', ') || 'none'}] added=[${qnaTagRepair.addedTags?.join(', ') || 'none'}]`);
+    }
+
     try {
       const claimMap = await createClaimMap(selected.sourcePack, openAiApiKey);
       selected.claimMap = claimMap;
@@ -729,6 +771,42 @@ export async function runQnaPipeline(options = {}) {
       };
     } catch (error) {
       result.stages.image = { success: false, error: error.message };
+    }
+
+    // QNA YouTube enrichment (parity with article pipeline)
+    console.log('[qna-pipeline] YouTube enrichment...');
+    try {
+      const videoResult = await enrichCandidateWithVideo(selected);
+      selected.youtubeVideo = videoResult;
+      result.stages.youtubeEnrichment = {
+        success: videoResult !== null,
+        videoId: videoResult?.videoId || null,
+        title: videoResult?.title || null,
+        score: videoResult?.score || null,
+      };
+      if (videoResult) {
+        console.log(`[qna-pipeline] YouTube attached: "${videoResult.title}" (score: ${videoResult.score})`);
+      } else {
+        console.log('[qna-pipeline] YouTube: no strong match');
+      }
+    } catch (error) {
+      console.warn(`[qna-pipeline] YouTube enrichment failed: ${error.message}`);
+      result.stages.youtubeEnrichment = { success: false, error: error.message };
+    }
+
+    // QNA post-draft filler check
+    try {
+      const qnaFillerCheck = checkPostDraftFiller({
+        content: selected?.draft?.content || '',
+        sourcePack: selected?.sourcePack || {},
+        claimMap: selected?.claimMap || {},
+        brief: selected?.brief || {},
+      });
+      if (qnaFillerCheck.hasFiller) {
+        console.log(`[qna-pipeline] FILLER CHECK: ${qnaFillerCheck.warnings.join('; ')}`);
+      }
+    } catch (error) {
+      console.warn(`[qna-pipeline] Filler check failed: ${error.message}`);
     }
 
     try {

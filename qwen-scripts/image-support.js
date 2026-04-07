@@ -69,7 +69,7 @@ export async function getArticleImage(article, articleSlug, providerApiKeys = {}
   const queryLevels = normalizeQueryLevels(imageQueryPlan, IMAGE_CONFIG.maxQueriesPerRun);
   const queries = queryLevels.flatMap((entry) => entry.queries);
   const registry = loadImageRegistry();
-  const providers = getEnabledProviders(providerApiKeys);
+  const providers = getEnabledProviders({ ...providerApiKeys, excludeProvider: context?.excludeProvider });
   const articleProfile = buildArticleSearchProfile({
     title: article.title,
     excerpt: article.excerpt || article.content || '',
@@ -441,9 +441,9 @@ function normalizeQueryLevels(imageQueryPlan = {}, maxQueriesPerRun = IMAGE_CONF
   ].filter((entry) => entry.queries.length > 0);
 }
 
-function getEnabledProviders({ pexelsApiKey, unsplashApiKey, pixabayApiKey } = {}) {
+function getEnabledProviders({ pexelsApiKey, unsplashApiKey, pixabayApiKey, excludeProvider } = {}) {
   const providers = [];
-  if (pexelsApiKey) {
+  if (pexelsApiKey && excludeProvider !== 'pexels') {
     providers.push({
       id: 'pexels',
       searchCandidates: async ({ query, perPage }) => searchPexelsImageCandidates({
@@ -454,7 +454,7 @@ function getEnabledProviders({ pexelsApiKey, unsplashApiKey, pixabayApiKey } = {
       }),
     });
   }
-  if (unsplashApiKey) {
+  if (unsplashApiKey && excludeProvider !== 'unsplash') {
     providers.push({
       id: 'unsplash',
       searchCandidates: async ({ query, perPage }) => searchUnsplashImageCandidates({
@@ -465,7 +465,7 @@ function getEnabledProviders({ pexelsApiKey, unsplashApiKey, pixabayApiKey } = {
       }),
     });
   }
-  if (pixabayApiKey) {
+  if (pixabayApiKey && excludeProvider !== 'pixabay') {
     providers.push({
       id: 'pixabay',
       searchCandidates: async ({ query, perPage }) => searchPixabayImageCandidates({

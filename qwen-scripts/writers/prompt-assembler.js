@@ -109,19 +109,36 @@ function buildFocusDisciplineLayer(eventBrief, claimMap, sourcePack, includeFore
     : 0;
   const totalSources = getPublishReadySources(sourcePack, { minCount: 1 }).length;
   const uniqueDomains = Number(sourcePack?.uniqueDomains || 0);
+  const coreCount = sourcePack?.coreSources?.length || 0;
+  const supportingCount = sourcePack?.supportingSources?.length || 0;
   const thinEvidence = totalSources <= 2 || supportedClaims <= 2 || uniqueDomains <= 1;
+  const isThinPack = totalSources <= 3 && uniqueDomains <= 2;
+  const isModeratePack = totalSources >= 4 && totalSources <= 6;
 
-  const evidencePosture = thinEvidence
-    ? `THIN EVIDENCE MODE:
+  let evidencePosture;
+  if (thinEvidence || isThinPack) {
+    evidencePosture = `THIN EVIDENCE MODE (source pack is small: ${totalSources} sources, ${uniqueDomains} domains):
 - Keep the scope narrow and concrete
 - Prefer a shorter article over broad interpretation
+- Do NOT add sections about broader context, international implications, stakeholder analysis, or future scenarios unless the sources explicitly discuss them
+- If the story is simple, the article should be simple — do not inflate it with filler
 - Do not add industry-trend, policy-trend, or historical-comparison sections unless directly supported by the core evidence
 - If context is needed, keep it to one short paragraph and place it after the confirmed event facts
-- Forecast, if included, must stay shorter than the factual body`
-    : `NORMAL EVIDENCE MODE:
+- Every paragraph must be grounded in at least one source
+- Do NOT create sections that acknowledge their own lack of evidence (e.g., "it is not yet clear whether...")
+- Forecast, if included, must stay shorter than the factual body`;
+  } else if (isModeratePack) {
+    evidencePosture = `MODERATE EVIDENCE MODE (source pack: ${totalSources} sources, ${uniqueDomains} domains):
+- You may include limited context and implications, but every claim must be traceable to a source
+- Avoid speculative sections about "what to watch next" unless the sources discuss future developments
+- Do not add sections about unrelated international angles or tangential stakeholders
+- Keep one clear event spine`;
+  } else {
+    evidencePosture = `NORMAL EVIDENCE MODE (source pack: ${totalSources} sources, ${uniqueDomains} domains):
 - Keep one clear event spine
 - Context is allowed only when it clearly sharpens reader understanding of the selected event
 - Do not widen the article into a second adjacent story`;
+  }
 
   const forecastRule = includeForecast
     ? '- Forecast is optional color at the end, not a second article'

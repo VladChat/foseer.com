@@ -344,6 +344,11 @@ export function buildPublishManifest(selected = {}, publishResult = null) {
       article_relevance_score: image.metadata?.articleRelevanceScore ?? null,
       asset_quality_score: image.metadata?.assetQualityScore ?? null,
       editorial_fit_score: image.metadata?.editorialFitScore ?? null,
+      // Image fit validation (from coherence gate visual concepts)
+      image_fit_score: image.metadata?.imageFitScore ?? null,
+      visual_concepts: image.metadata?.visualConcepts || [],
+      retry_attempted: image.metadata?.retryAttempted || false,
+      initial_fit_score: image.metadata?.initialFitScore ?? null,
       is_fallback: image.provider === 'fallback',
     },
     tags: Array.isArray(canonicalPayload.tagging?.tags) ? canonicalPayload.tagging.tags : [],

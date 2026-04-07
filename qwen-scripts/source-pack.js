@@ -520,6 +520,48 @@ function classifyAgainstBrief(dedupedSources, brief, topicSignals) {
     .sort(compareRoleResults);
 }
 
+/**
+ * Detect when the combined text content strongly signals a DIFFERENT topic
+ * than the brief's current topic_id. Used as an override to prevent
+ * misclassified briefs from locking in wrong topics.
+ * 
+ * Returns { topic_id, section_id, detected_topic } or null if no override.
+ */
+function detectContentTopicOverride(textSignals, currentTopicId, registry) {
+  const combinedText = (textSignals || '').toLowerCase();
+  if (!combinedText || !registry?.topicById) return null;
+
+  // Topic keyword maps for strong content-based detection
+  const TOPIC_SIGNALS = {
+    'music-celebrities': ['music', 'musician', 'album', 'song', 'band', 'artist', 'concert', 'tour', 'recording', 'streaming music', 'recorded music', 'digital music', 'music industry', 'vinyl', 'cd', 'spotify', 'apple music', 'royalties', 'songwriter', 'musician'],
+    'film-tv': ['movie', 'movies', 'film', 'films', 'television', 'tv show', 'tv series', 'streaming series', 'cinema', 'box office', 'actor', 'actress', 'director', 'producer', 'premiere', 'netflix', 'hbo', 'disney+', 'episode', 'season'],
+    'sports': ['football', 'basketball', 'baseball', 'hockey', 'soccer', 'nfl', 'nba', 'mlb', 'nhl', 'team', 'game', 'match', 'tournament', 'championship', 'playoff', 'athlete', 'coach', 'stadium', 'score', 'season'],
+    'us-politics': ['white house', 'congress', 'senate', 'president', 'executive order', 'federal', 'capitol', 'biden', 'trump', 'administration'],
+    'world-geopolitics': ['iran', 'ukraine', 'russia', 'china', 'israel', 'gaza', 'diplomacy', 'ceasefire', 'missile', 'troops', 'military', 'sanctions'],
+    'ai-big-tech': ['ai', 'artificial intelligence', 'openai', 'chatgpt', 'google', 'meta', 'microsoft', 'nvidia', 'anthropic', 'machine learning', 'llm', 'chatbot'],
+    'space-astronomy': ['nasa', 'spacex', 'rocket', 'satellite', 'moon', 'mars', 'launch', 'orbit', 'artemis', 'space', 'astronaut', 'lunar'],
+    'health': ['health', 'medical', 'hospital', 'fda', 'drug', 'vaccine', 'disease', 'patient', 'doctor', 'clinical'],
+    'cybersecurity': ['cyber', 'hack', 'breach', 'ransomware', 'malware', 'data breach', 'security flaw', 'cyberattack'],
+    'transfers-business': ['transfer portal', 'transfer', 'trade', 'free agent', 'contract', 'salary cap', 'signing', 'ncaa transfer'],
+  };
+
+  const currentTopicSignals = TOPIC_SIGNALS[currentTopicId] || [];
+  const currentScore = currentTopicSignals.filter((kw) => combinedText.includes(kw)).length;
+
+  // Check all other topics for stronger signals
+  for (const [topicId, keywords] of Object.entries(TOPIC_SIGNALS)) {
+    if (topicId === currentTopicId) continue;
+    const score = keywords.filter((kw) => combinedText.includes(kw)).length;
+    // Override if new topic has 3+ signals AND significantly outperforms current topic
+    if (score >= 3 && score > Math.max(currentScore + 1, 2)) {
+      const sectionId = registry.sectionByTopic?.[topicId] || null;
+      return { topic_id: topicId, section_id: sectionId, detected_topic: topicId };
+    }
+  }
+
+  return null;
+}
+
 function resolveRoleAwarePlacement(roleResults = [], eventBrief = {}) {
   const registry = loadTaxonomyRegistry();
   const textSignals = [
@@ -588,7 +630,14 @@ function resolveRoleAwarePlacement(roleResults = [], eventBrief = {}) {
   let section_id = eventBrief.section_id || null;
   const reason = [];
 
-  if (topTopicId && topTopicScore >= 6 && (secondTopicScore === 0 || topTopicScore >= secondTopicScore * 1.35)) {
+  // Content-based topic override: if text signals strongly suggest a different topic
+  // than the brief's current topic, prefer the text-based detection
+  const contentTopicOverride = detectContentTopicOverride(textSignals, eventBrief.topic_id, registry);
+  if (contentTopicOverride) {
+    topic_id = contentTopicOverride.topic_id;
+    section_id = contentTopicOverride.section_id || registry.sectionByTopic?.[topic_id] || section_id;
+    reason.push(`content_topic_override:${contentTopicOverride.detected_topic}`);
+  } else if (topTopicId && topTopicScore >= 6 && (secondTopicScore === 0 || topTopicScore >= secondTopicScore * 1.35)) {
     topic_id = topTopicId;
     section_id = registry.sectionByTopic?.[topic_id] || topSectionId || section_id;
     reason.push('dominant_publishable_topic');
