@@ -6,6 +6,7 @@ import type { GetStaticPaths } from 'astro';
 
 import Layout from '~/layouts/PageLayout.astro';
 import EditorialStoryCard from '~/components/EditorialStoryCard.astro';
+import LoadMore from '~/components/LoadMore.astro';
 import { fetchPosts } from '~/utils/blog';
 import type { Post } from '~/types';
 
@@ -175,6 +176,7 @@ const metadata = {
                 class="inline-flex items-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-semibold text-sm hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 dark:focus:ring-white"
                 data-total={latestPosts.length}
                 data-step="12"
+                data-shown="12"
               >
                 <span>Load More</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -199,42 +201,4 @@ const metadata = {
   </section>
 </Layout>
 
-<script>
-  // Load More functionality for latest page
-  const loadMoreBtn = document.getElementById('load-more-btn');
-  const hiddenPostsContainer = document.getElementById('hidden-posts');
-  const latestGrid = document.getElementById('latest-grid');
-
-  if (loadMoreBtn && hiddenPostsContainer && latestGrid) {
-    const totalPosts = parseInt(loadMoreBtn.dataset.total || '0');
-    const step = parseInt(loadMoreBtn.dataset.step || '12');
-    let shownCount = 12;
-
-    const hiddenCards = Array.from(hiddenPostsContainer.children);
-
-    loadMoreBtn.addEventListener('click', () => {
-      const remaining = hiddenCards.length - (shownCount - 12);
-      const toShow = Math.min(step, remaining);
-
-      for (let i = 0; i < toShow; i++) {
-        const card = hiddenCards[shownCount - 12 + i];
-        if (card) {
-          latestGrid.appendChild(card);
-        }
-      }
-
-      shownCount += toShow;
-
-      // Update counter text
-      const counterText = loadMoreBtn.parentElement?.querySelector('p');
-      if (counterText) {
-        counterText.textContent = `Showing ${shownCount} of ${totalPosts} articles`;
-      }
-
-      // Hide button if all posts shown
-      if (shownCount >= totalPosts) {
-        loadMoreBtn.parentElement?.remove();
-      }
-    });
-  }
-</script>
+<LoadMore />

@@ -10,6 +10,7 @@ import { getSections, getTopicBySlugs } from '~/utils/foseer-taxonomy';
 import { getPostsByTopicSlug } from '~/utils/topic-posts';
 import { getPermalink } from '~/utils/permalinks';
 import { resolvePostImage, generateImageAlt } from '~/utils/post-image';
+import LoadMore from '~/components/LoadMore.astro';
 
 /**
  * REQUIRED for static builds
@@ -147,6 +148,7 @@ const posts = await getPostsByTopicSlug(topicData.slug);
               class="inline-flex items-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-semibold text-sm hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 dark:focus:ring-white"
               data-total={posts.length}
               data-step="12"
+              data-shown="12"
             >
               <span>Load More</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -223,42 +225,4 @@ const posts = await getPostsByTopicSlug(topicData.slug);
   </section>
 </Layout>
 
-<script>
-  // Load More functionality for topic pages
-  const loadMoreBtn = document.getElementById('load-more-btn');
-  const hiddenPostsContainer = document.getElementById('hidden-posts');
-  const topicGrid = document.getElementById('topic-grid');
-
-  if (loadMoreBtn && hiddenPostsContainer && topicGrid) {
-    const totalPosts = parseInt(loadMoreBtn.dataset.total || '0');
-    const step = parseInt(loadMoreBtn.dataset.step || '12');
-    let shownCount = 12;
-
-    const hiddenCards = Array.from(hiddenPostsContainer.children);
-
-    loadMoreBtn.addEventListener('click', () => {
-      const remaining = hiddenCards.length - (shownCount - 12);
-      const toShow = Math.min(step, remaining);
-
-      for (let i = 0; i < toShow; i++) {
-        const card = hiddenCards[shownCount - 12 + i];
-        if (card) {
-          topicGrid.appendChild(card);
-        }
-      }
-
-      shownCount += toShow;
-
-      // Update counter text
-      const counterText = loadMoreBtn.parentElement?.querySelector('p');
-      if (counterText) {
-        counterText.textContent = `Showing ${shownCount} of ${totalPosts} articles`;
-      }
-
-      // Hide button if all posts shown
-      if (shownCount >= totalPosts) {
-        loadMoreBtn.parentElement?.remove();
-      }
-    });
-  }
-</script>
+<LoadMore />

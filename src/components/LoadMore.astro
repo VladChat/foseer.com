@@ -1,0 +1,56 @@
+<!--
+  File: src/components/LoadMore.astro
+  Purpose: Shared Load More button component with resilient event delegation.
+           Fixes the bug where the Load More button stops working after View
+           Transitions navigation or any DOM replacement (e.g. theme switch).
+           
+           Unlike the old approach (direct element ref + addEventListener),
+           this uses document-level event delegation and reads all state
+           fresh from the DOM on each click, so it survives any DOM swap.
+-->
+
+<script is:inline>
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('#load-more-btn');
+    if (!btn) return;
+
+    const hiddenContainer = document.getElementById('hidden-posts');
+    if (!hiddenContainer) return;
+
+    // Find the grid — it's the nearest preceding sibling with an id ending in "-grid"
+    let grid = btn.parentElement?.previousElementSibling;
+    while (grid && !grid.id.endsWith('-grid')) {
+      grid = grid.previousElementSibling;
+    }
+    if (!grid) return;
+
+    const totalPosts = parseInt(btn.dataset.total || '0', 10);
+    const step = parseInt(btn.dataset.step || '12', 10);
+    let shownCount = parseInt(btn.dataset.shown || '12', 10);
+
+    const hiddenCards = Array.from(hiddenContainer.children);
+    const remaining = hiddenCards.length - (shownCount - 12);
+    const toShow = Math.min(step, remaining);
+
+    for (let i = 0; i < toShow; i++) {
+      const card = hiddenCards[shownCount - 12 + i];
+      if (card) {
+        grid.appendChild(card);
+      }
+    }
+
+    shownCount += toShow;
+    btn.dataset.shown = String(shownCount);
+
+    // Update counter text
+    const counterText = btn.parentElement?.querySelector('p');
+    if (counterText) {
+      counterText.textContent = 'Showing ' + shownCount + ' of ' + totalPosts + ' articles';
+    }
+
+    // Hide button+counter if all posts shown
+    if (shownCount >= totalPosts) {
+      btn.parentElement?.remove();
+    }
+  });
+</script>
