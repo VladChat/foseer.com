@@ -901,10 +901,10 @@ export function repairAndEnrichTags({ tags = [], draft = {}, brief = {}, sourceP
   const finalTags = [...tags];
   const wrongTagSet = new Set();
 
-  // 1. Detect sport-specific wrong tags — require at least 2 keyword matches to avoid false positives
+  // 1. Detect sport-specific wrong tags
   for (const [sport, config] of Object.entries(SPORT_TAG_MAP)) {
-    const matchCount = config.keywords.filter((kw) => content.includes(kw.toLowerCase())).length;
-    if (matchCount < 2) continue; // Need 2+ matches to confirm sport context
+    const hasSportKeywords = config.keywords.some((kw) => content.includes(kw.toLowerCase()));
+    if (!hasSportKeywords) continue;
     for (const wrongTag of config.wrongTags) {
       if (finalTags.includes(wrongTag)) wrongTagSet.add(wrongTag);
     }
@@ -924,19 +924,16 @@ export function repairAndEnrichTags({ tags = [], draft = {}, brief = {}, sourceP
     warnings.push(`Removed wrong tag: "${wrongTag}"`);
   }
 
-  // 4. Add missing sport/topic-specific tags — only if section is actually sports-related
-  const isSportsSection = String(sectionId || '').toLowerCase().includes('sport');
-  if (isSportsSection) {
-    for (const [sport, config] of Object.entries(SPORT_TAG_MAP)) {
-      const matchCount = config.keywords.filter((kw) => content.includes(kw.toLowerCase())).length;
-      if (matchCount < 2) continue; // Need 2+ matches to confirm sport type
-      for (const sportTag of config.tags) {
-        if (!filteredTags.includes(sportTag) && !addedTags.includes(sportTag)) {
-          addedTags.push(sportTag);
-        }
+  // 4. Add missing sport/topic-specific tags
+  for (const [sport, config] of Object.entries(SPORT_TAG_MAP)) {
+    const hasSportKeywords = config.keywords.some((kw) => content.includes(kw.toLowerCase()));
+    if (!hasSportKeywords) continue;
+    for (const sportTag of config.tags) {
+      if (!filteredTags.includes(sportTag) && !addedTags.includes(sportTag)) {
+        addedTags.push(sportTag);
       }
-      break; // Only one sport applies
     }
+    break; // Only one sport applies
   }
 
   // 5. Ensure reasonable tag count

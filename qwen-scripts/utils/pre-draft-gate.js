@@ -202,8 +202,8 @@ export function checkPreDraftDuplicate(candidate, options = {}) {
  * @returns {Object} { isEventDuplicate, reason, similarityScore, matchedFile, isWarning } or { isEventDuplicate: false }
  */
 export function checkEventLevelDuplicate(candidate, options = {}) {
-  const HIGH_THRESHOLD = Number(options.eventHighThreshold || process.env.QWEN_EVENT_DUPLICATE_HIGH_THRESHOLD || 0.45);
-  const WARNING_THRESHOLD = Number(options.eventWarningThreshold || process.env.QWEN_EVENT_DUPLICATE_WARNING_THRESHOLD || 0.30);
+  const HIGH_THRESHOLD = Number(options.eventHighThreshold || process.env.QWEN_EVENT_DUPLICATE_HIGH_THRESHOLD || 0.55);
+  const WARNING_THRESHOLD = Number(options.eventWarningThreshold || process.env.QWEN_EVENT_DUPLICATE_WARNING_THRESHOLD || 0.40);
   const RECENT_HOURS = Number(options.recentDuplicateWindowHours || process.env.QWEN_RECENT_DUPLICATE_WINDOW_DAYS || 3) * 24;
   const relaxedMode = isRelaxedPipelineMode(options);
 
