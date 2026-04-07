@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-07T12:09:55.602Z",
+  "event_id": "evt-2026-04-07-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-04-07-pharma-fda-general-global-fda",
+  "article_type": "report",
+  "title": "iPLEDGE Risk Evaluation and Mitigation Strategy (REMS)",
+  "slug": "what-the-ipledge-rems-means-for-patients-using-high-risk-acn",
+  "canonical_slug": "2026-04-07-what-the-ipledge-rems-means-for-patients-using-high-risk-acn",
+  "expected_url": "/article/2026-04-07-what-the-ipledge-rems-means-for-patients-using-high-risk-acn",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-07-what-the-ipledge-rems-means-for-patients-using-high-risk-acn.mdx",
+  "published_at": "2026-04-07T12:09:55.600Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "iPLEDGE Risk Evaluation and Mitigation Strategy (REMS)",
+  "topics": [
+    "iPLEDGE Risk Evaluation and Mitigation Strategy (REMS)"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/pqnje0avra/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/pqnje0avra/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-in-white-dress-shirt-sitting-on-chair--PqNjE0avrA",
+    "asset_key": "unsplash:-PqNjE0avrA",
+    "alt_text": "Illustration for What the iPLEDGE REMS Means for Patients Using High‑Risk Acne Drugs",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Risk Evaluation and Mitigation medical photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "ipledge",
+      "means",
+      "patients"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "iPLEDGE Risk Evaluation and Mitigation Strategy (REMS)",
+        "url": "http://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/ipledge-risk-evaluation-and-mitigation-strategy-rems",
+        "domain": "fda.gov"
+      },
+      {
+        "title": "Opioid Analgesic Risk Evaluation and Mitigation Strategy (REMS)",
+        "url": "http://www.fda.gov/drugs/information-drug-class/opioid-analgesic-risk-evaluation-and-mitigation-strategy-rems",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "strategy-company",
+          "label": "Strategy",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Risk Evaluation and Mitigation medical photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "risk",
+        "evaluation",
+        "mitigation"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
