@@ -142,6 +142,9 @@ Final publishable source-packs should contain:
   **or**
 - at least one official primary source
 
+Canonical rule:
+- one directly relevant, publishable source from `TRUSTED_PUBLISHER_DOMAINS` or `OFFICIAL_PRIMARY_DOMAINS` is sufficient for any topic, including high-risk topics
+
 Best case:
 - 1 trusted reporting source
 - 1 official/source-of-record source

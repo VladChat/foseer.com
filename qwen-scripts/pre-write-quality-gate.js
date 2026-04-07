@@ -170,7 +170,6 @@ function evaluateSingleSourceWhitelistEligibility({
   if (!enabled) return { enabled: false, pass: false, reason: 'disabled' };
   if (sourceCount !== 1) return { enabled: true, pass: false, reason: 'publishable_count_not_one' };
   if (domainCount !== 1) return { enabled: true, pass: false, reason: 'domain_count_not_one' };
-  if (isHighRiskBrief(brief)) return { enabled: true, pass: false, reason: 'high_risk_topic_requires_multi_source' };
 
   const source = Array.isArray(sources) ? sources[0] : null;
   const domain = source?.canonical_domain || source?.domain || source?.canonical_url || source?.url || '';

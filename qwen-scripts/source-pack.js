@@ -362,9 +362,6 @@ function evaluateSingleSourceWhitelistEligibility({
   if (String(articleType || '').toLowerCase() === 'report') {
     return { enabled: true, pass: false, reason: 'report_requires_multi_source' };
   }
-  if (isHighRiskBrief(eventBrief)) {
-    return { enabled: true, pass: false, reason: 'high_risk_topic_requires_multi_source' };
-  }
 
   const source = publishableSources[0] || {};
   const sourceDomain = source?.canonical_domain || source?.domain || source?.canonical_url || source?.url || '';
