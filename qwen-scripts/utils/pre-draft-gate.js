@@ -180,18 +180,18 @@ function computeTitleSimilarity(titleA, titleB) {
 /**
  * Unified pre-draft duplicate check.
  * This is the SINGLE source of truth for duplicate blocking in the pipeline.
- * Uses a combination of signals:
- *   1. Event identity / cluster identity (strongest)
- *   2. Same main entities + strong headline similarity
- *   3. Same section/topic intent + same event framing
- *   4. Source overlap as supporting evidence only (not primary signal)
  *
+ * Duplicate decision uses a combination of signals:
+ *   1. Exact identity/title collision (strongest — immediate block)
+ *   2. Strong headline similarity + same topic intent (strong)
+ *   3. Entity overlap + same section/topic framing (supporting)
+ *
+ * Source overlap is ONLY a supporting signal, NEVER a standalone blocker.
  * Shared Reuters/AP/official sources are normal for legitimate news coverage.
- * Source overlap alone (even 2+ sources) is NOT sufficient to block.
  *
  * @param {Object} candidate - Candidate with sourcePack or sources
  * @param {Object} options - Options (recentDuplicateWindowHours)
- * @returns {Object} { isDuplicate, reason, signals } or { isDuplicate: false }
+ * @returns {Object} { isDuplicate, reason } or { isDuplicate: false }
  */
 export function checkPreDraftDuplicate(candidate, options = {}) {
   const relaxedMode = isRelaxedPipelineMode(options);
@@ -210,7 +210,7 @@ export function checkPreDraftDuplicate(candidate, options = {}) {
 
     if (!candidateTitle) return { isDuplicate: false };
 
-    // Extract candidate entities for similarity comparison
+    // Extract candidate headline words
     const candidateWords = new Set(candidateTitle.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter((w) => w.length > 3));
 
     const entries = fs.readdirSync(POSTS_DIR, { withFileTypes: true })
@@ -237,7 +237,7 @@ export function checkPreDraftDuplicate(candidate, options = {}) {
         return { isDuplicate: true, reason: `exact_title_match: "${publishedTitle}"` };
       }
 
-      // Signal 2: Strong headline similarity + same section/topic + recent
+      // Signal 2: Strong headline similarity + same topic + recent
       const publishedWords = new Set(publishedTitle.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter((w) => w.length > 3));
       const headlineOverlap = countOverlap([...candidateWords], [...publishedWords]);
       const headlineSim = candidateWords.size > 0 && publishedWords.size > 0 ? headlineOverlap / Math.max(candidateWords.size, publishedWords.size) : 0;
@@ -250,15 +250,12 @@ export function checkPreDraftDuplicate(candidate, options = {}) {
         return { isDuplicate: true, reason: `near_duplicate_headline(sim=${headlineSim.toFixed(2)},same_topic) vs "${publishedTitle}"` };
       }
 
-      // Signal 3: Source overlap as supporting evidence (need 3+ shared sources, NOT 2)
-      // Shared wire sources (AP, Reuters) are normal — require 3+ to block
+      // Signal 3: Source overlap as supporting evidence ONLY — not standalone blocker.
+      // Requires BOTH source overlap AND strong headline similarity to block.
       if (incomingSourceUrls.length > 0 && publishedUrls.length > 0) {
         const sourceOverlap = incomingSourceUrls.filter((url) => publishedUrls.includes(url)).length;
-        if (sourceOverlap >= 3 && recentHours <= RECENT_HOURS) {
-          return { isDuplicate: true, reason: `source_overlap>=3_recent(${sourceOverlap})` };
-        }
-        // Source overlap + high headline similarity
-        if (sourceOverlap >= 1 && headlineSim >= 0.80 && recentHours <= 168) {
+        // Source overlap alone does NOT block — need headline similarity too
+        if (sourceOverlap >= 1 && headlineSim >= 0.70 && recentHours <= 168) {
           return { isDuplicate: true, reason: `source+headline_overlap(source=${sourceOverlap},sim=${headlineSim.toFixed(2)}) vs "${publishedTitle}"` };
         }
       }

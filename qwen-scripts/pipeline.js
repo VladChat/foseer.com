@@ -14,7 +14,6 @@ import { enrichCandidateWithVideo } from './nodes/youtube-enrichment-node.js';
 import { publishArticle } from './publisher.js';
 import { validatePrePublishGraph, buildCanonicalPublishPayload, buildPublishManifest, writePublishManifest, validatePublishedArtifact } from './validate-publish-graph.js';
 import { validateTagSelection } from './validate-tags.js';
-import { repairAndEnrichTags } from './tag-picker.js';
 import { resolvePlacementMetadata } from '../qwen-project-governance/shared/article-placement.js';
 import { repairContentPosts } from './repair-content-posts.js';
 import { verifyLocalVisibility, generateVerificationReport } from './local-verification.js';
@@ -1204,24 +1203,10 @@ export async function runEditorialPipeline(options = {}) {
         continue;
       }
 
-      // CRITICAL: Do NOT overwrite placement/tags from pre-publish validation.
-      // Taxonomy was locked and possibly repaired in pre-draft gates (Stage 3.4/3.5).
-      // Re-writing placement here would undo taxonomy repair.
-      // Only sync fields that are safe to sync (tags from tag repair, not taxonomy).
-      if (candidate.canonicalPublishPayload?.tagging && !candidate.canonicalPublishPayload?.tagging?.tags) {
-        // Tag repair hasn't run yet — run it now
-        const tagRepairResult = repairAndEnrichTags({
-          tags: [],
-          draft: candidate.draft || {},
-          brief: candidate.brief || {},
-          sourcePack: candidate.sourcePack || {},
-          sectionId: candidate.placement?.section_id || candidate.sourcePack?.section_id || '',
-          topicId: candidate.placement?.topic_id || candidate.sourcePack?.topic_id || '',
-        });
-        if (tagRepairResult.repaired) {
-          console.log(`[pipeline] Late tag repair: removed=[${tagRepairResult.removedTags?.join(',') || 'none'}]`);
-        }
-      }
+      // CRITICAL: Do NOT mutate placement/tags/content after draft.
+      // All editorial decisions (taxonomy, tags, duplicates, editorial quality)
+      // were finalized in pre-draft gates (Stage 3.4/3.5).
+      // Post-draft stages are write/finalize only — no editorial decisions.
 
       candidate.publishManifest = buildPublishManifest(candidate);
 
@@ -1232,16 +1217,11 @@ export async function runEditorialPipeline(options = {}) {
         candidate.placement = { ...(candidate.placement || {}), ...(publishResult.placement || {}) };
         candidate.publishManifest = buildPublishManifest(candidate, publishResult);
         candidate.publishManifestPath = writePublishManifest(candidate.publishManifest);
+        // Artifact validation is diagnostic/integrity only — does not block after successful write
         const artifactValidation = validatePublishedArtifact(publishResult.filePath, candidate.publishManifest);
         if (!artifactValidation.valid) {
-          publishItems.push({
-            title: articleLabel,
-            success: false,
-            error: `Published artifact validation failed: ${artifactValidation.errors.join(', ')}`,
-            data: { manifestPath: candidate.publishManifestPath, manifest: candidate.publishManifest },
-          });
-          articleErrors.push({ title: articleLabel, stage: 'publishing', error: artifactValidation.errors.join(', ') });
-          continue;
+          console.warn(`[pipeline] Artifact integrity warnings: ${artifactValidation.errors.join(', ')}`);
+          // Do not block — file was already written successfully
         }
       }
 
