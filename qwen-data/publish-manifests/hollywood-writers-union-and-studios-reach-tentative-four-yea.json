@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-07T04:30:11.250Z",
+  "event_id": "evt-2026-04-07-business-general-global",
+  "cluster_id": "evt-2026-04-07-business-general-global",
+  "article_type": "report",
+  "title": "Hollywood Writers Union and Studios Reach Contract Deal",
+  "slug": "hollywood-writers-union-and-studios-reach-tentative-four-yea",
+  "canonical_slug": "2026-04-07-hollywood-writers-union-and-studios-reach-tentative-four-yea",
+  "expected_url": "/article/2026-04-07-hollywood-writers-union-and-studios-reach-tentative-four-yea",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-07-hollywood-writers-union-and-studios-reach-tentative-four-yea.mdx",
+  "published_at": "2026-04-07T04:30:11.247Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Hollywood Writers Union and Studios Reach Contract Deal",
+  "topics": [
+    "Hollywood Writers Union and Studios Reach Contract Deal"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/wzvpv4feoe0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/wzvpv4feoe0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-in-black-shirt-beside-woman-in-black-shirt-WZvPv4fEoE0",
+    "asset_key": "unsplash:WZvPv4fEoE0",
+    "alt_text": "Illustration for Hollywood writers union and studios reach tentative four‑year deal",
+    "selection_mode": "provider_download_new:unsplash:strong:relaxed",
+    "query_used": "tentative four photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "hollywood",
+      "writers",
+      "union"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "Hollywood Writers Union and Studios Reach Contract Deal",
+        "url": "https://nytimes.com/2026/04/04/business/media/hollywood-writers-contract-deal.html",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Screenwriters union and Hollywood studios reach four-year tentative agreement | Ap-business",
+        "url": "https://wfmz.com/business/screenwriters-union-and-hollywood-studios-reach-four-year-tentative-agreement/article_c947012a-f0b6-59a2-9f5a-83e4a074e1dd.html",
+        "domain": "wfmz.com"
+      },
+      {
+        "title": "Hollywood studios reach a tentative agreement with writers union | WGCU News | PBS & NPR for Southwest Florida",
+        "url": "https://wgcu.org/2026-04-05/hollywood-studios-reach-a-tentative-agreement-with-writers-union",
+        "domain": "wgcu.org"
+      },
+      {
+        "title": "Screenwriters union and Hollywood studios reach four",
+        "url": "https://independent.co.uk/news/los-angeles-hollywood-sean-astin-los-angeles-times-sagaftra-b2952123.html",
+        "domain": "independent.co.uk"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "tentative four photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "tentative",
+        "four"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
