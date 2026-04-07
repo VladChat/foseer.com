@@ -47,6 +47,35 @@ const resolvedYoutubeVideo = youtubeVideo ?? (post.youtube_video_id
     }
   : null);
 
+const fallbackSlotHtml = Astro.slots.has('default') ? await Astro.slots.render('default') : '';
+
+let resolvedArticleHtmlBefore = articleHtmlBefore;
+let resolvedArticleHtmlAfter = articleHtmlAfter;
+
+if (
+  resolvedArticleHtmlBefore === undefined &&
+  resolvedArticleHtmlAfter === undefined &&
+  resolvedYoutubeVideo &&
+  fallbackSlotHtml
+) {
+  const h2Regex = /<h2[^>]*>/gi;
+  const matches: number[] = [];
+  let match: RegExpExecArray | null;
+
+  while ((match = h2Regex.exec(fallbackSlotHtml)) !== null) {
+    matches.push(match.index);
+    if (matches.length === 2) break;
+  }
+
+  if (matches.length === 2) {
+    resolvedArticleHtmlBefore = fallbackSlotHtml.substring(0, matches[1]);
+    resolvedArticleHtmlAfter = fallbackSlotHtml.substring(matches[1]);
+  }
+}
+
+const hasServerSideYoutubeSplit =
+  typeof resolvedArticleHtmlBefore === 'string' && typeof resolvedArticleHtmlAfter === 'string';
+
 const { sectionLabel, subsectionLabel } = getResolvedArticlePlacement(post);
 const articleTypeLabel = getArticleTypeLabel(post.article_type);
 
@@ -189,10 +218,10 @@ const showUnsplashCredit = imageProvider === 'unsplash' && Boolean(imageAuthorNa
     </header>
 
     <div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-none dark:prose-invert prose-headings:font-heading prose-headings:font-bold prose-headings:leading-tight prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-slate-300 prose-p:leading-[1.8] prose-p:text-lg prose-p:mb-6 prose-p:text-justify prose-h2:text-3xl sm:text-4xl prose-h2:font-bold prose-h2:mt-14 prose-h2:mb-8 prose-h2:pt-8 prose-h2:border-t prose-h2:border-slate-200 dark:prose-h2:border-slate-700 prose-h3:text-2xl sm:text-3xl prose-h3:font-semibold prose-h3:mt-10 prose-h3:mb-5 prose-h3:text-blue-600 dark:prose-h3:text-blue-400 prose-h4:text-xl prose-h4:font-semibold prose-h4:mt-7 prose-h4:mb-3 prose-strong:font-semibold prose-em:italic prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:pr-4 prose-blockquote:py-3 prose-blockquote:italic prose-blockquote:text-gray-700 dark:prose-blockquote:text-slate-300 prose-blockquote:text-lg prose-blockquote:my-8 prose-blockquote:rounded-r-lg prose-blockquote:bg-slate-50 dark:prose-blockquote:bg-slate-800/50 prose-blockquote:shadow-sm prose-ul:mb-6 prose-ol:mb-6 prose-li:mb-3 prose-a:text-primary prose-a:underline hover:prose-a:no-underline prose-img:rounded-lg prose-img:shadow-lg prose-img:mx-auto prose-code:text-gray-800 dark:prose-code:text-slate-200 prose-pre:bg-gray-50 dark:prose-pre:bg-slate-800 prose-pre:rounded-lg prose-pre:p-4 prose-table:text-left prose-th:bg-gray-100 dark:prose-th:bg-slate-700 prose-td:border prose-td:border-gray-200 dark:prose-td:border-slate-600 prose-figure:mb-6 prose-figcaption:text-sm prose-figcaption:text-muted dark:prose-figcaption:text-slate-400 prose-figcaption:mt-2 prose-hr:border-t prose-hr:border-gray-200 dark:prose-hr:border-slate-700 prose-hr:my-10 prose-hr:opacity-50" id="article-body">
-      {articleHtmlBefore !== undefined
+      {hasServerSideYoutubeSplit
         ? (
           <>
-            <Fragment set:html={articleHtmlBefore} />
+            <Fragment set:html={resolvedArticleHtmlBefore} />
             {resolvedYoutubeVideo && (
               <div id="article-youtube-block" class="not-prose my-10 -mx-4 sm:mx-0 sm:rounded-xl sm:border sm:border-slate-200 sm:dark:border-slate-700 sm:bg-slate-50 sm:dark:bg-slate-800/30 sm:px-4 sm:py-6">
                 <ArticleVideoBlock
@@ -204,7 +233,7 @@ const showUnsplashCredit = imageProvider === 'unsplash' && Boolean(imageAuthorNa
                 />
               </div>
             )}
-            <Fragment set:html={articleHtmlAfter ?? ''} />
+            <Fragment set:html={resolvedArticleHtmlAfter ?? ''} />
           </>
         )
         : (

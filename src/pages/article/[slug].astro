@@ -69,9 +69,6 @@ const metadata = merge(
   { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || url } : {}) }
 ) as MetaData;
 
-// Split article content at the 2nd <h2> for YouTube block placement.
-// YouTube will be rendered directly between the two parts, eliminating
-// the need for post-render DOM relocation.
 const youtubeVideo = (post as Post).youtube_video_id
   ? {
       videoId: String((post as Post).youtube_video_id).trim(),
@@ -81,39 +78,15 @@ const youtubeVideo = (post as Post).youtube_video_id
       matchReason: String((post as Post).youtube_video_match_reason || '').trim(),
     }
   : null;
-
-const rawContent = post.content || '';
-const hasYoutubeAndRawContent = youtubeVideo && rawContent;
-
-// Find the 2nd <h2> opening tag position in the HTML
-let articleHtmlBefore: string | null = null;
-let articleHtmlAfter: string | null = null;
-if (hasYoutubeAndRawContent) {
-  const h2Regex = /<h2[^>]*>/gi;
-  const matches: number[] = [];
-  let match;
-  while ((match = h2Regex.exec(rawContent)) !== null) {
-    matches.push(match.index);
-    if (matches.length === 2) break;
-  }
-  if (matches.length === 2) {
-    articleHtmlBefore = rawContent.substring(0, matches[1]);
-    articleHtmlAfter = rawContent.substring(matches[1]);
-  }
-}
 ---
 
 <Layout metadata={metadata}>
   <SinglePost
     post={{ ...post, image: coverImage }}
     url={url}
-    articleHtmlBefore={articleHtmlBefore ?? undefined}
-    articleHtmlAfter={articleHtmlAfter ?? undefined}
     youtubeVideo={youtubeVideo}
   >
-    {articleHtmlBefore === null
-      ? (post.Content ? <post.Content /> : <Fragment set:html={rawContent} />)
-      : null}
+    {post.Content ? <post.Content /> : null}
   </SinglePost>
   <RelatedPosts post={post} />
 </Layout>
