@@ -1,0 +1,159 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-08T15:44:50.580Z",
+  "event_id": "evt-2026-04-08-major-leagues-general-global-nfl",
+  "cluster_id": "evt-2026-04-08-major-leagues-general-global-nfl",
+  "article_type": "analysis",
+  "title": "What a Fifth Champions League Place Means for the Premier League",
+  "slug": "what-a-fifth-champions-league-place-means-for-the-premier-le",
+  "canonical_slug": "2026-04-08-what-a-fifth-champions-league-place-means-for-the-premier-le",
+  "expected_url": "/article/2026-04-08-what-a-fifth-champions-league-place-means-for-the-premier-le",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-08-what-a-fifth-champions-league-place-means-for-the-premier-le.mdx",
+  "published_at": "2026-04-08T15:44:50.573Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Major Leagues",
+  "topics": [
+    "Major Leagues"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/6iekmqpmf20/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/6iekmqpmf20/cover.jpg",
+    "source_url": "https://unsplash.com/photos/soccer-balls-on-a-grassy-field-6ieKmQPmF20",
+    "asset_key": "unsplash:6ieKmQPmF20",
+    "alt_text": "Illustration for What a Fifth Champions League Place Means for the Premier League",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Premier League football photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "fifth",
+      "champions",
+      "league"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Standings",
+    "Premier League",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Premier League secures fifth Champions League place for 2026",
+        "url": "https://www.nytimes.com/athletic/7179142/2026/04/07/premier-league-clubs-champions-league-fifth-place/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Can the Premier League do more to combat violence against ...",
+        "url": "https://www.nytimes.com/athletic/7143844/2026/04/06/premier-league-violence-women-girls/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "2026 Indoor Football League schedule, results, standings and streams",
+        "url": "https://sports.yahoo.com/article/2026-indoor-football-league-schedule-results-standings-and-streams-192205763.html",
+        "domain": "sports.yahoo.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Major Leagues",
+      "Primary topic_id unsupported by article evidence: major-leagues"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "2026 Indoor Football League schedule, results, standings and streams",
+          "url": "https://sports.yahoo.com/article/2026-indoor-football-league-schedule-results-standings-and-streams-192205763.html",
+          "overlap_ratio": 0.17,
+          "shared_tokens": [
+            "league"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "standings",
+          "label": "Standings",
+          "type": "theme"
+        },
+        {
+          "slug": "premier-league",
+          "label": "Premier League",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Premier League football photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "premier",
+        "league",
+        "football"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
