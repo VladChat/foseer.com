@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-08T12:09:11.762Z",
+  "event_id": "evt-2026-04-07-world-geopolitics-general-global-india",
+  "cluster_id": "evt-2026-04-07-world-geopolitics-general-global-india",
+  "article_type": "report",
+  "title": "Stock market news for April 6, 2026",
+  "slug": "india-stocks-in-focus-after-key-upgrade-to-customer-platform",
+  "canonical_slug": "2026-04-08-india-stocks-in-focus-after-key-upgrade-to-customer-platform",
+  "expected_url": "/article/2026-04-08-india-stocks-in-focus-after-key-upgrade-to-customer-platform",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-08-india-stocks-in-focus-after-key-upgrade-to-customer-platform.mdx",
+  "published_at": "2026-04-08T12:09:11.760Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Stock market news for April 6, 2026",
+  "topics": [
+    "Stock market news for April 6, 2026"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/2towgfdlcu8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/2towgfdlcu8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-man-and-a-woman-sitting-at-a-table-with-a-laptop-2tOwGfDLCU8",
+    "asset_key": "unsplash:2tOwGfDLCU8",
+    "alt_text": "Illustration for India Stocks in Focus After Key Upgrade to Customer Platform Firm",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Customer Platform Firm photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 99,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "india",
+      "stocks",
+      "focus"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Diplomacy",
+    "Stock Market",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Stock market news for April 6, 2026",
+        "url": "https://www.cnbc.com/2026/04/05/stock-market-today-live-updates.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Stock market news for April 6, 2026",
+          "url": "https://www.cnbc.com/2026/04/05/stock-market-today-live-updates.html",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "stock-market",
+          "label": "Stock Market",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "market",
+          "stock market",
+          "stocks"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Customer Platform Firm photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "customer",
+        "platform",
+        "firm"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-08T12:13:12.519Z",
+  "event_id": "evt-2026-04-08-us-politics-ceasefire-iran-iran",
+  "cluster_id": "evt-2026-04-08-us-politics-ceasefire-iran-iran",
+  "article_type": "report",
+  "title": "Vance calls Iran ceasefire a \"fragile truce,\" says some inside Iran are \"lying\"",
+  "slug": "vance-calls-iran-ceasefire-a-fragile-truce-during-hungary-vi",
+  "canonical_slug": "2026-04-08-vance-calls-iran-ceasefire-a-fragile-truce-during-hungary-vi",
+  "expected_url": "/article/2026-04-08-vance-calls-iran-ceasefire-a-fragile-truce-during-hungary-vi",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-08-vance-calls-iran-ceasefire-a-fragile-truce-during-hungary-vi.mdx",
+  "published_at": "2026-04-08T12:13:12.516Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "Vance calls Iran ceasefire a \"fragile truce,\" says some inside Iran are \"lying\"",
+  "topics": [
+    "Vance calls Iran ceasefire a \"fragile truce,\" says some inside Iran are \"lying\""
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/wxn8fyodx_s/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/wxn8fyodx_s/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-crowd-of-people-holding-signs-and-flags-wxn8FyodX_s",
+    "asset_key": "unsplash:wxn8FyodX_s",
+    "alt_text": "Illustration for Vance calls Iran ceasefire a fragile truce during Hungary visit",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "calls ceasefire fragile photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "diplomacy",
+      "international",
+      "summit",
+      "vance",
+      "calls",
+      "ceasefire"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "Ceasefire",
+    "Iran",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Vance calls Iran ceasefire a \"fragile truce,\" says some inside Iran are \"lying\"",
+        "url": "https://www.cbsnews.com/news/vance-hungary-viktor-orban-reelection-trump-iran/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "US and Iran agree to provisional ceasefire as Tehran says it will reopen strait of Hormuz",
+        "url": "https://www.theguardian.com/us-news/2026/apr/08/first-thing-us-iran-ceasefire-tehran-reopen-strait-of-hormuz",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "ceasefire",
+          "label": "Ceasefire",
+          "type": "theme"
+        },
+        {
+          "slug": "iran",
+          "label": "Iran",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "ceasefire",
+          "diplomatic",
+          "iran",
+          "hormuz",
+          "strait"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "calls ceasefire fragile photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "calls",
+        "ceasefire",
+        "fragile"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
