@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-09T12:10:09.500Z",
+  "event_id": "evt-2026-04-07-economy-markets-general-global-iran",
+  "cluster_id": "evt-2026-04-07-economy-markets-general-global-iran",
+  "article_type": "report",
+  "title": "CFTC must crack down on offshore prediction market war bets",
+  "slug": "regulators-face-pressure-over-offshore-war-bets-on-predictio",
+  "canonical_slug": "2026-04-09-regulators-face-pressure-over-offshore-war-bets-on-predictio",
+  "expected_url": "/article/2026-04-09-regulators-face-pressure-over-offshore-war-bets-on-predictio",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-09-regulators-face-pressure-over-offshore-war-bets-on-predictio.mdx",
+  "published_at": "2026-04-09T12:10:09.497Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "CFTC must crack down on offshore prediction market war bets",
+  "topics": [
+    "CFTC must crack down on offshore prediction market war bets"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/hkfmqkj5t5k/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/hkfmqkj5t5k/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-basketball-player-shoots-the-ball-during-a-game-hKFMqKj5T5k",
+    "asset_key": "unsplash:hKFMqKj5T5k",
+    "alt_text": "Illustration for Regulators Face Pressure Over Offshore War Bets on Prediction Markets",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Offshore War Bets basketball photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "regulators",
+      "pressure",
+      "offshore"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "CFTC must crack down on offshore prediction market war bets",
+        "url": "https://www.cnbc.com/2026/04/07/kalshi-polymarket-prediction-markets-cftc-war-bets.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets",
+          "market"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Offshore War Bets basketball photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "offshore",
+        "war",
+        "bets",
+        "basketball"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

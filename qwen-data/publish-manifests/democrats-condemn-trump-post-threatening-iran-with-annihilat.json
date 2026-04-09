@@ -1,0 +1,156 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-09T12:10:47.557Z",
+  "event_id": "evt-2026-04-08-news-general-iran-iran",
+  "cluster_id": "evt-2026-04-08-news-general-iran-iran",
+  "article_type": "report",
+  "title": "Democrats outraged at Trump's Iran post: 'A threat to commit a war ...",
+  "slug": "democrats-condemn-trump-post-threatening-iran-with-annihilat",
+  "canonical_slug": "2026-04-09-democrats-condemn-trump-post-threatening-iran-with-annihilat",
+  "expected_url": "/article/2026-04-09-democrats-condemn-trump-post-threatening-iran-with-annihilat",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-09-democrats-condemn-trump-post-threatening-iran-with-annihilat.mdx",
+  "published_at": "2026-04-09T12:10:47.554Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "Democrats outraged at Trump's Iran post: 'A threat to commit a war ...",
+  "topics": [
+    "Democrats outraged at Trump's Iran post: 'A threat to commit a war ..."
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/b_vxfdzvw3g/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/b_vxfdzvw3g/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-wearing-donald-trump-mask-standing-in-front-of-white-house-B_vXFdzvw3g",
+    "asset_key": "unsplash:B_vXFdzvw3g",
+    "alt_text": "man wearing Donald Trump mask standing in front of White House",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Trump government photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "diplomacy",
+      "international",
+      "summit",
+      "democrats",
+      "condemn",
+      "trump"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.6,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "Iran",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Democrats outraged at Trump's Iran post: 'A threat to commit a war ...",
+        "url": "https://www.theguardian.com/us-news/2026/apr/07/trump-iran-threat-truth-social",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Donald Trump says 'a whole civilisation will die' if Iran ignores ...",
+        "url": "https://www.theguardian.com/world/2026/apr/07/israel-warns-iran-lives-at-risk-if-they-use-trains-trump-deadline",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Pentagon's new plans in Iran give Trump a way out of war ...",
+        "url": "https://www.politico.com/news/2026/04/06/pentagon-iran-war-crime-accusations-00860468",
+        "domain": "politico.com"
+      },
+      {
+        "title": "Oil prices rise as US stocks fall ahead of Trump's deadline for Iran",
+        "url": "https://www.theglobeandmail.com/investing/markets/commodities/ymz20/pressreleases/1167927/global-shares-mostly-higher-ahead-of-trump-s-deadline-for-iran-to-reopen-oil-route/",
+        "domain": "theglobeandmail.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Canonical tag unsupported by article evidence: Ceasefire"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "ceasefire",
+          "label": "Ceasefire",
+          "type": "theme"
+        },
+        {
+          "slug": "iran",
+          "label": "Iran",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "ceasefire",
+          "label": "Ceasefire",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "iran",
+          "hormuz",
+          "strait"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Trump government photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "trump",
+        "government"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
