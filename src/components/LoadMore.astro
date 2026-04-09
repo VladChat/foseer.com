@@ -28,12 +28,16 @@
     const step = parseInt(btn.dataset.step || '12', 10);
     let shownCount = parseInt(btn.dataset.shown || '12', 10);
 
+    // Take a fresh snapshot of currently-hidden cards.
+    // Cards are MOVED out of this container on each click (appendChild removes
+    // from the old parent), so this snapshot always reflects what's actually
+    // still hidden — no offset math needed.
     const hiddenCards = Array.from(hiddenContainer.children);
-    const remaining = hiddenCards.length - (shownCount - 12);
+    const remaining = hiddenCards.length;
     const toShow = Math.min(step, remaining);
 
     for (let i = 0; i < toShow; i++) {
-      const card = hiddenCards[shownCount - 12 + i];
+      const card = hiddenCards[i];
       if (card) {
         grid.appendChild(card);
       }
