@@ -1,0 +1,117 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-09T15:56:38.454Z",
+  "event_id": "evt-2026-04-08-space-astronomy-general-global",
+  "cluster_id": "evt-2026-04-08-space-astronomy-general-global",
+  "article_type": "analysis",
+  "title": "Reading the Ground: What’s Likely to Happen Next Near Mammoth Lakes",
+  "slug": "reading-the-ground-what-s-likely-to-happen-next-near-mammoth",
+  "canonical_slug": "2026-04-09-reading-the-ground-what-s-likely-to-happen-next-near-mammoth",
+  "expected_url": "/article/2026-04-09-reading-the-ground-what-s-likely-to-happen-next-near-mammoth",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-09-reading-the-ground-what-s-likely-to-happen-next-near-mammoth.mdx",
+  "published_at": "2026-04-09T15:56:38.452Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "Space & Astronomy",
+  "topics": [
+    "Space & Astronomy"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/3121255/cover.png",
+    "file_relative_path": "src/assets/images/library/pixabay/3121255/cover.png",
+    "source_url": "https://pixabay.com/photos/photoshop-space-universe-sky-3121255/",
+    "asset_key": "pixabay:3121255",
+    "alt_text": "photoshop, space, universe, sky, planet, star, moon, astronomy, surreal, starry sky, fantasy, reference information, photo montage, atmosphere, the science, fantastic, night sky, sveta, the globe, the overlap, digital art, mysterious, nature, celestial body, swing, child's, dream, clouds, mood, dreams, feeling, night, fairy tales, float, vacation, story, atmospheric, tree, landscape, land, milky way, evening sky, sunset, peace, lands, graphic arts, clouds form, summer",
+    "selection_mode": "provider_download_new:pixabay:acceptable:relaxed",
+    "query_used": "Space and Astronomy photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 99,
+    "image_fit_score": 0.8,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "reading",
+      "ground:",
+      "what’s"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "A Volcanic Medley Near Mammoth Lakes",
+        "url": "https://science.nasa.gov/earth/earth-observatory/a-volcanic-medley-near-mammoth-lakes/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic_id unsupported by article evidence: space-astronomy",
+      "Image query reinforces unsupported topic context: Space & Astronomy"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Space and Astronomy photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}
