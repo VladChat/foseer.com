@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-10T12:10:26.129Z",
+  "event_id": "evt-2026-04-10-world-geopolitics-general-global",
+  "cluster_id": "evt-2026-04-10-world-geopolitics-general-global",
+  "article_type": "report",
+  "title": "Climate Denial Comes to Washington",
+  "slug": "climate-denial-conference-brings-fight-over-science-to-washi",
+  "canonical_slug": "2026-04-10-climate-denial-conference-brings-fight-over-science-to-washi",
+  "expected_url": "/article/2026-04-10-climate-denial-conference-brings-fight-over-science-to-washi",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-10-climate-denial-conference-brings-fight-over-science-to-washi.mdx",
+  "published_at": "2026-04-10T12:10:26.127Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "climate-extreme-weather",
+  "topic_label": "Climate & Extreme Weather",
+  "subsection": "Climate Denial Comes to Washington",
+  "topics": [
+    "Climate Denial Comes to Washington"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/5b06bpr4-9c/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/5b06bpr4-9c/cover.jpg",
+    "source_url": "https://unsplash.com/photos/person-photographs-the-us-capitol-building-in-winter-5b06bPR4-9c",
+    "asset_key": "unsplash:5b06bPR4-9c",
+    "alt_text": "Illustration for Climate Denial Conference Brings Fight Over Science to Washington",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Washington climate photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "extreme weather",
+      "storm",
+      "climate",
+      "denial",
+      "conference"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Climate & Extreme Weather",
+    "Diplomacy",
+    "Washington",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Climate Denial Comes to Washington",
+        "url": "https://www.nytimes.com/2026/04/09/climate/climate-denial-comes-to-washington.html",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Ofcom to investigate complaints of climate change denial",
+        "url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+        "domain": "wattsupwiththat.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "washington",
+          "label": "Washington",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "climate-extreme-weather",
+        "topic_label": "Climate & Extreme Weather",
+        "supported": true,
+        "matched_aliases": [
+          "climate",
+          "emissions",
+          "warming"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Washington climate photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "washington",
+        "climate"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
