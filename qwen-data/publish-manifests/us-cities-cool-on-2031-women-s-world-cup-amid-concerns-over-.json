@@ -1,0 +1,145 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-11T11:56:54.262Z",
+  "event_id": "evt-2026-04-10-major-leagues-approval-us-fifa",
+  "cluster_id": "evt-2026-04-10-major-leagues-approval-us-fifa",
+  "article_type": "report",
+  "title": "Potential US host cities for 2031 Women’s World Cup games mull withdrawal over Fifa concerns",
+  "slug": "us-cities-cool-on-2031-women-s-world-cup-amid-concerns-over-",
+  "canonical_slug": "2026-04-11-us-cities-cool-on-2031-women-s-world-cup-amid-concerns-over",
+  "expected_url": "/article/2026-04-11-us-cities-cool-on-2031-women-s-world-cup-amid-concerns-over",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-11-us-cities-cool-on-2031-women-s-world-cup-amid-concerns-over.mdx",
+  "published_at": "2026-04-11T11:56:54.260Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Potential US host cities for 2031 Women’s World Cup games mull withdrawal over Fifa concerns",
+  "topics": [
+    "Potential US host cities for 2031 Women’s World Cup games mull withdrawal over Fifa concerns"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/3471606/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/3471606/cover.jpg",
+    "source_url": "https://pixabay.com/photos/trophy-russia-soccer-football-3471606/",
+    "asset_key": "pixabay:3471606",
+    "alt_text": "trophy, russia, soccer, football, tournament, championship, sport, match, competition, world, winner, champion, award, 2018, win, cup, game, gold, confetti, celebration, success, prize, victory, achievement, medal, gray football, gray gaming, gray sports, gray game, gray games, gray winner, gray cup, gray celebrate, trophy, trophy, trophy, trophy, trophy, soccer, tournament, award, confetti, victory, medal, medal, medal, medal, medal",
+    "selection_mode": "provider_download_new:pixabay:strong:strict",
+    "query_used": "World Cup football photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "cities",
+      "women’s",
+      "world"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "World Cup",
+    "FIFA",
+    "United States",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Potential US host cities for 2031 Women’s World Cup games mull withdrawal over Fifa concerns",
+        "url": "https://www.theguardian.com/football/2026/apr/10/womens-world-cup-2031-host-cities-fifa-concerns",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Major Leagues",
+      "Primary topic_id unsupported by article evidence: major-leagues"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "world-cup",
+          "label": "World Cup",
+          "type": "theme"
+        },
+        {
+          "slug": "fifa",
+          "label": "FIFA",
+          "type": "entity"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "World Cup football photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "world",
+        "cup"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
