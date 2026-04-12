@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-12T11:59:47.228Z",
+  "event_id": "evt-2026-04-10-space-astronomy-general-global-openai-china",
+  "cluster_id": "evt-2026-04-10-space-astronomy-general-global-openai-china",
+  "article_type": "report",
+  "title": "Alibaba leads $290m investment for Shengshu Vidu AI world model",
+  "slug": "alibaba-leads-290-million-bet-on-shengshu-vidu-s-world-model",
+  "canonical_slug": "2026-04-12-alibaba-leads-290-million-bet-on-shengshu-vidu-s-world-model",
+  "expected_url": "/article/2026-04-12-alibaba-leads-290-million-bet-on-shengshu-vidu-s-world-model",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-12-alibaba-leads-290-million-bet-on-shengshu-vidu-s-world-model.mdx",
+  "published_at": "2026-04-12T11:59:47.225Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "ai-big-tech",
+  "topic_label": "AI & Big Tech",
+  "subsection": "Alibaba leads $290m investment for Shengshu Vidu AI world model",
+  "topics": [
+    "Alibaba leads $290m investment for Shengshu Vidu AI world model"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/rk1xqp3qz5g/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/rk1xqp3qz5g/cover.jpg",
+    "source_url": "https://unsplash.com/photos/water-droplets-on-glass-panel-RK1XQP3QZ5g",
+    "asset_key": "unsplash:RK1XQP3QZ5g",
+    "alt_text": "Illustration for Alibaba Leads $290 Million Bet on Shengshu Vidu’s ‘World Model’ AI",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "World Model AI technology photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "alibaba",
+      "leads",
+      "million"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "AI & Big Tech",
+    "Artificial Intelligence",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Alibaba leads $290m investment for Shengshu Vidu AI world model",
+        "url": "https://www.cnbc.com/2026/04/10/alibaba-cloud-invests-world-model-ai-shengshu-vidu.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "ai-big-tech",
+        "topic_label": "AI & Big Tech",
+        "supported": true,
+        "matched_aliases": [
+          "ai",
+          "artificial intelligence"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "World Model AI technology photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "world",
+        "model"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-12T12:02:57.414Z",
+  "event_id": "evt-2026-04-12-ai-big-tech-general-global-apple-openai",
+  "cluster_id": "evt-2026-04-12-ai-big-tech-general-global-apple-openai",
+  "article_type": "report",
+  "title": "‘Your photos will be deleted’: Apple users warned over ‘nasty’ iCloud storage scam",
+  "slug": "apple-users-warned-over-your-photos-will-be-deleted-icloud-s",
+  "canonical_slug": "2026-04-12-apple-users-warned-over-your-photos-will-be-deleted-icloud-s",
+  "expected_url": "/article/2026-04-12-apple-users-warned-over-your-photos-will-be-deleted-icloud-s",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-12-apple-users-warned-over-your-photos-will-be-deleted-icloud-s.mdx",
+  "published_at": "2026-04-12T12:02:57.412Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "‘Your photos will be deleted’: Apple users warned over ‘nasty’ iCloud storage scam",
+  "topics": [
+    "‘Your photos will be deleted’: Apple users warned over ‘nasty’ iCloud storage scam"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/v3rzyldn8xe/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/v3rzyldn8xe/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-close-up-of-the-word-photos-on-a-black-surface-v3rZYLdn8xE",
+    "asset_key": "unsplash:v3rZYLdn8xE",
+    "alt_text": "Illustration for Apple users warned over ‘your photos will be deleted’ iCloud scam",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "users warned photos photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "apple",
+      "users",
+      "warned"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Apple",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "‘Your photos will be deleted’: Apple users warned over ‘nasty’ iCloud storage scam",
+        "url": "https://www.theguardian.com/money/2026/apr/12/apple-icloud-storage-scam-emails",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "apple",
+          "label": "Apple",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "users warned photos photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "users",
+        "warned",
+        "photos"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
