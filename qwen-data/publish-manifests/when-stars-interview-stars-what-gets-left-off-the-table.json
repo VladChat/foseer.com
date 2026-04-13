@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-13T12:42:53.645Z",
+  "event_id": "evt-2026-04-12-film-tv-general-global",
+  "cluster_id": "evt-2026-04-12-film-tv-general-global",
+  "article_type": "report",
+  "title": "Celebrity on celebrity: are we losing the art of the big star interview?",
+  "slug": "when-stars-interview-stars-what-gets-left-off-the-table",
+  "canonical_slug": "2026-04-13-when-stars-interview-stars-what-gets-left-off-the-table",
+  "expected_url": "/article/2026-04-13-when-stars-interview-stars-what-gets-left-off-the-table",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-13-when-stars-interview-stars-what-gets-left-off-the-table.mdx",
+  "published_at": "2026-04-13T12:42:53.643Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "creators-platforms",
+  "topic_label": "Creators & Platforms",
+  "subsection": "Celebrity on celebrity: are we losing the art of the big star interview?",
+  "topics": [
+    "Celebrity on celebrity: are we losing the art of the big star interview?"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/mnef9fz-az4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/mnef9fz-az4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-woman-is-sitting-on-the-floor-MNEf9Fz-az4",
+    "asset_key": "unsplash:MNEf9Fz-az4",
+    "alt_text": "Illustration for When stars interview stars, what gets left off the table?",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Celebrity photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "content creator",
+      "streaming",
+      "social platform",
+      "stars",
+      "interview",
+      "table?"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Creators & Platforms",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Celebrity on celebrity: are we losing the art of the big star interview?",
+        "url": "https://www.theguardian.com/culture/2026/apr/11/celebrity-peer-interviews",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Celebrity on celebrity: are we losing the art of the big star interview?",
+          "url": "https://www.theguardian.com/culture/2026/apr/11/celebrity-peer-interviews",
+          "overlap_ratio": 0.17,
+          "shared_tokens": [
+            "interview"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "creators-platforms",
+          "label": "Creators & Platforms",
+          "type": "topic"
+        },
+        {
+          "slug": "influencer-economy",
+          "label": "Influencer Economy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "creators-platforms",
+        "topic_label": "Creators & Platforms",
+        "supported": true,
+        "matched_aliases": [
+          "creator economy",
+          "social media"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Celebrity photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "celebrity"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

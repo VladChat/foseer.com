@@ -1,0 +1,144 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-13T12:45:45.989Z",
+  "event_id": "evt-2026-04-13-crypto-bitcoin-general-global-jpmorgan-india",
+  "cluster_id": "evt-2026-04-13-crypto-bitcoin-general-global-jpmorgan-india",
+  "article_type": "report",
+  "title": "Crypto TradFi perpetuals are predicting the direct of Wall Street’s Monday open with 89% accuracy",
+  "slug": "crypto-perpetuals-are-front-running-wall-street-s-monday-ope",
+  "canonical_slug": "2026-04-13-crypto-perpetuals-are-front-running-wall-street-s-monday-ope",
+  "expected_url": "/article/2026-04-13-crypto-perpetuals-are-front-running-wall-street-s-monday-ope",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-13-crypto-perpetuals-are-front-running-wall-street-s-monday-ope.mdx",
+  "published_at": "2026-04-13T12:45:45.988Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "crypto-bitcoin",
+  "topic_label": "Crypto",
+  "subsection": "Crypto TradFi perpetuals are predicting the direct of Wall Street’s Monday open with 89% accuracy",
+  "topics": [
+    "Crypto TradFi perpetuals are predicting the direct of Wall Street’s Monday open with 89% accuracy"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "sophia_bennett",
+    "author_name": "Sophia Bennett",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/2kpwyoxl3ca/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/2kpwyoxl3ca/cover.jpg",
+    "source_url": "https://unsplash.com/photos/happy-new-year-greeting-card-2KPwyOXL3cA",
+    "asset_key": "unsplash:2KPwyOXL3cA",
+    "alt_text": "Illustration for Crypto perpetuals are front‑running Wall Street’s Monday open",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Monday crypto photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "cryptocurrency",
+      "bitcoin",
+      "blockchain",
+      "crypto",
+      "perpetuals",
+      "front‑running"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Crypto",
+    "Wall Street",
+    "Bitcoin",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Crypto TradFi perpetuals are predicting the direct of Wall Street’s Monday open with 89% accuracy",
+        "url": "https://www.coindesk.com/markets/2026/04/11/crypto-perpetuals-predict-the-direction-of-wall-street-s-monday-open-with-89-accuracy-data-shows",
+        "domain": "coindesk.com"
+      },
+      {
+        "title": "Forget Bitcoin ETFs; This Is How Crypto Is Really Going Mainstream",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/v-n/pressreleases/1259546/forget-bitcoin-etfs-this-is-how-crypto-is-really-going-mainstream/",
+        "domain": "theglobeandmail.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Forget Bitcoin ETFs; This Is How Crypto Is Really Going Mainstream",
+          "url": "https://www.theglobeandmail.com/investing/markets/stocks/v-n/pressreleases/1259546/forget-bitcoin-etfs-this-is-how-crypto-is-really-going-mainstream/",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "crypto"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "crypto-bitcoin",
+          "label": "Crypto",
+          "type": "topic"
+        },
+        {
+          "slug": "wall-street",
+          "label": "Wall Street",
+          "type": "theme"
+        },
+        {
+          "slug": "bitcoin",
+          "label": "Bitcoin",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "crypto-bitcoin",
+        "topic_label": "Crypto",
+        "supported": true,
+        "matched_aliases": [
+          "Crypto",
+          "bitcoin"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Monday crypto photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "monday",
+        "crypto"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
