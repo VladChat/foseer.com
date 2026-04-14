@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-14T12:15:17.177Z",
+  "event_id": "evt-2026-04-14-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-04-14-pharma-fda-general-global-fda",
+  "article_type": "report",
+  "title": "GDUFA IV: Fiscal Years 2028",
+  "slug": "fda-opens-gdufa-iv-information-hub-for-fiscal-year-2028-plan",
+  "canonical_slug": "2026-04-14-fda-opens-gdufa-iv-information-hub-for-fiscal-year-2028-plan",
+  "expected_url": "/article/2026-04-14-fda-opens-gdufa-iv-information-hub-for-fiscal-year-2028-plan",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-14-fda-opens-gdufa-iv-information-hub-for-fiscal-year-2028-plan.mdx",
+  "published_at": "2026-04-14T12:15:17.176Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "GDUFA IV: Fiscal Years 2028",
+  "topics": [
+    "GDUFA IV: Fiscal Years 2028"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/xycbw1uip_m/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/xycbw1uip_m/cover.jpg",
+    "source_url": "https://unsplash.com/photos/person-writing-on-white-paper-xYCBw1uIP_M",
+    "asset_key": "unsplash:xYCBw1uIP_M",
+    "alt_text": "Illustration for FDA Opens GDUFA IV Information Hub for Fiscal Year 2028 Planning",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "2028 planning photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "opens",
+      "gdufa",
+      "information"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "GDUFA IV: Fiscal Years 2028",
+        "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-iv-fiscal-years-2028-2032",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "2028 planning photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "2028",
+        "planning"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
