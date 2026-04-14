@@ -6,7 +6,7 @@ on:
       max_articles_per_run:
         description: 'How many articles to attempt in one run (1-5)'
         required: false
-        default: '3'
+        default: '2'
         type: string
   schedule:
     - cron: '27 6 * * *'
@@ -26,7 +26,7 @@ jobs:
     timeout-minutes: 45
     env:
       PIPELINE_RUNTIME_ROOT: /tmp/foseer-runtime/${{ github.run_id }}
-      QWEN_MAX_ARTICLES_PER_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.max_articles_per_run || '3' }}
+      QWEN_MAX_ARTICLES_PER_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.max_articles_per_run || '2' }}
       QWEN_MIN_ARTICLES_TARGET: '2'
       QWEN_SELECTION_COVERAGE_FLOOR_ENABLED: 'true'
       QWEN_SELECTION_COVERAGE_FLOOR_MIN_ARTICLES: '3'
