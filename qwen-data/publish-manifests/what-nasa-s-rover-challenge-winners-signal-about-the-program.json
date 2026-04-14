@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-14T15:40:18.182Z",
+  "event_id": "evt-2026-04-14-space-astronomy-general-global",
+  "cluster_id": "evt-2026-04-14-space-astronomy-general-global",
+  "article_type": "analysis",
+  "title": "What NASA’s Rover Challenge Winners Signal About the Program’s Next Step",
+  "slug": "what-nasa-s-rover-challenge-winners-signal-about-the-program",
+  "canonical_slug": "2026-04-14-what-nasa-s-rover-challenge-winners-signal-about-the-program",
+  "expected_url": "/article/2026-04-14-what-nasa-s-rover-challenge-winners-signal-about-the-program",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-14-what-nasa-s-rover-challenge-winners-signal-about-the-program.mdx",
+  "published_at": "2026-04-14T15:40:18.180Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "Space & Astronomy",
+  "topics": [
+    "Space & Astronomy"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/5632613/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/5632613/cover.jpg",
+    "source_url": "https://pixabay.com/photos/car-model-portrait-human-men-hai-5632613/",
+    "asset_key": "pixabay:5632613",
+    "alt_text": "car, model, car wallpapers, portrait, human, men, hai, entrepreneur, boss, male model, building, architecture, suv, range rover, transport, fashion, style, equipment, clothes, modeling, poses, what creates, land rover evoque, zaha hadid dominion tower, business center office building",
+    "selection_mode": "provider_download_new:pixabay:strong:strict",
+    "query_used": "Annual Human Exploration Rover photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "nasa’s",
+      "rover",
+      "challenge"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "NASA",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "NASA Announces 32nd Annual Human Exploration Rover Challenge Winners",
+        "url": "https://www.nasa.gov/centers-and-facilities/marshall/nasa-announces-32nd-annual-human-exploration-rover-challenge-winners/",
+        "domain": "nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "nasa",
+          "label": "NASA",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Annual Human Exploration Rover photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "annual",
+        "human",
+        "exploration",
+        "rover"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
