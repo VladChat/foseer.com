@@ -1,0 +1,127 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-16T12:45:42.144Z",
+  "event_id": "evt-2026-04-15-space-astronomy-general-global",
+  "cluster_id": "evt-2026-04-15-space-astronomy-general-global",
+  "article_type": "report",
+  "title": "NASA’s SPHEREx Mission Maps Water Ice Throughout Cygnus X",
+  "slug": "nasa-s-spherex-charts-interstellar-glaciers-in-cygnus-x",
+  "canonical_slug": "2026-04-16-nasa-s-spherex-charts-interstellar-glaciers-in-cygnus-x",
+  "expected_url": "/article/2026-04-16-nasa-s-spherex-charts-interstellar-glaciers-in-cygnus-x",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-16-nasa-s-spherex-charts-interstellar-glaciers-in-cygnus-x.mdx",
+  "published_at": "2026-04-16T12:45:42.142Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "NASA’s SPHEREx Mission Maps Water Ice Throughout Cygnus X",
+  "topics": [
+    "NASA’s SPHEREx Mission Maps Water Ice Throughout Cygnus X"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/pmxvwelqhgs/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/pmxvwelqhgs/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-galaxy-in-space-PmXVWelqhGs",
+    "asset_key": "unsplash:PmXVWelqhGs",
+    "alt_text": "Illustration for NASA’s SPHEREx Charts ‘Interstellar Glaciers’ in Cygnus X",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Cygnus photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "nasa’s",
+      "spherex",
+      "charts"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "NASA",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "NASA’s SPHEREx Mission Maps Water Ice Throughout Cygnus X",
+        "url": "https://science.nasa.gov/photojournal/nasas-spherex-mission-maps-water-ice-throughout-cygnus-x/",
+        "domain": "science.nasa.gov"
+      },
+      {
+        "title": "‘Interstellar Glaciers’: NASA’s SPHEREx Maps Vast Galactic Ice Regions",
+        "url": "https://www.nasa.gov/missions/spherex/interstellar-glaciers-nasas-spherex-maps-vast-galactic-ice-regions/",
+        "domain": "nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "nasa",
+          "label": "NASA",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Cygnus photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "cygnus"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
