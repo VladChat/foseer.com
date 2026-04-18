@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-18T11:58:39.548Z",
+  "event_id": "evt-2026-04-17-film-tv-general-global",
+  "cluster_id": "evt-2026-04-17-film-tv-general-global",
+  "article_type": "report",
+  "title": "A statue of Queen Victoria, memorial trees and a swimming pool: Judi Dench’s garden",
+  "slug": "inside-judi-dench-s-garden-statues-memorial-trees-and-a-pool",
+  "canonical_slug": "2026-04-18-inside-judi-dench-s-garden-statues-memorial-trees-and-a-pool",
+  "expected_url": "/article/2026-04-18-inside-judi-dench-s-garden-statues-memorial-trees-and-a-pool",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-18-inside-judi-dench-s-garden-statues-memorial-trees-and-a-pool.mdx",
+  "published_at": "2026-04-18T11:58:39.546Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "A statue of Queen Victoria, memorial trees and a swimming pool: Judi Dench’s garden",
+  "topics": [
+    "A statue of Queen Victoria, memorial trees and a swimming pool: Judi Dench’s garden"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/yafimd_mrgc/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/yafimd_mrgc/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-large-swimming-pool-next-to-a-sandy-beach-yAfImd_mRgc",
+    "asset_key": "unsplash:yAfImd_mRgc",
+    "alt_text": "a large swimming pool next to a sandy beach",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Pool film photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.4,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "inside",
+      "dench’s",
+      "garden:"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "A statue of Queen Victoria, memorial trees and a swimming pool: Judi Dench’s garden",
+        "url": "https://www.theguardian.com/culture/2026/apr/17/judi-dench-garden-eight-poignant-items",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Pool film photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "pool"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
