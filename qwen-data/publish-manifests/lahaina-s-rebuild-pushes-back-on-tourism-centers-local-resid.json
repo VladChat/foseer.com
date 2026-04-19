@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-19T14:59:47.108Z",
+  "event_id": "evt-2026-04-19-climate-extreme-weather-general-global-sec",
+  "cluster_id": "evt-2026-04-19-climate-extreme-weather-general-global-sec",
+  "article_type": "analysis",
+  "title": "Lahaina’s Rebuild Pushes Back on Tourism, Centers Local Residents",
+  "slug": "lahaina-s-rebuild-pushes-back-on-tourism-centers-local-resid",
+  "canonical_slug": "2026-04-19-lahaina-s-rebuild-pushes-back-on-tourism-centers-local-resid",
+  "expected_url": "/article/2026-04-19-lahaina-s-rebuild-pushes-back-on-tourism-centers-local-resid",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-19-lahaina-s-rebuild-pushes-back-on-tourism-centers-local-resid.mdx",
+  "published_at": "2026-04-19T14:59:47.106Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "law-crime",
+  "topic_label": "Law & Crime",
+  "subsection": "Climate & Extreme Weather",
+  "topics": [
+    "Climate & Extreme Weather"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/16581212/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/16581212/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/sunlight-over-open-sea-at-sunset-16581212/",
+    "asset_key": "pexels:16581212",
+    "alt_text": "Breathtaking sunset over the vast ocean horizon near Lahaina, Hawaii, creating a serene and tranquil view.",
+    "selection_mode": "provider_download_new:pexels:strong:strict",
+    "query_used": "Lahaina climate photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 99,
+    "image_fit_score": 0.5,
+    "visual_concepts": [
+      "extreme weather",
+      "storm",
+      "climate",
+      "lahaina’s",
+      "rebuild",
+      "pushes"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.5,
+    "is_fallback": false
+  },
+  "tags": [
+    "Law & Crime",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Maui residents are rebuilding Lahaina for locals, not tourists: ‘In Hawaii, we take care of one another’",
+        "url": "https://www.theguardian.com/us-news/2026/apr/19/lahaina-maui-rebuild-locals-tourists",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "law-crime",
+          "label": "Law & Crime",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "law-crime",
+        "topic_label": "Law & Crime",
+        "supported": true,
+        "matched_aliases": [
+          "legal"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Lahaina climate photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "lahaina"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
