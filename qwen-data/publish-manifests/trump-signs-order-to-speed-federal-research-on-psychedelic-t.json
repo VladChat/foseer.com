@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-20T12:49:26.884Z",
+  "event_id": "evt-2026-04-20-mental-health-research-global",
+  "cluster_id": "evt-2026-04-20-mental-health-research-global",
+  "article_type": "report",
+  "title": "Trump signs executive order to research psychedelics, including ibogaine, for mental health treatment",
+  "slug": "trump-signs-order-to-speed-federal-research-on-psychedelic-t",
+  "canonical_slug": "2026-04-20-trump-signs-order-to-speed-federal-research-on-psychedelic-t",
+  "expected_url": "/article/2026-04-20-trump-signs-order-to-speed-federal-research-on-psychedelic-t",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-20-trump-signs-order-to-speed-federal-research-on-psychedelic-t.mdx",
+  "published_at": "2026-04-20T12:49:26.882Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "mental-health",
+  "topic_label": "Mental Health",
+  "subsection": "Trump signs executive order to research psychedelics, including ibogaine, for mental health treatment",
+  "topics": [
+    "Trump signs executive order to research psychedelics, including ibogaine, for mental health treatment"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/jlbh2wccbq8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/jlbh2wccbq8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/speed-limit-10-mph-signage-JLbH2WcCbQ8",
+    "asset_key": "unsplash:JLbH2WcCbQ8",
+    "alt_text": "speed limit 10 MPH signage",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "signs order speed photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "mental health",
+      "therapy",
+      "counseling",
+      "trump",
+      "speed",
+      "federal"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Mental Health",
+    "Executive Orders",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "Trump signs executive order to research psychedelics, including ibogaine, for mental health treatment",
+        "url": "https://www.cbsnews.com/news/trump-administration-executive-order-psychedelic-drug-ibogaine/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "Trump signs order to hasten review of psychedelics",
+        "url": "https://pbs.org/newshour/politics/trump-signs-order-to-speed-review-of-psychedelics",
+        "domain": "pbs.org"
+      },
+      {
+        "title": "Trump signs executive order accelerating research into psychedelic drug therapies",
+        "url": "https://abcnews.com/health/trump-signs-executive-order-accelerating-research-psychedelic-drug/story",
+        "domain": "abcnews.com"
+      },
+      {
+        "title": "Trump joined by Joe Rogan as he signs order to speed up ...",
+        "url": "https://www.aljazeera.com/amp/news/2026/4/18/trump-joined-by-joe-rogan-as-he-signs-order-to-speed-up-psychedelic-review",
+        "domain": "aljazeera.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "mental-health",
+          "label": "Mental Health",
+          "type": "topic"
+        },
+        {
+          "slug": "executive-orders",
+          "label": "Executive Orders",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "mental-health",
+        "topic_label": "Mental Health",
+        "supported": true,
+        "matched_aliases": [
+          "Mental Health"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "signs order speed photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "signs",
+        "order",
+        "speed"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-20T12:51:16.538Z",
+  "event_id": "evt-2026-04-20-major-leagues-general-global-nfl",
+  "cluster_id": "evt-2026-04-20-major-leagues-general-global-nfl",
+  "article_type": "report",
+  "title": "Premier League: 10 talking points from the weekend’s action",
+  "slug": "ten-key-talking-points-from-a-pivotal-premier-league-weekend",
+  "canonical_slug": "2026-04-20-ten-key-talking-points-from-a-pivotal-premier-league-weekend",
+  "expected_url": "/article/2026-04-20-ten-key-talking-points-from-a-pivotal-premier-league-weekend",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-20-ten-key-talking-points-from-a-pivotal-premier-league-weekend.mdx",
+  "published_at": "2026-04-20T12:51:16.536Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Premier League: 10 talking points from the weekend’s action",
+  "topics": [
+    "Premier League: 10 talking points from the weekend’s action"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/jgqzufjxrue/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/jgqzufjxrue/cover.jpg",
+    "source_url": "https://unsplash.com/photos/soccer-field-with-no-people-during-daytime-JGqZUfjXRUE",
+    "asset_key": "unsplash:JGqZUfjXRUE",
+    "alt_text": "Illustration for Ten key talking points from a pivotal Premier League weekend",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Premier League photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "talking",
+      "points",
+      "pivotal"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Premier League",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Premier League: 10 talking points from the weekend’s action",
+        "url": "https://www.theguardian.com/football/2026/apr/20/premier-league-10-talking-points-from-the-weekends-action",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "What to watch for in Premier League title showdown",
+        "url": "https://www.espn.com/soccer/story/_/id/48503362/manchester-city-arsenal-whats-stake-key-clashes-predictions-premier-league-title-race-showdown",
+        "domain": "espn.com"
+      },
+      {
+        "title": "Is the Premier League now Man City's to lose? PLUS: Bayern clinch Bundesliga, more",
+        "url": "https://www.espn.com/soccer/story/_/id/48536971/manchester-city-arsenal-premier-league-bayern-munich-bundesliga-man-united-analysis-gab-marcotti",
+        "domain": "espn.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Canonical tag unsupported by article evidence: NFL"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "nfl",
+          "label": "NFL",
+          "type": "theme"
+        },
+        {
+          "slug": "premier-league",
+          "label": "Premier League",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "nfl",
+          "label": "NFL",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "league coverage"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Premier League photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "premier",
+        "league"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

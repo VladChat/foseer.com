@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-20T12:47:35.386Z",
+  "event_id": "evt-2026-04-18-film-tv-general-global",
+  "cluster_id": "evt-2026-04-18-film-tv-general-global",
+  "article_type": "report",
+  "title": "How Modern Whore made the leap from the bedroom to the strip ...",
+  "slug": "from-page-to-stage-modern-whore-jumps-from-memoir-to-feature",
+  "canonical_slug": "2026-04-20-from-page-to-stage-modern-whore-jumps-from-memoir-to-feature",
+  "expected_url": "/article/2026-04-20-from-page-to-stage-modern-whore-jumps-from-memoir-to-feature",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-20-from-page-to-stage-modern-whore-jumps-from-memoir-to-feature.mdx",
+  "published_at": "2026-04-20T12:47:35.383Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "How Modern Whore made the leap from the bedroom to the strip ...",
+  "topics": [
+    "How Modern Whore made the leap from the bedroom to the strip ..."
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/2mo6xkfhmnc/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/2mo6xkfhmnc/cover.jpg",
+    "source_url": "https://unsplash.com/photos/woman-with-red-hair-and-glasses-looks-surprised-2Mo6XKfhmNc",
+    "asset_key": "unsplash:2Mo6XKfhmNc",
+    "alt_text": "Illustration for From Page to Stage: ‘Modern Whore’ Jumps From Memoir to Feature Film",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Modern Whore film photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "stage:",
+      "‘modern",
+      "whore’"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "How Modern Whore made the leap from the bedroom to the strip ...",
+        "url": "https://www.theglobeandmail.com/culture/film-and-tv/film/article-how-modern-whore-made-the-leap-from-the-bedroom-to-the-strip-club-to/",
+        "domain": "theglobeandmail.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": true,
+        "matched_aliases": [
+          "film",
+          "streaming"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Modern Whore film photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "modern",
+        "whore",
+        "film"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
