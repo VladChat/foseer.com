@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-21T12:18:43.413Z",
+  "event_id": "evt-2026-04-19-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-04-19-pharma-fda-general-global-fda",
+  "article_type": "report",
+  "title": "Quality Metrics for Drug Manufacturing",
+  "slug": "fda-moves-ahead-with-quality-metrics-program-for-drug-manufa",
+  "canonical_slug": "2026-04-21-fda-moves-ahead-with-quality-metrics-program-for-drug-manufa",
+  "expected_url": "/article/2026-04-21-fda-moves-ahead-with-quality-metrics-program-for-drug-manufa",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-21-fda-moves-ahead-with-quality-metrics-program-for-drug-manufa.mdx",
+  "published_at": "2026-04-21T12:18:43.412Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Quality Metrics for Drug Manufacturing",
+  "topics": [
+    "Quality Metrics for Drug Manufacturing"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/o8c9og3mskg/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/o8c9og3mskg/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-factory-with-a-lot-of-machines-and-wires-o8C9Og3MSkg",
+    "asset_key": "unsplash:o8C9Og3MSkg",
+    "alt_text": "a factory with a lot of machines and wires",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Drug Manufacturing photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.4,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "moves",
+      "ahead",
+      "quality"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Quality Metrics for Drug Manufacturing",
+        "url": "http://www.fda.gov/drugs/pharmaceutical-quality-resources/quality-metrics-drug-manufacturing",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Drug Manufacturing photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "drug",
+        "manufacturing"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
