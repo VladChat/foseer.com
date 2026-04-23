@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-23T12:41:14.494Z",
+  "event_id": "evt-2026-04-23-film-tv-general-global",
+  "cluster_id": "evt-2026-04-23-film-tv-general-global",
+  "article_type": "report",
+  "title": "Taraji P Henson: ‘It’s exhausting to have to fight for my worth’",
+  "slug": "taraji-p-henson-on-broadway-and-the-toll-of-fighting-for-fai",
+  "canonical_slug": "2026-04-23-taraji-p-henson-on-broadway-and-the-toll-of-fighting-for-fai",
+  "expected_url": "/article/2026-04-23-taraji-p-henson-on-broadway-and-the-toll-of-fighting-for-fai",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-23-taraji-p-henson-on-broadway-and-the-toll-of-fighting-for-fai.mdx",
+  "published_at": "2026-04-23T12:41:14.493Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Taraji P Henson: ‘It’s exhausting to have to fight for my worth’",
+  "topics": [
+    "Taraji P Henson: ‘It’s exhausting to have to fight for my worth’"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/j94v94dzpki/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/j94v94dzpki/cover.jpg",
+    "source_url": "https://unsplash.com/photos/assorted-color-plastic-toy-lot-j94v94DZpKI",
+    "asset_key": "unsplash:j94v94DZpKI",
+    "alt_text": "Illustration for Taraji P Henson on Broadway and the toll of fighting for fair pay",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "toll fighting fair photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "taraji",
+      "henson",
+      "broadway"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Taraji P Henson: ‘It’s exhausting to have to fight for my worth’",
+        "url": "https://www.theguardian.com/culture/ng-interactive/2026/apr/23/taraji-p-henson-august-wilson-joe-turners-come-and-gone-interview",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "toll fighting fair photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "toll",
+        "fighting",
+        "fair"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

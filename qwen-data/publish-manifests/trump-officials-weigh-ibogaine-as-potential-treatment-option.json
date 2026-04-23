@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-23T12:42:23.430Z",
+  "event_id": "evt-2026-04-22-mental-health-general-global-iran-fda",
+  "cluster_id": "evt-2026-04-22-mental-health-general-global-iran-fda",
+  "article_type": "report",
+  "title": "Ibogaine is drawing new interest from the Trump administration ...",
+  "slug": "trump-officials-weigh-ibogaine-as-potential-treatment-option",
+  "canonical_slug": "2026-04-23-trump-officials-weigh-ibogaine-as-potential-treatment-option",
+  "expected_url": "/article/2026-04-23-trump-officials-weigh-ibogaine-as-potential-treatment-option",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-23-trump-officials-weigh-ibogaine-as-potential-treatment-option.mdx",
+  "published_at": "2026-04-23T12:42:23.428Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Ibogaine is drawing new interest from the Trump administration ...",
+  "topics": [
+    "Ibogaine is drawing new interest from the Trump administration ..."
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/j55tmqkzq4k/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/j55tmqkzq4k/cover.jpg",
+    "source_url": "https://unsplash.com/photos/doctor-and-nurses-inside-operating-room-j55TmqkzQ4k",
+    "asset_key": "unsplash:j55TmqkzQ4k",
+    "alt_text": "Illustration for Trump officials weigh ibogaine as potential treatment option",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Trump medical photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "trump",
+      "officials",
+      "weigh"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Ibogaine is drawing new interest from the Trump administration ...",
+        "url": "https://www.cnn.com/2026/04/22/health/ibogaine-psychedelics-what-to-know",
+        "domain": "cnn.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Trump medical photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "trump",
+        "medical"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
