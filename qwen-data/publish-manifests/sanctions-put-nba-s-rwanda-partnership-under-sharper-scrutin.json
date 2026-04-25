@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-25T15:01:44.000Z",
+  "event_id": "evt-2026-04-25-major-leagues-general-global-nba",
+  "cluster_id": "evt-2026-04-25-major-leagues-general-global-nba",
+  "article_type": "analysis",
+  "title": "Sanctions Put NBA’s Rwanda Partnership Under Sharper Scrutiny",
+  "slug": "sanctions-put-nba-s-rwanda-partnership-under-sharper-scrutin",
+  "canonical_slug": "2026-04-25-sanctions-put-nba-s-rwanda-partnership-under-sharper-scrutin",
+  "expected_url": "/article/2026-04-25-sanctions-put-nba-s-rwanda-partnership-under-sharper-scrutin",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-25-sanctions-put-nba-s-rwanda-partnership-under-sharper-scrutin.mdx",
+  "published_at": "2026-04-25T15:01:43.998Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/1544370/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/1544370/cover.jpg",
+    "source_url": "https://pixabay.com/photos/basketball-professional-nba-action-1544370/",
+    "asset_key": "pixabay:1544370",
+    "alt_text": "basketball, professional, nba, action, competition, game, ball, sport, shot, arena, scoring, team, player, athlete, pro, basketball hoop, athletic, backboard, basket, spectators, hoop, active, texas, texan, basketball, basketball, basketball, basketball, basketball, nba, nba",
+    "selection_mode": "provider_download_new:pixabay:strong:strict",
+    "query_used": "nba basketball photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.5,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "sanctions",
+      "nba’s",
+      "rwanda"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.5,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "NBA",
+    "Sanctions",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "NBA’s Rwanda ties face scrutiny after sanctions",
+        "url": "https://www.theguardian.com/sport/2026/apr/25/nba-rwanda-sanctions-bal-apr-withdrawal-kagame",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "nba",
+          "label": "NBA",
+          "type": "theme"
+        },
+        {
+          "slug": "sanctions",
+          "label": "Sanctions",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "nba",
+          "basketball"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "nba basketball photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "nba"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
