@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-25T12:04:53.642Z",
+  "event_id": "evt-2026-04-25-climate-extreme-weather-general-global-openai-google",
+  "cluster_id": "evt-2026-04-25-climate-extreme-weather-general-global-openai-google",
+  "article_type": "report",
+  "title": "California’s wildlife bridge became a target for the right. Now it’s eyeing the finish line",
+  "slug": "california-s-114m-wildlife-bridge-nears-completion-after-par",
+  "canonical_slug": "2026-04-25-california-s-114m-wildlife-bridge-nears-completion-after-par",
+  "expected_url": "/article/2026-04-25-california-s-114m-wildlife-bridge-nears-completion-after-par",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-25-california-s-114m-wildlife-bridge-nears-completion-after-par.mdx",
+  "published_at": "2026-04-25T12:04:53.640Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "California’s wildlife bridge became a target for the right. Now it’s eyeing the finish line",
+  "topics": [
+    "California’s wildlife bridge became a target for the right. Now it’s eyeing the finish line"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/istzega4oiu/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/istzega4oiu/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-deer-crossing-the-road-in-front-of-the-sun-IsTZeGA4oIU",
+    "asset_key": "unsplash:IsTZeGA4oIU",
+    "alt_text": "Illustration for California’s $114m wildlife bridge nears completion after partisan attacks",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "california 114m wildlife technology photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "california’s",
+      "$114m",
+      "wildlife"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "California",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "California’s wildlife bridge became a target for the right. Now it’s eyeing the finish line",
+        "url": "https://www.theguardian.com/us-news/2026/apr/25/california-wildlife-crossing-construction",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "california",
+          "label": "California",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "california 114m wildlife technology photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "california",
+        "114m",
+        "wildlife"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
