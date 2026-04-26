@@ -1,0 +1,150 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-26T15:03:48.254Z",
+  "event_id": "evt-2026-04-26-us-politics-general-us-white-house",
+  "cluster_id": "evt-2026-04-26-us-politics-general-us-white-house",
+  "article_type": "analysis",
+  "title": "What’s at Stake in Possible Assassination Charge Over WH Press Dinner Shooting",
+  "slug": "what-s-at-stake-in-possible-assassination-charge-over-wh-pre",
+  "canonical_slug": "2026-04-26-what-s-at-stake-in-possible-assassination-charge-over-wh-pre",
+  "expected_url": "/article/2026-04-26-what-s-at-stake-in-possible-assassination-charge-over-wh-pre",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-26-what-s-at-stake-in-possible-assassination-charge-over-wh-pre.mdx",
+  "published_at": "2026-04-26T15:03:48.252Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/hapyxvuic7u/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/hapyxvuic7u/cover.jpg",
+    "source_url": "https://unsplash.com/photos/the-white-house-with-green-lawn-and-trees-HApYxVUiC7U",
+    "asset_key": "unsplash:HApYxVUiC7U",
+    "alt_text": "Illustration for What’s at Stake in Possible Assassination Charge Over WH Press Dinner Shooting",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "White House Correspondents Dinner government photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "what’s",
+      "stake",
+      "possible"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Congress",
+    "White House",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "White House press dinner shooting suspect could be charged with trying to assassinate Trump, says Blanche",
+        "url": "https://www.theguardian.com/us-news/2026/apr/26/details-white-house-correspondents-dinner-shooting",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "What we know about the suspect in shooting at White House Correspondents' Dinner",
+        "url": "https://www.cbsnews.com/news/white-house-correspondents-dinner-shooting-suspect-cole-allen/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "Trump says \"it's a dangerous profession\" after shots fired at dinner",
+        "url": "https://www.cbsnews.com/news/trump-white-house-correspondents-dinner-gunshots-press-conference/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Trump says \"it's a dangerous profession\" after shots fired at dinner",
+          "url": "https://www.cbsnews.com/news/trump-white-house-correspondents-dinner-gunshots-press-conference/",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "dinner"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "white-house",
+          "label": "White House",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "White House Correspondents Dinner government photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "white",
+        "house",
+        "correspondents",
+        "dinner"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
