@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-26T12:08:06.683Z",
+  "event_id": "evt-2026-04-25-ai-big-tech-general-global-microsoft",
+  "cluster_id": "evt-2026-04-25-ai-big-tech-general-global-microsoft",
+  "article_type": "report",
+  "title": "At SpaceX, AI is burning the cash that Starlink earns",
+  "slug": "spacex-pours-starlink-cash-into-ai-push-as-musk-talks-mars",
+  "canonical_slug": "2026-04-26-spacex-pours-starlink-cash-into-ai-push-as-musk-talks-mars",
+  "expected_url": "/article/2026-04-26-spacex-pours-starlink-cash-into-ai-push-as-musk-talks-mars",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-26-spacex-pours-starlink-cash-into-ai-push-as-musk-talks-mars.mdx",
+  "published_at": "2026-04-26T12:08:06.681Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "ai-big-tech",
+  "topic_label": "AI & Big Tech",
+  "subsection": "At SpaceX, AI is burning the cash that Starlink earns",
+  "topics": [
+    "At SpaceX, AI is burning the cash that Starlink earns"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/a0voqbw-bn4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/a0voqbw-bn4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/white-satellite-dish-on-roof-top-during-daytime-A0VoQbw-BN4",
+    "asset_key": "unsplash:A0VoQbw-BN4",
+    "alt_text": "Illustration for SpaceX pours Starlink cash into AI push as Musk talks Mars",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "global Starlink photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "spacex",
+      "pours",
+      "starlink"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "AI & Big Tech",
+    "Artificial Intelligence",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "At SpaceX, AI is burning the cash that Starlink earns",
+        "url": "https://reuters.com/business/finance/spacex-ai-is-burning-cash-that-starlink-earns-2026-04-24",
+        "domain": "reuters.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "ai-big-tech",
+        "topic_label": "AI & Big Tech",
+        "supported": true,
+        "matched_aliases": [
+          "ai",
+          "artificial intelligence"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "global Starlink photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "starlink"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

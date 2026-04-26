@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-26T12:08:32.968Z",
+  "event_id": "evt-2026-04-24-space-astronomy-general-global-india",
+  "cluster_id": "evt-2026-04-24-space-astronomy-general-global-india",
+  "article_type": "report",
+  "title": "One Tech Tip: Logging on at a cafe? Privacy and security guidelines ...",
+  "slug": "how-to-use-cafe-wifi-safely-a-practical-guide-for-indian-use",
+  "canonical_slug": "2026-04-26-how-to-use-cafe-wifi-safely-a-practical-guide-for-indian-use",
+  "expected_url": "/article/2026-04-26-how-to-use-cafe-wifi-safely-a-practical-guide-for-indian-use",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-26-how-to-use-cafe-wifi-safely-a-practical-guide-for-indian-use.mdx",
+  "published_at": "2026-04-26T12:08:32.966Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "One Tech Tip: Logging on at a cafe? Privacy and security guidelines ...",
+  "topics": [
+    "One Tech Tip: Logging on at a cafe? Privacy and security guidelines ..."
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/4082927/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/4082927/cover.jpg",
+    "source_url": "https://pixabay.com/photos/vpn-privacy-internet-unblock-4082927/",
+    "asset_key": "pixabay:4082927",
+    "alt_text": "vpn, privacy, internet, unblock, security, personal data, network, public wifi, tablets, technology, best vpn, streaming, hacking, cyber security, computer service, vpn security, stock, resource, image, photo, photograph, royalty free, computer, person, remote work, gray data, gray network, gray internet, gray security, gray tablet, gray service, vpn, vpn, vpn, vpn, best vpn, remote work, remote work, remote work, remote work, remote work",
+    "selection_mode": "provider_download_new:pixabay:strong:strict",
+    "query_used": "Privacy and technology photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "safely:",
+      "practical",
+      "guide"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.6,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Privacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "One Tech Tip: Logging on at a cafe? Privacy and security guidelines ...",
+        "url": "https://www.washingtonpost.com/business/2026/04/23/privacy-remote-working-wifi-vpn/b33ed3e4-3ec9-11f1-bb46-ed564688d953_story.html",
+        "domain": "washingtonpost.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "One Tech Tip: Logging on at a cafe? Privacy and security guidelines ...",
+          "url": "https://www.washingtonpost.com/business/2026/04/23/privacy-remote-working-wifi-vpn/b33ed3e4-3ec9-11f1-bb46-ed564688d953_story.html",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "cafe"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "privacy",
+          "label": "Privacy",
+          "type": "theme"
+        },
+        {
+          "slug": "explainer",
+          "label": "Explainer",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Privacy and technology photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "privacy"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
