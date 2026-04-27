@@ -1,0 +1,144 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-27T13:09:44.044Z",
+  "event_id": "evt-2026-04-27-major-leagues-general-global-nfl",
+  "cluster_id": "evt-2026-04-27-major-leagues-general-global-nfl",
+  "article_type": "report",
+  "title": "The City of Pittsburgh Was the True Star of the NFL Draft",
+  "slug": "how-pittsburgh-stole-the-spotlight-at-the-nfl-draft",
+  "canonical_slug": "2026-04-27-how-pittsburgh-stole-the-spotlight-at-the-nfl-draft",
+  "expected_url": "/article/2026-04-27-how-pittsburgh-stole-the-spotlight-at-the-nfl-draft",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-27-how-pittsburgh-stole-the-spotlight-at-the-nfl-draft.mdx",
+  "published_at": "2026-04-27T13:09:44.042Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "The City of Pittsburgh Was the True Star of the NFL Draft",
+  "topics": [
+    "The City of Pittsburgh Was the True Star of the NFL Draft"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/kvxpfu2l2o0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/kvxpfu2l2o0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/teenage-football-players-sitting-on-a-bench-kvXpFu2l2O0",
+    "asset_key": "unsplash:kvXpFu2l2O0",
+    "alt_text": "Illustration for How Pittsburgh Stole the Spotlight at the NFL Draft",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "NFL Draft portrait",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "pittsburgh",
+      "stole",
+      "spotlight"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "NFL",
+    "Attendance",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "The City of Pittsburgh Was the True Star of the NFL Draft",
+        "url": "https://si.com/nfl/city-of-pittsburgh-was-true-star-of-draft",
+        "domain": "si.com"
+      },
+      {
+        "title": "Pittsburgh breaks NFL Draft attendance record with crowd of ...",
+        "url": "https://www.nytimes.com/athletic/7229230/2026/04/25/nfl-draft-attendance-record-pittsburgh-2026/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "NFL Draft TV takeaways: McFarland, Rapoport, Jeremiah, Kiper ...",
+        "url": "https://www.nytimes.com/athletic/7225543/2026/04/24/nfl-draft-espn-ian-rapoport-daniel-jeremiah/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Transfers & Business",
+      "Primary topic_id unsupported by article evidence: transfers-business"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "nfl",
+          "label": "NFL",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "NFL Draft portrait",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "nfl",
+        "draft"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
