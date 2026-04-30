@@ -1,0 +1,165 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-30T13:09:00.340Z",
+  "event_id": "evt-2026-04-30-major-leagues-general-global",
+  "cluster_id": "evt-2026-04-30-major-leagues-general-global",
+  "article_type": "report",
+  "title": "Ranking the 5 best basketball transfer portal hauls in the Big Ten",
+  "slug": "ranking-the-big-ten-s-5-strongest-transfer-portal-hauls",
+  "canonical_slug": "2026-04-30-ranking-the-big-ten-s-5-strongest-transfer-portal-hauls",
+  "expected_url": "/article/2026-04-30-ranking-the-big-ten-s-5-strongest-transfer-portal-hauls",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-30-ranking-the-big-ten-s-5-strongest-transfer-portal-hauls.mdx",
+  "published_at": "2026-04-30T13:09:00.338Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Ranking the 5 best basketball transfer portal hauls in the Big Ten",
+  "topics": [
+    "Ranking the 5 best basketball transfer portal hauls in the Big Ten"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/1263000/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/1263000/cover.jpg",
+    "source_url": "https://pixabay.com/photos/basketball-basket-heaven-1263000/",
+    "asset_key": "pixabay:1263000",
+    "alt_text": "basketball, basket, heaven, in the free, web, plastic, green, outdoor, basketball, basketball, basketball, basketball, basketball",
+    "selection_mode": "provider_download_new:pixabay:strong:strict",
+    "query_used": "Big Ten basketball photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "ranking",
+      "ten’s",
+      "strongest"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.6,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Basketball",
+    "NFL",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "Ranking the 5 best basketball transfer portal hauls in the Big Ten",
+        "url": "https://maizenbrew.com/michigan-mens-basketball/113357/big-ten-basketball-transfer-portal-rankings-aiden-sherrell-indiana-moustapha-thiam",
+        "domain": "maizenbrew.com"
+      },
+      {
+        "title": "Virginia Basketball Reaches Rare Status Without Any Transfer Portal Players",
+        "url": "https://si.com/college/cbb-hq/other-conferences/virginia-basketball-reaches-rare-status-without-any-transfer-portal-players",
+        "domain": "si.com"
+      },
+      {
+        "title": "Women’s basketball post-portal top 25: Who’s the new No. 1? South Carolina, UConn or USC?",
+        "url": "https://nytimes.com/athletic/7231913/2026/04/27/womens-basketball-post-portal-top-25-south-carolina",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Miller: Ranking the 100 best NFL draft picks of 20...",
+        "url": "https://www.espn.com/nfl/draft2026/story/_/id/48610584/2026-nfl-draft-ranking-top-100-picks-best-steals-team-fits-trades",
+        "domain": "espn.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Publish-ready source pack mixes unrelated event titles (2 weak-title sources)"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Women’s basketball post-portal top 25: Who’s the new No. 1? South Carolina, UConn or USC?",
+          "url": "https://nytimes.com/athletic/7231913/2026/04/27/womens-basketball-post-portal-top-25-south-carolina",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "portal"
+          ]
+        },
+        {
+          "title": "Miller: Ranking the 100 best NFL draft picks of 20...",
+          "url": "https://www.espn.com/nfl/draft2026/story/_/id/48610584/2026-nfl-draft-ranking-top-100-picks-best-steals-team-fits-trades",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "ranking"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "basketball",
+          "label": "Basketball",
+          "type": "theme"
+        },
+        {
+          "slug": "nfl",
+          "label": "NFL",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "nba",
+          "basketball"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Big Ten basketball photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "big",
+        "ten",
+        "basketball"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
