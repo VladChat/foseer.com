@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-01T12:18:57.020Z",
+  "event_id": "evt-2026-05-01-economy-markets-earnings-global-apple",
+  "cluster_id": "evt-2026-05-01-economy-markets-earnings-global-apple",
+  "article_type": "report",
+  "title": "Tim Cook takes victory lap as Apple’s financial results soar past Wall Street expectations",
+  "slug": "tim-cook-hails-apple-s-111-2bn-quarter-as-revenue-beats-fore",
+  "canonical_slug": "2026-05-01-tim-cook-hails-apple-s-111-2bn-quarter-as-revenue-beats-fore",
+  "expected_url": "/article/2026-05-01-tim-cook-hails-apple-s-111-2bn-quarter-as-revenue-beats-fore",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-01-tim-cook-hails-apple-s-111-2bn-quarter-as-revenue-beats-fore.mdx",
+  "published_at": "2026-05-01T12:18:57.018Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "companies-deals",
+  "topic_label": "Companies & Deals",
+  "subsection": "Tim Cook takes victory lap as Apple’s financial results soar past Wall Street expectations",
+  "topics": [
+    "Tim Cook takes victory lap as Apple’s financial results soar past Wall Street expectations"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/gf8crz-zk-a/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/gf8crz-zk-a/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-chef-poses-with-arms-crossed-gF8crZ-ZK-A",
+    "asset_key": "unsplash:gF8crZ-ZK-A",
+    "alt_text": "Illustration for Tim Cook hails Apple’s $111.2bn quarter as revenue beats forecasts",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Tim Cook portrait",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "corporate",
+      "office building",
+      "business deal",
+      "hails",
+      "apple’s",
+      "quarter"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Companies & Deals",
+    "Wall Street",
+    "Apple",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Tim Cook takes victory lap as Apple’s financial results soar past Wall Street expectations",
+        "url": "https://www.theguardian.com/technology/2026/apr/30/apple-extraordinary-earnings-tim-cook-john-ternus",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "companies-deals",
+          "label": "Companies & Deals",
+          "type": "topic"
+        },
+        {
+          "slug": "wall-street",
+          "label": "Wall Street",
+          "type": "theme"
+        },
+        {
+          "slug": "apple",
+          "label": "Apple",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "companies-deals",
+        "topic_label": "Companies & Deals",
+        "supported": true,
+        "matched_aliases": [
+          "earnings"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Tim Cook portrait",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "tim",
+        "cook"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
