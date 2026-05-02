@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-02T12:09:30.989Z",
+  "event_id": "evt-2026-04-30-cybersecurity-general-global-openai",
+  "cluster_id": "evt-2026-04-30-cybersecurity-general-global-openai",
+  "article_type": "report",
+  "title": "A glimpse into cyber-security’s AI",
+  "slug": "at-black-hat-asia-ai-becomes-a-live-player-in-cyber-attacks-",
+  "canonical_slug": "2026-05-02-at-black-hat-asia-ai-becomes-a-live-player-in-cyber-attacks",
+  "expected_url": "/article/2026-05-02-at-black-hat-asia-ai-becomes-a-live-player-in-cyber-attacks",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-02-at-black-hat-asia-ai-becomes-a-live-player-in-cyber-attacks.mdx",
+  "published_at": "2026-05-02T12:09:30.987Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "A glimpse into cyber-security’s AI",
+  "topics": [
+    "A glimpse into cyber-security’s AI"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/mt7lxzpjk7u/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/mt7lxzpjk7u/cover.jpg",
+    "source_url": "https://unsplash.com/photos/red-padlock-on-black-computer-keyboard-mT7lXZPjk7U",
+    "asset_key": "unsplash:mT7lXZPjk7U",
+    "alt_text": "red padlock on black computer keyboard",
+    "selection_mode": "provider_download_new:unsplash:strong:relaxed",
+    "query_used": "cyber photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.8,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "black",
+      "becomes",
+      "player"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.8,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "A glimpse into cyber",
+        "url": "https://economist.com/science-and-technology/2026/04/29/a-glimpse-into-cyber-securitys-ai-driven-future",
+        "domain": "economist.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "A glimpse into cyber",
+          "url": "https://economist.com/science-and-technology/2026/04/29/a-glimpse-into-cyber-securitys-ai-driven-future",
+          "overlap_ratio": 0.11,
+          "shared_tokens": [
+            "cyber"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "Cybersecurity",
+          "cyber",
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "cyber photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "cyber"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
