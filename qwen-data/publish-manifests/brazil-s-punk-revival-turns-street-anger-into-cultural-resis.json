@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-02T15:07:27.649Z",
+  "event_id": "evt-2026-05-02-film-tv-general-global-bts",
+  "cluster_id": "evt-2026-05-02-film-tv-general-global-bts",
+  "article_type": "analysis",
+  "title": "Brazil’s Punk Revival Turns Street Anger Into Cultural Resistance",
+  "slug": "brazil-s-punk-revival-turns-street-anger-into-cultural-resis",
+  "canonical_slug": "2026-05-02-brazil-s-punk-revival-turns-street-anger-into-cultural-resis",
+  "expected_url": "/article/2026-05-02-brazil-s-punk-revival-turns-street-anger-into-cultural-resis",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-02-brazil-s-punk-revival-turns-street-anger-into-cultural-resis.mdx",
+  "published_at": "2026-05-02T15:07:27.647Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "music-celebrities",
+  "topic_label": "Music & Celebrities",
+  "subsection": "Film & TV",
+  "topics": [
+    "Film & TV"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "sophia_bennett",
+    "author_name": "Sophia Bennett",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/j1o5_ds2kxc/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/j1o5_ds2kxc/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-black-crowned-night-heron-stares-into-the-distance-J1o5_ds2KXc",
+    "asset_key": "unsplash:J1o5_ds2KXc",
+    "alt_text": "A black-crowned night-heron stares into the distance.",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "brazil photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.5,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "brazil’s",
+      "revival",
+      "turns"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Music & Celebrities",
+    "Brazil",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "‘We feel angry – and we have reason to be’: Brazil’s resurgent punk scene is a howl of outrage at injustice",
+        "url": "https://www.theguardian.com/world/2026/may/02/brazil-punk-scene-culture-injustice",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "music-celebrities",
+          "label": "Music & Celebrities",
+          "type": "topic"
+        },
+        {
+          "slug": "brazil",
+          "label": "Brazil",
+          "type": "geography"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "music-celebrities",
+        "topic_label": "Music & Celebrities",
+        "supported": true,
+        "matched_aliases": [
+          "music"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "brazil photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "brazil"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
