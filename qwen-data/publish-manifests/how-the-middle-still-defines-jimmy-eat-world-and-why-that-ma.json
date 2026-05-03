@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-03T15:08:05.302Z",
+  "event_id": "evt-2026-05-03-film-tv-general-global-bts",
+  "cluster_id": "evt-2026-05-03-film-tv-general-global-bts",
+  "article_type": "analysis",
+  "title": "How ‘The Middle’ Still Defines Jimmy Eat World — And Why That Matters",
+  "slug": "how-the-middle-still-defines-jimmy-eat-world-and-why-that-ma",
+  "canonical_slug": "2026-05-03-how-the-middle-still-defines-jimmy-eat-world-and-why-that-ma",
+  "expected_url": "/article/2026-05-03-how-the-middle-still-defines-jimmy-eat-world-and-why-that-ma",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-03-how-the-middle-still-defines-jimmy-eat-world-and-why-that-ma.mdx",
+  "published_at": "2026-05-03T15:08:05.299Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "creators-platforms",
+  "topic_label": "Creators & Platforms",
+  "subsection": "Film & TV",
+  "topics": [
+    "Film & TV"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "jacob_ellis",
+    "author_name": "Jacob Ellis",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/jkqjhozrgqs/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/jkqjhozrgqs/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-man-standing-on-top-of-a-stage-in-front-of-a-crowd-JKqJhoZrGQs",
+    "asset_key": "unsplash:JKqJhoZrGQs",
+    "alt_text": "Illustration for How ‘The Middle’ Still Defines Jimmy Eat World — And Why That Matters",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Jimmy Eat World concert photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "middle’",
+      "still",
+      "defines"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Creators & Platforms",
+    "United States",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "US band Jimmy Eat World look back: ‘I would play The Middle five times in a row if the other guys would let me’",
+        "url": "https://www.theguardian.com/lifeandstyle/2026/may/03/jimmy-eat-world-look-back-alternative-rock-band-arizona",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "creators-platforms",
+          "label": "Creators & Platforms",
+          "type": "topic"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "creators-platforms",
+        "topic_label": "Creators & Platforms",
+        "supported": true,
+        "matched_aliases": [
+          "creator economy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Jimmy Eat World concert photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "jimmy",
+        "eat",
+        "world"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
