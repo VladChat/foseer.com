@@ -1,0 +1,126 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-03T12:07:45.607Z",
+  "event_id": "evt-2026-05-02-crypto-bitcoin-general-global",
+  "cluster_id": "evt-2026-05-02-crypto-bitcoin-general-global",
+  "article_type": "report",
+  "title": "Trump Family Crypto Project Quietly Sold as Holders Got Stuck",
+  "slug": "trump-family-linked-crypto-project-quietly-changes-hands",
+  "canonical_slug": "2026-05-03-trump-family-linked-crypto-project-quietly-changes-hands",
+  "expected_url": "/article/2026-05-03-trump-family-linked-crypto-project-quietly-changes-hands",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-03-trump-family-linked-crypto-project-quietly-changes-hands.mdx",
+  "published_at": "2026-05-03T12:07:45.605Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "crypto-bitcoin",
+  "topic_label": "Crypto",
+  "subsection": "Trump Family Crypto Project Quietly Sold as Holders Got Stuck",
+  "topics": [
+    "Trump Family Crypto Project Quietly Sold as Holders Got Stuck"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/_pq_l4i27o/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/_pq_l4i27o/cover.jpg",
+    "source_url": "https://unsplash.com/photos/an-american-flag-pin-sitting-on-top-of-a-one-dollar-bill--_pQ_l4i27o",
+    "asset_key": "unsplash:-_pQ_l4i27o",
+    "alt_text": "Illustration for Trump Family-Linked Crypto Project Quietly Changes Hands",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Trump Family Crypto Project crypto photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "cryptocurrency",
+      "bitcoin",
+      "blockchain",
+      "trump",
+      "family",
+      "linked"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Crypto",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Trump Family Crypto Project Quietly Sold as Holders Got Stuck",
+        "url": "https://bloomberg.com/news/articles/2026-05-01/trump-family-crypto-project-quietly-sold-as-holders-got-stuck",
+        "domain": "bloomberg.com"
+      },
+      {
+        "title": "Trump Family Crypto Project Quietly Sold as Holders Got Stuck",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/trump-family-crypto-project-quietly-123508889.html",
+        "domain": "finance.yahoo.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "crypto-bitcoin",
+          "label": "Crypto",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "crypto-bitcoin",
+        "topic_label": "Crypto",
+        "supported": true,
+        "matched_aliases": [
+          "Crypto"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Trump Family Crypto Project crypto photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "trump",
+        "family",
+        "crypto",
+        "project"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
