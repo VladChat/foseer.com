@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-04T16:17:45.600Z",
+  "event_id": "evt-2026-05-04-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-05-04-pharma-fda-general-global-fda",
+  "article_type": "analysis",
+  "title": "What the FDA’s Expanded Selumetinib Approval Means for Young NF1 Patients",
+  "slug": "what-the-fda-s-expanded-selumetinib-approval-means-for-young",
+  "canonical_slug": "2026-05-04-what-the-fda-s-expanded-selumetinib-approval-means-for-young",
+  "expected_url": "/article/2026-05-04-what-the-fda-s-expanded-selumetinib-approval-means-for-young",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-04-what-the-fda-s-expanded-selumetinib-approval-means-for-young.mdx",
+  "published_at": "2026-05-04T16:17:45.597Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Pharma & FDA",
+  "topics": [
+    "Pharma & FDA"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "ava_mitchell",
+    "author_name": "Ava Mitchell",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/tglt683cxl0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/tglt683cxl0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/nurse-attends-to-patient-with-doctor-observing-tGlt683cXL0",
+    "asset_key": "unsplash:tGlt683cXL0",
+    "alt_text": "Illustration for What the FDA’s Expanded Selumetinib Approval Means for Young NF1 Patients",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Patients medical photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "fda’s",
+      "expanded",
+      "selumetinib"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "FDA",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "FDA approves selumetinib for pediatric patients 1 year of age and older with neurofibromatosis type 1 with symptomatic, inoperable plexiform neurofibromas",
+        "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-selumetinib-pediatric-patients-1-year-age-and-older-neurofibromatosis-type-1",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "fda",
+          "label": "FDA",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Patients medical photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "patients"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
