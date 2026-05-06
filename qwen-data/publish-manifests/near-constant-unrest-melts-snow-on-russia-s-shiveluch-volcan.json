@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-06T13:17:49.800Z",
+  "event_id": "evt-2026-05-06-space-astronomy-general-global-russia",
+  "cluster_id": "evt-2026-05-06-space-astronomy-general-global-russia",
+  "article_type": "report",
+  "title": "Melting Snow Off Shivelyuch",
+  "slug": "near-constant-unrest-melts-snow-on-russia-s-shiveluch-volcan",
+  "canonical_slug": "2026-05-06-near-constant-unrest-melts-snow-on-russia-s-shiveluch-volcan",
+  "expected_url": "/article/2026-05-06-near-constant-unrest-melts-snow-on-russia-s-shiveluch-volcan",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-06-near-constant-unrest-melts-snow-on-russia-s-shiveluch-volcan.mdx",
+  "published_at": "2026-05-06T13:17:49.799Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Melting Snow Off Shivelyuch",
+  "topics": [
+    "Melting Snow Off Shivelyuch"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/628742/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/628742/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/mountain-range-with-snows-628742/",
+    "asset_key": "pexels:628742",
+    "alt_text": "Stunning view of the Kronotsky Volcano in Kamchatka with snow patches on rugged hillsides under a clear sky.",
+    "selection_mode": "provider_download_new:pexels:strong:strict",
+    "query_used": "Shiveluch Volcano technology photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.4,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "constant",
+      "unrest",
+      "melts"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Melting Snow Off Shivelyuch",
+        "url": "https://science.nasa.gov/earth/earth-observatory/melting-snow-off-shivelyuch/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Melting Snow Off Shivelyuch",
+          "url": "https://science.nasa.gov/earth/earth-observatory/melting-snow-off-shivelyuch/",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "snow"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Shiveluch Volcano technology photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "shiveluch",
+        "volcano"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

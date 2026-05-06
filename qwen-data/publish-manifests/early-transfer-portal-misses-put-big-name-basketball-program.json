@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-06T13:15:39.758Z",
+  "event_id": "evt-2026-05-04-major-leagues-general-global-nba",
+  "cluster_id": "evt-2026-05-04-major-leagues-general-global-nba",
+  "article_type": "report",
+  "title": "Basketball transfer portal’s early losers: Big names, big swings, bigger questions",
+  "slug": "early-transfer-portal-misses-put-big-name-basketball-program",
+  "canonical_slug": "2026-05-06-early-transfer-portal-misses-put-big-name-basketball-program",
+  "expected_url": "/article/2026-05-06-early-transfer-portal-misses-put-big-name-basketball-program",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-06-early-transfer-portal-misses-put-big-name-basketball-program.mdx",
+  "published_at": "2026-05-06T13:15:39.755Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Basketball transfer portal’s early losers: Big names, big swings, bigger questions",
+  "topics": [
+    "Basketball transfer portal’s early losers: Big names, big swings, bigger questions"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/7t02p793ism/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/7t02p793ism/cover.jpg",
+    "source_url": "https://unsplash.com/photos/basketball-player-shoots-the-ball-during-a-game-7t02P793isM",
+    "asset_key": "unsplash:7t02P793isM",
+    "alt_text": "Basketball player shoots the ball during a game.",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Transfer basketball photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.9,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "early",
+      "transfer",
+      "portal"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.9,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Basketball",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "Basketball transfer portal’s early losers: Big names, big swings, bigger questions",
+        "url": "https://usatoday.com/story/sports/ncaab/2026/05/04/college-basketball-transfer-porta-biggest-losers-kentucky-kansas-lsu/89890300007",
+        "domain": "usatoday.com"
+      },
+      {
+        "title": "IU basketball and Big Ten 2026 offseason transfer portal and roster tracker (5/5 updates)",
+        "url": "https://thedailyhoosier.com/iu-basketball-and-big-ten-2026-offseason-transfer-portal-and-roster-tracker",
+        "domain": "thedailyhoosier.com"
+      },
+      {
+        "title": "Notre Dame basketball made the most of its options in transfer portal",
+        "url": "https://southbendtribune.com/story/sports/college/basketball/2026/05/05/notre-dame-basketball-made-the-most-of-its-options-in-transfer-portal/89887748007",
+        "domain": "southbendtribune.com"
+      },
+      {
+        "title": "Transfer portal avengers: College basketball teams going all in on new arrivals",
+        "url": "https://nytimes.com/athletic/7252697/2026/05/05/college-basketball-transfer-portal-new-starting-lineups",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "basketball",
+          "label": "Basketball",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "nba",
+          "basketball"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Transfer basketball photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "transfer",
+        "basketball"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
