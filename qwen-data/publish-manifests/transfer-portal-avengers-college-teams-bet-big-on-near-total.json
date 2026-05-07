@@ -1,0 +1,136 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-07T13:18:58.343Z",
+  "event_id": "evt-2026-05-06-sports-general-global",
+  "cluster_id": "evt-2026-05-06-sports-general-global",
+  "article_type": "report",
+  "title": "Transfer portal avengers: College basketball teams going all in on new arrivals",
+  "slug": "transfer-portal-avengers-college-teams-bet-big-on-near-total",
+  "canonical_slug": "2026-05-07-transfer-portal-avengers-college-teams-bet-big-on-near-total",
+  "expected_url": "/article/2026-05-07-transfer-portal-avengers-college-teams-bet-big-on-near-total",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-07-transfer-portal-avengers-college-teams-bet-big-on-near-total.mdx",
+  "published_at": "2026-05-07T13:18:58.342Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Transfer portal avengers: College basketball teams going all in on new arrivals",
+  "topics": [
+    "Transfer portal avengers: College basketball teams going all in on new arrivals"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/dmaelxj5r64/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/dmaelxj5r64/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-person-holding-a-basketball-DMAelxJ5r64",
+    "asset_key": "unsplash:DMAelxJ5r64",
+    "alt_text": "Illustration for Transfer Portal Avengers: College Teams Bet Big on Near-Total Makeovers",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Transfer Portal Avengers College basketball photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "transfer",
+      "portal",
+      "avengers:"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Basketball",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Transfer portal avengers: College basketball teams going all in on new arrivals",
+        "url": "https://nytimes.com/athletic/7252697/2026/05/05/college-basketball-transfer-portal-new-starting-lineups",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Notre Dame basketball made the most of its options in transfer portal",
+        "url": "https://southbendtribune.com/story/sports/college/basketball/2026/05/05/notre-dame-basketball-made-the-most-of-its-options-in-transfer-portal/89887748007",
+        "domain": "southbendtribune.com"
+      },
+      {
+        "title": "IU basketball and Big Ten 2026 offseason transfer portal and roster tracker (5/5 updates)",
+        "url": "https://thedailyhoosier.com/iu-basketball-and-big-ten-2026-offseason-transfer-portal-and-roster-tracker",
+        "domain": "thedailyhoosier.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "basketball",
+          "label": "Basketball",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "basketball"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Transfer Portal Avengers College basketball photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "transfer",
+        "portal",
+        "avengers",
+        "college",
+        "basketball"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

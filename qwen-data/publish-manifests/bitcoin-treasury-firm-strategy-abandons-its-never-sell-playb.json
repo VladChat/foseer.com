@@ -1,0 +1,142 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-07T13:17:30.449Z",
+  "event_id": "evt-2026-05-06-crypto-bitcoin-general-global",
+  "cluster_id": "evt-2026-05-06-crypto-bitcoin-general-global",
+  "article_type": "report",
+  "title": "Bitcoin treasury firm Strategy breaks from 'never sell' approach to the flagship crypto",
+  "slug": "bitcoin-treasury-firm-strategy-abandons-its-never-sell-playb",
+  "canonical_slug": "2026-05-07-bitcoin-treasury-firm-strategy-abandons-its-never-sell-playb",
+  "expected_url": "/article/2026-05-07-bitcoin-treasury-firm-strategy-abandons-its-never-sell-playb",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-07-bitcoin-treasury-firm-strategy-abandons-its-never-sell-playb.mdx",
+  "published_at": "2026-05-07T13:17:30.446Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "crypto-bitcoin",
+  "topic_label": "Crypto",
+  "subsection": "Bitcoin treasury firm Strategy breaks from 'never sell' approach to the flagship crypto",
+  "topics": [
+    "Bitcoin treasury firm Strategy breaks from 'never sell' approach to the flagship crypto"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "liam_parker",
+    "author_name": "Liam Parker",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/6wdih6evkrm/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/6wdih6evkrm/cover.jpg",
+    "source_url": "https://unsplash.com/photos/text-6wDih6EvKRM",
+    "asset_key": "unsplash:6wDih6EvKRM",
+    "alt_text": "Illustration for Bitcoin Treasury Firm Strategy Abandons Its ‘Never Sell’ Playbook",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "global Bitcoin Treasury Firm Strategy photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "cryptocurrency",
+      "bitcoin",
+      "blockchain",
+      "treasury",
+      "strategy"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Crypto",
+    "Bitcoin",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Bitcoin treasury firm Strategy breaks from 'never sell' approach to the flagship crypto",
+        "url": "https://cnbc.com/2026/05/05/strategy-breaks-from-never-sell-bitcoin-approach.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "Why Is The Crypto Market Up Today?",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/why-crypto-market-today-035345690.html",
+        "domain": "finance.yahoo.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Why Is The Crypto Market Up Today?",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/why-crypto-market-today-035345690.html",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "crypto-bitcoin",
+          "label": "Crypto",
+          "type": "topic"
+        },
+        {
+          "slug": "bitcoin",
+          "label": "Bitcoin",
+          "type": "theme"
+        },
+        {
+          "slug": "strategy-company",
+          "label": "Strategy",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "crypto-bitcoin",
+        "topic_label": "Crypto",
+        "supported": true,
+        "matched_aliases": [
+          "Crypto",
+          "bitcoin"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "global Bitcoin Treasury Firm Strategy photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "bitcoin",
+        "treasury",
+        "firm",
+        "strategy"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
