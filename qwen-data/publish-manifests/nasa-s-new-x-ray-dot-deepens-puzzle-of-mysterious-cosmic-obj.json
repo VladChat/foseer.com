@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-08T12:58:11.025Z",
+  "event_id": "evt-2026-05-06-space-astronomy-general-global-amazon",
+  "cluster_id": "evt-2026-05-06-space-astronomy-general-global-amazon",
+  "article_type": "report",
+  "title": "Unlocking the Mystery of X",
+  "slug": "nasa-s-new-x-ray-dot-deepens-puzzle-of-mysterious-cosmic-obj",
+  "canonical_slug": "2026-05-08-nasa-s-new-x-ray-dot-deepens-puzzle-of-mysterious-cosmic-obj",
+  "expected_url": "/article/2026-05-08-nasa-s-new-x-ray-dot-deepens-puzzle-of-mysterious-cosmic-obj",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-08-nasa-s-new-x-ray-dot-deepens-puzzle-of-mysterious-cosmic-obj.mdx",
+  "published_at": "2026-05-08T12:58:11.023Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Unlocking the Mystery of X",
+  "topics": [
+    "Unlocking the Mystery of X"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/w-ykitrq0pk/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/w-ykitrq0pk/cover.jpg",
+    "source_url": "https://unsplash.com/photos/the-nasa-vehicle-assembly-building-stands-tall-w-YKItrq0pk",
+    "asset_key": "unsplash:w-YKItrq0pk",
+    "alt_text": "The nasa vehicle assembly building stands tall.",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "nasa photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "nasa’s",
+      "‘x‑ray",
+      "deepens"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "X",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Unlocking the Mystery of X",
+        "url": "https://www.nasa.gov/image-article/unlocking-the-mystery-of-x-ray-dots/",
+        "domain": "nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Unlocking the Mystery of X",
+          "url": "https://www.nasa.gov/image-article/unlocking-the-mystery-of-x-ray-dots/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "x-platform",
+          "label": "X",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "nasa photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "nasa"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
