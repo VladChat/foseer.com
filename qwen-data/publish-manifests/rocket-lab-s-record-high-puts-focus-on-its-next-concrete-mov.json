@@ -1,0 +1,154 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-09T15:14:14.699Z",
+  "event_id": "evt-2026-05-09-crypto-bitcoin-general-global",
+  "cluster_id": "evt-2026-05-09-crypto-bitcoin-general-global",
+  "article_type": "analysis",
+  "title": "Rocket Lab’s Record High Puts Focus on Its Next Concrete Move",
+  "slug": "rocket-lab-s-record-high-puts-focus-on-its-next-concrete-mov",
+  "canonical_slug": "2026-05-09-rocket-lab-s-record-high-puts-focus-on-its-next-concrete-mov",
+  "expected_url": "/article/2026-05-09-rocket-lab-s-record-high-puts-focus-on-its-next-concrete-mov",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-09-rocket-lab-s-record-high-puts-focus-on-its-next-concrete-mov.mdx",
+  "published_at": "2026-05-09T15:14:14.697Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "companies-deals",
+  "topic_label": "Companies & Deals",
+  "subsection": "Crypto",
+  "topics": [
+    "Crypto"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "jacob_ellis",
+    "author_name": "Jacob Ellis",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/eqj5gwvgn_y/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/eqj5gwvgn_y/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-close-up-of-a-coin-on-a-tiled-surface-eqj5GwvGN_Y",
+    "asset_key": "unsplash:eqj5GwvGN_Y",
+    "alt_text": "Illustration for Rocket Lab’s Record High Puts Focus on Its Next Concrete Move",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Rocket crypto photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "rocket",
+      "lab’s",
+      "record"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Companies & Deals",
+    "Earnings",
+    "Coinbase",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Rocket Lab (RKLB) Q1 earnings 2026",
+        "url": "https://www.cnbc.com/2026/05/08/rocket-lab-rklb-q1-earnings-2026.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "Coinbase (COIN) Q1 2026 Earnings Transcript",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/coin/pressreleases/1808453/coinbase-coin-q1-2026-earnings-transcript/",
+        "domain": "theglobeandmail.com"
+      },
+      {
+        "title": "Marqeta (MQ) Q1 2026 Earnings Transcript",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/mq-q/pressreleases/1725952/marqeta-mq-q1-2026-earnings-transcript/",
+        "domain": "theglobeandmail.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Publish-ready source pack mixes unrelated event titles (2 weak-title sources)"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Coinbase (COIN) Q1 2026 Earnings Transcript",
+          "url": "https://www.theglobeandmail.com/investing/markets/stocks/coin/pressreleases/1808453/coinbase-coin-q1-2026-earnings-transcript/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        },
+        {
+          "title": "Marqeta (MQ) Q1 2026 Earnings Transcript",
+          "url": "https://www.theglobeandmail.com/investing/markets/stocks/mq-q/pressreleases/1725952/marqeta-mq-q1-2026-earnings-transcript/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "companies-deals",
+          "label": "Companies & Deals",
+          "type": "topic"
+        },
+        {
+          "slug": "earnings",
+          "label": "Earnings",
+          "type": "theme"
+        },
+        {
+          "slug": "coinbase",
+          "label": "Coinbase",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "companies-deals",
+        "topic_label": "Companies & Deals",
+        "supported": true,
+        "matched_aliases": [
+          "companies",
+          "earnings"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Rocket crypto photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "rocket"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
