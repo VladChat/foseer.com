@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-09T12:15:35.324Z",
+  "event_id": "evt-2026-05-08-sports-general-global-fifa",
+  "cluster_id": "evt-2026-05-08-sports-general-global-fifa",
+  "article_type": "report",
+  "title": "Liverpool mailbag: Alonso in? Diomande deal? Hughes ...",
+  "slug": "liverpool-s-summer-questions-alonso-links-diomande-talk-and-",
+  "canonical_slug": "2026-05-09-liverpool-s-summer-questions-alonso-links-diomande-talk-and",
+  "expected_url": "/article/2026-05-09-liverpool-s-summer-questions-alonso-links-diomande-talk-and",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-09-liverpool-s-summer-questions-alonso-links-diomande-talk-and.mdx",
+  "published_at": "2026-05-09T12:15:35.323Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Liverpool mailbag: Alonso in? Diomande deal? Hughes ...",
+  "topics": [
+    "Liverpool mailbag: Alonso in? Diomande deal? Hughes ..."
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/be0j4dyyuau/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/be0j4dyyuau/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-white-van-parked-on-the-side-of-a-road-next-to-a-body-of-water-be0J4dyyUaU",
+    "asset_key": "unsplash:be0J4dyyUaU",
+    "alt_text": "Illustration for Liverpool’s summer questions: Alonso links, Diomande talk and Hughes’ path",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Liverpool photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "liverpool’s",
+      "summer",
+      "questions:"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Liverpool mailbag: Alonso in? Diomande deal? Hughes ...",
+        "url": "https://www.nytimes.com/athletic/7254806/2026/05/07/liverpool-xabi-alonso-transfers-diomande/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": true,
+        "matched_aliases": [
+          "transfers"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Liverpool photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "liverpool"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

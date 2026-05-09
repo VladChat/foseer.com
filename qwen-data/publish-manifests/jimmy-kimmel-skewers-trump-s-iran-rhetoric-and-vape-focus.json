@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-09T12:12:15.233Z",
+  "event_id": "evt-2026-05-07-film-tv-general-iran-iran",
+  "cluster_id": "evt-2026-05-07-film-tv-general-iran-iran",
+  "article_type": "report",
+  "title": "Jimmy Kimmel on Trump: ‘His list of threats is now longer than Kash Patel’s bar tab’",
+  "slug": "jimmy-kimmel-skewers-trump-s-iran-rhetoric-and-vape-focus",
+  "canonical_slug": "2026-05-09-jimmy-kimmel-skewers-trump-s-iran-rhetoric-and-vape-focus",
+  "expected_url": "/article/2026-05-09-jimmy-kimmel-skewers-trump-s-iran-rhetoric-and-vape-focus",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-09-jimmy-kimmel-skewers-trump-s-iran-rhetoric-and-vape-focus.mdx",
+  "published_at": "2026-05-09T12:12:15.231Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "Jimmy Kimmel on Trump: ‘His list of threats is now longer than Kash Patel’s bar tab’",
+  "topics": [
+    "Jimmy Kimmel on Trump: ‘His list of threats is now longer than Kash Patel’s bar tab’"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/mr_8uul_zn8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/mr_8uul_zn8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-in-black-leather-jacket-wearing-eyeglasses-mR_8uUL_zN8",
+    "asset_key": "unsplash:mR_8uUL_zN8",
+    "alt_text": "Illustration for Jimmy Kimmel Skewers Trump’s Iran Rhetoric and Vape Focus",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Jimmy Kimmel portrait",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "diplomacy",
+      "international",
+      "summit",
+      "jimmy",
+      "kimmel",
+      "skewers"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Jimmy Kimmel on Trump: ‘His list of threats is now longer than Kash Patel’s bar tab’",
+        "url": "https://www.theguardian.com/culture/2026/may/07/jimmy-kimmel-donald-trump-iran-war",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "iran"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Jimmy Kimmel portrait",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "jimmy",
+        "kimmel"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
