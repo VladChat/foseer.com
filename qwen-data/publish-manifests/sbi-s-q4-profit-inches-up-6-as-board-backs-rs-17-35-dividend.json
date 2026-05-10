@@ -1,0 +1,145 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-10T15:14:39.489Z",
+  "event_id": "evt-2026-05-08-housing-real-estate-general-global",
+  "cluster_id": "evt-2026-05-08-housing-real-estate-general-global",
+  "article_type": "analysis",
+  "title": "SBI’s Q4 profit inches up 6% as board backs Rs 17.35 dividend",
+  "slug": "sbi-s-q4-profit-inches-up-6-as-board-backs-rs-17-35-dividend",
+  "canonical_slug": "2026-05-10-sbi-s-q4-profit-inches-up-6-as-board-backs-rs-17-35-dividend",
+  "expected_url": "/article/2026-05-10-sbi-s-q4-profit-inches-up-6-as-board-backs-rs-17-35-dividend",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-10-sbi-s-q4-profit-inches-up-6-as-board-backs-rs-17-35-dividend.mdx",
+  "published_at": "2026-05-10T15:14:39.487Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "companies-deals",
+  "topic_label": "Companies & Deals",
+  "subsection": "Economy & Markets",
+  "topics": [
+    "Economy & Markets"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "ava_mitchell",
+    "author_name": "Ava Mitchell",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/mzu1wuisugm/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/mzu1wuisugm/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-red-and-white-boxes-mZU1WuisuGM",
+    "asset_key": "unsplash:mZU1WuisuGM",
+    "alt_text": "Illustration for SBI’s Q4 profit inches up 6% as board backs Rs 17.35 dividend",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "SBI Posts photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "house",
+      "real estate",
+      "home",
+      "sbi’s",
+      "profit",
+      "inches"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Companies & Deals",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "SBI Q4 Results 2026: SBI Posts 6% Growth in Net Profit, Announces Dividend of Rs 17.35",
+        "url": "https://www.timesnownews.com/business-economy/companies/sbi-q4-results-2026-sbi-posts-6-growth-in-net-profit-announces-dividend-of-rs-17-35-article-154275210",
+        "domain": "timesnownews.com"
+      },
+      {
+        "title": "Amneal Reports First Quarter 2026 Financial Results",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/amrx-q/pressreleases/36658062/amneal-reports-first-quarter-2026-financial-results/",
+        "domain": "theglobeandmail.com"
+      },
+      {
+        "title": "Xenon Reports Q1 2026 Financial Results and Provides Business ...",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/xene/pressreleases/1784134/xenon-reports-q1-2026-financial-results-and-provides-business-update/",
+        "domain": "theglobeandmail.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Publish-ready source pack mixes unrelated event titles (2 weak-title sources)"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Amneal Reports First Quarter 2026 Financial Results",
+          "url": "https://www.theglobeandmail.com/investing/markets/stocks/amrx-q/pressreleases/36658062/amneal-reports-first-quarter-2026-financial-results/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        },
+        {
+          "title": "Xenon Reports Q1 2026 Financial Results and Provides Business ...",
+          "url": "https://www.theglobeandmail.com/investing/markets/stocks/xene/pressreleases/1784134/xenon-reports-q1-2026-financial-results-and-provides-business-update/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "companies-deals",
+          "label": "Companies & Deals",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "companies-deals",
+        "topic_label": "Companies & Deals",
+        "supported": true,
+        "matched_aliases": [
+          "companies",
+          "earnings"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "SBI Posts photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "sbi",
+        "posts"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
