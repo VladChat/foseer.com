@@ -1,0 +1,144 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-11T14:05:55.388Z",
+  "event_id": "evt-2026-05-11-crypto-bitcoin-general-global-india",
+  "cluster_id": "evt-2026-05-11-crypto-bitcoin-general-global-india",
+  "article_type": "report",
+  "title": "Intellia Therapeutics Announces First Quarter 2026 Financial ...",
+  "slug": "why-intellia-s-early-2026-numbers-matter-for-gene-editing-me",
+  "canonical_slug": "2026-05-11-why-intellia-s-early-2026-numbers-matter-for-gene-editing-me",
+  "expected_url": "/article/2026-05-11-why-intellia-s-early-2026-numbers-matter-for-gene-editing-me",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-11-why-intellia-s-early-2026-numbers-matter-for-gene-editing-me.mdx",
+  "published_at": "2026-05-11T14:05:55.386Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "ai-big-tech",
+  "topic_label": "AI & Big Tech",
+  "subsection": "Intellia Therapeutics Announces First Quarter 2026 Financial ...",
+  "topics": [
+    "Intellia Therapeutics Announces First Quarter 2026 Financial ..."
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/b7mqq3iovwq/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/b7mqq3iovwq/cover.jpg",
+    "source_url": "https://unsplash.com/photos/french-brothers-titanic-survivors-b7MQq3IovwQ",
+    "asset_key": "unsplash:b7MQq3IovwQ",
+    "alt_text": "Illustration for Why Intellia’s Early 2026 Numbers Matter for Gene‑Editing Medicine",
+    "selection_mode": "provider_download_new:unsplash:strong:relaxed",
+    "query_used": "early 2026 gene photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "intellia’s",
+      "early",
+      "numbers"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "AI & Big Tech",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Intellia Therapeutics Announces First Quarter 2026 Financial ...",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/ntla/pressreleases/1846222/intellia-therapeutics-announces-first-quarter-2026-financial-results-and-business-updates/",
+        "domain": "theglobeandmail.com"
+      },
+      {
+        "title": "Amneal Reports First Quarter 2026 Financial Results",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/amrx-q/pressreleases/36658062/amneal-reports-first-quarter-2026-financial-results/",
+        "domain": "theglobeandmail.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: AI & Big Tech",
+      "Primary topic_id unsupported by article evidence: ai-big-tech"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Amneal Reports First Quarter 2026 Financial Results",
+          "url": "https://www.theglobeandmail.com/investing/markets/stocks/amrx-q/pressreleases/36658062/amneal-reports-first-quarter-2026-financial-results/",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "2026"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "ai-big-tech",
+        "topic_label": "AI & Big Tech",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "early 2026 gene photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "early",
+        "2026",
+        "gene"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

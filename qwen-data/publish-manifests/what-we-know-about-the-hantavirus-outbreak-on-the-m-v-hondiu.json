@@ -1,0 +1,144 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-11T14:07:42.200Z",
+  "event_id": "evt-2026-05-11-world-geopolitics-general-global",
+  "cluster_id": "evt-2026-05-11-world-geopolitics-general-global",
+  "article_type": "report",
+  "title": "What we know about hantavirus cases tied to deadly cruise ship outbreak",
+  "slug": "what-we-know-about-the-hantavirus-outbreak-on-the-m-v-hondiu",
+  "canonical_slug": "2026-05-11-what-we-know-about-the-hantavirus-outbreak-on-the-m-v-hondiu",
+  "expected_url": "/article/2026-05-11-what-we-know-about-the-hantavirus-outbreak-on-the-m-v-hondiu",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-11-what-we-know-about-the-hantavirus-outbreak-on-the-m-v-hondiu.mdx",
+  "published_at": "2026-05-11T14:07:42.199Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "What we know about hantavirus cases tied to deadly cruise ship outbreak",
+  "topics": [
+    "What we know about hantavirus cases tied to deadly cruise ship outbreak"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/r2mf3wfovzc/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/r2mf3wfovzc/cover.jpg",
+    "source_url": "https://unsplash.com/photos/black-iphone-7-on-blue-background-r2Mf3WFOVZc",
+    "asset_key": "unsplash:r2Mf3WFOVZc",
+    "alt_text": "Illustration for What We Know About the Hantavirus Outbreak on the M/V Hondius",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "We Know About the Hantavirus medical photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "hantavirus",
+      "outbreak",
+      "hondius"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Outbreak",
+    "Diplomacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "What we know about hantavirus cases tied to deadly cruise ship outbreak",
+        "url": "https://www.cbsnews.com/news/hantavirus-cases-deadly-cruise-ship-outbreak/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "Hantavirus Cruise Ship Outbreak: Latest WHO Update, New Details, And Top 12 Countries On Alert",
+        "url": "https://www.timesnownews.com/travel/hantavirus-cruise-ship-outbreak-latest-who-update-new-details-and-top-12-countries-on-alert-article-154286562",
+        "domain": "timesnownews.com"
+      },
+      {
+        "title": "Americans from hantavirus - hit cruise ship arrive in the U . S",
+        "url": "https://www.nbcmiami.com/news/national-international/american-passengers-from-hantavirus-hit-cruise-ship-arrive-back-in-the-u-s/3807388/",
+        "domain": "nbcmiami.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Americans from hantavirus - hit cruise ship arrive in the U . S",
+          "url": "https://www.nbcmiami.com/news/national-international/american-passengers-from-hantavirus-hit-cruise-ship-arrive-back-in-the-u-s/3807388/",
+          "overlap_ratio": 0.2,
+          "shared_tokens": [
+            "hantavirus"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "outbreak",
+          "label": "Outbreak",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "We Know About the Hantavirus medical photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "know",
+        "about",
+        "hantavirus"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
