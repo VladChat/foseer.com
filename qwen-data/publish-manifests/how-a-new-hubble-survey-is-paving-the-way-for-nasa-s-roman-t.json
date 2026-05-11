@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-11T16:49:19.920Z",
+  "event_id": "evt-2026-05-11-space-astronomy-general-global",
+  "cluster_id": "evt-2026-05-11-space-astronomy-general-global",
+  "article_type": "analysis",
+  "title": "How a New Hubble Survey Is Paving the Way for NASA’s Roman Telescope",
+  "slug": "how-a-new-hubble-survey-is-paving-the-way-for-nasa-s-roman-t",
+  "canonical_slug": "2026-05-11-how-a-new-hubble-survey-is-paving-the-way-for-nasa-s-roman-t",
+  "expected_url": "/article/2026-05-11-how-a-new-hubble-survey-is-paving-the-way-for-nasa-s-roman-t",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-11-how-a-new-hubble-survey-is-paving-the-way-for-nasa-s-roman-t.mdx",
+  "published_at": "2026-05-11T16:49:19.918Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "Space & Astronomy",
+  "topics": [
+    "Space & Astronomy"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/glwz04b3lao/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/glwz04b3lao/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-close-up-of-a-woman-GLwz04B3LAo",
+    "asset_key": "unsplash:GLwz04B3LAo",
+    "alt_text": "Illustration for How a New Hubble Survey Is Paving the Way for NASA’s Roman Telescope",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "New Hubble Survey portrait",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "hubble",
+      "survey",
+      "paving"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Hubble Survey Sets Up Roman’s Future Look Near Milky Way’s Center",
+        "url": "https://science.nasa.gov/missions/roman-space-telescope/hubble-survey-sets-up-romans-future-look-near-milky-ways-center/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "New Hubble Survey portrait",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "hubble",
+        "survey"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
