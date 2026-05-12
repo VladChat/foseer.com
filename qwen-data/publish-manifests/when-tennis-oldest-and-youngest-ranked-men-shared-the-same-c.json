@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-12T13:24:51.594Z",
+  "event_id": "evt-2026-05-11-events-tournaments-general-global",
+  "cluster_id": "evt-2026-05-11-events-tournaments-general-global",
+  "article_type": "report",
+  "title": "When the oldest and youngest ranked men's tennis players met in ...",
+  "slug": "when-tennis-oldest-and-youngest-ranked-men-shared-the-same-c",
+  "canonical_slug": "2026-05-12-when-tennis-oldest-and-youngest-ranked-men-shared-the-same-c",
+  "expected_url": "/article/2026-05-12-when-tennis-oldest-and-youngest-ranked-men-shared-the-same-c",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-12-when-tennis-oldest-and-youngest-ranked-men-shared-the-same-c.mdx",
+  "published_at": "2026-05-12T13:24:51.592Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "events-tournaments",
+  "topic_label": "Events & Tournaments",
+  "subsection": "When the oldest and youngest ranked men's tennis players met in ...",
+  "topics": [
+    "When the oldest and youngest ranked men's tennis players met in ..."
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/bvew0nchrio/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/bvew0nchrio/cover.jpg",
+    "source_url": "https://unsplash.com/photos/tennis-talk-althea-gibson-us-and-wimbledon-tennis-champion-gives-some-pointers-on-the-game-which-has-brought-her-international-fame-BvEw0NCHrIo",
+    "asset_key": "unsplash:BvEw0NCHrIo",
+    "alt_text": "Tennis talk Althea Gibson, U.S. and Wimbledon tennis champion, gives some pointers on the game which has brought her international fame",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "global Tennis Oldest and Youngest photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "tournament",
+      "trophy",
+      "championship",
+      "tennis’",
+      "oldest",
+      "youngest"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.6,
+    "is_fallback": false
+  },
+  "tags": [
+    "Events & Tournaments",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "When the oldest and youngest ranked men's tennis players met in ...",
+        "url": "https://www.nytimes.com/athletic/7263052/2026/05/11/tennis-oldest-youngest-ranked-atp-davidov-haviland/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "events-tournaments",
+          "label": "Events & Tournaments",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "events-tournaments",
+        "topic_label": "Events & Tournaments",
+        "supported": true,
+        "matched_aliases": [
+          "events",
+          "tournaments"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "global Tennis Oldest and Youngest photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "tennis",
+        "oldest",
+        "youngest"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
