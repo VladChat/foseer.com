@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-13T13:38:55.165Z",
+  "event_id": "evt-2026-05-13-mental-health-general-global",
+  "cluster_id": "evt-2026-05-13-mental-health-general-global",
+  "article_type": "report",
+  "title": "Opinion | We’re Thinking About Mental Health Diagnoses All Wrong",
+  "slug": "why-experts-say-our-mental-health-diagnoses-are-misguided",
+  "canonical_slug": "2026-05-13-why-experts-say-our-mental-health-diagnoses-are-misguided",
+  "expected_url": "/article/2026-05-13-why-experts-say-our-mental-health-diagnoses-are-misguided",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-13-why-experts-say-our-mental-health-diagnoses-are-misguided.mdx",
+  "published_at": "2026-05-13T13:38:55.163Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "mental-health",
+  "topic_label": "Mental Health",
+  "subsection": "Opinion | We’re Thinking About Mental Health Diagnoses All Wrong",
+  "topics": [
+    "Opinion | We’re Thinking About Mental Health Diagnoses All Wrong"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/2377075/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/2377075/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/mental-health-on-scrabble-tiles-2377075/",
+    "asset_key": "pexels:2377075",
+    "alt_text": "Scrabble tiles spelling 'Mental Health' with green leaves on a white background.",
+    "selection_mode": "provider_download_new:pexels:acceptable:relaxed",
+    "query_used": "Experts Say Our Mental photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 95,
+    "editorial_fit_score": 99,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "mental health",
+      "therapy",
+      "counseling",
+      "experts",
+      "mental",
+      "diagnoses"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Mental Health",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Opinion | We’re Thinking About Mental Health Diagnoses All Wrong",
+        "url": "https://www.nytimes.com/2026/05/11/opinion/adhd-autism-depression-diagnoses.html",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "High-Risk Mental Health Patients Left Unmonitored in A&E",
+        "url": "https://medscape.com/viewarticle/high-risk-mental-health-patients-left-unmonitored-a-e-2026a1000f5b",
+        "domain": "medscape.com"
+      },
+      {
+        "title": "Mental health research at VA’s Million Veteran Program",
+        "url": "https://news.va.gov/146583/mental-health-research-million-veteran-program/",
+        "domain": "news.va.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "mental-health",
+          "label": "Mental Health",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "mental-health",
+        "topic_label": "Mental Health",
+        "supported": true,
+        "matched_aliases": [
+          "Mental Health"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Experts Say Our Mental photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "experts",
+        "say",
+        "our",
+        "mental"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
