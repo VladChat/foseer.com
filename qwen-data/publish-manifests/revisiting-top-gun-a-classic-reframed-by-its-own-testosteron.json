@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-14T13:21:49.540Z",
+  "event_id": "evt-2026-05-14-film-tv-general-global",
+  "cluster_id": "evt-2026-05-14-film-tv-general-global",
+  "article_type": "report",
+  "title": "Top Gun review – now impossible to view Tom Cruise’s testosterone",
+  "slug": "revisiting-top-gun-a-classic-reframed-by-its-own-testosteron",
+  "canonical_slug": "2026-05-14-revisiting-top-gun-a-classic-reframed-by-its-own-testosteron",
+  "expected_url": "/article/2026-05-14-revisiting-top-gun-a-classic-reframed-by-its-own-testosteron",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-14-revisiting-top-gun-a-classic-reframed-by-its-own-testosteron.mdx",
+  "published_at": "2026-05-14T13:21:49.539Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "creators-platforms",
+  "topic_label": "Creators & Platforms",
+  "subsection": "Top Gun review – now impossible to view Tom Cruise’s testosterone",
+  "topics": [
+    "Top Gun review – now impossible to view Tom Cruise’s testosterone"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/jgvtyz6ut_g/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/jgvtyz6ut_g/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-woman-is-holding-a-microscope-and-a-man-is-looking-at-it-jgvTYz6UT_g",
+    "asset_key": "unsplash:jgvTYz6UT_g",
+    "alt_text": "Illustration for Revisiting *Top Gun*: A Classic Reframed by Its Own Testosterone",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Top Gun film photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "content creator",
+      "streaming",
+      "social platform",
+      "revisiting",
+      "gun*:",
+      "classic"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Creators & Platforms",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Top Gun review – now impossible to view Tom Cruise’s testosterone",
+        "url": "https://www.theguardian.com/film/2026/may/14/top-gun-review-tom-cruise-val-kilmer-kelly-mcgillis",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "creators-platforms",
+          "label": "Creators & Platforms",
+          "type": "topic"
+        },
+        {
+          "slug": "influencer-economy",
+          "label": "Influencer Economy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "creators-platforms",
+        "topic_label": "Creators & Platforms",
+        "supported": true,
+        "matched_aliases": [
+          "creator economy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Top Gun film photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "top",
+        "gun",
+        "film"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

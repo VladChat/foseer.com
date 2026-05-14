@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-14T13:21:13.049Z",
+  "event_id": "evt-2026-05-13-world-geopolitics-general-global-tesla",
+  "cluster_id": "evt-2026-05-13-world-geopolitics-general-global-tesla",
+  "article_type": "report",
+  "title": "‘Irresponsible’: backlash as Utah approves datacenter twice the size of Manhattan",
+  "slug": "utah-s-mega-datacenter-approval-triggers-backlash-over-scale",
+  "canonical_slug": "2026-05-14-utah-s-mega-datacenter-approval-triggers-backlash-over-scale",
+  "expected_url": "/article/2026-05-14-utah-s-mega-datacenter-approval-triggers-backlash-over-scale",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-14-utah-s-mega-datacenter-approval-triggers-backlash-over-scale.mdx",
+  "published_at": "2026-05-14T13:21:13.048Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "‘Irresponsible’: backlash as Utah approves datacenter twice the size of Manhattan",
+  "topics": [
+    "‘Irresponsible’: backlash as Utah approves datacenter twice the size of Manhattan"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "sophia_bennett",
+    "author_name": "Sophia Bennett",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/_lc8tokdnsg/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/_lc8tokdnsg/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-row-of-power-lines-in-the-middle-of-a-field-_lC8tokDnSg",
+    "asset_key": "unsplash:_lC8tokDnSg",
+    "alt_text": "Illustration for Utah’s Mega-Datacenter Approval Triggers Backlash Over Scale and Scarcity",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Approval Triggers Backlash electricity photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.9,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "utah’s",
+      "datacenter",
+      "approval"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.9,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Diplomacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "‘Irresponsible’: backlash as Utah approves datacenter twice the size of Manhattan",
+        "url": "https://www.theguardian.com/us-news/2026/may/13/utah-approves-datacenter-backlash",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Approval Triggers Backlash electricity photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "approval",
+        "triggers",
+        "backlash"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
