@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-16T12:13:55.276Z",
+  "event_id": "evt-2026-05-16-climate-extreme-weather-general-global",
+  "cluster_id": "evt-2026-05-16-climate-extreme-weather-general-global",
+  "article_type": "report",
+  "title": "‘It didn’t seem real’: the Black mushroom hunters unearthing the US’s essential fungi",
+  "slug": "how-black-mushroom-hunters-are-reshaping-who-belongs-in-us-f",
+  "canonical_slug": "2026-05-16-how-black-mushroom-hunters-are-reshaping-who-belongs-in-us-f",
+  "expected_url": "/article/2026-05-16-how-black-mushroom-hunters-are-reshaping-who-belongs-in-us-f",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-16-how-black-mushroom-hunters-are-reshaping-who-belongs-in-us-f.mdx",
+  "published_at": "2026-05-16T12:13:55.275Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "climate-extreme-weather",
+  "topic_label": "Climate & Extreme Weather",
+  "subsection": "‘It didn’t seem real’: the Black mushroom hunters unearthing the US’s essential fungi",
+  "topics": [
+    "‘It didn’t seem real’: the Black mushroom hunters unearthing the US’s essential fungi"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/us-politics/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/us-politics/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:us-politics",
+    "alt_text": "Illustration for How Black mushroom hunters are reshaping who belongs in US forests",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "US climate photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 59,
+    "editorial_fit_score": 17,
+    "image_fit_score": 0.67,
+    "visual_concepts": [
+      "extreme weather",
+      "storm",
+      "climate",
+      "black",
+      "mushroom",
+      "hunters"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.67,
+    "is_fallback": false
+  },
+  "tags": [
+    "Climate & Extreme Weather",
+    "United States",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "‘It didn’t seem real’: the Black mushroom hunters unearthing the US’s essential fungi",
+        "url": "https://www.theguardian.com/lifeandstyle/ng-interactive/2026/may/16/mushrooms-black-foragers",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Climate & Extreme Weather",
+      "Primary topic_id unsupported by article evidence: climate-extreme-weather",
+      "Image query reinforces unsupported topic context: Climate & Extreme Weather"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "type": "topic"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "climate-extreme-weather",
+        "topic_label": "Climate & Extreme Weather",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "US climate photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}

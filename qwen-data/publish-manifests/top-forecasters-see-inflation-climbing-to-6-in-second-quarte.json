@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-16T12:13:33.939Z",
+  "event_id": "evt-2026-05-15-economy-markets-general-global-iran",
+  "cluster_id": "evt-2026-05-15-economy-markets-general-global-iran",
+  "article_type": "report",
+  "title": "Inflation rate projected to hit 6% in the second quarter, top economic forecasters say",
+  "slug": "top-forecasters-see-inflation-climbing-to-6-in-second-quarte",
+  "canonical_slug": "2026-05-16-top-forecasters-see-inflation-climbing-to-6-in-second-quarte",
+  "expected_url": "/article/2026-05-16-top-forecasters-see-inflation-climbing-to-6-in-second-quarte",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-16-top-forecasters-see-inflation-climbing-to-6-in-second-quarte.mdx",
+  "published_at": "2026-05-16T12:13:33.937Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Inflation rate projected to hit 6% in the second quarter, top economic forecasters say",
+  "topics": [
+    "Inflation rate projected to hit 6% in the second quarter, top economic forecasters say"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/economy-markets/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/economy-markets/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:economy-markets",
+    "alt_text": "Illustration for Top forecasters see inflation climbing to 6% in second quarter",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Inflation photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 53,
+    "editorial_fit_score": 15,
+    "image_fit_score": 0.66,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "inflation",
+      "climbing",
+      "quarter"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.66,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Inflation",
+    "Stock Market",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Inflation rate projected to hit 6% in the second quarter, top economic forecasters say",
+        "url": "https://cnbc.com/2026/05/15/inflation-rate-projected-to-hit-6percent-in-the-second-quarter-top-economic-forecasters-say.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Canonical tag unsupported by article evidence: Stock Market"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "inflation",
+          "label": "Inflation",
+          "type": "theme"
+        },
+        {
+          "slug": "stock-market",
+          "label": "Stock Market",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "stock-market",
+          "label": "Stock Market",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "Inflation photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "inflation"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
