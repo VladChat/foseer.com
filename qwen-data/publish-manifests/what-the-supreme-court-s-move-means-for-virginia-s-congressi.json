@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-17T15:18:30.658Z",
+  "event_id": "evt-2026-05-16-us-politics-general-global-supreme-court",
+  "cluster_id": "evt-2026-05-16-us-politics-general-global-supreme-court",
+  "article_type": "analysis",
+  "title": "What the Supreme Court’s Move Means for Virginia’s Congressional Map",
+  "slug": "what-the-supreme-court-s-move-means-for-virginia-s-congressi",
+  "canonical_slug": "2026-05-17-what-the-supreme-court-s-move-means-for-virginia-s-congressi",
+  "expected_url": "/article/2026-05-17-what-the-supreme-court-s-move-means-for-virginia-s-congressi",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-17-what-the-supreme-court-s-move-means-for-virginia-s-congressi.mdx",
+  "published_at": "2026-05-17T15:18:30.655Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/dbtafwny4ig/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/dbtafwny4ig/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-desk-with-a-sign-on-it-that-says-defend-DBTaFwnY4ig",
+    "asset_key": "unsplash:DBTaFwnY4ig",
+    "alt_text": "Illustration for What the Supreme Court’s Move Means for Virginia’s Congressional Map",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Congressional Map courtroom photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 99,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "supreme",
+      "court’s",
+      "means"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Supreme Court",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Supreme Court rejects Virginia Democrats' bid to revive new congressional map",
+        "url": "https://www.cbsnews.com/news/supreme-court-virginia-redistricting-ruling-democrats-republicans/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Congressional Map courtroom photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "congressional",
+        "map"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
