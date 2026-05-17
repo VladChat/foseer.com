@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-17T12:13:23.983Z",
+  "event_id": "evt-2026-05-17-events-tournaments-general-global",
+  "cluster_id": "evt-2026-05-17-events-tournaments-general-global",
+  "article_type": "report",
+  "title": "Why Chelsea hired Xabi Alonso now, and what went w...",
+  "slug": "why-chelsea-turned-to-xabi-alonso-and-what-changes-now",
+  "canonical_slug": "2026-05-17-why-chelsea-turned-to-xabi-alonso-and-what-changes-now",
+  "expected_url": "/article/2026-05-17-why-chelsea-turned-to-xabi-alonso-and-what-changes-now",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-17-why-chelsea-turned-to-xabi-alonso-and-what-changes-now.mdx",
+  "published_at": "2026-05-17T12:13:23.982Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "events-tournaments",
+  "topic_label": "Events & Tournaments",
+  "subsection": "Why Chelsea hired Xabi Alonso now, and what went w...",
+  "topics": [
+    "Why Chelsea hired Xabi Alonso now, and what went w..."
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/us-election-2025-what-to-know/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/us-election-2025-what-to-know/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:us-election-2025-what-to-know",
+    "alt_text": "Illustration for Why Chelsea Turned to Xabi Alonso — And What Changes Now",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Xabi Alonso photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 59,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "tournament",
+      "trophy",
+      "championship",
+      "chelsea",
+      "turned",
+      "alonso"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Events & Tournaments",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Chelsea appoint Alonso as manager seeking stability after turbulent spell",
+        "url": "https://www.reuters.com/sports/soccer/chelsea-appoint-xabi-alonso-new-manager-2026-05-17/",
+        "domain": "reuters.com"
+      },
+      {
+        "title": "Why Chelsea hired Xabi Alonso now, and what went w...",
+        "url": "https://www.espn.com/soccer/story/_/id/48794163/why-chelsea-hired-xabi-alonso-now-went-wrong-real-madrid",
+        "domain": "espn.com"
+      },
+      {
+        "title": "Chelsea appoint Xabi Alonso as new manager",
+        "url": "https://www.espn.com/soccer/story/_/id/48789151/chelsea-xabi-alonso-new-manager-premier-league-real-madrid-calum-mcfarlane",
+        "domain": "espn.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Events & Tournaments",
+      "Primary topic_id unsupported by article evidence: events-tournaments"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "events-tournaments",
+          "label": "Events & Tournaments",
+          "type": "topic"
+        },
+        {
+          "slug": "explainer",
+          "label": "Explainer",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "events-tournaments",
+          "label": "Events & Tournaments",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "events-tournaments",
+        "topic_label": "Events & Tournaments",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "Xabi Alonso photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "xabi",
+        "alonso"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

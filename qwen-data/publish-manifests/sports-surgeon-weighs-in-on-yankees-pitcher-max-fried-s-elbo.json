@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-17T12:13:03.801Z",
+  "event_id": "evt-2026-05-16-major-leagues-general-global-nfl-bts",
+  "cluster_id": "evt-2026-05-16-major-leagues-general-global-nfl-bts",
+  "article_type": "report",
+  "title": "Sports surgeon discusses Yankees' Max Fried's initial elbow diagnosis",
+  "slug": "sports-surgeon-weighs-in-on-yankees-pitcher-max-fried-s-elbo",
+  "canonical_slug": "2026-05-17-sports-surgeon-weighs-in-on-yankees-pitcher-max-fried-s-elbo",
+  "expected_url": "/article/2026-05-17-sports-surgeon-weighs-in-on-yankees-pitcher-max-fried-s-elbo",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-17-sports-surgeon-weighs-in-on-yankees-pitcher-max-fried-s-elbo.mdx",
+  "published_at": "2026-05-17T12:13:03.799Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Sports surgeon discusses Yankees' Max Fried's initial elbow diagnosis",
+  "topics": [
+    "Sports surgeon discusses Yankees' Max Fried's initial elbow diagnosis"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/n13wv9zp8wg/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/n13wv9zp8wg/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-man-sitting-on-a-fence-looking-at-the-water-N13Wv9zP8Wg",
+    "asset_key": "unsplash:N13Wv9zP8Wg",
+    "alt_text": "Illustration for Sports Surgeon Weighs In on Yankees Pitcher Max Fried’s Elbow Diagnosis",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Yankees Max technology photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "surgeon",
+      "weighs",
+      "yankees"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Sports surgeon discusses Yankees' Max Fried's initial elbow diagnosis",
+        "url": "https://www.nytimes.com/athletic/7277979/2026/05/14/yankees-max-frieds-elbow-diagnosis/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Shakira, Madonna and BTS will not be paid for World Cup final half ...",
+        "url": "https://www.nytimes.com/athletic/7279951/2026/05/14/world-cup-final-shakira-madonna-bts-pay/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Shakira, Madonna and BTS will not be paid for World Cup final half ...",
+          "url": "https://www.nytimes.com/athletic/7279951/2026/05/14/world-cup-final-shakira-madonna-bts-pay/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Yankees Max technology photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "yankees",
+        "max"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
