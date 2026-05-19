@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-19T14:11:43.850Z",
+  "event_id": "evt-2026-05-19-major-leagues-general-global",
+  "cluster_id": "evt-2026-05-19-major-leagues-general-global",
+  "article_type": "report",
+  "title": "Gina Carano admits Ronda Rousey ‘would’ve broken my arm’ if comeback fight had continued",
+  "slug": "gina-carano-says-ronda-rousey-would-ve-broken-my-arm-in-17-s",
+  "canonical_slug": "2026-05-19-gina-carano-says-ronda-rousey-would-ve-broken-my-arm-in-17-s",
+  "expected_url": "/article/2026-05-19-gina-carano-says-ronda-rousey-would-ve-broken-my-arm-in-17-s",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-19-gina-carano-says-ronda-rousey-would-ve-broken-my-arm-in-17-s.mdx",
+  "published_at": "2026-05-19T14:11:43.848Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Gina Carano admits Ronda Rousey ‘would’ve broken my arm’ if comeback fight had continued",
+  "topics": [
+    "Gina Carano admits Ronda Rousey ‘would’ve broken my arm’ if comeback fight had continued"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/hs2ti7y6k3i/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/hs2ti7y6k3i/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-black-and-white-photo-of-a-cracked-window-hS2tI7Y6K3I",
+    "asset_key": "unsplash:hS2tI7Y6K3I",
+    "alt_text": "Illustration for Gina Carano says Ronda Rousey ‘would’ve broken my arm’ in 17-second loss",
+    "selection_mode": "provider_download_new:unsplash:strong:relaxed",
+    "query_used": "broken second loss photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "carano",
+      "ronda",
+      "rousey"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Gina Carano admits Ronda Rousey ‘would’ve broken my arm’ if comeback fight had continued",
+        "url": "https://www.theguardian.com/sport/2026/may/19/gina-carano-ronday-rousey-mma-fight",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "broken second loss photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "broken",
+        "second",
+        "loss"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

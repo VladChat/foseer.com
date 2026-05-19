@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-19T14:09:43.574Z",
+  "event_id": "evt-2026-05-18-ai-big-tech-general-global-openai",
+  "cluster_id": "evt-2026-05-18-ai-big-tech-general-global-openai",
+  "article_type": "report",
+  "title": "How Elon Musk and Sam Altman went from besties to bitter rivals",
+  "slug": "inside-the-rift-between-elon-musk-and-sam-altman-over-openai",
+  "canonical_slug": "2026-05-19-inside-the-rift-between-elon-musk-and-sam-altman-over-openai",
+  "expected_url": "/article/2026-05-19-inside-the-rift-between-elon-musk-and-sam-altman-over-openai",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-19-inside-the-rift-between-elon-musk-and-sam-altman-over-openai.mdx",
+  "published_at": "2026-05-19T14:09:43.572Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "ai-big-tech",
+  "topic_label": "AI & Big Tech",
+  "subsection": "How Elon Musk and Sam Altman went from besties to bitter rivals",
+  "topics": [
+    "How Elon Musk and Sam Altman went from besties to bitter rivals"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/big-tech-and-the-us-digital-military-industrial-co/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/big-tech-and-the-us-digital-military-industrial-co/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:big-tech-and-the-us-digital-military-industrial-co",
+    "alt_text": "Illustration for Inside the Rift Between Elon Musk and Sam Altman Over OpenAI",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Elon Musk and Sam technology photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 85,
+    "asset_quality_score": 62,
+    "editorial_fit_score": 79,
+    "image_fit_score": 0.92,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "inside",
+      "altman",
+      "openai"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.92,
+    "is_fallback": false
+  },
+  "tags": [
+    "AI & Big Tech",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "How Elon Musk and Sam Altman went from besties to bitter rivals",
+        "url": "https://www.cnbc.com/2026/05/18/how-elon-musk-and-sam-altman-went-from-besties-to-bitter-rivals.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "ai-big-tech",
+        "topic_label": "AI & Big Tech",
+        "supported": true,
+        "matched_aliases": [
+          "ai",
+          "artificial intelligence"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "Elon Musk and Sam technology photo",
+      "article_relevance_score": 85,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "elon",
+        "musk",
+        "sam"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

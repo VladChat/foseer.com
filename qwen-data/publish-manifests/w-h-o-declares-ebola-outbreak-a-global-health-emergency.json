@@ -1,0 +1,136 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-19T14:12:03.824Z",
+  "event_id": "evt-2026-05-18-public-health-general-africa",
+  "cluster_id": "evt-2026-05-18-public-health-general-africa",
+  "article_type": "report",
+  "title": "W.H.O. Declares Ebola Outbreak a Global Health Emergency",
+  "slug": "w-h-o-declares-ebola-outbreak-a-global-health-emergency",
+  "canonical_slug": "2026-05-19-w-h-o-declares-ebola-outbreak-a-global-health-emergency",
+  "expected_url": "/article/2026-05-19-w-h-o-declares-ebola-outbreak-a-global-health-emergency",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-19-w-h-o-declares-ebola-outbreak-a-global-health-emergency.mdx",
+  "published_at": "2026-05-19T14:12:03.822Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "public-health",
+  "topic_label": "Public Health",
+  "subsection": "W.H.O. Declares Ebola Outbreak a Global Health Emergency",
+  "topics": [
+    "W.H.O. Declares Ebola Outbreak a Global Health Emergency"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/health-science/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/health-science/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:health-science",
+    "alt_text": "Illustration for W.H.O. Declares Ebola Outbreak a Global Health Emergency",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Declares Ebola Outbreak medical photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 75,
+    "asset_quality_score": 56,
+    "editorial_fit_score": 70,
+    "image_fit_score": 0.88,
+    "visual_concepts": [
+      "public health",
+      "hospital",
+      "medical",
+      "declares",
+      "ebola",
+      "outbreak"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.88,
+    "is_fallback": false
+  },
+  "tags": [
+    "Public Health",
+    "Public Health Emergency",
+    "Outbreak",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "W.H.O. Declares Ebola Outbreak a Global Health Emergency",
+        "url": "https://www.nytimes.com/2026/05/17/world/africa/ebola-congo-uganda-who-public-health-emergency.html",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Ebola Global Health Emergency Needs a Broad",
+        "url": "https://www.theglobeandmail.com/investing/markets/markets-news/access%20newswire/1993422/ebola-global-health-emergency-needs-a-broad-spectrum-drug-nv-387-is-a-strong-potential-candidate-says-nanoviricides/",
+        "domain": "theglobeandmail.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "public-health",
+          "label": "Public Health",
+          "type": "topic"
+        },
+        {
+          "slug": "public-health-emergency",
+          "label": "Public Health Emergency",
+          "type": "theme"
+        },
+        {
+          "slug": "outbreak",
+          "label": "Outbreak",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "public-health",
+        "topic_label": "Public Health",
+        "supported": true,
+        "matched_aliases": [
+          "Public Health",
+          "health agencies"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "Declares Ebola Outbreak medical photo",
+      "article_relevance_score": 75,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "declares",
+        "ebola",
+        "outbreak"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
