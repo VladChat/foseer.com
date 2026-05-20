@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-20T14:07:17.984Z",
+  "event_id": "evt-2026-05-19-film-tv-general-global-russia-ukraine",
+  "cluster_id": "evt-2026-05-19-film-tv-general-global-russia-ukraine",
+  "article_type": "report",
+  "title": "Minotaur review – Andrei Zvyagintsev’s scorching noir intrigue amid the Ukraine war",
+  "slug": "minotaur-at-cannes-zvyagintsev-returns-with-wartime-noir",
+  "canonical_slug": "2026-05-20-minotaur-at-cannes-zvyagintsev-returns-with-wartime-noir",
+  "expected_url": "/article/2026-05-20-minotaur-at-cannes-zvyagintsev-returns-with-wartime-noir",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-20-minotaur-at-cannes-zvyagintsev-returns-with-wartime-noir.mdx",
+  "published_at": "2026-05-20T14:07:17.981Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "Minotaur review – Andrei Zvyagintsev’s scorching noir intrigue amid the Ukraine war",
+  "topics": [
+    "Minotaur review – Andrei Zvyagintsev’s scorching noir intrigue amid the Ukraine war"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/ffhoia6gbna/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/ffhoia6gbna/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-couple-of-people-that-are-dancing-on-a-dance-floor-fFhOIa6gBNA",
+    "asset_key": "unsplash:fFhOIa6gBNA",
+    "alt_text": "Illustration for ‘Minotaur’ at Cannes: Zvyagintsev Returns With Wartime Noir",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "Cannes Zvyagintsev Returns photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "‘minotaur’",
+      "cannes:",
+      "zvyagintsev"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "Ukraine",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Minotaur review – Andrei Zvyagintsev’s scorching noir intrigue amid the Ukraine war",
+        "url": "https://www.theguardian.com/film/2026/may/19/minotaur-review-cannes-film-festival-andrei-zvyagintsev-ukraine-russia",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "ukraine",
+          "label": "Ukraine",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": true,
+        "matched_aliases": [
+          "film"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Cannes Zvyagintsev Returns photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "cannes",
+        "zvyagintsev",
+        "returns"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
