@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-20T17:29:09.274Z",
+  "event_id": "evt-2026-05-20-sports-general-global-sec",
+  "cluster_id": "evt-2026-05-20-sports-general-global-sec",
+  "article_type": "analysis",
+  "title": "What Brendan Sorsby’s Lawsuit Really Challenges About the NCAA",
+  "slug": "what-brendan-sorsby-s-lawsuit-really-challenges-about-the-nc",
+  "canonical_slug": "2026-05-20-what-brendan-sorsby-s-lawsuit-really-challenges-about-the-nc",
+  "expected_url": "/article/2026-05-20-what-brendan-sorsby-s-lawsuit-really-challenges-about-the-nc",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-20-what-brendan-sorsby-s-lawsuit-really-challenges-about-the-nc.mdx",
+  "published_at": "2026-05-20T17:29:09.242Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "athletes-culture",
+  "topic_label": "Athletes & Culture",
+  "subsection": "sports",
+  "topics": [
+    "sports"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/twenty-questions-and-expert-answers-about-the-iran/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/twenty-questions-and-expert-answers-about-the-iran/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:twenty-questions-and-expert-answers-about-the-iran",
+    "alt_text": "Illustration for What Brendan Sorsby’s Lawsuit Really Challenges About the NCAA",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Brendan Sorsby basketball photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 59,
+    "editorial_fit_score": 42,
+    "image_fit_score": 0.77,
+    "visual_concepts": [
+      "sports action",
+      "stadium",
+      "athletes",
+      "brendan",
+      "sorsby’s",
+      "lawsuit"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.77,
+    "is_fallback": false
+  },
+  "tags": [
+    "Athletes & Culture"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Top takeaways from Brendan Sorsby's lawsuit against NCAA",
+        "url": "https://www.nytimes.com/athletic/7292874/2026/05/20/brendan-sorsby-gambling-ncaa-lawsuit/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Brendan Sorsby files suit against NCAA, details bets on own team ...",
+        "url": "https://www.nytimes.com/athletic/7289109/2026/05/18/brendan-sorsby-sues-ncaa-supplemental-draft-gambling/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Texas Tech QB Brendan Sorsby files lawsuit vs. NCAA in attempt to play in 2026",
+        "url": "https://sports.yahoo.com/college-football/breaking-news/article/texas-tech-qb-brendan-sorsby-files-lawsuit-vs-ncaa-in-attempt-to-play-in-2026-185654910.html",
+        "domain": "sports.yahoo.com"
+      },
+      {
+        "title": "Texas Tech's Brendan Sorsby files injunction, seeks eligibility",
+        "url": "https://espn.com/college-football/story/_/id/48808162/texas-tech-brendan-sorsby-files-injunction-seeks-eligibility",
+        "domain": "espn.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "athletes-culture",
+          "label": "Athletes & Culture",
+          "type": "topic"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "athletes-culture",
+        "topic_label": "Athletes & Culture",
+        "supported": true,
+        "matched_aliases": [
+          "athletes",
+          "athlete"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "Brendan Sorsby basketball photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "brendan",
+        "sorsby",
+        "basketball"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
