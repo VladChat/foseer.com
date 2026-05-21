@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-21T14:24:30.326Z",
+  "event_id": "evt-2026-05-21-companies-deals-earnings-global",
+  "cluster_id": "evt-2026-05-21-companies-deals-earnings-global",
+  "article_type": "report",
+  "title": "Crypto companies are trying to leave the hype cycle for a more disciplined phase, earnings show",
+  "slug": "crypto-firms-pivot-from-hype-to-discipline-as-earnings-reset",
+  "canonical_slug": "2026-05-21-crypto-firms-pivot-from-hype-to-discipline-as-earnings-reset",
+  "expected_url": "/article/2026-05-21-crypto-firms-pivot-from-hype-to-discipline-as-earnings-reset",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-21-crypto-firms-pivot-from-hype-to-discipline-as-earnings-reset.mdx",
+  "published_at": "2026-05-21T14:24:30.324Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "companies-deals",
+  "topic_label": "Companies & Deals",
+  "subsection": "Crypto companies are trying to leave the hype cycle for a more disciplined phase, earnings show",
+  "topics": [
+    "Crypto companies are trying to leave the hype cycle for a more disciplined phase, earnings show"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "jacob_ellis",
+    "author_name": "Jacob Ellis",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/crypto-bitcoin/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/crypto-bitcoin/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:crypto-bitcoin",
+    "alt_text": "Illustration for Crypto Firms Pivot From Hype to Discipline as Earnings Reset Expectations",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Hype crypto photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 65,
+    "asset_quality_score": 53,
+    "editorial_fit_score": 62,
+    "image_fit_score": 0.85,
+    "visual_concepts": [
+      "corporate",
+      "office building",
+      "business deal",
+      "crypto",
+      "firms",
+      "pivot"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.85,
+    "is_fallback": false
+  },
+  "tags": [
+    "Companies & Deals",
+    "Earnings",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Crypto companies are trying to leave the hype cycle for a more disciplined phase, earnings show",
+        "url": "https://cnbc.com/2026/05/20/crypto-is-trying-to-leave-the-hype-cycle-for-a-more-disciplined-phase.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "companies-deals",
+          "label": "Companies & Deals",
+          "type": "topic"
+        },
+        {
+          "slug": "earnings",
+          "label": "Earnings",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "companies-deals",
+        "topic_label": "Companies & Deals",
+        "supported": true,
+        "matched_aliases": [
+          "companies",
+          "earnings"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "Hype crypto photo",
+      "article_relevance_score": 65,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "hype",
+        "crypto"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
