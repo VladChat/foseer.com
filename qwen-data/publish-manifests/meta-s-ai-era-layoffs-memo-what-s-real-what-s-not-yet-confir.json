@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-21T16:51:03.260Z",
+  "event_id": "evt-2026-05-21-cybersecurity-general-global-meta",
+  "cluster_id": "evt-2026-05-21-cybersecurity-general-global-meta",
+  "article_type": "analysis",
+  "title": "Meta’s AI-era layoffs memo: what’s real, what’s not yet confirmed",
+  "slug": "meta-s-ai-era-layoffs-memo-what-s-real-what-s-not-yet-confir",
+  "canonical_slug": "2026-05-21-meta-s-ai-era-layoffs-memo-what-s-real-what-s-not-yet-confir",
+  "expected_url": "/article/2026-05-21-meta-s-ai-era-layoffs-memo-what-s-real-what-s-not-yet-confir",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-21-meta-s-ai-era-layoffs-memo-what-s-real-what-s-not-yet-confir.mdx",
+  "published_at": "2026-05-21T16:51:03.258Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Cybersecurity",
+  "topics": [
+    "Cybersecurity"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/housing-real-estate/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/housing-real-estate/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:housing-real-estate",
+    "alt_text": "Illustration for Meta’s AI-era layoffs memo: what’s real, what’s not yet confirmed",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Meta technology photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 68,
+    "asset_quality_score": 56,
+    "editorial_fit_score": 65,
+    "image_fit_score": 0.86,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "meta’s",
+      "layoffs",
+      "memo:"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.86,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Artificial Intelligence",
+    "Layoffs",
+    "Meta",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Zuckerberg's Meta layoffs memo: 'Success isn't a given' in the AI era",
+        "url": "https://www.cnbc.com/2026/05/20/meta-layoffs-zuckerberg-says-success-isnt-a-given-in-memo.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        },
+        {
+          "slug": "layoffs",
+          "label": "Layoffs",
+          "type": "theme"
+        },
+        {
+          "slug": "meta",
+          "label": "Meta",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "Meta technology photo",
+      "article_relevance_score": 68,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "meta"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
