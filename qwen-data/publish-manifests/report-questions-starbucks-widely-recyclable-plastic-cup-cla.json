@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-22T13:48:12.454Z",
+  "event_id": "evt-2026-05-20-economy-markets-general-global",
+  "cluster_id": "evt-2026-05-20-economy-markets-general-global",
+  "article_type": "report",
+  "title": "Starbucks does not recycle plastic cups it claims are ‘widely recyclable’, report says",
+  "slug": "report-questions-starbucks-widely-recyclable-plastic-cup-cla",
+  "canonical_slug": "2026-05-22-report-questions-starbucks-widely-recyclable-plastic-cup-cla",
+  "expected_url": "/article/2026-05-22-report-questions-starbucks-widely-recyclable-plastic-cup-cla",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-22-report-questions-starbucks-widely-recyclable-plastic-cup-cla.mdx",
+  "published_at": "2026-05-22T13:48:12.452Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Starbucks does not recycle plastic cups it claims are ‘widely recyclable’, report says",
+  "topics": [
+    "Starbucks does not recycle plastic cups it claims are ‘widely recyclable’, report says"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/o3ddgs0h6c/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/o3ddgs0h6c/cover.jpg",
+    "source_url": "https://unsplash.com/photos/two-white-starbucks-disposable-cups--O3DdgS0h6c",
+    "asset_key": "unsplash:-O3DdgS0h6c",
+    "alt_text": "two white starbucks disposable cups",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Starbucks photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "questions",
+      "starbucks’",
+      "‘widely"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Starbucks does not recycle plastic cups it claims are ‘widely recyclable’, report says",
+        "url": "https://www.theguardian.com/business/2026/may/20/starbucks-plastic-cups-recycling-report",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Starbucks photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "starbucks"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
