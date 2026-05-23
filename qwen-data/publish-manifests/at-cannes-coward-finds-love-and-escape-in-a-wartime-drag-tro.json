@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-23T12:13:10.440Z",
+  "event_id": "evt-2026-05-22-film-tv-general-global",
+  "cluster_id": "evt-2026-05-22-film-tv-general-global",
+  "article_type": "report",
+  "title": "Coward review – soldiers find escapism and romance in wartime theatrical troupe",
+  "slug": "at-cannes-coward-finds-love-and-escape-in-a-wartime-drag-tro",
+  "canonical_slug": "2026-05-23-at-cannes-coward-finds-love-and-escape-in-a-wartime-drag-tro",
+  "expected_url": "/article/2026-05-23-at-cannes-coward-finds-love-and-escape-in-a-wartime-drag-tro",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-23-at-cannes-coward-finds-love-and-escape-in-a-wartime-drag-tro.mdx",
+  "published_at": "2026-05-23T12:13:10.437Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "Coward review – soldiers find escapism and romance in wartime theatrical troupe",
+  "topics": [
+    "Coward review – soldiers find escapism and romance in wartime theatrical troupe"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/after-the-strike-the-danger-of-war-in-iran/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/after-the-strike-the-danger-of-war-in-iran/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:after-the-strike-the-danger-of-war-in-iran",
+    "alt_text": "Illustration for At Cannes, ‘Coward’ Finds Love and Escape in a Wartime Drag Troupe",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Coward film photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 59,
+    "editorial_fit_score": 17,
+    "image_fit_score": 0.57,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "cannes",
+      "‘coward’",
+      "finds"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.57,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Coward review – soldiers find escapism and romance in wartime theatrical troupe",
+        "url": "https://www.theguardian.com/film/2026/may/22/coward-review-soldiers-find-escapism-and-romance-in-wartime-theatrical-troupe",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": true,
+        "matched_aliases": [
+          "film"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "Coward film photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "coward",
+        "film"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

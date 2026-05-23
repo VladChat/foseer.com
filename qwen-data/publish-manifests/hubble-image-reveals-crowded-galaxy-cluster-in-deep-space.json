@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-23T12:13:36.615Z",
+  "event_id": "evt-2026-05-22-space-astronomy-general-global",
+  "cluster_id": "evt-2026-05-22-space-astronomy-general-global",
+  "article_type": "report",
+  "title": "Hubble Captures Galaxy Cluster",
+  "slug": "hubble-image-reveals-crowded-galaxy-cluster-in-deep-space",
+  "canonical_slug": "2026-05-23-hubble-image-reveals-crowded-galaxy-cluster-in-deep-space",
+  "expected_url": "/article/2026-05-23-hubble-image-reveals-crowded-galaxy-cluster-in-deep-space",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-23-hubble-image-reveals-crowded-galaxy-cluster-in-deep-space.mdx",
+  "published_at": "2026-05-23T12:13:36.613Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "Hubble Captures Galaxy Cluster",
+  "topics": [
+    "Hubble Captures Galaxy Cluster"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/century-s-new-democracy-meter-shows-america-took-a/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/century-s-new-democracy-meter-shows-america-took-a/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:century-s-new-democracy-meter-shows-america-took-a",
+    "alt_text": "Illustration for Hubble Image Reveals Crowded Galaxy Cluster in Deep Space",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Galaxy Cluster photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 38,
+    "asset_quality_score": 56,
+    "editorial_fit_score": 43,
+    "image_fit_score": 0.77,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "hubble",
+      "image",
+      "crowded"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.77,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Hubble Captures Galaxy Cluster",
+        "url": "https://science.nasa.gov/missions/hubble/hubble-captures-galaxy-cluster/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "Galaxy Cluster photo",
+      "article_relevance_score": 38,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "galaxy",
+        "cluster"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
