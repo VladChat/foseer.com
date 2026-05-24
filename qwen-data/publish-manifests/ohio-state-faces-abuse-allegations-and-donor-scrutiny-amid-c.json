@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-24T12:43:25.154Z",
+  "event_id": "evt-2026-05-24-us-politics-general-global",
+  "cluster_id": "evt-2026-05-24-us-politics-general-global",
+  "article_type": "report",
+  "title": "Ohio State reels from multiple scandals amid wider crisis in higher education",
+  "slug": "ohio-state-faces-abuse-allegations-and-donor-scrutiny-amid-c",
+  "canonical_slug": "2026-05-24-ohio-state-faces-abuse-allegations-and-donor-scrutiny-amid-c",
+  "expected_url": "/article/2026-05-24-ohio-state-faces-abuse-allegations-and-donor-scrutiny-amid-c",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-24-ohio-state-faces-abuse-allegations-and-donor-scrutiny-amid-c.mdx",
+  "published_at": "2026-05-24T12:43:25.152Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Ohio State reels from multiple scandals amid wider crisis in higher education",
+  "topics": [
+    "Ohio State reels from multiple scandals amid wider crisis in higher education"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/posts/latest-updates-and-breaking-news-from-india/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/latest-updates-and-breaking-news-from-india/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/golden-coins-on-map-background-29859663/",
+    "asset_key": "legacy:latest-updates-and-breaking-news-from-india",
+    "alt_text": "Illustration for Ohio State Faces Abuse Allegations and Donor Scrutiny Amid Campus Turmoil",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Ohio State medical photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 71,
+    "asset_quality_score": 70,
+    "editorial_fit_score": 71,
+    "image_fit_score": 0.88,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "state",
+      "faces",
+      "abuse"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.88,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Ohio State reels from multiple scandals amid wider crisis in higher education",
+        "url": "https://www.theguardian.com/us-news/2026/may/24/ohio-state-university-scandals",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: U.S. Politics & Policy",
+      "Primary topic_id unsupported by article evidence: us-politics"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Ohio State medical photo",
+      "article_relevance_score": 71,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "ohio",
+        "state",
+        "medical"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
