@@ -1,0 +1,127 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-25T14:20:44.221Z",
+  "event_id": "evt-2026-05-25-space-astronomy-general-global-china-amazon",
+  "cluster_id": "evt-2026-05-25-space-astronomy-general-global-china-amazon",
+  "article_type": "report",
+  "title": "China launches spacecraft with astronaut set to remain in space for a year",
+  "slug": "china-sends-shenzhou-23-crew-to-space-station-for-yearlong-s",
+  "canonical_slug": "2026-05-25-china-sends-shenzhou-23-crew-to-space-station-for-yearlong-s",
+  "expected_url": "/article/2026-05-25-china-sends-shenzhou-23-crew-to-space-station-for-yearlong-s",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-25-china-sends-shenzhou-23-crew-to-space-station-for-yearlong-s.mdx",
+  "published_at": "2026-05-25T14:20:44.219Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "China launches spacecraft with astronaut set to remain in space for a year",
+  "topics": [
+    "China launches spacecraft with astronaut set to remain in space for a year"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/posts/we-re-buying-more-of-this-cybersecurity-stock-as-the-market-/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/we-re-buying-more-of-this-cybersecurity-stock-as-the-market-/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/person-standing-inside-building-2574091/",
+    "asset_key": "legacy:we-re-buying-more-of-this-cybersecurity-stock-as-the-market-",
+    "alt_text": "Illustration for China Sends Shenzhou 23 Crew to Space Station for Yearlong Stay",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "China photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 82,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "china",
+      "sends",
+      "shenzhou"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "China",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "China launches spacecraft with astronaut set to remain in space for a year",
+        "url": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-roscosmos-spacewalk-outside-space-station-2/",
+        "domain": "nasa.gov"
+      },
+      {
+        "title": "China launches spacecraft with astronaut set to remain in space for a year",
+        "url": "https://www.cbsnews.com/news/china-launches-shenzhou-spacecraft-astronauts/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "china",
+          "label": "China",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "China photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "china"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

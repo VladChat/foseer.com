@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-25T14:20:57.271Z",
+  "event_id": "evt-2026-05-25-major-leagues-general-global-nba",
+  "cluster_id": "evt-2026-05-25-major-leagues-general-global-nba",
+  "article_type": "report",
+  "title": "Victor Wembanyama’s half-court buzzer beater showcased a master in complete control",
+  "slug": "victor-wembanyama-s-half-court-heave-signals-a-star-in-full-",
+  "canonical_slug": "2026-05-25-victor-wembanyama-s-half-court-heave-signals-a-star-in-full",
+  "expected_url": "/article/2026-05-25-victor-wembanyama-s-half-court-heave-signals-a-star-in-full",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-25-victor-wembanyama-s-half-court-heave-signals-a-star-in-full.mdx",
+  "published_at": "2026-05-25T14:20:57.269Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Victor Wembanyama’s half-court buzzer beater showcased a master in complete control",
+  "topics": [
+    "Victor Wembanyama’s half-court buzzer beater showcased a master in complete control"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/posts/trump-announces-major-combat-operations-against-iran/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/trump-announces-major-combat-operations-against-iran/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/man-speaking-during-an-eu-conference-6950143/",
+    "asset_key": "legacy:trump-announces-major-combat-operations-against-iran",
+    "alt_text": "Illustration for Victor Wembanyama’s Half-Court Heave Signals a Star in Full Command",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Victor basketball photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 88,
+    "editorial_fit_score": 30,
+    "image_fit_score": 0.62,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "victor",
+      "wembanyama’s",
+      "court"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.62,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Victor Wembanyama’s half-court buzzer beater showcased a master in complete control",
+        "url": "https://www.theguardian.com/sport/2026/may/25/victor-wembanyama-spurs-thunder-nba-playoffs",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "nba",
+          "basketball"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Victor basketball photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "victor"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
