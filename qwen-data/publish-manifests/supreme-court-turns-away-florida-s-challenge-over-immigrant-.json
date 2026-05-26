@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-26T17:36:57.329Z",
+  "event_id": "evt-2026-05-26-us-politics-general-global-supreme-court-google",
+  "cluster_id": "evt-2026-05-26-us-politics-general-global-supreme-court-google",
+  "article_type": "analysis",
+  "title": "Supreme Court turns away Florida’s challenge over immigrant truck drivers",
+  "slug": "supreme-court-turns-away-florida-s-challenge-over-immigrant-",
+  "canonical_slug": "2026-05-26-supreme-court-turns-away-florida-s-challenge-over-immigrant",
+  "expected_url": "/article/2026-05-26-supreme-court-turns-away-florida-s-challenge-over-immigrant",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-26-supreme-court-turns-away-florida-s-challenge-over-immigrant.mdx",
+  "published_at": "2026-05-26T17:36:57.327Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/36623409/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/36623409/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/united-states-supreme-court-building-in-black-and-white-36623409/",
+    "asset_key": "pexels:36623409",
+    "alt_text": "Classic view of the US Supreme Court building in Washington, D.C., highlighting neoclassical architecture.",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Supreme Court football photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 99,
+    "image_fit_score": 0.9,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "supreme",
+      "court",
+      "turns"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.9,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Supreme Court",
+    "Florida",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Supreme Court rejects Florida suit against other states over immigrant truck drivers",
+        "url": "https://www.cbsnews.com/news/supreme-court-florida-lawsuit-california-washington-immigrant-truck-drivers/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "Supreme Court rejects NFL's bid to step into coach's racial discrimination suit",
+        "url": "https://www.cbsnews.com/news/supreme-court-nfl-brian-flores-lawsuit/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "florida",
+          "label": "Florida",
+          "type": "geography"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Supreme Court football photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "supreme",
+        "court"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
