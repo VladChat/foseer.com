@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-26T14:14:45.934Z",
+  "event_id": "evt-2026-05-26-space-astronomy-general-global",
+  "cluster_id": "evt-2026-05-26-space-astronomy-general-global",
+  "article_type": "report",
+  "title": "New Instrument Used Antarctic Ice Sheet to Probe Extreme Universe",
+  "slug": "how-an-antarctic-balloon-is-listening-for-the-universe-s-mos",
+  "canonical_slug": "2026-05-26-how-an-antarctic-balloon-is-listening-for-the-universe-s-mos",
+  "expected_url": "/article/2026-05-26-how-an-antarctic-balloon-is-listening-for-the-universe-s-mos",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-26-how-an-antarctic-balloon-is-listening-for-the-universe-s-mos.mdx",
+  "published_at": "2026-05-26T14:14:45.933Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "New Instrument Used Antarctic Ice Sheet to Probe Extreme Universe",
+  "topics": [
+    "New Instrument Used Antarctic Ice Sheet to Probe Extreme Universe"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/posts/markwayne-mullin-confirmed-as-the-next-secretary-of-homeland/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/markwayne-mullin-confirmed-as-the-next-secretary-of-homeland/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/serious-policeman-standing-near-car-4496624/",
+    "asset_key": "legacy:markwayne-mullin-confirmed-as-the-next-secretary-of-homeland",
+    "alt_text": "Illustration for How an Antarctic Balloon Is Listening for the Universe’s Most Extreme Particles",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Ice Sheet photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 82,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "antarctic",
+      "balloon",
+      "listening"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "New Instrument Used Antarctic Ice Sheet to Probe Extreme Universe",
+        "url": "https://science.nasa.gov/science-research/science-enabling-technology/technology-highlights/new-instrument-used-antarctic-ice-sheet-to-probe-extreme-universe/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Ice Sheet photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "ice",
+        "sheet"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

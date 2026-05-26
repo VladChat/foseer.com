@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-26T14:14:26.788Z",
+  "event_id": "evt-2026-05-26-us-politics-general-global-supreme-court-nfl",
+  "cluster_id": "evt-2026-05-26-us-politics-general-global-supreme-court-nfl",
+  "article_type": "report",
+  "title": "Supreme Court rejects NFL's bid to step into coach's racial discrimination suit",
+  "slug": "supreme-court-lets-brian-flores-discrimination-case-proceed-",
+  "canonical_slug": "2026-05-26-supreme-court-lets-brian-flores-discrimination-case-proceed",
+  "expected_url": "/article/2026-05-26-supreme-court-lets-brian-flores-discrimination-case-proceed",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-26-supreme-court-lets-brian-flores-discrimination-case-proceed.mdx",
+  "published_at": "2026-05-26T14:14:26.786Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Supreme Court rejects NFL's bid to step into coach's racial discrimination suit",
+  "topics": [
+    "Supreme Court rejects NFL's bid to step into coach's racial discrimination suit"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/5022609/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/5022609/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/white-and-brown-boat-on-water-5022609/",
+    "asset_key": "pexels:5022609",
+    "alt_text": "Illustration for Supreme Court Lets Brian Flores’ Discrimination Case Proceed Against NFL",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Supreme Court football photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 82,
+    "asset_quality_score": 95,
+    "editorial_fit_score": 86,
+    "image_fit_score": 0.94,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "supreme",
+      "court",
+      "brian"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.94,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Supreme Court",
+    "NFL",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Supreme Court rejects NFL's bid to step into coach's racial discrimination suit",
+        "url": "https://www.cbsnews.com/news/supreme-court-nfl-brian-flores-lawsuit/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: U.S. Politics & Policy",
+      "Primary topic_id unsupported by article evidence: us-politics"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "nfl",
+          "label": "NFL",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Supreme Court football photo",
+      "article_relevance_score": 82,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "supreme",
+        "court"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

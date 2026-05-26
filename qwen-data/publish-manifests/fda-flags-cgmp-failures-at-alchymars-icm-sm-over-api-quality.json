@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-26T14:15:05.146Z",
+  "event_id": "evt-2026-05-26-pharma-fda-general-global",
+  "cluster_id": "evt-2026-05-26-pharma-fda-general-global",
+  "article_type": "report",
+  "title": "Alchymars ICM SM Private Limited",
+  "slug": "fda-flags-cgmp-failures-at-alchymars-icm-sm-over-api-quality",
+  "canonical_slug": "2026-05-26-fda-flags-cgmp-failures-at-alchymars-icm-sm-over-api-quality",
+  "expected_url": "/article/2026-05-26-fda-flags-cgmp-failures-at-alchymars-icm-sm-over-api-quality",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-26-fda-flags-cgmp-failures-at-alchymars-icm-sm-over-api-quality.mdx",
+  "published_at": "2026-05-26T14:15:05.145Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Alchymars ICM SM Private Limited",
+  "topics": [
+    "Alchymars ICM SM Private Limited"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/6634126/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/6634126/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/letters-on-yellow-studio-background-6634126/",
+    "asset_key": "pexels:6634126",
+    "alt_text": "Illustration for FDA Flags CGMP Failures at Alchymars ICM SM Over API Quality",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Alchymars ICM SM medical photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 26,
+    "asset_quality_score": 93,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "flags",
+      "failures",
+      "alchymars"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Alchymars ICM SM Private Limited",
+        "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/alchymars-icm-sm-private-limited-724429-05212026",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Alchymars ICM SM medical photo",
+      "article_relevance_score": 26,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "alchymars",
+        "icm"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
