@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-27T14:38:57.362Z",
+  "event_id": "evt-2026-05-26-events-tournaments-general-global-supreme-court-nfl",
+  "cluster_id": "evt-2026-05-26-events-tournaments-general-global-supreme-court-nfl",
+  "article_type": "report",
+  "title": "Enhanced Games athletes chase dreams amid event's drugs, money and hype",
+  "slug": "at-the-first-enhanced-games-dreams-collide-with-drugs-and-do",
+  "canonical_slug": "2026-05-27-at-the-first-enhanced-games-dreams-collide-with-drugs-and-do",
+  "expected_url": "/article/2026-05-27-at-the-first-enhanced-games-dreams-collide-with-drugs-and-do",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-27-at-the-first-enhanced-games-dreams-collide-with-drugs-and-do.mdx",
+  "published_at": "2026-05-27T14:38:57.360Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "athletes-culture",
+  "topic_label": "Athletes & Culture",
+  "subsection": "Enhanced Games athletes chase dreams amid event's drugs, money and hype",
+  "topics": [
+    "Enhanced Games athletes chase dreams amid event's drugs, money and hype"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/35415702/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/35415702/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/outdoor-basketball-hoop-with-blue-sky-background-35415702/",
+    "asset_key": "pexels:35415702",
+    "alt_text": "Illustration for At the First Enhanced Games, Dreams Collide With Drugs and Dollars",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Enhanced Games medical photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "athlete portrait",
+      "sports culture",
+      "fans",
+      "enhanced",
+      "games",
+      "dreams"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Athletes & Culture",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Enhanced Games athletes chase dreams amid event's drugs, money and hype",
+        "url": "https://www.washingtonpost.com/sports/2026/05/25/enhanced-games-athletes-chase-dreams-amid-event-drugs-money-hype/",
+        "domain": "washingtonpost.com"
+      },
+      {
+        "title": "Clean Athletes Stole the Show at the Enhanced Games",
+        "url": "https://frontofficesports.com/clean-athletes-stole-the-show-at-the-enhanced-games/",
+        "domain": "frontofficesports.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "athletes-culture",
+          "label": "Athletes & Culture",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "athletes-culture",
+        "topic_label": "Athletes & Culture",
+        "supported": true,
+        "matched_aliases": [
+          "athletes"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Enhanced Games medical photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "enhanced",
+        "games"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
