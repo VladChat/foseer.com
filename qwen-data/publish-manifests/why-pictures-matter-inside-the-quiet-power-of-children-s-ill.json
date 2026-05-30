@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-30T15:36:15.163Z",
+  "event_id": "evt-2026-05-30-film-tv-general-global",
+  "cluster_id": "evt-2026-05-30-film-tv-general-global",
+  "article_type": "analysis",
+  "title": "Why Pictures Matter: Inside the Quiet Power of Children’s Illustration",
+  "slug": "why-pictures-matter-inside-the-quiet-power-of-children-s-ill",
+  "canonical_slug": "2026-05-30-why-pictures-matter-inside-the-quiet-power-of-children-s-ill",
+  "expected_url": "/article/2026-05-30-why-pictures-matter-inside-the-quiet-power-of-children-s-ill",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-30-why-pictures-matter-inside-the-quiet-power-of-children-s-ill.mdx",
+  "published_at": "2026-05-30T15:36:15.161Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "public-health",
+  "topic_label": "Public Health",
+  "subsection": "Film & TV",
+  "topics": [
+    "Film & TV"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/36757481/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/36757481/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/night-portrait-of-woman-listening-to-music-in-baku-36757481/",
+    "asset_key": "pexels:36757481",
+    "alt_text": "Woman with headphones on a serene night by the water in Baku, Azerbaijan.",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Pictures Matter Inside the Quiet electricity photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.18,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "pictures",
+      "matter:",
+      "inside"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.18,
+    "is_fallback": false
+  },
+  "tags": [
+    "Public Health",
+    "Pediatric Care",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "‘I am very serious about being silly’: children’s illustrators on the art of storytelling",
+        "url": "https://www.theguardian.com/books/2026/may/30/i-am-very-serious-about-being-silly-childrens-illustrators-on-the-art-of-storytelling",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "‘I am very serious about being silly’: children’s illustrators on the art of storytelling",
+          "url": "https://www.theguardian.com/books/2026/may/30/i-am-very-serious-about-being-silly-childrens-illustrators-on-the-art-of-storytelling",
+          "overlap_ratio": 0.17,
+          "shared_tokens": [
+            "children"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "public-health",
+          "label": "Public Health",
+          "type": "topic"
+        },
+        {
+          "slug": "pediatric-care",
+          "label": "Pediatric Care",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "public-health",
+        "topic_label": "Public Health",
+        "supported": true,
+        "matched_aliases": [
+          "Public Health"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Pictures Matter Inside the Quiet electricity photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "pictures",
+        "matter",
+        "inside",
+        "quiet"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
