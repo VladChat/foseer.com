@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-31T12:57:48.471Z",
+  "event_id": "evt-2026-05-29-space-astronomy-general-global",
+  "cluster_id": "evt-2026-05-29-space-astronomy-general-global",
+  "article_type": "report",
+  "title": "NASA’s Roman Space Telescope Primary Mirror Gets Last Look",
+  "slug": "nasa-gives-roman-telescope-s-primary-mirror-a-final-inspecti",
+  "canonical_slug": "2026-05-31-nasa-gives-roman-telescope-s-primary-mirror-a-final-inspecti",
+  "expected_url": "/article/2026-05-31-nasa-gives-roman-telescope-s-primary-mirror-a-final-inspecti",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-31-nasa-gives-roman-telescope-s-primary-mirror-a-final-inspecti.mdx",
+  "published_at": "2026-05-31T12:57:48.469Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "NASA’s Roman Space Telescope Primary Mirror Gets Last Look",
+  "topics": [
+    "NASA’s Roman Space Telescope Primary Mirror Gets Last Look"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/5073493/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/5073493/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/cables-plugged-into-patch-panel-5073493/",
+    "asset_key": "pexels:5073493",
+    "alt_text": "Illustration for NASA Gives Roman Telescope’s Primary Mirror a Final Inspection",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Primary Mirror photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 92,
+    "editorial_fit_score": 26,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "gives",
+      "roman",
+      "telescope’s"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "NASA",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "NASA’s Roman Space Telescope Primary Mirror Gets Last Look",
+        "url": "https://www.nasa.gov/missions/roman-space-telescope/nasas-roman-space-telescope-primary-mirror-gets-last-look/",
+        "domain": "nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "nasa",
+          "label": "NASA",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Primary Mirror photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "primary",
+        "mirror"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

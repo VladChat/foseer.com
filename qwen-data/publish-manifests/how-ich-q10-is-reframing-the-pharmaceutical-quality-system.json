@@ -1,0 +1,137 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-31T12:57:34.272Z",
+  "event_id": "evt-2026-05-29-pharma-fda-general-global",
+  "cluster_id": "evt-2026-05-29-pharma-fda-general-global",
+  "article_type": "report",
+  "title": "Q10 Pharmaceutical Quality System",
+  "slug": "how-ich-q10-is-reframing-the-pharmaceutical-quality-system",
+  "canonical_slug": "2026-05-31-how-ich-q10-is-reframing-the-pharmaceutical-quality-system",
+  "expected_url": "/article/2026-05-31-how-ich-q10-is-reframing-the-pharmaceutical-quality-system",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-31-how-ich-q10-is-reframing-the-pharmaceutical-quality-system.mdx",
+  "published_at": "2026-05-31T12:57:34.270Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Q10 Pharmaceutical Quality System",
+  "topics": [
+    "Q10 Pharmaceutical Quality System"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/27834232/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/27834232/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/a-mountain-with-a-green-hill-and-trees-27834232/",
+    "asset_key": "pexels:27834232",
+    "alt_text": "Illustration for How ICH Q10 Is Reframing the Pharmaceutical Quality System",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Pharmaceutical Quality System medical photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 32,
+    "image_fit_score": 0.73,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "reframing",
+      "quality"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.18,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Q10 Pharmaceutical Quality System",
+        "url": "http://www.fda.gov/regulatory-information/search-fda-guidance-documents/q10-pharmaceutical-quality-system",
+        "domain": "fda.gov"
+      },
+      {
+        "title": "Q9(R1) Quality Risk Management",
+        "url": "http://www.fda.gov/regulatory-information/search-fda-guidance-documents/q9r1-quality-risk-management",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Q9(R1) Quality Risk Management",
+          "url": "http://www.fda.gov/regulatory-information/search-fda-guidance-documents/q9r1-quality-risk-management",
+          "overlap_ratio": 0.17,
+          "shared_tokens": [
+            "quality"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Pharmaceutical Quality System medical photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "pharmaceutical",
+        "quality",
+        "system"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

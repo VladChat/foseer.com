@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-31T12:58:00.696Z",
+  "event_id": "evt-2026-05-31-us-politics-general-us-congress",
+  "cluster_id": "evt-2026-05-31-us-politics-general-us-congress",
+  "article_type": "report",
+  "title": "The doctor who came back from Gaza and is leading a New Jersey congressional race",
+  "slug": "doctor-back-from-gaza-emerges-as-frontrunner-in-new-jersey-h",
+  "canonical_slug": "2026-05-31-doctor-back-from-gaza-emerges-as-frontrunner-in-new-jersey-h",
+  "expected_url": "/article/2026-05-31-doctor-back-from-gaza-emerges-as-frontrunner-in-new-jersey-h",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-31-doctor-back-from-gaza-emerges-as-frontrunner-in-new-jersey-h.mdx",
+  "published_at": "2026-05-31T12:58:00.694Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "The doctor who came back from Gaza and is leading a New Jersey congressional race",
+  "topics": [
+    "The doctor who came back from Gaza and is leading a New Jersey congressional race"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/2930214/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/2930214/cover.jpg",
+    "source_url": "https://pixabay.com/photos/cottage-house-red-cottage-croft-2930214/",
+    "asset_key": "pixabay:2930214",
+    "alt_text": "Illustration for Doctor back from Gaza emerges as frontrunner in New Jersey House race",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "New Jersey medical photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "diplomacy",
+      "international",
+      "summit",
+      "doctor",
+      "emerges",
+      "frontrunner"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "WHO",
+    "Gaza",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "The doctor who came back from Gaza and is leading a New Jersey congressional race",
+        "url": "https://www.theguardian.com/us-news/2026/may/31/new-jersey-congress-adam-hamawy",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "who",
+          "label": "WHO",
+          "type": "entity"
+        },
+        {
+          "slug": "gaza",
+          "label": "Gaza",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "gaza"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "New Jersey medical photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "jersey",
+        "medical"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
