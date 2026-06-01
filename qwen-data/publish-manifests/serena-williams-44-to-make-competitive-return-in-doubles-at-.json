@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-01T17:02:14.506Z",
+  "event_id": "evt-2026-06-01-major-leagues-general-global",
+  "cluster_id": "evt-2026-06-01-major-leagues-general-global",
+  "article_type": "report",
+  "title": "Serena Williams confirms her tennis comeback at Queen’s next week aged 44",
+  "slug": "serena-williams-44-to-make-competitive-return-in-doubles-at-",
+  "canonical_slug": "2026-06-01-serena-williams-44-to-make-competitive-return-in-doubles-at",
+  "expected_url": "/article/2026-06-01-serena-williams-44-to-make-competitive-return-in-doubles-at",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-01-serena-williams-44-to-make-competitive-return-in-doubles-at.mdx",
+  "published_at": "2026-06-01T17:02:14.503Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "athletes-culture",
+  "topic_label": "Athletes & Culture",
+  "subsection": "Serena Williams confirms her tennis comeback at Queen’s next week aged 44",
+  "topics": [
+    "Serena Williams confirms her tennis comeback at Queen’s next week aged 44"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/aytvc9yptpo/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/aytvc9yptpo/cover.jpg",
+    "source_url": "https://unsplash.com/photos/group-of-women-holding-black-and-white-banner-aytvc9YPtpo",
+    "asset_key": "unsplash:aytvc9YPtpo",
+    "alt_text": "Illustration for Serena Williams, 44, to Make Competitive Return in Doubles at Queen’s",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Serena Williams courtroom photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 41,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 57,
+    "image_fit_score": 0.73,
+    "visual_concepts": [
+      "athlete portrait",
+      "sports culture",
+      "fans",
+      "serena",
+      "williams",
+      "competitive"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.73,
+    "is_fallback": false
+  },
+  "tags": [
+    "Athletes & Culture",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Serena Williams confirms her tennis comeback at Queen’s next week aged 44",
+        "url": "https://www.theguardian.com/sport/2026/jun/01/serena-williams-comeback-aged-44-queens-club-london-doubles-victoria-mboko",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Serena making comeback to professional tennis",
+        "url": "https://www.espn.com/tennis/story/_/id/48938711/serena-williams-announces-comeback-professional-tennis",
+        "domain": "espn.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Serena making comeback to professional tennis",
+          "url": "https://www.espn.com/tennis/story/_/id/48938711/serena-williams-announces-comeback-professional-tennis",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "serena"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "athletes-culture",
+          "label": "Athletes & Culture",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "athletes-culture",
+        "topic_label": "Athletes & Culture",
+        "supported": true,
+        "matched_aliases": [
+          "athletes"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Serena Williams courtroom photo",
+      "article_relevance_score": 41,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "serena",
+        "williams"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

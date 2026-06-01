@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-01T17:02:37.675Z",
+  "event_id": "evt-2026-06-01-news-general-global",
+  "cluster_id": "evt-2026-06-01-news-general-global",
+  "article_type": "report",
+  "title": "Ofcom to investigate complaints of climate change denial",
+  "slug": "ofcom-to-examine-complaints-over-climate-change-denial-conte",
+  "canonical_slug": "2026-06-01-ofcom-to-examine-complaints-over-climate-change-denial-conte",
+  "expected_url": "/article/2026-06-01-ofcom-to-examine-complaints-over-climate-change-denial-conte",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-01-ofcom-to-examine-complaints-over-climate-change-denial-conte.mdx",
+  "published_at": "2026-06-01T17:02:37.673Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "climate-extreme-weather",
+  "topic_label": "Climate & Extreme Weather",
+  "subsection": "Ofcom to investigate complaints of climate change denial",
+  "topics": [
+    "Ofcom to investigate complaints of climate change denial"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/a0yymz4eeku/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/a0yymz4eeku/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-in-black-crew-neck-shirt-wearing-black-framed-eyeglasses-A0yymZ4eEkU",
+    "asset_key": "unsplash:A0yymZ4eEkU",
+    "alt_text": "Illustration for Ofcom to Examine Complaints Over Climate Change Denial Content",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Ofcom climate photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "extreme weather",
+      "storm",
+      "climate",
+      "ofcom",
+      "examine",
+      "complaints"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Climate & Extreme Weather",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Ofcom to investigate complaints of climate change denial",
+        "url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+        "domain": "wattsupwiththat.com"
+      },
+      {
+        "title": "S.E.C. Proposes to Kill Climate Change Disclosure Rule",
+        "url": "https://www.nytimes.com/2026/05/29/climate/sec-climate-disclosure-rule.html",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "climate-extreme-weather",
+        "topic_label": "Climate & Extreme Weather",
+        "supported": true,
+        "matched_aliases": [
+          "climate",
+          "warming"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Ofcom climate photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "ofcom",
+        "climate"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
