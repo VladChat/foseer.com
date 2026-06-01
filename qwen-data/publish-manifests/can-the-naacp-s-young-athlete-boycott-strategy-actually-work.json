@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-01T19:26:03.872Z",
+  "event_id": "evt-2026-06-01-sports-general-global-nba",
+  "cluster_id": "evt-2026-06-01-sports-general-global-nba",
+  "article_type": "analysis",
+  "title": "Can the NAACP’s Young‑Athlete Boycott Strategy Actually Work?",
+  "slug": "can-the-naacp-s-young-athlete-boycott-strategy-actually-work",
+  "canonical_slug": "2026-06-01-can-the-naacp-s-young-athlete-boycott-strategy-actually-work",
+  "expected_url": "/article/2026-06-01-can-the-naacp-s-young-athlete-boycott-strategy-actually-work",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-01-can-the-naacp-s-young-athlete-boycott-strategy-actually-work.mdx",
+  "published_at": "2026-06-01T19:26:03.870Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "athletes-culture",
+  "topic_label": "Athletes & Culture",
+  "subsection": "Transfers & Business",
+  "topics": [
+    "Transfers & Business"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "jacob_ellis",
+    "author_name": "Jacob Ellis",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/36442460/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/36442460/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/group-of-young-men-in-suits-outdoors-36442460/",
+    "asset_key": "pexels:36442460",
+    "alt_text": "Five young men in suits stand together outdoors, looking confident and stylish.",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "NAACP photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 91,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 94,
+    "image_fit_score": 0.48,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "naacp’s",
+      "young‑athlete",
+      "boycott"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.27,
+    "is_fallback": false
+  },
+  "tags": [
+    "Athletes & Culture",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Don’t underestimate young athletes — the NAACP boycott plan could actually work",
+        "url": "https://nytimes.com/athletic/7320545/2026/06/01/naacp-boycott-black-recruits-sec",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "How Young Athletes Struggle for Identity Beyond Sports",
+        "url": "https://psychologytoday.com/au/blog/sport-between-the-ears/202605/how-young-athletes-struggle-for-identity-beyond-sports",
+        "domain": "psychologytoday.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "How Young Athletes Struggle for Identity Beyond Sports",
+          "url": "https://psychologytoday.com/au/blog/sport-between-the-ears/202605/how-young-athletes-struggle-for-identity-beyond-sports",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "young"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "athletes-culture",
+          "label": "Athletes & Culture",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "athletes-culture",
+        "topic_label": "Athletes & Culture",
+        "supported": true,
+        "matched_aliases": [
+          "athletes",
+          "athlete"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "NAACP photo",
+      "article_relevance_score": 91,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "naacp"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
