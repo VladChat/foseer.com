@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-02T18:12:04.340Z",
+  "event_id": "evt-2026-06-02-crypto-bitcoin-general-global",
+  "cluster_id": "evt-2026-06-02-crypto-bitcoin-general-global",
+  "article_type": "analysis",
+  "title": "S&P 500, Nasdaq Slip From Records as HPE Surges on Strong Results",
+  "slug": "s-p-500-nasdaq-slip-from-records-as-hpe-surges-on-strong-res",
+  "canonical_slug": "2026-06-02-s-p-500-nasdaq-slip-from-records-as-hpe-surges-on-strong-res",
+  "expected_url": "/article/2026-06-02-s-p-500-nasdaq-slip-from-records-as-hpe-surges-on-strong-res",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-02-s-p-500-nasdaq-slip-from-records-as-hpe-surges-on-strong-res.mdx",
+  "published_at": "2026-06-02T18:12:04.338Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Crypto",
+  "topics": [
+    "Crypto"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "ava_mitchell",
+    "author_name": "Ava Mitchell",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/6770610/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/6770610/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/multiple-graphs-on-a-laptop-screen-6770610/",
+    "asset_key": "pexels:6770610",
+    "alt_text": "Illustration for S&P 500, Nasdaq Slip From Records as HPE Surges on Strong Results",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Nasdaq crypto photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 23,
+    "asset_quality_score": 95,
+    "editorial_fit_score": 43,
+    "image_fit_score": 0.77,
+    "visual_concepts": [
+      "cryptocurrency",
+      "bitcoin",
+      "blockchain",
+      "nasdaq",
+      "records",
+      "surges"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.77,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "S&P 500, Nasdaq dip after record highs; HPE soars",
+        "url": "https://www.reuters.com/business/wall-street-futures-tick-lower-after-record-highs-hpe-soars-2026-06-02/",
+        "domain": "reuters.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets",
+          "market",
+          "stocks"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Nasdaq crypto photo",
+      "article_relevance_score": 23,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "nasdaq"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
