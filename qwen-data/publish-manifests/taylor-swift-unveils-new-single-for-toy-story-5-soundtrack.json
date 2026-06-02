@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-02T15:42:06.723Z",
+  "event_id": "evt-2026-06-01-film-tv-general-global",
+  "cluster_id": "evt-2026-06-01-film-tv-general-global",
+  "article_type": "report",
+  "title": "Taylor Swift announces new single for Toy Story 5 soundtrack",
+  "slug": "taylor-swift-unveils-new-single-for-toy-story-5-soundtrack",
+  "canonical_slug": "2026-06-02-taylor-swift-unveils-new-single-for-toy-story-5-soundtrack",
+  "expected_url": "/article/2026-06-02-taylor-swift-unveils-new-single-for-toy-story-5-soundtrack",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-02-taylor-swift-unveils-new-single-for-toy-story-5-soundtrack.mdx",
+  "published_at": "2026-06-02T15:42:06.721Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "Taylor Swift announces new single for Toy Story 5 soundtrack",
+  "topics": [
+    "Taylor Swift announces new single for Toy Story 5 soundtrack"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/yb8hflmgcz8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/yb8hflmgcz8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-man-in-a-black-leather-jacket-and-glasses-yb8hFlMGcZ8",
+    "asset_key": "unsplash:yb8hFlMGcZ8",
+    "alt_text": "Illustration for Taylor Swift unveils new single for Toy Story 5 soundtrack",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Taylor Swift concert photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 15,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 39,
+    "image_fit_score": 0.76,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "taylor",
+      "swift",
+      "unveils"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.76,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Taylor Swift announces new single for Toy Story 5 soundtrack",
+        "url": "https://www.theguardian.com/music/2026/jun/01/taylor-swift-toy-story-5-song-soundtrack",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": true,
+        "matched_aliases": [
+          "film"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Taylor Swift concert photo",
+      "article_relevance_score": 15,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "taylor",
+        "swift"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

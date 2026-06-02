@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-02T15:42:24.345Z",
+  "event_id": "evt-2026-06-01-us-politics-general-global",
+  "cluster_id": "evt-2026-06-01-us-politics-general-global",
+  "article_type": "report",
+  "title": "Divided appeals court rules transgender military ban is unconstitutional",
+  "slug": "divided-appeals-court-finds-transgender-military-ban-likely-",
+  "canonical_slug": "2026-06-02-divided-appeals-court-finds-transgender-military-ban-likely",
+  "expected_url": "/article/2026-06-02-divided-appeals-court-finds-transgender-military-ban-likely",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-02-divided-appeals-court-finds-transgender-military-ban-likely.mdx",
+  "published_at": "2026-06-02T15:42:24.344Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Divided appeals court rules transgender military ban is unconstitutional",
+  "topics": [
+    "Divided appeals court rules transgender military ban is unconstitutional"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/8850737/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/8850737/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/red-and-blue-notebook-beside-american-flag-8850737/",
+    "asset_key": "pexels:8850737",
+    "alt_text": "Illustration for Divided Appeals Court Finds Transgender Military Ban Likely Unconstitutional",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Transgender Military courtroom photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 94,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 95,
+    "image_fit_score": 0.98,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "divided",
+      "appeals",
+      "court"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.98,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Divided appeals court rules transgender military ban is unconstitutional",
+        "url": "https://www.cbsnews.com/news/trump-transgender-military-ban-appeals-court-unconstitutional/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: U.S. Politics & Policy",
+      "Primary topic_id unsupported by article evidence: us-politics"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Transgender Military courtroom photo",
+      "article_relevance_score": 94,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "transgender",
+        "military"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
