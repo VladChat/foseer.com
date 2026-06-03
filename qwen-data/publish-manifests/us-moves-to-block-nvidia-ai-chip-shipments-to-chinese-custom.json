@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-03T16:00:44.032Z",
+  "event_id": "evt-2026-06-02-tech-general-china-nvidia-china",
+  "cluster_id": "evt-2026-06-02-tech-general-china-nvidia-china",
+  "article_type": "report",
+  "title": "US takes step to halt Nvidia AI chip shipments to Chinese ...",
+  "slug": "us-moves-to-block-nvidia-ai-chip-shipments-to-chinese-custom",
+  "canonical_slug": "2026-06-03-us-moves-to-block-nvidia-ai-chip-shipments-to-chinese-custom",
+  "expected_url": "/article/2026-06-03-us-moves-to-block-nvidia-ai-chip-shipments-to-chinese-custom",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-03-us-moves-to-block-nvidia-ai-chip-shipments-to-chinese-custom.mdx",
+  "published_at": "2026-06-03T16:00:44.030Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "US takes step to halt Nvidia AI chip shipments to Chinese ...",
+  "topics": [
+    "US takes step to halt Nvidia AI chip shipments to Chinese ..."
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/16461434/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/16461434/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/close-up-of-a-person-holding-a-smartphone-displaying-chatgpt-16461434/",
+    "asset_key": "pexels:16461434",
+    "alt_text": "Illustration for US moves to block Nvidia AI chip shipments to Chinese customers",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Nvidia AI technology photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 42,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 58,
+    "image_fit_score": 0.83,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "moves",
+      "block",
+      "nvidia"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.83,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Artificial Intelligence",
+    "Nvidia",
+    "United States",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "US takes step to halt Nvidia AI chip shipments to Chinese ...",
+        "url": "https://www.reuters.com/world/china/us-takes-step-halt-nvidia-ai-chip-shipments-chinese-firms-outside-china-2026-05-31/",
+        "domain": "reuters.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        },
+        {
+          "slug": "nvidia",
+          "label": "Nvidia",
+          "type": "entity"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Nvidia AI technology photo",
+      "article_relevance_score": 42,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "nvidia",
+        "technology"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
