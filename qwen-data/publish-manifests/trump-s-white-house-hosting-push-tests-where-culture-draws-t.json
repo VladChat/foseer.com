@@ -1,0 +1,140 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-03T18:34:14.620Z",
+  "event_id": "evt-2026-06-03-us-politics-general-us-white-house",
+  "cluster_id": "evt-2026-06-03-us-politics-general-us-white-house",
+  "article_type": "analysis",
+  "title": "Trump’s White House Hosting Push Tests Where Culture Draws the Line",
+  "slug": "trump-s-white-house-hosting-push-tests-where-culture-draws-t",
+  "canonical_slug": "2026-06-03-trump-s-white-house-hosting-push-tests-where-culture-draws-t",
+  "expected_url": "/article/2026-06-03-trump-s-white-house-hosting-push-tests-where-culture-draws-t",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-03-trump-s-white-house-hosting-push-tests-where-culture-draws-t.mdx",
+  "published_at": "2026-06-03T18:34:14.618Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/wn9yzamib8y/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/wn9yzamib8y/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-statue-overlooks-the-trump-building-Wn9YZAMiB8Y",
+    "asset_key": "unsplash:Wn9YZAMiB8Y",
+    "alt_text": "A statue overlooks the trump building.",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "The White House concert photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.5,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "trump’s",
+      "white",
+      "house"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.5,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Congress",
+    "White House",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "The White House as a stage: Trump's hosting streak meets ...",
+        "url": "https://www.washingtonpost.com/politics/2026/06/03/trump-america-250-personal-spotlight/47a85678-5f2b-11f1-9c46-d6211372eede_story.html",
+        "domain": "washingtonpost.com"
+      },
+      {
+        "title": "White House Correspondents' Dinner rescheduled for July 24",
+        "url": "https://www.cbsnews.com/news/white-house-correspondents-dinner-rescheduled-after-shooting/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "White House plans to vet public grants for 'American values' spark ...",
+        "url": "https://www.theguardian.com/us-news/2026/jun/03/trump-public-funding-proposal",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "white-house",
+          "label": "White House",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "The White House concert photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "white",
+        "house",
+        "concert"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
