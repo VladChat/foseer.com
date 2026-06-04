@@ -1,0 +1,126 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-04T14:14:46.651Z",
+  "event_id": "evt-2026-06-04-ai-big-tech-general-global-amazon",
+  "cluster_id": "evt-2026-06-04-ai-big-tech-general-global-amazon",
+  "article_type": "report",
+  "title": "Amazon expands ultra-fast deliveries in UK and adds same",
+  "slug": "amazon-to-roll-out-30-minute-deliveries-in-more-uk-cities",
+  "canonical_slug": "2026-06-04-amazon-to-roll-out-30-minute-deliveries-in-more-uk-cities",
+  "expected_url": "/article/2026-06-04-amazon-to-roll-out-30-minute-deliveries-in-more-uk-cities",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-04-amazon-to-roll-out-30-minute-deliveries-in-more-uk-cities.mdx",
+  "published_at": "2026-06-04T14:14:46.650Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Amazon expands ultra-fast deliveries in UK and adds same",
+  "topics": [
+    "Amazon expands ultra-fast deliveries in UK and adds same"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/hqbr-kfgr8o/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/hqbr-kfgr8o/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-computer-monitor-sitting-on-top-of-a-table-hqBr-KfgR8o",
+    "asset_key": "unsplash:hqBr-KfgR8o",
+    "alt_text": "Illustration for Amazon to roll out 30‑minute deliveries in more UK cities",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "UK technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "amazon",
+      "30‑minute",
+      "deliveries"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Amazon",
+    "United Kingdom",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Amazon expands ultra-fast deliveries in UK and adds same",
+        "url": "https://www.theguardian.com/technology/2026/jun/04/amazon-uk-ultra-fast-deliveries-same-day-fruit-veg",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "amazon",
+          "label": "Amazon",
+          "type": "entity"
+        },
+        {
+          "slug": "united-kingdom",
+          "label": "United Kingdom",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "UK technology photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}

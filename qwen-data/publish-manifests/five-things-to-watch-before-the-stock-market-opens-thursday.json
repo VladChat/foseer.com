@@ -1,0 +1,132 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-04T14:14:32.286Z",
+  "event_id": "evt-2026-06-04-crypto-bitcoin-general-global",
+  "cluster_id": "evt-2026-06-04-crypto-bitcoin-general-global",
+  "article_type": "report",
+  "title": "5 things to know before the stock market opens Thursday",
+  "slug": "five-things-to-watch-before-the-stock-market-opens-thursday",
+  "canonical_slug": "2026-06-04-five-things-to-watch-before-the-stock-market-opens-thursday",
+  "expected_url": "/article/2026-06-04-five-things-to-watch-before-the-stock-market-opens-thursday",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-04-five-things-to-watch-before-the-stock-market-opens-thursday.mdx",
+  "published_at": "2026-06-04T14:14:32.283Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "5 things to know before the stock market opens Thursday",
+  "topics": [
+    "5 things to know before the stock market opens Thursday"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/7sgupockyno/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/7sgupockyno/cover.jpg",
+    "source_url": "https://unsplash.com/photos/protesters-hold-signs-supporting-unionism-and-demanding-a-contract-7SGUpOcKyNo",
+    "asset_key": "unsplash:7SGUpOcKyNo",
+    "alt_text": "Illustration for Five things to watch before the stock market opens Thursday",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Thursday photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 69,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 78,
+    "image_fit_score": 0.91,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "things",
+      "watch",
+      "stock"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.18,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Stock Market",
+    "Wall Street",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "5 things to know before the stock market opens Thursday",
+        "url": "https://www.cnbc.com/2026/06/04/5-things-to-know-before-the-stock-market-opens.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "stock-market",
+          "label": "Stock Market",
+          "type": "theme"
+        },
+        {
+          "slug": "wall-street",
+          "label": "Wall Street",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets",
+          "market",
+          "stock market",
+          "market opens",
+          "stocks"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Thursday photo",
+      "article_relevance_score": 69,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "thursday"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

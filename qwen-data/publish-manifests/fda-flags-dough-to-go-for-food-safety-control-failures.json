@@ -1,0 +1,132 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-04T14:15:08.320Z",
+  "event_id": "evt-2026-06-02-pharma-fda-general-global",
+  "cluster_id": "evt-2026-06-02-pharma-fda-general-global",
+  "article_type": "report",
+  "title": "Dough-To-Go, Inc.",
+  "slug": "fda-flags-dough-to-go-for-food-safety-control-failures",
+  "canonical_slug": "2026-06-04-fda-flags-dough-to-go-for-food-safety-control-failures",
+  "expected_url": "/article/2026-06-04-fda-flags-dough-to-go-for-food-safety-control-failures",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-04-fda-flags-dough-to-go-for-food-safety-control-failures.mdx",
+  "published_at": "2026-06-04T14:15:08.318Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Dough-To-Go, Inc.",
+  "topics": [
+    "Dough-To-Go, Inc."
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "liam_parker",
+    "author_name": "Liam Parker",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/05qvowazn3i/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/05qvowazn3i/cover.jpg",
+    "source_url": "https://unsplash.com/photos/2-men-in-black-suit-sitting-on-red-chair-05QvOWAzN3I",
+    "asset_key": "unsplash:05QvOWAzN3I",
+    "alt_text": "Illustration for FDA Flags Dough-To-Go for Food Safety Control Failures",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "FDA Flags medical photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 33,
+    "image_fit_score": 0.63,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "flags",
+      "dough",
+      "safety"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.63,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Dough-To-Go, Inc.",
+        "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/dough-go-inc-727845-05122026",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Dough-To-Go, Inc.",
+          "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/dough-go-inc-727845-05122026",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "dough"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "FDA Flags medical photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "fda",
+        "flags"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
