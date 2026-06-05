@@ -1,0 +1,127 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-05T14:08:01.854Z",
+  "event_id": "evt-2026-06-03-cybersecurity-general-global",
+  "cluster_id": "evt-2026-06-03-cybersecurity-general-global",
+  "article_type": "report",
+  "title": "The stock market just did something eerily similar to the dot",
+  "slug": "ai-stocks-drive-a-dot-com-style-split-beneath-a-calm-u-s-mar",
+  "canonical_slug": "2026-06-05-ai-stocks-drive-a-dot-com-style-split-beneath-a-calm-u-s-mar",
+  "expected_url": "/article/2026-06-05-ai-stocks-drive-a-dot-com-style-split-beneath-a-calm-u-s-mar",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-05-ai-stocks-drive-a-dot-com-style-split-beneath-a-calm-u-s-mar.mdx",
+  "published_at": "2026-06-05T14:08:01.853Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "The stock market just did something eerily similar to the dot",
+  "topics": [
+    "The stock market just did something eerily similar to the dot"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/bmojydu5qd4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/bmojydu5qd4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-half-moon-is-seen-in-the-dark-sky-BmOJYDu5QD4",
+    "asset_key": "unsplash:BmOJYDu5QD4",
+    "alt_text": "Illustration for AI stocks drive a dot‑com–style split beneath a calm U.S. market",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "AI technology photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "stocks",
+      "drive",
+      "dot‑com–style"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Stock Market",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "The stock market just did something eerily similar to the dot",
+        "url": "https://www.cnbc.com/2026/06/01/the-stock-market-just-did-something-eerily-similar-to-the-dotcom-bubble-top-in-2000.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "Wild stock moves beneath an eerily calm surface",
+        "url": "https://www.reuters.com/commentary/reuters-open-interest/wild-stock-moves-beneath-an-eerily-calm-surface-2026-06-03/",
+        "domain": "reuters.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "stock-market",
+          "label": "Stock Market",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "market",
+          "stock market",
+          "stocks"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "AI technology photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}

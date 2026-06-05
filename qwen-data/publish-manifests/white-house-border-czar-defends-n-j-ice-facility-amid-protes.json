@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-05T14:07:44.727Z",
+  "event_id": "evt-2026-06-05-us-politics-general-global-white-house-congress",
+  "cluster_id": "evt-2026-06-05-us-politics-general-global-white-house-congress",
+  "article_type": "report",
+  "title": "Homan defends conditions at N.J. ICE detention center: \"The spaghetti was good\"",
+  "slug": "white-house-border-czar-defends-n-j-ice-facility-amid-protes",
+  "canonical_slug": "2026-06-05-white-house-border-czar-defends-n-j-ice-facility-amid-protes",
+  "expected_url": "/article/2026-06-05-white-house-border-czar-defends-n-j-ice-facility-amid-protes",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-05-white-house-border-czar-defends-n-j-ice-facility-amid-protes.mdx",
+  "published_at": "2026-06-05T14:07:44.726Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Homan defends conditions at N.J. ICE detention center: \"The spaghetti was good\"",
+  "topics": [
+    "Homan defends conditions at N.J. ICE detention center: \"The spaghetti was good\""
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/aanirjifrke/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/aanirjifrke/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-wearing-cap-and-jersey-aANIrjIFRKE",
+    "asset_key": "unsplash:aANIrjIFRKE",
+    "alt_text": "Illustration for White House border czar defends N.J. ICE facility amid protests",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "White House government photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 32,
+    "image_fit_score": 0.73,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "white",
+      "house",
+      "border"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.73,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Homan defends conditions at N.J. ICE detention center: \"The spaghetti was good\"",
+        "url": "https://www.cbsnews.com/news/homan-new-jersey-ice-detention-center-delaney-hall-protests-interview/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house",
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "White House government photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "white",
+        "house"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
