@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-22T15:43:14.493Z",
+  "event_id": "evt-2026-04-22-major-leagues-general-global-nba-nfl",
+  "cluster_id": "evt-2026-04-22-major-leagues-general-global-nba-nfl",
+  "article_type": "analysis",
+  "title": "Liam Rosenior’s Chelsea future hangs on club review after Brighton loss",
+  "slug": "liam-rosenior-s-chelsea-future-hangs-on-club-review-after-br",
+  "canonical_slug": "2026-04-22-liam-rosenior-s-chelsea-future-hangs-on-club-review-after-br",
+  "expected_url": "/article/2026-04-22-liam-rosenior-s-chelsea-future-hangs-on-club-review-after-br",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-22-liam-rosenior-s-chelsea-future-hangs-on-club-review-after-br.mdx",
+  "published_at": "2026-04-22T15:43:14.491Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Major Leagues",
+  "topics": [
+    "Major Leagues"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/4g4phxf1i8m/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/4g4phxf1i8m/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-in-pink-crew-neck-shirt-and-black-hat-4g4PHXF1I8M",
+    "asset_key": "unsplash:4g4PHXF1I8M",
+    "alt_text": "Illustration for Liam Rosenior’s Chelsea future hangs on club review after Brighton loss",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "Liam photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "rosenior’s",
+      "chelsea",
+      "future"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Liam Rosenior on brink of losing job as Chelsea hold review after Brighton defeat",
+        "url": "https://www.theguardian.com/football/2026/apr/22/liam-rosenior-on-brink-of-losing-job-chelsea-review-brighton-defeat",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Rosenior slams 'indefensible' Chelsea players",
+        "url": "https://www.espn.com/soccer/story/_/id/48554142/chelsea-liam-rosenior-players-brighton-loss",
+        "domain": "espn.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Major Leagues",
+      "Primary topic_id unsupported by article evidence: major-leagues"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Liam photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "liam"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-08T12:55:46.314Z",
+  "event_id": "evt-2026-05-07-film-tv-general-global",
+  "cluster_id": "evt-2026-05-07-film-tv-general-global",
+  "article_type": "report",
+  "title": "Report shows banned non-fiction books doubled over last school year in US",
+  "slug": "why-banned-non-fiction-books-in-u-s-schools-just-doubled",
+  "canonical_slug": "2026-05-08-why-banned-non-fiction-books-in-u-s-schools-just-doubled",
+  "expected_url": "/article/2026-05-08-why-banned-non-fiction-books-in-u-s-schools-just-doubled",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-08-why-banned-non-fiction-books-in-u-s-schools-just-doubled.mdx",
+  "published_at": "2026-05-08T12:55:46.311Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "Report shows banned non-fiction books doubled over last school year in US",
+  "topics": [
+    "Report shows banned non-fiction books doubled over last school year in US"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/i9s28enagqi/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/i9s28enagqi/cover.jpg",
+    "source_url": "https://unsplash.com/photos/books-are-lined-up-on-a-bookshelf-i9s28enagQI",
+    "asset_key": "unsplash:i9s28enagQI",
+    "alt_text": "Books are lined up on a bookshelf.",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "fiction photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "banned",
+      "non‑fiction",
+      "books"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "United States",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Report shows banned non-fiction books doubled over last school year in US",
+        "url": "https://www.theguardian.com/books/2026/may/07/banned-non-fiction-books-doubles",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Film & TV",
+      "Primary topic_id unsupported by article evidence: film-tv"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "fiction photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "fiction"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

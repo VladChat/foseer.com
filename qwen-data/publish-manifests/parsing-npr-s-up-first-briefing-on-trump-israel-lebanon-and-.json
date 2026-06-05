@@ -1,0 +1,147 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-13T15:48:02.827Z",
+  "event_id": "evt-2026-04-13-world-geopolitics-general-global-israel-iran",
+  "cluster_id": "evt-2026-04-13-world-geopolitics-general-global-israel-iran",
+  "article_type": "analysis",
+  "title": "Parsing NPR’s ‘Up First’ Briefing on Trump, Israel–Lebanon, and Hungary",
+  "slug": "parsing-npr-s-up-first-briefing-on-trump-israel-lebanon-and-",
+  "canonical_slug": "2026-04-13-parsing-npr-s-up-first-briefing-on-trump-israel-lebanon-and",
+  "expected_url": "/article/2026-04-13-parsing-npr-s-up-first-briefing-on-trump-israel-lebanon-and",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-13-parsing-npr-s-up-first-briefing-on-trump-israel-lebanon-and.mdx",
+  "published_at": "2026-04-13T15:48:02.825Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "World & Geopolitics",
+  "topics": [
+    "World & Geopolitics"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "jacob_ellis",
+    "author_name": "Jacob Ellis",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/vsyqz4opnd4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/vsyqz4opnd4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/lebanon-israel-text-on-truck-Vsyqz4Opnd4",
+    "asset_key": "unsplash:Vsyqz4Opnd4",
+    "alt_text": "Lebanon Israel text on truck",
+    "selection_mode": "provider_download_new:unsplash:strong:relaxed",
+    "query_used": "parsing israel lebanon photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 99,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "diplomacy",
+      "international",
+      "summit",
+      "parsing",
+      "npr’s",
+      "first’"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "Diplomacy",
+    "Israel",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Up First briefing : Trump blockade ; Israel - Lebanon ; Hungary election : NPR",
+        "url": "https://www.npr.org/2026/04/13/g-s1-117236/trump-says-u-s-will-blockade-iranian-ports-and-orban-loses-hungarian-election",
+        "domain": "npr.org"
+      },
+      {
+        "title": "Pope Leo says he does not fear Trump , citing Gospel as he pushes back in feud over Iran war",
+        "url": "https://www.rockymounttelegram.com/news/world/pope-leo-says-he-does-not-fear-trump-citing-gospel-as-he-pushes-back-in/article_13b8625a-ff20-5317-b580-44a9ee141be0.html",
+        "domain": "rockymounttelegram.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Pope Leo says he does not fear Trump , citing Gospel as he pushes back in feud over Iran war",
+          "url": "https://www.rockymounttelegram.com/news/world/pope-leo-says-he-does-not-fear-trump-citing-gospel-as-he-pushes-back-in/article_13b8625a-ff20-5317-b580-44a9ee141be0.html",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "trump"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "israel",
+          "label": "Israel",
+          "type": "geography"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "israel",
+          "middle east",
+          "diplomatic",
+          "iran"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "parsing israel lebanon photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "parsing",
+        "israel",
+        "lebanon"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-08T12:56:12.251Z",
+  "event_id": "evt-2026-05-07-climate-extreme-weather-general-global-iran",
+  "cluster_id": "evt-2026-05-07-climate-extreme-weather-general-global-iran",
+  "article_type": "report",
+  "title": "Trump’s Iran war may stymie climate gains with boost to big oil, experts say",
+  "slug": "experts-warn-trump-s-iran-war-could-slow-climate-gains-by-bo",
+  "canonical_slug": "2026-05-08-experts-warn-trump-s-iran-war-could-slow-climate-gains-by-bo",
+  "expected_url": "/article/2026-05-08-experts-warn-trump-s-iran-war-could-slow-climate-gains-by-bo",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-08-experts-warn-trump-s-iran-war-could-slow-climate-gains-by-bo.mdx",
+  "published_at": "2026-05-08T12:56:12.249Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "climate-extreme-weather",
+  "topic_label": "Climate & Extreme Weather",
+  "subsection": "Trump’s Iran war may stymie climate gains with boost to big oil, experts say",
+  "topics": [
+    "Trump’s Iran war may stymie climate gains with boost to big oil, experts say"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/kcrb64vrsfu/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/kcrb64vrsfu/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-sitting-near-an-iceberg-KcRb64vrsFU",
+    "asset_key": "unsplash:KcRb64vrsFU",
+    "alt_text": "Illustration for Experts warn Trump’s Iran war could slow climate gains by boosting big oil",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Experts climate photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "extreme weather",
+      "storm",
+      "climate",
+      "experts",
+      "trump’s"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Climate & Extreme Weather",
+    "Iran",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Trump’s Iran war may stymie climate gains with boost to big oil, experts say",
+        "url": "https://www.theguardian.com/us-news/2026/may/07/iran-war-big-oil-climate",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Trump Administration Sues Minnesota to Block Climate Lawsuit",
+        "url": "https://www.nytimes.com/2026/05/04/climate/trump-minnesota-climate-lawsuit.html",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "type": "topic"
+        },
+        {
+          "slug": "iran",
+          "label": "Iran",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "climate-extreme-weather",
+        "topic_label": "Climate & Extreme Weather",
+        "supported": true,
+        "matched_aliases": [
+          "climate",
+          "emissions"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Experts climate photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "experts",
+        "climate"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

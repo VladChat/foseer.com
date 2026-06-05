@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-24T12:43:11.443Z",
+  "event_id": "evt-2026-05-24-crypto-bitcoin-general-global",
+  "cluster_id": "evt-2026-05-24-crypto-bitcoin-general-global",
+  "article_type": "report",
+  "title": "Sell in May and Go Away: 3 Cryptocurrencies to Unload Before ...",
+  "slug": "sell-in-may-warning-flags-three-cryptocurrencies-to-exit-ear",
+  "canonical_slug": "2026-05-24-sell-in-may-warning-flags-three-cryptocurrencies-to-exit-ear",
+  "expected_url": "/article/2026-05-24-sell-in-may-warning-flags-three-cryptocurrencies-to-exit-ear",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-24-sell-in-may-warning-flags-three-cryptocurrencies-to-exit-ear.mdx",
+  "published_at": "2026-05-24T12:43:11.441Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "crypto-bitcoin",
+  "topic_label": "Crypto",
+  "subsection": "Sell in May and Go Away: 3 Cryptocurrencies to Unload Before ...",
+  "topics": [
+    "Sell in May and Go Away: 3 Cryptocurrencies to Unload Before ..."
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/bj8u389a9n8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/bj8u389a9n8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/four-round-silver-colored-and-gold-colored-bitcoins-bj8U389A9N8",
+    "asset_key": "unsplash:bj8U389A9N8",
+    "alt_text": "Illustration for ‘Sell in May’ Warning Flags Three Cryptocurrencies to Exit Early",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "global Cryptocurrencies photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "cryptocurrency",
+      "bitcoin",
+      "blockchain",
+      "‘sell",
+      "warning",
+      "flags"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Crypto",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Sell in May and Go Away: 3 Cryptocurrencies to Unload Before ...",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/intc/pressreleases/2107283/sell-in-may-and-go-away-3-cryptocurrencies-to-unload-before-summer/",
+        "domain": "theglobeandmail.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "crypto-bitcoin",
+          "label": "Crypto",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "crypto-bitcoin",
+        "topic_label": "Crypto",
+        "supported": true,
+        "matched_aliases": [
+          "Crypto"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "global Cryptocurrencies photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "cryptocurrencies"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

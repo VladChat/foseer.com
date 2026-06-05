@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-30T13:08:19.729Z",
+  "event_id": "evt-2026-04-30-film-tv-general-global-india",
+  "cluster_id": "evt-2026-04-30-film-tv-general-global-india",
+  "article_type": "report",
+  "title": "Say hello to my little compendium! Al Pacino films",
+  "slug": "al-pacino-at-86-a-guided-tour-through-his-defining-film-role",
+  "canonical_slug": "2026-04-30-al-pacino-at-86-a-guided-tour-through-his-defining-film-role",
+  "expected_url": "/article/2026-04-30-al-pacino-at-86-a-guided-tour-through-his-defining-film-role",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-30-al-pacino-at-86-a-guided-tour-through-his-defining-film-role.mdx",
+  "published_at": "2026-04-30T13:08:19.727Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Say hello to my little compendium! Al Pacino films",
+  "topics": [
+    "Say hello to my little compendium! Al Pacino films"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/dxgfozgcdyy/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/dxgfozgcdyy/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-man-taking-a-picture-of-a-sunset-with-a-camera-dxGFOzgCdyY",
+    "asset_key": "unsplash:dxGFOzgCdyY",
+    "alt_text": "Illustration for Al Pacino at 86: A Guided Tour Through His Defining Film Roles",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "Guided Tour Through His photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "pacino",
+      "guided",
+      "defining"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Say hello to my little compendium! Al Pacino films",
+        "url": "https://www.theguardian.com/film/2026/apr/30/al-pacino-films-ranked",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Say hello to my little compendium! Al Pacino films",
+          "url": "https://www.theguardian.com/film/2026/apr/30/al-pacino-films-ranked",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "pacino"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "baseball"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Guided Tour Through His photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "guided",
+        "tour",
+        "through",
+        "his"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

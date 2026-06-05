@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-05T14:07:30.187Z",
+  "event_id": "evt-2026-06-03-pharma-fda-general-global",
+  "cluster_id": "evt-2026-06-03-pharma-fda-general-global",
+  "article_type": "report",
+  "title": "Individual Case Safety Reports",
+  "slug": "why-individual-case-safety-reports-sit-at-the-heart-of-drug-",
+  "canonical_slug": "2026-06-05-why-individual-case-safety-reports-sit-at-the-heart-of-drug",
+  "expected_url": "/article/2026-06-05-why-individual-case-safety-reports-sit-at-the-heart-of-drug",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-05-why-individual-case-safety-reports-sit-at-the-heart-of-drug.mdx",
+  "published_at": "2026-06-05T14:07:30.185Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Individual Case Safety Reports",
+  "topics": [
+    "Individual Case Safety Reports"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/36841315/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/36841315/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/adorable-baby-s-first-easter-celebration-36841315/",
+    "asset_key": "pexels:36841315",
+    "alt_text": "Illustration for Why Individual Case Safety Reports Sit at the Heart of Drug Safety",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Individual Case Safety Reports medical photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 32,
+    "image_fit_score": 0.73,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "individual",
+      "safety",
+      "heart"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.73,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Individual Case Safety Reports",
+        "url": "http://www.fda.gov/industry/fda-data-standards-advisory-board/individual-case-safety-reports",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Individual Case Safety Reports medical photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "individual",
+        "case",
+        "safety",
+        "reports"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

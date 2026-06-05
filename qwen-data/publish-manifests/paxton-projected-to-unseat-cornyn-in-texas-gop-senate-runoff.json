@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-28T14:52:00.893Z",
+  "event_id": "evt-2026-05-28-us-politics-general-global-fifa-senate",
+  "cluster_id": "evt-2026-05-28-us-politics-general-global-fifa-senate",
+  "article_type": "report",
+  "title": "Paxton projected to win Texas Senate GOP runoff, defeating incumbent Cornyn",
+  "slug": "paxton-projected-to-unseat-cornyn-in-texas-gop-senate-runoff",
+  "canonical_slug": "2026-05-28-paxton-projected-to-unseat-cornyn-in-texas-gop-senate-runoff",
+  "expected_url": "/article/2026-05-28-paxton-projected-to-unseat-cornyn-in-texas-gop-senate-runoff",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-28-paxton-projected-to-unseat-cornyn-in-texas-gop-senate-runoff.mdx",
+  "published_at": "2026-05-28T14:52:00.891Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Paxton projected to win Texas Senate GOP runoff, defeating incumbent Cornyn",
+  "topics": [
+    "Paxton projected to win Texas Senate GOP runoff, defeating incumbent Cornyn"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/36207460/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/36207460/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/antique-legislative-books-in-bern-library-36207460/",
+    "asset_key": "pexels:36207460",
+    "alt_text": "Illustration for Paxton Projected to Unseat Cornyn in Texas GOP Senate Runoff",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Paxton Projected government photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "paxton",
+      "projected",
+      "unseat"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Congress",
+    "Texas",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Paxton projected to win Texas Senate GOP runoff, defeating incumbent Cornyn",
+        "url": "https://www.cbsnews.com/news/texas-senate-gop-runoff-results-paxton-cornyn-trump-talarico/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: U.S. Politics & Policy",
+      "Primary topic_id unsupported by article evidence: us-politics"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "texas",
+          "label": "Texas",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Paxton Projected government photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "paxton",
+        "projected"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-15T13:18:34.363Z",
+  "event_id": "evt-2026-05-14-pharma-fda-general-global-fda-india",
+  "cluster_id": "evt-2026-05-14-pharma-fda-general-global-fda-india",
+  "article_type": "report",
+  "title": "Bulk Drug Substances Used in Compounding Under Section 503A of the FD&C Act",
+  "slug": "what-fda-s-503a-bulk-drug-rules-mean-for-compounded-medicine",
+  "canonical_slug": "2026-05-15-what-fda-s-503a-bulk-drug-rules-mean-for-compounded-medicine",
+  "expected_url": "/article/2026-05-15-what-fda-s-503a-bulk-drug-rules-mean-for-compounded-medicine",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-15-what-fda-s-503a-bulk-drug-rules-mean-for-compounded-medicine.mdx",
+  "published_at": "2026-05-15T13:18:34.362Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Bulk Drug Substances Used in Compounding Under Section 503A of the FD&C Act",
+  "topics": [
+    "Bulk Drug Substances Used in Compounding Under Section 503A of the FD&C Act"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/v6azrm-rtr8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/v6azrm-rtr8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/green-and-white-labeled-bottles-V6AzrM-rtR8",
+    "asset_key": "unsplash:V6AzrM-rtR8",
+    "alt_text": "Illustration for What FDA’s 503A Bulk Drug Rules Mean for Compounded Medicines",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Bulk Drug Substances Used photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "fda’s",
+      "rules",
+      "compounded"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Bulk Drug Substances Used in Compounding Under Section 503A of the FD&C Act",
+        "url": "http://www.fda.gov/drugs/human-drug-compounding/bulk-drug-substances-used-compounding-under-section-503a-fdc-act",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Bulk Drug Substances Used photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "bulk",
+        "drug",
+        "substances",
+        "used"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

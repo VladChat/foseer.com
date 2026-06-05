@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-30T12:46:30.956Z",
+  "event_id": "evt-2026-05-29-events-tournaments-general-global-sec-nfl",
+  "cluster_id": "evt-2026-05-29-events-tournaments-general-global-sec-nfl",
+  "article_type": "report",
+  "title": "NAACP calls for sports boycott in states where voting rights are threatened",
+  "slug": "naacp-urges-sports-boycott-in-states-targeting-voting-rights",
+  "canonical_slug": "2026-05-30-naacp-urges-sports-boycott-in-states-targeting-voting-rights",
+  "expected_url": "/article/2026-05-30-naacp-urges-sports-boycott-in-states-targeting-voting-rights",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-30-naacp-urges-sports-boycott-in-states-targeting-voting-rights.mdx",
+  "published_at": "2026-05-30T12:46:30.954Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "athletes-culture",
+  "topic_label": "Athletes & Culture",
+  "subsection": "NAACP calls for sports boycott in states where voting rights are threatened",
+  "topics": [
+    "NAACP calls for sports boycott in states where voting rights are threatened"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/36442459/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/36442459/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/five-young-men-in-suits-posing-outdoors-36442459/",
+    "asset_key": "pexels:36442459",
+    "alt_text": "Illustration for NAACP Urges Sports Boycott in States Targeting Voting Rights",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Voting Rights government photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 82,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 86,
+    "image_fit_score": 0.94,
+    "visual_concepts": [
+      "athlete portrait",
+      "sports culture",
+      "fans",
+      "naacp",
+      "urges",
+      "boycott"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.94,
+    "is_fallback": false
+  },
+  "tags": [
+    "Athletes & Culture",
+    "Voting Rights",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "NAACP calls for sports boycott in states where voting rights are threatened : NPR",
+        "url": "https://npr.org/2026/05/28/nx-s1-5833930/naacp-calls-for-sports-boycott-in-states-where-voting-rights-are-threatened",
+        "domain": "npr.org"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "athletes-culture",
+          "label": "Athletes & Culture",
+          "type": "topic"
+        },
+        {
+          "slug": "voting-rights",
+          "label": "Voting Rights",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "athletes-culture",
+        "topic_label": "Athletes & Culture",
+        "supported": true,
+        "matched_aliases": [
+          "athletes",
+          "sports leagues"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Voting Rights government photo",
+      "article_relevance_score": 82,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "voting",
+        "rights"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

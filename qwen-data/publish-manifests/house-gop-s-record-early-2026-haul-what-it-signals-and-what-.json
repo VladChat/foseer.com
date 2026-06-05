@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-20T15:46:26.951Z",
+  "event_id": "evt-2026-04-20-us-politics-general-global-white-house-sec",
+  "cluster_id": "evt-2026-04-20-us-politics-general-global-white-house-sec",
+  "article_type": "analysis",
+  "title": "House GOP’s Record Early 2026 Haul: What It Signals and What’s Unknown",
+  "slug": "house-gop-s-record-early-2026-haul-what-it-signals-and-what-",
+  "canonical_slug": "2026-04-20-house-gop-s-record-early-2026-haul-what-it-signals-and-what",
+  "expected_url": "/article/2026-04-20-house-gop-s-record-early-2026-haul-what-it-signals-and-what",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-20-house-gop-s-record-early-2026-haul-what-it-signals-and-what.mdx",
+  "published_at": "2026-04-20T15:46:26.949Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/pgkdut0tigg/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/pgkdut0tigg/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-person-loading-a-van-with-flowers-pGKDUT0tigg",
+    "asset_key": "unsplash:pGKDUT0tigg",
+    "alt_text": "Illustration for House GOP’s Record Early 2026 Haul: What It Signals and What’s Unknown",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "House Haul photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "house",
+      "gop’s",
+      "record"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Congress",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "House GOP touts record fundraising haul in first three months of 2026",
+        "url": "https://www.cbsnews.com/news/republicans-nrcc-record-fundraising-first-quarter/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: U.S. Politics & Policy",
+      "Primary topic_id unsupported by article evidence: us-politics"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "House Haul photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "house",
+        "haul"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

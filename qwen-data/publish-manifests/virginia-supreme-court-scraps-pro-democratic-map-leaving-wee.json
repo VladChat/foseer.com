@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-08T15:54:54.297Z",
+  "event_id": "evt-2026-05-08-us-politics-general-global-supreme-court",
+  "cluster_id": "evt-2026-05-08-us-politics-general-global-supreme-court",
+  "article_type": "analysis",
+  "title": "Virginia Supreme Court Scraps Pro-Democratic Map, Leaving Week of Uncertainty",
+  "slug": "virginia-supreme-court-scraps-pro-democratic-map-leaving-wee",
+  "canonical_slug": "2026-05-08-virginia-supreme-court-scraps-pro-democratic-map-leaving-wee",
+  "expected_url": "/article/2026-05-08-virginia-supreme-court-scraps-pro-democratic-map-leaving-wee",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-08-virginia-supreme-court-scraps-pro-democratic-map-leaving-wee.mdx",
+  "published_at": "2026-05-08T15:54:54.295Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/2prwvtvlllu/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/2prwvtvlllu/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-large-brick-building-with-columns-and-pillars-2PrwVtvLLlU",
+    "asset_key": "unsplash:2PrwVtvLLlU",
+    "alt_text": "Illustration for Virginia Supreme Court Scraps Pro-Democratic Map, Leaving Week of Uncertainty",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Virginia Supreme Court portrait",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 99,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "virginia",
+      "supreme",
+      "court"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Supreme Court",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Virginia Supreme Court tosses out congressional map that favored Democrats",
+        "url": "https://www.cbsnews.com/news/virginia-supreme-court-redistricting-congressional-map-democrats/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "South Carolina joins redistricting push after Supreme Court ruling",
+        "url": "https://www.dailypress.com/2026/05/06/south-carolina-redistricting/",
+        "domain": "dailypress.com"
+      },
+      {
+        "title": "Louisiana asks Supreme Court to halt abortion pill access by mail",
+        "url": "https://www.inquirer.com/politics/nation/louisiana-supreme-court-mifepristone-abortion-pill-access-20260508.html",
+        "domain": "inquirer.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Virginia Supreme Court portrait",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "virginia",
+        "supreme",
+        "court"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

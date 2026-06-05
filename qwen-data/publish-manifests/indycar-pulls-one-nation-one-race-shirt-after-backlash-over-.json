@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-15T13:20:19.254Z",
+  "event_id": "evt-2026-05-14-major-leagues-general-global-nfl",
+  "cluster_id": "evt-2026-05-14-major-leagues-general-global-nfl",
+  "article_type": "report",
+  "title": "IndyCar’s ‘One Nation, One Race’ controversy is no surprise amid its rightward drift",
+  "slug": "indycar-pulls-one-nation-one-race-shirt-after-backlash-over-",
+  "canonical_slug": "2026-05-15-indycar-pulls-one-nation-one-race-shirt-after-backlash-over",
+  "expected_url": "/article/2026-05-15-indycar-pulls-one-nation-one-race-shirt-after-backlash-over",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-15-indycar-pulls-one-nation-one-race-shirt-after-backlash-over.mdx",
+  "published_at": "2026-05-15T13:20:19.253Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "IndyCar’s ‘One Nation, One Race’ controversy is no surprise amid its rightward drift",
+  "topics": [
+    "IndyCar’s ‘One Nation, One Race’ controversy is no surprise amid its rightward drift"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/xif23v_iwx0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/xif23v_iwx0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/bike-race-on-pennsylvania-avenue-washington-dc-XIf23V_iwX0",
+    "asset_key": "unsplash:XIf23V_iwX0",
+    "alt_text": "Bike race on Pennsylvania Avenue, Washington, D.C.",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "One Nation One Race film photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "indycar",
+      "pulls",
+      "nation"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "IndyCar’s ‘One Nation, One Race’ controversy is no surprise amid its rightward drift",
+        "url": "https://www.theguardian.com/sport/2026/may/14/indycar-shirt-trump-penske",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "One Nation One Race film photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "one",
+        "nation",
+        "race"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-13T13:41:04.718Z",
+  "event_id": "evt-2026-05-13-world-geopolitics-general-global",
+  "cluster_id": "evt-2026-05-13-world-geopolitics-general-global",
+  "article_type": "report",
+  "title": "‘Irresponsible’: backlash as Utah approves datacenter twice the size of Manhattan",
+  "slug": "utah-s-mega-datacenter-backlash-power-water-and-public-trust",
+  "canonical_slug": "2026-05-13-utah-s-mega-datacenter-backlash-power-water-and-public-trust",
+  "expected_url": "/article/2026-05-13-utah-s-mega-datacenter-backlash-power-water-and-public-trust",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-13-utah-s-mega-datacenter-backlash-power-water-and-public-trust.mdx",
+  "published_at": "2026-05-13T13:41:04.716Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "‘Irresponsible’: backlash as Utah approves datacenter twice the size of Manhattan",
+  "topics": [
+    "‘Irresponsible’: backlash as Utah approves datacenter twice the size of Manhattan"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "liam_parker",
+    "author_name": "Liam Parker",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/5eot1zo0qtq/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/5eot1zo0qtq/cover.jpg",
+    "source_url": "https://unsplash.com/photos/water-fountain-near-building-under-blue-sky-during-daytime-5eOT1Zo0QtQ",
+    "asset_key": "unsplash:5eOT1Zo0QtQ",
+    "alt_text": "water fountain near building under blue sky during daytime",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "Backlash Power Water and Public photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.5,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "utah’s",
+      "datacenter",
+      "backlash:"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.5,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Diplomacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "‘Irresponsible’: backlash as Utah approves datacenter twice the size of Manhattan",
+        "url": "https://www.theguardian.com/us-news/2026/may/13/utah-approves-datacenter-backlash",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Backlash Power Water and Public photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "backlash",
+        "power",
+        "water",
+        "public"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

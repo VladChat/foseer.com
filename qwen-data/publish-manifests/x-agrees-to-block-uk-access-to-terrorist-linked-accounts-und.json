@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-17T12:15:07.536Z",
+  "event_id": "evt-2026-05-16-ai-big-tech-general-global-google",
+  "cluster_id": "evt-2026-05-16-ai-big-tech-general-global-google",
+  "article_type": "report",
+  "title": "X to block UK access to accounts linked to terrorist groups in Ofcom agreement",
+  "slug": "x-agrees-to-block-uk-access-to-terrorist-linked-accounts-und",
+  "canonical_slug": "2026-05-17-x-agrees-to-block-uk-access-to-terrorist-linked-accounts-und",
+  "expected_url": "/article/2026-05-17-x-agrees-to-block-uk-access-to-terrorist-linked-accounts-und",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-17-x-agrees-to-block-uk-access-to-terrorist-linked-accounts-und.mdx",
+  "published_at": "2026-05-17T12:15:07.535Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "X to block UK access to accounts linked to terrorist groups in Ofcom agreement",
+  "topics": [
+    "X to block UK access to accounts linked to terrorist groups in Ofcom agreement"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/3468308/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/3468308/cover.jpg",
+    "source_url": "https://pixabay.com/photos/businesswoman-business-blockchain-3468308/",
+    "asset_key": "pixabay:3468308",
+    "alt_text": "businesswoman, business, blockchain, data, records, concept, system, communication, consensus, mechanism, transaction, integrity, management, block, data block, concatenation, connection, together, circuit board, conductor tracks, circuits, computer, access, blockchain, blockchain, blockchain, blockchain, blockchain, data, transaction",
+    "selection_mode": "provider_download_new:pixabay:acceptable:relaxed",
+    "query_used": "agrees block access photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "agrees",
+      "block",
+      "access"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "X",
+    "United Kingdom",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "X to block UK access to accounts linked to terrorist groups in Ofcom agreement",
+        "url": "https://www.theguardian.com/technology/2026/may/15/x-ofcom-agreement-block-uk-access-accounts-linked-banned-terrorist-groups",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "x-platform",
+          "label": "X",
+          "type": "entity"
+        },
+        {
+          "slug": "united-kingdom",
+          "label": "United Kingdom",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "agrees block access photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "agrees",
+        "block",
+        "access"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

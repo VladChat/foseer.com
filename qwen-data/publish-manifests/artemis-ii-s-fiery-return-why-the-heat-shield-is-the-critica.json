@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-11T14:56:26.611Z",
+  "event_id": "evt-2026-04-10-space-astronomy-general-global",
+  "cluster_id": "evt-2026-04-10-space-astronomy-general-global",
+  "article_type": "analysis",
+  "title": "Artemis II’s Fiery Return: Why the Heat Shield Is the Critical Test",
+  "slug": "artemis-ii-s-fiery-return-why-the-heat-shield-is-the-critica",
+  "canonical_slug": "2026-04-11-artemis-ii-s-fiery-return-why-the-heat-shield-is-the-critica",
+  "expected_url": "/article/2026-04-11-artemis-ii-s-fiery-return-why-the-heat-shield-is-the-critica",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-11-artemis-ii-s-fiery-return-why-the-heat-shield-is-the-critica.mdx",
+  "published_at": "2026-04-11T14:56:26.609Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "Space & Astronomy",
+  "topics": [
+    "Space & Astronomy"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/hmji4cpn_di/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/hmji4cpn_di/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-picture-of-the-earth-as-seen-from-space-HmjI4CpN_dI",
+    "asset_key": "unsplash:HmjI4CpN_dI",
+    "alt_text": "A picture of the earth as seen from space",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "global Heat Shield photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "artemis",
+      "fiery",
+      "return:"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.6,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "As Artemis II heads back to Earth, crew is staking their lives on the heat shield",
+        "url": "https://www.cbsnews.com/news/artemis-ii-return-earth-heat-shield-reentry/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "Artemis II Splashes Down",
+        "url": "https://www.nasa.gov/image-article/artemis-ii-splashes-down/",
+        "domain": "nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic_id unsupported by article evidence: space-astronomy"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Artemis II Splashes Down",
+          "url": "https://www.nasa.gov/image-article/artemis-ii-splashes-down/",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "artemis"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "global Heat Shield photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "heat",
+        "shield"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-10T12:11:28.537Z",
+  "event_id": "evt-2026-05-10-sports-general-global",
+  "cluster_id": "evt-2026-05-10-sports-general-global",
+  "article_type": "report",
+  "title": "Manchester United are back in the Champions League. But Michael ...",
+  "slug": "manchester-united-s-champions-league-return-puts-focus-on-mi",
+  "canonical_slug": "2026-05-10-manchester-united-s-champions-league-return-puts-focus-on-mi",
+  "expected_url": "/article/2026-05-10-manchester-united-s-champions-league-return-puts-focus-on-mi",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-10-manchester-united-s-champions-league-return-puts-focus-on-mi.mdx",
+  "published_at": "2026-05-10T12:11:28.535Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Manchester United are back in the Champions League. But Michael ...",
+  "topics": [
+    "Manchester United are back in the Champions League. But Michael ..."
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/34760018/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/34760018/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/manchester-skyline-with-beetham-tower-34760018/",
+    "asset_key": "pexels:34760018",
+    "alt_text": "Skyline of Manchester city featuring the iconic Beetham Tower under a bright blue sky.",
+    "selection_mode": "provider_download_new:pexels:acceptable:strict",
+    "query_used": "global Manchester United photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "manchester",
+      "united’s",
+      "champions"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.6,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Manchester United",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Manchester United are back in the Champions League. But Michael ...",
+        "url": "https://www.nytimes.com/athletic/7260626/2026/05/10/manchester-united-michael-carrick-squad-transfers-summer/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Bruno Fernandes backed for Manchester United stay by Michael ...",
+        "url": "https://www.nytimes.com/athletic/7263703/2026/05/08/bruno-fernandes-manchester-united-future-contract/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Transfers & Business",
+      "Primary topic_id unsupported by article evidence: transfers-business"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "manchester-united",
+          "label": "Manchester United",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "global Manchester United photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "manchester",
+        "united"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

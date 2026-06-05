@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-12T13:22:55.741Z",
+  "event_id": "evt-2026-05-11-film-tv-general-global",
+  "cluster_id": "evt-2026-05-11-film-tv-general-global",
+  "article_type": "report",
+  "title": "‘I told him, “Go ahead, do it”’: Juliette Binoche on how a strangling attack as a teen inspired her directoria",
+  "slug": "juliette-binoche-turns-teenage-trauma-into-raw-directorial-d",
+  "canonical_slug": "2026-05-12-juliette-binoche-turns-teenage-trauma-into-raw-directorial-d",
+  "expected_url": "/article/2026-05-12-juliette-binoche-turns-teenage-trauma-into-raw-directorial-d",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-12-juliette-binoche-turns-teenage-trauma-into-raw-directorial-d.mdx",
+  "published_at": "2026-05-12T13:22:55.738Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "creators-platforms",
+  "topic_label": "Creators & Platforms",
+  "subsection": "‘I told him, “Go ahead, do it”’: Juliette Binoche on how a strangling attack as a teen inspired her directoria",
+  "topics": [
+    "‘I told him, “Go ahead, do it”’: Juliette Binoche on how a strangling attack as a teen inspired her directoria"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/xivhskvpbvw/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/xivhskvpbvw/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-woman-with-long-hair-XiVhSkVpBVw",
+    "asset_key": "unsplash:XiVhSkVpBVw",
+    "alt_text": "Illustration for Juliette Binoche turns teenage trauma into raw directorial debut",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Juliette Binoche portrait",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "content creator",
+      "streaming",
+      "social platform",
+      "juliette",
+      "binoche",
+      "turns"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Creators & Platforms",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "‘I told him, “Go ahead, do it”’: Juliette Binoche on how a strangling attack as a teen inspired her directorial debut",
+        "url": "https://www.theguardian.com/film/ng-interactive/2026/may/11/juliette-binoche-in-i-in-motion-documentary-film",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "creators-platforms",
+          "label": "Creators & Platforms",
+          "type": "topic"
+        },
+        {
+          "slug": "influencer-economy",
+          "label": "Influencer Economy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "creators-platforms",
+        "topic_label": "Creators & Platforms",
+        "supported": true,
+        "matched_aliases": [
+          "creator economy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Juliette Binoche portrait",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "juliette",
+        "binoche"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

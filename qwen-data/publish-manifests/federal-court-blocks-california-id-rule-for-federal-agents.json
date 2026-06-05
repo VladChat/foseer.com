@@ -1,0 +1,144 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-24T12:18:10.352Z",
+  "event_id": "evt-2026-04-23-us-politics-general-global-white-house-congress",
+  "cluster_id": "evt-2026-04-23-us-politics-general-global-white-house-congress",
+  "article_type": "report",
+  "title": "Court blocks California law requiring federal agents to wear some ...",
+  "slug": "federal-court-blocks-california-id-rule-for-federal-agents",
+  "canonical_slug": "2026-04-24-federal-court-blocks-california-id-rule-for-federal-agents",
+  "expected_url": "/article/2026-04-24-federal-court-blocks-california-id-rule-for-federal-agents",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-24-federal-court-blocks-california-id-rule-for-federal-agents.mdx",
+  "published_at": "2026-04-24T12:18:10.350Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Court blocks California law requiring federal agents to wear some ...",
+  "topics": [
+    "Court blocks California law requiring federal agents to wear some ..."
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/3385958/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/3385958/cover.jpg",
+    "source_url": "https://pixabay.com/photos/munich-architecture-court-of-justice-3385958/",
+    "asset_key": "pixabay:3385958",
+    "alt_text": "munich, architecture, court of justice, the federal constitutional court, bavaria, district court, facade, flag, building, city, historic center, munich, munich, munich, munich, munich",
+    "selection_mode": "provider_download_new:pixabay:acceptable:strict",
+    "query_used": "Federal Court Blocks California courtroom photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 99,
+    "image_fit_score": 0.8,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "federal",
+      "court",
+      "blocks"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.8,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Congress",
+    "California",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Court blocks California law requiring federal agents to wear some ...",
+        "url": "https://www.theguardian.com/us-news/2026/apr/22/california-law-federal-agents-court",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Congress, Fix College Sports by Passing the SCORE Act",
+        "url": "https://dailysignal.com/2026/04/22/score-act-fix-college-sports",
+        "domain": "dailysignal.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Congress, Fix College Sports by Passing the SCORE Act",
+          "url": "https://dailysignal.com/2026/04/22/score-act-fix-college-sports",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "california",
+          "label": "California",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house",
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Federal Court Blocks California courtroom photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "federal",
+        "court",
+        "blocks",
+        "california"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

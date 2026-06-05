@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-16T12:47:48.503Z",
+  "event_id": "evt-2026-04-14-film-tv-general-global",
+  "cluster_id": "evt-2026-04-14-film-tv-general-global",
+  "article_type": "report",
+  "title": "‘They accomplished so much, even as they were dying’: the groundbreaking gay art of Peter Hujar and Paul Thek",
+  "slug": "new-book-traces-the-charged-bond-behind-hujar-and-thek-s-art",
+  "canonical_slug": "2026-04-16-new-book-traces-the-charged-bond-behind-hujar-and-thek-s-art",
+  "expected_url": "/article/2026-04-16-new-book-traces-the-charged-bond-behind-hujar-and-thek-s-art",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-16-new-book-traces-the-charged-bond-behind-hujar-and-thek-s-art.mdx",
+  "published_at": "2026-04-16T12:47:48.501Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "‘They accomplished so much, even as they were dying’: the groundbreaking gay art of Peter Hujar and Paul Thek",
+  "topics": [
+    "‘They accomplished so much, even as they were dying’: the groundbreaking gay art of Peter Hujar and Paul Thek"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/10670331/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/10670331/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/close-up-of-a-hungarian-language-history-book-10670331/",
+    "asset_key": "pexels:10670331",
+    "alt_text": "Open book pages capturing text and images on the Hungarian Revolution of 1956.",
+    "selection_mode": "provider_download_new:pexels:acceptable:relaxed",
+    "query_used": "book traces charged photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.4,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "traces",
+      "charged",
+      "behind"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "‘They accomplished so much, even as they were dying’: the groundbreaking gay art of Peter Hujar and Paul Thek",
+        "url": "https://www.theguardian.com/artanddesign/2026/apr/14/peter-hujar-paul-thek-artists-book",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "book traces charged photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "book",
+        "traces",
+        "charged"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

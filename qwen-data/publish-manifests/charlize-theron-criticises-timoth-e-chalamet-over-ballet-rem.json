@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-21T12:16:47.108Z",
+  "event_id": "evt-2026-04-20-film-tv-general-global",
+  "cluster_id": "evt-2026-04-20-film-tv-general-global",
+  "article_type": "report",
+  "title": "Charlize Theron joins chorus of disapproval over Timothée Chalamet’s ballet comments",
+  "slug": "charlize-theron-criticises-timoth-e-chalamet-over-ballet-rem",
+  "canonical_slug": "2026-04-21-charlize-theron-criticises-timoth-e-chalamet-over-ballet-rem",
+  "expected_url": "/article/2026-04-21-charlize-theron-criticises-timoth-e-chalamet-over-ballet-rem",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-21-charlize-theron-criticises-timoth-e-chalamet-over-ballet-rem.mdx",
+  "published_at": "2026-04-21T12:16:47.105Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "Charlize Theron joins chorus of disapproval over Timothée Chalamet’s ballet comments",
+  "topics": [
+    "Charlize Theron joins chorus of disapproval over Timothée Chalamet’s ballet comments"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/hivgj64ufak/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/hivgj64ufak/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-colorful-globe-showing-north-america-HIvgJ64UFak",
+    "asset_key": "unsplash:HIvgJ64UFak",
+    "alt_text": "Illustration for Charlize Theron criticises Timothée Chalamet over ballet remarks",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "global Charlize Theron photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "charlize",
+      "criticises",
+      "timothée"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Charlize Theron joins chorus of disapproval over Timothée Chalamet’s ballet comments",
+        "url": "https://www.theguardian.com/film/2026/apr/20/charlize-theron-timothee-chalamet-ballet-comments",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": true,
+        "matched_aliases": [
+          "film"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "global Charlize Theron photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "charlize",
+        "theron"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-21T15:45:00.012Z",
+  "event_id": "evt-2026-04-21-us-politics-general-global-white-house",
+  "cluster_id": "evt-2026-04-21-us-politics-general-global-white-house",
+  "article_type": "analysis",
+  "title": "Democrats Move to Block Trump Plan to Collect Federal Workers’ Medical Data",
+  "slug": "democrats-move-to-block-trump-plan-to-collect-federal-worker",
+  "canonical_slug": "2026-04-21-democrats-move-to-block-trump-plan-to-collect-federal-worker",
+  "expected_url": "/article/2026-04-21-democrats-move-to-block-trump-plan-to-collect-federal-worker",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-21-democrats-move-to-block-trump-plan-to-collect-federal-worker.mdx",
+  "published_at": "2026-04-21T15:45:00.010Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/dnvr0exsyqg/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/dnvr0exsyqg/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-people-wearing-orange-vests-and-helmets-DNVR0exSyQg",
+    "asset_key": "unsplash:DNVR0exSyQg",
+    "alt_text": "Illustration for Democrats Move to Block Trump Plan to Collect Federal Workers’ Medical Data",
+    "selection_mode": "provider_download_new:unsplash:strong:relaxed",
+    "query_used": "collect federal workers photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "democrats",
+      "block",
+      "trump"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Democrats demand Trump administration halt plan to collect federal ...",
+        "url": "https://www.cbsnews.com/news/democrats-trump-federal-workers-health-data/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house",
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "collect federal workers photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "collect",
+        "federal",
+        "workers"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

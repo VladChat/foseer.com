@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-18T14:58:56.059Z",
+  "event_id": "evt-2026-04-18-us-politics-general-us-white-house",
+  "cluster_id": "evt-2026-04-18-us-politics-general-us-white-house",
+  "article_type": "analysis",
+  "title": "Appeals Court Clears White House Ballroom Construction to Resume",
+  "slug": "appeals-court-clears-white-house-ballroom-construction-to-re",
+  "canonical_slug": "2026-04-18-appeals-court-clears-white-house-ballroom-construction-to-re",
+  "expected_url": "/article/2026-04-18-appeals-court-clears-white-house-ballroom-construction-to-re",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-18-appeals-court-clears-white-house-ballroom-construction-to-re.mdx",
+  "published_at": "2026-04-18T14:58:56.057Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/36586972/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/36586972/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/new-house-construction-in-elk-grove-california-36586972/",
+    "asset_key": "pexels:36586972",
+    "alt_text": "A new house under construction in Elk Grove, showing wooden framing and building materials.",
+    "selection_mode": "provider_download_new:pexels:strong:strict",
+    "query_used": "House Ballroom Construction courtroom photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.5,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "appeals",
+      "court",
+      "clears"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.5,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Congress",
+    "White House",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Appeals court allows all White House ballroom construction to resume",
+        "url": "https://www.cbsnews.com/news/white-house-ballroom-construction-appeals-court/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "white-house",
+          "label": "White House",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "House Ballroom Construction courtroom photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "house",
+        "ballroom",
+        "construction"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-11T14:09:36.800Z",
+  "event_id": "evt-2026-05-10-us-politics-general-global-supreme-court",
+  "cluster_id": "evt-2026-05-10-us-politics-general-global-supreme-court",
+  "article_type": "report",
+  "title": "Supreme Court ruling ushers in a new era of gerrymandering",
+  "slug": "supreme-court-ruling-narrows-racial-gerrymandering-limits-op",
+  "canonical_slug": "2026-05-11-supreme-court-ruling-narrows-racial-gerrymandering-limits-op",
+  "expected_url": "/article/2026-05-11-supreme-court-ruling-narrows-racial-gerrymandering-limits-op",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-11-supreme-court-ruling-narrows-racial-gerrymandering-limits-op.mdx",
+  "published_at": "2026-05-11T14:09:36.799Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Supreme Court ruling ushers in a new era of gerrymandering",
+  "topics": [
+    "Supreme Court ruling ushers in a new era of gerrymandering"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/smqnmhppy_s/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/smqnmhppy_s/cover.jpg",
+    "source_url": "https://unsplash.com/photos/white-concrete-building-during-daytime-SMqnmHPPY_s",
+    "asset_key": "unsplash:SMqnmHPPY_s",
+    "alt_text": "Illustration for Supreme Court Ruling Narrows Racial Gerrymandering Limits, Opens Door to Partisan Maps",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Supreme Court Ruling Narrows courtroom photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 99,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "supreme",
+      "court",
+      "ruling"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Supreme Court",
+    "Court Ruling",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Supreme Court ruling ushers in a new era of gerrymandering",
+        "url": "https://www.cbsnews.com/news/scotus-ruling-ushers-in-a-new-era-of-gerrymandering/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "court-ruling",
+          "label": "Court Ruling",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Supreme Court Ruling Narrows courtroom photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "supreme",
+        "court",
+        "ruling",
+        "narrows"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

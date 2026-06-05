@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-04T13:11:34.094Z",
+  "event_id": "evt-2026-05-03-space-astronomy-general-global-nvidia",
+  "cluster_id": "evt-2026-05-03-space-astronomy-general-global-nvidia",
+  "article_type": "report",
+  "title": "Berkshire annual meeting: Greg Abel rules out break",
+  "slug": "greg-abel-signals-no-breakup-for-berkshire-as-post-buffett-e",
+  "canonical_slug": "2026-05-04-greg-abel-signals-no-breakup-for-berkshire-as-post-buffett-e",
+  "expected_url": "/article/2026-05-04-greg-abel-signals-no-breakup-for-berkshire-as-post-buffett-e",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-04-greg-abel-signals-no-breakup-for-berkshire-as-post-buffett-e.mdx",
+  "published_at": "2026-05-04T13:11:34.093Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "Berkshire annual meeting: Greg Abel rules out break",
+  "topics": [
+    "Berkshire annual meeting: Greg Abel rules out break"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/3nf0cavv0k/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/3nf0cavv0k/cover.jpg",
+    "source_url": "https://unsplash.com/photos/posted-no-trespassing-keep-out-signage-on-tree-at-daytime--3Nf0caVv0k",
+    "asset_key": "unsplash:-3Nf0caVv0k",
+    "alt_text": "Illustration for Greg Abel Signals No Breakup for Berkshire as Post-Buffett Era Nears",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "breakup post buffett photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "signals",
+      "breakup",
+      "berkshire"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Berkshire annual meeting: Greg Abel rules out break",
+        "url": "https://www.cnbc.com/2026/05/03/berkshire-annual-meeting-greg-abel-rules-out-break-up-stressing-continuity-with-buffett.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Space & Astronomy",
+      "Primary topic_id unsupported by article evidence: space-astronomy"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "breakup post buffett photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "breakup",
+        "post",
+        "buffett"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

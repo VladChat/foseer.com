@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-29T17:46:03.823Z",
+  "event_id": "evt-2026-05-28-sports-general-global-sec",
+  "cluster_id": "evt-2026-05-28-sports-general-global-sec",
+  "article_type": "analysis",
+  "title": "How Much Do Transfer Rankings Really Matter in the Premier League?",
+  "slug": "how-much-do-transfer-rankings-really-matter-in-the-premier-l",
+  "canonical_slug": "2026-05-29-how-much-do-transfer-rankings-really-matter-in-the-premier-l",
+  "expected_url": "/article/2026-05-29-how-much-do-transfer-rankings-really-matter-in-the-premier-l",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-29-how-much-do-transfer-rankings-really-matter-in-the-premier-l.mdx",
+  "published_at": "2026-05-29T17:46:03.820Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Transfers & Business",
+  "topics": [
+    "Transfers & Business"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "sophia_bennett",
+    "author_name": "Sophia Bennett",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/7059166/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/7059166/cover.jpg",
+    "source_url": "https://pixabay.com/photos/bitcoin-drone-stick-man-btc-crypto-7059166/",
+    "asset_key": "pixabay:7059166",
+    "alt_text": "Illustration for How Much Do Transfer Rankings Really Matter in the Premier League?",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Premier League photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "transfer",
+      "rankings",
+      "really"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Premier League",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Re-ranking all 189 Premier League transfers this season — from worst to best",
+        "url": "https://nytimes.com/athletic/7298037/2026/05/26/premier-league-transfers-ranked-season",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Premier League 2025-26 awards: Best game, worst transfer, best XI, more",
+        "url": "https://espn.com/soccer/story/_/id/48881937/premier-league-awards-2025-26-bill-connelly-best-game-best-worst-transfers-best-xi",
+        "domain": "espn.com"
+      },
+      {
+        "title": "Premier League predictions: Athletic subscribers, a child, a writer, an ...",
+        "url": "https://www.nytimes.com/athletic/7307165/2026/05/26/premier-league-predictions-results/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "premier-league",
+          "label": "Premier League",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": true,
+        "matched_aliases": [
+          "transfers"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Premier League photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "premier",
+        "league"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

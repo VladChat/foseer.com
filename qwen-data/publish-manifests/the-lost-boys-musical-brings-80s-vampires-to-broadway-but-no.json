@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-28T13:15:25.866Z",
+  "event_id": "evt-2026-04-27-film-tv-general-global",
+  "cluster_id": "evt-2026-04-27-film-tv-general-global",
+  "article_type": "report",
+  "title": "The Lost Boys review – 80s vampire musical lacks Broadway bite",
+  "slug": "the-lost-boys-musical-brings-80s-vampires-to-broadway-but-no",
+  "canonical_slug": "2026-04-28-the-lost-boys-musical-brings-80s-vampires-to-broadway-but-no",
+  "expected_url": "/article/2026-04-28-the-lost-boys-musical-brings-80s-vampires-to-broadway-but-no",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-28-the-lost-boys-musical-brings-80s-vampires-to-broadway-but-no.mdx",
+  "published_at": "2026-04-28T13:15:25.864Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "The Lost Boys review – 80s vampire musical lacks Broadway bite",
+  "topics": [
+    "The Lost Boys review – 80s vampire musical lacks Broadway bite"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/m_fg3wnkp7m/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/m_fg3wnkp7m/cover.jpg",
+    "source_url": "https://unsplash.com/photos/grayscale-photography-of-boy-wearing-sweater-M_fg3wnKP7M",
+    "asset_key": "unsplash:M_fg3wnKP7M",
+    "alt_text": "Illustration for ‘The Lost Boys’ musical brings 80s vampires to Broadway, but not the spark",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "The Lost Boys portrait",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "boys’",
+      "musical",
+      "brings"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "The Lost Boys review – 80s vampire musical lacks Broadway bite",
+        "url": "https://www.theguardian.com/stage/2026/apr/27/the-lost-boys-review-broadway",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": true,
+        "matched_aliases": [
+          "transfers"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "The Lost Boys portrait",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "lost",
+        "boys"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

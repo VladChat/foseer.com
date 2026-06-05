@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-13T13:41:45.659Z",
+  "event_id": "evt-2026-05-13-ai-big-tech-general-global-openai-google",
+  "cluster_id": "evt-2026-05-13-ai-big-tech-general-global-openai-google",
+  "article_type": "report",
+  "title": "Beware what you tell your AI chatbot. It’s not a shrink",
+  "slug": "why-your-ai-chatbot-isn-t-a-therapist-or-a-private-diary",
+  "canonical_slug": "2026-05-13-why-your-ai-chatbot-isn-t-a-therapist-or-a-private-diary",
+  "expected_url": "/article/2026-05-13-why-your-ai-chatbot-isn-t-a-therapist-or-a-private-diary",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-13-why-your-ai-chatbot-isn-t-a-therapist-or-a-private-diary.mdx",
+  "published_at": "2026-05-13T13:41:45.657Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "ai-big-tech",
+  "topic_label": "AI & Big Tech",
+  "subsection": "Beware what you tell your AI chatbot. It’s not a shrink",
+  "topics": [
+    "Beware what you tell your AI chatbot. It’s not a shrink"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/30530426/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/30530426/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/smartphone-display-with-ai-assistant-interface-30530426/",
+    "asset_key": "pexels:30530426",
+    "alt_text": "Illustration for Why your AI chatbot isn’t a therapist — or a private diary",
+    "selection_mode": "provider_download_new:pexels:strong:strict",
+    "query_used": "AI technology photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "chatbot",
+      "isn’t",
+      "private"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "AI & Big Tech",
+    "Artificial Intelligence",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Beware what you tell your AI chatbot. It’s not a shrink",
+        "url": "https://www.theguardian.com/commentisfree/2026/may/13/beware-what-you-tell-your-ai-chatbot-its-not-a-shrink-its-a-snitch",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Beware what you tell your AI chatbot. It’s not a shrink",
+          "url": "https://www.theguardian.com/commentisfree/2026/may/13/beware-what-you-tell-your-ai-chatbot-its-not-a-shrink-its-a-snitch",
+          "overlap_ratio": 0.2,
+          "shared_tokens": [
+            "chatbot"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "ai-big-tech",
+        "topic_label": "AI & Big Tech",
+        "supported": true,
+        "matched_aliases": [
+          "ai"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "AI technology photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}

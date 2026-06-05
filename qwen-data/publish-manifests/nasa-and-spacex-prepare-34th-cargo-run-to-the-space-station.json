@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-10T12:13:04.987Z",
+  "event_id": "evt-2026-05-09-space-astronomy-launch-global",
+  "cluster_id": "evt-2026-05-09-space-astronomy-launch-global",
+  "article_type": "report",
+  "title": "NASA’s SpaceX 34th Commercial Resupply Mission Overview",
+  "slug": "nasa-and-spacex-prepare-34th-cargo-run-to-the-space-station",
+  "canonical_slug": "2026-05-10-nasa-and-spacex-prepare-34th-cargo-run-to-the-space-station",
+  "expected_url": "/article/2026-05-10-nasa-and-spacex-prepare-34th-cargo-run-to-the-space-station",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-10-nasa-and-spacex-prepare-34th-cargo-run-to-the-space-station.mdx",
+  "published_at": "2026-05-10T12:13:04.985Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "NASA’s SpaceX 34th Commercial Resupply Mission Overview",
+  "topics": [
+    "NASA’s SpaceX 34th Commercial Resupply Mission Overview"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/mtztxsxg90a/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/mtztxsxg90a/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-black-and-white-photo-of-a-plane-in-the-sky-MTZTxsXg90A",
+    "asset_key": "unsplash:MTZTxsXg90A",
+    "alt_text": "a black and white photo of a plane in the sky",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "spacex prepare 34th photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.9,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "spacex",
+      "prepare",
+      "cargo"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "NASA",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "NASA’s SpaceX 34th Commercial Resupply Mission Overview",
+        "url": "https://www.nasa.gov/general/nasas-spacex-34th-commercial-resupply-mission-overview/",
+        "domain": "nasa.gov"
+      },
+      {
+        "title": "NASA’s Psyche Mission Captures Mars During Gravity Assist Approach",
+        "url": "https://science.nasa.gov/photojournal/nasas-psyche-mission-captures-mars-during-gravity-assist-approach/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "NASA’s Psyche Mission Captures Mars During Gravity Assist Approach",
+          "url": "https://science.nasa.gov/photojournal/nasas-psyche-mission-captures-mars-during-gravity-assist-approach/",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "nasa"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "nasa",
+          "label": "NASA",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "spacex prepare 34th photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "spacex",
+        "prepare",
+        "34th"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

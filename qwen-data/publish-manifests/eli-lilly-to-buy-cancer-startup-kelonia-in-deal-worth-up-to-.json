@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-22T12:16:44.449Z",
+  "event_id": "evt-2026-04-21-tech-attack-global-iran-israel",
+  "cluster_id": "evt-2026-04-21-tech-attack-global-iran-israel",
+  "article_type": "report",
+  "title": "Eli Lilly to acquire cancer drug maker Kelonia in deal worth up to $7B",
+  "slug": "eli-lilly-to-buy-cancer-startup-kelonia-in-deal-worth-up-to-",
+  "canonical_slug": "2026-04-22-eli-lilly-to-buy-cancer-startup-kelonia-in-deal-worth-up-to",
+  "expected_url": "/article/2026-04-22-eli-lilly-to-buy-cancer-startup-kelonia-in-deal-worth-up-to",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-22-eli-lilly-to-buy-cancer-startup-kelonia-in-deal-worth-up-to.mdx",
+  "published_at": "2026-04-22T12:16:44.447Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Eli Lilly to acquire cancer drug maker Kelonia in deal worth up to $7B",
+  "topics": [
+    "Eli Lilly to acquire cancer drug maker Kelonia in deal worth up to $7B"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/5380593/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/5380593/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/man-in-black-hoodie-using-a-computer-5380593/",
+    "asset_key": "pexels:5380593",
+    "alt_text": "Illustration for Eli Lilly to Buy Cancer Startup Kelonia in Deal Worth Up to $7 Billion",
+    "selection_mode": "provider_download_new:pexels:usable:relaxed",
+    "query_used": "cyber photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "lilly",
+      "cancer",
+      "startup"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Eli Lilly to acquire cancer drug maker Kelonia in deal worth up to $7B",
+        "url": "https://www.cnbc.com/2026/04/20/eli-lilly-to-acquire-cancer-drug-maker-kelonia.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Image query reinforces unsupported topic context: Cybersecurity"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "cyber photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-15T12:14:06.978Z",
+  "event_id": "evt-2026-04-15-pharma-fda-general-global-fda-russia",
+  "cluster_id": "evt-2026-04-15-pharma-fda-general-global-fda-russia",
+  "article_type": "report",
+  "title": "CDER Small Business and Industry Assistance (SBIA) Learn",
+  "slug": "fda-s-sbia-learn-expands-online-help-for-small-drug-develope",
+  "canonical_slug": "2026-04-15-fda-s-sbia-learn-expands-online-help-for-small-drug-develope",
+  "expected_url": "/article/2026-04-15-fda-s-sbia-learn-expands-online-help-for-small-drug-develope",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-15-fda-s-sbia-learn-expands-online-help-for-small-drug-develope.mdx",
+  "published_at": "2026-04-15T12:14:06.976Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "CDER Small Business and Industry Assistance (SBIA) Learn",
+  "topics": [
+    "CDER Small Business and Industry Assistance (SBIA) Learn"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/de6ryp1naho/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/de6ryp1naho/cover.jpg",
+    "source_url": "https://unsplash.com/photos/black-and-white-hospital-bed-in-the-middle-of-interior-building-DE6rYp1nAho",
+    "asset_key": "unsplash:DE6rYp1nAho",
+    "alt_text": "Illustration for FDA’s SBIA Learn Expands Online Help for Small Drug Developers",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "CDER Small Business and Industry medical photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "fda’s",
+      "learn",
+      "expands"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "CDER Small Business and Industry Assistance (SBIA) Learn",
+        "url": "http://www.fda.gov/drugs/cder-small-business-industry-assistance-sbia/cder-small-business-and-industry-assistance-sbia-learn",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "CDER Small Business and Industry medical photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "cder",
+        "small",
+        "business",
+        "industry"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

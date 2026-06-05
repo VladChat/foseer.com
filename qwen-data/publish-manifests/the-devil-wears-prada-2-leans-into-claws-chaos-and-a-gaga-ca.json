@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-04T13:09:43.164Z",
+  "event_id": "evt-2026-05-04-film-tv-general-global",
+  "cluster_id": "evt-2026-05-04-film-tv-general-global",
+  "article_type": "report",
+  "title": "The Devil Wears Prada 2: bitchy one-liners, devious double-crossing and Lady Gaga",
+  "slug": "the-devil-wears-prada-2-leans-into-claws-chaos-and-a-gaga-ca",
+  "canonical_slug": "2026-05-04-the-devil-wears-prada-2-leans-into-claws-chaos-and-a-gaga-ca",
+  "expected_url": "/article/2026-05-04-the-devil-wears-prada-2-leans-into-claws-chaos-and-a-gaga-ca",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-04-the-devil-wears-prada-2-leans-into-claws-chaos-and-a-gaga-ca.mdx",
+  "published_at": "2026-05-04T13:09:43.162Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "The Devil Wears Prada 2: bitchy one-liners, devious double-crossing and Lady Gaga",
+  "topics": [
+    "The Devil Wears Prada 2: bitchy one-liners, devious double-crossing and Lady Gaga"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/33517294/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/33517294/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/modern-prada-storefront-on-the-vegas-strip-33517294/",
+    "asset_key": "pexels:33517294",
+    "alt_text": "Contemporary architecture of the Prada storefront on Las Vegas Strip with palm trees and unique design.",
+    "selection_mode": "provider_download_new:pexels:acceptable:strict",
+    "query_used": "global The Devil Wears Prada photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "devil",
+      "wears",
+      "prada"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.6,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "The Devil Wears Prada 2: bitchy one-liners, devious double",
+        "url": "https://www.theguardian.com/film/2026/may/04/devil-wears-prada-2-spoilers",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "The Devil Wears Prada Is a Broken Promise to Millennials",
+        "url": "https://www.harpersbazaar.com/culture/film-tv/a71184217/the-devil-wears-prada-2-millennial-critique/",
+        "domain": "harpersbazaar.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": true,
+        "matched_aliases": [
+          "film"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "global The Devil Wears Prada photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "devil",
+        "wears",
+        "prada"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

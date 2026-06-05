@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-27T14:39:11.968Z",
+  "event_id": "evt-2026-05-27-major-leagues-general-global-nba",
+  "cluster_id": "evt-2026-05-27-major-leagues-general-global-nba",
+  "article_type": "report",
+  "title": "USMNT midfield makeup takes center stage as World Cup training camp opens",
+  "slug": "usmnt-midfield-under-scrutiny-as-world-cup-camp-opens-near-a",
+  "canonical_slug": "2026-05-27-usmnt-midfield-under-scrutiny-as-world-cup-camp-opens-near-a",
+  "expected_url": "/article/2026-05-27-usmnt-midfield-under-scrutiny-as-world-cup-camp-opens-near-a",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-27-usmnt-midfield-under-scrutiny-as-world-cup-camp-opens-near-a.mdx",
+  "published_at": "2026-05-27T14:39:11.967Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "USMNT midfield makeup takes center stage as World Cup training camp opens",
+  "topics": [
+    "USMNT midfield makeup takes center stage as World Cup training camp opens"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/31686994/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/31686994/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/majestic-tiger-stepping-through-snowy-wilderness-31686994/",
+    "asset_key": "pexels:31686994",
+    "alt_text": "Illustration for USMNT midfield under scrutiny as World Cup camp opens near Atlanta",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "World Cup football photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "usmnt",
+      "midfield",
+      "scrutiny"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "World Cup",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "USMNT midfield makeup takes center stage as World Cup training camp opens",
+        "url": "https://www.theguardian.com/football/2026/may/27/usmnt-midfield-roster-analysis",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "world-cup",
+          "label": "World Cup",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "World Cup football photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "world",
+        "cup"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

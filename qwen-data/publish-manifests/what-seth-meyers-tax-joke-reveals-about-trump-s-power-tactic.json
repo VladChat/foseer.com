@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-04T17:23:31.661Z",
+  "event_id": "evt-2026-06-04-film-tv-general-global",
+  "cluster_id": "evt-2026-06-04-film-tv-general-global",
+  "article_type": "analysis",
+  "title": "What Seth Meyers’ Tax Joke Reveals About Trump’s Power Tactics",
+  "slug": "what-seth-meyers-tax-joke-reveals-about-trump-s-power-tactic",
+  "canonical_slug": "2026-06-04-what-seth-meyers-tax-joke-reveals-about-trump-s-power-tactic",
+  "expected_url": "/article/2026-06-04-what-seth-meyers-tax-joke-reveals-about-trump-s-power-tactic",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-04-what-seth-meyers-tax-joke-reveals-about-trump-s-power-tactic.mdx",
+  "published_at": "2026-06-04T17:23:31.659Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "law-crime",
+  "topic_label": "Law & Crime",
+  "subsection": "Film & TV",
+  "topics": [
+    "Film & TV"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/wj0wwndmj3y/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/wj0wwndmj3y/cover.jpg",
+    "source_url": "https://unsplash.com/photos/us-coronavirus-covid-19-cases-WJ0WWNdmJ3Y",
+    "asset_key": "unsplash:WJ0WWNdmJ3Y",
+    "alt_text": "Illustration for What Seth Meyers’ Tax Joke Reveals About Trump’s Power Tactics",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Seth Meyers film photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 99,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "meyers’",
+      "trump’s",
+      "power"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Law & Crime",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Seth Meyers on Trump not paying taxes: ‘If he doesn’t wanna do something, he just doesn’t do it’",
+        "url": "https://www.theguardian.com/culture/2026/jun/04/seth-meyers-trump-taxes-george-santos",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "law-crime",
+          "label": "Law & Crime",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "law-crime",
+        "topic_label": "Law & Crime",
+        "supported": true,
+        "matched_aliases": [
+          "legal"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Seth Meyers film photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "seth",
+        "meyers"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

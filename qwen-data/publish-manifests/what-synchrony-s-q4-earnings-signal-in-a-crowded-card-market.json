@@ -1,0 +1,144 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-10T12:09:09.689Z",
+  "event_id": "evt-2026-04-10-companies-deals-general-global",
+  "cluster_id": "evt-2026-04-10-companies-deals-general-global",
+  "article_type": "report",
+  "title": "Q4 Earnings Highlights: Synchrony Financial (NYSE:SYF) Vs The ...",
+  "slug": "what-synchrony-s-q4-earnings-signal-in-a-crowded-card-market",
+  "canonical_slug": "2026-04-10-what-synchrony-s-q4-earnings-signal-in-a-crowded-card-market",
+  "expected_url": "/article/2026-04-10-what-synchrony-s-q4-earnings-signal-in-a-crowded-card-market",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-10-what-synchrony-s-q4-earnings-signal-in-a-crowded-card-market.mdx",
+  "published_at": "2026-04-10T12:09:09.686Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "companies-deals",
+  "topic_label": "Companies & Deals",
+  "subsection": "Q4 Earnings Highlights: Synchrony Financial (NYSE:SYF) Vs The ...",
+  "topics": [
+    "Q4 Earnings Highlights: Synchrony Financial (NYSE:SYF) Vs The ..."
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "liam_parker",
+    "author_name": "Liam Parker",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/wmf3js8url4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/wmf3js8url4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-person-with-a-large-pile-of-paper-on-the-head-WMf3Js8URL4",
+    "asset_key": "unsplash:WMf3Js8URL4",
+    "alt_text": "Illustration for What Synchrony’s Q4 Earnings Signal in a Crowded Card Market",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Earnings Signal portrait",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "corporate",
+      "office building",
+      "business deal",
+      "synchrony’s",
+      "earnings",
+      "signal"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Companies & Deals",
+    "Earnings",
+    "Visa",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Q4 Earnings Highlights: Synchrony Financial (NYSE:SYF) Vs The ...",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/syf/pressreleases/1236937/q4-earnings-highlights-synchrony-financial-nysesyf-vs-the-rest-of-the-credit-card-stocks/",
+        "domain": "theglobeandmail.com"
+      },
+      {
+        "title": "Unpacking Q4 Earnings: Visa (NYSE:V) In The Context Of Other ...",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/v/pressreleases/1193892/unpacking-q4-earnings-visa-nysev-in-the-context-of-other-credit-card-stocks/",
+        "domain": "theglobeandmail.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Unpacking Q4 Earnings: Visa (NYSE:V) In The Context Of Other ...",
+          "url": "https://www.theglobeandmail.com/investing/markets/stocks/v/pressreleases/1193892/unpacking-q4-earnings-visa-nysev-in-the-context-of-other-credit-card-stocks/",
+          "overlap_ratio": 0.17,
+          "shared_tokens": [
+            "earnings"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "companies-deals",
+          "label": "Companies & Deals",
+          "type": "topic"
+        },
+        {
+          "slug": "earnings",
+          "label": "Earnings",
+          "type": "theme"
+        },
+        {
+          "slug": "visa",
+          "label": "Visa",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "companies-deals",
+        "topic_label": "Companies & Deals",
+        "supported": true,
+        "matched_aliases": [
+          "companies",
+          "earnings"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Earnings Signal portrait",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "earnings",
+        "signal"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

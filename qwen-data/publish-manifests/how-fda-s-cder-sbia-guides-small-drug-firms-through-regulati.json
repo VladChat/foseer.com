@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-22T12:17:03.653Z",
+  "event_id": "evt-2026-04-21-pharma-fda-general-global-fda-meta",
+  "cluster_id": "evt-2026-04-21-pharma-fda-general-global-fda-meta",
+  "article_type": "report",
+  "title": "About CDER Small Business and Industry Assistance (SBIA)",
+  "slug": "how-fda-s-cder-sbia-guides-small-drug-firms-through-regulati",
+  "canonical_slug": "2026-04-22-how-fda-s-cder-sbia-guides-small-drug-firms-through-regulati",
+  "expected_url": "/article/2026-04-22-how-fda-s-cder-sbia-guides-small-drug-firms-through-regulati",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-22-how-fda-s-cder-sbia-guides-small-drug-firms-through-regulati.mdx",
+  "published_at": "2026-04-22T12:17:03.651Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "About CDER Small Business and Industry Assistance (SBIA)",
+  "topics": [
+    "About CDER Small Business and Industry Assistance (SBIA)"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/ykrpdedkkry/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/ykrpdedkkry/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-smiling-woman-in-surgical-attire-YkRpDEdkkRY",
+    "asset_key": "unsplash:YkRpDEdkkRY",
+    "alt_text": "Illustration for How FDA’s CDER SBIA Guides Small Drug Firms Through Regulation",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Industry Assistance SBIA medical photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "fda’s",
+      "guides",
+      "small"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "About CDER Small Business and Industry Assistance (SBIA)",
+        "url": "http://www.fda.gov/drugs/cder-small-business-industry-assistance-sbia/about-cder-small-business-and-industry-assistance-sbia",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Industry Assistance SBIA medical photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "industry",
+        "assistance",
+        "sbia"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

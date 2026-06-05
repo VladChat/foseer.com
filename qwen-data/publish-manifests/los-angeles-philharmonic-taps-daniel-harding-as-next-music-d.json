@@ -1,0 +1,127 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-27T14:38:38.866Z",
+  "event_id": "evt-2026-05-26-film-tv-general-global",
+  "cluster_id": "evt-2026-05-26-film-tv-general-global",
+  "article_type": "report",
+  "title": "Los Angeles Philharmonic announces Daniel Harding as next music director",
+  "slug": "los-angeles-philharmonic-taps-daniel-harding-as-next-music-d",
+  "canonical_slug": "2026-05-27-los-angeles-philharmonic-taps-daniel-harding-as-next-music-d",
+  "expected_url": "/article/2026-05-27-los-angeles-philharmonic-taps-daniel-harding-as-next-music-d",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-27-los-angeles-philharmonic-taps-daniel-harding-as-next-music-d.mdx",
+  "published_at": "2026-05-27T14:38:38.864Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "creators-platforms",
+  "topic_label": "Creators & Platforms",
+  "subsection": "Los Angeles Philharmonic announces Daniel Harding as next music director",
+  "topics": [
+    "Los Angeles Philharmonic announces Daniel Harding as next music director"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/28613680/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/28613680/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/professional-camera-setup-on-stabilizer-rig-28613680/",
+    "asset_key": "pexels:28613680",
+    "alt_text": "Illustration for Los Angeles Philharmonic Taps Daniel Harding as Next Music Director",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Daniel Harding concert photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 71,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 79,
+    "image_fit_score": 0.92,
+    "visual_concepts": [
+      "content creator",
+      "streaming",
+      "social platform",
+      "angeles",
+      "philharmonic",
+      "daniel"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.92,
+    "is_fallback": false
+  },
+  "tags": [
+    "Creators & Platforms",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Los Angeles Philharmonic announces Daniel Harding as next music director",
+        "url": "https://www.theguardian.com/music/2026/may/26/los-angeles-philharmonic-daniel-harding-new-music-director",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Risk-taking, rigour and radicalism – Daniel Harding is an exciting prospect for Los Angeles",
+        "url": "https://www.theguardian.com/music/2026/may/27/risk-taking-rigour-and-radicalism-daniel-harding-is-an-exciting-prospect-for-los-angeles",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "creators-platforms",
+          "label": "Creators & Platforms",
+          "type": "topic"
+        },
+        {
+          "slug": "influencer-economy",
+          "label": "Influencer Economy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "creators-platforms",
+        "topic_label": "Creators & Platforms",
+        "supported": true,
+        "matched_aliases": [
+          "creator economy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Daniel Harding concert photo",
+      "article_relevance_score": 71,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "daniel",
+        "harding"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

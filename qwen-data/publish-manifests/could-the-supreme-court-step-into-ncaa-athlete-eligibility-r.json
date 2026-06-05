@@ -1,0 +1,136 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-01T15:18:14.112Z",
+  "event_id": "evt-2026-04-29-news-general-global-supreme-court",
+  "cluster_id": "evt-2026-04-29-news-general-global-supreme-court",
+  "article_type": "analysis",
+  "title": "Could the Supreme Court Step Into NCAA Athlete Eligibility Rules?",
+  "slug": "could-the-supreme-court-step-into-ncaa-athlete-eligibility-r",
+  "canonical_slug": "2026-05-01-could-the-supreme-court-step-into-ncaa-athlete-eligibility-r",
+  "expected_url": "/article/2026-05-01-could-the-supreme-court-step-into-ncaa-athlete-eligibility-r",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-01-could-the-supreme-court-step-into-ncaa-athlete-eligibility-r.mdx",
+  "published_at": "2026-05-01T15:18:14.110Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "companies-deals",
+  "topic_label": "Companies & Deals",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/muhodrmhtpc/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/muhodrmhtpc/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-boy-sitting-on-a-baseball-field-muHoDRmhTPc",
+    "asset_key": "unsplash:muHoDRmhTPc",
+    "alt_text": "Illustration for Could the Supreme Court Step Into NCAA Athlete Eligibility Rules?",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "athlete eligibility rules photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "supreme",
+      "court",
+      "athlete"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Companies & Deals",
+    "Supreme Court",
+    "Voting Rights",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "My Turn | Will the Supreme Court decide eligibility for NCAA athletes? | Guest Commentary",
+        "url": "https://news-gazette.com/opinion/guest-commentary/my-turn-will-the-supreme-court-decide-eligibility-for-ncaa-athletes/article_6983e105-d138-4b50-a074-2e75661b8b81.html",
+        "domain": "news-gazette.com"
+      },
+      {
+        "title": "US supreme court 'demolishes' Voting Rights Act, gutting provision ...",
+        "url": "https://www.theguardian.com/us-news/2026/apr/29/supreme-court-louisiana-congressional-map-case-ruling",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "companies-deals",
+          "label": "Companies & Deals",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "voting-rights",
+          "label": "Voting Rights",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "companies-deals",
+        "topic_label": "Companies & Deals",
+        "supported": true,
+        "matched_aliases": [
+          "deals",
+          "earnings"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "athlete eligibility rules photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "athlete",
+        "eligibility",
+        "rules"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

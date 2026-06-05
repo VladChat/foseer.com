@@ -1,0 +1,126 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-02T12:11:28.076Z",
+  "event_id": "evt-2026-05-02-major-leagues-general-global",
+  "cluster_id": "evt-2026-05-02-major-leagues-general-global",
+  "article_type": "report",
+  "title": "DK Metcalf will not face criminal charges over Lions fan altercation ...",
+  "slug": "dk-metcalf-avoids-charges-in-lions-fan-altercation-what-that",
+  "canonical_slug": "2026-05-02-dk-metcalf-avoids-charges-in-lions-fan-altercation-what-that",
+  "expected_url": "/article/2026-05-02-dk-metcalf-avoids-charges-in-lions-fan-altercation-what-that",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-02-dk-metcalf-avoids-charges-in-lions-fan-altercation-what-that.mdx",
+  "published_at": "2026-05-02T12:11:28.074Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "DK Metcalf will not face criminal charges over Lions fan altercation ...",
+  "topics": [
+    "DK Metcalf will not face criminal charges over Lions fan altercation ..."
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/557219/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/557219/cover.jpg",
+    "source_url": "https://pixabay.com/photos/hockey-helmet-face-sport-portrait-557219/",
+    "asset_key": "pixabay:557219",
+    "alt_text": "Illustration for DK Metcalf Avoids Charges in Lions Fan Altercation: What That Really Means",
+    "selection_mode": "provider_download_new:pixabay:acceptable:broad",
+    "query_used": "athlete portrait",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 67,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 76,
+    "image_fit_score": 0.9,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "metcalf",
+      "avoids",
+      "charges"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "DK Metcalf will not face criminal charges over Lions fan altercation ...",
+        "url": "https://www.nytimes.com/athletic/7247021/2026/05/01/dk-metcalf-lions-fan-no-criminal-charges/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Major Leagues",
+      "Primary topic_id unsupported by article evidence: major-leagues"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "athlete portrait",
+      "article_relevance_score": 67,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}

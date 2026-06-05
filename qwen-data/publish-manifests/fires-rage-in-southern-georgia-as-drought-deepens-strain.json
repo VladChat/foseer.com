@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-30T15:58:05.660Z",
+  "event_id": "evt-2026-04-29-space-astronomy-general-us",
+  "cluster_id": "evt-2026-04-29-space-astronomy-general-us",
+  "article_type": "analysis",
+  "title": "Fires Rage in Southern Georgia as Drought Deepens Strain",
+  "slug": "fires-rage-in-southern-georgia-as-drought-deepens-strain",
+  "canonical_slug": "2026-04-30-fires-rage-in-southern-georgia-as-drought-deepens-strain",
+  "expected_url": "/article/2026-04-30-fires-rage-in-southern-georgia-as-drought-deepens-strain",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-30-fires-rage-in-southern-georgia-as-drought-deepens-strain.mdx",
+  "published_at": "2026-04-30T15:58:05.658Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "Space & Astronomy",
+  "topics": [
+    "Space & Astronomy"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/ssm1qmvqyoo/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/ssm1qmvqyoo/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-fire-is-burning-on-the-side-of-a-road-SSm1QMVQyOo",
+    "asset_key": "unsplash:SSm1QMVQyOo",
+    "alt_text": "Illustration for Fires Rage in Southern Georgia as Drought Deepens Strain",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Fires Rage photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "fires",
+      "southern",
+      "georgia"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Fires Rage in Georgia",
+        "url": "https://science.nasa.gov/earth/earth-observatory/fires-rage-in-georgia/",
+        "domain": "science.nasa.gov"
+      },
+      {
+        "title": "NASA Fires Up Powerful Lithium",
+        "url": "https://www.nasa.gov/missions/tech-demonstration/nasa-fires-up-powerful-lithium-fed-thruster-for-trips-to-mars/",
+        "domain": "nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "NASA Fires Up Powerful Lithium",
+          "url": "https://www.nasa.gov/missions/tech-demonstration/nasa-fires-up-powerful-lithium-fed-thruster-for-trips-to-mars/",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "fires"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Fires Rage photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "fires",
+        "rage"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

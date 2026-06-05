@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-26T12:06:20.930Z",
+  "event_id": "evt-2026-04-26-major-leagues-general-global-nfl",
+  "cluster_id": "evt-2026-04-26-major-leagues-general-global-nfl",
+  "article_type": "report",
+  "title": "Manchester City pull off comeback win against Southampton to reach FA Cup final",
+  "slug": "manchester-city-s-late-surge-beats-southampton-to-seal-fa-cu",
+  "canonical_slug": "2026-04-26-manchester-city-s-late-surge-beats-southampton-to-seal-fa-cu",
+  "expected_url": "/article/2026-04-26-manchester-city-s-late-surge-beats-southampton-to-seal-fa-cu",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-26-manchester-city-s-late-surge-beats-southampton-to-seal-fa-cu.mdx",
+  "published_at": "2026-04-26T12:06:20.927Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Manchester City pull off comeback win against Southampton to reach FA Cup final",
+  "topics": [
+    "Manchester City pull off comeback win against Southampton to reach FA Cup final"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/qadwzdwse_8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/qadwzdwse_8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-standing-in-front-of-condenser-microphone-QadWZdWSe_8",
+    "asset_key": "unsplash:QadWZdWSe_8",
+    "alt_text": "Illustration for Manchester City’s late surge beats Southampton to seal FA Cup final spot",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "late surge beats photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "manchester",
+      "city’s",
+      "surge"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Manchester City pull off comeback win against Southampton to reach FA Cup final",
+        "url": "https://www.theguardian.com/football/2026/apr/25/manchester-city-southampton-fa-cup-semi-final-match-report",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Manchester City considering Chelsea's Enzo Fernandez as summer ...",
+        "url": "https://www.nytimes.com/athletic/7219002/2026/04/23/enzo-fernandez-manchester-city-chelsea-transfer/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "late surge beats photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "late",
+        "surge",
+        "beats"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

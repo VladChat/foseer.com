@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-30T12:46:51.011Z",
+  "event_id": "evt-2026-05-29-major-leagues-general-global-senate",
+  "cluster_id": "evt-2026-05-29-major-leagues-general-global-senate",
+  "article_type": "report",
+  "title": "‘This sort of match needs a man’: Vallejo criticises female umpire at French Open",
+  "slug": "vallejo-sparks-sexism-row-over-female-umpire-after-french-op",
+  "canonical_slug": "2026-05-30-vallejo-sparks-sexism-row-over-female-umpire-after-french-op",
+  "expected_url": "/article/2026-05-30-vallejo-sparks-sexism-row-over-female-umpire-after-french-op",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-30-vallejo-sparks-sexism-row-over-female-umpire-after-french-op.mdx",
+  "published_at": "2026-05-30T12:46:51.010Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "‘This sort of match needs a man’: Vallejo criticises female umpire at French Open",
+  "topics": [
+    "‘This sort of match needs a man’: Vallejo criticises female umpire at French Open"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/7099540/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/7099540/cover.jpg",
+    "source_url": "https://pixabay.com/photos/meditation-yoga-health-mental-7099540/",
+    "asset_key": "pixabay:7099540",
+    "alt_text": "Illustration for Vallejo sparks sexism row over female umpire after French Open defeat",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "French Open photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "vallejo",
+      "sparks",
+      "sexism"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "‘This sort of match needs a man’: Vallejo criticises female umpire at French Open",
+        "url": "https://www.theguardian.com/sport/2026/may/29/adolfo-daniel-vallejo-moise-kouame-female-umpire-french-open-tennis",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Major Leagues",
+      "Primary topic_id unsupported by article evidence: major-leagues"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "French Open photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "french",
+        "open"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

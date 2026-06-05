@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-22T13:47:08.997Z",
+  "event_id": "evt-2026-05-22-major-leagues-general-global-nba-congress",
+  "cluster_id": "evt-2026-05-22-major-leagues-general-global-nba-congress",
+  "article_type": "report",
+  "title": "The NAACP’s boycott call is a wake-up moment for the American Black athlete",
+  "slug": "naacp-s-call-to-boycott-southern-power-conferences-tests-bla",
+  "canonical_slug": "2026-05-22-naacp-s-call-to-boycott-southern-power-conferences-tests-bla",
+  "expected_url": "/article/2026-05-22-naacp-s-call-to-boycott-southern-power-conferences-tests-bla",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-22-naacp-s-call-to-boycott-southern-power-conferences-tests-bla.mdx",
+  "published_at": "2026-05-22T13:47:08.995Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "athletes-culture",
+  "topic_label": "Athletes & Culture",
+  "subsection": "The NAACP’s boycott call is a wake-up moment for the American Black athlete",
+  "topics": [
+    "The NAACP’s boycott call is a wake-up moment for the American Black athlete"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/sec-clarifies-application-of-federal-securities-la/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/sec-clarifies-application-of-federal-securities-la/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:sec-clarifies-application-of-federal-securities-la",
+    "alt_text": "Illustration for NAACP’s Call to Boycott Southern Power Conferences Tests Black Athlete Clout",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Call basketball photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 40,
+    "asset_quality_score": 53,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "athlete portrait",
+      "sports culture",
+      "fans",
+      "naacp’s",
+      "boycott",
+      "southern"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Athletes & Culture",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "The NAACP’s boycott call is a wake-up moment for the American Black athlete",
+        "url": "https://www.theguardian.com/sport/2026/may/22/naacp-boycott-college-sports-black-athletes",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "NAACP asks Black athletes to boycott SEC, ACC powers in latest sports-as-politics pressure campaign",
+        "url": "https://www.foxnews.com/outkick-sports/naacp-black-athletes-boycott-sec-acc-sports-politics-pressure-campaign",
+        "domain": "foxnews.com"
+      },
+      {
+        "title": "NAACP calls for black athletes to withhold support for college sports in southern states over voting rights",
+        "url": "https://tdalabamamag.com/2026/05/19/naacp-calls-for-black-athletes-to-withhold-support-for-college-sports-in-southern-states-over-voting-rights/",
+        "domain": "tdalabamamag.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "athletes-culture",
+          "label": "Athletes & Culture",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "athletes-culture",
+        "topic_label": "Athletes & Culture",
+        "supported": true,
+        "matched_aliases": [
+          "athletes",
+          "athlete"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "Call basketball photo",
+      "article_relevance_score": 40,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "call"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

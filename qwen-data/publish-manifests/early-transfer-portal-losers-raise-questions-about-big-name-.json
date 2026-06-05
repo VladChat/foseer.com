@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-05T12:48:05.320Z",
+  "event_id": "evt-2026-05-05-events-tournaments-general-global-nba",
+  "cluster_id": "evt-2026-05-05-events-tournaments-general-global-nba",
+  "article_type": "report",
+  "title": "Basketball transfer portal’s early losers: Big names, big swings, bigger questions",
+  "slug": "early-transfer-portal-losers-raise-questions-about-big-name-",
+  "canonical_slug": "2026-05-05-early-transfer-portal-losers-raise-questions-about-big-name",
+  "expected_url": "/article/2026-05-05-early-transfer-portal-losers-raise-questions-about-big-name",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-05-early-transfer-portal-losers-raise-questions-about-big-name.mdx",
+  "published_at": "2026-05-05T12:48:05.318Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Basketball transfer portal’s early losers: Big names, big swings, bigger questions",
+  "topics": [
+    "Basketball transfer portal’s early losers: Big names, big swings, bigger questions"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/mdv-ssavxew/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/mdv-ssavxew/cover.jpg",
+    "source_url": "https://unsplash.com/photos/grayscale-photo-of-men-in-black-shirts-mDV-SsavXEw",
+    "asset_key": "unsplash:mDV-SsavXEw",
+    "alt_text": "Illustration for Early transfer portal losers raise questions about big‑name strategies",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Early basketball photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "early",
+      "transfer",
+      "portal"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Basketball",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Basketball transfer portal’s early losers: Big names, big swings, bigger questions",
+        "url": "https://usatoday.com/story/sports/ncaab/2026/05/04/college-basketball-transfer-porta-biggest-losers-kentucky-kansas-lsu/89890300007",
+        "domain": "usatoday.com"
+      },
+      {
+        "title": "Juke Harris, top uncommitted player in transfer portal, picks ...",
+        "url": "https://www.nytimes.com/athletic/7252723/2026/05/04/juke-harris-tennessee-transfer-portal/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "basketball",
+          "label": "Basketball",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "basketball"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Early basketball photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "early",
+        "basketball"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

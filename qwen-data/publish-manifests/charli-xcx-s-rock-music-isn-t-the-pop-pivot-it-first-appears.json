@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-09T12:14:00.824Z",
+  "event_id": "evt-2026-05-08-film-tv-general-global-nba",
+  "cluster_id": "evt-2026-05-08-film-tv-general-global-nba",
+  "article_type": "report",
+  "title": "Charli xcx: Rock Music review – is she really pivoting from pop? Don’t be so sure …",
+  "slug": "charli-xcx-s-rock-music-isn-t-the-pop-pivot-it-first-appears",
+  "canonical_slug": "2026-05-09-charli-xcx-s-rock-music-isn-t-the-pop-pivot-it-first-appears",
+  "expected_url": "/article/2026-05-09-charli-xcx-s-rock-music-isn-t-the-pop-pivot-it-first-appears",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-09-charli-xcx-s-rock-music-isn-t-the-pop-pivot-it-first-appears.mdx",
+  "published_at": "2026-05-09T12:14:00.822Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "music-celebrities",
+  "topic_label": "Music & Celebrities",
+  "subsection": "Charli xcx: Rock Music review – is she really pivoting from pop? Don’t be so sure …",
+  "topics": [
+    "Charli xcx: Rock Music review – is she really pivoting from pop? Don’t be so sure …"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/v_hv-mzsi-0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/v_hv-mzsi-0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/two-people-silhouetted-against-stage-lights-at-a-concert-V_HV-MzsI-0",
+    "asset_key": "unsplash:V_HV-MzsI-0",
+    "alt_text": "Illustration for Charli XCX’s ‘Rock Music’ isn’t the pop pivot it first appears",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Rock Music concert photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "music",
+      "concert",
+      "album",
+      "charli",
+      "xcx’s",
+      "‘rock"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Music & Celebrities",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Charli xcx: Rock Music review – is she really pivoting from pop? Don’t be so sure …",
+        "url": "https://www.theguardian.com/music/2026/may/08/charli-xcx-rock-music-review-is-she-really-pivoting-from-pop-dont-be-so-sure",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "music-celebrities",
+          "label": "Music & Celebrities",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "music-celebrities",
+        "topic_label": "Music & Celebrities",
+        "supported": true,
+        "matched_aliases": [
+          "music"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Rock Music concert photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "rock",
+        "music"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

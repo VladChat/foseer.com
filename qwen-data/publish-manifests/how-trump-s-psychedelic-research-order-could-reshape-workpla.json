@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-23T12:41:59.834Z",
+  "event_id": "evt-2026-04-23-mental-health-general-global",
+  "cluster_id": "evt-2026-04-23-mental-health-general-global",
+  "article_type": "report",
+  "title": "Psychedelic Therapy Could Redefine Career Mental Health, Experts Say",
+  "slug": "how-trump-s-psychedelic-research-order-could-reshape-workpla",
+  "canonical_slug": "2026-04-23-how-trump-s-psychedelic-research-order-could-reshape-workpla",
+  "expected_url": "/article/2026-04-23-how-trump-s-psychedelic-research-order-could-reshape-workpla",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-23-how-trump-s-psychedelic-research-order-could-reshape-workpla.mdx",
+  "published_at": "2026-04-23T12:41:59.832Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "mental-health",
+  "topic_label": "Mental Health",
+  "subsection": "Psychedelic Therapy Could Redefine Career Mental Health, Experts Say",
+  "topics": [
+    "Psychedelic Therapy Could Redefine Career Mental Health, Experts Say"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/9603565/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/9603565/cover.jpg",
+    "source_url": "https://pixabay.com/photos/ai-generated-counseling-9603565/",
+    "asset_key": "pixabay:9603565",
+    "alt_text": "Illustration for How Trump’s Psychedelic Research Order Could Reshape Workplace Mental Health",
+    "selection_mode": "provider_download_new:pixabay:strong:strict",
+    "query_used": "Mental Health medical photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "mental health",
+      "therapy",
+      "counseling",
+      "trump’s",
+      "psychedelic",
+      "research"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Mental Health",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Psychedelic Therapy Could Redefine Career Mental Health, Experts Say",
+        "url": "https://forbes.com/sites/bryanrobinson/2026/04/21/psychedelic-therapy-could--redefine-career-mental-health-experts-say",
+        "domain": "forbes.com"
+      },
+      {
+        "title": "Donald Trump Backs Psychedelic Research for Mental Health",
+        "url": "https://www.timesnownews.com/health/donald-trump-backs-psychedelic-research-for-mental-health-what-it-means-for-treatment-article-154123942",
+        "domain": "timesnownews.com"
+      },
+      {
+        "title": "What to know about psychedelics treating mental health disorders ...",
+        "url": "https://abcnews.com/health/psychedelics-treating-mental-health-disorders-amid-trumps-executive/story",
+        "domain": "abcnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "mental-health",
+          "label": "Mental Health",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "mental-health",
+        "topic_label": "Mental Health",
+        "supported": true,
+        "matched_aliases": [
+          "Mental Health"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Mental Health medical photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "mental",
+        "health"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

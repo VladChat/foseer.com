@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-03T16:01:23.074Z",
+  "event_id": "evt-2026-06-02-us-politics-general-global-white-house",
+  "cluster_id": "evt-2026-06-02-us-politics-general-global-white-house",
+  "article_type": "report",
+  "title": "White House Correspondents' Dinner rescheduled for July 24",
+  "slug": "white-house-correspondents-dinner-moved-to-july-24-after-apr",
+  "canonical_slug": "2026-06-03-white-house-correspondents-dinner-moved-to-july-24-after-apr",
+  "expected_url": "/article/2026-06-03-white-house-correspondents-dinner-moved-to-july-24-after-apr",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-03-white-house-correspondents-dinner-moved-to-july-24-after-apr.mdx",
+  "published_at": "2026-06-03T16:01:23.072Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "White House Correspondents' Dinner rescheduled for July 24",
+  "topics": [
+    "White House Correspondents' Dinner rescheduled for July 24"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/vw78uegyw24/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/vw78uegyw24/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-couple-of-bottles-of-cleaning-products-next-to-a-towel-vw78UEgyw24",
+    "asset_key": "unsplash:vw78UEgyw24",
+    "alt_text": "Illustration for White House Correspondents Dinner Moved to July 24 After April Attack",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "White House Correspondents Dinner government photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 99,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "white",
+      "house",
+      "correspondents'"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Congress",
+    "White House",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "White House Correspondents' Dinner rescheduled for July 24",
+        "url": "https://www.cbsnews.com/news/white-house-correspondents-dinner-rescheduled-after-shooting/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "white-house",
+          "label": "White House",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "White House Correspondents Dinner government photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "white",
+        "house",
+        "correspondents",
+        "dinner"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

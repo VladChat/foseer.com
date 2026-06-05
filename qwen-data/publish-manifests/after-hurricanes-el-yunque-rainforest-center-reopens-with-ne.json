@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-17T12:11:00.347Z",
+  "event_id": "evt-2026-04-16-climate-extreme-weather-general-global-israel-faa",
+  "cluster_id": "evt-2026-04-16-climate-extreme-weather-general-global-israel-faa",
+  "article_type": "report",
+  "title": "Puerto Rico’s rainforest center reborn: in pictures",
+  "slug": "after-hurricanes-el-yunque-rainforest-center-reopens-with-ne",
+  "canonical_slug": "2026-04-17-after-hurricanes-el-yunque-rainforest-center-reopens-with-ne",
+  "expected_url": "/article/2026-04-17-after-hurricanes-el-yunque-rainforest-center-reopens-with-ne",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-17-after-hurricanes-el-yunque-rainforest-center-reopens-with-ne.mdx",
+  "published_at": "2026-04-17T12:11:00.344Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "climate-extreme-weather",
+  "topic_label": "Climate & Extreme Weather",
+  "subsection": "Puerto Rico’s rainforest center reborn: in pictures",
+  "topics": [
+    "Puerto Rico’s rainforest center reborn: in pictures"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/11784825/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/11784825/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/trees-in-the-forest-11784825/",
+    "asset_key": "pexels:11784825",
+    "alt_text": "Explore the dense vegetation and towering trees of a Puerto Rican rainforest in Río Grande.",
+    "selection_mode": "provider_download_new:pexels:strong:strict",
+    "query_used": "Hurricanes El Yunque Rainforest climate photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 99,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "extreme weather",
+      "storm",
+      "climate",
+      "hurricanes",
+      "yunque",
+      "rainforest"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Climate & Extreme Weather",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Puerto Rico’s rainforest center reborn: in pictures",
+        "url": "https://www.theguardian.com/environment/gallery/2026/apr/16/puerto-rico-el-yunque-rainforest-in-pictures",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Climate & Extreme Weather",
+      "Primary topic_id unsupported by article evidence: climate-extreme-weather",
+      "Image query reinforces unsupported topic context: Climate & Extreme Weather"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "climate-extreme-weather",
+        "topic_label": "Climate & Extreme Weather",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Hurricanes El Yunque Rainforest climate photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "hurricanes",
+        "yunque",
+        "rainforest"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

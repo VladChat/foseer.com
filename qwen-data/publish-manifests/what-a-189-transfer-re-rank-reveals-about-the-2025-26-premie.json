@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-28T14:52:41.494Z",
+  "event_id": "evt-2026-05-27-events-tournaments-signing-global",
+  "cluster_id": "evt-2026-05-27-events-tournaments-signing-global",
+  "article_type": "report",
+  "title": "Re-ranking all 189 Premier League transfers this season — from worst to best",
+  "slug": "what-a-189-transfer-re-rank-reveals-about-the-2025-26-premie",
+  "canonical_slug": "2026-05-28-what-a-189-transfer-re-rank-reveals-about-the-2025-26-premie",
+  "expected_url": "/article/2026-05-28-what-a-189-transfer-re-rank-reveals-about-the-2025-26-premie",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-28-what-a-189-transfer-re-rank-reveals-about-the-2025-26-premie.mdx",
+  "published_at": "2026-05-28T14:52:41.492Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Re-ranking all 189 Premier League transfers this season — from worst to best",
+  "topics": [
+    "Re-ranking all 189 Premier League transfers this season — from worst to best"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/1222404/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/1222404/cover.jpg",
+    "source_url": "https://pixabay.com/photos/baseball-summer-professional-pro-1222404/",
+    "asset_key": "pixabay:1222404",
+    "alt_text": "Illustration for What a 189‑transfer re‑rank reveals about the 2025-26 Premier League",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Premier League photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 56,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 68,
+    "image_fit_score": 0.87,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "189‑transfer",
+      "re‑rank",
+      "premier"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.87,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Premier League",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Re-ranking all 189 Premier League transfers this season — from worst to best",
+        "url": "https://nytimes.com/athletic/7298037/2026/05/26/premier-league-transfers-ranked-season",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Re-ranking all 189 Premier League transfers this season",
+        "url": "https://www.nytimes.com/athletic/7298037/2026/05/26/premier-league-transfers-ranked-season/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Premier League 2025-26 awards: Best game, worst si...",
+        "url": "https://www.espn.com/soccer/story/_/id/48881937/premier-league-awards-2025-26-bill-connelly-best-game-best-worst-transfers-best-xi",
+        "domain": "espn.com"
+      },
+      {
+        "title": "Premier League 2025-26 awards: Best game, worst transfer, best XI, more",
+        "url": "https://espn.com/soccer/story/_/id/48881937/premier-league-awards-2025-26-bill-connelly-best-game-best-worst-transfers-best-xi",
+        "domain": "espn.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "premier-league",
+          "label": "Premier League",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": true,
+        "matched_aliases": [
+          "transfers"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Premier League photo",
+      "article_relevance_score": 56,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "premier",
+        "league"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

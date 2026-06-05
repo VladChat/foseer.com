@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-15T12:13:32.373Z",
+  "event_id": "evt-2026-04-14-world-geopolitics-general-global-openai-india",
+  "cluster_id": "evt-2026-04-14-world-geopolitics-general-global-openai-india",
+  "article_type": "report",
+  "title": "At least 16 wounded in Turkey high school shooting; gunman dead",
+  "slug": "at-least-16-wounded-in-turkey-high-school-shooting-attacker-",
+  "canonical_slug": "2026-04-15-at-least-16-wounded-in-turkey-high-school-shooting-attacker",
+  "expected_url": "/article/2026-04-15-at-least-16-wounded-in-turkey-high-school-shooting-attacker",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-15-at-least-16-wounded-in-turkey-high-school-shooting-attacker.mdx",
+  "published_at": "2026-04-15T12:13:32.371Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "At least 16 wounded in Turkey high school shooting; gunman dead",
+  "topics": [
+    "At least 16 wounded in Turkey high school shooting; gunman dead"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/14928746/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/14928746/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/facade-of-gray-concrete-building-14928746/",
+    "asset_key": "pexels:14928746",
+    "alt_text": "A low angle view of the historic Istanbul high school facade with trees.",
+    "selection_mode": "provider_download_new:pexels:strong:strict",
+    "query_used": "Turkey High School Shooting technology photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.4,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "least",
+      "wounded",
+      "turkey"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Diplomacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "At least 16 wounded in Turkey high school shooting; gunman dead",
+        "url": "https://www.cbsnews.com/news/turkey-high-school-shooting-gunman-dead/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Turkey High School Shooting technology photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "turkey",
+        "high",
+        "school",
+        "shooting"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-16T12:14:16.829Z",
+  "event_id": "evt-2026-05-15-news-general-global-fda",
+  "cluster_id": "evt-2026-05-15-news-general-global-fda",
+  "article_type": "report",
+  "title": "After a hard-fought victory to legalise medical cannabis in the UK, why is it still so hard to access?",
+  "slug": "why-uk-medical-cannabis-is-legal-but-still-out-of-reach",
+  "canonical_slug": "2026-05-16-why-uk-medical-cannabis-is-legal-but-still-out-of-reach",
+  "expected_url": "/article/2026-05-16-why-uk-medical-cannabis-is-legal-but-still-out-of-reach",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-16-why-uk-medical-cannabis-is-legal-but-still-out-of-reach.mdx",
+  "published_at": "2026-05-16T12:14:16.828Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "After a hard-fought victory to legalise medical cannabis in the UK, why is it still so hard to access?",
+  "topics": [
+    "After a hard-fought victory to legalise medical cannabis in the UK, why is it still so hard to access?"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/bitcoin-hits-new-high/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/bitcoin-hits-new-high/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:bitcoin-hits-new-high",
+    "alt_text": "Illustration for Why UK medical cannabis is legal but still out of reach",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "UK courtroom photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 39,
+    "asset_quality_score": 56,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "medical",
+      "cannabis",
+      "legal"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "After a hard-fought victory to legalise medical cannabis in the UK, why is it still so hard to access?",
+        "url": "https://theguardian.com/news/2026/may/14/after-a-hard-fought-victory-to-legalise-medical-cannabis-in-the-uk-why-is-it-still-so-hard-to-access",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "united-kingdom",
+          "label": "United Kingdom",
+          "type": "geography"
+        },
+        {
+          "slug": "explainer",
+          "label": "Explainer",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "UK courtroom photo",
+      "article_relevance_score": 39,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}

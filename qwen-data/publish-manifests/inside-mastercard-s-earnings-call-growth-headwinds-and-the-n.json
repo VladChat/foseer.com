@@ -1,0 +1,137 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-22T16:38:12.543Z",
+  "event_id": "evt-2026-05-22-crypto-bitcoin-general-global",
+  "cluster_id": "evt-2026-05-22-crypto-bitcoin-general-global",
+  "article_type": "analysis",
+  "title": "Inside Mastercard’s Earnings Call: Growth, Headwinds and the Next Likely Move",
+  "slug": "inside-mastercard-s-earnings-call-growth-headwinds-and-the-n",
+  "canonical_slug": "2026-05-22-inside-mastercard-s-earnings-call-growth-headwinds-and-the-n",
+  "expected_url": "/article/2026-05-22-inside-mastercard-s-earnings-call-growth-headwinds-and-the-n",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-22-inside-mastercard-s-earnings-call-growth-headwinds-and-the-n.mdx",
+  "published_at": "2026-05-22T16:38:12.541Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "companies-deals",
+  "topic_label": "Companies & Deals",
+  "subsection": "AI & Big Tech",
+  "topics": [
+    "AI & Big Tech"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "ava_mitchell",
+    "author_name": "Ava Mitchell",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/lgb8j50arhk/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/lgb8j50arhk/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-computer-screen-with-a-line-graph-on-it-lGB8j50arHk",
+    "asset_key": "unsplash:lGB8j50arHk",
+    "alt_text": "Illustration for Inside Mastercard’s Earnings Call: Growth, Headwinds and the Next Likely Move",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Earnings Call Growth Headwinds technology photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "inside",
+      "mastercard’s",
+      "earnings"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Companies & Deals",
+    "Earnings",
+    "Mastercard",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Mastercard Earnings Call Highlights Growth Amid Headwinds",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/ma-n/pressreleases/2052072/mastercard-earnings-call-highlights-growth-amid-headwinds/",
+        "domain": "theglobeandmail.com"
+      },
+      {
+        "title": "Prenetics (PRE) Q1 2026 Earnings Call Transcript",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/pre-q/pressreleases/2019332/prenetics-pre-q1-2026-earnings-call-transcript/",
+        "domain": "theglobeandmail.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "companies-deals",
+          "label": "Companies & Deals",
+          "type": "topic"
+        },
+        {
+          "slug": "earnings",
+          "label": "Earnings",
+          "type": "theme"
+        },
+        {
+          "slug": "mastercard",
+          "label": "Mastercard",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "companies-deals",
+        "topic_label": "Companies & Deals",
+        "supported": true,
+        "matched_aliases": [
+          "companies",
+          "earnings"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Earnings Call Growth Headwinds technology photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "earnings",
+        "call",
+        "growth",
+        "headwinds"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

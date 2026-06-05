@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-01T12:15:00.878Z",
+  "event_id": "evt-2026-05-01-film-tv-general-global",
+  "cluster_id": "evt-2026-05-01-film-tv-general-global",
+  "article_type": "report",
+  "title": "Add to playlist: the snarling Irish folk of Madra Salach and the week’s best new tracks",
+  "slug": "madra-salach-s-snarling-irish-folk-steps-into-the-spotlight",
+  "canonical_slug": "2026-05-01-madra-salach-s-snarling-irish-folk-steps-into-the-spotlight",
+  "expected_url": "/article/2026-05-01-madra-salach-s-snarling-irish-folk-steps-into-the-spotlight",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-01-madra-salach-s-snarling-irish-folk-steps-into-the-spotlight.mdx",
+  "published_at": "2026-05-01T12:15:00.876Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "creators-platforms",
+  "topic_label": "Creators & Platforms",
+  "subsection": "Add to playlist: the snarling Irish folk of Madra Salach and the week’s best new tracks",
+  "topics": [
+    "Add to playlist: the snarling Irish folk of Madra Salach and the week’s best new tracks"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/bmxeozramue/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/bmxeozramue/cover.jpg",
+    "source_url": "https://unsplash.com/photos/musicians-perform-on-stage-with-bright-lights-and-audience-BMXEoZRamuE",
+    "asset_key": "unsplash:BMXEoZRamuE",
+    "alt_text": "Illustration for Madra Salach’s snarling Irish folk steps into the spotlight",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Irish concert photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "content creator",
+      "streaming",
+      "social platform",
+      "madra",
+      "salach’s",
+      "snarling"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Creators & Platforms",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Add to playlist: the snarling Irish folk of Madra Salach and the week’s best new tracks",
+        "url": "https://www.theguardian.com/music/2026/may/01/add-to-playlist-irish-folk-madra-salach-best-new-tracks",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "creators-platforms",
+          "label": "Creators & Platforms",
+          "type": "topic"
+        },
+        {
+          "slug": "influencer-economy",
+          "label": "Influencer Economy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "creators-platforms",
+        "topic_label": "Creators & Platforms",
+        "supported": true,
+        "matched_aliases": [
+          "creator economy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Irish concert photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "irish"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

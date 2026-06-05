@@ -1,0 +1,145 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-24T15:22:45.390Z",
+  "event_id": "evt-2026-05-24-ai-big-tech-general-global-microsoft",
+  "cluster_id": "evt-2026-05-24-ai-big-tech-general-global-microsoft",
+  "article_type": "analysis",
+  "title": "Microsoft’s New Responsible Tech Lead: What Changes, What Doesn’t",
+  "slug": "microsoft-s-new-responsible-tech-lead-what-changes-what-does",
+  "canonical_slug": "2026-05-24-microsoft-s-new-responsible-tech-lead-what-changes-what-does",
+  "expected_url": "/article/2026-05-24-microsoft-s-new-responsible-tech-lead-what-changes-what-does",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-24-microsoft-s-new-responsible-tech-lead-what-changes-what-does.mdx",
+  "published_at": "2026-05-24T15:22:45.388Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "ai-big-tech",
+  "topic_label": "AI & Big Tech",
+  "subsection": "AI & Big Tech",
+  "topics": [
+    "AI & Big Tech"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/tech-gadgets/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/tech-gadgets/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:tech-gadgets",
+    "alt_text": "Illustration for Microsoft’s New Responsible Tech Lead: What Changes, What Doesn’t",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "New Responsible Tech Lead technology photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 70,
+    "asset_quality_score": 56,
+    "editorial_fit_score": 66,
+    "image_fit_score": 0.86,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "microsoft’s",
+      "responsible",
+      "lead:"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.86,
+    "is_fallback": false
+  },
+  "tags": [
+    "AI & Big Tech",
+    "Artificial Intelligence",
+    "Microsoft",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Microsoft's new responsible tech lead on high",
+        "url": "https://www.cnbc.com/2026/05/23/microsofts-new-responsible-tech-lead-on-high-speed-ai-development.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "Microsoft was positioned to win in AI coding. Outages got in the way",
+        "url": "https://www.cnbc.com/2026/05/22/microsoft-was-positioned-to-win-in-ai-coding-outages-got-in-the-way.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Microsoft was positioned to win in AI coding. Outages got in the way",
+          "url": "https://www.cnbc.com/2026/05/22/microsoft-was-positioned-to-win-in-ai-coding-outages-got-in-the-way.html",
+          "overlap_ratio": 0.17,
+          "shared_tokens": [
+            "microsoft"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        },
+        {
+          "slug": "microsoft",
+          "label": "Microsoft",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "ai-big-tech",
+        "topic_label": "AI & Big Tech",
+        "supported": true,
+        "matched_aliases": [
+          "ai"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "New Responsible Tech Lead technology photo",
+      "article_relevance_score": 70,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "responsible",
+        "tech",
+        "lead",
+        "technology"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

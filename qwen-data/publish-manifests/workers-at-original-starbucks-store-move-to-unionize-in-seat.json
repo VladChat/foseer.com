@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-19T12:00:24.881Z",
+  "event_id": "evt-2026-04-17-economy-markets-general-global",
+  "cluster_id": "evt-2026-04-17-economy-markets-general-global",
+  "article_type": "report",
+  "title": "Employees at first ever Starbucks store seek to unionize amid fight for contract",
+  "slug": "workers-at-original-starbucks-store-move-to-unionize-in-seat",
+  "canonical_slug": "2026-04-19-workers-at-original-starbucks-store-move-to-unionize-in-seat",
+  "expected_url": "/article/2026-04-19-workers-at-original-starbucks-store-move-to-unionize-in-seat",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-19-workers-at-original-starbucks-store-move-to-unionize-in-seat.mdx",
+  "published_at": "2026-04-19T12:00:24.880Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Employees at first ever Starbucks store seek to unionize amid fight for contract",
+  "topics": [
+    "Employees at first ever Starbucks store seek to unionize amid fight for contract"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/s2i2sryzr8e/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/s2i2sryzr8e/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-man-in-a-moving-truck-on-a-city-street-s2I2SryzR8E",
+    "asset_key": "unsplash:s2I2SryzR8E",
+    "alt_text": "Illustration for Workers at original Starbucks store move to unionize in Seattle",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "original store move photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "workers",
+      "original",
+      "starbucks"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Employees at first ever Starbucks store seek to unionize amid fight for contract",
+        "url": "https://www.theguardian.com/business/2026/apr/17/first-ever-starbucks-store-seeks-to-unionize",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "market"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "original store move photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "original",
+        "store",
+        "move"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

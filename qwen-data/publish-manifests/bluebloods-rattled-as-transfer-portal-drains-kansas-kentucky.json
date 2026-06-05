@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-17T12:11:39.807Z",
+  "event_id": "evt-2026-04-17-events-tournaments-general-global-nfl-nba",
+  "cluster_id": "evt-2026-04-17-events-tournaments-general-global-nfl-nba",
+  "article_type": "report",
+  "title": "Kansas, Kentucky and UNC among teams hit hard by college basketball transfer portal losses",
+  "slug": "bluebloods-rattled-as-transfer-portal-drains-kansas-kentucky",
+  "canonical_slug": "2026-04-17-bluebloods-rattled-as-transfer-portal-drains-kansas-kentucky",
+  "expected_url": "/article/2026-04-17-bluebloods-rattled-as-transfer-portal-drains-kansas-kentucky",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-17-bluebloods-rattled-as-transfer-portal-drains-kansas-kentucky.mdx",
+  "published_at": "2026-04-17T12:11:39.805Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Kansas, Kentucky and UNC among teams hit hard by college basketball transfer portal losses",
+  "topics": [
+    "Kansas, Kentucky and UNC among teams hit hard by college basketball transfer portal losses"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/28192812/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/28192812/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/houston-vs-unlv-28192812/",
+    "asset_key": "pexels:28192812",
+    "alt_text": "Houston college football match with vibrant crowd and fire effects. Captures the sports spirit.",
+    "selection_mode": "provider_download_new:pexels:strong:strict",
+    "query_used": "Transfer Portal photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "bluebloods",
+      "rattled",
+      "transfer"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Basketball",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Kansas, Kentucky and UNC among teams hit hard by college basketball transfer portal losses",
+        "url": "https://nytimes.com/athletic/7197288/2026/04/15/college-basketball-transfer-portal-kansas-kentucky-unc-losses",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "College basketball transfer portal winners, losers: Louisville up, Kansas down",
+        "url": "https://usatoday.com/story/sports/ncaab/2026/04/15/winners-losers-transfer-portal-mens-ncaa-basketball/89623687007",
+        "domain": "usatoday.com"
+      },
+      {
+        "title": "College basketball transfer portal rankings: Top 20 players still uncommitted",
+        "url": "https://usatoday.com/story/sports/ncaab/2026/04/13/transfer-portal-rankings-mens-college-basketball-players-uncommitted/89595615007",
+        "domain": "usatoday.com"
+      },
+      {
+        "title": "Where Former Kansas Basketball Players Have Landed in Transfer Portal",
+        "url": "https://sports.yahoo.com/articles/where-former-kansas-basketball-players-145600955.html",
+        "domain": "sports.yahoo.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "basketball",
+          "label": "Basketball",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "nba",
+          "basketball"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Transfer Portal photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "transfer",
+        "portal"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

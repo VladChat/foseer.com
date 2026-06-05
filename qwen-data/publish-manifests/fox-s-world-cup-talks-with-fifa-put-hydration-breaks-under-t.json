@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-23T15:20:27.479Z",
+  "event_id": "evt-2026-05-23-major-leagues-general-global-fifa",
+  "cluster_id": "evt-2026-05-23-major-leagues-general-global-fifa",
+  "article_type": "analysis",
+  "title": "Fox’s World Cup Talks With FIFA Put Hydration Breaks Under the Spotlight",
+  "slug": "fox-s-world-cup-talks-with-fifa-put-hydration-breaks-under-t",
+  "canonical_slug": "2026-05-23-fox-s-world-cup-talks-with-fifa-put-hydration-breaks-under-t",
+  "expected_url": "/article/2026-05-23-fox-s-world-cup-talks-with-fifa-put-hydration-breaks-under-t",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-23-fox-s-world-cup-talks-with-fifa-put-hydration-breaks-under-t.mdx",
+  "published_at": "2026-05-23T15:20:27.477Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Major Leagues",
+  "topics": [
+    "Major Leagues"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/2306471/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/2306471/cover.jpg",
+    "source_url": "https://pixabay.com/photos/coffee-pen-notebook-open-notebook-2306471/",
+    "asset_key": "pixabay:2306471",
+    "alt_text": "coffee, pen, notebook, open notebook, empty notebook, caffeine, cup, cafe, coffee cup, latte, latte art, cappuccino, morning coffee, coffee break, beverage, coffee, coffee, coffee, coffee, coffee",
+    "selection_mode": "provider_download_new:pixabay:strong:strict",
+    "query_used": "World Cup government photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "fox’s",
+      "world",
+      "talks"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.6,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "World Cup",
+    "FIFA",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Fox in 'conversations' with FIFA on World Cup hydration break use ...",
+        "url": "https://www.nytimes.com/athletic/7301184/2026/05/22/fox-world-cup-hydration-breaks-half-time/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Transfers & Business",
+      "Primary topic_id unsupported by article evidence: transfers-business"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "world-cup",
+          "label": "World Cup",
+          "type": "theme"
+        },
+        {
+          "slug": "fifa",
+          "label": "FIFA",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "World Cup government photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "world",
+        "cup"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-29T14:20:18.591Z",
+  "event_id": "evt-2026-05-27-news-general-global-google",
+  "cluster_id": "evt-2026-05-27-news-general-global-google",
+  "article_type": "report",
+  "title": "New York Leads in Controlling Heat-Trapping Methane. That Could ...",
+  "slug": "new-york-s-methane-crackdown-a-quiet-shift-with-big-climate-",
+  "canonical_slug": "2026-05-29-new-york-s-methane-crackdown-a-quiet-shift-with-big-climate",
+  "expected_url": "/article/2026-05-29-new-york-s-methane-crackdown-a-quiet-shift-with-big-climate",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-29-new-york-s-methane-crackdown-a-quiet-shift-with-big-climate.mdx",
+  "published_at": "2026-05-29T14:20:18.589Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "climate-extreme-weather",
+  "topic_label": "Climate & Extreme Weather",
+  "subsection": "New York Leads in Controlling Heat-Trapping Methane. That Could ...",
+  "topics": [
+    "New York Leads in Controlling Heat-Trapping Methane. That Could ..."
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/4684217/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/4684217/cover.jpg",
+    "source_url": "https://pixabay.com/photos/pxclimateaction-climate-landscape-4684217/",
+    "asset_key": "pixabay:4684217",
+    "alt_text": "Illustration for New York’s Methane Crackdown: A Quiet Shift With Big Climate Stakes",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Methane Crackdown emissions photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 65,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 74,
+    "image_fit_score": 0.9,
+    "visual_concepts": [
+      "extreme weather",
+      "storm",
+      "climate",
+      "york’s",
+      "methane",
+      "crackdown:"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.9,
+    "is_fallback": false
+  },
+  "tags": [
+    "Climate & Extreme Weather",
+    "New York",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "New York Leads in Controlling Heat-Trapping Methane. That Could ...",
+        "url": "https://www.nytimes.com/2026/05/26/nyregion/new-york-hochul-methane-climate-law.html",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "type": "topic"
+        },
+        {
+          "slug": "new-york",
+          "label": "New York",
+          "type": "geography"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "climate-extreme-weather",
+        "topic_label": "Climate & Extreme Weather",
+        "supported": true,
+        "matched_aliases": [
+          "climate",
+          "emissions",
+          "warming"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Methane Crackdown emissions photo",
+      "article_relevance_score": 65,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "methane",
+        "crackdown"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

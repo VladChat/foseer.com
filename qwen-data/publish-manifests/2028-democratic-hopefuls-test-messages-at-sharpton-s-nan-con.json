@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-11T11:54:32.385Z",
+  "event_id": "evt-2026-04-11-us-politics-general-global-nfl-iran",
+  "cluster_id": "evt-2026-04-11-us-politics-general-global-nfl-iran",
+  "article_type": "report",
+  "title": "First glimpse of 2028 Democratic field at National Action Network Convention",
+  "slug": "2028-democratic-hopefuls-test-messages-at-sharpton-s-nan-con",
+  "canonical_slug": "2026-04-11-2028-democratic-hopefuls-test-messages-at-sharpton-s-nan-con",
+  "expected_url": "/article/2026-04-11-2028-democratic-hopefuls-test-messages-at-sharpton-s-nan-con",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-11-2028-democratic-hopefuls-test-messages-at-sharpton-s-nan-con.mdx",
+  "published_at": "2026-04-11T11:54:32.383Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "First glimpse of 2028 Democratic field at National Action Network Convention",
+  "topics": [
+    "First glimpse of 2028 Democratic field at National Action Network Convention"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/nevyjp9nrg8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/nevyjp9nrg8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/large-blue-structure-with-democracy-in-action-text-NevyJp9nRG8",
+    "asset_key": "unsplash:NevyJp9nRG8",
+    "alt_text": "Illustration for 2028 Democratic Hopefuls Test Messages at Sharpton’s NAN Convention",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Democratic photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 99,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "democratic",
+      "hopefuls",
+      "messages"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "First glimpse of 2028 Democratic field at National Action Network Convention",
+        "url": "https://www.cbsnews.com/news/national-action-network-convention-offers-first-glimpse-2028-democratic-field/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: U.S. Politics & Policy",
+      "Primary topic_id unsupported by article evidence: us-politics"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Democratic photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "democratic"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

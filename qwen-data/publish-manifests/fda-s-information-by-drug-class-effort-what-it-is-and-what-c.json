@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-27T17:35:43.738Z",
+  "event_id": "evt-2026-05-27-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-05-27-pharma-fda-general-global-fda",
+  "article_type": "analysis",
+  "title": "FDA’s ‘Information by Drug Class’ Effort: What It Is and What Comes Next",
+  "slug": "fda-s-information-by-drug-class-effort-what-it-is-and-what-c",
+  "canonical_slug": "2026-05-27-fda-s-information-by-drug-class-effort-what-it-is-and-what-c",
+  "expected_url": "/article/2026-05-27-fda-s-information-by-drug-class-effort-what-it-is-and-what-c",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-27-fda-s-information-by-drug-class-effort-what-it-is-and-what-c.mdx",
+  "published_at": "2026-05-27T17:35:43.736Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Pharma & FDA",
+  "topics": [
+    "Pharma & FDA"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "liam_parker",
+    "author_name": "Liam Parker",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/6634116/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/6634116/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/close-up-of-letters-on-paper-6634116/",
+    "asset_key": "pexels:6634116",
+    "alt_text": "Illustration for FDA’s ‘Information by Drug Class’ Effort: What It Is and What Comes Next",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Drug Class medical photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 31,
+    "asset_quality_score": 93,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "fda’s",
+      "‘information",
+      "class’"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Information by Drug Class",
+        "url": "http://www.fda.gov/drugs/drug-safety-and-availability/information-drug-class",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Drug Class medical photo",
+      "article_relevance_score": 31,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "drug",
+        "class"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

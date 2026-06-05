@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-12T13:25:44.496Z",
+  "event_id": "evt-2026-05-12-pharma-fda-approval-global-fda",
+  "cluster_id": "evt-2026-05-12-pharma-fda-approval-global-fda",
+  "article_type": "report",
+  "title": "Verified Clinical Benefit",
+  "slug": "fda-converts-select-cancer-drugs-from-accelerated-to-traditi",
+  "canonical_slug": "2026-05-12-fda-converts-select-cancer-drugs-from-accelerated-to-traditi",
+  "expected_url": "/article/2026-05-12-fda-converts-select-cancer-drugs-from-accelerated-to-traditi",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-12-fda-converts-select-cancer-drugs-from-accelerated-to-traditi.mdx",
+  "published_at": "2026-05-12T13:25:44.495Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Verified Clinical Benefit",
+  "topics": [
+    "Verified Clinical Benefit"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/lsfdbsfwktc/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/lsfdbsfwktc/cover.jpg",
+    "source_url": "https://unsplash.com/photos/several-earth-illustration-lsFDBSFWktc",
+    "asset_key": "unsplash:lsFDBSFWktc",
+    "alt_text": "Illustration for FDA Converts Select Cancer Drugs From Accelerated to Traditional Approval",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "global Traditional Approval photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 95,
+    "editorial_fit_score": 99,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "converts",
+      "select",
+      "cancer"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Verified Clinical Benefit",
+        "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/verified-clinical-benefit-cancer-accelerated-approvals",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Verified Clinical Benefit",
+          "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/verified-clinical-benefit-cancer-accelerated-approvals",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "global Traditional Approval photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "traditional",
+        "approval"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

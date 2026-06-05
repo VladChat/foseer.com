@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-12T16:35:00.893Z",
+  "event_id": "evt-2026-05-12-major-leagues-general-global-nba",
+  "cluster_id": "evt-2026-05-12-major-leagues-general-global-nba",
+  "article_type": "analysis",
+  "title": "LeBron James Leaves Lakers Future Open After Thunder Sweep",
+  "slug": "lebron-james-leaves-lakers-future-open-after-thunder-sweep",
+  "canonical_slug": "2026-05-12-lebron-james-leaves-lakers-future-open-after-thunder-sweep",
+  "expected_url": "/article/2026-05-12-lebron-james-leaves-lakers-future-open-after-thunder-sweep",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-12-lebron-james-leaves-lakers-future-open-after-thunder-sweep.mdx",
+  "published_at": "2026-05-12T16:35:00.890Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Major Leagues",
+  "topics": [
+    "Major Leagues"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/1011596/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/1011596/cover.jpg",
+    "source_url": "https://pixabay.com/photos/shoes-basketball-lebron-james-shoes-1011596/",
+    "asset_key": "pixabay:1011596",
+    "alt_text": "shoes, basketball, lebron james shoes, feet, footwear, basketball shoes, nike, fashion, style, closeup, shoes, shoes, basketball, basketball, basketball, basketball, basketball, nike",
+    "selection_mode": "provider_download_new:pixabay:acceptable:strict",
+    "query_used": "James basketball photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "lebron",
+      "james",
+      "leaves"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Playoffs",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "LeBron James unsure on what’s next after Lakers swept in playoffs: ‘My future? I don’t know’",
+        "url": "https://www.theguardian.com/sport/2026/may/12/lebron-james-lakers-playoffs-nba-thunder",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "playoffs",
+          "label": "Playoffs",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "nba"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "James basketball photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "james"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

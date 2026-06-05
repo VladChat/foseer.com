@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-28T17:45:39.614Z",
+  "event_id": "evt-2026-05-28-sports-general-us-senate-congress",
+  "cluster_id": "evt-2026-05-28-sports-general-us-senate-congress",
+  "article_type": "analysis",
+  "title": "Inside the Bipartisan Senate Push to Rein In College Sports",
+  "slug": "inside-the-bipartisan-senate-push-to-rein-in-college-sports",
+  "canonical_slug": "2026-05-28-inside-the-bipartisan-senate-push-to-rein-in-college-sports",
+  "expected_url": "/article/2026-05-28-inside-the-bipartisan-senate-push-to-rein-in-college-sports",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-28-inside-the-bipartisan-senate-push-to-rein-in-college-sports.mdx",
+  "published_at": "2026-05-28T17:45:39.612Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/7005497/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/7005497/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/a-football-beside-a-vince-lombardi-trophy-7005497/",
+    "asset_key": "pexels:7005497",
+    "alt_text": "Illustration for Inside the Bipartisan Senate Push to Rein In College Sports",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "College Sports government photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 99,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "inside",
+      "bipartisan",
+      "senate"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Congress",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "A bipartisan Senate bill is coming to stabilize college sports. What’s in it, and will it work?",
+        "url": "https://nytimes.com/athletic/7311989/2026/05/27/senate-college-sports-bill-cruz-cantwell",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Key Sens. Cruz, Cantwell look to break college sports logjam in Congress with a bipartisan bill",
+        "url": "https://clickondetroit.com/news/politics/2026/05/27/key-senators-cruz-cantwell-look-to-break-college-sports-logjam-in-congress-with-a-bipartisan-bill",
+        "domain": "clickondetroit.com"
+      },
+      {
+        "title": "Bipartisan college sports bill proposes salary cap, transfer limit",
+        "url": "https://espn.com/espn/story/_/id/48891780/bipartisan-college-sports-bill-proposes-salary-cap-transfer-limit",
+        "domain": "espn.com"
+      },
+      {
+        "title": "Key senators strike bipartisan deal on sweeping college sports reform with transfer, eligibility and cap enforcement",
+        "url": "https://sports.yahoo.com/college-football/article/key-senators-strike-bipartisan-deal-on-sweeping-college-sports-reform-with-transfer-eligibility-and-cap-enforcement-152527197.html",
+        "domain": "sports.yahoo.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "College Sports government photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "college",
+        "sports"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

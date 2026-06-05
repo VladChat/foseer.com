@@ -1,0 +1,140 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-11T11:56:29.583Z",
+  "event_id": "evt-2026-04-11-cybersecurity-general-us",
+  "cluster_id": "evt-2026-04-11-cybersecurity-general-us",
+  "article_type": "report",
+  "title": "US software stocks slump on renewed AI disruption jitters",
+  "slug": "us-software-stocks-slide-as-anthropic-ai-update-revives-disr",
+  "canonical_slug": "2026-04-11-us-software-stocks-slide-as-anthropic-ai-update-revives-disr",
+  "expected_url": "/article/2026-04-11-us-software-stocks-slide-as-anthropic-ai-update-revives-disr",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-11-us-software-stocks-slide-as-anthropic-ai-update-revives-disr.mdx",
+  "published_at": "2026-04-11T11:56:29.582Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "US software stocks slump on renewed AI disruption jitters",
+  "topics": [
+    "US software stocks slump on renewed AI disruption jitters"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/212mzzooxtk/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/212mzzooxtk/cover.jpg",
+    "source_url": "https://unsplash.com/photos/the-united-states-of-america-sign-in-front-of-a-building-212mZzooxtk",
+    "asset_key": "unsplash:212mZzooxtk",
+    "alt_text": "Illustration for US software stocks slide as Anthropic AI update revives disruption fears",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "us software stocks photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "software",
+      "stocks",
+      "slide"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Artificial Intelligence",
+    "Stock Market",
+    "United States",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "US software stocks slump on renewed AI disruption jitters",
+        "url": "https://reuters.com/business/us-software-stocks-fall-anthropics-new-ai-model-revives-disruption-fears-2026-04-09",
+        "domain": "reuters.com"
+      },
+      {
+        "title": "US software stocks fall as Anthropic's new AI model revives disruption fears",
+        "url": "https://virginiabusiness.com/us-software-stocks-anthropic-ai-cybersecurity-concerns",
+        "domain": "virginiabusiness.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        },
+        {
+          "slug": "stock-market",
+          "label": "Stock Market",
+          "type": "theme"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "us software stocks photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "software",
+        "stocks"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

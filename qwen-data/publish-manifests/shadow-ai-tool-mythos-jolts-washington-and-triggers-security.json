@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-25T12:05:29.189Z",
+  "event_id": "evt-2026-04-24-cybersecurity-general-washington-microsoft",
+  "cluster_id": "evt-2026-04-24-cybersecurity-general-washington-microsoft",
+  "article_type": "report",
+  "title": "How a shadow AI tool transfixed Washington",
+  "slug": "shadow-ai-tool-mythos-jolts-washington-and-triggers-security",
+  "canonical_slug": "2026-04-25-shadow-ai-tool-mythos-jolts-washington-and-triggers-security",
+  "expected_url": "/article/2026-04-25-shadow-ai-tool-mythos-jolts-washington-and-triggers-security",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-25-shadow-ai-tool-mythos-jolts-washington-and-triggers-security.mdx",
+  "published_at": "2026-04-25T12:05:29.188Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "How a shadow AI tool transfixed Washington",
+  "topics": [
+    "How a shadow AI tool transfixed Washington"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/xjqvwukqhry/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/xjqvwukqhry/cover.jpg",
+    "source_url": "https://unsplash.com/photos/the-capitol-building-in-washington-d-c-is-shown-xJqvWUKqHrY",
+    "asset_key": "unsplash:xJqvWUKqHrY",
+    "alt_text": "The capitol building in washington d c is shown",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "AI government photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "shadow",
+      "‘mythos’",
+      "jolts"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.6,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Artificial Intelligence",
+    "Washington",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "How a shadow AI tool transfixed Washington",
+        "url": "https://www.washingtonpost.com/technology/2026/04/24/anthropic-mythos-ai-washington-cybersecurity-hacking-risk/",
+        "domain": "washingtonpost.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        },
+        {
+          "slug": "washington",
+          "label": "Washington",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "Cybersecurity",
+          "cyber",
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "AI government photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}

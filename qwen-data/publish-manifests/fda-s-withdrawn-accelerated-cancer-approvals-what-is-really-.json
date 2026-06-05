@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-29T16:07:39.191Z",
+  "event_id": "evt-2026-04-28-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-04-28-pharma-fda-general-global-fda",
+  "article_type": "analysis",
+  "title": "FDA’s Withdrawn Accelerated Cancer Approvals: What Is Really Known Now",
+  "slug": "fda-s-withdrawn-accelerated-cancer-approvals-what-is-really-",
+  "canonical_slug": "2026-04-29-fda-s-withdrawn-accelerated-cancer-approvals-what-is-really",
+  "expected_url": "/article/2026-04-29-fda-s-withdrawn-accelerated-cancer-approvals-what-is-really",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-29-fda-s-withdrawn-accelerated-cancer-approvals-what-is-really.mdx",
+  "published_at": "2026-04-29T16:07:39.189Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Pharma & FDA",
+  "topics": [
+    "Pharma & FDA"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "liam_parker",
+    "author_name": "Liam Parker",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/qacp304eir0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/qacp304eir0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-pills-sitting-on-top-of-each-other-QACp304EIR0",
+    "asset_key": "unsplash:QACp304EIR0",
+    "alt_text": "Illustration for FDA’s Withdrawn Accelerated Cancer Approvals: What Is Really Known Now",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "Pharma and FDA photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "fda’s",
+      "accelerated",
+      "cancer"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Withdrawn",
+        "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/withdrawn-cancer-accelerated-approvals",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Withdrawn",
+          "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/withdrawn-cancer-accelerated-approvals",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "withdrawn"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Pharma and FDA photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "fda"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

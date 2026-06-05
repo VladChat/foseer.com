@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-02T15:41:47.156Z",
+  "event_id": "evt-2026-06-02-culture-general-global",
+  "cluster_id": "evt-2026-06-02-culture-general-global",
+  "article_type": "report",
+  "title": "Hoyt Richards, Former Model, on ‘Bring Me The Beauties’ and How to Escape a Cult",
+  "slug": "how-bring-me-the-beauties-turns-a-model-s-cult-escape-into-a",
+  "canonical_slug": "2026-06-02-how-bring-me-the-beauties-turns-a-model-s-cult-escape-into-a",
+  "expected_url": "/article/2026-06-02-how-bring-me-the-beauties-turns-a-model-s-cult-escape-into-a",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-02-how-bring-me-the-beauties-turns-a-model-s-cult-escape-into-a.mdx",
+  "published_at": "2026-06-02T15:41:47.154Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "society-social-trends",
+  "topic_label": "Society & Social Trends",
+  "subsection": "Hoyt Richards, Former Model, on ‘Bring Me The Beauties’ and How to Escape a Cult",
+  "topics": [
+    "Hoyt Richards, Former Model, on ‘Bring Me The Beauties’ and How to Escape a Cult"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/ywgkfkpbx2y/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/ywgkfkpbx2y/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-person-holding-a-sign-that-says-justice-acconttability-leads-to-no-yWGKFKpbX2Y",
+    "asset_key": "unsplash:yWGKFKpbX2Y",
+    "alt_text": "Illustration for How ‘Bring Me the Beauties’ Turns a Model’s Cult Escape Into a Warning",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Bring Me the Beauties film photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 30,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 50,
+    "image_fit_score": 0.8,
+    "visual_concepts": [
+      "community",
+      "people",
+      "social",
+      "‘bring",
+      "beauties’",
+      "turns"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.8,
+    "is_fallback": false
+  },
+  "tags": [
+    "Society & Social Trends",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Hoyt Richards, Former Model, on ‘Bring Me The Beauties’ and How to Escape a Cult",
+        "url": "https://nytimes.com/2026/06/01/arts/television/hoyt-richards-bring-me-the-beauties-model-cult-interview.html",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "In Bring Me the Beauties, a 1980s New York Cult Sheds Light on Today’s “Cultish Society”",
+        "url": "https://vanityfair.com/hollywood/story/bring-me-the-beauties-eternal-values-cult",
+        "domain": "vanityfair.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "society-social-trends",
+          "label": "Society & Social Trends",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "society-social-trends",
+        "topic_label": "Society & Social Trends",
+        "supported": true,
+        "matched_aliases": [
+          "society"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Bring Me the Beauties film photo",
+      "article_relevance_score": 30,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "bring",
+        "beauties"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

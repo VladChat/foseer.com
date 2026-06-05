@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-24T12:43:35.571Z",
+  "event_id": "evt-2026-05-22-pharma-fda-research-global-fda",
+  "cluster_id": "evt-2026-05-22-pharma-fda-research-global-fda",
+  "article_type": "report",
+  "title": "First Generic Drug Approvals",
+  "slug": "fda-highlights-first-generic-drug-approvals-for-2025",
+  "canonical_slug": "2026-05-24-fda-highlights-first-generic-drug-approvals-for-2025",
+  "expected_url": "/article/2026-05-24-fda-highlights-first-generic-drug-approvals-for-2025",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-24-fda-highlights-first-generic-drug-approvals-for-2025.mdx",
+  "published_at": "2026-05-24T12:43:35.569Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "First Generic Drug Approvals",
+  "topics": [
+    "First Generic Drug Approvals"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/march-18-2026-fda-releases-draft-guidance-on-alter/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/march-18-2026-fda-releases-draft-guidance-on-alter/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:march-18-2026-fda-releases-draft-guidance-on-alter",
+    "alt_text": "Illustration for FDA Highlights First Generic Drug Approvals for 2025",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Drug Approvals medical photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 56,
+    "editorial_fit_score": 88,
+    "image_fit_score": 0.95,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "highlights",
+      "generic",
+      "approvals"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.95,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "First Generic Drug Approvals",
+        "url": "http://www.fda.gov/drugs/drug-and-biologic-approval-and-ind-activity-reports/first-generic-drug-approvals",
+        "domain": "fda.gov"
+      },
+      {
+        "title": "2025 First Generic Drug Approvals",
+        "url": "http://www.fda.gov/drugs/drug-and-biologic-approval-and-ind-activity-reports/2025-first-generic-drug-approvals",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda",
+          "drug approvals"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "Drug Approvals medical photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "drug",
+        "approvals"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

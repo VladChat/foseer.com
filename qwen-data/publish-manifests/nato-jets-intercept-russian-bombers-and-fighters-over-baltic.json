@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-22T12:14:45.456Z",
+  "event_id": "evt-2026-04-21-world-geopolitics-general-global-fifa",
+  "cluster_id": "evt-2026-04-21-world-geopolitics-general-global-fifa",
+  "article_type": "report",
+  "title": "NATO intercepts Russian bombers and fighter jets over Baltic Sea",
+  "slug": "nato-jets-intercept-russian-bombers-and-fighters-over-baltic",
+  "canonical_slug": "2026-04-22-nato-jets-intercept-russian-bombers-and-fighters-over-baltic",
+  "expected_url": "/article/2026-04-22-nato-jets-intercept-russian-bombers-and-fighters-over-baltic",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-22-nato-jets-intercept-russian-bombers-and-fighters-over-baltic.mdx",
+  "published_at": "2026-04-22T12:14:45.455Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "NATO intercepts Russian bombers and fighter jets over Baltic Sea",
+  "topics": [
+    "NATO intercepts Russian bombers and fighter jets over Baltic Sea"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/roioefzhfu4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/roioefzhfu4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-black-and-white-photo-of-a-rock-in-the-ocean-RoiOeFZhFu4",
+    "asset_key": "unsplash:RoiOeFZhFu4",
+    "alt_text": "a black and white photo of a rock in the ocean",
+    "selection_mode": "provider_download_new:unsplash:strong:strict",
+    "query_used": "Baltic Sea photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "intercept",
+      "russian",
+      "bombers"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Diplomacy",
+    "NATO",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "NATO intercepts Russian bombers and fighter jets over Baltic Sea",
+        "url": "https://www.cbsnews.com/news/nato-intercepts-russian-bombers-fighter-jets-baltic-sea/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "nato",
+          "label": "NATO",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Baltic Sea photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "baltic",
+        "sea"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

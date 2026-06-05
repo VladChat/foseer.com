@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-24T15:39:31.365Z",
+  "event_id": "evt-2026-04-24-sports-general-global-nba",
+  "cluster_id": "evt-2026-04-24-sports-general-global-nba",
+  "article_type": "analysis",
+  "title": "Can Sports Still Unite a Divided Public?",
+  "slug": "can-sports-still-unite-a-divided-public",
+  "canonical_slug": "2026-04-24-can-sports-still-unite-a-divided-public",
+  "expected_url": "/article/2026-04-24-can-sports-still-unite-a-divided-public",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-24-can-sports-still-unite-a-divided-public.mdx",
+  "published_at": "2026-04-24T15:39:31.363Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "athletes-culture",
+  "topic_label": "Athletes & Culture",
+  "subsection": "Athletes & Culture",
+  "topics": [
+    "Athletes & Culture"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/bgj5dkbqxnc/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/bgj5dkbqxnc/cover.jpg",
+    "source_url": "https://unsplash.com/photos/football-team-runs-onto-the-field-with-coach-watching-BGJ5DkBQxnc",
+    "asset_key": "unsplash:BGJ5DkBQxnc",
+    "alt_text": "Illustration for Can Sports Still Unite a Divided Public?",
+    "selection_mode": "provider_download_new:unsplash:acceptable:relaxed",
+    "query_used": "Athletes and Culture photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "athlete portrait",
+      "sports culture",
+      "fans",
+      "still",
+      "unite",
+      "divided"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Athletes & Culture",
+    "WHO",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Trying to find common ground? Look to sports and the athletes who inspire",
+        "url": "https://nbcnews.com/sports/sports/trying-find-common-ground-look-sports-athletes-inspire-rcna341083",
+        "domain": "nbcnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Trying to find common ground? Look to sports and the athletes who inspire",
+          "url": "https://nbcnews.com/sports/sports/trying-find-common-ground-look-sports-athletes-inspire-rcna341083",
+          "overlap_ratio": 0.2,
+          "shared_tokens": [
+            "sports"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "athletes-culture",
+          "label": "Athletes & Culture",
+          "type": "topic"
+        },
+        {
+          "slug": "who",
+          "label": "WHO",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "athletes-culture",
+        "topic_label": "Athletes & Culture",
+        "supported": true,
+        "matched_aliases": [
+          "athletes"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Athletes and Culture photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "athletes"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

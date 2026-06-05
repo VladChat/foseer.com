@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-13T12:44:48.928Z",
+  "event_id": "evt-2026-04-13-us-politics-general-iran-iran",
+  "cluster_id": "evt-2026-04-13-us-politics-general-iran-iran",
+  "article_type": "report",
+  "title": "Trump calls Pope Leo \"WEAK on Crime, and terrible for Foreign Policy\"",
+  "slug": "trump-attacks-pope-leo-as-weak-on-crime-amid-iran-war-critic",
+  "canonical_slug": "2026-04-13-trump-attacks-pope-leo-as-weak-on-crime-amid-iran-war-critic",
+  "expected_url": "/article/2026-04-13-trump-attacks-pope-leo-as-weak-on-crime-amid-iran-war-critic",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-13-trump-attacks-pope-leo-as-weak-on-crime-amid-iran-war-critic.mdx",
+  "published_at": "2026-04-13T12:44:48.927Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "Trump calls Pope Leo \"WEAK on Crime, and terrible for Foreign Policy\"",
+  "topics": [
+    "Trump calls Pope Leo \"WEAK on Crime, and terrible for Foreign Policy\""
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/1el12ckd9ea/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/1el12ckd9ea/cover.jpg",
+    "source_url": "https://unsplash.com/photos/the-pope-is-speaking-to-a-large-crowd-1eL12CKd9EA",
+    "asset_key": "unsplash:1eL12CKd9EA",
+    "alt_text": "The pope is speaking to a large crowd.",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Pope Leo WEAK government photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.5,
+    "visual_concepts": [
+      "diplomacy",
+      "international",
+      "summit",
+      "trump",
+      "attacks",
+      "‘weak"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.5,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Trump calls Pope Leo \"WEAK on Crime, and terrible for Foreign Policy\"",
+        "url": "https://www.cbsnews.com/news/trump-pope-leo-weak-on-crime-iran-truth-social/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "iran"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Pope Leo WEAK government photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "pope",
+        "leo",
+        "weak"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-29T14:19:31.142Z",
+  "event_id": "evt-2026-05-27-world-geopolitics-general-global-israel",
+  "cluster_id": "evt-2026-05-27-world-geopolitics-general-global-israel",
+  "article_type": "report",
+  "title": "WHO chief calls for DRC ceasefire to tackle Ebola outbreak",
+  "slug": "who-chief-urges-ceasefire-in-eastern-drc-to-contain-ebola-ou",
+  "canonical_slug": "2026-05-29-who-chief-urges-ceasefire-in-eastern-drc-to-contain-ebola-ou",
+  "expected_url": "/article/2026-05-29-who-chief-urges-ceasefire-in-eastern-drc-to-contain-ebola-ou",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-29-who-chief-urges-ceasefire-in-eastern-drc-to-contain-ebola-ou.mdx",
+  "published_at": "2026-05-29T14:19:31.139Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "WHO chief calls for DRC ceasefire to tackle Ebola outbreak",
+  "topics": [
+    "WHO chief calls for DRC ceasefire to tackle Ebola outbreak"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/posts/tsa-staffing-shortage-and-upcoming-world-cup-will-create-per/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/tsa-staffing-shortage-and-upcoming-world-cup-will-create-per/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/modern-computer-placed-near-server-racks-5092815/",
+    "asset_key": "legacy:tsa-staffing-shortage-and-upcoming-world-cup-will-create-per",
+    "alt_text": "Illustration for WHO Chief Urges Ceasefire in Eastern DRC to Contain Ebola Outbreak",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Ebola medical photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 82,
+    "editorial_fit_score": 95,
+    "image_fit_score": 0.98,
+    "visual_concepts": [
+      "diplomacy",
+      "international",
+      "summit",
+      "chief",
+      "urges",
+      "ceasefire"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.98,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "Ceasefire",
+    "Outbreak",
+    "WHO",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "WHO chief calls for DRC ceasefire to tackle Ebola outbreak",
+        "url": "https://www.theguardian.com/world/2026/may/27/who-chief-tedros-calls-for-drc-ceasefire-ebola",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "WHO puts Ebola outbreak death rate at ‘huge’ 30",
+        "url": "https://www.theguardian.com/world/2026/may/29/who-chief-tedros-adhanom-ghebreyesus-drc-ebola-outbreak-epidemic",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "ceasefire",
+          "label": "Ceasefire",
+          "type": "theme"
+        },
+        {
+          "slug": "outbreak",
+          "label": "Outbreak",
+          "type": "theme"
+        },
+        {
+          "slug": "who",
+          "label": "WHO",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "ceasefire",
+          "diplomatic"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Ebola medical photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "ebola"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

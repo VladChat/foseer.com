@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-20T14:07:43.654Z",
+  "event_id": "evt-2026-05-20-space-astronomy-general-global-nfl",
+  "cluster_id": "evt-2026-05-20-space-astronomy-general-global-nfl",
+  "article_type": "report",
+  "title": "NASA’s Fermi Glimpses Power Source of Supercharged Supernovae",
+  "slug": "fermi-telescope-spots-unusually-powerful-supernova-in-gamma-",
+  "canonical_slug": "2026-05-20-fermi-telescope-spots-unusually-powerful-supernova-in-gamma",
+  "expected_url": "/article/2026-05-20-fermi-telescope-spots-unusually-powerful-supernova-in-gamma",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-20-fermi-telescope-spots-unusually-powerful-supernova-in-gamma.mdx",
+  "published_at": "2026-05-20T14:07:43.652Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "NASA’s Fermi Glimpses Power Source of Supercharged Supernovae",
+  "topics": [
+    "NASA’s Fermi Glimpses Power Source of Supercharged Supernovae"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/what-is-he-doing-new-threats-emerge-for-trump-s-ec/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/what-is-he-doing-new-threats-emerge-for-trump-s-ec/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:what-is-he-doing-new-threats-emerge-for-trump-s-ec",
+    "alt_text": "Illustration for Fermi Telescope Spots Unusually Powerful Supernova in Gamma Rays",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Fermi Telescope Spots Unusually photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 2,
+    "asset_quality_score": 56,
+    "editorial_fit_score": 17,
+    "image_fit_score": 0.67,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "fermi",
+      "telescope",
+      "spots"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.67,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "NASA",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "NASA’s Fermi Glimpses Power Source of Supercharged Supernovae",
+        "url": "https://science.nasa.gov/missions/fermi/nasas-fermi-glimpses-power-source-of-supercharged-supernovae/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "NASA’s Fermi Glimpses Power Source of Supercharged Supernovae",
+          "url": "https://science.nasa.gov/missions/fermi/nasas-fermi-glimpses-power-source-of-supercharged-supernovae/",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "fermi"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "nasa",
+          "label": "NASA",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "Fermi Telescope Spots Unusually photo",
+      "article_relevance_score": 2,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "fermi",
+        "telescope",
+        "spots",
+        "unusually"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

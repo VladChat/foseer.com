@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-10T12:09:55.625Z",
+  "event_id": "evt-2026-05-09-ai-big-tech-general-global-iran",
+  "cluster_id": "evt-2026-05-09-ai-big-tech-general-global-iran",
+  "article_type": "report",
+  "title": "SpaceX's IPO will be a boon to this overlooked industrial stock",
+  "slug": "why-spacex-s-planned-ipo-is-drawing-attention-to-industrial-",
+  "canonical_slug": "2026-05-10-why-spacex-s-planned-ipo-is-drawing-attention-to-industrial",
+  "expected_url": "/article/2026-05-10-why-spacex-s-planned-ipo-is-drawing-attention-to-industrial",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-10-why-spacex-s-planned-ipo-is-drawing-attention-to-industrial.mdx",
+  "published_at": "2026-05-10T12:09:55.623Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "SpaceX's IPO will be a boon to this overlooked industrial stock",
+  "topics": [
+    "SpaceX's IPO will be a boon to this overlooked industrial stock"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/6739660/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/6739660/cover.jpg",
+    "source_url": "https://pixabay.com/photos/truth-social-app-social-media-trump-6739660/",
+    "asset_key": "pixabay:6739660",
+    "alt_text": "truth social, app, social media, trump, social media platform, spac, dwac, ipo, politics, stock market, chart, options, investing, usa, apple, iphone, ipad, truth social, truth social, truth social, ipo, ipo, ipo, ipo, ipo",
+    "selection_mode": "provider_download_new:pixabay:strong:strict",
+    "query_used": "Planned IPO technology photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.5,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "spacex’s",
+      "planned",
+      "drawing"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.5,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "IPO",
+    "Artificial Intelligence",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "SpaceX's IPO will be a boon to this overlooked industrial stock",
+        "url": "https://www.cnbc.com/2026/05/09/spacex-ipo-jim-cramer-linde-stock-winner.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "ipo",
+          "label": "IPO",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Planned IPO technology photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "planned",
+        "ipo"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

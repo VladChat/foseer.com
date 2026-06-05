@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-05-19T17:15:58.639Z",
+  "event_id": "evt-2026-05-19-space-astronomy-general-global-nfl",
+  "cluster_id": "evt-2026-05-19-space-astronomy-general-global-nfl",
+  "article_type": "analysis",
+  "title": "Why Brendan Sorsby’s Supplemental Draft Gamble Has the NFL’s Attention",
+  "slug": "why-brendan-sorsby-s-supplemental-draft-gamble-has-the-nfl-s",
+  "canonical_slug": "2026-05-19-why-brendan-sorsby-s-supplemental-draft-gamble-has-the-nfl-s",
+  "expected_url": "/article/2026-05-19-why-brendan-sorsby-s-supplemental-draft-gamble-has-the-nfl-s",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-05-19-why-brendan-sorsby-s-supplemental-draft-gamble-has-the-nfl-s.mdx",
+  "published_at": "2026-05-19T17:15:58.637Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "law-crime",
+  "topic_label": "Law & Crime",
+  "subsection": "Major Leagues",
+  "topics": [
+    "Major Leagues"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "legacy",
+    "image_path": "~/assets/images/posts/ai-big-tech/cover.jpg",
+    "file_relative_path": "src/assets/images/posts/ai-big-tech/cover.jpg",
+    "source_url": null,
+    "asset_key": "legacy:ai-big-tech",
+    "alt_text": "Illustration for Why Brendan Sorsby’s Supplemental Draft Gamble Has the NFL’s Attention",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Brendan Sorsby football photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 3,
+    "asset_quality_score": 53,
+    "editorial_fit_score": 17,
+    "image_fit_score": 0.67,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "brendan",
+      "sorsby’s",
+      "supplemental"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.67,
+    "is_fallback": false
+  },
+  "tags": [
+    "Law & Crime",
+    "NFL",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Brendan Sorsby could be the biggest supplemental draft entry in years — what the NFL thinks of him",
+        "url": "https://nytimes.com/athletic/7287288/2026/05/18/brendan-sorsby-supplemental-draft-nfl-scouts",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Texas Tech's Brendan Sorsby files injunction, seeks eligibility",
+        "url": "https://espn.com/college-football/story/_/id/48808162/texas-tech-brendan-sorsby-files-injunction-seeks-eligibility",
+        "domain": "espn.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "law-crime",
+          "label": "Law & Crime",
+          "type": "topic"
+        },
+        {
+          "slug": "nfl",
+          "label": "NFL",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "law-crime",
+        "topic_label": "Law & Crime",
+        "supported": true,
+        "matched_aliases": [
+          "courts",
+          "legal"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "legacy",
+      "query_used": "Brendan Sorsby football photo",
+      "article_relevance_score": 3,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "brendan",
+        "sorsby"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-10T15:08:58.734Z",
+  "event_id": "evt-2026-04-10-world-geopolitics-general-global-nfl",
+  "cluster_id": "evt-2026-04-10-world-geopolitics-general-global-nfl",
+  "article_type": "analysis",
+  "title": "What an 8-Year Sentence for Abuse-Linked Suicide Tells Us About the Law",
+  "slug": "what-an-8-year-sentence-for-abuse-linked-suicide-tells-us-ab",
+  "canonical_slug": "2026-04-10-what-an-8-year-sentence-for-abuse-linked-suicide-tells-us-ab",
+  "expected_url": "/article/2026-04-10-what-an-8-year-sentence-for-abuse-linked-suicide-tells-us-ab",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-10-what-an-8-year-sentence-for-abuse-linked-suicide-tells-us-ab.mdx",
+  "published_at": "2026-04-10T15:08:58.732Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "law-crime",
+  "topic_label": "Law & Crime",
+  "subsection": "World & Geopolitics",
+  "topics": [
+    "World & Geopolitics"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/6bxg2ozkmki/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/6bxg2ozkmki/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-black-and-white-photo-of-the-word-august-6BXG2OzkmKI",
+    "asset_key": "unsplash:6BXG2OzkmKI",
+    "alt_text": "Illustration for What an 8-Year Sentence for Abuse-Linked Suicide Tells Us About the Law",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "Abusive photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 96,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 96,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "diplomacy",
+      "international",
+      "summit",
+      "sentence",
+      "abuse",
+      "linked"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Law & Crime",
+    "Diplomacy",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Abusive husband gets 8 years in prison for wife's death by suicide",
+        "url": "https://www.cbsnews.com/news/abusive-husband-8-years-in-prison-wife-suicide/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Abusive husband gets 8 years in prison for wife's death by suicide",
+          "url": "https://www.cbsnews.com/news/abusive-husband-8-years-in-prison-wife-suicide/",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "suicide"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "law-crime",
+          "label": "Law & Crime",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "law-crime",
+        "topic_label": "Law & Crime",
+        "supported": true,
+        "matched_aliases": [
+          "courts",
+          "crime",
+          "legal"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Abusive photo",
+      "article_relevance_score": 96,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "abusive"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

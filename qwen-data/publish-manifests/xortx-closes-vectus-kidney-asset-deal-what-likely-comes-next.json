@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-16T15:57:26.306Z",
+  "event_id": "evt-2026-04-15-crypto-bitcoin-general-global",
+  "cluster_id": "evt-2026-04-15-crypto-bitcoin-general-global",
+  "article_type": "analysis",
+  "title": "XORTX Closes Vectus Kidney Asset Deal: What Likely Comes Next",
+  "slug": "xortx-closes-vectus-kidney-asset-deal-what-likely-comes-next",
+  "canonical_slug": "2026-04-16-xortx-closes-vectus-kidney-asset-deal-what-likely-comes-next",
+  "expected_url": "/article/2026-04-16-xortx-closes-vectus-kidney-asset-deal-what-likely-comes-next",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-16-xortx-closes-vectus-kidney-asset-deal-what-likely-comes-next.mdx",
+  "published_at": "2026-04-16T15:57:26.304Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "companies-deals",
+  "topic_label": "Companies & Deals",
+  "subsection": "AI & Big Tech",
+  "topics": [
+    "AI & Big Tech"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "ava_mitchell",
+    "author_name": "Ava Mitchell",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/szkjhypq28/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/szkjhypq28/cover.jpg",
+    "source_url": "https://unsplash.com/photos/brown-kidney-decor--szKjHyPq28",
+    "asset_key": "unsplash:-szKjHyPq28",
+    "alt_text": "brown kidney decor",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "global XORTX Closes Vectus Kidney photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "xortx",
+      "closes",
+      "vectus"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Companies & Deals",
+    "Merger",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "XORTX Announces Closing of Acquisition of Vectus Kidney Anti ...",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/xrtx-x/pressreleases/1282778/xortx-announces-closing-of-acquisition-of-vectus-kidney-anti-fibrotic-asset/",
+        "domain": "theglobeandmail.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "companies-deals",
+          "label": "Companies & Deals",
+          "type": "topic"
+        },
+        {
+          "slug": "merger",
+          "label": "Merger",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "companies-deals",
+        "topic_label": "Companies & Deals",
+        "supported": true,
+        "matched_aliases": [
+          "companies"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "global XORTX Closes Vectus Kidney photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "xortx",
+        "closes",
+        "vectus",
+        "kidney"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

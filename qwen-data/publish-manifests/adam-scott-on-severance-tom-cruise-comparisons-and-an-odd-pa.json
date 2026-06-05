@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-04-24T12:16:11.402Z",
+  "event_id": "evt-2026-04-23-film-tv-general-global-india",
+  "cluster_id": "evt-2026-04-23-film-tv-general-global-india",
+  "article_type": "report",
+  "title": "Severance star Adam Scott: ‘There’s nothing wrong with being told that you resemble Tom Cruise’",
+  "slug": "adam-scott-on-severance-tom-cruise-comparisons-and-an-odd-pa",
+  "canonical_slug": "2026-04-24-adam-scott-on-severance-tom-cruise-comparisons-and-an-odd-pa",
+  "expected_url": "/article/2026-04-24-adam-scott-on-severance-tom-cruise-comparisons-and-an-odd-pa",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-04-24-adam-scott-on-severance-tom-cruise-comparisons-and-an-odd-pa.mdx",
+  "published_at": "2026-04-24T12:16:11.400Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "creators-platforms",
+  "topic_label": "Creators & Platforms",
+  "subsection": "Severance star Adam Scott: ‘There’s nothing wrong with being told that you resemble Tom Cruise’",
+  "topics": [
+    "Severance star Adam Scott: ‘There’s nothing wrong with being told that you resemble Tom Cruise’"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/797alfvowzk/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/797alfvowzk/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-male-in-a-white-shirt-and-a-microphone-797ALFvOWZk",
+    "asset_key": "unsplash:797ALFvOWZk",
+    "alt_text": "A male in a white shirt and a microphone",
+    "selection_mode": "provider_download_new:unsplash:acceptable:strict",
+    "query_used": "global Adam Scott photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "content creator",
+      "streaming",
+      "social platform",
+      "scott",
+      "‘severance",
+      "cruise"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.6,
+    "is_fallback": false
+  },
+  "tags": [
+    "Creators & Platforms",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Severance star Adam Scott: ‘There’s nothing wrong with being told that you resemble Tom Cruise’",
+        "url": "https://www.theguardian.com/film/2026/apr/23/severance-star-adam-scott-nothing-wrong-resemble-tom-cruise",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "creators-platforms",
+          "label": "Creators & Platforms",
+          "type": "topic"
+        },
+        {
+          "slug": "influencer-economy",
+          "label": "Influencer Economy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "creators-platforms",
+        "topic_label": "Creators & Platforms",
+        "supported": true,
+        "matched_aliases": [
+          "creator economy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "global Adam Scott photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "adam",
+        "scott"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
