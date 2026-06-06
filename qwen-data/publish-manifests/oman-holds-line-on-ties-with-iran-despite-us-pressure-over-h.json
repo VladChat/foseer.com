@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-06T15:40:21.815Z",
+  "event_id": "evt-2026-06-06-world-geopolitics-general-iran-iran-israel",
+  "cluster_id": "evt-2026-06-06-world-geopolitics-general-iran-iran-israel",
+  "article_type": "analysis",
+  "title": "Oman Holds Line on Ties With Iran Despite US Pressure Over Hormuz",
+  "slug": "oman-holds-line-on-ties-with-iran-despite-us-pressure-over-h",
+  "canonical_slug": "2026-06-06-oman-holds-line-on-ties-with-iran-despite-us-pressure-over-h",
+  "expected_url": "/article/2026-06-06-oman-holds-line-on-ties-with-iran-despite-us-pressure-over-h",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-06-oman-holds-line-on-ties-with-iran-despite-us-pressure-over-h.mdx",
+  "published_at": "2026-06-06T15:40:21.813Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "World & Geopolitics",
+  "topics": [
+    "World & Geopolitics"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/74twpvqaf_8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/74twpvqaf_8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/100-us-dollar-bill-74twpVqAf_8",
+    "asset_key": "unsplash:74twpVqAf_8",
+    "alt_text": "Illustration for Oman Holds Line on Ties With Iran Despite US Pressure Over Hormuz",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "US photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "diplomacy",
+      "international",
+      "summit",
+      "holds",
+      "despite",
+      "pressure"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "Diplomacy",
+    "United States",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Oman resists US pressure to break ties with Iran over strait of Hormuz",
+        "url": "https://www.theguardian.com/world/2026/jun/04/oman-resists-us-pressure-to-break-ties-with-iran-over-strait-of-hormuz",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "israel",
+          "diplomatic",
+          "iran",
+          "hormuz",
+          "strait"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "US photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}
