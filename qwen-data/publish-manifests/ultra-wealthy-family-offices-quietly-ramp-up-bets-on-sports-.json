@@ -1,0 +1,157 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-06T12:51:20.844Z",
+  "event_id": "evt-2026-06-06-world-geopolitics-general-global-google",
+  "cluster_id": "evt-2026-06-06-world-geopolitics-general-global-google",
+  "article_type": "report",
+  "title": "Family offices bet on sports, from pickleball leagues to smart soccer balls",
+  "slug": "ultra-wealthy-family-offices-quietly-ramp-up-bets-on-sports-",
+  "canonical_slug": "2026-06-06-ultra-wealthy-family-offices-quietly-ramp-up-bets-on-sports",
+  "expected_url": "/article/2026-06-06-ultra-wealthy-family-offices-quietly-ramp-up-bets-on-sports",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-06-ultra-wealthy-family-offices-quietly-ramp-up-bets-on-sports.mdx",
+  "published_at": "2026-06-06T12:51:20.842Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "ai-big-tech",
+  "topic_label": "AI & Big Tech",
+  "subsection": "Family offices bet on sports, from pickleball leagues to smart soccer balls",
+  "topics": [
+    "Family offices bet on sports, from pickleball leagues to smart soccer balls"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/a7v0i179x-y/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/a7v0i179x-y/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-man-and-a-woman-sitting-at-a-desk-with-a-typewriter-a7V0I179X-Y",
+    "asset_key": "unsplash:a7V0I179X-Y",
+    "alt_text": "Illustration for Ultra-wealthy family offices quietly ramp up bets on sports assets",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Family basketball photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.51,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "ultra",
+      "wealthy",
+      "family"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.51,
+    "is_fallback": false
+  },
+  "tags": [
+    "AI & Big Tech",
+    "Soccer",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Family offices bet on sports, from pickleball leagues to smart soccer balls",
+        "url": "https://www.cnbc.com/2026/06/05/family-office-sport-investments.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "Why U.S. sports leagues will never adopt promotion and relegation",
+        "url": "https://en.as.com/soccer/why-us-sports-leagues-will-never-adopt-promotion-and-relegation-f202606-n/",
+        "domain": "en.as.com"
+      },
+      {
+        "title": "Riverside’s adult sports leagues keep the competition coming",
+        "url": "https://www.pressenterprise.com/2026/06/02/riversides-adult-sports-leagues-keep-the-competition-coming/",
+        "domain": "pressenterprise.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Publish-ready source pack mixes unrelated event titles (2 weak-title sources)"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Why U.S. sports leagues will never adopt promotion and relegation",
+          "url": "https://en.as.com/soccer/why-us-sports-leagues-will-never-adopt-promotion-and-relegation-f202606-n/",
+          "overlap_ratio": 0.11,
+          "shared_tokens": [
+            "sports"
+          ]
+        },
+        {
+          "title": "Riverside’s adult sports leagues keep the competition coming",
+          "url": "https://www.pressenterprise.com/2026/06/02/riversides-adult-sports-leagues-keep-the-competition-coming/",
+          "overlap_ratio": 0.11,
+          "shared_tokens": [
+            "sports"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "soccer",
+          "label": "Soccer",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "ai-big-tech",
+        "topic_label": "AI & Big Tech",
+        "supported": true,
+        "matched_aliases": [
+          "ai",
+          "artificial intelligence"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Family basketball photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "family"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
