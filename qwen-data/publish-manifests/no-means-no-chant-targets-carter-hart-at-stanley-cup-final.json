@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-07T13:03:14.616Z",
+  "event_id": "evt-2026-06-06-athletes-culture-general-global-sec",
+  "cluster_id": "evt-2026-06-06-athletes-culture-general-global-sec",
+  "article_type": "report",
+  "title": "'No means no' chanted at Carter Hart during Stanley Cup Final ...",
+  "slug": "no-means-no-chant-targets-carter-hart-at-stanley-cup-final",
+  "canonical_slug": "2026-06-07-no-means-no-chant-targets-carter-hart-at-stanley-cup-final",
+  "expected_url": "/article/2026-06-07-no-means-no-chant-targets-carter-hart-at-stanley-cup-final",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-07-no-means-no-chant-targets-carter-hart-at-stanley-cup-final.mdx",
+  "published_at": "2026-06-07T13:03:14.615Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "'No means no' chanted at Carter Hart during Stanley Cup Final ...",
+  "topics": [
+    "'No means no' chanted at Carter Hart during Stanley Cup Final ..."
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/cd5m3g19grk/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/cd5m3g19grk/cover.jpg",
+    "source_url": "https://unsplash.com/photos/woman-in-white-robe-lying-on-bed-Cd5M3G19Grk",
+    "asset_key": "unsplash:Cd5M3G19Grk",
+    "alt_text": "Illustration for No Means No Chant Targets Carter Hart at Stanley Cup Final",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Carter Hart hockey photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 32,
+    "image_fit_score": 0.73,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "means",
+      "chant",
+      "targets"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.73,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "'No means no' chanted at Carter Hart during Stanley Cup Final ...",
+        "url": "https://www.nytimes.com/athletic/7332930/2026/06/04/carter-hart-chant-fans-stanley-cup/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Transfers & Business",
+      "Primary topic_id unsupported by article evidence: transfers-business"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Carter Hart hockey photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "carter",
+        "hart",
+        "hockey"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
