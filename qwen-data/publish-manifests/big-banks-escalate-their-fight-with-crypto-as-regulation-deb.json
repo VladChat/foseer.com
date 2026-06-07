@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-07T15:44:21.066Z",
+  "event_id": "evt-2026-06-06-crypto-bitcoin-general-global-sec",
+  "cluster_id": "evt-2026-06-06-crypto-bitcoin-general-global-sec",
+  "article_type": "analysis",
+  "title": "Big Banks Escalate Their Fight With Crypto as Regulation Debate Sharpens",
+  "slug": "big-banks-escalate-their-fight-with-crypto-as-regulation-deb",
+  "canonical_slug": "2026-06-07-big-banks-escalate-their-fight-with-crypto-as-regulation-deb",
+  "expected_url": "/article/2026-06-07-big-banks-escalate-their-fight-with-crypto-as-regulation-deb",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-07-big-banks-escalate-their-fight-with-crypto-as-regulation-deb.mdx",
+  "published_at": "2026-06-07T15:44:21.063Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "crypto-bitcoin",
+  "topic_label": "Crypto",
+  "subsection": "Crypto",
+  "topics": [
+    "Crypto"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "jacob_ellis",
+    "author_name": "Jacob Ellis",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/zqgassqz9l8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/zqgassqz9l8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-people-that-are-on-stage-zqgASSqZ9L8",
+    "asset_key": "unsplash:zqgASSqZ9L8",
+    "alt_text": "Illustration for Big Banks Escalate Their Fight With Crypto as Regulation Debate Sharpens",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Fight crypto photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "cryptocurrency",
+      "bitcoin",
+      "blockchain",
+      "banks",
+      "escalate",
+      "fight"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Crypto",
+    "Stablecoins",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Big banks' gloves come off in their fight with crypto",
+        "url": "https://www.cnn.com/2026/06/05/business/big-banks-crypto-regulation",
+        "domain": "cnn.com"
+      },
+      {
+        "title": "Banks, insurers among gainers; card & payments, crypto stocks in losers: week's financials wrap (XLF:NYSEARCA)",
+        "url": "https://seekingalpha.com/news/4601151-banks-insurers-among-gainers-card-payments-crypto-stocks-in-losers-weeks-financials-wrap",
+        "domain": "seekingalpha.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Canonical tag unsupported by article evidence: Stablecoins"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "crypto-bitcoin",
+          "label": "Crypto",
+          "type": "topic"
+        },
+        {
+          "slug": "stablecoins",
+          "label": "Stablecoins",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "stablecoins",
+          "label": "Stablecoins",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "crypto-bitcoin",
+        "topic_label": "Crypto",
+        "supported": true,
+        "matched_aliases": [
+          "Crypto"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Fight crypto photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "fight",
+        "crypto"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
