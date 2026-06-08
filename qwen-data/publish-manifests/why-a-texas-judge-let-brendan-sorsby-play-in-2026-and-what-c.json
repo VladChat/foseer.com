@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-08T17:30:50.879Z",
+  "event_id": "evt-2026-06-08-ai-big-tech-general-global",
+  "cluster_id": "evt-2026-06-08-ai-big-tech-general-global",
+  "article_type": "analysis",
+  "title": "Why a Texas Judge Let Brendan Sorsby Play in 2026—and What Comes Next",
+  "slug": "why-a-texas-judge-let-brendan-sorsby-play-in-2026-and-what-c",
+  "canonical_slug": "2026-06-08-why-a-texas-judge-let-brendan-sorsby-play-in-2026-and-what-c",
+  "expected_url": "/article/2026-06-08-why-a-texas-judge-let-brendan-sorsby-play-in-2026-and-what-c",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-08-why-a-texas-judge-let-brendan-sorsby-play-in-2026-and-what-c.mdx",
+  "published_at": "2026-06-08T17:30:50.877Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "law-crime",
+  "topic_label": "Law & Crime",
+  "subsection": "AI & Big Tech",
+  "topics": [
+    "AI & Big Tech"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/z6_eajfdja8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/z6_eajfdja8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/the-moon-glows-in-the-dark-night-sky-Z6_EaJfDJa8",
+    "asset_key": "unsplash:Z6_EaJfDJa8",
+    "alt_text": "Illustration for Why a Texas Judge Let Brendan Sorsby Play in 2026—and What Comes Next",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Sorsby Play courtroom photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 32,
+    "image_fit_score": 0.73,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "texas",
+      "judge",
+      "brendan"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.12,
+    "is_fallback": false
+  },
+  "tags": [
+    "Law & Crime",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Brendan Sorsby granted temporary injunction to play in 2026 despite gambling admissions",
+        "url": "https://nytimes.com/athletic/7325046/2026/06/08/brendan-sorsby-injunction-decision-texas-tech",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Brendan Sorsby Wins Court Injunction, Eligible for Texas Tech in 2026",
+        "url": "https://sportico.com/law/analysis/2026/brendan-sorsby-texas-tech-ncaa-injunction-eligibility-1234902028",
+        "domain": "sportico.com"
+      },
+      {
+        "title": "Texas judge grants injunction, clearing way for former Bearcat QB Sorsby to play",
+        "url": "https://wlwt.com/article/brendan-sorsby-eligibility-texas-tech-gambling-injunction/71523629",
+        "domain": "wlwt.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "law-crime",
+          "label": "Law & Crime",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "law-crime",
+        "topic_label": "Law & Crime",
+        "supported": true,
+        "matched_aliases": [
+          "legal"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Sorsby Play courtroom photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "sorsby",
+        "play"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
