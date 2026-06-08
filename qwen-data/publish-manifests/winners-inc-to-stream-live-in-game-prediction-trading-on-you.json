@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-08T14:57:21.642Z",
+  "event_id": "evt-2026-06-08-news-general-global",
+  "cluster_id": "evt-2026-06-08-news-general-global",
+  "article_type": "report",
+  "title": "Winners Inc. To Stream Live In-Game Prediction Markets Trading ...",
+  "slug": "winners-inc-to-stream-live-in-game-prediction-trading-on-you",
+  "canonical_slug": "2026-06-08-winners-inc-to-stream-live-in-game-prediction-trading-on-you",
+  "expected_url": "/article/2026-06-08-winners-inc-to-stream-live-in-game-prediction-trading-on-you",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-08-winners-inc-to-stream-live-in-game-prediction-trading-on-you.mdx",
+  "published_at": "2026-06-08T14:57:21.640Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Winners Inc. To Stream Live In-Game Prediction Markets Trading ...",
+  "topics": [
+    "Winners Inc. To Stream Live In-Game Prediction Markets Trading ..."
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "ava_mitchell",
+    "author_name": "Ava Mitchell",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/wxn8fyodx_s/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/wxn8fyodx_s/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-crowd-of-people-holding-signs-and-flags-wxn8FyodX_s",
+    "asset_key": "unsplash:wxn8FyodX_s",
+    "alt_text": "Illustration for Winners Inc. to Stream Live In-Game Prediction Trading on YouTube",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Winners Inc photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "winners",
+      "stream",
+      "prediction"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Winners Inc. To Stream Live In-Game Prediction Markets Trading ...",
+        "url": "https://www.theglobeandmail.com/investing/markets/markets-news/globenewswire/2356594/winners-inc-to-stream-live-in-game-prediction-markets-trading-during-knicks-game-3-with-president-trump-attending-nba-finals-at-madison-square-garden-new-york/",
+        "domain": "theglobeandmail.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets",
+          "market"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Winners Inc photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "winners",
+        "inc"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
