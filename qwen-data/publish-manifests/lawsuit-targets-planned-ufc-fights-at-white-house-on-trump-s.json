@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-09T16:49:11.804Z",
+  "event_id": "evt-2026-06-09-us-politics-lawsuit-us-white-house",
+  "cluster_id": "evt-2026-06-09-us-politics-lawsuit-us-white-house",
+  "article_type": "analysis",
+  "title": "Lawsuit Targets Planned UFC Fights at White House on Trump’s Birthday",
+  "slug": "lawsuit-targets-planned-ufc-fights-at-white-house-on-trump-s",
+  "canonical_slug": "2026-06-09-lawsuit-targets-planned-ufc-fights-at-white-house-on-trump-s",
+  "expected_url": "/article/2026-06-09-lawsuit-targets-planned-ufc-fights-at-white-house-on-trump-s",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-09-lawsuit-targets-planned-ufc-fights-at-white-house-on-trump-s.mdx",
+  "published_at": "2026-06-09T16:49:11.802Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/zbz0f4xbevw/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/zbz0f4xbevw/cover.jpg",
+    "source_url": "https://unsplash.com/photos/the-white-house-with-a-crowd-gathered-outside-zbz0f4xbeVw",
+    "asset_key": "unsplash:zbz0f4xbeVw",
+    "alt_text": "The white house with a crowd gathered outside.",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "White House courtroom photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 99,
+    "image_fit_score": 0.5,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "lawsuit",
+      "targets",
+      "planned"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.5,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Congress",
+    "White House",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Lawsuit Aims to Stop U.F.C. Fights at White House on Trump's Birthday",
+        "url": "https://www.nytimes.com/2026/06/07/us/politics/lawsuit-ufc-fight-white-house.html",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Lawsuit aims to block UFC event at White House on Trump's birthday",
+        "url": "https://www.theguardian.com/us-news/2026/jun/08/trump-ufc-white-house-birthday-lawsuit",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Lawsuit seeks to stop the UFC fight on the White House South Lawn ...",
+        "url": "https://www.politico.com/news/2026/06/07/lawsuit-seeks-to-stop-the-ufc-fight-on-the-white-house-south-lawn-for-trumps-birthday-00953084",
+        "domain": "politico.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "white-house",
+          "label": "White House",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "White House courtroom photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "white",
+        "house"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
