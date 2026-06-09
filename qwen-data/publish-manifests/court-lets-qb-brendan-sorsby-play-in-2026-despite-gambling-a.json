@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-09T14:00:17.544Z",
+  "event_id": "evt-2026-06-09-space-astronomy-general-global-openai-fifa",
+  "cluster_id": "evt-2026-06-09-space-astronomy-general-global-openai-fifa",
+  "article_type": "report",
+  "title": "Brendan Sorsby granted temporary injunction to play in 2026 despite gambling admissions",
+  "slug": "court-lets-qb-brendan-sorsby-play-in-2026-despite-gambling-a",
+  "canonical_slug": "2026-06-09-court-lets-qb-brendan-sorsby-play-in-2026-despite-gambling-a",
+  "expected_url": "/article/2026-06-09-court-lets-qb-brendan-sorsby-play-in-2026-despite-gambling-a",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-09-court-lets-qb-brendan-sorsby-play-in-2026-despite-gambling-a.mdx",
+  "published_at": "2026-06-09T14:00:17.543Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Brendan Sorsby granted temporary injunction to play in 2026 despite gambling admissions",
+  "topics": [
+    "Brendan Sorsby granted temporary injunction to play in 2026 despite gambling admissions"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/wzvpv4feoe0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/wzvpv4feoe0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-in-black-shirt-beside-woman-in-black-shirt-WZvPv4fEoE0",
+    "asset_key": "unsplash:WZvPv4fEoE0",
+    "alt_text": "Illustration for Court Lets QB Brendan Sorsby Play in 2026 Despite Gambling Admissions",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Sorsby Play courtroom photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "court",
+      "brendan",
+      "sorsby"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Brendan Sorsby granted temporary injunction to play in 2026 despite gambling admissions",
+        "url": "https://nytimes.com/athletic/7325046/2026/06/08/brendan-sorsby-injunction-decision-texas-tech",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Brendan Sorsby Wins Court Injunction, Eligible for Texas Tech in 2026",
+        "url": "https://sportico.com/law/analysis/2026/brendan-sorsby-texas-tech-ncaa-injunction-eligibility-1234902028",
+        "domain": "sportico.com"
+      },
+      {
+        "title": "NCAA appeals temporary injunction allowing Brendan Sorsby to ...",
+        "url": "https://www.nytimes.com/athletic/7325046/2026/06/08/brendan-sorsby-injunction-decision-texas-tech/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Texas judge grants injunction, clearing way for former Bearcat QB Sorsby to play",
+        "url": "https://wlwt.com/article/brendan-sorsby-eligibility-texas-tech-gambling-injunction/71523629",
+        "domain": "wlwt.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Sorsby Play courtroom photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "sorsby",
+        "play"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

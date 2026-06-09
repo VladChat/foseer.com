@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-09T13:59:53.570Z",
+  "event_id": "evt-2026-06-07-film-tv-general-global-iran",
+  "cluster_id": "evt-2026-06-07-film-tv-general-global-iran",
+  "article_type": "report",
+  "title": "The films of Steven Spielberg",
+  "slug": "how-steven-spielberg-s-films-redefined-modern-movie-storytel",
+  "canonical_slug": "2026-06-09-how-steven-spielberg-s-films-redefined-modern-movie-storytel",
+  "expected_url": "/article/2026-06-09-how-steven-spielberg-s-films-redefined-modern-movie-storytel",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-09-how-steven-spielberg-s-films-redefined-modern-movie-storytel.mdx",
+  "published_at": "2026-06-09T13:59:53.569Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "The films of Steven Spielberg",
+  "topics": [
+    "The films of Steven Spielberg"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/5b06bpr4-9c/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/5b06bpr4-9c/cover.jpg",
+    "source_url": "https://unsplash.com/photos/person-photographs-the-us-capitol-building-in-winter-5b06bPR4-9c",
+    "asset_key": "unsplash:5b06bPR4-9c",
+    "alt_text": "Illustration for How Steven Spielberg’s Films Redefined Modern Movie Storytelling",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Steven Spielberg film photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 17,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 40,
+    "image_fit_score": 0.76,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "steven",
+      "spielberg’s",
+      "films"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.76,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "The films of Steven Spielberg",
+        "url": "https://www.cbsnews.com/pictures/the-films-of-steven-spielberg/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Steven Spielberg film photo",
+      "article_relevance_score": 17,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "steven",
+        "spielberg"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
