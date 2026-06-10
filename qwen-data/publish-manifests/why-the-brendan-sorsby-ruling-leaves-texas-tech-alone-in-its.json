@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-10T14:38:26.808Z",
+  "event_id": "evt-2026-06-09-cybersecurity-general-global-openai",
+  "cluster_id": "evt-2026-06-09-cybersecurity-general-global-openai",
+  "article_type": "report",
+  "title": "Brendan Sorsby playing college football is unconscionable. That’s why Texas Tech is the only happy party",
+  "slug": "why-the-brendan-sorsby-ruling-leaves-texas-tech-alone-in-its",
+  "canonical_slug": "2026-06-10-why-the-brendan-sorsby-ruling-leaves-texas-tech-alone-in-its",
+  "expected_url": "/article/2026-06-10-why-the-brendan-sorsby-ruling-leaves-texas-tech-alone-in-its",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-10-why-the-brendan-sorsby-ruling-leaves-texas-tech-alone-in-its.mdx",
+  "published_at": "2026-06-10T14:38:26.806Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Brendan Sorsby playing college football is unconscionable. That’s why Texas Tech is the only happy party",
+  "topics": [
+    "Brendan Sorsby playing college football is unconscionable. That’s why Texas Tech is the only happy party"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/6wpixg5trn4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/6wpixg5trn4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-people-standing-on-top-of-a-hill-6WpIxg5tRn4",
+    "asset_key": "unsplash:6WpIxg5tRn4",
+    "alt_text": "Illustration for Why the Brendan Sorsby Ruling Leaves Texas Tech Alone in Its Joy",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Brendan Sorsby football photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 83,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 87,
+    "image_fit_score": 0.95,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "brendan",
+      "sorsby",
+      "ruling"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.95,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Texas",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Brendan Sorsby playing college football is unconscionable. That’s why Texas Tech is the only happy party",
+        "url": "https://nytimes.com/athletic/7342815/2026/06/08/brendan-sorsby-texas-tech-gambling-playing-football-consequences",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Brendan Sorsby Wins Court Injunction, Eligible for Texas Tech in 2026",
+        "url": "https://sportico.com/law/analysis/2026/brendan-sorsby-texas-tech-ncaa-injunction-eligibility-1234902028",
+        "domain": "sportico.com"
+      },
+      {
+        "title": "Texas-Texas Tech Women's College World Series finals set ...",
+        "url": "https://www.nytimes.com/athletic/7342435/2026/06/08/womens-softball-world-series-tv-ratings-2/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "The NCAA said no to Brendan Sorsby. A court just said yes. Here’s why",
+        "url": "https://usatoday.com/story/sports/ncaaf/2026/06/08/brendan-sorsby-eligible-judge-court-ncaa-gambling-rules-texas-tech/90457145007",
+        "domain": "usatoday.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "texas",
+          "label": "Texas",
+          "type": "geography"
+        },
+        {
+          "slug": "explainer",
+          "label": "Explainer",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Brendan Sorsby football photo",
+      "article_relevance_score": 83,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "brendan",
+        "sorsby",
+        "football"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

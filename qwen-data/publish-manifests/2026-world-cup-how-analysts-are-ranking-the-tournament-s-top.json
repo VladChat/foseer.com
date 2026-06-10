@@ -1,0 +1,142 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-10T14:37:56.124Z",
+  "event_id": "evt-2026-06-08-events-tournaments-general-global-fifa-ukraine",
+  "cluster_id": "evt-2026-06-08-events-tournaments-general-global-fifa-ukraine",
+  "article_type": "report",
+  "title": "World Cup Rank: The 50 best players in the 2026 tournament",
+  "slug": "2026-world-cup-how-analysts-are-ranking-the-tournament-s-top",
+  "canonical_slug": "2026-06-10-2026-world-cup-how-analysts-are-ranking-the-tournament-s-top",
+  "expected_url": "/article/2026-06-10-2026-world-cup-how-analysts-are-ranking-the-tournament-s-top",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-10-2026-world-cup-how-analysts-are-ranking-the-tournament-s-top.mdx",
+  "published_at": "2026-06-10T14:37:56.122Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "World Cup Rank: The 50 best players in the 2026 tournament",
+  "topics": [
+    "World Cup Rank: The 50 best players in the 2026 tournament"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/p7i6qy-e9cg/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/p7i6qy-e9cg/cover.jpg",
+    "source_url": "https://unsplash.com/photos/brown-and-black-books-on-black-table-P7I6Qy-E9Cg",
+    "asset_key": "unsplash:P7I6Qy-E9Cg",
+    "alt_text": "Illustration for 2026 World Cup: How Analysts Are Ranking the Tournament’s Top 50 Players",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Ranking the photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 4,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 31,
+    "image_fit_score": 0.72,
+    "visual_concepts": [
+      "diplomacy",
+      "international",
+      "summit",
+      "world",
+      "analysts",
+      "ranking"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.72,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "World Cup",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "World Cup Rank: The 50 best players in the 2026 tournament",
+        "url": "https://www.espn.com.sg/soccer/story/_/id/48991846/world-cup-rank-50-best-players-2026-tournament",
+        "domain": "espn.com.sg"
+      },
+      {
+        "title": "Ranking the top 25 players at the 2026 World Cup",
+        "url": "https://www.nbcsports.com/soccer/news/ranking-the-top-25-players-at-the-2026-world-cup",
+        "domain": "nbcsports.com"
+      },
+      {
+        "title": "World Cup Rank: The 50 best players in the 2026 tournament",
+        "url": "https://www.espn.com/soccer/story/_/id/48991846/world-cup-rank-50-best-players-2026-tournament",
+        "domain": "espn.com"
+      },
+      {
+        "title": "Ranking the Middle East and North African teams at World Cup 2026",
+        "url": "https://www.aljazeera.com/sports/2026/6/9/ranking-the-middle-east-and-north-african-teams-at-world-cup-2026",
+        "domain": "aljazeera.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "world-cup",
+          "label": "World Cup",
+          "type": "theme"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "middle east"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Ranking the photo",
+      "article_relevance_score": 4,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "ranking"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
