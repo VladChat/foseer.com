@@ -1,0 +1,144 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-11T15:04:39.164Z",
+  "event_id": "evt-2026-06-10-space-astronomy-general-global-sec",
+  "cluster_id": "evt-2026-06-10-space-astronomy-general-global-sec",
+  "article_type": "report",
+  "title": "NCAA appeals temporary injunction allowing Brendan Sorsby to ...",
+  "slug": "ncaa-appeals-court-order-letting-brendan-sorsby-play-amid-ga",
+  "canonical_slug": "2026-06-11-ncaa-appeals-court-order-letting-brendan-sorsby-play-amid-ga",
+  "expected_url": "/article/2026-06-11-ncaa-appeals-court-order-letting-brendan-sorsby-play-amid-ga",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-11-ncaa-appeals-court-order-letting-brendan-sorsby-play-amid-ga.mdx",
+  "published_at": "2026-06-11T15:04:39.162Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "NCAA appeals temporary injunction allowing Brendan Sorsby to ...",
+  "topics": [
+    "NCAA appeals temporary injunction allowing Brendan Sorsby to ..."
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/kajlrqwt5yy/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/kajlrqwt5yy/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-sign-that-says-pay-your-tax-now-here-kAJLRQwt5yY",
+    "asset_key": "unsplash:kAJLRQwt5yY",
+    "alt_text": "Illustration for NCAA Appeals Court Order Letting Brendan Sorsby Play Amid Gambling Case",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Brendan Sorsby courtroom photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 33,
+    "image_fit_score": 0.73,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "appeals",
+      "court",
+      "letting"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.73,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "NCAA appeals temporary injunction allowing Brendan Sorsby to ...",
+        "url": "https://www.nytimes.com/athletic/7325046/2026/06/08/brendan-sorsby-injunction-decision-texas-tech/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "NCAA appeals temporary injunction allowing Brendan Sorsby to play despite gambling admissions",
+        "url": "https://nytimes.com/athletic/7325046/2026/06/08/brendan-sorsby-injunction-decision-texas-tech",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "The NCAA said no to Brendan Sorsby. A court just said yes. Here’s why",
+        "url": "https://usatoday.com/story/sports/ncaaf/2026/06/08/brendan-sorsby-eligible-judge-court-ncaa-gambling-rules-texas-tech/90457145007",
+        "domain": "usatoday.com"
+      },
+      {
+        "title": "Judge Grants Injunction, Brendan Sorsby to Be Eligible for 2026",
+        "url": "https://frontofficesports.com/brendan-sorsby-gambling-ncaa-eligibility-injunction-granted-texas-tech",
+        "domain": "frontofficesports.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Space & Astronomy",
+      "Primary topic_id unsupported by article evidence: space-astronomy"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Brendan Sorsby courtroom photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "brendan",
+        "sorsby"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
