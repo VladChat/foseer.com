@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-11T17:47:06.885Z",
+  "event_id": "evt-2026-06-11-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-06-11-pharma-fda-general-global-fda",
+  "article_type": "analysis",
+  "title": "BsUFA IV and FY 2028: What Is Known—and What Is Not",
+  "slug": "bsufa-iv-and-fy-2028-what-is-known-and-what-is-not",
+  "canonical_slug": "2026-06-11-bsufa-iv-and-fy-2028-what-is-known-and-what-is-not",
+  "expected_url": "/article/2026-06-11-bsufa-iv-and-fy-2028-what-is-known-and-what-is-not",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-11-bsufa-iv-and-fy-2028-what-is-known-and-what-is-not.mdx",
+  "published_at": "2026-06-11T17:47:06.883Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Pharma & FDA",
+  "topics": [
+    "Pharma & FDA"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "liam_parker",
+    "author_name": "Liam Parker",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/g5hoavepnlg/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/g5hoavepnlg/cover.jpg",
+    "source_url": "https://unsplash.com/photos/white-and-red-plastic-bottle-G5HoavePnLg",
+    "asset_key": "unsplash:G5HoavePnLg",
+    "alt_text": "white and red plastic bottle",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "IV and FY medical photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.28,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "bsufa",
+      "2028:",
+      "known—and"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.28,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "BsUFA IV: Fiscal Years 2028",
+        "url": "http://www.fda.gov/industry/biosimilar-user-fee-amendments/bsufa-iv-fiscal-years-2028-2032",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "IV and FY medical photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}
