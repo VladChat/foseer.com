@@ -1,0 +1,136 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-12T14:20:11.329Z",
+  "event_id": "evt-2026-06-12-us-politics-general-us-white-house-nba",
+  "cluster_id": "evt-2026-06-12-us-politics-general-us-white-house-nba",
+  "article_type": "report",
+  "title": "‘Where can we find hope?’: your questions about the US supreme court’s voting rights decision answered",
+  "slug": "what-the-supreme-court-s-louisiana-v-callais-ruling-means-fo",
+  "canonical_slug": "2026-06-12-what-the-supreme-court-s-louisiana-v-callais-ruling-means-fo",
+  "expected_url": "/article/2026-06-12-what-the-supreme-court-s-louisiana-v-callais-ruling-means-fo",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-12-what-the-supreme-court-s-louisiana-v-callais-ruling-means-fo.mdx",
+  "published_at": "2026-06-12T14:20:11.327Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "‘Where can we find hope?’: your questions about the US supreme court’s voting rights decision answered",
+  "topics": [
+    "‘Where can we find hope?’: your questions about the US supreme court’s voting rights decision answered"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/rpkdvpcyauo/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/rpkdvpcyauo/cover.jpg",
+    "source_url": "https://unsplash.com/photos/person-wearing-a-los-angeles-lakers-jersey-RPKdvPcYAUo",
+    "asset_key": "unsplash:RPKdvPcYAUo",
+    "alt_text": "Illustration for What the Supreme Court’s Louisiana v Callais ruling means for voting rights",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "supreme court courtroom photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "supreme",
+      "court’s",
+      "louisiana"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Supreme Court",
+    "Voting Rights",
+    "United States",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "‘Where can we find hope?’: your questions about the US supreme court’s voting rights decision answered",
+        "url": "https://www.theguardian.com/us-news/2026/jun/12/supreme-court-voting-rights-q-and-a",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "voting-rights",
+          "label": "Voting Rights",
+          "type": "theme"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house",
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "supreme court courtroom photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "supreme",
+        "court"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

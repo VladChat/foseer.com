@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-12T14:19:56.331Z",
+  "event_id": "evt-2026-06-10-pharma-fda-general-global",
+  "cluster_id": "evt-2026-06-10-pharma-fda-general-global",
+  "article_type": "report",
+  "title": "Frequently Requested or Proactively Posted Compliance Records",
+  "slug": "fda-posts-frequently-requested-foreign-drug-plant-inspection",
+  "canonical_slug": "2026-06-12-fda-posts-frequently-requested-foreign-drug-plant-inspection",
+  "expected_url": "/article/2026-06-12-fda-posts-frequently-requested-foreign-drug-plant-inspection",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-12-fda-posts-frequently-requested-foreign-drug-plant-inspection.mdx",
+  "published_at": "2026-06-12T14:19:56.329Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Frequently Requested or Proactively Posted Compliance Records",
+  "topics": [
+    "Frequently Requested or Proactively Posted Compliance Records"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/917upwdkkfo/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/917upwdkkfo/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-woman-taking-a-picture-with-a-camera-917uPwdkKfo",
+    "asset_key": "unsplash:917uPwdkKfo",
+    "alt_text": "Illustration for FDA Posts Frequently Requested Foreign Drug Plant Inspection Records",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Frequently Requested medical photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 32,
+    "image_fit_score": 0.73,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "posts",
+      "frequently",
+      "requested"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.73,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Frequently Requested or Proactively Posted Compliance Records",
+        "url": "http://www.fda.gov/drugs/cder-foia-electronic-reading-room/frequently-requested-or-proactively-posted-compliance-records",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Frequently Requested medical photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "frequently",
+        "requested"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
