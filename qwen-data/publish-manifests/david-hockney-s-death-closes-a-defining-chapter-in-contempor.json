@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-12T17:16:15.907Z",
+  "event_id": "evt-2026-06-12-film-tv-general-global",
+  "cluster_id": "evt-2026-06-12-film-tv-general-global",
+  "article_type": "analysis",
+  "title": "David Hockney’s Death Closes a Defining Chapter in Contemporary Art",
+  "slug": "david-hockney-s-death-closes-a-defining-chapter-in-contempor",
+  "canonical_slug": "2026-06-12-david-hockney-s-death-closes-a-defining-chapter-in-contempor",
+  "expected_url": "/article/2026-06-12-david-hockney-s-death-closes-a-defining-chapter-in-contempor",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-12-david-hockney-s-death-closes-a-defining-chapter-in-contempor.mdx",
+  "published_at": "2026-06-12T17:16:15.905Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Film & TV",
+  "topics": [
+    "Film & TV"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "sophia_bennett",
+    "author_name": "Sophia Bennett",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/6bxg2ozkmki/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/6bxg2ozkmki/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-black-and-white-photo-of-the-word-august-6BXG2OzkmKI",
+    "asset_key": "unsplash:6BXG2OzkmKI",
+    "alt_text": "Illustration for David Hockney’s Death Closes a Defining Chapter in Contemporary Art",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "David Hockney film photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 15,
+    "asset_quality_score": 95,
+    "editorial_fit_score": 37,
+    "image_fit_score": 0.75,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "david",
+      "hockney’s",
+      "death"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.25,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "David Hockney, revolutionary British artist famed for his pools and portraits, dies aged 88",
+        "url": "https://www.theguardian.com/artanddesign/2026/jun/12/artist-david-hockney-dies",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Art World Mourns David Hockney's Passing",
+        "url": "https://thepinktimes.com/art-world-mourns-david-hockneys-passing/",
+        "domain": "thepinktimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "David Hockney film photo",
+      "article_relevance_score": 15,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "david",
+        "hockney"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
