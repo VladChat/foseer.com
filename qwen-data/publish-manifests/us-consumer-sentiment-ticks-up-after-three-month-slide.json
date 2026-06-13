@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-13T13:05:37.126Z",
+  "event_id": "evt-2026-06-12-crypto-bitcoin-general-global-iran",
+  "cluster_id": "evt-2026-06-12-crypto-bitcoin-general-global-iran",
+  "article_type": "report",
+  "title": "Consumer sentiment rises for the first time in three months",
+  "slug": "us-consumer-sentiment-ticks-up-after-three-month-slide",
+  "canonical_slug": "2026-06-13-us-consumer-sentiment-ticks-up-after-three-month-slide",
+  "expected_url": "/article/2026-06-13-us-consumer-sentiment-ticks-up-after-three-month-slide",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-13-us-consumer-sentiment-ticks-up-after-three-month-slide.mdx",
+  "published_at": "2026-06-13T13:05:37.124Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Consumer sentiment rises for the first time in three months",
+  "topics": [
+    "Consumer sentiment rises for the first time in three months"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/1el12ckd9ea/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/1el12ckd9ea/cover.jpg",
+    "source_url": "https://unsplash.com/photos/the-pope-is-speaking-to-a-large-crowd-1eL12CKd9EA",
+    "asset_key": "unsplash:1eL12CKd9EA",
+    "alt_text": "Illustration for US consumer sentiment ticks up after three-month slide",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "US photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 45,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 60,
+    "image_fit_score": 0.84,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "consumer",
+      "sentiment",
+      "ticks"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.84,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Consumer sentiment rises for the first time in three months",
+        "url": "https://www.cnn.com/2026/06/12/economy/us-consumer-sentiment-inflation-june",
+        "domain": "cnn.com"
+      },
+      {
+        "title": "US consumer sentiment improves in June due to easing gas prices",
+        "url": "https://www.theguardian.com/business/2026/jun/12/consumer-sentiment-june-data-gas-prices",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "economy",
+          "markets"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "US photo",
+      "article_relevance_score": 45,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}
