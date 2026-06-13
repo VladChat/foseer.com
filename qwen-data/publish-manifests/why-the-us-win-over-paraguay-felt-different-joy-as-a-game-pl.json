@@ -1,0 +1,137 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-13T15:51:34.810Z",
+  "event_id": "evt-2026-06-13-major-leagues-general-united-states",
+  "cluster_id": "evt-2026-06-13-major-leagues-general-united-states",
+  "article_type": "analysis",
+  "title": "Why the US win over Paraguay felt different: joy as a game plan",
+  "slug": "why-the-us-win-over-paraguay-felt-different-joy-as-a-game-pl",
+  "canonical_slug": "2026-06-13-why-the-us-win-over-paraguay-felt-different-joy-as-a-game-pl",
+  "expected_url": "/article/2026-06-13-why-the-us-win-over-paraguay-felt-different-joy-as-a-game-pl",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-13-why-the-us-win-over-paraguay-felt-different-joy-as-a-game-pl.mdx",
+  "published_at": "2026-06-13T15:51:34.807Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Major Leagues",
+  "topics": [
+    "Major Leagues"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/sou-dw-h16y/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/sou-dw-h16y/cover.jpg",
+    "source_url": "https://unsplash.com/photos/basketball-player-shoots-the-ball-over-an-opponent-sou-Dw-h16Y",
+    "asset_key": "unsplash:sou-Dw-h16Y",
+    "alt_text": "Basketball player shoots the ball over an opponent.",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Paraguay photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 98,
+    "image_fit_score": 0.59,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "paraguay",
+      "different:",
+      "united"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.59,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "In a USA win for the history books, what stood out most was the ‘fun’ and free nature of it",
+        "url": "https://www.theguardian.com/football/2026/jun/13/in-a-usa-win-for-the-history-books-what-stood-out-most-was-the-fun-and-free-nature-of-it",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Major Leagues",
+      "Primary topic_id unsupported by article evidence: major-leagues"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "In a USA win for the history books, what stood out most was the ‘fun’ and free nature of it",
+          "url": "https://www.theguardian.com/football/2026/jun/13/in-a-usa-win-for-the-history-books-what-stood-out-most-was-the-fun-and-free-nature-of-it",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "win"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Paraguay photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "paraguay"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
