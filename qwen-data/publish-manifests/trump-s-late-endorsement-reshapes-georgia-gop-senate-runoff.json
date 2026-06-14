@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-14T15:59:41.016Z",
+  "event_id": "evt-2026-06-14-us-politics-general-global-senate",
+  "cluster_id": "evt-2026-06-14-us-politics-general-global-senate",
+  "article_type": "analysis",
+  "title": "Trump’s Late Endorsement Reshapes Georgia GOP Senate Runoff",
+  "slug": "trump-s-late-endorsement-reshapes-georgia-gop-senate-runoff",
+  "canonical_slug": "2026-06-14-trump-s-late-endorsement-reshapes-georgia-gop-senate-runoff",
+  "expected_url": "/article/2026-06-14-trump-s-late-endorsement-reshapes-georgia-gop-senate-runoff",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-14-trump-s-late-endorsement-reshapes-georgia-gop-senate-runoff.mdx",
+  "published_at": "2026-06-14T15:59:41.014Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "events-tournaments",
+  "topic_label": "Events & Tournaments",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/de6ryp1naho/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/de6ryp1naho/cover.jpg",
+    "source_url": "https://unsplash.com/photos/black-and-white-hospital-bed-in-the-middle-of-interior-building-DE6rYp1nAho",
+    "asset_key": "unsplash:DE6rYp1nAho",
+    "alt_text": "Illustration for Trump’s Late Endorsement Reshapes Georgia GOP Senate Runoff",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Georgia Senate government photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "trump’s",
+      "endorsement",
+      "reshapes"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Events & Tournaments",
+    "Congress",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Trump endorses Rep. Mike Collins in Georgia Senate runoff",
+        "url": "https://www.cbsnews.com/news/georgia-senate-runoff-trump-endorses-mike-collins/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "events-tournaments",
+          "label": "Events & Tournaments",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "events-tournaments",
+        "topic_label": "Events & Tournaments",
+        "supported": true,
+        "matched_aliases": [
+          "events"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Georgia Senate government photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "georgia",
+        "senate"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
