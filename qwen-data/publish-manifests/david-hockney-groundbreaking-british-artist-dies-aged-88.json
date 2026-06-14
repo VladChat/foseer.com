@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-14T13:14:36.915Z",
+  "event_id": "evt-2026-06-12-film-tv-general-global-apple",
+  "cluster_id": "evt-2026-06-12-film-tv-general-global-apple",
+  "article_type": "report",
+  "title": "David Hockney, revolutionary British artist famed for his pools and portraits, dies aged 88",
+  "slug": "david-hockney-groundbreaking-british-artist-dies-aged-88",
+  "canonical_slug": "2026-06-14-david-hockney-groundbreaking-british-artist-dies-aged-88",
+  "expected_url": "/article/2026-06-14-david-hockney-groundbreaking-british-artist-dies-aged-88",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-14-david-hockney-groundbreaking-british-artist-dies-aged-88.mdx",
+  "published_at": "2026-06-14T13:14:36.914Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "David Hockney, revolutionary British artist famed for his pools and portraits, dies aged 88",
+  "topics": [
+    "David Hockney, revolutionary British artist famed for his pools and portraits, dies aged 88"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/14928746/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/14928746/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/facade-of-gray-concrete-building-14928746/",
+    "asset_key": "pexels:14928746",
+    "alt_text": "Illustration for David Hockney, groundbreaking British artist, dies aged 88",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "David Hockney technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.61,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "david",
+      "hockney",
+      "groundbreaking"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.61,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "David Hockney, revolutionary British artist famed for his pools and portraits, dies aged 88",
+        "url": "https://www.theguardian.com/artanddesign/2026/jun/12/artist-david-hockney-dies",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Art World Mourns David Hockney's Passing",
+        "url": "https://thepinktimes.com/art-world-mourns-david-hockneys-passing/",
+        "domain": "thepinktimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "David Hockney technology photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "david",
+        "hockney"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

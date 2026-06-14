@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-14T13:14:24.065Z",
+  "event_id": "evt-2026-06-14-public-health-general-global",
+  "cluster_id": "evt-2026-06-14-public-health-general-global",
+  "article_type": "report",
+  "title": "Brendan Sorsby isn’t a victim. He’s the latest face of America’s public health crisis",
+  "slug": "brendan-sorsby-and-the-rising-cost-of-online-sports-betting",
+  "canonical_slug": "2026-06-14-brendan-sorsby-and-the-rising-cost-of-online-sports-betting",
+  "expected_url": "/article/2026-06-14-brendan-sorsby-and-the-rising-cost-of-online-sports-betting",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-14-brendan-sorsby-and-the-rising-cost-of-online-sports-betting.mdx",
+  "published_at": "2026-06-14T13:14:24.063Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "public-health",
+  "topic_label": "Public Health",
+  "subsection": "Brendan Sorsby isn’t a victim. He’s the latest face of America’s public health crisis",
+  "topics": [
+    "Brendan Sorsby isn’t a victim. He’s the latest face of America’s public health crisis"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/rk1xqp3qz5g/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/rk1xqp3qz5g/cover.jpg",
+    "source_url": "https://unsplash.com/photos/water-droplets-on-glass-panel-RK1XQP3QZ5g",
+    "asset_key": "unsplash:RK1XQP3QZ5g",
+    "alt_text": "Illustration for Brendan Sorsby and the rising cost of online sports betting",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Brendan Sorsby medical photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 31,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "public health",
+      "hospital",
+      "medical",
+      "brendan",
+      "sorsby",
+      "rising"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Public Health",
+    "WHO",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Brendan Sorsby isn’t a victim. He’s the latest face of America’s public health crisis",
+        "url": "https://www.nytimes.com/athletic/7352694/2026/06/12/brendan-sorsby-isnt-a-victim-hes-the-latest-face-of-americas-public-health-crisis/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Who is really looking out for Brendan Sorsby in the Texas Tech gambling, eligibility saga?",
+        "url": "https://deseret.com/sports/2026/06/09/is-anyone-really-looking-out-for-brendan-sorsby-opinion",
+        "domain": "deseret.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "public-health",
+          "label": "Public Health",
+          "type": "topic"
+        },
+        {
+          "slug": "who",
+          "label": "WHO",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "public-health",
+        "topic_label": "Public Health",
+        "supported": true,
+        "matched_aliases": [
+          "Public Health"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Brendan Sorsby medical photo",
+      "article_relevance_score": 31,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "brendan",
+        "sorsby"
+      ],
+      "placeholder_query": false
+    }
+  }
+}

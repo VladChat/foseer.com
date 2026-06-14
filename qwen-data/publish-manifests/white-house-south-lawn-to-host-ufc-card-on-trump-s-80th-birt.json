@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-14T13:14:50.344Z",
+  "event_id": "evt-2026-06-14-us-politics-general-global-white-house-nba",
+  "cluster_id": "evt-2026-06-14-us-politics-general-global-white-house-nba",
+  "article_type": "report",
+  "title": "White House hosting UFC fight tonight on Trump's 80th birthday",
+  "slug": "white-house-south-lawn-to-host-ufc-card-on-trump-s-80th-birt",
+  "canonical_slug": "2026-06-14-white-house-south-lawn-to-host-ufc-card-on-trump-s-80th-birt",
+  "expected_url": "/article/2026-06-14-white-house-south-lawn-to-host-ufc-card-on-trump-s-80th-birt",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-14-white-house-south-lawn-to-host-ufc-card-on-trump-s-80th-birt.mdx",
+  "published_at": "2026-06-14T13:14:50.342Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "White House hosting UFC fight tonight on Trump's 80th birthday",
+  "topics": [
+    "White House hosting UFC fight tonight on Trump's 80th birthday"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/xycbw1uip_m/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/xycbw1uip_m/cover.jpg",
+    "source_url": "https://unsplash.com/photos/person-writing-on-white-paper-xYCBw1uIP_M",
+    "asset_key": "unsplash:xYCBw1uIP_M",
+    "alt_text": "person writing on white paper",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "White House basketball photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 88,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 91,
+    "image_fit_score": 0.66,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "white",
+      "house",
+      "south"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.66,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Congress",
+    "White House",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "White House hosting UFC fight tonight on Trump's 80th birthday",
+        "url": "https://www.cbsnews.com/news/white-house-ufc-freedom-250-fight-trump-80th-birthday/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "Trump has not extended White House invitation to 2025 WNBA ...",
+        "url": "https://www.nytimes.com/athletic/7348414/2026/06/10/trump-las-vegas-aces-white-house-invitation/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "white-house",
+          "label": "White House",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "White House basketball photo",
+      "article_relevance_score": 88,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "white",
+        "house"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
