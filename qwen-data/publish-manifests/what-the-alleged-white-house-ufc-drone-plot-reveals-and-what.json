@@ -1,0 +1,136 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-16T18:41:55.227Z",
+  "event_id": "evt-2026-06-16-us-politics-general-us-white-house",
+  "cluster_id": "evt-2026-06-16-us-politics-general-us-white-house",
+  "article_type": "analysis",
+  "title": "What the Alleged White House UFC Drone Plot Reveals—and What Comes Next",
+  "slug": "what-the-alleged-white-house-ufc-drone-plot-reveals-and-what",
+  "canonical_slug": "2026-06-16-what-the-alleged-white-house-ufc-drone-plot-reveals-and-what",
+  "expected_url": "/article/2026-06-16-what-the-alleged-white-house-ufc-drone-plot-reveals-and-what",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-16-what-the-alleged-white-house-ufc-drone-plot-reveals-and-what.mdx",
+  "published_at": "2026-06-16T18:41:55.224Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/u_yjcjcv-ia/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/u_yjcjcv-ia/cover.jpg",
+    "source_url": "https://unsplash.com/photos/crowd-of-people-holding-mini-flags-u_YJcJCv-iA",
+    "asset_key": "unsplash:u_YJcJCv-iA",
+    "alt_text": "Illustration for What the Alleged White House UFC Drone Plot Reveals—and What Comes Next",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Alleged White House UFC courtroom photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 89,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 92,
+    "image_fit_score": 0.97,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "alleged",
+      "white",
+      "house"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.97,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Congress",
+    "White House",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Feds reveal new details of alleged plot to attack White House UFC event",
+        "url": "https://www.cbsnews.com/news/fbi-disrupts-alleged-plot-targeting-ufc-event-white-house/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "Knicks Glory , White House Controversy & Protecting Black Legacy",
+        "url": "https://wjbt.iheart.com/featured/breakfast-club/content/2026-06-16-51-the-breakfast-club-knicks-glory-white-house-controversy-protecting-black/",
+        "domain": "wjbt.iheart.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "white-house",
+          "label": "White House",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Alleged White House UFC courtroom photo",
+      "article_relevance_score": 89,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "alleged",
+        "white",
+        "house",
+        "ufc"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
