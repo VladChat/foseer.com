@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-18T14:29:51.038Z",
+  "event_id": "evt-2026-06-18-us-politics-general-global-supreme-court",
+  "cluster_id": "evt-2026-06-18-us-politics-general-global-supreme-court",
+  "article_type": "report",
+  "title": "Supreme Court sides with man who challenged law barring drug users from having guns",
+  "slug": "supreme-court-backs-texas-man-in-gun-case-involving-drug-use",
+  "canonical_slug": "2026-06-18-supreme-court-backs-texas-man-in-gun-case-involving-drug-use",
+  "expected_url": "/article/2026-06-18-supreme-court-backs-texas-man-in-gun-case-involving-drug-use",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-18-supreme-court-backs-texas-man-in-gun-case-involving-drug-use.mdx",
+  "published_at": "2026-06-18T14:29:51.036Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "law-crime",
+  "topic_label": "Law & Crime",
+  "subsection": "Supreme Court sides with man who challenged law barring drug users from having guns",
+  "topics": [
+    "Supreme Court sides with man who challenged law barring drug users from having guns"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/qv_lcc5uwu/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/qv_lcc5uwu/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-body-of-water-surrounded-by-lots-of-trees--Qv_LcC5UWU",
+    "asset_key": "unsplash:-Qv_LcC5UWU",
+    "alt_text": "Illustration for Supreme Court Backs Texas Man in Gun Case Involving Drug Use Ban",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Supreme Court courtroom photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 95,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "courthouse",
+      "justice",
+      "legal",
+      "supreme",
+      "court",
+      "backs"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Law & Crime",
+    "Supreme Court",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Supreme Court sides with man who challenged law barring drug users from having guns",
+        "url": "https://www.cbsnews.com/news/supreme-court-drug-users-gun-law-us-v-hemani/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "law-crime",
+          "label": "Law & Crime",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "law-crime",
+        "topic_label": "Law & Crime",
+        "supported": true,
+        "matched_aliases": [
+          "courts",
+          "crime",
+          "legal"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Supreme Court courtroom photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "supreme",
+        "court"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
