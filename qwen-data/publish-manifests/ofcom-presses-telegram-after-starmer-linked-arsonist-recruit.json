@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-19T14:26:05.847Z",
+  "event_id": "evt-2026-06-19-ai-big-tech-general-global-amazon-india",
+  "cluster_id": "evt-2026-06-19-ai-big-tech-general-global-amazon-india",
+  "article_type": "report",
+  "title": "Telegram questioned by Ofcom after arsonist who targeted Starmer-linked properties recruited on app",
+  "slug": "ofcom-presses-telegram-after-starmer-linked-arsonist-recruit",
+  "canonical_slug": "2026-06-19-ofcom-presses-telegram-after-starmer-linked-arsonist-recruit",
+  "expected_url": "/article/2026-06-19-ofcom-presses-telegram-after-starmer-linked-arsonist-recruit",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-19-ofcom-presses-telegram-after-starmer-linked-arsonist-recruit.mdx",
+  "published_at": "2026-06-19T14:26:05.845Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Telegram questioned by Ofcom after arsonist who targeted Starmer-linked properties recruited on app",
+  "topics": [
+    "Telegram questioned by Ofcom after arsonist who targeted Starmer-linked properties recruited on app"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/7928566/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/7928566/cover.jpg",
+    "source_url": "https://pixabay.com/photos/trail-bicycle-road-garosu-gil-7928566/",
+    "asset_key": "pixabay:7928566",
+    "alt_text": "Illustration for Ofcom presses Telegram after Starmer-linked arsonist recruited on app",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Ofcom technology photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 55,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 67,
+    "image_fit_score": 0.87,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "ofcom",
+      "presses",
+      "telegram"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.87,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "WHO",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Telegram questioned by Ofcom after arsonist who targeted Starmer-linked properties recruited on app",
+        "url": "https://www.theguardian.com/technology/2026/jun/19/telegram-ofcom-arsonist-starmer-linked-properties",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "who",
+          "label": "WHO",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Ofcom technology photo",
+      "article_relevance_score": 55,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "ofcom"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
