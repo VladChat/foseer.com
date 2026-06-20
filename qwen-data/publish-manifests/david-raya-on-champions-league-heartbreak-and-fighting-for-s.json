@@ -1,0 +1,142 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-20T13:06:07.921Z",
+  "event_id": "evt-2026-06-20-major-leagues-general-global-fifa",
+  "cluster_id": "evt-2026-06-20-major-leagues-general-global-fifa",
+  "article_type": "report",
+  "title": "David Raya: ‘When you lose a Champions League final it destroys you inside’",
+  "slug": "david-raya-on-champions-league-heartbreak-and-fighting-for-s",
+  "canonical_slug": "2026-06-20-david-raya-on-champions-league-heartbreak-and-fighting-for-s",
+  "expected_url": "/article/2026-06-20-david-raya-on-champions-league-heartbreak-and-fighting-for-s",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-20-david-raya-on-champions-league-heartbreak-and-fighting-for-s.mdx",
+  "published_at": "2026-06-20T13:06:07.918Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "David Raya: ‘When you lose a Champions League final it destroys you inside’",
+  "topics": [
+    "David Raya: ‘When you lose a Champions League final it destroys you inside’"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/jgqzufjxrue/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/jgqzufjxrue/cover.jpg",
+    "source_url": "https://unsplash.com/photos/soccer-field-with-no-people-during-daytime-JGqZUfjXRUE",
+    "asset_key": "unsplash:JGqZUfjXRUE",
+    "alt_text": "Illustration for David Raya on Champions League heartbreak and fighting for Spain’s No 1",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "David Raya photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 83,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 87,
+    "image_fit_score": 0.95,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "david",
+      "champions",
+      "league"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.18,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Premier League",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "David Raya: ‘When you lose a Champions League final it destroys you inside’",
+        "url": "https://www.theguardian.com/football/2026/jun/20/david-raya-when-you-lose-a-champions-league-final-it-destroys-you-inside",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Wrexham react to Women's Champions League qualifying draw",
+        "url": "https://www.nytimes.com/athletic/7372245/2026/06/18/wrexham-women-champions-league-draw/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "The 25 Most Expensive Premier League Transfers Ever When Adjusted for Inflation",
+        "url": "https://si.com/soccer/the-25-most-expensive-premier-league-transfers-ever-when-adjusted-inflation",
+        "domain": "si.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "The 25 Most Expensive Premier League Transfers Ever When Adjusted for Inflation",
+          "url": "https://si.com/soccer/the-25-most-expensive-premier-league-transfers-ever-when-adjusted-inflation",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "league"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "premier-league",
+          "label": "Premier League",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": true,
+        "matched_aliases": [
+          "transfers"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "David Raya photo",
+      "article_relevance_score": 83,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "david",
+        "raya"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
