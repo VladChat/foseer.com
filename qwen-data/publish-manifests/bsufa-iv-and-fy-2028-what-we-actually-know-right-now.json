@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-23T16:44:14.114Z",
+  "event_id": "evt-2026-06-23-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-06-23-pharma-fda-general-global-fda",
+  "article_type": "analysis",
+  "title": "BsUFA IV and FY 2028: What We Actually Know Right Now",
+  "slug": "bsufa-iv-and-fy-2028-what-we-actually-know-right-now",
+  "canonical_slug": "2026-06-23-bsufa-iv-and-fy-2028-what-we-actually-know-right-now",
+  "expected_url": "/article/2026-06-23-bsufa-iv-and-fy-2028-what-we-actually-know-right-now",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-23-bsufa-iv-and-fy-2028-what-we-actually-know-right-now.mdx",
+  "published_at": "2026-06-23T16:44:14.112Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Pharma & FDA",
+  "topics": [
+    "Pharma & FDA"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "jacob_ellis",
+    "author_name": "Jacob Ellis",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/b9mtrampzto/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/b9mtrampzto/cover.jpg",
+    "source_url": "https://unsplash.com/photos/two-united-states-air-force-f-16s-are-on-the-runway-B9MtrAMpZTo",
+    "asset_key": "unsplash:B9MtrAMpZTo",
+    "alt_text": "Illustration for BsUFA IV and FY 2028: What We Actually Know Right Now",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "IV and FY medical photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 20,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 42,
+    "image_fit_score": 0.77,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "bsufa",
+      "2028:",
+      "actually"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.18,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "BsUFA IV: Fiscal Years 2028",
+        "url": "http://www.fda.gov/industry/biosimilar-user-fee-amendments/bsufa-iv-fiscal-years-2028-2032",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "IV and FY medical photo",
+      "article_relevance_score": 20,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}
