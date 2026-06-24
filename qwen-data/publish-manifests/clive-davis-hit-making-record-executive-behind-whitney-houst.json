@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-24T13:36:52.633Z",
+  "event_id": "evt-2026-06-23-consumer-money-general-global-amazon",
+  "cluster_id": "evt-2026-06-23-consumer-money-general-global-amazon",
+  "article_type": "report",
+  "title": "Clive Davis: music industry executive who signed Whitney Houston and Bruce Springsteen dies aged 94",
+  "slug": "clive-davis-hit-making-record-executive-behind-whitney-houst",
+  "canonical_slug": "2026-06-24-clive-davis-hit-making-record-executive-behind-whitney-houst",
+  "expected_url": "/article/2026-06-24-clive-davis-hit-making-record-executive-behind-whitney-houst",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-24-clive-davis-hit-making-record-executive-behind-whitney-houst.mdx",
+  "published_at": "2026-06-24T13:36:52.631Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "music-celebrities",
+  "topic_label": "Music & Celebrities",
+  "subsection": "Clive Davis: music industry executive who signed Whitney Houston and Bruce Springsteen dies aged 94",
+  "topics": [
+    "Clive Davis: music industry executive who signed Whitney Houston and Bruce Springsteen dies aged 94"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/4g4phxf1i8m/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/4g4phxf1i8m/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-in-pink-crew-neck-shirt-and-black-hat-4g4PHXF1I8M",
+    "asset_key": "unsplash:4g4PHXF1I8M",
+    "alt_text": "Illustration for Clive Davis, hit-making record executive behind Whitney Houston, dies at 94",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Clive Davis concert photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 30,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.58,
+    "visual_concepts": [
+      "music",
+      "concert",
+      "album",
+      "clive",
+      "davis",
+      "making"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.58,
+    "is_fallback": false
+  },
+  "tags": [
+    "Music & Celebrities",
+    "Music Industry",
+    "WHO",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Clive Davis: music industry executive who signed Whitney Houston and Bruce Springsteen dies aged 94",
+        "url": "https://theguardian.com/music/2026/jun/22/clive-davis-music-industry-executive-who-signed-whitney-houston-and-bruce-springsteen-dies-aged-94",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Clive Davis, legendary music industry figure, dies at 94",
+        "url": "https://apnews.com/article/clive-davis-obituary-music-mogul-45c9f57f7f764cbf815c9747cbff94e3",
+        "domain": "apnews.com"
+      },
+      {
+        "title": "Clive Davis Dead at 94: List of Artists Discovered by Music Titan",
+        "url": "https://newsweek.com/clive-davis-death-artists-musicians-list-santana-joplin-12104592",
+        "domain": "newsweek.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "music-celebrities",
+          "label": "Music & Celebrities",
+          "type": "topic"
+        },
+        {
+          "slug": "music-industry",
+          "label": "Music Industry",
+          "type": "theme"
+        },
+        {
+          "slug": "who",
+          "label": "WHO",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "music-celebrities",
+        "topic_label": "Music & Celebrities",
+        "supported": true,
+        "matched_aliases": [
+          "music"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Clive Davis concert photo",
+      "article_relevance_score": 30,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "clive",
+        "davis"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
