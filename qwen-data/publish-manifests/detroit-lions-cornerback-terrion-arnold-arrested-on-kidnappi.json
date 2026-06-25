@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-25T13:37:21.792Z",
+  "event_id": "evt-2026-06-25-major-leagues-general-global-fifa",
+  "cluster_id": "evt-2026-06-25-major-leagues-general-global-fifa",
+  "article_type": "report",
+  "title": "Detroit Lions star Terrion Arnold arrested on kidnapping, armed robbery charges",
+  "slug": "detroit-lions-cornerback-terrion-arnold-arrested-on-kidnappi",
+  "canonical_slug": "2026-06-25-detroit-lions-cornerback-terrion-arnold-arrested-on-kidnappi",
+  "expected_url": "/article/2026-06-25-detroit-lions-cornerback-terrion-arnold-arrested-on-kidnappi",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-25-detroit-lions-cornerback-terrion-arnold-arrested-on-kidnappi.mdx",
+  "published_at": "2026-06-25T13:37:21.790Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Detroit Lions star Terrion Arnold arrested on kidnapping, armed robbery charges",
+  "topics": [
+    "Detroit Lions star Terrion Arnold arrested on kidnapping, armed robbery charges"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/7165113/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/7165113/cover.jpg",
+    "source_url": "https://pixabay.com/photos/baltic-sea-sunset-taking-photos-7165113/",
+    "asset_key": "pixabay:7165113",
+    "alt_text": "Illustration for Detroit Lions cornerback Terrion Arnold arrested on kidnapping charges",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Detroit Lions technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 2,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 29,
+    "image_fit_score": 0.72,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "detroit",
+      "lions",
+      "cornerback"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.72,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Detroit Lions star Terrion Arnold arrested on kidnapping, armed robbery charges",
+        "url": "https://www.theguardian.com/sport/2026/jun/25/terrion-arnold-arrest-detroit-lions",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Detroit Lions technology photo",
+      "article_relevance_score": 2,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "detroit",
+        "lions"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
