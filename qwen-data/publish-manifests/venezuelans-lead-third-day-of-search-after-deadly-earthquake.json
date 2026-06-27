@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-27T12:53:43.589Z",
+  "event_id": "evt-2026-06-27-world-geopolitics-general-global-fda-india",
+  "cluster_id": "evt-2026-06-27-world-geopolitics-general-global-fda-india",
+  "article_type": "report",
+  "title": "Search for earthquake survivors in Venezuela stretches into 3rd day",
+  "slug": "venezuelans-lead-third-day-of-search-after-deadly-earthquake",
+  "canonical_slug": "2026-06-27-venezuelans-lead-third-day-of-search-after-deadly-earthquake",
+  "expected_url": "/article/2026-06-27-venezuelans-lead-third-day-of-search-after-deadly-earthquake",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-27-venezuelans-lead-third-day-of-search-after-deadly-earthquake.mdx",
+  "published_at": "2026-06-27T12:53:43.587Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Search for earthquake survivors in Venezuela stretches into 3rd day",
+  "topics": [
+    "Search for earthquake survivors in Venezuela stretches into 3rd day"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/797alfvowzk/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/797alfvowzk/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-male-in-a-white-shirt-and-a-microphone-797ALFvOWZk",
+    "asset_key": "unsplash:797ALFvOWZk",
+    "alt_text": "Illustration for Venezuelans Lead Third Day of Search After Deadly Earthquake",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Search technology photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 38,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 55,
+    "image_fit_score": 0.82,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "venezuelans",
+      "search",
+      "deadly"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.31,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Diplomacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Search for earthquake survivors in Venezuela stretches into 3rd day",
+        "url": "https://www.cbsnews.com/news/venezuela-earthquake-search-rescue-la-guaira/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Search technology photo",
+      "article_relevance_score": 38,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "search"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
