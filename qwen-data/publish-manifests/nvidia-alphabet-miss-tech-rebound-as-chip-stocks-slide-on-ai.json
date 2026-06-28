@@ -1,0 +1,154 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-28T12:56:03.967Z",
+  "event_id": "evt-2026-06-27-space-astronomy-general-global-nvidia-apple",
+  "cluster_id": "evt-2026-06-27-space-astronomy-general-global-nvidia-apple",
+  "article_type": "report",
+  "title": "Nvidia, Alphabet sit out megacap tech bounce as chip stocks sink",
+  "slug": "nvidia-alphabet-miss-tech-rebound-as-chip-stocks-slide-on-ai",
+  "canonical_slug": "2026-06-28-nvidia-alphabet-miss-tech-rebound-as-chip-stocks-slide-on-ai",
+  "expected_url": "/article/2026-06-28-nvidia-alphabet-miss-tech-rebound-as-chip-stocks-slide-on-ai",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-28-nvidia-alphabet-miss-tech-rebound-as-chip-stocks-slide-on-ai.mdx",
+  "published_at": "2026-06-28T12:56:03.965Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "consumer-tech",
+  "topic_label": "Consumer Tech",
+  "subsection": "Nvidia, Alphabet sit out megacap tech bounce as chip stocks sink",
+  "topics": [
+    "Nvidia, Alphabet sit out megacap tech bounce as chip stocks sink"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/8ktobbq4l30/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/8ktobbq4l30/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-drawing-of-a-woman-with-long-hair-8ktOBbq4L30",
+    "asset_key": "unsplash:8ktOBbq4L30",
+    "alt_text": "Illustration for Nvidia, Alphabet Miss Tech Rebound as Chip Stocks Slide on AI Cost Jitters",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Nvidia Alphabet technology photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.68,
+    "visual_concepts": [
+      "smartphone",
+      "laptop",
+      "consumer electronics",
+      "nvidia",
+      "alphabet",
+      "rebound"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.68,
+    "is_fallback": false
+  },
+  "tags": [
+    "Consumer Tech",
+    "Stock Market",
+    "Nvidia",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Nvidia, Alphabet sit out megacap tech bounce as chip stocks sink",
+        "url": "https://cnbc.com/2026/06/26/global-tech-stocks-ai-infrastructure-costs-selloff-softbank-apple.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "AI Upgrades, Security Breaches, and Industry Shakeups Define the Week in Tech",
+        "url": "https://techrepublic.com/article/ai-upgrades-security-breaches-and-industry-shakeups-define-the-week-in-tech-2",
+        "domain": "techrepublic.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Consumer Tech",
+      "Primary topic_id unsupported by article evidence: consumer-tech"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "AI Upgrades, Security Breaches, and Industry Shakeups Define the Week in Tech",
+          "url": "https://techrepublic.com/article/ai-upgrades-security-breaches-and-industry-shakeups-define-the-week-in-tech-2",
+          "overlap_ratio": 0.1,
+          "shared_tokens": [
+            "tech"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "consumer-tech",
+          "label": "Consumer Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "stock-market",
+          "label": "Stock Market",
+          "type": "theme"
+        },
+        {
+          "slug": "nvidia",
+          "label": "Nvidia",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "consumer-tech",
+          "label": "Consumer Tech",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "consumer-tech",
+        "topic_label": "Consumer Tech",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Nvidia Alphabet technology photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "nvidia",
+        "alphabet",
+        "technology"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
