@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-06-30T13:22:52.560Z",
+  "event_id": "evt-2026-06-30-us-politics-general-global-supreme-court",
+  "cluster_id": "evt-2026-06-30-us-politics-general-global-supreme-court",
+  "article_type": "report",
+  "title": "First Thing: Supreme court hands Trump power to fire agency chiefs but rules against him on mail",
+  "slug": "supreme-court-expands-trump-s-power-over-agency-chiefs-rejec",
+  "canonical_slug": "2026-06-30-supreme-court-expands-trump-s-power-over-agency-chiefs-rejec",
+  "expected_url": "/article/2026-06-30-supreme-court-expands-trump-s-power-over-agency-chiefs-rejec",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-30-supreme-court-expands-trump-s-power-over-agency-chiefs-rejec.mdx",
+  "published_at": "2026-06-30T13:22:52.558Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "First Thing: Supreme court hands Trump power to fire agency chiefs but rules against him on mail",
+  "topics": [
+    "First Thing: Supreme court hands Trump power to fire agency chiefs but rules against him on mail"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/m_fg3wnkp7m/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/m_fg3wnkp7m/cover.jpg",
+    "source_url": "https://unsplash.com/photos/grayscale-photography-of-boy-wearing-sweater-M_fg3wnKP7M",
+    "asset_key": "unsplash:M_fg3wnKP7M",
+    "alt_text": "Illustration for Supreme Court Expands Trump’s Power Over Agency Chiefs, Rejects Mail Claim",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Supreme Court courtroom photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 4,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 30,
+    "image_fit_score": 0.72,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "supreme",
+      "court",
+      "expands"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.72,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Supreme Court",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "First Thing: Supreme court hands Trump power to fire agency chiefs but rules against him on mail",
+        "url": "https://www.theguardian.com/us-news/2026/jun/30/first-thing-supreme-court-trump-fire-agency-chiefs-rules-against-him-mail-in-ballots",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "The Latest : Supreme Court is set to rule on Trump challenge to birthright citizenship",
+        "url": "https://mynorthwest.com/national/the-latest-supreme-court-is-set-to-rule-on-trumps-challenge-to-birthright-citizenship/4252645",
+        "domain": "mynorthwest.com"
+      },
+      {
+        "title": "Trump administration targets California coastal agency in escalation ...",
+        "url": "https://www.theguardian.com/us-news/2026/jun/29/california-trump-administration-energy-production",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Supreme Court courtroom photo",
+      "article_relevance_score": 4,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "supreme",
+        "court"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
