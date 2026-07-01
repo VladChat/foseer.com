@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-01T13:52:22.993Z",
+  "event_id": "evt-2026-07-01-film-tv-general-global",
+  "cluster_id": "evt-2026-07-01-film-tv-general-global",
+  "article_type": "report",
+  "title": "R&B star Chris Brown ordered to pay $13m to housekeeper mauled by his dog",
+  "slug": "chris-brown-ordered-to-pay-nearly-13m-to-housekeeper-mauled-",
+  "canonical_slug": "2026-07-01-chris-brown-ordered-to-pay-nearly-13m-to-housekeeper-mauled",
+  "expected_url": "/article/2026-07-01-chris-brown-ordered-to-pay-nearly-13m-to-housekeeper-mauled",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-01-chris-brown-ordered-to-pay-nearly-13m-to-housekeeper-mauled.mdx",
+  "published_at": "2026-07-01T13:52:22.991Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "public-health",
+  "topic_label": "Public Health",
+  "subsection": "R&B star Chris Brown ordered to pay $13m to housekeeper mauled by his dog",
+  "topics": [
+    "R&B star Chris Brown ordered to pay $13m to housekeeper mauled by his dog"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/qgtg6a21d1k/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/qgtg6a21d1k/cover.jpg",
+    "source_url": "https://unsplash.com/photos/people-sitting-on-chairs-inside-building-QGTG6A21d1k",
+    "asset_key": "unsplash:QGTG6A21d1k",
+    "alt_text": "Illustration for Chris Brown ordered to pay nearly $13m to housekeeper mauled by dog",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Chris Brown courtroom photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 2,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 29,
+    "image_fit_score": 0.72,
+    "visual_concepts": [
+      "public health",
+      "hospital",
+      "medical",
+      "chris",
+      "brown",
+      "ordered"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.72,
+    "is_fallback": false
+  },
+  "tags": [
+    "Public Health",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "R&B star Chris Brown ordered to pay $13m to housekeeper mauled by his dog",
+        "url": "https://www.theguardian.com/music/2026/jul/01/rb-star-chris-brown-ordered-to-pay-13m-to-housekeeper-mauled-by-his-dog",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "public-health",
+          "label": "Public Health",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "public-health",
+        "topic_label": "Public Health",
+        "supported": true,
+        "matched_aliases": [
+          "Public Health"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Chris Brown courtroom photo",
+      "article_relevance_score": 2,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "chris",
+        "brown"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
