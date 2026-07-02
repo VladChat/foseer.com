@@ -1,0 +1,145 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-02T13:18:29.478Z",
+  "event_id": "evt-2026-07-01-athletes-culture-general-global-supreme-court-nba",
+  "cluster_id": "evt-2026-07-01-athletes-culture-general-global-supreme-court-nba",
+  "article_type": "report",
+  "title": "Supreme Court upholds bans on transgender athletes in girls’ and women’s sports",
+  "slug": "supreme-court-backs-state-bans-on-transgender-girls-in-schoo",
+  "canonical_slug": "2026-07-02-supreme-court-backs-state-bans-on-transgender-girls-in-schoo",
+  "expected_url": "/article/2026-07-02-supreme-court-backs-state-bans-on-transgender-girls-in-schoo",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-02-supreme-court-backs-state-bans-on-transgender-girls-in-schoo.mdx",
+  "published_at": "2026-07-02T13:18:29.475Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "athletes-culture",
+  "topic_label": "Athletes & Culture",
+  "subsection": "Supreme Court upholds bans on transgender athletes in girls’ and women’s sports",
+  "topics": [
+    "Supreme Court upholds bans on transgender athletes in girls’ and women’s sports"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/36984938/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/36984938/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/majestic-frieze-of-the-supreme-court-building-36984938/",
+    "asset_key": "pexels:36984938",
+    "alt_text": "Detailed view of the Supreme Court Building's frontal frieze depicting historical figures and justices.",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Supreme Court courtroom photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 97,
+    "editorial_fit_score": 99,
+    "image_fit_score": 0.8,
+    "visual_concepts": [
+      "athlete portrait",
+      "sports culture",
+      "fans",
+      "supreme",
+      "court",
+      "backs"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.8,
+    "is_fallback": false
+  },
+  "tags": [
+    "Athletes & Culture",
+    "Supreme Court",
+    "Trans Athlete Policy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Supreme Court upholds bans on transgender athletes in girls’ and women’s sports",
+        "url": "https://www.nbcnews.com/politics/supreme-court/supreme-court-upholds-state-transgender-sports-bans-rcna261384",
+        "domain": "nbcnews.com"
+      },
+      {
+        "title": "What to know about the US supreme court’s ruling on trans athletes | US supreme court",
+        "url": "https://www.theguardian.com/us-news/2026/jul/01/us-supreme-court-trans-athletes-ruling",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "US supreme court upholds law to count mail",
+        "url": "https://www.theguardian.com/us-news/2026/jun/29/supreme-court-mail-in-ballots-election-ruling",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "The Latest : Supreme Court is set to rule on Trump challenge to birthright citizenship",
+        "url": "https://mynorthwest.com/national/the-latest-supreme-court-is-set-to-rule-on-trumps-challenge-to-birthright-citizenship/4252645",
+        "domain": "mynorthwest.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "athletes-culture",
+          "label": "Athletes & Culture",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "trans-athlete-policy",
+          "label": "Trans Athlete Policy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "athletes-culture",
+        "topic_label": "Athletes & Culture",
+        "supported": true,
+        "matched_aliases": [
+          "athletes",
+          "youth sports"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Supreme Court courtroom photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "supreme",
+        "court"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
