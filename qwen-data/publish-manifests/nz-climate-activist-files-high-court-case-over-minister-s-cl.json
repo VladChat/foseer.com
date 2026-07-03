@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-03T13:20:52.291Z",
+  "event_id": "evt-2026-07-01-news-general-global-tesla",
+  "cluster_id": "evt-2026-07-01-news-general-global-tesla",
+  "article_type": "report",
+  "title": "New Zealand activist mounts legal challenge to plan to change ...",
+  "slug": "nz-climate-activist-files-high-court-case-over-minister-s-cl",
+  "canonical_slug": "2026-07-03-nz-climate-activist-files-high-court-case-over-minister-s-cl",
+  "expected_url": "/article/2026-07-03-nz-climate-activist-files-high-court-case-over-minister-s-cl",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-03-nz-climate-activist-files-high-court-case-over-minister-s-cl.mdx",
+  "published_at": "2026-07-03T13:20:52.289Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "law-crime",
+  "topic_label": "Law & Crime",
+  "subsection": "New Zealand activist mounts legal challenge to plan to change ...",
+  "topics": [
+    "New Zealand activist mounts legal challenge to plan to change ..."
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/33517294/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/33517294/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/modern-prada-storefront-on-the-vegas-strip-33517294/",
+    "asset_key": "pexels:33517294",
+    "alt_text": "Illustration for NZ climate activist files High Court case over minister’s climate plan",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "High Court climate photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 32,
+    "image_fit_score": 0.73,
+    "visual_concepts": [
+      "courthouse",
+      "justice",
+      "legal",
+      "climate",
+      "activist",
+      "files"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.73,
+    "is_fallback": false
+  },
+  "tags": [
+    "Law & Crime",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "New Zealand activist mounts legal challenge to plan to change ...",
+        "url": "https://www.reuters.com/legal/litigation/new-zealand-activist-mounts-legal-challenge-plan-change-climate-law-2026-06-29/",
+        "domain": "reuters.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "law-crime",
+          "label": "Law & Crime",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "law-crime",
+        "topic_label": "Law & Crime",
+        "supported": true,
+        "matched_aliases": [
+          "courts",
+          "legal"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "High Court climate photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "high",
+        "court",
+        "climate"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
