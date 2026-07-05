@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-05T12:49:23.661Z",
+  "event_id": "evt-2026-07-03-public-health-general-global",
+  "cluster_id": "evt-2026-07-03-public-health-general-global",
+  "article_type": "report",
+  "title": "Drug Alerts and Statements",
+  "slug": "fda-s-cder-uses-drug-alerts-to-flag-fast-moving-safety-issue",
+  "canonical_slug": "2026-07-05-fda-s-cder-uses-drug-alerts-to-flag-fast-moving-safety-issue",
+  "expected_url": "/article/2026-07-05-fda-s-cder-uses-drug-alerts-to-flag-fast-moving-safety-issue",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-05-fda-s-cder-uses-drug-alerts-to-flag-fast-moving-safety-issue.mdx",
+  "published_at": "2026-07-05T12:49:23.659Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "public-health",
+  "topic_label": "Public Health",
+  "subsection": "Drug Alerts and Statements",
+  "topics": [
+    "Drug Alerts and Statements"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/33431234/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/33431234/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/stylish-prada-storefront-on-las-vegas-strip-33431234/",
+    "asset_key": "pexels:33431234",
+    "alt_text": "Illustration for FDA’s CDER Uses Drug Alerts to Flag Fast-Moving Safety Issues",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Safety Issues medical photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 20,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 42,
+    "image_fit_score": 0.67,
+    "visual_concepts": [
+      "public health",
+      "hospital",
+      "medical",
+      "fda’s",
+      "alerts",
+      "moving"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.67,
+    "is_fallback": false
+  },
+  "tags": [
+    "Public Health",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Drug Alerts and Statements",
+        "url": "http://www.fda.gov/drugs/drug-safety-and-availability/drug-alerts-and-statements",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "public-health",
+          "label": "Public Health",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "public-health",
+        "topic_label": "Public Health",
+        "supported": true,
+        "matched_aliases": [
+          "Public Health"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Safety Issues medical photo",
+      "article_relevance_score": 20,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "safety",
+        "issues"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
