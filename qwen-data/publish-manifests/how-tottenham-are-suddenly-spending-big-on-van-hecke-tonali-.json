@@ -1,0 +1,141 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-07T16:44:31.797Z",
+  "event_id": "evt-2026-07-07-events-tournaments-general-global",
+  "cluster_id": "evt-2026-07-07-events-tournaments-general-global",
+  "article_type": "analysis",
+  "title": "How Tottenham Are Suddenly Spending Big on Van Hecke, Tonali and Fernandes",
+  "slug": "how-tottenham-are-suddenly-spending-big-on-van-hecke-tonali-",
+  "canonical_slug": "2026-07-07-how-tottenham-are-suddenly-spending-big-on-van-hecke-tonali",
+  "expected_url": "/article/2026-07-07-how-tottenham-are-suddenly-spending-big-on-van-hecke-tonali",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-07-how-tottenham-are-suddenly-spending-big-on-van-hecke-tonali.mdx",
+  "published_at": "2026-07-07T16:44:31.795Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Events & Tournaments",
+  "topics": [
+    "Events & Tournaments"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/2prwvtvlllu/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/2prwvtvlllu/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-large-brick-building-with-columns-and-pillars-2PrwVtvLLlU",
+    "asset_key": "unsplash:2PrwVtvLLlU",
+    "alt_text": "Illustration for How Tottenham Are Suddenly Spending Big on Van Hecke, Tonali and Fernandes",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Van Hecke Tonali and Fernandes photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 23,
+    "asset_quality_score": 95,
+    "editorial_fit_score": 43,
+    "image_fit_score": 0.77,
+    "visual_concepts": [
+      "tournament",
+      "trophy",
+      "championship",
+      "tottenham",
+      "suddenly",
+      "spending"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.77,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "How are Tottenham able to spend so much on Van Hecke, Tonali and Fernandes this summer?",
+        "url": "https://nytimes.com/athletic/7416489/2026/07/06/tottenham-hotspur-transfer-finances-analysis",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "How are Tottenham able to spend so much on Van Hecke, Tonali ...",
+        "url": "https://www.nytimes.com/athletic/7416489/2026/07/06/tottenham-hotspur-transfer-finances-analysis/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Sandro Tonali completes record-transfer to Tottenham from Newcastle United",
+        "url": "https://espn.com/soccer/story/_/id/49246543/sandro-tonali-completes-record-transfer-tottenham-newcastle-united",
+        "domain": "espn.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Major Leagues",
+      "Primary topic_id unsupported by article evidence: major-leagues"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Van Hecke Tonali and Fernandes photo",
+      "article_relevance_score": 23,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "van",
+        "hecke",
+        "tonali",
+        "fernandes"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
