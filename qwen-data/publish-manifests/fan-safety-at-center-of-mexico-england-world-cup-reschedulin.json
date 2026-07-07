@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-07T13:35:04.677Z",
+  "event_id": "evt-2026-07-06-major-leagues-general-global-fifa",
+  "cluster_id": "evt-2026-07-06-major-leagues-general-global-fifa",
+  "article_type": "report",
+  "title": "Mexico vs. England rescheduling talks centred on fan safety ...",
+  "slug": "fan-safety-at-center-of-mexico-england-world-cup-reschedulin",
+  "canonical_slug": "2026-07-07-fan-safety-at-center-of-mexico-england-world-cup-reschedulin",
+  "expected_url": "/article/2026-07-07-fan-safety-at-center-of-mexico-england-world-cup-reschedulin",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-07-fan-safety-at-center-of-mexico-england-world-cup-reschedulin.mdx",
+  "published_at": "2026-07-07T13:35:04.675Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Mexico vs. England rescheduling talks centred on fan safety ...",
+  "topics": [
+    "Mexico vs. England rescheduling talks centred on fan safety ..."
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/nl3r3negstm/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/nl3r3negstm/cover.jpg",
+    "source_url": "https://unsplash.com/photos/two-lions-yawning-with-mouths-wide-open-Nl3r3NEgsTM",
+    "asset_key": "unsplash:Nl3r3NEgsTM",
+    "alt_text": "Illustration for Fan Safety at Center of Mexico–England World Cup Rescheduling Talks",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Fan Safety photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "safety",
+      "center",
+      "mexico–england"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Mexico",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Mexico vs. England rescheduling talks centred on fan safety ...",
+        "url": "https://www.nytimes.com/athletic/7420534/2026/07/03/england-mexico-kick-off-time-fifa/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Major Leagues",
+      "Primary topic_id unsupported by article evidence: major-leagues"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "mexico",
+          "label": "Mexico",
+          "type": "geography"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Fan Safety photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "fan",
+        "safety"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
