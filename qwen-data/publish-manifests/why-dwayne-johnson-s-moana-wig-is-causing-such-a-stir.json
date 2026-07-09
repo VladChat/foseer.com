@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-09T14:06:46.384Z",
+  "event_id": "evt-2026-07-08-film-tv-general-global",
+  "cluster_id": "evt-2026-07-08-film-tv-general-global",
+  "article_type": "report",
+  "title": "New barnet: why is everyone wigging out over Dwayne Johnson’s Moana hairpiece?",
+  "slug": "why-dwayne-johnson-s-moana-wig-is-causing-such-a-stir",
+  "canonical_slug": "2026-07-09-why-dwayne-johnson-s-moana-wig-is-causing-such-a-stir",
+  "expected_url": "/article/2026-07-09-why-dwayne-johnson-s-moana-wig-is-causing-such-a-stir",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-09-why-dwayne-johnson-s-moana-wig-is-causing-such-a-stir.mdx",
+  "published_at": "2026-07-09T14:06:46.382Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "New barnet: why is everyone wigging out over Dwayne Johnson’s Moana hairpiece?",
+  "topics": [
+    "New barnet: why is everyone wigging out over Dwayne Johnson’s Moana hairpiece?"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/yu2_ojob9am/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/yu2_ojob9am/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-large-cluster-of-stars-in-the-sky-yU2_oJOB9aM",
+    "asset_key": "unsplash:yU2_oJOB9aM",
+    "alt_text": "Illustration for Why Dwayne Johnson’s ‘Moana’ Wig Is Causing Such a Stir",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Dwayne photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 4,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 30,
+    "image_fit_score": 0.72,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "dwayne",
+      "johnson’s",
+      "‘moana’"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.72,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "New barnet: why is everyone wigging out over Dwayne Johnson’s Moana hairpiece?",
+        "url": "https://www.theguardian.com/film/2026/jul/08/dwayne-the-rock-johnson-moana-wig-an-alien-being-no-wonder-everyone-is-freaked-out",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "explainer",
+          "label": "Explainer",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Dwayne photo",
+      "article_relevance_score": 4,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "dwayne"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
