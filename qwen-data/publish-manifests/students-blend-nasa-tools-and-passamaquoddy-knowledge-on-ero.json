@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-10T13:28:10.502Z",
+  "event_id": "evt-2026-07-09-space-astronomy-general-global",
+  "cluster_id": "evt-2026-07-09-space-astronomy-general-global",
+  "article_type": "report",
+  "title": "Students Connect NASA Science With Indigenous Knowledge to Study Coastal Erosion",
+  "slug": "students-blend-nasa-tools-and-passamaquoddy-knowledge-on-ero",
+  "canonical_slug": "2026-07-10-students-blend-nasa-tools-and-passamaquoddy-knowledge-on-ero",
+  "expected_url": "/article/2026-07-10-students-blend-nasa-tools-and-passamaquoddy-knowledge-on-ero",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-10-students-blend-nasa-tools-and-passamaquoddy-knowledge-on-ero.mdx",
+  "published_at": "2026-07-10T13:28:10.500Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Students Connect NASA Science With Indigenous Knowledge to Study Coastal Erosion",
+  "topics": [
+    "Students Connect NASA Science With Indigenous Knowledge to Study Coastal Erosion"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/mzu1wuisugm/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/mzu1wuisugm/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-red-and-white-boxes-mZU1WuisuGM",
+    "asset_key": "unsplash:mZU1WuisuGM",
+    "alt_text": "a group of red and white boxes",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Passamaquoddy Knowledge technology photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.18,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "students",
+      "blend",
+      "tools"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.11,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "NASA",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Students Connect NASA Science With Indigenous Knowledge to Study Coastal Erosion",
+        "url": "https://science.nasa.gov/learning-resources/science-activation/students-connect-nasa-science-with-indigenous-knowledge-to-study-coastal-erosion/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "nasa",
+          "label": "NASA",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Passamaquoddy Knowledge technology photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "passamaquoddy",
+        "knowledge"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
