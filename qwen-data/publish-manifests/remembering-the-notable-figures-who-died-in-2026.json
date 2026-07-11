@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-11T12:14:08.699Z",
+  "event_id": "evt-2026-07-11-film-tv-general-global-tiktok",
+  "cluster_id": "evt-2026-07-11-film-tv-general-global-tiktok",
+  "article_type": "report",
+  "title": "Notable Deaths in 2026",
+  "slug": "remembering-the-notable-figures-who-died-in-2026",
+  "canonical_slug": "2026-07-11-remembering-the-notable-figures-who-died-in-2026",
+  "expected_url": "/article/2026-07-11-remembering-the-notable-figures-who-died-in-2026",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-11-remembering-the-notable-figures-who-died-in-2026.mdx",
+  "published_at": "2026-07-11T12:14:08.697Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "creators-platforms",
+  "topic_label": "Creators & Platforms",
+  "subsection": "Notable Deaths in 2026",
+  "topics": [
+    "Notable Deaths in 2026"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/cj0_ux5ejm4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/cj0_ux5ejm4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/people-stroll-down-a-busy-sunlit-tokyo-street-cj0_UX5EJM4",
+    "asset_key": "unsplash:cj0_UX5EJM4",
+    "alt_text": "Illustration for Remembering the Notable Figures Who Died in 2026",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Remembering the Notable Figures photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "content creator",
+      "streaming",
+      "social platform",
+      "remembering",
+      "notable",
+      "figures"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Creators & Platforms",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Notable Deaths in 2026",
+        "url": "https://www.cbsnews.com/pictures/notable-deaths-in-2026/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "creators-platforms",
+          "label": "Creators & Platforms",
+          "type": "topic"
+        },
+        {
+          "slug": "influencer-economy",
+          "label": "Influencer Economy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "creators-platforms",
+        "topic_label": "Creators & Platforms",
+        "supported": true,
+        "matched_aliases": [
+          "creator economy",
+          "social media"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Remembering the Notable Figures photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "remembering",
+        "notable",
+        "figures"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
