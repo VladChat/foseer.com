@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-12T12:13:59.881Z",
+  "event_id": "evt-2026-07-12-us-politics-general-global-white-house",
+  "cluster_id": "evt-2026-07-12-us-politics-general-global-white-house",
+  "article_type": "report",
+  "title": "Senator Lindsey Graham dies after \"brief and sudden illness\"",
+  "slug": "sen-lindsey-graham-dies-after-brief-illness-trump-issues-tri",
+  "canonical_slug": "2026-07-12-sen-lindsey-graham-dies-after-brief-illness-trump-issues-tri",
+  "expected_url": "/article/2026-07-12-sen-lindsey-graham-dies-after-brief-illness-trump-issues-tri",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-12-sen-lindsey-graham-dies-after-brief-illness-trump-issues-tri.mdx",
+  "published_at": "2026-07-12T12:13:59.879Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Senator Lindsey Graham dies after \"brief and sudden illness\"",
+  "topics": [
+    "Senator Lindsey Graham dies after \"brief and sudden illness\""
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/bvew0nchrio/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/bvew0nchrio/cover.jpg",
+    "source_url": "https://unsplash.com/photos/tennis-talk-althea-gibson-us-and-wimbledon-tennis-champion-gives-some-pointers-on-the-game-which-has-brought-her-international-fame-BvEw0NCHrIo",
+    "asset_key": "unsplash:BvEw0NCHrIo",
+    "alt_text": "Illustration for Sen. Lindsey Graham dies after brief illness; Trump issues tribute",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Sen Lindsey Graham government photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "lindsey",
+      "graham",
+      "brief"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Senator Lindsey Graham dies after \"brief and sudden illness\"",
+        "url": "https://www.cbsnews.com/news/senator-lindsey-graham-dies-after-brief-and-sudden-illness/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house",
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Sen Lindsey Graham government photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "sen",
+        "lindsey",
+        "graham"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
