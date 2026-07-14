@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-14T15:47:42.236Z",
+  "event_id": "evt-2026-07-14-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-07-14-pharma-fda-general-global-fda",
+  "article_type": "analysis",
+  "title": "What FDA’s Generic Drug Facility Lists Signal — and What They Don’t Yet",
+  "slug": "what-fda-s-generic-drug-facility-lists-signal-and-what-they-",
+  "canonical_slug": "2026-07-14-what-fda-s-generic-drug-facility-lists-signal-and-what-they",
+  "expected_url": "/article/2026-07-14-what-fda-s-generic-drug-facility-lists-signal-and-what-they",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-14-what-fda-s-generic-drug-facility-lists-signal-and-what-they.mdx",
+  "published_at": "2026-07-14T15:47:42.234Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Pharma & FDA",
+  "topics": [
+    "Pharma & FDA"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "ava_mitchell",
+    "author_name": "Ava Mitchell",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/r2mf3wfovzc/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/r2mf3wfovzc/cover.jpg",
+    "source_url": "https://unsplash.com/photos/black-iphone-7-on-blue-background-r2Mf3WFOVZc",
+    "asset_key": "unsplash:r2Mf3WFOVZc",
+    "alt_text": "Illustration for What FDA’s Generic Drug Facility Lists Signal — and What They Don’t Yet",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Generic Drug Facilities Sites medical photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 93,
+    "editorial_fit_score": 26,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "fda’s",
+      "generic",
+      "facility"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Generic Drug Facilities, Sites and Organization Lists",
+        "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Generic Drug Facilities Sites medical photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "generic",
+        "drug",
+        "facilities",
+        "sites"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
