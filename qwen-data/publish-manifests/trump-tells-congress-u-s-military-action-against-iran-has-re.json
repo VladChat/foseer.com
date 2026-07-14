@@ -1,0 +1,141 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-14T12:48:53.322Z",
+  "event_id": "evt-2026-07-14-us-politics-general-global-congress-iran",
+  "cluster_id": "evt-2026-07-14-us-politics-general-global-congress-iran",
+  "article_type": "report",
+  "title": "Military action against Iran formally restarted last week, Trump told lawmakers",
+  "slug": "trump-tells-congress-u-s-military-action-against-iran-has-re",
+  "canonical_slug": "2026-07-14-trump-tells-congress-u-s-military-action-against-iran-has-re",
+  "expected_url": "/article/2026-07-14-trump-tells-congress-u-s-military-action-against-iran-has-re",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-14-trump-tells-congress-u-s-military-action-against-iran-has-re.mdx",
+  "published_at": "2026-07-14T12:48:53.320Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Military action against Iran formally restarted last week, Trump told lawmakers",
+  "topics": [
+    "Military action against Iran formally restarted last week, Trump told lawmakers"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/rczwhger4lm/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/rczwhger4lm/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-man-wearing-a-turban-and-a-moustache-rczwHger4lM",
+    "asset_key": "unsplash:rczwHger4lM",
+    "alt_text": "Illustration for Trump tells Congress U.S. military action against Iran has restarted",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Trump courtroom photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 15,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 38,
+    "image_fit_score": 0.75,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "trump",
+      "tells"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.75,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Supreme Court",
+    "Iran",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Military action against Iran formally restarted last week, Trump told lawmakers",
+        "url": "https://www.cbsnews.com/news/iran-military-action-formally-restarted-trump-lawmakers-war-powers/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "Victims of Trump purge call supreme court ruling a ‘dagger in heart’ to civil service",
+        "url": "https://www.theguardian.com/us-news/2026/jul/14/federal-officials-fired-by-trump-supreme-court-ruling",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Victims of Trump purge call supreme court ruling a ‘dagger in heart’ to civil service",
+          "url": "https://www.theguardian.com/us-news/2026/jul/14/federal-officials-fired-by-trump-supreme-court-ruling",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "trump"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "iran",
+          "label": "Iran",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Trump courtroom photo",
+      "article_relevance_score": 15,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "trump"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
