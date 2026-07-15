@@ -1,0 +1,126 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-15T12:51:57.629Z",
+  "event_id": "evt-2026-07-14-world-geopolitics-general-global-jpmorgan-goldman-sachs",
+  "cluster_id": "evt-2026-07-14-world-geopolitics-general-global-jpmorgan-goldman-sachs",
+  "article_type": "report",
+  "title": "Shippers balk at Trump's Strait of Hormuz fees: \"Dangerous Pandora's Box\"",
+  "slug": "shippers-reject-trump-s-proposed-strait-of-hormuz-transit-fe",
+  "canonical_slug": "2026-07-15-shippers-reject-trump-s-proposed-strait-of-hormuz-transit-fe",
+  "expected_url": "/article/2026-07-15-shippers-reject-trump-s-proposed-strait-of-hormuz-transit-fe",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-15-shippers-reject-trump-s-proposed-strait-of-hormuz-transit-fe.mdx",
+  "published_at": "2026-07-15T12:51:57.627Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "world-geopolitics",
+  "topic_label": "World & Geopolitics",
+  "subsection": "Shippers balk at Trump's Strait of Hormuz fees: \"Dangerous Pandora's Box\"",
+  "topics": [
+    "Shippers balk at Trump's Strait of Hormuz fees: \"Dangerous Pandora's Box\""
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/9102021/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/9102021/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/beautiful-stars-in-the-sky-9102021/",
+    "asset_key": "pexels:9102021",
+    "alt_text": "Illustration for Shippers Reject Trump’s Proposed Strait of Hormuz Transit Fee",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Strait of Hormuz courtroom photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "diplomacy",
+      "international",
+      "summit",
+      "shippers",
+      "reject",
+      "trump’s"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "World & Geopolitics",
+    "Diplomacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Shippers balk at Trump's Strait of Hormuz fees: \"Dangerous Pandora's Box\"",
+        "url": "https://www.cbsnews.com/news/trump-strait-of-hormuz-fee-shipping-oil-gas-costs-legality-pandoras-box/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "world-geopolitics",
+          "label": "World & Geopolitics",
+          "type": "topic"
+        },
+        {
+          "slug": "diplomacy",
+          "label": "Diplomacy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "world-geopolitics",
+        "topic_label": "World & Geopolitics",
+        "supported": true,
+        "matched_aliases": [
+          "israel",
+          "diplomatic",
+          "hormuz",
+          "strait"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Strait of Hormuz courtroom photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "strait",
+        "hormuz"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
