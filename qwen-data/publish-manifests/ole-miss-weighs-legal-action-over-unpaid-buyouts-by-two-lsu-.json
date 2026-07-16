@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-16T13:02:40.325Z",
+  "event_id": "evt-2026-07-16-sports-general-global-nba",
+  "cluster_id": "evt-2026-07-16-sports-general-global-nba",
+  "article_type": "report",
+  "title": "Ole Miss considers suing 2 LSU transfers over unpaid buyouts in ...",
+  "slug": "ole-miss-weighs-legal-action-over-unpaid-buyouts-by-two-lsu-",
+  "canonical_slug": "2026-07-16-ole-miss-weighs-legal-action-over-unpaid-buyouts-by-two-lsu",
+  "expected_url": "/article/2026-07-16-ole-miss-weighs-legal-action-over-unpaid-buyouts-by-two-lsu",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-16-ole-miss-weighs-legal-action-over-unpaid-buyouts-by-two-lsu.mdx",
+  "published_at": "2026-07-16T13:02:40.323Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Ole Miss considers suing 2 LSU transfers over unpaid buyouts in ...",
+  "topics": [
+    "Ole Miss considers suing 2 LSU transfers over unpaid buyouts in ..."
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/be0j4dyyuau/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/be0j4dyyuau/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-white-van-parked-on-the-side-of-a-road-next-to-a-body-of-water-be0J4dyyUaU",
+    "asset_key": "unsplash:be0J4dyyUaU",
+    "alt_text": "Illustration for Ole Miss Weighs Legal Action Over Unpaid Buyouts by Two LSU Transfers",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Unpaid Buyouts football photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "weighs",
+      "legal",
+      "action"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Ole Miss considers suing 2 LSU transfers over unpaid buyouts in ...",
+        "url": "https://www.nytimes.com/athletic/7445419/2026/07/14/ole-miss-lsu-transfers-unpaid-buyouts/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": true,
+        "matched_aliases": [
+          "transfers"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Unpaid Buyouts football photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "unpaid",
+        "buyouts",
+        "football"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
