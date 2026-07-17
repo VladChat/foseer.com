@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-17T12:43:51.767Z",
+  "event_id": "evt-2026-07-15-cybersecurity-general-global-nvidia-china",
+  "cluster_id": "evt-2026-07-15-cybersecurity-general-global-nvidia-china",
+  "article_type": "report",
+  "title": "Johnson & Johnson has a chance to show it's more than just ...",
+  "slug": "johnson-johnson-faces-key-test-to-prove-it-is-more-than-a-le",
+  "canonical_slug": "2026-07-17-johnson-johnson-faces-key-test-to-prove-it-is-more-than-a-le",
+  "expected_url": "/article/2026-07-17-johnson-johnson-faces-key-test-to-prove-it-is-more-than-a-le",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-17-johnson-johnson-faces-key-test-to-prove-it-is-more-than-a-le.mdx",
+  "published_at": "2026-07-17T12:43:51.765Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Johnson & Johnson has a chance to show it's more than just ...",
+  "topics": [
+    "Johnson & Johnson has a chance to show it's more than just ..."
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/coe4817n1m/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/coe4817n1m/cover.jpg",
+    "source_url": "https://unsplash.com/photos/text--Coe4817n1M",
+    "asset_key": "unsplash:-Coe4817n1M",
+    "alt_text": "Illustration for Johnson & Johnson faces key test to prove it is more than a legacy brand",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Johnson and Johnson technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 4,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 31,
+    "image_fit_score": 0.72,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "johnson",
+      "faces",
+      "prove"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.72,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Goldman Sachs",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Johnson & Johnson has a chance to show it's more than just ...",
+        "url": "https://www.cnbc.com/2026/07/14/johnson-johnson-has-a-chance-to-show-its-more-than-just-a-rotation-winner.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "We're raising our price target on Goldman Sachs after a blowout ...",
+        "url": "https://www.cnbc.com/2026/07/14/were-raising-our-price-target-on-goldman-sachs-after-a-blowout-quarter.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "We're raising our price target on Goldman Sachs after a blowout ...",
+          "url": "https://www.cnbc.com/2026/07/14/were-raising-our-price-target-on-goldman-sachs-after-a-blowout-quarter.html",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "goldman-sachs",
+          "label": "Goldman Sachs",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "Cybersecurity",
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Johnson and Johnson technology photo",
+      "article_relevance_score": 4,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "johnson"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
