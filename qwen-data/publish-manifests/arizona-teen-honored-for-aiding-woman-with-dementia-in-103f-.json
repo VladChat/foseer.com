@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-18T12:14:47.958Z",
+  "event_id": "evt-2026-07-18-us-politics-general-global-tiktok",
+  "cluster_id": "evt-2026-07-18-us-politics-general-global-tiktok",
+  "article_type": "report",
+  "title": "Arizona teen hailed for helping save woman with dementia wandering in 103F heat",
+  "slug": "arizona-teen-honored-for-aiding-woman-with-dementia-in-103f-",
+  "canonical_slug": "2026-07-18-arizona-teen-honored-for-aiding-woman-with-dementia-in-103f",
+  "expected_url": "/article/2026-07-18-arizona-teen-honored-for-aiding-woman-with-dementia-in-103f",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-18-arizona-teen-honored-for-aiding-woman-with-dementia-in-103f.mdx",
+  "published_at": "2026-07-18T12:14:47.956Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Arizona teen hailed for helping save woman with dementia wandering in 103F heat",
+  "topics": [
+    "Arizona teen hailed for helping save woman with dementia wandering in 103F heat"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/jgvtyz6ut_g/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/jgvtyz6ut_g/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-woman-is-holding-a-microscope-and-a-man-is-looking-at-it-jgvTYz6UT_g",
+    "asset_key": "unsplash:jgvTYz6UT_g",
+    "alt_text": "a woman is holding a microscope and a man is looking at it",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Arizona photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 88,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 91,
+    "image_fit_score": 0.36,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "arizona",
+      "honored",
+      "aiding"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.36,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Arizona teen hailed for helping save woman with dementia wandering in 103F heat",
+        "url": "https://www.theguardian.com/us-news/2026/jul/18/arizona-teen-rescue-woman-dementia-heatwave",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: U.S. Politics & Policy",
+      "Primary topic_id unsupported by article evidence: us-politics"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Arizona photo",
+      "article_relevance_score": 88,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "arizona"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
