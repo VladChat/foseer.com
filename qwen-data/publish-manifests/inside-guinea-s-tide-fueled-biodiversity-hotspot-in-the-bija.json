@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-19T12:14:12.367Z",
+  "event_id": "evt-2026-07-17-space-astronomy-general-global-microsoft",
+  "cluster_id": "evt-2026-07-17-space-astronomy-general-global-microsoft",
+  "article_type": "report",
+  "title": "A Tide-Fueled Trove of Biodiversity in Guinea",
+  "slug": "inside-guinea-s-tide-fueled-biodiversity-hotspot-in-the-bija",
+  "canonical_slug": "2026-07-19-inside-guinea-s-tide-fueled-biodiversity-hotspot-in-the-bija",
+  "expected_url": "/article/2026-07-19-inside-guinea-s-tide-fueled-biodiversity-hotspot-in-the-bija",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-19-inside-guinea-s-tide-fueled-biodiversity-hotspot-in-the-bija.mdx",
+  "published_at": "2026-07-19T12:14:12.365Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "A Tide-Fueled Trove of Biodiversity in Guinea",
+  "topics": [
+    "A Tide-Fueled Trove of Biodiversity in Guinea"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/w-ykitrq0pk/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/w-ykitrq0pk/cover.jpg",
+    "source_url": "https://unsplash.com/photos/the-nasa-vehicle-assembly-building-stands-tall-w-YKItrq0pk",
+    "asset_key": "unsplash:w-YKItrq0pk",
+    "alt_text": "The nasa vehicle assembly building stands tall.",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Guinea technology photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 99,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 99,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "inside",
+      "guinea’s",
+      "fueled"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.18,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "A Tide-Fueled Trove of Biodiversity in Guinea",
+        "url": "https://science.nasa.gov/earth/earth-observatory/a-tide-fueled-trove-of-biodiversity-in-guinea-bissau/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Guinea technology photo",
+      "article_relevance_score": 99,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "guinea"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
