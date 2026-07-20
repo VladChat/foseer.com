@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-20T13:29:01.020Z",
+  "event_id": "evt-2026-07-19-major-leagues-general-global-nfl",
+  "cluster_id": "evt-2026-07-19-major-leagues-general-global-nfl",
+  "article_type": "report",
+  "title": "Inside Red Bull’s recruitment strategy: How does a cycling transfer really work?",
+  "slug": "how-red-bull-s-cycling-transfers-really-work",
+  "canonical_slug": "2026-07-20-how-red-bull-s-cycling-transfers-really-work",
+  "expected_url": "/article/2026-07-20-how-red-bull-s-cycling-transfers-really-work",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-20-how-red-bull-s-cycling-transfers-really-work.mdx",
+  "published_at": "2026-07-20T13:29:01.018Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Inside Red Bull’s recruitment strategy: How does a cycling transfer really work?",
+  "topics": [
+    "Inside Red Bull’s recruitment strategy: How does a cycling transfer really work?"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "liam_parker",
+    "author_name": "Liam Parker",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/kvxpfu2l2o0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/kvxpfu2l2o0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/teenage-football-players-sitting-on-a-bench-kvXpFu2l2O0",
+    "asset_key": "unsplash:kvXpFu2l2O0",
+    "alt_text": "Illustration for How Red Bull’s Cycling Transfers Really Work",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Inside Red photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 63,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 73,
+    "image_fit_score": 0.89,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "bull’s",
+      "cycling",
+      "really"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.89,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Inside Red Bull’s recruitment strategy: How does a cycling transfer really work?",
+        "url": "https://nytimes.com/athletic/7450317/2026/07/17/cycling-transfer-market-mechanics-tour-de-france-red-bull",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "strategy-company",
+          "label": "Strategy",
+          "type": "entity"
+        },
+        {
+          "slug": "explainer",
+          "label": "Explainer",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": true,
+        "matched_aliases": [
+          "transfers"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Inside Red photo",
+      "article_relevance_score": 63,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "inside",
+        "red"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
