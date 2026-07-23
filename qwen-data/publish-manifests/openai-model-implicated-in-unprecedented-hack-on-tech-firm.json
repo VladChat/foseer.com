@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-23T13:00:55.391Z",
+  "event_id": "evt-2026-07-23-space-astronomy-general-global-openai",
+  "cluster_id": "evt-2026-07-23-space-astronomy-general-global-openai",
+  "article_type": "report",
+  "title": "Unprecedented hack of tech firm by AI model raises new safety ...",
+  "slug": "openai-model-implicated-in-unprecedented-hack-on-tech-firm",
+  "canonical_slug": "2026-07-23-openai-model-implicated-in-unprecedented-hack-on-tech-firm",
+  "expected_url": "/article/2026-07-23-openai-model-implicated-in-unprecedented-hack-on-tech-firm",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-23-openai-model-implicated-in-unprecedented-hack-on-tech-firm.mdx",
+  "published_at": "2026-07-23T13:00:55.390Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "ai-big-tech",
+  "topic_label": "AI & Big Tech",
+  "subsection": "Unprecedented hack of tech firm by AI model raises new safety ...",
+  "topics": [
+    "Unprecedented hack of tech firm by AI model raises new safety ..."
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/b7mqq3iovwq/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/b7mqq3iovwq/cover.jpg",
+    "source_url": "https://unsplash.com/photos/french-brothers-titanic-survivors-b7MQq3IovwQ",
+    "asset_key": "unsplash:b7MQq3IovwQ",
+    "alt_text": "Illustration for OpenAI Model Implicated in Unprecedented Hack on Tech Firm",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Tech Firm technology photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 80,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 86,
+    "image_fit_score": 0.94,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "openai",
+      "model",
+      "implicated"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.94,
+    "is_fallback": false
+  },
+  "tags": [
+    "AI & Big Tech",
+    "Artificial Intelligence",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Unprecedented hack of tech firm by AI model raises new safety ...",
+        "url": "https://www.washingtonpost.com/technology/2026/07/23/unprecedented-hack-tech-firm-by-ai-model-raises-new-safety-concerns/",
+        "domain": "washingtonpost.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "ai-big-tech",
+        "topic_label": "AI & Big Tech",
+        "supported": true,
+        "matched_aliases": [
+          "ai",
+          "artificial intelligence"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Tech Firm technology photo",
+      "article_relevance_score": 80,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "tech",
+        "firm",
+        "technology"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
