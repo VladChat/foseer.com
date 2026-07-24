@@ -1,0 +1,143 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-24T12:58:23.926Z",
+  "event_id": "evt-2026-07-24-major-leagues-general-global-sec",
+  "cluster_id": "evt-2026-07-24-major-leagues-general-global-sec",
+  "article_type": "report",
+  "title": "Ted Williams, Satchel Paige and the fight to induct Negro Leaguers into baseball’s Hall of Fame",
+  "slug": "how-ted-williams-helped-open-cooperstown-s-doors-to-negro-le",
+  "canonical_slug": "2026-07-24-how-ted-williams-helped-open-cooperstown-s-doors-to-negro-le",
+  "expected_url": "/article/2026-07-24-how-ted-williams-helped-open-cooperstown-s-doors-to-negro-le",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-24-how-ted-williams-helped-open-cooperstown-s-doors-to-negro-le.mdx",
+  "published_at": "2026-07-24T12:58:23.924Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Ted Williams, Satchel Paige and the fight to induct Negro Leaguers into baseball’s Hall of Fame",
+  "topics": [
+    "Ted Williams, Satchel Paige and the fight to induct Negro Leaguers into baseball’s Hall of Fame"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/v6azrm-rtr8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/v6azrm-rtr8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/green-and-white-labeled-bottles-V6AzrM-rtR8",
+    "asset_key": "unsplash:V6AzrM-rtR8",
+    "alt_text": "Illustration for How Ted Williams Helped Open Cooperstown’s Doors to Negro Leaguers",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Negro Leaguers baseball photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 51,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 65,
+    "image_fit_score": 0.86,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "williams",
+      "helped",
+      "cooperstown’s"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.86,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Baseball",
+    "SEC",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Ted Williams, Satchel Paige and the fight to induct Negro Leaguers into baseball’s Hall of Fame",
+        "url": "https://www.theguardian.com/sport/2026/jul/24/ted-williams-satchel-paige-baseball-hall-of-fame-negro-leagues",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Canonical tag unsupported by article evidence: SEC"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "baseball",
+          "label": "Baseball",
+          "type": "theme"
+        },
+        {
+          "slug": "sec",
+          "label": "SEC",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "sec",
+          "label": "SEC",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "Major Leagues",
+          "major league baseball",
+          "baseball"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Negro Leaguers baseball photo",
+      "article_relevance_score": 51,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "negro",
+        "leaguers",
+        "baseball"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
