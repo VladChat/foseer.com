@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-26T12:39:23.630Z",
+  "event_id": "evt-2026-07-26-us-politics-general-global-fda-iran",
+  "cluster_id": "evt-2026-07-26-us-politics-general-global-fda-iran",
+  "article_type": "report",
+  "title": "ICE to target Haitians as Temporary Protected Status is set to end, sources say",
+  "slug": "ice-preparing-to-arrest-haitians-as-protected-status-nears-e",
+  "canonical_slug": "2026-07-26-ice-preparing-to-arrest-haitians-as-protected-status-nears-e",
+  "expected_url": "/article/2026-07-26-ice-preparing-to-arrest-haitians-as-protected-status-nears-e",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-26-ice-preparing-to-arrest-haitians-as-protected-status-nears-e.mdx",
+  "published_at": "2026-07-26T12:39:23.628Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "ICE to target Haitians as Temporary Protected Status is set to end, sources say",
+  "topics": [
+    "ICE to target Haitians as Temporary Protected Status is set to end, sources say"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/89rul39ox2i/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/89rul39ox2i/cover.jpg",
+    "source_url": "https://unsplash.com/photos/grayscale-photo-of-man-89rul39ox2I",
+    "asset_key": "unsplash:89rul39ox2I",
+    "alt_text": "Illustration for ICE preparing to arrest Haitians as protected status nears end, documents show",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Haitians photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "preparing",
+      "arrest",
+      "haitians"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "ICE to target Haitians as Temporary Protected Status is set to end, sources say",
+        "url": "https://www.cbsnews.com/news/ice-haitian-migrants-arrest-deport-temporary-protected-status/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: U.S. Politics & Policy",
+      "Primary topic_id unsupported by article evidence: us-politics"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Haitians photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "haitians"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
