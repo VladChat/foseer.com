@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-27T13:55:20.502Z",
+  "event_id": "evt-2026-07-27-world-geopolitics-general-global-fifa-china",
+  "cluster_id": "evt-2026-07-27-world-geopolitics-general-global-fifa-china",
+  "article_type": "report",
+  "title": "Berlin Pride attacker served time for trying to join ISIS, officials say",
+  "slug": "berlin-pride-attacker-had-prior-isis-conviction-officials-sa",
+  "canonical_slug": "2026-07-27-berlin-pride-attacker-had-prior-isis-conviction-officials-sa",
+  "expected_url": "/article/2026-07-27-berlin-pride-attacker-had-prior-isis-conviction-officials-sa",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-27-berlin-pride-attacker-had-prior-isis-conviction-officials-sa.mdx",
+  "published_at": "2026-07-27T13:55:20.500Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Berlin Pride attacker served time for trying to join ISIS, officials say",
+  "topics": [
+    "Berlin Pride attacker served time for trying to join ISIS, officials say"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/31686994/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/31686994/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/majestic-tiger-stepping-through-snowy-wilderness-31686994/",
+    "asset_key": "pexels:31686994",
+    "alt_text": "Illustration for Berlin Pride attacker had prior ISIS conviction, officials say",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Berlin Pride technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 4,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 30,
+    "image_fit_score": 0.72,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "berlin",
+      "pride",
+      "attacker"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.72,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Diplomacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Berlin Pride attacker served time for trying to join ISIS, officials say",
+        "url": "https://www.cbsnews.com/news/berlin-lgbtq-pride-christopher-street-attack-ramming-suspect-search-germany/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Berlin Pride technology photo",
+      "article_relevance_score": 4,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "berlin",
+        "pride"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
