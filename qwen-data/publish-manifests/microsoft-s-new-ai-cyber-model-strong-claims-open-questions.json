@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-28T16:17:41.127Z",
+  "event_id": "evt-2026-07-28-cybersecurity-general-us-microsoft-openai",
+  "cluster_id": "evt-2026-07-28-cybersecurity-general-us-microsoft-openai",
+  "article_type": "analysis",
+  "title": "Microsoft’s New AI Cyber Model: Strong Claims, Open Questions",
+  "slug": "microsoft-s-new-ai-cyber-model-strong-claims-open-questions",
+  "canonical_slug": "2026-07-28-microsoft-s-new-ai-cyber-model-strong-claims-open-questions",
+  "expected_url": "/article/2026-07-28-microsoft-s-new-ai-cyber-model-strong-claims-open-questions",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-28-microsoft-s-new-ai-cyber-model-strong-claims-open-questions.mdx",
+  "published_at": "2026-07-28T16:17:41.124Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Cybersecurity",
+  "topics": [
+    "Cybersecurity"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/34817109/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/34817109/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/elegant-courtroom-scene-with-female-lawyers-34817109/",
+    "asset_key": "pexels:34817109",
+    "alt_text": "Illustration for Microsoft’s New AI Cyber Model: Strong Claims, Open Questions",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "AI technology photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 61,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 72,
+    "image_fit_score": 0.89,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "microsoft’s",
+      "cyber",
+      "model:"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.89,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Artificial Intelligence",
+    "Microsoft",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Microsoft touts cost-saving AI model for cybersecurity",
+        "url": "https://cnbc.com/2026/07/27/microsoft-touts-cost-saving-ai-model-for-cybersecurity.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "Microsoft launches its first cybersecurity model, plus a new agentic cybersecurity system",
+        "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/",
+        "domain": "techcrunch.com"
+      },
+      {
+        "title": "Nvidia's New AI Security Alliance Unites Microsoft, SpaceX, IBM To Push Open",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nvidias-ai-security-alliance-unites-110746241.html",
+        "domain": "finance.yahoo.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        },
+        {
+          "slug": "microsoft",
+          "label": "Microsoft",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "Cybersecurity",
+          "cyber",
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "AI technology photo",
+      "article_relevance_score": 61,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}
