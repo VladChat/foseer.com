@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-29T13:15:26.951Z",
+  "event_id": "evt-2026-07-29-film-tv-general-global",
+  "cluster_id": "evt-2026-07-29-film-tv-general-global",
+  "article_type": "report",
+  "title": "I thought Nolan’s Odyssey was an epic bore. If you want Greek myths brought to life, try the thrill of opera!",
+  "slug": "opera-lovers-push-back-on-hype-around-nolan-s-epic-odyssey",
+  "canonical_slug": "2026-07-29-opera-lovers-push-back-on-hype-around-nolan-s-epic-odyssey",
+  "expected_url": "/article/2026-07-29-opera-lovers-push-back-on-hype-around-nolan-s-epic-odyssey",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-29-opera-lovers-push-back-on-hype-around-nolan-s-epic-odyssey.mdx",
+  "published_at": "2026-07-29T13:15:26.948Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "I thought Nolan’s Odyssey was an epic bore. If you want Greek myths brought to life, try the thrill of opera!",
+  "topics": [
+    "I thought Nolan’s Odyssey was an epic bore. If you want Greek myths brought to life, try the thrill of opera!"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/slatnsftx0c/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/slatnsftx0c/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-men-standing-next-to-each-other-SlatNSFtX0c",
+    "asset_key": "unsplash:SlatNSFtX0c",
+    "alt_text": "Illustration for Opera Lovers Push Back on Hype Around Nolan’s Epic Odyssey",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Epic Odyssey film photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 33,
+    "image_fit_score": 0.73,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "opera",
+      "lovers",
+      "around"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.73,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "I thought Nolan’s Odyssey was an epic bore. If you want Greek myths brought to life, try the thrill of opera!",
+        "url": "https://www.theguardian.com/music/2026/jul/29/odyssey-christopher-nolan-opera-greek-myths",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": true,
+        "matched_aliases": [
+          "film"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Epic Odyssey film photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "epic",
+        "odyssey"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
