@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-30T13:09:03.110Z",
+  "event_id": "evt-2026-07-30-world-geopolitics-general-global-ukraine-tesla",
+  "cluster_id": "evt-2026-07-30-world-geopolitics-general-global-ukraine-tesla",
+  "article_type": "report",
+  "title": "Record absence of world’s oldest head of state reignites health speculation",
+  "slug": "cameroon-s-long-silent-president-fuels-questions-over-health",
+  "canonical_slug": "2026-07-30-cameroon-s-long-silent-president-fuels-questions-over-health",
+  "expected_url": "/article/2026-07-30-cameroon-s-long-silent-president-fuels-questions-over-health",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-30-cameroon-s-long-silent-president-fuels-questions-over-health.mdx",
+  "published_at": "2026-07-30T13:09:03.108Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Record absence of world’s oldest head of state reignites health speculation",
+  "topics": [
+    "Record absence of world’s oldest head of state reignites health speculation"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/4986048/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/4986048/cover.jpg",
+    "source_url": "https://pixabay.com/photos/trump-donald-trump-president-speech-4986048/",
+    "asset_key": "pixabay:4986048",
+    "alt_text": "trump, donald trump, president, speech, a speech, speech to the people, q, lectern, red tie, usa, america, choice, presidential elections, politics, politician, comic, portrait, government, masculine, celebrity, presidency, trump, trump, trump, donald trump, donald trump, donald trump, speech, speech, speech, speech, speech, lectern, lectern, lectern, red tie, politician, politician, politician",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "President Fuels Questions medical photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "cameroon’s",
+      "silent",
+      "president"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.6,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Diplomacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Record absence of world’s oldest head of state reignites health speculation",
+        "url": "https://www.theguardian.com/world/2026/jul/30/record-absence-paul-biya-cameroon-president-health-speculation",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Record absence of world’s oldest head of state reignites health speculation",
+          "url": "https://www.theguardian.com/world/2026/jul/30/record-absence-paul-biya-cameroon-president-health-speculation",
+          "overlap_ratio": 0.11,
+          "shared_tokens": [
+            "health"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "President Fuels Questions medical photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "president",
+        "fuels",
+        "questions"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
