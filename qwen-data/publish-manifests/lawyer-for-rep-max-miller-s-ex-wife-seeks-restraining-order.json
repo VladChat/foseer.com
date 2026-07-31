@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-07-31T13:14:23.756Z",
+  "event_id": "evt-2026-07-31-us-politics-general-global",
+  "cluster_id": "evt-2026-07-31-us-politics-general-global",
+  "article_type": "report",
+  "title": "Lawyer for Rep. Miller's ex-wife files for restraining order amid abuse claims",
+  "slug": "lawyer-for-rep-max-miller-s-ex-wife-seeks-restraining-order",
+  "canonical_slug": "2026-07-31-lawyer-for-rep-max-miller-s-ex-wife-seeks-restraining-order",
+  "expected_url": "/article/2026-07-31-lawyer-for-rep-max-miller-s-ex-wife-seeks-restraining-order",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-07-31-lawyer-for-rep-max-miller-s-ex-wife-seeks-restraining-order.mdx",
+  "published_at": "2026-07-31T13:14:23.754Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Lawyer for Rep. Miller's ex-wife files for restraining order amid abuse claims",
+  "topics": [
+    "Lawyer for Rep. Miller's ex-wife files for restraining order amid abuse claims"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/5022609/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/5022609/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/white-and-brown-boat-on-water-5022609/",
+    "asset_key": "pexels:5022609",
+    "alt_text": "Illustration for Lawyer for Rep. Max Miller’s ex-wife seeks restraining order",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Lawyer courtroom photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 93,
+    "editorial_fit_score": 26,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "lawyer",
+      "miller’s",
+      "seeks"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Lawyer for Rep. Miller's ex-wife files for restraining order amid abuse claims",
+        "url": "https://www.cbsnews.com/news/max-miller-ex-wife-emily-moreno-allegations-restraining-order-lawyer/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Lawyer courtroom photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "lawyer"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
