@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-01T12:33:37.020Z",
+  "event_id": "evt-2026-08-01-film-tv-general-global-apple",
+  "cluster_id": "evt-2026-08-01-film-tv-general-global-apple",
+  "article_type": "report",
+  "title": "Gregg Araki on sex, film and queer resistance: ‘All the terrible shit in the world is because of sexual repres",
+  "slug": "gregg-araki-s-new-film-reignites-his-fight-over-sex-shame-an",
+  "canonical_slug": "2026-08-01-gregg-araki-s-new-film-reignites-his-fight-over-sex-shame-an",
+  "expected_url": "/article/2026-08-01-gregg-araki-s-new-film-reignites-his-fight-over-sex-shame-an",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-01-gregg-araki-s-new-film-reignites-his-fight-over-sex-shame-an.mdx",
+  "published_at": "2026-08-01T12:33:37.018Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "Gregg Araki on sex, film and queer resistance: ‘All the terrible shit in the world is because of sexual repres",
+  "topics": [
+    "Gregg Araki on sex, film and queer resistance: ‘All the terrible shit in the world is because of sexual repres"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/xif23v_iwx0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/xif23v_iwx0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/bike-race-on-pennsylvania-avenue-washington-dc-XIf23V_iwX0",
+    "asset_key": "unsplash:XIf23V_iwX0",
+    "alt_text": "Illustration for Gregg Araki’s new film reignites his fight over sex, shame and power",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Gregg Araki film photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 78,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 84,
+    "image_fit_score": 0.94,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "gregg",
+      "araki’s",
+      "reignites"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.94,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "Apple",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Gregg Araki on sex, film and queer resistance: ‘All the terrible shit in the world is because of sexual repression’",
+        "url": "https://www.theguardian.com/film/2026/aug/01/gregg-araki-film-i-want-your-sex",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Canonical tag unsupported by article evidence: Apple"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "apple",
+          "label": "Apple",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "apple",
+          "label": "Apple",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": true,
+        "matched_aliases": [
+          "film"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Gregg Araki film photo",
+      "article_relevance_score": 78,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "gregg",
+        "araki",
+        "film"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
