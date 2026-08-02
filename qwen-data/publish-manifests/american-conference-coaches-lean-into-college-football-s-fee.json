@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-02T12:35:46.486Z",
+  "event_id": "evt-2026-08-01-major-leagues-general-global-fifa",
+  "cluster_id": "evt-2026-08-01-major-leagues-general-global-fifa",
+  "article_type": "report",
+  "title": "American Conference coaches are (mostly) embracing college football’s feeder system",
+  "slug": "american-conference-coaches-lean-into-college-football-s-fee",
+  "canonical_slug": "2026-08-02-american-conference-coaches-lean-into-college-football-s-fee",
+  "expected_url": "/article/2026-08-02-american-conference-coaches-lean-into-college-football-s-fee",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-02-american-conference-coaches-lean-into-college-football-s-fee.mdx",
+  "published_at": "2026-08-02T12:35:46.484Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "American Conference coaches are (mostly) embracing college football’s feeder system",
+  "topics": [
+    "American Conference coaches are (mostly) embracing college football’s feeder system"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/1222404/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/1222404/cover.jpg",
+    "source_url": "https://pixabay.com/photos/baseball-summer-professional-pro-1222404/",
+    "asset_key": "pixabay:1222404",
+    "alt_text": "baseball, summer, professional, pro, ball, game, field, base, baseball field, american, child, fun, pastime, sport, youth, nature, baseball bat, bat, hat, people, league, park, play, happy, summertime, first, grass, home, strike, team, batter, glove, runner, day, hitting, stadium, competition, pitch, player, sportsman, championship, hit, series, win, winner, outdoor, white sox, sox, success, successful, freedom, outfield, infield, crowd, attendance",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "American Conference football photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 99,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 98,
+    "image_fit_score": 0.59,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "american",
+      "conference",
+      "coaches"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.59,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "American Conference coaches are (mostly) embracing college football’s feeder system",
+        "url": "https://nytimes.com/athletic/7480471/2026/07/31/college-football-transfers-american-conference",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "American Conference football photo",
+      "article_relevance_score": 99,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "american",
+        "conference",
+        "football"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
