@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-03T13:59:13.428Z",
+  "event_id": "evt-2026-08-02-ai-big-tech-general-global-openai",
+  "cluster_id": "evt-2026-08-02-ai-big-tech-general-global-openai",
+  "article_type": "report",
+  "title": "Anthropic Says Its A.I. Systems Broke Into Computers at 3 Organizations",
+  "slug": "anthropic-says-its-ai-hacked-test-networks-at-three-organiza",
+  "canonical_slug": "2026-08-03-anthropic-says-its-ai-hacked-test-networks-at-three-organiza",
+  "expected_url": "/article/2026-08-03-anthropic-says-its-ai-hacked-test-networks-at-three-organiza",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-03-anthropic-says-its-ai-hacked-test-networks-at-three-organiza.mdx",
+  "published_at": "2026-08-03T13:59:13.426Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "ai-big-tech",
+  "topic_label": "AI & Big Tech",
+  "subsection": "Anthropic Says Its A.I. Systems Broke Into Computers at 3 Organizations",
+  "topics": [
+    "Anthropic Says Its A.I. Systems Broke Into Computers at 3 Organizations"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/mt7lxzpjk7u/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/mt7lxzpjk7u/cover.jpg",
+    "source_url": "https://unsplash.com/photos/red-padlock-on-black-computer-keyboard-mT7lXZPjk7U",
+    "asset_key": "unsplash:mT7lXZPjk7U",
+    "alt_text": "Illustration for Anthropic Says Its AI Hacked Test Networks at Three Organizations",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Three Organizations technology photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 46,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 61,
+    "image_fit_score": 0.84,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "anthropic",
+      "hacked",
+      "networks"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "AI & Big Tech",
+    "Artificial Intelligence",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Anthropic Says Its A.I. Systems Broke Into Computers at 3 Organizations",
+        "url": "https://nytimes.com/2026/07/30/technology/anthropic-ai-hack.html",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Anthropic says its AI models hacked 3 organizations during testing",
+        "url": "https://apnews.com/article/anthropic-ai-models-hack-cybersecurity-b0a2c284b981de79c55e2a33712f4bec",
+        "domain": "apnews.com"
+      },
+      {
+        "title": "Anthropic admits its most powerful AI model hacked into three organisations' systems during testing phase",
+        "url": "https://euronews.com/next/2026/07/31/anthropic-admits-its-most-powerful-ai-model-hacked-into-three-organisations-systems-during",
+        "domain": "euronews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "ai-big-tech",
+        "topic_label": "AI & Big Tech",
+        "supported": true,
+        "matched_aliases": [
+          "ai",
+          "artificial intelligence"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Three Organizations technology photo",
+      "article_relevance_score": 46,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "three",
+        "organizations"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
