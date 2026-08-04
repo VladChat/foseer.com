@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-04T13:16:43.987Z",
+  "event_id": "evt-2026-08-03-film-tv-general-global-india",
+  "cluster_id": "evt-2026-08-03-film-tv-general-global-india",
+  "article_type": "report",
+  "title": "Nolan’s Odyssey shows what happens when a leader’s violations are rewarded",
+  "slug": "nolan-s-odyssey-probes-the-cost-of-rewarding-leaders-who-bre",
+  "canonical_slug": "2026-08-04-nolan-s-odyssey-probes-the-cost-of-rewarding-leaders-who-bre",
+  "expected_url": "/article/2026-08-04-nolan-s-odyssey-probes-the-cost-of-rewarding-leaders-who-bre",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-04-nolan-s-odyssey-probes-the-cost-of-rewarding-leaders-who-bre.mdx",
+  "published_at": "2026-08-04T13:16:43.985Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Nolan’s Odyssey shows what happens when a leader’s violations are rewarded",
+  "topics": [
+    "Nolan’s Odyssey shows what happens when a leader’s violations are rewarded"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/7sgupockyno/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/7sgupockyno/cover.jpg",
+    "source_url": "https://unsplash.com/photos/protesters-hold-signs-supporting-unionism-and-demanding-a-contract-7SGUpOcKyNo",
+    "asset_key": "unsplash:7SGUpOcKyNo",
+    "alt_text": "Illustration for Nolan’s ‘Odyssey’ Probes the Cost of Rewarding Leaders Who Break Rules",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Odyssey film photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "nolan’s",
+      "‘odyssey’",
+      "probes"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.18,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Nolan’s Odyssey shows what happens when a leader’s violations are rewarded",
+        "url": "https://www.theguardian.com/commentisfree/2026/aug/03/the-odyssey-nolan-ice",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Odyssey film photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "odyssey"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
