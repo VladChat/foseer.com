@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-04T16:25:30.549Z",
+  "event_id": "evt-2026-08-03-law-crime-general-global",
+  "cluster_id": "evt-2026-08-03-law-crime-general-global",
+  "article_type": "analysis",
+  "title": "How Rogue Officers Misused a Nationwide License-Plate Camera Network",
+  "slug": "how-rogue-officers-misused-a-nationwide-license-plate-camera",
+  "canonical_slug": "2026-08-04-how-rogue-officers-misused-a-nationwide-license-plate-camera",
+  "expected_url": "/article/2026-08-04-how-rogue-officers-misused-a-nationwide-license-plate-camera",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-04-how-rogue-officers-misused-a-nationwide-license-plate-camera.mdx",
+  "published_at": "2026-08-04T16:25:30.548Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "law-crime",
+  "topic_label": "Law & Crime",
+  "subsection": "Law & Crime",
+  "topics": [
+    "Law & Crime"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/wj0wwndmj3y/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/wj0wwndmj3y/cover.jpg",
+    "source_url": "https://unsplash.com/photos/us-coronavirus-covid-19-cases-WJ0WWNdmJ3Y",
+    "asset_key": "unsplash:WJ0WWNdmJ3Y",
+    "alt_text": "Illustration for How Rogue Officers Misused a Nationwide License-Plate Camera Network",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Camera Network photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "courthouse",
+      "justice",
+      "legal",
+      "rogue",
+      "officers",
+      "misused"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Law & Crime",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "How rogue officers turned a nationwide camera network into a tool ...",
+        "url": "https://www.washingtonpost.com/technology/2026/08/02/how-police-officers-used-vast-network-cameras-spy-their-exes/",
+        "domain": "washingtonpost.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "law-crime",
+          "label": "Law & Crime",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "law-crime",
+        "topic_label": "Law & Crime",
+        "supported": true,
+        "matched_aliases": [
+          "courts",
+          "crime"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Camera Network photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "camera",
+        "network"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
