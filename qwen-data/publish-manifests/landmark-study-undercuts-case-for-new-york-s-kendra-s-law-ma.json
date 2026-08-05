@@ -1,0 +1,158 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-05T13:11:34.808Z",
+  "event_id": "evt-2026-08-05-mental-health-general-global",
+  "cluster_id": "evt-2026-08-05-mental-health-general-global",
+  "article_type": "report",
+  "title": "New study torpedoes mental health treatment mandate",
+  "slug": "landmark-study-undercuts-case-for-new-york-s-kendra-s-law-ma",
+  "canonical_slug": "2026-08-05-landmark-study-undercuts-case-for-new-york-s-kendra-s-law-ma",
+  "expected_url": "/article/2026-08-05-landmark-study-undercuts-case-for-new-york-s-kendra-s-law-ma",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-05-landmark-study-undercuts-case-for-new-york-s-kendra-s-law-ma.mdx",
+  "published_at": "2026-08-05T13:11:34.806Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "mental-health",
+  "topic_label": "Mental Health",
+  "subsection": "New study torpedoes mental health treatment mandate",
+  "topics": [
+    "New study torpedoes mental health treatment mandate"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/27834232/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/27834232/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/a-mountain-with-a-green-hill-and-trees-27834232/",
+    "asset_key": "pexels:27834232",
+    "alt_text": "Breathtaking view of lush green mountain peaks in San Juan National Forest.",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Mandate medical photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 25,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.18,
+    "visual_concepts": [
+      "mental health",
+      "therapy",
+      "counseling",
+      "landmark",
+      "study",
+      "undercuts"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.14,
+    "is_fallback": false
+  },
+  "tags": [
+    "Mental Health",
+    "Medical Study",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "New study torpedoes mental health treatment mandate",
+        "url": "https://www.politico.com/news/2026/08/03/new-study-torpedoes-mental-health-treatment-mandate-01021010",
+        "domain": "politico.com"
+      },
+      {
+        "title": "Mental Health News -",
+        "url": "https://www.sciencedaily.com/news/mind_brain/mental_health/",
+        "domain": "sciencedaily.com"
+      },
+      {
+        "title": "The Crisis in U.S. Mental Health Care Access (Health & Gender Policy Brief #186)",
+        "url": "https://www.usresistnews.org/2026/08/03/the-crisis-in-u-s-mental-health-care-access-health-gender-policy-brief-186/",
+        "domain": "usresistnews.org"
+      },
+      {
+        "title": "How mental health is addressed in the U.S. healthcare system",
+        "url": "https://healthcaretoday.com/article/how-mental-health-is-addressed-in-the-u-s-healthcare-system",
+        "domain": "healthcaretoday.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Publish-ready source pack mixes unrelated event titles (3 weak-title sources)"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Mental Health News -",
+          "url": "https://www.sciencedaily.com/news/mind_brain/mental_health/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        },
+        {
+          "title": "The Crisis in U.S. Mental Health Care Access (Health & Gender Policy Brief #186)",
+          "url": "https://www.usresistnews.org/2026/08/03/the-crisis-in-u-s-mental-health-care-access-health-gender-policy-brief-186/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        },
+        {
+          "title": "How mental health is addressed in the U.S. healthcare system",
+          "url": "https://healthcaretoday.com/article/how-mental-health-is-addressed-in-the-u-s-healthcare-system",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "mental-health",
+          "label": "Mental Health",
+          "type": "topic"
+        },
+        {
+          "slug": "medical-study",
+          "label": "Medical Study",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "mental-health",
+        "topic_label": "Mental Health",
+        "supported": true,
+        "matched_aliases": [
+          "Mental Health"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Mandate medical photo",
+      "article_relevance_score": 25,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "mandate"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
