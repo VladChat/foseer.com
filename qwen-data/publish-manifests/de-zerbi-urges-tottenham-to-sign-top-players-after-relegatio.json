@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-06T13:11:07.640Z",
+  "event_id": "evt-2026-08-06-athletes-culture-general-global",
+  "cluster_id": "evt-2026-08-06-athletes-culture-general-global",
+  "article_type": "report",
+  "title": "Roberto De Zerbi interview: 'Tottenham need to bring in top players ...",
+  "slug": "de-zerbi-urges-tottenham-to-sign-top-players-after-relegatio",
+  "canonical_slug": "2026-08-06-de-zerbi-urges-tottenham-to-sign-top-players-after-relegatio",
+  "expected_url": "/article/2026-08-06-de-zerbi-urges-tottenham-to-sign-top-players-after-relegatio",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-06-de-zerbi-urges-tottenham-to-sign-top-players-after-relegatio.mdx",
+  "published_at": "2026-08-06T13:11:07.638Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Roberto De Zerbi interview: 'Tottenham need to bring in top players ...",
+  "topics": [
+    "Roberto De Zerbi interview: 'Tottenham need to bring in top players ..."
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/bmojydu5qd4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/bmojydu5qd4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-half-moon-is-seen-in-the-dark-sky-BmOJYDu5QD4",
+    "asset_key": "unsplash:BmOJYDu5QD4",
+    "alt_text": "Illustration for De Zerbi urges Tottenham to sign ‘top players’ after relegation escape",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "De Zerbi technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 12,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 35,
+    "image_fit_score": 0.74,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "zerbi",
+      "urges",
+      "tottenham"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.74,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Roberto De Zerbi interview: 'Tottenham need to bring in top players ...",
+        "url": "https://www.nytimes.com/athletic/7484271/2026/08/05/roberto-de-zerbi-interview-tottenham-transfers/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "De Zerbi technology photo",
+      "article_relevance_score": 12,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "zerbi"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
