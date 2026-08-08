@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-08T11:56:50.121Z",
+  "event_id": "evt-2026-08-08-us-politics-general-global",
+  "cluster_id": "evt-2026-08-08-us-politics-general-global",
+  "article_type": "report",
+  "title": "Hawaii Rep. Ed Case faces primary challenger and more to watch in today's races",
+  "slug": "hawaii-rep-ed-case-faces-primary-challenge-as-voters-head-to",
+  "canonical_slug": "2026-08-08-hawaii-rep-ed-case-faces-primary-challenge-as-voters-head-to",
+  "expected_url": "/article/2026-08-08-hawaii-rep-ed-case-faces-primary-challenge-as-voters-head-to",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-08-hawaii-rep-ed-case-faces-primary-challenge-as-voters-head-to.mdx",
+  "published_at": "2026-08-08T11:56:50.119Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Hawaii Rep. Ed Case faces primary challenger and more to watch in today's races",
+  "topics": [
+    "Hawaii Rep. Ed Case faces primary challenger and more to watch in today's races"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/5_z3yvosrcw/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/5_z3yvosrcw/cover.jpg",
+    "source_url": "https://unsplash.com/photos/white-and-yellow-metal-machine-5_Z3YVosrCw",
+    "asset_key": "unsplash:5_Z3YVosrCw",
+    "alt_text": "Illustration for Hawaii Rep. Ed Case Faces Primary Challenge as Voters Head to Polls",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Primary Challenge photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 12,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 36,
+    "image_fit_score": 0.74,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "hawaii",
+      "faces",
+      "primary"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.74,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Hawaii Rep. Ed Case faces primary challenger and more to watch in today's races",
+        "url": "https://www.cbsnews.com/news/hawaii-primaries-ed-case-jarrett-keohokalole/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Primary Challenge photo",
+      "article_relevance_score": 12,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "primary",
+        "challenge"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
