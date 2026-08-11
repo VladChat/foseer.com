@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-11T12:09:55.495Z",
+  "event_id": "evt-2026-08-10-space-astronomy-general-global-amazon",
+  "cluster_id": "evt-2026-08-10-space-astronomy-general-global-amazon",
+  "article_type": "report",
+  "title": "APOD: 2026 August 10",
+  "slug": "nasa-s-august-10-apod-highlights-three-interacting-galaxy-pa",
+  "canonical_slug": "2026-08-11-nasa-s-august-10-apod-highlights-three-interacting-galaxy-pa",
+  "expected_url": "/article/2026-08-11-nasa-s-august-10-apod-highlights-three-interacting-galaxy-pa",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-11-nasa-s-august-10-apod-highlights-three-interacting-galaxy-pa.mdx",
+  "published_at": "2026-08-11T12:09:55.493Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "APOD: 2026 August 10",
+  "topics": [
+    "APOD: 2026 August 10"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/31164069/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/31164069/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/nasa-vehicle-assembly-building-at-kennedy-space-center-31164069/",
+    "asset_key": "pexels:31164069",
+    "alt_text": "The iconic NASA Vehicle Assembly Building at Kennedy Space Center in bright daylight.",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "August technology photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 91,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 93,
+    "image_fit_score": 0.47,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "nasa’s",
+      "august",
+      "highlights"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.36,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "APOD: 2026 August 10",
+        "url": "https://science.nasa.gov/image-article/apod/apod-2026-august-10-three-galaxy-pairs/",
+        "domain": "science.nasa.gov"
+      },
+      {
+        "title": "APOD: 2026 August 8",
+        "url": "https://science.nasa.gov/image-article/apod/apod-2026-august-8-a-messier-moment-for-tempel-2/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "August technology photo",
+      "article_relevance_score": 91,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "august"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
