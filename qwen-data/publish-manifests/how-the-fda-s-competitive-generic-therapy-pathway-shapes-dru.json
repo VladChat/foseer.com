@@ -1,15 +1,15 @@
 {
   "version": 3,
-  "generated_at": "2026-06-05T16:40:55.472Z",
-  "event_id": "evt-2026-06-05-pharma-fda-general-global-fda",
-  "cluster_id": "evt-2026-06-05-pharma-fda-general-global-fda",
+  "generated_at": "2026-08-11T15:17:48.104Z",
+  "event_id": "evt-2026-08-11-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-08-11-pharma-fda-general-global-fda",
   "article_type": "analysis",
   "title": "How the FDA’s Competitive Generic Therapy Pathway Shapes Drug Access",
   "slug": "how-the-fda-s-competitive-generic-therapy-pathway-shapes-dru",
-  "canonical_slug": "2026-06-05-how-the-fda-s-competitive-generic-therapy-pathway-shapes-dru",
-  "expected_url": "/article/2026-06-05-how-the-fda-s-competitive-generic-therapy-pathway-shapes-dru",
-  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-06-05-how-the-fda-s-competitive-generic-therapy-pathway-shapes-dru.mdx",
-  "published_at": "2026-06-05T16:40:55.470Z",
+  "canonical_slug": "2026-08-11-how-the-fda-s-competitive-generic-therapy-pathway-shapes-dru",
+  "expected_url": "/article/2026-08-11-how-the-fda-s-competitive-generic-therapy-pathway-shapes-dru",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-11-how-the-fda-s-competitive-generic-therapy-pathway-shapes-dru.mdx",
+  "published_at": "2026-08-11T15:17:48.102Z",
   "section_id": "health",
   "section_label": "Health",
   "topic_id": "pharma-fda",
@@ -20,22 +20,22 @@
   ],
   "writer": {
     "writer_id": "analyst",
-    "author_id": "sophia_bennett",
-    "author_name": "Sophia Bennett",
+    "author_id": "jacob_ellis",
+    "author_name": "Jacob Ellis",
     "author_title": "Analysis Desk"
   },
   "image": {
     "provider": "unsplash",
-    "image_path": "~/assets/images/library/unsplash/hiwm5mqt8ts/cover.jpg",
-    "file_relative_path": "src/assets/images/library/unsplash/hiwm5mqt8ts/cover.jpg",
-    "source_url": "https://unsplash.com/photos/bust-of-a-head-with-brain-diagram-under-light-hIWm5MqT8ts",
-    "asset_key": "unsplash:hIWm5MqT8ts",
+    "image_path": "~/assets/images/library/unsplash/pqnje0avra/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/pqnje0avra/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-in-white-dress-shirt-sitting-on-chair--PqNjE0avrA",
+    "asset_key": "unsplash:-PqNjE0avrA",
     "alt_text": "Illustration for How the FDA’s Competitive Generic Therapy Pathway Shapes Drug Access",
     "selection_mode": "local_registry_reuse_precheck",
-    "query_used": "fda medical photo",
+    "query_used": "Competitive Generic Therapy Approvals medical photo",
     "relevance_tier": "usable",
     "article_relevance_score": 34,
-    "asset_quality_score": 100,
+    "asset_quality_score": 92,
     "editorial_fit_score": 44,
     "image_fit_score": 0.78,
     "visual_concepts": [
@@ -46,31 +46,25 @@
       "competitive",
       "generic"
     ],
-    "retry_attempted": true,
-    "initial_fit_score": 0.18,
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
     "is_fallback": false
   },
   "tags": [
     "Pharma & FDA",
     "Therapy Access",
-    "FDA",
     "Analysis"
   ],
   "source_pack": {
     "passes_gate": true,
     "unique_domains": 1,
-    "total_sources": 2,
-    "direct_event_source_count": 2,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
     "independent_event_domains": 1,
     "publish_ready_sources": [
       {
         "title": "Competitive Generic Therapy Approvals",
         "url": "http://www.fda.gov/drugs/generic-drugs/competitive-generic-therapy-approvals",
-        "domain": "fda.gov"
-      },
-      {
-        "title": "FDA Drug Competition Action Plan | Improving the efficiency of the generic drug development, review, and approval process",
-        "url": "http://www.fda.gov/drugs/guidance-compliance-regulatory-information/fda-drug-competition-action-plan-improving-efficiency-generic-drug-development-review-and-approval",
         "domain": "fda.gov"
       }
     ]
@@ -80,7 +74,7 @@
     "blocking_errors": [],
     "warnings": [],
     "source_checks": {
-      "publish_ready_count": 2,
+      "publish_ready_count": 1,
       "mismatched_sources": [],
       "generic_sources": [],
       "weak_title_overlap_sources": []
@@ -96,11 +90,6 @@
           "slug": "therapy-access",
           "label": "Therapy Access",
           "type": "theme"
-        },
-        {
-          "slug": "fda",
-          "label": "FDA",
-          "type": "entity"
         },
         {
           "slug": "analysis",
@@ -120,12 +109,15 @@
     },
     "image_checks": {
       "provider": "unsplash",
-      "query_used": "fda medical photo",
+      "query_used": "Competitive Generic Therapy Approvals medical photo",
       "article_relevance_score": 34,
       "relevance_tier": "usable",
-      "overlap_ratio": 0.5,
+      "overlap_ratio": 0.8,
       "shared_tokens": [
-        "fda"
+        "competitive",
+        "generic",
+        "therapy",
+        "approvals"
       ],
       "placeholder_query": false
     }
