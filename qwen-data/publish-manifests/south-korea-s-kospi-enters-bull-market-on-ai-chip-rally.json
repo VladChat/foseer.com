@@ -1,0 +1,149 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-13T12:11:31.194Z",
+  "event_id": "evt-2026-08-13-consumer-tech-general-global-nvidia",
+  "cluster_id": "evt-2026-08-13-consumer-tech-general-global-nvidia",
+  "article_type": "report",
+  "title": "South Korea Kospi bull market: SK Hynix, Samsung, AI trade",
+  "slug": "south-korea-s-kospi-enters-bull-market-on-ai-chip-rally",
+  "canonical_slug": "2026-08-13-south-korea-s-kospi-enters-bull-market-on-ai-chip-rally",
+  "expected_url": "/article/2026-08-13-south-korea-s-kospi-enters-bull-market-on-ai-chip-rally",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-13-south-korea-s-kospi-enters-bull-market-on-ai-chip-rally.mdx",
+  "published_at": "2026-08-13T12:11:31.191Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "South Korea Kospi bull market: SK Hynix, Samsung, AI trade",
+  "topics": [
+    "South Korea Kospi bull market: SK Hynix, Samsung, AI trade"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/j41c7ufj9q8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/j41c7ufj9q8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-blue-and-white-globe-with-a-nasa-logo-on-it-j41C7ufj9q8",
+    "asset_key": "unsplash:j41C7ufj9q8",
+    "alt_text": "Illustration for South Korea’s Kospi Enters Bull Market on AI Chip Rally",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "South Korea Kospi technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "south",
+      "korea’s",
+      "kospi"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Artificial Intelligence",
+    "Samsung",
+    "South Korea",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "South Korea Kospi bull market: SK Hynix, Samsung, AI trade",
+        "url": "https://www.cnbc.com/2026/08/13/south-korea-kospi-bull-market-sk-hynix-samsung-ai-trade.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "CoreWeave counters a key bear case on the AI trade. What it means ...",
+        "url": "https://www.cnbc.com/2026/08/12/coreweave-counters-a-key-bear-case-on-the-ai-trade-what-it-means-for-our-data-center-stocks.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "CoreWeave counters a key bear case on the AI trade. What it means ...",
+          "url": "https://www.cnbc.com/2026/08/12/coreweave-counters-a-key-bear-case-on-the-ai-trade-what-it-means-for-our-data-center-stocks.html",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        },
+        {
+          "slug": "samsung",
+          "label": "Samsung",
+          "type": "entity"
+        },
+        {
+          "slug": "south-korea",
+          "label": "South Korea",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "market",
+          "stocks"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "South Korea Kospi technology photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "south",
+        "korea",
+        "kospi"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
