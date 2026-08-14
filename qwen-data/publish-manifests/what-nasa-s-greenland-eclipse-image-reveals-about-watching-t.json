@@ -1,0 +1,143 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-14T12:09:22.964Z",
+  "event_id": "evt-2026-08-14-space-astronomy-general-global",
+  "cluster_id": "evt-2026-08-14-space-astronomy-general-global",
+  "article_type": "report",
+  "title": "APOD: 2026 August 14 – Total Solar Eclipse from Greenland",
+  "slug": "what-nasa-s-greenland-eclipse-image-reveals-about-watching-t",
+  "canonical_slug": "2026-08-14-what-nasa-s-greenland-eclipse-image-reveals-about-watching-t",
+  "expected_url": "/article/2026-08-14-what-nasa-s-greenland-eclipse-image-reveals-about-watching-t",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-14-what-nasa-s-greenland-eclipse-image-reveals-about-watching-t.mdx",
+  "published_at": "2026-08-14T12:09:22.962Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "APOD: 2026 August 14 – Total Solar Eclipse from Greenland",
+  "topics": [
+    "APOD: 2026 August 14 – Total Solar Eclipse from Greenland"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/cd5m3g19grk/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/cd5m3g19grk/cover.jpg",
+    "source_url": "https://unsplash.com/photos/woman-in-white-robe-lying-on-bed-Cd5M3G19Grk",
+    "asset_key": "unsplash:Cd5M3G19Grk",
+    "alt_text": "Illustration for What NASA’s Greenland Eclipse Image Reveals About Watching the Sun",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Greenland photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 2,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "nasa’s",
+      "greenland",
+      "eclipse"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.18,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "APOD: 2026 August 14 – Total Solar Eclipse from Greenland",
+        "url": "https://science.nasa.gov/image-article/apod/apod-2026-august-14-total-solar-eclipse-from-greenland/",
+        "domain": "science.nasa.gov"
+      },
+      {
+        "title": "APOD: 2026 August 13",
+        "url": "https://science.nasa.gov/image-article/apod-2026-august-13-total-solar-eclipse-over-spain/",
+        "domain": "science.nasa.gov"
+      },
+      {
+        "title": "Colombia Markets: COLCAP & the Peso — August 11, 2026",
+        "url": "https://riotimesonline.com/colombia-markets-colcap-peso-tuesday-august-11-2026",
+        "domain": "riotimesonline.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Publish-ready source pack mixes unrelated event titles (2 weak-title sources)"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "APOD: 2026 August 13",
+          "url": "https://science.nasa.gov/image-article/apod-2026-august-13-total-solar-eclipse-over-spain/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        },
+        {
+          "title": "Colombia Markets: COLCAP & the Peso — August 11, 2026",
+          "url": "https://riotimesonline.com/colombia-markets-colcap-peso-tuesday-august-11-2026",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "astronomy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Greenland photo",
+      "article_relevance_score": 2,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "greenland"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
