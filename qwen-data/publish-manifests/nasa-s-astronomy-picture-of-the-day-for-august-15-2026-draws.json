@@ -1,0 +1,140 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-15T11:47:15.853Z",
+  "event_id": "evt-2026-08-15-space-astronomy-general-global-india-apple",
+  "cluster_id": "evt-2026-08-15-space-astronomy-general-global-india-apple",
+  "article_type": "report",
+  "title": "APOD: 2026 August 15",
+  "slug": "nasa-s-astronomy-picture-of-the-day-for-august-15-2026-draws",
+  "canonical_slug": "2026-08-15-nasa-s-astronomy-picture-of-the-day-for-august-15-2026-draws",
+  "expected_url": "/article/2026-08-15-nasa-s-astronomy-picture-of-the-day-for-august-15-2026-draws",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-15-nasa-s-astronomy-picture-of-the-day-for-august-15-2026-draws.mdx",
+  "published_at": "2026-08-15T11:47:15.851Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "APOD: 2026 August 15",
+  "topics": [
+    "APOD: 2026 August 15"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/rk1xqp3qz5g/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/rk1xqp3qz5g/cover.jpg",
+    "source_url": "https://unsplash.com/photos/water-droplets-on-glass-panel-RK1XQP3QZ5g",
+    "asset_key": "unsplash:RK1XQP3QZ5g",
+    "alt_text": "Illustration for NASA’s Astronomy Picture of the Day for August 15, 2026 draws global attention",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "August technology photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 43,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 59,
+    "image_fit_score": 0.84,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "nasa’s",
+      "astronomy",
+      "picture"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.84,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Apple",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "APOD: 2026 August 15",
+        "url": "https://science.nasa.gov/image-article/apod/apod-2026-august-15-bright-perseids-from-sweden/",
+        "domain": "science.nasa.gov"
+      },
+      {
+        "title": "APOD: 2026 August 14 – Total Solar Eclipse from Greenland",
+        "url": "https://science.nasa.gov/image-article/apod/apod-2026-august-14-total-solar-eclipse-from-greenland/",
+        "domain": "science.nasa.gov"
+      },
+      {
+        "title": "☕ Apple builds its own AI model for China & OpenAI launches Ultrafast mode to make GPT",
+        "url": "https://venturedailydigest.com/p/apple-builds-its-own-ai-model-for",
+        "domain": "venturedailydigest.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "☕ Apple builds its own AI model for China & OpenAI launches Ultrafast mode to make GPT",
+          "url": "https://venturedailydigest.com/p/apple-builds-its-own-ai-model-for",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "apple",
+          "label": "Apple",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space",
+          "astronomy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "August technology photo",
+      "article_relevance_score": 43,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "august"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
