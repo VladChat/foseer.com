@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-17T11:51:47.679Z",
+  "event_id": "evt-2026-08-17-major-leagues-general-global-amazon",
+  "cluster_id": "evt-2026-08-17-major-leagues-general-global-amazon",
+  "article_type": "report",
+  "title": "Djokovic’s medical malaise in Cincinnati exposes fraying edges of ageing great’s game",
+  "slug": "djokovic-s-cincinnati-scare-spotlights-limits-of-an-ageing-c",
+  "canonical_slug": "2026-08-17-djokovic-s-cincinnati-scare-spotlights-limits-of-an-ageing-c",
+  "expected_url": "/article/2026-08-17-djokovic-s-cincinnati-scare-spotlights-limits-of-an-ageing-c",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-17-djokovic-s-cincinnati-scare-spotlights-limits-of-an-ageing-c.mdx",
+  "published_at": "2026-08-17T11:51:47.676Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Djokovic’s medical malaise in Cincinnati exposes fraying edges of ageing great’s game",
+  "topics": [
+    "Djokovic’s medical malaise in Cincinnati exposes fraying edges of ageing great’s game"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/34817204/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/34817204/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/business-presentation-in-baghdad-courtroom-34817204/",
+    "asset_key": "pexels:34817204",
+    "alt_text": "Illustration for Djokovic’s Cincinnati scare spotlights limits of an ageing champion",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Cincinnati courtroom photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 93,
+    "editorial_fit_score": 26,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "djokovic’s",
+      "cincinnati",
+      "scare"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Djokovic’s medical malaise in Cincinnati exposes fraying edges of ageing great’s game",
+        "url": "https://www.theguardian.com/sport/2026/aug/16/novak-djokovic-cincinnati-open-2026-tennis-us-open",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Major Leagues",
+      "Primary topic_id unsupported by article evidence: major-leagues"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Cincinnati courtroom photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "cincinnati"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
