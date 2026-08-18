@@ -1,0 +1,154 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-18T14:54:59.095Z",
+  "event_id": "evt-2026-08-18-us-politics-lawsuit-us-meta-senate",
+  "cluster_id": "evt-2026-08-18-us-politics-lawsuit-us-meta-senate",
+  "article_type": "analysis",
+  "title": "Meta faces landmark US trial over alleged harm to children online",
+  "slug": "meta-faces-landmark-us-trial-over-alleged-harm-to-children-o",
+  "canonical_slug": "2026-08-18-meta-faces-landmark-us-trial-over-alleged-harm-to-children-o",
+  "expected_url": "/article/2026-08-18-meta-faces-landmark-us-trial-over-alleged-harm-to-children-o",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-18-meta-faces-landmark-us-trial-over-alleged-harm-to-children-o.mdx",
+  "published_at": "2026-08-18T14:54:59.092Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "creators-platforms",
+  "topic_label": "Creators & Platforms",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/74twpvqaf_8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/74twpvqaf_8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/100-us-dollar-bill-74twpVqAf_8",
+    "asset_key": "unsplash:74twpVqAf_8",
+    "alt_text": "Illustration for Meta faces landmark US trial over alleged harm to children online",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Meta courtroom photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 39,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 56,
+    "image_fit_score": 0.82,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "faces",
+      "landmark",
+      "trial"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.82,
+    "is_fallback": false
+  },
+  "tags": [
+    "Creators & Platforms",
+    "Social Media",
+    "Pediatric Care",
+    "Meta",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "First Thing: Meta’s treatment of children on social media in spotlight as landmark trial set to begin",
+        "url": "https://www.theguardian.com/us-news/2026/aug/18/first-thing-meta-treatment-children-social-media-landmark-trial",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "The Phase II Clinical Trial of NV-387 Oral Gummies as a Treatment ...",
+        "url": "https://www.theglobeandmail.com/investing/markets/markets-news/access%20newswire/3905059/the-phase-ii-clinical-trial-of-nv-387-oral-gummies-as-a-treatment-for-ebola-in-dr-congo-to-fight-the-current-largest-ever-and-expanding-ebola-outbreak-to-begin-soon/",
+        "domain": "theglobeandmail.com"
+      },
+      {
+        "title": "US states take on Meta in pivotal trial over child social media addiction claims",
+        "url": "https://www.theguardian.com/technology/2026/aug/18/meta-child-safety-addiction-lawsuit-states",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "The Phase II Clinical Trial of NV-387 Oral Gummies as a Treatment ...",
+          "url": "https://www.theglobeandmail.com/investing/markets/markets-news/access%20newswire/3905059/the-phase-ii-clinical-trial-of-nv-387-oral-gummies-as-a-treatment-for-ebola-in-dr-congo-to-fight-the-current-largest-ever-and-expanding-ebola-outbreak-to-begin-soon/",
+          "overlap_ratio": 0.11,
+          "shared_tokens": [
+            "trial"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "creators-platforms",
+          "label": "Creators & Platforms",
+          "type": "topic"
+        },
+        {
+          "slug": "social-media",
+          "label": "Social Media",
+          "type": "theme"
+        },
+        {
+          "slug": "pediatric-care",
+          "label": "Pediatric Care",
+          "type": "theme"
+        },
+        {
+          "slug": "meta",
+          "label": "Meta",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "creators-platforms",
+        "topic_label": "Creators & Platforms",
+        "supported": true,
+        "matched_aliases": [
+          "social media",
+          "social media platforms"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Meta courtroom photo",
+      "article_relevance_score": 39,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "meta"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
