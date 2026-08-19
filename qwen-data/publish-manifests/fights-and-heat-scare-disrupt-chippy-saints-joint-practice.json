@@ -1,0 +1,127 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-19T11:52:02.975Z",
+  "event_id": "evt-2026-08-19-major-leagues-general-global",
+  "cluster_id": "evt-2026-08-19-major-leagues-general-global",
+  "article_type": "report",
+  "title": "Multiple brawls overshadow Saints",
+  "slug": "fights-and-heat-scare-disrupt-chippy-saints-joint-practice",
+  "canonical_slug": "2026-08-19-fights-and-heat-scare-disrupt-chippy-saints-joint-practice",
+  "expected_url": "/article/2026-08-19-fights-and-heat-scare-disrupt-chippy-saints-joint-practice",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-19-fights-and-heat-scare-disrupt-chippy-saints-joint-practice.mdx",
+  "published_at": "2026-08-19T11:52:02.973Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Multiple brawls overshadow Saints",
+  "topics": [
+    "Multiple brawls overshadow Saints"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/14928746/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/14928746/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/facade-of-gray-concrete-building-14928746/",
+    "asset_key": "pexels:14928746",
+    "alt_text": "Illustration for Fights and Heat Scare Disrupt Chippy Saints Joint Practice",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Saints technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "fights",
+      "scare",
+      "disrupt"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Multiple brawls overshadow Saints",
+        "url": "https://www.theguardian.com/sport/2026/aug/18/ronnie-bell-overheating-saints-cowboys-joint-practice-fights",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Multiple brawls overshadow Saints",
+          "url": "https://www.theguardian.com/sport/2026/aug/18/ronnie-bell-overheating-saints-cowboys-joint-practice-fights",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "saints"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Saints technology photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "saints"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
