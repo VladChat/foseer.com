@@ -1,0 +1,140 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-22T11:46:45.504Z",
+  "event_id": "evt-2026-08-22-sports-general-global-nfl",
+  "cluster_id": "evt-2026-08-22-sports-general-global-nfl",
+  "article_type": "report",
+  "title": "Ex-NFL training camp players enter NCAA transfer portal in wake of court ruling",
+  "slug": "court-ruling-opens-ncaa-door-to-ex-nfl-camp-players",
+  "canonical_slug": "2026-08-22-court-ruling-opens-ncaa-door-to-ex-nfl-camp-players",
+  "expected_url": "/article/2026-08-22-court-ruling-opens-ncaa-door-to-ex-nfl-camp-players",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-22-court-ruling-opens-ncaa-door-to-ex-nfl-camp-players.mdx",
+  "published_at": "2026-08-22T11:46:45.502Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Ex-NFL training camp players enter NCAA transfer portal in wake of court ruling",
+  "topics": [
+    "Ex-NFL training camp players enter NCAA transfer portal in wake of court ruling"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/35415702/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/35415702/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/outdoor-basketball-hoop-with-blue-sky-background-35415702/",
+    "asset_key": "pexels:35415702",
+    "alt_text": "Illustration for Court Ruling Opens NCAA Door to Ex-NFL Camp Players",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Camp Players football photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 20,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 41,
+    "image_fit_score": 0.76,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "court",
+      "ruling",
+      "opens"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.76,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "NFL",
+    "Court Ruling",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Ex-NFL training camp players enter NCAA transfer portal in wake of court ruling",
+        "url": "https://nytimes.com/athletic/7527960/2026/08/20/nfl-players-enter-ncaa-transfer-portal",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Transfers & Business",
+      "Primary topic_id unsupported by article evidence: transfers-business"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "nfl",
+          "label": "NFL",
+          "type": "theme"
+        },
+        {
+          "slug": "court-ruling",
+          "label": "Court Ruling",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Camp Players football photo",
+      "article_relevance_score": 20,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "camp",
+        "players",
+        "football"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
