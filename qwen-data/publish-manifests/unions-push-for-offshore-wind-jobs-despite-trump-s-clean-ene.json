@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-23T11:46:05.506Z",
+  "event_id": "evt-2026-08-23-climate-extreme-weather-general-global",
+  "cluster_id": "evt-2026-08-23-climate-extreme-weather-general-global",
+  "article_type": "report",
+  "title": "Against the wind: despite Trump’s attacks, unions are fighting for good US clean energy jobs",
+  "slug": "unions-push-for-offshore-wind-jobs-despite-trump-s-clean-ene",
+  "canonical_slug": "2026-08-23-unions-push-for-offshore-wind-jobs-despite-trump-s-clean-ene",
+  "expected_url": "/article/2026-08-23-unions-push-for-offshore-wind-jobs-despite-trump-s-clean-ene",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-23-unions-push-for-offshore-wind-jobs-despite-trump-s-clean-ene.mdx",
+  "published_at": "2026-08-23T11:46:05.503Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "climate-extreme-weather",
+  "topic_label": "Climate & Extreme Weather",
+  "subsection": "Against the wind: despite Trump’s attacks, unions are fighting for good US clean energy jobs",
+  "topics": [
+    "Against the wind: despite Trump’s attacks, unions are fighting for good US clean energy jobs"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/j55tmqkzq4k/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/j55tmqkzq4k/cover.jpg",
+    "source_url": "https://unsplash.com/photos/doctor-and-nurses-inside-operating-room-j55TmqkzQ4k",
+    "asset_key": "unsplash:j55TmqkzQ4k",
+    "alt_text": "Illustration for Unions Push for Offshore Wind Jobs Despite Trump’s Clean Energy Attacks",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Clean Energy Attacks climate photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 86,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 90,
+    "image_fit_score": 0.96,
+    "visual_concepts": [
+      "extreme weather",
+      "storm",
+      "climate",
+      "unions",
+      "offshore",
+      "despite"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.96,
+    "is_fallback": false
+  },
+  "tags": [
+    "Climate & Extreme Weather",
+    "United States",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Against the wind: despite Trump’s attacks, unions are fighting for good US clean energy jobs",
+        "url": "https://www.theguardian.com/us-news/2026/aug/23/wind-energy-unions-trump",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "type": "topic"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "climate-extreme-weather",
+        "topic_label": "Climate & Extreme Weather",
+        "supported": true,
+        "matched_aliases": [
+          "climate"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Clean Energy Attacks climate photo",
+      "article_relevance_score": 86,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "clean",
+        "energy",
+        "attacks",
+        "climate"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
