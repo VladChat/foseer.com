@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-24T11:56:06.912Z",
+  "event_id": "evt-2026-08-24-major-leagues-general-global",
+  "cluster_id": "evt-2026-08-24-major-leagues-general-global",
+  "article_type": "report",
+  "title": "Premier League: 10 talking points from opening weekend of the season",
+  "slug": "premier-league-opening-weekend-10-key-talking-points",
+  "canonical_slug": "2026-08-24-premier-league-opening-weekend-10-key-talking-points",
+  "expected_url": "/article/2026-08-24-premier-league-opening-weekend-10-key-talking-points",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-24-premier-league-opening-weekend-10-key-talking-points.mdx",
+  "published_at": "2026-08-24T11:56:06.910Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Premier League: 10 talking points from opening weekend of the season",
+  "topics": [
+    "Premier League: 10 talking points from opening weekend of the season"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/3385958/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/3385958/cover.jpg",
+    "source_url": "https://pixabay.com/photos/munich-architecture-court-of-justice-3385958/",
+    "asset_key": "pixabay:3385958",
+    "alt_text": "Illustration for Premier League opening weekend: 10 key talking points",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Premier League photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 93,
+    "editorial_fit_score": 31,
+    "image_fit_score": 0.72,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "premier",
+      "league",
+      "opening"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.72,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Soccer",
+    "Premier League",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Premier League: 10 talking points from opening weekend of the season",
+        "url": "https://www.theguardian.com/football/2026/aug/24/premier-league-10-talking-points-from-opening-weekend-action",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Why the Premier League’s Star",
+        "url": "https://frontofficesports.com/the-premier-league-has-a-star-power-shortage",
+        "domain": "frontofficesports.com"
+      },
+      {
+        "title": "How one Silicon Valley firm is seizing an opportunity from Premier League soccer's gambling ad clampdown",
+        "url": "https://cnbc.com/2026/08/21/premier-league-gambling-shirt-sponsors.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "premier-league",
+          "label": "Premier League",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Premier League photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "premier",
+        "league"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
