@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-25T11:56:49.682Z",
+  "event_id": "evt-2026-08-24-space-astronomy-general-global",
+  "cluster_id": "evt-2026-08-24-space-astronomy-general-global",
+  "article_type": "report",
+  "title": "What Lake Bonneville Left Behind",
+  "slug": "what-lake-bonneville-left-behind-in-the-american-west",
+  "canonical_slug": "2026-08-25-what-lake-bonneville-left-behind-in-the-american-west",
+  "expected_url": "/article/2026-08-25-what-lake-bonneville-left-behind-in-the-american-west",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-25-what-lake-bonneville-left-behind-in-the-american-west.mdx",
+  "published_at": "2026-08-25T11:56:49.681Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "What Lake Bonneville Left Behind",
+  "topics": [
+    "What Lake Bonneville Left Behind"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/4g4phxf1i8m/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/4g4phxf1i8m/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-in-pink-crew-neck-shirt-and-black-hat-4g4PHXF1I8M",
+    "asset_key": "unsplash:4g4PHXF1I8M",
+    "alt_text": "Illustration for What Lake Bonneville Left Behind in the American West",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Lake Bonneville Left photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 2,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "bonneville",
+      "behind",
+      "american"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "What Lake Bonneville Left Behind",
+        "url": "https://science.nasa.gov/earth/earth-observatory/what-lake-bonneville-left-behind/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Lake Bonneville Left photo",
+      "article_relevance_score": 2,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "lake",
+        "bonneville",
+        "left"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
