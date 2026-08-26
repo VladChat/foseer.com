@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-26T11:56:52.429Z",
+  "event_id": "evt-2026-08-26-crypto-bitcoin-general-global-amazon",
+  "cluster_id": "evt-2026-08-26-crypto-bitcoin-general-global-amazon",
+  "article_type": "report",
+  "title": "Netflix, YouTube and Amazon Want You to Watch Everything From One App: Theirs",
+  "slug": "why-netflix-youtube-and-amazon-all-want-to-be-your-only-tv-a",
+  "canonical_slug": "2026-08-26-why-netflix-youtube-and-amazon-all-want-to-be-your-only-tv-a",
+  "expected_url": "/article/2026-08-26-why-netflix-youtube-and-amazon-all-want-to-be-your-only-tv-a",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-26-why-netflix-youtube-and-amazon-all-want-to-be-your-only-tv-a.mdx",
+  "published_at": "2026-08-26T11:56:52.427Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "creators-platforms",
+  "topic_label": "Creators & Platforms",
+  "subsection": "Netflix, YouTube and Amazon Want You to Watch Everything From One App: Theirs",
+  "topics": [
+    "Netflix, YouTube and Amazon Want You to Watch Everything From One App: Theirs"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/b9mtrampzto/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/b9mtrampzto/cover.jpg",
+    "source_url": "https://unsplash.com/photos/two-united-states-air-force-f-16s-are-on-the-runway-B9MtrAMpZTo",
+    "asset_key": "unsplash:B9MtrAMpZTo",
+    "alt_text": "Illustration for Why Netflix, YouTube and Amazon All Want to Be Your Only TV App",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "amazon film photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 33,
+    "image_fit_score": 0.63,
+    "visual_concepts": [
+      "content creator",
+      "streaming",
+      "social platform",
+      "netflix",
+      "youtube",
+      "amazon"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.63,
+    "is_fallback": false
+  },
+  "tags": [
+    "Creators & Platforms",
+    "YouTube",
+    "Amazon",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Netflix, YouTube and Amazon Want You to Watch Everything From One App: Theirs",
+        "url": "https://nytimes.com/2026/08/24/business/media/amazon-youtube-netflix-streaming-platform.html",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "creators-platforms",
+          "label": "Creators & Platforms",
+          "type": "topic"
+        },
+        {
+          "slug": "youtube",
+          "label": "YouTube",
+          "type": "theme"
+        },
+        {
+          "slug": "influencer-economy",
+          "label": "Influencer Economy",
+          "type": "theme"
+        },
+        {
+          "slug": "amazon",
+          "label": "Amazon",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "creators-platforms",
+        "topic_label": "Creators & Platforms",
+        "supported": true,
+        "matched_aliases": [
+          "creator economy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "amazon film photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "amazon"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
