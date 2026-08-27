@@ -1,0 +1,127 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-27T21:07:12.784Z",
+  "event_id": "evt-2026-08-27-film-tv-general-global-nba",
+  "cluster_id": "evt-2026-08-27-film-tv-general-global-nba",
+  "article_type": "report",
+  "title": "Notable Deaths in 2026",
+  "slug": "what-the-nba-s-2026-losses-reveal-about-a-changing-league",
+  "canonical_slug": "2026-08-27-what-the-nba-s-2026-losses-reveal-about-a-changing-league",
+  "expected_url": "/article/2026-08-27-what-the-nba-s-2026-losses-reveal-about-a-changing-league",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-27-what-the-nba-s-2026-losses-reveal-about-a-changing-league.mdx",
+  "published_at": "2026-08-27T21:07:12.783Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "Notable Deaths in 2026",
+  "topics": [
+    "Notable Deaths in 2026"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "ava_mitchell",
+    "author_name": "Ava Mitchell",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/6wpixg5trn4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/6wpixg5trn4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-people-standing-on-top-of-a-hill-6WpIxg5tRn4",
+    "asset_key": "unsplash:6WpIxg5tRn4",
+    "alt_text": "Illustration for What the NBA’s 2026 Losses Reveal About a Changing League",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "nba basketball photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 73,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 79,
+    "image_fit_score": 0.92,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "nba’s",
+      "losses",
+      "changing"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.92,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Notable Deaths in 2026",
+        "url": "https://www.cbsnews.com/pictures/notable-deaths-in-2026/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Notable Deaths in 2026",
+          "url": "https://www.cbsnews.com/pictures/notable-deaths-in-2026/",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "2026"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": true,
+        "matched_aliases": [
+          "film"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "nba basketball photo",
+      "article_relevance_score": 73,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "nba"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
