@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-28T21:29:23.150Z",
+  "event_id": "evt-2026-08-28-space-astronomy-general-global-india",
+  "cluster_id": "evt-2026-08-28-space-astronomy-general-global-india",
+  "article_type": "report",
+  "title": "NASA Awards First Prize in Phase 2 of Agency’s LunaRecycle Challenge",
+  "slug": "mit-team-wins-nasa-lunarecycle-prize-for-moon-mission-waste-",
+  "canonical_slug": "2026-08-28-mit-team-wins-nasa-lunarecycle-prize-for-moon-mission-waste",
+  "expected_url": "/article/2026-08-28-mit-team-wins-nasa-lunarecycle-prize-for-moon-mission-waste",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-28-mit-team-wins-nasa-lunarecycle-prize-for-moon-mission-waste.mdx",
+  "published_at": "2026-08-28T21:29:23.148Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "NASA Awards First Prize in Phase 2 of Agency’s LunaRecycle Challenge",
+  "topics": [
+    "NASA Awards First Prize in Phase 2 of Agency’s LunaRecycle Challenge"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/z6_eajfdja8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/z6_eajfdja8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/the-moon-glows-in-the-dark-night-sky-Z6_EaJfDJa8",
+    "asset_key": "unsplash:Z6_EaJfDJa8",
+    "alt_text": "The moon glows in the dark night sky.",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Prize technology photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.48,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "lunarecycle",
+      "prize",
+      "mission"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.48,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "NASA",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "NASA Awards First Prize in Phase 2 of Agency’s LunaRecycle Challenge",
+        "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/centennial-challenges/nasa-awards-first-prize-in-phase-2-of-agencys-lunarecycle-challenge/",
+        "domain": "nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "nasa",
+          "label": "NASA",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Prize technology photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "prize",
+        "technology"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
