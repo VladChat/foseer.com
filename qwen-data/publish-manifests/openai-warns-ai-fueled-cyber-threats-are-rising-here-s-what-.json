@@ -1,0 +1,141 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-29T15:47:57.282Z",
+  "event_id": "evt-2026-08-29-cybersecurity-general-global-openai-microsoft",
+  "cluster_id": "evt-2026-08-29-cybersecurity-general-global-openai-microsoft",
+  "article_type": "report",
+  "title": "OpenAI says we're running out of time to act on cyber defense. Here's what you can actually do about it.",
+  "slug": "openai-warns-ai-fueled-cyber-threats-are-rising-here-s-what-",
+  "canonical_slug": "2026-08-29-openai-warns-ai-fueled-cyber-threats-are-rising-here-s-what",
+  "expected_url": "/article/2026-08-29-openai-warns-ai-fueled-cyber-threats-are-rising-here-s-what",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-29-openai-warns-ai-fueled-cyber-threats-are-rising-here-s-what.mdx",
+  "published_at": "2026-08-29T15:47:57.280Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "OpenAI says we're running out of time to act on cyber defense. Here's what you can actually do about it.",
+  "topics": [
+    "OpenAI says we're running out of time to act on cyber defense. Here's what you can actually do about it."
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/8ktobbq4l30/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/8ktobbq4l30/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-drawing-of-a-woman-with-long-hair-8ktOBbq4L30",
+    "asset_key": "unsplash:8ktOBbq4L30",
+    "alt_text": "Illustration for OpenAI warns AI-fueled cyber threats are rising. Here’s what to do now",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "AI technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "openai",
+      "warns",
+      "fueled"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "OpenAI",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "OpenAI, Anthropic Call for Stronger Cyber Defense Against AI",
+        "url": "https://bloomberg.com/news/articles/2026-08-27/openai-anthropic-urge-cyber-defense-action-as-ai-models-improve",
+        "domain": "bloomberg.com"
+      },
+      {
+        "title": "OpenAI says we're running out of time to act on cyber defense. Here's what you can actually do about it.",
+        "url": "https://businessinsider.com/what-you-can-do-openai-cyber-defense-warning-ai-phishing-2026-8",
+        "domain": "businessinsider.com"
+      },
+      {
+        "title": "Tech, Cybersecurity Giants Unite Behind OpenAI",
+        "url": "https://securityweek.com/tech-cybersecurity-giants-unite-behind-openai-led-cyber-defense-pledge/amp",
+        "domain": "securityweek.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Tech, Cybersecurity Giants Unite Behind OpenAI",
+          "url": "https://securityweek.com/tech-cybersecurity-giants-unite-behind-openai-led-cyber-defense-pledge/amp",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "openai"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "openai",
+          "label": "OpenAI",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "Cybersecurity",
+          "cyber",
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "AI technology photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}
