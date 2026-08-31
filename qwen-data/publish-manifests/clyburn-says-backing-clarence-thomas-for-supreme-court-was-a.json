@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-08-31T18:06:30.695Z",
+  "event_id": "evt-2026-08-31-us-politics-general-global-supreme-court",
+  "cluster_id": "evt-2026-08-31-us-politics-general-global-supreme-court",
+  "article_type": "report",
+  "title": "James Clyburn says supporting Clarence Thomas for supreme court ‘was mistake’",
+  "slug": "clyburn-says-backing-clarence-thomas-for-supreme-court-was-a",
+  "canonical_slug": "2026-08-31-clyburn-says-backing-clarence-thomas-for-supreme-court-was-a",
+  "expected_url": "/article/2026-08-31-clyburn-says-backing-clarence-thomas-for-supreme-court-was-a",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-08-31-clyburn-says-backing-clarence-thomas-for-supreme-court-was-a.mdx",
+  "published_at": "2026-08-31T18:06:30.693Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "law-crime",
+  "topic_label": "Law & Crime",
+  "subsection": "James Clyburn says supporting Clarence Thomas for supreme court ‘was mistake’",
+  "topics": [
+    "James Clyburn says supporting Clarence Thomas for supreme court ‘was mistake’"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/qgtg6a21d1k/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/qgtg6a21d1k/cover.jpg",
+    "source_url": "https://unsplash.com/photos/people-sitting-on-chairs-inside-building-QGTG6A21d1k",
+    "asset_key": "unsplash:QGTG6A21d1k",
+    "alt_text": "Illustration for Clyburn Says Backing Clarence Thomas for Supreme Court ‘Was a Mistake’",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Supreme Court Was courtroom photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 95,
+    "editorial_fit_score": 99,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "courthouse",
+      "justice",
+      "legal",
+      "clyburn",
+      "backing",
+      "clarence"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Law & Crime",
+    "Supreme Court",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "James Clyburn says supporting Clarence Thomas for supreme court ‘was mistake’",
+        "url": "https://www.theguardian.com/us-news/2026/aug/31/james-clyburn-clarence-thomas-supreme-court",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "law-crime",
+          "label": "Law & Crime",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "law-crime",
+        "topic_label": "Law & Crime",
+        "supported": true,
+        "matched_aliases": [
+          "legal"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Supreme Court Was courtroom photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "supreme",
+        "court",
+        "was"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
