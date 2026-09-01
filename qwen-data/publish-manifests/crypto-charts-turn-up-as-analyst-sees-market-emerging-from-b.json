@@ -1,0 +1,132 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-01T15:32:20.889Z",
+  "event_id": "evt-2026-09-01-crypto-bitcoin-general-global-nvidia",
+  "cluster_id": "evt-2026-09-01-crypto-bitcoin-general-global-nvidia",
+  "article_type": "report",
+  "title": "Crypto technicals are improving. Katie Stockton is keeping an eye ...",
+  "slug": "crypto-charts-turn-up-as-analyst-sees-market-emerging-from-b",
+  "canonical_slug": "2026-09-01-crypto-charts-turn-up-as-analyst-sees-market-emerging-from-b",
+  "expected_url": "/article/2026-09-01-crypto-charts-turn-up-as-analyst-sees-market-emerging-from-b",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-01-crypto-charts-turn-up-as-analyst-sees-market-emerging-from-b.mdx",
+  "published_at": "2026-09-01T15:32:20.887Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "crypto-bitcoin",
+  "topic_label": "Crypto",
+  "subsection": "Crypto technicals are improving. Katie Stockton is keeping an eye ...",
+  "topics": [
+    "Crypto technicals are improving. Katie Stockton is keeping an eye ..."
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/33517294/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/33517294/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/modern-prada-storefront-on-the-vegas-strip-33517294/",
+    "asset_key": "pexels:33517294",
+    "alt_text": "Illustration for Crypto Charts Turn Up as Analyst Sees Market Emerging From Bear Cycle",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Crypto crypto photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 17,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 39,
+    "image_fit_score": 0.76,
+    "visual_concepts": [
+      "cryptocurrency",
+      "bitcoin",
+      "blockchain",
+      "crypto",
+      "charts",
+      "analyst"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.76,
+    "is_fallback": false
+  },
+  "tags": [
+    "Crypto",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Crypto technicals are improving. Katie Stockton is keeping an eye ...",
+        "url": "https://www.cnbc.com/2026/08/31/crypto-technicals-are-improving-katie-stockton-is-keeping-an-eye-on-these-levels.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "Latest Crypto Market News & Blockchain Industry Updates",
+        "url": "https://archynewsy.com/latest-crypto-market-news-blockchain-industry-updates",
+        "domain": "archynewsy.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Crypto technicals are improving. Katie Stockton is keeping an eye ...",
+          "url": "https://www.cnbc.com/2026/08/31/crypto-technicals-are-improving-katie-stockton-is-keeping-an-eye-on-these-levels.html",
+          "overlap_ratio": 0.11,
+          "shared_tokens": [
+            "crypto"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "crypto-bitcoin",
+          "label": "Crypto",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "crypto-bitcoin",
+        "topic_label": "Crypto",
+        "supported": true,
+        "matched_aliases": [
+          "Crypto"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Crypto crypto photo",
+      "article_relevance_score": 17,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "crypto"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
