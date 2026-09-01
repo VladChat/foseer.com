@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-01T17:51:16.812Z",
+  "event_id": "evt-2026-09-01-major-leagues-general-global-nfl",
+  "cluster_id": "evt-2026-09-01-major-leagues-general-global-nfl",
+  "article_type": "analysis",
+  "title": "Inside Team Trans: Hockey, refuge and a question of what comes next",
+  "slug": "inside-team-trans-hockey-refuge-and-a-question-of-what-comes",
+  "canonical_slug": "2026-09-01-inside-team-trans-hockey-refuge-and-a-question-of-what-comes",
+  "expected_url": "/article/2026-09-01-inside-team-trans-hockey-refuge-and-a-question-of-what-comes",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-01-inside-team-trans-hockey-refuge-and-a-question-of-what-comes.mdx",
+  "published_at": "2026-09-01T17:51:16.810Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "sports",
+  "topics": [
+    "sports"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/m_fg3wnkp7m/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/m_fg3wnkp7m/cover.jpg",
+    "source_url": "https://unsplash.com/photos/grayscale-photography-of-boy-wearing-sweater-M_fg3wnKP7M",
+    "asset_key": "unsplash:M_fg3wnKP7M",
+    "alt_text": "Illustration for Inside Team Trans: Hockey, refuge and a question of what comes next",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Team Trans basketball photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.61,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "inside",
+      "trans:",
+      "hockey"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.38,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "On Team Trans, no rhetoric, only athletes, hockey and ‘a break from all of it’",
+        "url": "https://www.nytimes.com/athletic/7546293/2026/09/01/transgender-hockey-team-trans-athletes/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Trans athletes never took over women’s sports. So why is the WNBA in an uproar?",
+        "url": "https://www.sfchronicle.com/sports/article/trans-women-girl-sports-wnba-22405441.php",
+        "domain": "sfchronicle.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Image query reinforces unsupported topic context: Major Leagues"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Trans athletes never took over women’s sports. So why is the WNBA in an uproar?",
+          "url": "https://www.sfchronicle.com/sports/article/trans-women-girl-sports-wnba-22405441.php",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "trans"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "basketball"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Team Trans basketball photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "team",
+        "trans"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
