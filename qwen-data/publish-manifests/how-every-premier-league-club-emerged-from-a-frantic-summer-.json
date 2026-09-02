@@ -1,0 +1,156 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-02T15:13:50.042Z",
+  "event_id": "evt-2026-09-02-major-leagues-general-global-nfl",
+  "cluster_id": "evt-2026-09-02-major-leagues-general-global-nfl",
+  "article_type": "report",
+  "title": "Transfer window verdict: how every Premier League club fared",
+  "slug": "how-every-premier-league-club-emerged-from-a-frantic-summer-",
+  "canonical_slug": "2026-09-02-how-every-premier-league-club-emerged-from-a-frantic-summer",
+  "expected_url": "/article/2026-09-02-how-every-premier-league-club-emerged-from-a-frantic-summer",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-02-how-every-premier-league-club-emerged-from-a-frantic-summer.mdx",
+  "published_at": "2026-09-02T15:13:50.039Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Transfer window verdict: how every Premier League club fared",
+  "topics": [
+    "Transfer window verdict: how every Premier League club fared"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/jgqzufjxrue/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/jgqzufjxrue/cover.jpg",
+    "source_url": "https://unsplash.com/photos/soccer-field-with-no-people-during-daytime-JGqZUfjXRUE",
+    "asset_key": "unsplash:JGqZUfjXRUE",
+    "alt_text": "Illustration for How every Premier League club emerged from a frantic summer window",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Premier League courtroom photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 99,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "every",
+      "premier",
+      "league"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Soccer",
+    "Premier League",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "Transfer window verdict: how every Premier League club fared",
+        "url": "https://www.theguardian.com/football/2026/sep/02/premier-league-transfer-window-club-analysis-summer-2026",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "This absurd transfer window exposed the Premier League for what it is",
+        "url": "https://inews.co.uk/sport/football/premier-league-transfer-window-exposed-4742029",
+        "domain": "inews.co.uk"
+      },
+      {
+        "title": "Transfer deadline day: When does the Premier League window shut? What about Europe?",
+        "url": "https://nytimes.com/athletic/7545585/2026/09/01/transfer-deadline-day-when-premier-league-europe",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Premier League Transfer Deadline: Potential Last-Minute Moves",
+        "url": "https://archyde.com/premier-league-transfer-deadline-potential-last-minute-moves",
+        "domain": "archyde.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Canonical tag unsupported by article evidence: Soccer"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "soccer",
+          "label": "Soccer",
+          "type": "theme"
+        },
+        {
+          "slug": "premier-league",
+          "label": "Premier League",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "soccer",
+          "label": "Soccer",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets",
+          "market"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Premier League courtroom photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "premier",
+        "league"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
