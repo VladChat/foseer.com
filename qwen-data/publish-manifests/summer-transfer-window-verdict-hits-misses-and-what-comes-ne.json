@@ -1,0 +1,148 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-04T15:04:40.512Z",
+  "event_id": "evt-2026-09-04-transfers-business-general-global",
+  "cluster_id": "evt-2026-09-04-transfers-business-general-global",
+  "article_type": "report",
+  "title": "Transfer window verdict and predictions: Best signing? Regrets? Most to prove? And what’s next?",
+  "slug": "summer-transfer-window-verdict-hits-misses-and-what-comes-ne",
+  "canonical_slug": "2026-09-04-summer-transfer-window-verdict-hits-misses-and-what-comes-ne",
+  "expected_url": "/article/2026-09-04-summer-transfer-window-verdict-hits-misses-and-what-comes-ne",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-04-summer-transfer-window-verdict-hits-misses-and-what-comes-ne.mdx",
+  "published_at": "2026-09-04T15:04:40.509Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Transfer window verdict and predictions: Best signing? Regrets? Most to prove? And what’s next?",
+  "topics": [
+    "Transfer window verdict and predictions: Best signing? Regrets? Most to prove? And what’s next?"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/vygldyav_wo/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/vygldyav_wo/cover.jpg",
+    "source_url": "https://unsplash.com/photos/silhouette-of-man-standing-near-window-vygLdyav_Wo",
+    "asset_key": "unsplash:vygLdyav_Wo",
+    "alt_text": "silhouette of man standing near window",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Transfer film photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 99,
+    "image_fit_score": 0.6,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "summer",
+      "transfer",
+      "window"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.29,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Soccer",
+    "Premier League",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "Transfer window verdict and predictions: Best signing? Regrets? Most to prove? And what’s next?",
+        "url": "https://nytimes.com/athletic/7555908/2026/09/02/transfer-window-questions-signings-best",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Transfer window verdict: how every Premier League club fared",
+        "url": "https://www.theguardian.com/football/2026/sep/02/premier-league-transfer-window-club-analysis-summer-2026",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "This absurd transfer window exposed the Premier League for what it is",
+        "url": "https://inews.co.uk/sport/football/premier-league-transfer-window-exposed-4742029",
+        "domain": "inews.co.uk"
+      },
+      {
+        "title": "The Transfer DealSheet: Summers reviewed and what comes next",
+        "url": "https://www.nytimes.com/athletic/7555732/2026/09/03/transfer-dealsheet-premier-league-plans/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Transfers & Business",
+      "Primary topic_id unsupported by article evidence: transfers-business"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "premier-league",
+          "label": "Premier League",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Transfer film photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "transfer"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
