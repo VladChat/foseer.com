@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-05T14:02:09.544Z",
+  "event_id": "evt-2026-09-05-world-geopolitics-general-global-sec-nfl",
+  "cluster_id": "evt-2026-09-05-world-geopolitics-general-global-sec-nfl",
+  "article_type": "report",
+  "title": "2 more rescued from debris in Nepal 10 days after devastating floods",
+  "slug": "two-more-workers-rescued-in-nepal-10-days-after-deadly-flood",
+  "canonical_slug": "2026-09-05-two-more-workers-rescued-in-nepal-10-days-after-deadly-flood",
+  "expected_url": "/article/2026-09-05-two-more-workers-rescued-in-nepal-10-days-after-deadly-flood",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-05-two-more-workers-rescued-in-nepal-10-days-after-deadly-flood.mdx",
+  "published_at": "2026-09-05T14:02:09.542Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "2 more rescued from debris in Nepal 10 days after devastating floods",
+  "topics": [
+    "2 more rescued from debris in Nepal 10 days after devastating floods"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/rie8z_-zo-q/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/rie8z_-zo-q/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-woman-standing-in-front-of-a-metal-structure-riE8z_-ZO-Q",
+    "asset_key": "unsplash:riE8z_-ZO-Q",
+    "alt_text": "Illustration for Two More Workers Rescued in Nepal 10 Days After Deadly Floods",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Nepal technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 2,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 29,
+    "image_fit_score": 0.72,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "workers",
+      "rescued",
+      "nepal"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.72,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Diplomacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "2 more rescued from debris in Nepal 10 days after devastating floods",
+        "url": "https://www.cbsnews.com/news/nepal-floods-rescue-tunnel-man-woman/",
+        "domain": "cbsnews.com"
+      },
+      {
+        "title": "2 Nepal workers rescued from tunnel 9 days after floods; more voices heard",
+        "url": "https://www.cbsnews.com/news/2-trapped-workers-rescued-from-nepal-hydropower-tunnel-9-days-after-floods/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Nepal technology photo",
+      "article_relevance_score": 2,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "nepal"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
