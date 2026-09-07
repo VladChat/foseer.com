@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-07T16:37:21.551Z",
+  "event_id": "evt-2026-09-07-major-leagues-general-global-nfl-sec",
+  "cluster_id": "evt-2026-09-07-major-leagues-general-global-nfl-sec",
+  "article_type": "report",
+  "title": "Premier League: 10 talking points from the weekend’s action",
+  "slug": "premier-league-weekend-10-key-talking-points-explained",
+  "canonical_slug": "2026-09-07-premier-league-weekend-10-key-talking-points-explained",
+  "expected_url": "/article/2026-09-07-premier-league-weekend-10-key-talking-points-explained",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-07-premier-league-weekend-10-key-talking-points-explained.mdx",
+  "published_at": "2026-09-07T16:37:21.549Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Premier League: 10 talking points from the weekend’s action",
+  "topics": [
+    "Premier League: 10 talking points from the weekend’s action"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/l4q6bc_zxsa/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/l4q6bc_zxsa/cover.jpg",
+    "source_url": "https://unsplash.com/photos/young-woman-in-traditional-ukrainian-clothing-holding-megaphone-L4q6Bc_ZXSA",
+    "asset_key": "unsplash:L4q6Bc_ZXSA",
+    "alt_text": "Illustration for Premier League weekend: 10 key talking points explained",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Premier League mortgage photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "premier",
+      "league",
+      "weekend:"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Premier League",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Premier League: 10 talking points from the weekend’s action",
+        "url": "https://www.theguardian.com/football/2026/sep/07/premier-league-10-talking-points-from-the-weekends-action",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "The six things that shocked an American at her first Premier League ...",
+        "url": "https://www.nytimes.com/athletic/7571108/2026/09/07/premier-league-american-what-we-learned/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "The Premier League's £3.5bn transfer window smashed all records ...",
+        "url": "https://www.nytimes.com/athletic/7558446/2026/09/02/premier-league-transfer-window-spend-analysis/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "premier-league",
+          "label": "Premier League",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Premier League mortgage photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "premier",
+        "league"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
