@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-08T17:58:13.249Z",
+  "event_id": "evt-2026-09-08-major-leagues-general-global-nfl",
+  "cluster_id": "evt-2026-09-08-major-leagues-general-global-nfl",
+  "article_type": "analysis",
+  "title": "How Franchise Leagues Are Rewriting the Future of Team Chess",
+  "slug": "how-franchise-leagues-are-rewriting-the-future-of-team-chess",
+  "canonical_slug": "2026-09-08-how-franchise-leagues-are-rewriting-the-future-of-team-chess",
+  "expected_url": "/article/2026-09-08-how-franchise-leagues-are-rewriting-the-future-of-team-chess",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-08-how-franchise-leagues-are-rewriting-the-future-of-team-chess.mdx",
+  "published_at": "2026-09-08T17:58:13.247Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "events-tournaments",
+  "topic_label": "Events & Tournaments",
+  "subsection": "sports",
+  "topics": [
+    "sports"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/tglt683cxl0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/tglt683cxl0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/nurse-attends-to-patient-with-doctor-observing-tGlt683cXL0",
+    "asset_key": "unsplash:tGlt683cXL0",
+    "alt_text": "Illustration for How Franchise Leagues Are Rewriting the Future of Team Chess",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Franchise photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 51,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 65,
+    "image_fit_score": 0.86,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "franchise",
+      "leagues",
+      "rewriting"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.86,
+    "is_fallback": false
+  },
+  "tags": [
+    "Events & Tournaments",
+    "Franchise",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Opinion | Franchise leagues are turning chess into a team sport",
+        "url": "https://www.washingtonpost.com/opinions/2026/09/08/franchise-leagues-are-turning-chess-into-team-sport/",
+        "domain": "washingtonpost.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "events-tournaments",
+          "label": "Events & Tournaments",
+          "type": "topic"
+        },
+        {
+          "slug": "franchise",
+          "label": "Franchise",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "events-tournaments",
+        "topic_label": "Events & Tournaments",
+        "supported": true,
+        "matched_aliases": [
+          "tournaments"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Franchise photo",
+      "article_relevance_score": 51,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "franchise"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
