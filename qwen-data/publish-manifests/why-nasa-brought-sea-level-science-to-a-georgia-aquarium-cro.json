@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-08T15:15:22.386Z",
+  "event_id": "evt-2026-09-08-space-astronomy-general-global-meta",
+  "cluster_id": "evt-2026-09-08-space-astronomy-general-global-meta",
+  "article_type": "report",
+  "title": "1,000 Museum Visitors Dive Into NASA Sea Level Science on World Ocean Day",
+  "slug": "why-nasa-brought-sea-level-science-to-a-georgia-aquarium-cro",
+  "canonical_slug": "2026-09-08-why-nasa-brought-sea-level-science-to-a-georgia-aquarium-cro",
+  "expected_url": "/article/2026-09-08-why-nasa-brought-sea-level-science-to-a-georgia-aquarium-cro",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-08-why-nasa-brought-sea-level-science-to-a-georgia-aquarium-cro.mdx",
+  "published_at": "2026-09-08T15:15:22.383Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "1,000 Museum Visitors Dive Into NASA Sea Level Science on World Ocean Day",
+  "topics": [
+    "1,000 Museum Visitors Dive Into NASA Sea Level Science on World Ocean Day"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/yu2_ojob9am/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/yu2_ojob9am/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-large-cluster-of-stars-in-the-sky-yU2_oJOB9aM",
+    "asset_key": "unsplash:yU2_oJOB9aM",
+    "alt_text": "Illustration for Why NASA Brought Sea Level Science to a Georgia Aquarium Crowd",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "NASA Sea Level Science photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 96,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 96,
+    "image_fit_score": 0.98,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "brought",
+      "level",
+      "science"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.98,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "NASA",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "1,000 Museum Visitors Dive Into NASA Sea Level Science on World Ocean Day",
+        "url": "https://science.nasa.gov/learning-resources/science-activation/1000-museum-visitors-dive-into-nasa-sea-level-science-on-world-ocean-day/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "nasa",
+          "label": "NASA",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "NASA Sea Level Science photo",
+      "article_relevance_score": 96,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "nasa",
+        "sea",
+        "level",
+        "science"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
