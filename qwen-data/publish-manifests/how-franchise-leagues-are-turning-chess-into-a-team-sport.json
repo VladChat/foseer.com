@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-09T15:14:21.792Z",
+  "event_id": "evt-2026-09-09-major-leagues-general-global-nfl",
+  "cluster_id": "evt-2026-09-09-major-leagues-general-global-nfl",
+  "article_type": "report",
+  "title": "Opinion | Franchise leagues are turning chess into a team sport",
+  "slug": "how-franchise-leagues-are-turning-chess-into-a-team-sport",
+  "canonical_slug": "2026-09-09-how-franchise-leagues-are-turning-chess-into-a-team-sport",
+  "expected_url": "/article/2026-09-09-how-franchise-leagues-are-turning-chess-into-a-team-sport",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-09-how-franchise-leagues-are-turning-chess-into-a-team-sport.mdx",
+  "published_at": "2026-09-09T15:14:21.790Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Opinion | Franchise leagues are turning chess into a team sport",
+  "topics": [
+    "Opinion | Franchise leagues are turning chess into a team sport"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/mzu1wuisugm/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/mzu1wuisugm/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-red-and-white-boxes-mZU1WuisuGM",
+    "asset_key": "unsplash:mZU1WuisuGM",
+    "alt_text": "Illustration for How Franchise Leagues Are Turning Chess Into a Team Sport",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Franchise Leagues Are Turning technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "franchise",
+      "leagues",
+      "turning"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Franchise",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Opinion | Franchise leagues are turning chess into a team sport",
+        "url": "https://www.washingtonpost.com/opinions/2026/09/08/franchise-leagues-are-turning-chess-into-team-sport/",
+        "domain": "washingtonpost.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "franchise",
+          "label": "Franchise",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Franchise Leagues Are Turning technology photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "franchise",
+        "leagues",
+        "turning"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
