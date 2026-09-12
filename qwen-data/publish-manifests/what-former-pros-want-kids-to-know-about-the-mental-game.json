@@ -1,0 +1,136 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-12T14:18:57.448Z",
+  "event_id": "evt-2026-09-12-major-leagues-general-global-senate",
+  "cluster_id": "evt-2026-09-12-major-leagues-general-global-senate",
+  "article_type": "report",
+  "title": "One thing former pro athletes wish kids knew about the mental side of sports",
+  "slug": "what-former-pros-want-kids-to-know-about-the-mental-game",
+  "canonical_slug": "2026-09-12-what-former-pros-want-kids-to-know-about-the-mental-game",
+  "expected_url": "/article/2026-09-12-what-former-pros-want-kids-to-know-about-the-mental-game",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-12-what-former-pros-want-kids-to-know-about-the-mental-game.mdx",
+  "published_at": "2026-09-12T14:18:57.446Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "athletes-culture",
+  "topic_label": "Athletes & Culture",
+  "subsection": "One thing former pro athletes wish kids knew about the mental side of sports",
+  "topics": [
+    "One thing former pro athletes wish kids knew about the mental side of sports"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/2377075/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/2377075/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/mental-health-on-scrabble-tiles-2377075/",
+    "asset_key": "pexels:2377075",
+    "alt_text": "Illustration for What Former Pros Want Kids to Know About the Mental Game",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Oppose Trans Athletes government photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 66,
+    "asset_quality_score": 88,
+    "editorial_fit_score": 72,
+    "image_fit_score": 0.49,
+    "visual_concepts": [
+      "athlete portrait",
+      "sports culture",
+      "fans",
+      "mental",
+      "professionals",
+      "answer"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.49,
+    "is_fallback": false
+  },
+  "tags": [
+    "Athletes & Culture",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "One thing former pro athletes wish kids knew about the mental side of sports",
+        "url": "https://www.nytimes.com/athletic/7581610/2026/09/11/youth-sports-pro-athletes-advice/",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "James Talarico Reverses Himself to Oppose Trans Athletes in Girls' Sports",
+        "url": "https://www.breitbart.com/sports/2026/09/10/james-talarico-reverses-himself-to-oppose-trans-athletes-in-girls-sports/",
+        "domain": "breitbart.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "James Talarico Reverses Himself to Oppose Trans Athletes in Girls' Sports",
+          "url": "https://www.breitbart.com/sports/2026/09/10/james-talarico-reverses-himself-to-oppose-trans-athletes-in-girls-sports/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "athletes-culture",
+          "label": "Athletes & Culture",
+          "type": "topic"
+        },
+        {
+          "slug": "trans-athlete-policy",
+          "label": "Trans Athlete Policy",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "athletes-culture",
+        "topic_label": "Athletes & Culture",
+        "supported": true,
+        "matched_aliases": [
+          "athletes",
+          "youth sports"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Oppose Trans Athletes government photo",
+      "article_relevance_score": 66,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "oppose",
+        "trans",
+        "athletes"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
