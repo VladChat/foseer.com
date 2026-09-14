@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-14T17:04:13.917Z",
+  "event_id": "evt-2026-09-14-crypto-bitcoin-general-us-senate",
+  "cluster_id": "evt-2026-09-14-crypto-bitcoin-general-us-senate",
+  "article_type": "report",
+  "title": "Crypto’s political clout meets resistance on the left",
+  "slug": "senate-democrats-weigh-crypto-friendly-bill-amid-progressive",
+  "canonical_slug": "2026-09-14-senate-democrats-weigh-crypto-friendly-bill-amid-progressive",
+  "expected_url": "/article/2026-09-14-senate-democrats-weigh-crypto-friendly-bill-amid-progressive",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-14-senate-democrats-weigh-crypto-friendly-bill-amid-progressive.mdx",
+  "published_at": "2026-09-14T17:04:13.915Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "crypto-bitcoin",
+  "topic_label": "Crypto",
+  "subsection": "Crypto’s political clout meets resistance on the left",
+  "topics": [
+    "Crypto’s political clout meets resistance on the left"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/qv_lcc5uwu/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/qv_lcc5uwu/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-body-of-water-surrounded-by-lots-of-trees--Qv_LcC5UWU",
+    "asset_key": "unsplash:-Qv_LcC5UWU",
+    "alt_text": "Illustration for Senate Democrats Weigh Crypto-Friendly Bill Amid Progressive Pushback",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Senate Democrats Weigh crypto photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 31,
+    "asset_quality_score": 93,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "cryptocurrency",
+      "bitcoin",
+      "blockchain",
+      "senate",
+      "democrats",
+      "weigh"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Crypto",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Crypto’s political clout meets resistance on the left",
+        "url": "https://politico.com/news/2026/09/14/cryptos-political-clout-left-01073613",
+        "domain": "politico.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Crypto’s political clout meets resistance on the left",
+          "url": "https://politico.com/news/2026/09/14/cryptos-political-clout-left-01073613",
+          "overlap_ratio": 0.11,
+          "shared_tokens": [
+            "crypto"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "crypto-bitcoin",
+          "label": "Crypto",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "crypto-bitcoin",
+        "topic_label": "Crypto",
+        "supported": true,
+        "matched_aliases": [
+          "Crypto"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Senate Democrats Weigh crypto photo",
+      "article_relevance_score": 31,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "senate",
+        "democrats",
+        "weigh",
+        "crypto"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
