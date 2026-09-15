@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-15T18:14:10.833Z",
+  "event_id": "evt-2026-09-14-space-astronomy-general-global-china-openai",
+  "cluster_id": "evt-2026-09-14-space-astronomy-general-global-china-openai",
+  "article_type": "analysis",
+  "title": "China rebukes AI slowdown calls as 'fear mongering'",
+  "slug": "china-rebukes-ai-slowdown-calls-as-fear-mongering",
+  "canonical_slug": "2026-09-15-china-rebukes-ai-slowdown-calls-as-fear-mongering",
+  "expected_url": "/article/2026-09-15-china-rebukes-ai-slowdown-calls-as-fear-mongering",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-15-china-rebukes-ai-slowdown-calls-as-fear-mongering.mdx",
+  "published_at": "2026-09-15T18:14:10.831Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "Space & Astronomy",
+  "topics": [
+    "Space & Astronomy"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/9102021/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/9102021/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/beautiful-stars-in-the-sky-9102021/",
+    "asset_key": "pexels:9102021",
+    "alt_text": "Illustration for China rebukes AI slowdown calls as fear mongering",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "AI technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 17,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 39,
+    "image_fit_score": 0.76,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "china",
+      "rebukes",
+      "slowdown"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.76,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Artificial Intelligence",
+    "China",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "China says AI CEOs' call for a slowdown is 'fear mongering'",
+        "url": "https://cnbc.com/2026/09/14/china-ai-slowdown-us-tech-ceos.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "What the proposed AI slowdown means for the US, China, and humanity at large",
+        "url": "https://atlanticcouncil.org/dispatches/what-the-proposed-ai-slowdown-means-for-the-us-china-and-humanity-at-large",
+        "domain": "atlanticcouncil.org"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        },
+        {
+          "slug": "china",
+          "label": "China",
+          "type": "geography"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "AI technology photo",
+      "article_relevance_score": 17,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}
