@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-15T15:40:52.124Z",
+  "event_id": "evt-2026-09-14-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-09-14-pharma-fda-general-global-fda",
+  "article_type": "report",
+  "title": "OCMO Guidance Agenda",
+  "slug": "fda-s-chief-medical-office-publishes-three-year-guidance-age",
+  "canonical_slug": "2026-09-15-fda-s-chief-medical-office-publishes-three-year-guidance-age",
+  "expected_url": "/article/2026-09-15-fda-s-chief-medical-office-publishes-three-year-guidance-age",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-15-fda-s-chief-medical-office-publishes-three-year-guidance-age.mdx",
+  "published_at": "2026-09-15T15:40:52.122Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "OCMO Guidance Agenda",
+  "topics": [
+    "OCMO Guidance Agenda"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/r2mf3wfovzc/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/r2mf3wfovzc/cover.jpg",
+    "source_url": "https://unsplash.com/photos/black-iphone-7-on-blue-background-r2Mf3WFOVZc",
+    "asset_key": "unsplash:r2Mf3WFOVZc",
+    "alt_text": "Illustration for FDA’s Chief Medical Office Publishes Three-Year Guidance Agenda",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Guidance Agenda medical photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 76,
+    "asset_quality_score": 91,
+    "editorial_fit_score": 80,
+    "image_fit_score": 0.92,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "fda’s",
+      "chief",
+      "medical"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.92,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "OCMO Guidance Agenda",
+        "url": "http://www.fda.gov/about-fda/ocmo-guidance-documents/ocmo-guidance-agenda",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Guidance Agenda medical photo",
+      "article_relevance_score": 76,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "guidance",
+        "agenda",
+        "medical"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
