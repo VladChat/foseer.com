@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-16T15:30:36.295Z",
+  "event_id": "evt-2026-09-16-major-leagues-general-global",
+  "cluster_id": "evt-2026-09-16-major-leagues-general-global",
+  "article_type": "report",
+  "title": "Female Athletes Fume Over Ad for Sports Trading App Featuring Nude Sydney Sweeney — Alex Jones Responds!",
+  "slug": "female-athletes-condemn-nude-sydney-sweeney-ad-for-sports-tr",
+  "canonical_slug": "2026-09-16-female-athletes-condemn-nude-sydney-sweeney-ad-for-sports-tr",
+  "expected_url": "/article/2026-09-16-female-athletes-condemn-nude-sydney-sweeney-ad-for-sports-tr",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-16-female-athletes-condemn-nude-sydney-sweeney-ad-for-sports-tr.mdx",
+  "published_at": "2026-09-16T15:30:36.293Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "athletes-culture",
+  "topic_label": "Athletes & Culture",
+  "subsection": "Female Athletes Fume Over Ad for Sports Trading App Featuring Nude Sydney Sweeney — Alex Jones Responds!",
+  "topics": [
+    "Female Athletes Fume Over Ad for Sports Trading App Featuring Nude Sydney Sweeney — Alex Jones Responds!"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/be0j4dyyuau/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/be0j4dyyuau/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-white-van-parked-on-the-side-of-a-road-next-to-a-body-of-water-be0J4dyyUaU",
+    "asset_key": "unsplash:be0J4dyyUaU",
+    "alt_text": "Illustration for Female athletes condemn nude Sydney Sweeney ad for sports trading app",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Sydney Sweeney photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "athlete portrait",
+      "sports culture",
+      "fans",
+      "female",
+      "athletes",
+      "condemn"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Athletes & Culture",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "Female Athletes Fume Over Ad for Sports Trading App Featuring Nude Sydney Sweeney — Alex Jones Responds!",
+        "url": "https://www.alexjoneslive.com/2026/09/14/female-athletes-fume-over-ad-for-sports-trading-app-featuring-nude-sydney-sweeney/",
+        "domain": "alexjoneslive.com"
+      },
+      {
+        "title": "Sydney Sweeney Responds to Backlash over Nude Sports Ad by Sharing Photos of Naked Athletes",
+        "url": "https://www.breitbart.com/entertainment/2026/09/14/sydney-sweeney-responds-to-backlash-over-nude-sports-ad-by-sharing-photos-of-naked-athletes/",
+        "domain": "breitbart.com"
+      },
+      {
+        "title": "Sydney Sweeney’s new sports trading ad draws backlash from female athletes",
+        "url": "https://www.nbcphiladelphia.com/news/national-international/sydney-sweeney-new-sports-trading-ad-draws-backlash-female-athletes/4462288/",
+        "domain": "nbcphiladelphia.com"
+      },
+      {
+        "title": "Female athletes hit back at Sydney Sweeney’s sexualized ‘just sports’ ad",
+        "url": "https://www.nbcnews.com/sports/sports/female-athletes-hit-back-sydney-sweeneys-sexualized-just-sports-ad-rcna597489",
+        "domain": "nbcnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "athletes-culture",
+          "label": "Athletes & Culture",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "athletes-culture",
+        "topic_label": "Athletes & Culture",
+        "supported": true,
+        "matched_aliases": [
+          "athletes",
+          "athlete"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Sydney Sweeney photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "sydney",
+        "sweeney"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
