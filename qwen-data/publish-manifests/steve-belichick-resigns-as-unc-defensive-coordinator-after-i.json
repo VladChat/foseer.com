@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-17T15:37:45.513Z",
+  "event_id": "evt-2026-09-17-major-leagues-general-global-nba-nfl",
+  "cluster_id": "evt-2026-09-17-major-leagues-general-global-nba-nfl",
+  "article_type": "report",
+  "title": "Bill Belichick’s son resigns after investigation into UNC football turmoil",
+  "slug": "steve-belichick-resigns-as-unc-defensive-coordinator-after-i",
+  "canonical_slug": "2026-09-17-steve-belichick-resigns-as-unc-defensive-coordinator-after-i",
+  "expected_url": "/article/2026-09-17-steve-belichick-resigns-as-unc-defensive-coordinator-after-i",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-17-steve-belichick-resigns-as-unc-defensive-coordinator-after-i.mdx",
+  "published_at": "2026-09-17T15:37:45.512Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Bill Belichick’s son resigns after investigation into UNC football turmoil",
+  "topics": [
+    "Bill Belichick’s son resigns after investigation into UNC football turmoil"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/2bbt3s_hlr0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/2bbt3s_hlr0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/young-football-player-sits-in-locker-room-2BBt3s_hLr0",
+    "asset_key": "unsplash:2BBt3s_hLr0",
+    "alt_text": "Illustration for Steve Belichick resigns as UNC defensive coordinator after inquiry",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Steve Belichick football photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 94,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 96,
+    "image_fit_score": 0.98,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "steve",
+      "belichick",
+      "resigns"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.98,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Criminal Investigation",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Bill Belichick’s son resigns after investigation into UNC football turmoil",
+        "url": "https://www.theguardian.com/sport/2026/sep/17/bill-belichick-steve-belichick-unc-football-investigation",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "criminal-investigation",
+          "label": "Criminal Investigation",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Steve Belichick football photo",
+      "article_relevance_score": 94,
+      "relevance_tier": "strong",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "steve",
+        "belichick",
+        "football"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
