@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-19T14:42:47.502Z",
+  "event_id": "evt-2026-09-18-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-09-18-pharma-fda-general-global-fda",
+  "article_type": "report",
+  "title": "CDER Streamlined Nonclinical Studies and Acceptable New Approach Methodologies (NAMs)",
+  "slug": "fda-s-cder-details-streamlined-nonclinical-studies-and-new-t",
+  "canonical_slug": "2026-09-19-fda-s-cder-details-streamlined-nonclinical-studies-and-new-t",
+  "expected_url": "/article/2026-09-19-fda-s-cder-details-streamlined-nonclinical-studies-and-new-t",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-19-fda-s-cder-details-streamlined-nonclinical-studies-and-new-t.mdx",
+  "published_at": "2026-09-19T14:42:47.499Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "CDER Streamlined Nonclinical Studies and Acceptable New Approach Methodologies (NAMs)",
+  "topics": [
+    "CDER Streamlined Nonclinical Studies and Acceptable New Approach Methodologies (NAMs)"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/fwgsdvaym-8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/fwgsdvaym-8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/white-and-green-medication-pill-fwGsdvayM-8",
+    "asset_key": "unsplash:fwGsdvayM-8",
+    "alt_text": "white and green medication pill",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "CDER Streamlined Nonclinical Studies data center photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 99,
+    "image_fit_score": 0.5,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "fda’s",
+      "details",
+      "streamlined"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.4,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "CDER Streamlined Nonclinical Studies and Acceptable New Approach Methodologies (NAMs)",
+        "url": "http://www.fda.gov/drugs/science-and-research-drugs/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams",
+        "domain": "fda.gov"
+      },
+      {
+        "title": "New Approach Methodologies (NAMs)",
+        "url": "http://www.fda.gov/science-research/science-and-research-special-topics/new-approach-methodologies-nams",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "New Approach Methodologies (NAMs)",
+          "url": "http://www.fda.gov/science-research/science-and-research-special-topics/new-approach-methodologies-nams",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "CDER Streamlined Nonclinical Studies data center photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.83,
+      "shared_tokens": [
+        "cder",
+        "streamlined",
+        "nonclinical",
+        "studies",
+        "center"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
