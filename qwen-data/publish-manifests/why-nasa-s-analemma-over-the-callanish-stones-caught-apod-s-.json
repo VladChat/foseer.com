@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-20T14:48:22.793Z",
+  "event_id": "evt-2026-09-20-space-astronomy-general-global",
+  "cluster_id": "evt-2026-09-20-space-astronomy-general-global",
+  "article_type": "report",
+  "title": "APOD: 2026 September 20 – Analemma over the Callanish Stones",
+  "slug": "why-nasa-s-analemma-over-the-callanish-stones-caught-apod-s-",
+  "canonical_slug": "2026-09-20-why-nasa-s-analemma-over-the-callanish-stones-caught-apod-s",
+  "expected_url": "/article/2026-09-20-why-nasa-s-analemma-over-the-callanish-stones-caught-apod-s",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-20-why-nasa-s-analemma-over-the-callanish-stones-caught-apod-s.mdx",
+  "published_at": "2026-09-20T14:48:22.791Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "APOD: 2026 September 20 – Analemma over the Callanish Stones",
+  "topics": [
+    "APOD: 2026 September 20 – Analemma over the Callanish Stones"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/jgvtyz6ut_g/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/jgvtyz6ut_g/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-woman-is-holding-a-microscope-and-a-man-is-looking-at-it-jgvTYz6UT_g",
+    "asset_key": "unsplash:jgvTYz6UT_g",
+    "alt_text": "Illustration for Why NASA’s Analemma Over the Callanish Stones Caught APOD’s Eye",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Analemma photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 2,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "nasa’s",
+      "analemma",
+      "callanish"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "APOD: 2026 September 20 – Analemma over the Callanish Stones",
+        "url": "https://science.nasa.gov/image-article/apod-2026-september-20-analemma-over-the-callanish-stones/",
+        "domain": "science.nasa.gov"
+      },
+      {
+        "title": "APOD: 2026 September 19",
+        "url": "https://science.nasa.gov/image-article/apod-2026-september-19-a-zodiacal-night/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "APOD: 2026 September 19",
+          "url": "https://science.nasa.gov/image-article/apod-2026-september-19-a-zodiacal-night/",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "apod"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space",
+          "astronomy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Analemma photo",
+      "article_relevance_score": 2,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "analemma"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
