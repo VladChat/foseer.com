@@ -1,0 +1,147 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-21T17:11:13.461Z",
+  "event_id": "evt-2026-09-21-cybersecurity-general-global-openai",
+  "cluster_id": "evt-2026-09-21-cybersecurity-general-global-openai",
+  "article_type": "report",
+  "title": "When AI Becomes the Hacker: How Artificial Intelligence Is Transforming Cybersecurity in 2026",
+  "slug": "when-ai-becomes-the-hacker-cybersecurity-enters-a-machine-sp",
+  "canonical_slug": "2026-09-21-when-ai-becomes-the-hacker-cybersecurity-enters-a-machine-sp",
+  "expected_url": "/article/2026-09-21-when-ai-becomes-the-hacker-cybersecurity-enters-a-machine-sp",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-21-when-ai-becomes-the-hacker-cybersecurity-enters-a-machine-sp.mdx",
+  "published_at": "2026-09-21T17:11:13.459Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "When AI Becomes the Hacker: How Artificial Intelligence Is Transforming Cybersecurity in 2026",
+  "topics": [
+    "When AI Becomes the Hacker: How Artificial Intelligence Is Transforming Cybersecurity in 2026"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/istzega4oiu/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/istzega4oiu/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-deer-crossing-the-road-in-front-of-the-sun-IsTZeGA4oIU",
+    "asset_key": "unsplash:IsTZeGA4oIU",
+    "alt_text": "a deer crossing the road in front of the sun",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "AI technology photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.64,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "becomes",
+      "hacker:"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.38,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Artificial Intelligence",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 3,
+    "total_sources": 3,
+    "direct_event_source_count": 3,
+    "independent_event_domains": 3,
+    "publish_ready_sources": [
+      {
+        "title": "When AI Becomes the Hacker: How Artificial Intelligence Is Transforming Cybersecurity in 2026",
+        "url": "https://gulfnews.com/technology/when-ai-becomes-the-hacker-cybersecurity-enters-a-new-era-1.500682232",
+        "domain": "gulfnews.com"
+      },
+      {
+        "title": "Artificial intelligence – All Content on this topic",
+        "url": "https://www.dw.com/en/artificial-intelligence/t-42133476/page-1",
+        "domain": "dw.com"
+      },
+      {
+        "title": "AI has crossed a cybersecurity redline",
+        "url": "https://techradar.com/pro/ai-has-crossed-a-cybersecurity-redline-now-what",
+        "domain": "techradar.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Publish-ready source pack mixes unrelated event titles (2 weak-title sources)"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 3,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "Artificial intelligence – All Content on this topic",
+          "url": "https://www.dw.com/en/artificial-intelligence/t-42133476/page-1",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        },
+        {
+          "title": "AI has crossed a cybersecurity redline",
+          "url": "https://techradar.com/pro/ai-has-crossed-a-cybersecurity-redline-now-what",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "cybersecurity"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "artificial-intelligence",
+          "label": "Artificial Intelligence",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "Cybersecurity",
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "AI technology photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0,
+      "shared_tokens": [],
+      "placeholder_query": false
+    }
+  }
+}
