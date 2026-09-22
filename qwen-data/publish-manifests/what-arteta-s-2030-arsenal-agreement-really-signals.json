@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-22T18:06:53.032Z",
+  "event_id": "evt-2026-09-22-major-leagues-general-global-nba-nfl",
+  "cluster_id": "evt-2026-09-22-major-leagues-general-global-nba-nfl",
+  "article_type": "analysis",
+  "title": "What Arteta’s 2030 Arsenal agreement really signals",
+  "slug": "what-arteta-s-2030-arsenal-agreement-really-signals",
+  "canonical_slug": "2026-09-22-what-arteta-s-2030-arsenal-agreement-really-signals",
+  "expected_url": "/article/2026-09-22-what-arteta-s-2030-arsenal-agreement-really-signals",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-22-what-arteta-s-2030-arsenal-agreement-really-signals.mdx",
+  "published_at": "2026-09-22T18:06:53.030Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Major Leagues",
+  "topics": [
+    "Major Leagues"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/v6azrm-rtr8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/v6azrm-rtr8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/green-and-white-labeled-bottles-V6AzrM-rtR8",
+    "asset_key": "unsplash:V6AzrM-rtR8",
+    "alt_text": "Illustration for What Arteta’s 2030 Arsenal agreement really signals",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Arsenal photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "arteta’s",
+      "arsenal",
+      "agreement"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Mikel Arteta agrees improved Arsenal contract, signing extension until 2030",
+        "url": "https://www.theguardian.com/football/2026/sep/22/mikel-arteta-agrees-contract-extension-arsenal-2030",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Arsenal photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "arsenal"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
