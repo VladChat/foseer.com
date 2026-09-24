@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-24T15:54:43.895Z",
+  "event_id": "evt-2026-09-24-world-geopolitics-general-global-nfl",
+  "cluster_id": "evt-2026-09-24-world-geopolitics-general-global-nfl",
+  "article_type": "report",
+  "title": "Hurricane Polo is a powerful Category 4 storm off Mexico. See its path.",
+  "slug": "hurricane-polo-strengthens-to-category-4-off-mexico-s-pacifi",
+  "canonical_slug": "2026-09-24-hurricane-polo-strengthens-to-category-4-off-mexico-s-pacifi",
+  "expected_url": "/article/2026-09-24-hurricane-polo-strengthens-to-category-4-off-mexico-s-pacifi",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-24-hurricane-polo-strengthens-to-category-4-off-mexico-s-pacifi.mdx",
+  "published_at": "2026-09-24T15:54:43.893Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Hurricane Polo is a powerful Category 4 storm off Mexico. See its path.",
+  "topics": [
+    "Hurricane Polo is a powerful Category 4 storm off Mexico. See its path."
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/kvxpfu2l2o0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/kvxpfu2l2o0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/teenage-football-players-sitting-on-a-bench-kvXpFu2l2O0",
+    "asset_key": "unsplash:kvXpFu2l2O0",
+    "alt_text": "Illustration for Hurricane Polo Strengthens to Category 4 Off Mexico’s Pacific Coast",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Hurricane Polo technology photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 58,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 69,
+    "image_fit_score": 0.88,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "hurricane",
+      "strengthens",
+      "category"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.88,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Diplomacy",
+    "Hurricane",
+    "Mexico",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Hurricane Polo is a powerful Category 4 storm off Mexico. See its path.",
+        "url": "https://www.cbsnews.com/news/hurricane-polo-category-5-mexico-life-threatening-flooding/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "hurricane",
+          "label": "Hurricane",
+          "type": "theme"
+        },
+        {
+          "slug": "mexico",
+          "label": "Mexico",
+          "type": "geography"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Hurricane Polo technology photo",
+      "article_relevance_score": 58,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "hurricane",
+        "polo"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
