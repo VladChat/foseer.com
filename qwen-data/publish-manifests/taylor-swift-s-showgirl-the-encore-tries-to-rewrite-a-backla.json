@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-25T15:54:06.685Z",
+  "event_id": "evt-2026-09-25-film-tv-general-global",
+  "cluster_id": "evt-2026-09-25-film-tv-general-global",
+  "article_type": "report",
+  "title": "Taylor Swift: The Life of a Showgirl: The Encore review – flashes of humanity and bafflingly vindictive love s",
+  "slug": "taylor-swift-s-showgirl-the-encore-tries-to-rewrite-a-backla",
+  "canonical_slug": "2026-09-25-taylor-swift-s-showgirl-the-encore-tries-to-rewrite-a-backla",
+  "expected_url": "/article/2026-09-25-taylor-swift-s-showgirl-the-encore-tries-to-rewrite-a-backla",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-25-taylor-swift-s-showgirl-the-encore-tries-to-rewrite-a-backla.mdx",
+  "published_at": "2026-09-25T15:54:06.682Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "Taylor Swift: The Life of a Showgirl: The Encore review – flashes of humanity and bafflingly vindictive love s",
+  "topics": [
+    "Taylor Swift: The Life of a Showgirl: The Encore review – flashes of humanity and bafflingly vindictive love s"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "liam_parker",
+    "author_name": "Liam Parker",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/cj0_ux5ejm4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/cj0_ux5ejm4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/people-stroll-down-a-busy-sunlit-tokyo-street-cj0_UX5EJM4",
+    "asset_key": "unsplash:cj0_UX5EJM4",
+    "alt_text": "Illustration for Taylor Swift’s ‘Showgirl: The Encore’ Tries to Rewrite a Backlash",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Taylor concert photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 33,
+    "image_fit_score": 0.73,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "taylor",
+      "swift’s",
+      "‘showgirl:"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.73,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Taylor Swift: The Life of a Showgirl: The Encore review – flashes of humanity and bafflingly vindictive love s",
+        "url": "https://mashable.com/life/youtube-microdramas-6-billion-views",
+        "domain": "mashable.com"
+      },
+      {
+        "title": "Taylor Swift: The Life of a Showgirl: The Encore review – flashes of humanity and bafflingly vindictive love songs",
+        "url": "https://www.theguardian.com/music/2026/sep/25/taylor-swift-the-life-of-a-showgirl-the-encore-review",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Film & TV",
+      "Primary topic_id unsupported by article evidence: film-tv"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Taylor concert photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "taylor"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
