@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-26T15:06:18.013Z",
+  "event_id": "evt-2026-09-25-major-leagues-general-global-nfl-apple",
+  "cluster_id": "evt-2026-09-25-major-leagues-general-global-nfl-apple",
+  "article_type": "report",
+  "title": "‘A lot of people counted me out’: Ashley Sanchez on goal records, grit and potential USWNT return",
+  "slug": "ashley-sanchez-s-reset-season-from-world-cup-exile-to-new-at",
+  "canonical_slug": "2026-09-26-ashley-sanchez-s-reset-season-from-world-cup-exile-to-new-at",
+  "expected_url": "/article/2026-09-26-ashley-sanchez-s-reset-season-from-world-cup-exile-to-new-at",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-26-ashley-sanchez-s-reset-season-from-world-cup-exile-to-new-at.mdx",
+  "published_at": "2026-09-26T15:06:18.011Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "‘A lot of people counted me out’: Ashley Sanchez on goal records, grit and potential USWNT return",
+  "topics": [
+    "‘A lot of people counted me out’: Ashley Sanchez on goal records, grit and potential USWNT return"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/8389881/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/8389881/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/group-of-people-doing-a-video-recording-8389881/",
+    "asset_key": "pexels:8389881",
+    "alt_text": "Illustration for Ashley Sanchez’s reset season: from World Cup exile to new attacking force",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Ashley Sanchez photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 4,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 29,
+    "image_fit_score": 0.72,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "ashley",
+      "sanchez’s",
+      "reset"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.72,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "‘A lot of people counted me out’: Ashley Sanchez on goal records, grit and potential USWNT return",
+        "url": "https://www.theguardian.com/football/2026/sep/25/ashley-sanchez-interview-nwsl-record-uswnt-callup",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Major Leagues",
+      "Primary topic_id unsupported by article evidence: major-leagues"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Ashley Sanchez photo",
+      "article_relevance_score": 4,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "ashley",
+        "sanchez"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
