@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-27T15:46:44.787Z",
+  "event_id": "evt-2026-09-26-news-general-global-supreme-court-congress",
+  "cluster_id": "evt-2026-09-26-news-general-global-supreme-court-congress",
+  "article_type": "report",
+  "title": "Ketanji Brown Jackson criticizes supreme court's handling of ...",
+  "slug": "justice-ketanji-brown-jackson-faults-court-s-handling-of-key",
+  "canonical_slug": "2026-09-27-justice-ketanji-brown-jackson-faults-court-s-handling-of-key",
+  "expected_url": "/article/2026-09-27-justice-ketanji-brown-jackson-faults-court-s-handling-of-key",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-27-justice-ketanji-brown-jackson-faults-court-s-handling-of-key.mdx",
+  "published_at": "2026-09-27T15:46:44.785Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "law-crime",
+  "topic_label": "Law & Crime",
+  "subsection": "Ketanji Brown Jackson criticizes supreme court's handling of ...",
+  "topics": [
+    "Ketanji Brown Jackson criticizes supreme court's handling of ..."
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/tntwhl3roy0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/tntwhl3roy0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-painting-of-a-group-of-people-sitting-around-a-table-TnTWHl3rOy0",
+    "asset_key": "unsplash:TnTWHl3rOy0",
+    "alt_text": "Illustration for Justice Ketanji Brown Jackson Faults Court’s Handling of Key Cases",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Ketanji Brown Jackson courtroom photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 91,
+    "asset_quality_score": 95,
+    "editorial_fit_score": 92,
+    "image_fit_score": 0.97,
+    "visual_concepts": [
+      "courthouse",
+      "justice",
+      "legal",
+      "ketanji",
+      "brown"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.97,
+    "is_fallback": false
+  },
+  "tags": [
+    "Law & Crime",
+    "Supreme Court",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Ketanji Brown Jackson criticizes supreme court's handling of ...",
+        "url": "https://www.theguardian.com/us-news/2026/sep/25/ketanji-brown-jackson-supreme-court-emergency-docket",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "law-crime",
+          "label": "Law & Crime",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "law-crime",
+        "topic_label": "Law & Crime",
+        "supported": true,
+        "matched_aliases": [
+          "legal"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Ketanji Brown Jackson courtroom photo",
+      "article_relevance_score": 91,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "ketanji",
+        "brown",
+        "jackson"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
