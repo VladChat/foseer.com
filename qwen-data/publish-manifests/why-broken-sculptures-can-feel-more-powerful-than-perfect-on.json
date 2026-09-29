@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-29T16:58:40.707Z",
+  "event_id": "evt-2026-09-29-film-tv-general-global-apple",
+  "cluster_id": "evt-2026-09-29-film-tv-general-global-apple",
+  "article_type": "report",
+  "title": "‘Stern, sensuous, almost kissable lips’: why sculptures can have far more power when they’re broken",
+  "slug": "why-broken-sculptures-can-feel-more-powerful-than-perfect-on",
+  "canonical_slug": "2026-09-29-why-broken-sculptures-can-feel-more-powerful-than-perfect-on",
+  "expected_url": "/article/2026-09-29-why-broken-sculptures-can-feel-more-powerful-than-perfect-on",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-29-why-broken-sculptures-can-feel-more-powerful-than-perfect-on.mdx",
+  "published_at": "2026-09-29T16:58:40.705Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "‘Stern, sensuous, almost kissable lips’: why sculptures can have far more power when they’re broken",
+  "topics": [
+    "‘Stern, sensuous, almost kissable lips’: why sculptures can have far more power when they’re broken"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/hs2ti7y6k3i/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/hs2ti7y6k3i/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-black-and-white-photo-of-a-cracked-window-hS2tI7Y6K3I",
+    "asset_key": "unsplash:hS2tI7Y6K3I",
+    "alt_text": "Illustration for Why Broken Sculptures Can Feel More Powerful Than Perfect Ones",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Broken Sculptures Can Feel technology photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 73,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 80,
+    "image_fit_score": 0.92,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "broken",
+      "sculptures",
+      "powerful"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.92,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "‘Stern, sensuous, almost kissable lips’: why sculptures can have far more power when they’re broken",
+        "url": "https://www.theguardian.com/artanddesign/2026/sep/29/sculpture-far-more-power-if-broken",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "explainer",
+          "label": "Explainer",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Broken Sculptures Can Feel technology photo",
+      "article_relevance_score": 73,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "broken",
+        "sculptures",
+        "can",
+        "feel"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
