@@ -1,0 +1,140 @@
+{
+  "version": 3,
+  "generated_at": "2026-09-30T16:56:29.320Z",
+  "event_id": "evt-2026-09-30-sports-general-us-senate",
+  "cluster_id": "evt-2026-09-30-sports-general-us-senate",
+  "article_type": "report",
+  "title": "Senate passes sweeping college sports package",
+  "slug": "senate-passes-sweeping-college-sports-bill-future-in-house-u",
+  "canonical_slug": "2026-09-30-senate-passes-sweeping-college-sports-bill-future-in-house-u",
+  "expected_url": "/article/2026-09-30-senate-passes-sweeping-college-sports-bill-future-in-house-u",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-09-30-senate-passes-sweeping-college-sports-bill-future-in-house-u.mdx",
+  "published_at": "2026-09-30T16:56:29.318Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Senate passes sweeping college sports package",
+  "topics": [
+    "Senate passes sweeping college sports package"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/89rul39ox2i/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/89rul39ox2i/cover.jpg",
+    "source_url": "https://unsplash.com/photos/grayscale-photo-of-man-89rul39ox2I",
+    "asset_key": "unsplash:89rul39ox2I",
+    "alt_text": "Illustration for Senate Passes Sweeping College Sports Bill, Future in House Unclear",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Senate Passes Sweeping College government photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 95,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 95,
+    "image_fit_score": 0.98,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "senate",
+      "passes",
+      "sweeping"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.98,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Congress",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "Senate passes sweeping college sports package",
+        "url": "https://axios.com/2026/09/29/protect-college-sports-act-nil-senate",
+        "domain": "axios.com"
+      },
+      {
+        "title": "Senate passes college sports bill that would rein in athlete payments and transfers",
+        "url": "https://apnews.com/article/college-sports-senate-ncaa-name-image-likeness-a63e3f4e0be41fb95062b2bc5e646f9f",
+        "domain": "apnews.com"
+      },
+      {
+        "title": "What Changes to Expect as U.S. Senate Passes Protect College Sports Act, NCAA President Releases Statement",
+        "url": "https://essentiallysports.com/ncaa-college-football-news-what-changes-to-expect-as-u-s-senate-passes-protect-college-sports-act-ncaa-president-releases-statement",
+        "domain": "essentiallysports.com"
+      },
+      {
+        "title": "The Senate passes the Protect College Sports Act, but the bill's future is unclear",
+        "url": "https://npr.org/2026/09/28/nx-s1-5977851/protect-college-sports-act-senate-bill-vote",
+        "domain": "npr.org"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": true,
+        "matched_aliases": [
+          "transfers"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Senate Passes Sweeping College government photo",
+      "article_relevance_score": 95,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "senate",
+        "passes",
+        "sweeping",
+        "college"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
