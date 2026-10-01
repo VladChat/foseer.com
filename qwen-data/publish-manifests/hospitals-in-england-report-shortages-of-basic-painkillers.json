@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-01T17:28:47.383Z",
+  "event_id": "evt-2026-09-29-news-general-global-meta",
+  "cluster_id": "evt-2026-09-29-news-general-global-meta",
+  "article_type": "report",
+  "title": "Hospitals in England hit by shortages of common drugs such as paracetamol",
+  "slug": "hospitals-in-england-report-shortages-of-basic-painkillers",
+  "canonical_slug": "2026-10-01-hospitals-in-england-report-shortages-of-basic-painkillers",
+  "expected_url": "/article/2026-10-01-hospitals-in-england-report-shortages-of-basic-painkillers",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-01-hospitals-in-england-report-shortages-of-basic-painkillers.mdx",
+  "published_at": "2026-10-01T17:28:47.381Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "public-health",
+  "topic_label": "Public Health",
+  "subsection": "Hospitals in England hit by shortages of common drugs such as paracetamol",
+  "topics": [
+    "Hospitals in England hit by shortages of common drugs such as paracetamol"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/ulfaygcr38e/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/ulfaygcr38e/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-person-holding-a-diploma-and-a-diploma-ulfaygcr38E",
+    "asset_key": "unsplash:ulfaygcr38E",
+    "alt_text": "Illustration for Hospitals in England report shortages of basic painkillers",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "England medical photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 32,
+    "image_fit_score": 0.73,
+    "visual_concepts": [
+      "public health",
+      "hospital",
+      "medical",
+      "hospitals",
+      "england",
+      "shortages"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.73,
+    "is_fallback": false
+  },
+  "tags": [
+    "Public Health",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Hospitals in England hit by shortages of common drugs such as paracetamol",
+        "url": "https://theguardian.com/society/2026/sep/29/hospitals-shortages-medicine-paracetamol-nhs-england",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "public-health",
+          "label": "Public Health",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "public-health",
+        "topic_label": "Public Health",
+        "supported": true,
+        "matched_aliases": [
+          "Public Health"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "England medical photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "england"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
