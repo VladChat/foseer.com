@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-03T15:15:41.109Z",
+  "event_id": "evt-2026-10-03-crypto-bitcoin-general-global-sec",
+  "cluster_id": "evt-2026-10-03-crypto-bitcoin-general-global-sec",
+  "article_type": "report",
+  "title": "SEC proposes crypto custody framework for investment advisers and funds",
+  "slug": "sec-s-crypto-custody-proposal-redraws-the-rules-for-advisers",
+  "canonical_slug": "2026-10-03-sec-s-crypto-custody-proposal-redraws-the-rules-for-advisers",
+  "expected_url": "/article/2026-10-03-sec-s-crypto-custody-proposal-redraws-the-rules-for-advisers",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-03-sec-s-crypto-custody-proposal-redraws-the-rules-for-advisers.mdx",
+  "published_at": "2026-10-03T15:15:41.108Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "crypto-bitcoin",
+  "topic_label": "Crypto",
+  "subsection": "SEC proposes crypto custody framework for investment advisers and funds",
+  "topics": [
+    "SEC proposes crypto custody framework for investment advisers and funds"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "jacob_ellis",
+    "author_name": "Jacob Ellis",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/muhodrmhtpc/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/muhodrmhtpc/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-boy-sitting-on-a-baseball-field-muHoDRmhTPc",
+    "asset_key": "unsplash:muHoDRmhTPc",
+    "alt_text": "Illustration for SEC’s Crypto Custody Proposal Redraws the Rules for Advisers",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Crypto Custody crypto photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 60,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 71,
+    "image_fit_score": 0.88,
+    "visual_concepts": [
+      "cryptocurrency",
+      "bitcoin",
+      "blockchain",
+      "sec’s",
+      "crypto",
+      "custody"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.88,
+    "is_fallback": false
+  },
+  "tags": [
+    "Crypto",
+    "SEC",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "SEC Proposes Framework for Crypto Custody by Investment Funds",
+        "url": "https://generationimpact.global/news/sec-proposes-crypto-asset-custody-rules-investment-advisers-funds/",
+        "domain": "generationimpact.global"
+      },
+      {
+        "title": "Wall Street regulator proposes rules on investment adviser crypto ...",
+        "url": "https://www.reuters.com/world/wall-street-regulator-proposes-rules-investment-adviser-crypto-asset-custody-2026-10-01/",
+        "domain": "reuters.com"
+      },
+      {
+        "title": "SEC proposes rules letting advisers and funds self",
+        "url": "https://www.cryptopolitan.com/sec-proposes-rules-letting-advisers-and-funds-self-custody-crypto/",
+        "domain": "cryptopolitan.com"
+      },
+      {
+        "title": "SEC Proposes Framework for Advisor Custody of Cryptocurrencies",
+        "url": "https://www.barrons.com/advisor/articles/financial-advisor-sec-crypto-proposal-fc17f693",
+        "domain": "barrons.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "crypto-bitcoin",
+          "label": "Crypto",
+          "type": "topic"
+        },
+        {
+          "slug": "sec",
+          "label": "SEC",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "crypto-bitcoin",
+        "topic_label": "Crypto",
+        "supported": true,
+        "matched_aliases": [
+          "Crypto"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Crypto Custody crypto photo",
+      "article_relevance_score": 60,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "crypto",
+        "custody"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
