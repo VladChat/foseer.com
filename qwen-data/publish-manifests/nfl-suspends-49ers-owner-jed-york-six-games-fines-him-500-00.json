@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-04T15:57:12.668Z",
+  "event_id": "evt-2026-10-03-major-leagues-general-global-nfl",
+  "cluster_id": "evt-2026-10-03-major-leagues-general-global-nfl",
+  "article_type": "report",
+  "title": "49ers owner Jed York suspended, fined $500K after prostitution sting arrest",
+  "slug": "nfl-suspends-49ers-owner-jed-york-six-games-fines-him-500-00",
+  "canonical_slug": "2026-10-04-nfl-suspends-49ers-owner-jed-york-six-games-fines-him-500-00",
+  "expected_url": "/article/2026-10-04-nfl-suspends-49ers-owner-jed-york-six-games-fines-him-500-00",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-04-nfl-suspends-49ers-owner-jed-york-six-games-fines-him-500-00.mdx",
+  "published_at": "2026-10-04T15:57:12.664Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "49ers owner Jed York suspended, fined $500K after prostitution sting arrest",
+  "topics": [
+    "49ers owner Jed York suspended, fined $500K after prostitution sting arrest"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/wj0wwndmj3y/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/wj0wwndmj3y/cover.jpg",
+    "source_url": "https://unsplash.com/photos/us-coronavirus-covid-19-cases-WJ0WWNdmJ3Y",
+    "asset_key": "unsplash:WJ0WWNdmJ3Y",
+    "alt_text": "Illustration for NFL Suspends 49ers Owner Jed York Six Games, Fines Him $500,000",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Jed York football photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 26,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "suspends",
+      "49ers",
+      "owner"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "49ers owner Jed York suspended, fined $500K after prostitution sting arrest",
+        "url": "https://www.theguardian.com/sport/2026/oct/02/jed-york-49ers-nfl-suspension-arrest",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: Major Leagues",
+      "Primary topic_id unsupported by article evidence: major-leagues"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Jed York football photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "jed",
+        "york"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
