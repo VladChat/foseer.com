@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-05T19:44:45.297Z",
+  "event_id": "evt-2026-10-05-pharma-fda-general-global",
+  "cluster_id": "evt-2026-10-05-pharma-fda-general-global",
+  "article_type": "report",
+  "title": "CDER Quantitative Medicine Center of Excellence (QM CoE)",
+  "slug": "fda-creates-quantitative-medicine-hub-inside-key-drug-review",
+  "canonical_slug": "2026-10-05-fda-creates-quantitative-medicine-hub-inside-key-drug-review",
+  "expected_url": "/article/2026-10-05-fda-creates-quantitative-medicine-hub-inside-key-drug-review",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-05-fda-creates-quantitative-medicine-hub-inside-key-drug-review.mdx",
+  "published_at": "2026-10-05T19:44:45.294Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "CDER Quantitative Medicine Center of Excellence (QM CoE)",
+  "topics": [
+    "CDER Quantitative Medicine Center of Excellence (QM CoE)"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/36841315/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/36841315/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/adorable-baby-s-first-easter-celebration-36841315/",
+    "asset_key": "pexels:36841315",
+    "alt_text": "Illustration for FDA Creates Quantitative Medicine Hub Inside Key Drug Review Center",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Review Center data center photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 2,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "creates",
+      "quantitative",
+      "medicine"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "CDER Quantitative Medicine Center of Excellence (QM CoE)",
+        "url": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-quantitative-medicine-center-excellence-qm-coe",
+        "domain": "fda.gov"
+      },
+      {
+        "title": "M15 Resource Center",
+        "url": "http://www.fda.gov/about-fda/cder-quantitative-medicine-center-excellence-qm-coe/m15-resource-center",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "M15 Resource Center",
+          "url": "http://www.fda.gov/about-fda/cder-quantitative-medicine-center-excellence-qm-coe/m15-resource-center",
+          "overlap_ratio": 0.1,
+          "shared_tokens": [
+            "center"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Review Center data center photo",
+      "article_relevance_score": 2,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "review",
+        "center",
+        "data"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
