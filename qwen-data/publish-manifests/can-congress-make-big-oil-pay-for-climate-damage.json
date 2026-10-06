@@ -1,0 +1,162 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-06T19:35:48.936Z",
+  "event_id": "evt-2026-10-06-news-general-global-supreme-court-congress",
+  "cluster_id": "evt-2026-10-06-news-general-global-supreme-court-congress",
+  "article_type": "analysis",
+  "title": "Can Congress Make Big Oil Pay for Climate Damage?",
+  "slug": "can-congress-make-big-oil-pay-for-climate-damage",
+  "canonical_slug": "2026-10-06-can-congress-make-big-oil-pay-for-climate-damage",
+  "expected_url": "/article/2026-10-06-can-congress-make-big-oil-pay-for-climate-damage",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-06-can-congress-make-big-oil-pay-for-climate-damage.mdx",
+  "published_at": "2026-10-06T19:35:48.934Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/a7v0i179x-y/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/a7v0i179x-y/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-man-and-a-woman-sitting-at-a-desk-with-a-typewriter-a7V0I179X-Y",
+    "asset_key": "unsplash:a7V0I179X-Y",
+    "alt_text": "Illustration for Can Congress Make Big Oil Pay for Climate Damage?",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Climate Damage climate photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 17,
+    "asset_quality_score": 92,
+    "editorial_fit_score": 38,
+    "image_fit_score": 0.75,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "climate",
+      "damage?"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.75,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Congress",
+    "Supreme Court",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 4,
+    "total_sources": 4,
+    "direct_event_source_count": 4,
+    "independent_event_domains": 4,
+    "publish_ready_sources": [
+      {
+        "title": "The oil industry should pay for climate change — and Congress ...",
+        "url": "https://www.washingtonpost.com/ripple/2026/10/05/congress-must-fix-climate-laws/",
+        "domain": "washingtonpost.com"
+      },
+      {
+        "title": "A Supreme Court Battle Over Climate Change Begins",
+        "url": "https://www.nytimes.com/2026/10/04/climate/boulder-lawsuit-supreme-court.html",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Ofcom to investigate complaints of climate change denial",
+        "url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+        "domain": "wattsupwiththat.com"
+      },
+      {
+        "title": "US supreme court hears big oil's bid to block climate damage lawsuits",
+        "url": "https://www.theguardian.com/us-news/2026/oct/05/supreme-court-big-oil-climate-damage-lawsuits",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Publish-ready source pack mixes unrelated event titles (2 weak-title sources)"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 4,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "A Supreme Court Battle Over Climate Change Begins",
+          "url": "https://www.nytimes.com/2026/10/04/climate/boulder-lawsuit-supreme-court.html",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "climate"
+          ]
+        },
+        {
+          "title": "Ofcom to investigate complaints of climate change denial",
+          "url": "https://wattsupwiththat.com/2026/03/27/ofcom-to-investigate-complaints-of-climate-change-denial/",
+          "overlap_ratio": 0.13,
+          "shared_tokens": [
+            "climate"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "congress",
+          "label": "Congress",
+          "type": "theme"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Climate Damage climate photo",
+      "article_relevance_score": 17,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "climate",
+        "damage"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
