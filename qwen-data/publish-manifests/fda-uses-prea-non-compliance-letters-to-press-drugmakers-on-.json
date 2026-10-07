@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-07T17:58:14.053Z",
+  "event_id": "evt-2026-10-06-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-10-06-pharma-fda-general-global-fda",
+  "article_type": "report",
+  "title": "Non-Compliance Letters under 505B(d)(1) of the Federal Food, Drug, and Cosmetic Act",
+  "slug": "fda-uses-prea-non-compliance-letters-to-press-drugmakers-on-",
+  "canonical_slug": "2026-10-07-fda-uses-prea-non-compliance-letters-to-press-drugmakers-on",
+  "expected_url": "/article/2026-10-07-fda-uses-prea-non-compliance-letters-to-press-drugmakers-on",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-07-fda-uses-prea-non-compliance-letters-to-press-drugmakers-on.mdx",
+  "published_at": "2026-10-07T17:58:14.051Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Non-Compliance Letters under 505B(d)(1) of the Federal Food, Drug, and Cosmetic Act",
+  "topics": [
+    "Non-Compliance Letters under 505B(d)(1) of the Federal Food, Drug, and Cosmetic Act"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/12225929/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/12225929/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/grayscale-photo-of-woman-with-creative-makeup-12225929/",
+    "asset_key": "pexels:12225929",
+    "alt_text": "Illustration for FDA Uses PREA Non‑Compliance Letters to Press Drugmakers on Pediatric Data",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Letters medical photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 17,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 39,
+    "image_fit_score": 0.76,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "non‑compliance",
+      "letters",
+      "press"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.76,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Non-Compliance Letters under 505B(d)(1) of the Federal Food, Drug, and Cosmetic Act",
+        "url": "http://www.fda.gov/drugs/guidance-compliance-regulatory-information/non-compliance-letters-under-505bd1-federal-food-drug-and-cosmetic-act",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Letters medical photo",
+      "article_relevance_score": 17,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "letters"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
