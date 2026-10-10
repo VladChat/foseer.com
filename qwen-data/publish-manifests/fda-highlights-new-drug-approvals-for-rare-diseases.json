@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-10T16:22:00.307Z",
+  "event_id": "evt-2026-10-08-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-10-08-pharma-fda-general-global-fda",
+  "article_type": "report",
+  "title": "Rare Disease Drug Approvals",
+  "slug": "fda-highlights-new-drug-approvals-for-rare-diseases",
+  "canonical_slug": "2026-10-10-fda-highlights-new-drug-approvals-for-rare-diseases",
+  "expected_url": "/article/2026-10-10-fda-highlights-new-drug-approvals-for-rare-diseases",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-10-fda-highlights-new-drug-approvals-for-rare-diseases.mdx",
+  "published_at": "2026-10-10T16:22:00.306Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Rare Disease Drug Approvals",
+  "topics": [
+    "Rare Disease Drug Approvals"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/pqnje0avra/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/pqnje0avra/cover.jpg",
+    "source_url": "https://unsplash.com/photos/man-in-white-dress-shirt-sitting-on-chair--PqNjE0avrA",
+    "asset_key": "unsplash:-PqNjE0avrA",
+    "alt_text": "Illustration for FDA Highlights New Drug Approvals for Rare Diseases",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Approvals medical photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 90,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "highlights",
+      "approvals",
+      "diseases"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Rare Disease",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Rare Disease Drug Approvals",
+        "url": "http://www.fda.gov/about-fda/accelerating-rare-disease-cures-arc-program/rare-disease-drug-approvals",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "rare-disease",
+          "label": "Rare Disease",
+          "type": "theme"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda",
+          "drug approvals"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Approvals medical photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "approvals"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
