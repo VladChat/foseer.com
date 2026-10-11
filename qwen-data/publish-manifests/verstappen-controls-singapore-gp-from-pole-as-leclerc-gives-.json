@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-11T16:45:04.893Z",
+  "event_id": "evt-2026-10-11-major-leagues-general-global",
+  "cluster_id": "evt-2026-10-11-major-leagues-general-global",
+  "article_type": "report",
+  "title": "Resurgent Verstappen holds off Leclerc to seal dominant F1 Singapore GP win",
+  "slug": "verstappen-controls-singapore-gp-from-pole-as-leclerc-gives-",
+  "canonical_slug": "2026-10-11-verstappen-controls-singapore-gp-from-pole-as-leclerc-gives",
+  "expected_url": "/article/2026-10-11-verstappen-controls-singapore-gp-from-pole-as-leclerc-gives",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-11-verstappen-controls-singapore-gp-from-pole-as-leclerc-gives.mdx",
+  "published_at": "2026-10-11T16:45:04.890Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Resurgent Verstappen holds off Leclerc to seal dominant F1 Singapore GP win",
+  "topics": [
+    "Resurgent Verstappen holds off Leclerc to seal dominant F1 Singapore GP win"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/bmojydu5qd4/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/bmojydu5qd4/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-half-moon-is-seen-in-the-dark-sky-BmOJYDu5QD4",
+    "asset_key": "unsplash:BmOJYDu5QD4",
+    "alt_text": "Illustration for Verstappen controls Singapore GP from pole as Leclerc gives chase",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Verstappen technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 92,
+    "editorial_fit_score": 31,
+    "image_fit_score": 0.72,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "verstappen",
+      "controls",
+      "singapore"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.72,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Resurgent Verstappen holds off Leclerc to seal dominant F1 Singapore GP win",
+        "url": "https://www.theguardian.com/sport/2026/oct/11/resurgent-max-verstappen-holds-off-leclerc-to-seal-dominant-win-formula-1-singapore-grand-prix",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Verstappen technology photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "verstappen"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
