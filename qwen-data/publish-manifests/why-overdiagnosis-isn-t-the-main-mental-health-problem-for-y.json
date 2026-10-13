@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-13T18:28:43.591Z",
+  "event_id": "evt-2026-10-12-mental-health-general-global",
+  "cluster_id": "evt-2026-10-12-mental-health-general-global",
+  "article_type": "report",
+  "title": "The Guardian view on mental health: overdiagnosis is not the problem facing young people",
+  "slug": "why-overdiagnosis-isn-t-the-main-mental-health-problem-for-y",
+  "canonical_slug": "2026-10-13-why-overdiagnosis-isn-t-the-main-mental-health-problem-for-y",
+  "expected_url": "/article/2026-10-13-why-overdiagnosis-isn-t-the-main-mental-health-problem-for-y",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-13-why-overdiagnosis-isn-t-the-main-mental-health-problem-for-y.mdx",
+  "published_at": "2026-10-13T18:28:43.589Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "mental-health",
+  "topic_label": "Mental Health",
+  "subsection": "The Guardian view on mental health: overdiagnosis is not the problem facing young people",
+  "topics": [
+    "The Guardian view on mental health: overdiagnosis is not the problem facing young people"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/5_z3yvosrcw/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/5_z3yvosrcw/cover.jpg",
+    "source_url": "https://unsplash.com/photos/white-and-yellow-metal-machine-5_Z3YVosrCw",
+    "asset_key": "unsplash:5_Z3YVosrCw",
+    "alt_text": "Illustration for Why ‘overdiagnosis’ isn’t the main mental health problem for young people",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "The Guardian medical photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "mental health",
+      "therapy",
+      "counseling",
+      "‘overdiagnosis’",
+      "isn’t",
+      "mental"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Mental Health",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "The Guardian view on mental health: overdiagnosis is not the problem facing young people",
+        "url": "https://www.theguardian.com/commentisfree/2026/oct/11/the-guardian-view-on-mental-health-overdiagnosis-is-not-the-problem-facing-young-people",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "mental-health",
+          "label": "Mental Health",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "mental-health",
+        "topic_label": "Mental Health",
+        "supported": true,
+        "matched_aliases": [
+          "Mental Health"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "The Guardian medical photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "guardian"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
