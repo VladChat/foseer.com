@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-16T15:28:50.798Z",
+  "event_id": "evt-2026-10-16-climate-extreme-weather-general-global-tiktok",
+  "cluster_id": "evt-2026-10-16-climate-extreme-weather-general-global-tiktok",
+  "article_type": "report",
+  "title": "US voters want action on global heating. So why are midterm candidates ‘climate hushing’?",
+  "slug": "why-climate-is-missing-from-us-midterm-campaigns-even-as-vot",
+  "canonical_slug": "2026-10-16-why-climate-is-missing-from-us-midterm-campaigns-even-as-vot",
+  "expected_url": "/article/2026-10-16-why-climate-is-missing-from-us-midterm-campaigns-even-as-vot",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-16-why-climate-is-missing-from-us-midterm-campaigns-even-as-vot.mdx",
+  "published_at": "2026-10-16T15:28:50.795Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "climate-extreme-weather",
+  "topic_label": "Climate & Extreme Weather",
+  "subsection": "US voters want action on global heating. So why are midterm candidates ‘climate hushing’?",
+  "topics": [
+    "US voters want action on global heating. So why are midterm candidates ‘climate hushing’?"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/5b06bpr4-9c/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/5b06bpr4-9c/cover.jpg",
+    "source_url": "https://unsplash.com/photos/person-photographs-the-us-capitol-building-in-winter-5b06bPR4-9c",
+    "asset_key": "unsplash:5b06bPR4-9c",
+    "alt_text": "Illustration for Why climate is missing from US midterm campaigns, even as voters care",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "US climate photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "extreme weather",
+      "storm",
+      "climate",
+      "missing",
+      "midterm"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Climate & Extreme Weather",
+    "United States",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "US voters want action on global heating. So why are midterm candidates ‘climate hushing’?",
+        "url": "https://www.theguardian.com/us-news/2026/oct/16/midterms-voters-climate-crisis-candidates",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "climate-extreme-weather",
+          "label": "Climate & Extreme Weather",
+          "type": "topic"
+        },
+        {
+          "slug": "united-states",
+          "label": "United States",
+          "type": "geography"
+        },
+        {
+          "slug": "explainer",
+          "label": "Explainer",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "climate-extreme-weather",
+        "topic_label": "Climate & Extreme Weather",
+        "supported": true,
+        "matched_aliases": [
+          "climate"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "US climate photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "climate"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
