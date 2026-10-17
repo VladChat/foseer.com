@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-17T14:22:37.739Z",
+  "event_id": "evt-2026-10-17-us-politics-general-global-nba-jpmorgan",
+  "cluster_id": "evt-2026-10-17-us-politics-general-global-nba-jpmorgan",
+  "article_type": "report",
+  "title": "After the unimaginable happens, an Oregon town mourns: ‘You can’t stop thinking about the kids’",
+  "slug": "bend-community-mourns-after-elementary-school-shooting-kills",
+  "canonical_slug": "2026-10-17-bend-community-mourns-after-elementary-school-shooting-kills",
+  "expected_url": "/article/2026-10-17-bend-community-mourns-after-elementary-school-shooting-kills",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-17-bend-community-mourns-after-elementary-school-shooting-kills.mdx",
+  "published_at": "2026-10-17T14:22:37.736Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "After the unimaginable happens, an Oregon town mourns: ‘You can’t stop thinking about the kids’",
+  "topics": [
+    "After the unimaginable happens, an Oregon town mourns: ‘You can’t stop thinking about the kids’"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/kkx72tedjlc/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/kkx72tedjlc/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-people-posing-for-a-picture-kkx72TedJlc",
+    "asset_key": "unsplash:kkx72TedJlc",
+    "alt_text": "Illustration for Bend community mourns after elementary school shooting kills four",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Bend photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "community",
+      "mourns",
+      "elementary"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "After the unimaginable happens, an Oregon town mourns: ‘You can’t stop thinking about the kids’",
+        "url": "https://www.theguardian.com/us-news/2026/oct/17/bend-oregon-school-shooting",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: U.S. Politics & Policy",
+      "Primary topic_id unsupported by article evidence: us-politics"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Bend photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "bend"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
