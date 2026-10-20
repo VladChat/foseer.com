@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-20T15:47:29.422Z",
+  "event_id": "evt-2026-10-19-film-tv-general-global",
+  "cluster_id": "evt-2026-10-19-film-tv-general-global",
+  "article_type": "report",
+  "title": "With nine new recordings of Mahler’s epic Resurrection Symphony this year alone, which rises above the rest?",
+  "slug": "nine-new-mahler-resurrection-recordings-compete-for-attentio",
+  "canonical_slug": "2026-10-20-nine-new-mahler-resurrection-recordings-compete-for-attentio",
+  "expected_url": "/article/2026-10-20-nine-new-mahler-resurrection-recordings-compete-for-attentio",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-20-nine-new-mahler-resurrection-recordings-compete-for-attentio.mdx",
+  "published_at": "2026-10-20T15:47:29.419Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "With nine new recordings of Mahler’s epic Resurrection Symphony this year alone, which rises above the rest?",
+  "topics": [
+    "With nine new recordings of Mahler’s epic Resurrection Symphony this year alone, which rises above the rest?"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/pmxvwelqhgs/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/pmxvwelqhgs/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-galaxy-in-space-PmXVWelqhGs",
+    "asset_key": "unsplash:PmXVWelqhGs",
+    "alt_text": "Illustration for Nine New Mahler ‘Resurrection’ Recordings Compete for Attention",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Nine New Mahler Resurrection technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "mahler",
+      "‘resurrection’",
+      "recordings"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "With nine new recordings of Mahler’s epic Resurrection Symphony this year alone, which rises above the rest?",
+        "url": "https://www.theguardian.com/music/2026/oct/19/mahler-second-symphony-resurrection-recommended-recording-rattle-brso",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Nine New Mahler Resurrection technology photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "nine",
+        "mahler",
+        "resurrection"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
