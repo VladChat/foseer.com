@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-20T18:32:25.479Z",
+  "event_id": "evt-2026-10-19-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-10-19-pharma-fda-general-global-fda",
+  "article_type": "analysis",
+  "title": "What FDA’s Drugs@FDA Data Files Change — And What They Don’t",
+  "slug": "what-fda-s-drugs-fda-data-files-change-and-what-they-don-t",
+  "canonical_slug": "2026-10-20-what-fda-s-drugs-fda-data-files-change-and-what-they-don-t",
+  "expected_url": "/article/2026-10-20-what-fda-s-drugs-fda-data-files-change-and-what-they-don-t",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-20-what-fda-s-drugs-fda-data-files-change-and-what-they-don-t.mdx",
+  "published_at": "2026-10-20T18:32:25.476Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Pharma & FDA",
+  "topics": [
+    "Pharma & FDA"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "liam_parker",
+    "author_name": "Liam Parker",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/33094886/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/33094886/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/historic-eisenhower-executive-office-building-in-d-c-33094886/",
+    "asset_key": "pexels:33094886",
+    "alt_text": "Illustration for What FDA’s Drugs@FDA Data Files Change — And What They Don’t",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Data Files medical photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 12,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 37,
+    "image_fit_score": 0.75,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "fda’s",
+      "drugs@fda",
+      "files"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.18,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "FDA",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Drugs@FDA Data Files",
+        "url": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "fda",
+          "label": "FDA",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Data Files medical photo",
+      "article_relevance_score": 12,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "data",
+        "files"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
