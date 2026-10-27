@@ -1,0 +1,143 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-27T11:39:06.959Z",
+  "event_id": "evt-2026-10-27-space-astronomy-general-global",
+  "cluster_id": "evt-2026-10-27-space-astronomy-general-global",
+  "article_type": "report",
+  "title": "APOD: 2026 October 27",
+  "slug": "nasa-s-astronomy-picture-of-the-day-for-oct-27-2026-what-to-",
+  "canonical_slug": "2026-10-27-nasa-s-astronomy-picture-of-the-day-for-oct-27-2026-what-to",
+  "expected_url": "/article/2026-10-27-nasa-s-astronomy-picture-of-the-day-for-oct-27-2026-what-to",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-27-nasa-s-astronomy-picture-of-the-day-for-oct-27-2026-what-to.mdx",
+  "published_at": "2026-10-27T11:39:06.956Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "APOD: 2026 October 27",
+  "topics": [
+    "APOD: 2026 October 27"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/aytvc9yptpo/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/aytvc9yptpo/cover.jpg",
+    "source_url": "https://unsplash.com/photos/group-of-women-holding-black-and-white-banner-aytvc9YPtpo",
+    "asset_key": "unsplash:aytvc9YPtpo",
+    "alt_text": "Illustration for NASA’s Astronomy Picture of the Day for Oct. 27, 2026: What to Know",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Astronomy Picture of the Day photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 7,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 31,
+    "image_fit_score": 0.72,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "nasa’s",
+      "astronomy",
+      "picture"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.72,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "APOD: 2026 October 27",
+        "url": "https://science.nasa.gov/image-article/apod-2026-october-27-noctilucent-clouds-over-sweden/",
+        "domain": "science.nasa.gov"
+      },
+      {
+        "title": "2026 October 26",
+        "url": "https://science.nasa.gov/image-article/2026-october-26-m42-the-great-nebula-in-orion/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "APOD: 2026 October 27",
+          "url": "https://science.nasa.gov/image-article/apod-2026-october-27-noctilucent-clouds-over-sweden/",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "2026"
+          ]
+        },
+        {
+          "title": "2026 October 26",
+          "url": "https://science.nasa.gov/image-article/2026-october-26-m42-the-great-nebula-in-orion/",
+          "overlap_ratio": 0.14,
+          "shared_tokens": [
+            "2026"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space",
+          "astronomy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Astronomy Picture of the Day photo",
+      "article_relevance_score": 7,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "astronomy",
+        "picture",
+        "day"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
