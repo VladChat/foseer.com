@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-10-28T11:33:16.645Z",
+  "event_id": "evt-2026-10-28-pharma-fda-general-global",
+  "cluster_id": "evt-2026-10-28-pharma-fda-general-global",
+  "article_type": "report",
+  "title": "Peripheral and Central Nervous System Drugs Advisory Committee Charter",
+  "slug": "what-the-fda-s-nerve-drug-advisory-committee-is-chartered-to",
+  "canonical_slug": "2026-10-28-what-the-fda-s-nerve-drug-advisory-committee-is-chartered-to",
+  "expected_url": "/article/2026-10-28-what-the-fda-s-nerve-drug-advisory-committee-is-chartered-to",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-10-28-what-the-fda-s-nerve-drug-advisory-committee-is-chartered-to.mdx",
+  "published_at": "2026-10-28T11:33:16.641Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "Peripheral and Central Nervous System Drugs Advisory Committee Charter",
+  "topics": [
+    "Peripheral and Central Nervous System Drugs Advisory Committee Charter"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/7sgupockyno/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/7sgupockyno/cover.jpg",
+    "source_url": "https://unsplash.com/photos/protesters-hold-signs-supporting-unionism-and-demanding-a-contract-7SGUpOcKyNo",
+    "asset_key": "unsplash:7SGUpOcKyNo",
+    "alt_text": "Illustration for What the FDA’s Nerve-Drug Advisory Committee Is Chartered to Do",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Advisory Committee medical photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 77,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 83,
+    "image_fit_score": 0.83,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "fda’s",
+      "nerve",
+      "advisory"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.36,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Peripheral and Central Nervous System Drugs Advisory Committee Charter",
+        "url": "http://www.fda.gov/advisory-committees/peripheral-and-central-nervous-system-drugs-advisory-committee/peripheral-and-central-nervous-system-drugs-advisory-committee-charter",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Advisory Committee medical photo",
+      "article_relevance_score": 77,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "advisory",
+        "committee"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
