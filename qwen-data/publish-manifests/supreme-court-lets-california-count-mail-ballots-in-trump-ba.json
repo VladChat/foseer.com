@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-04T19:58:24.262Z",
+  "event_id": "evt-2026-11-04-news-general-global-supreme-court",
+  "cluster_id": "evt-2026-11-04-news-general-global-supreme-court",
+  "article_type": "report",
+  "title": "Trump's Supreme Court winning streak in election cases ...",
+  "slug": "supreme-court-lets-california-count-mail-ballots-in-trump-ba",
+  "canonical_slug": "2026-11-04-supreme-court-lets-california-count-mail-ballots-in-trump-ba",
+  "expected_url": "/article/2026-11-04-supreme-court-lets-california-count-mail-ballots-in-trump-ba",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-04-supreme-court-lets-california-count-mail-ballots-in-trump-ba.mdx",
+  "published_at": "2026-11-04T19:58:24.260Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Trump's Supreme Court winning streak in election cases ...",
+  "topics": [
+    "Trump's Supreme Court winning streak in election cases ..."
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/qgtg6a21d1k/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/qgtg6a21d1k/cover.jpg",
+    "source_url": "https://unsplash.com/photos/people-sitting-on-chairs-inside-building-QGTG6A21d1k",
+    "asset_key": "unsplash:QGTG6A21d1k",
+    "alt_text": "Illustration for Supreme Court Lets California Count Mail Ballots in Trump-Backed Challenge",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Supreme Court courtroom photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 93,
+    "editorial_fit_score": 98,
+    "image_fit_score": 0.99,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "supreme",
+      "court",
+      "california"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.99,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Supreme Court",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Trump's Supreme Court winning streak in election cases ...",
+        "url": "https://www.reuters.com/legal/government/trumps-supreme-court-winning-streak-election-cases-screeches-halt-2026-11-03/",
+        "domain": "reuters.com"
+      },
+      {
+        "title": "Supreme Court seems likely to favor Catholic schools in pre",
+        "url": "https://www.cbsnews.com/news/supreme-court-st-mary-catholic-parish-v-roy-colorado-preschool/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: U.S. Politics & Policy",
+      "Primary topic_id unsupported by article evidence: us-politics"
+    ],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "supreme-court",
+          "label": "Supreme Court",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Supreme Court courtroom photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "supreme",
+        "court"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
