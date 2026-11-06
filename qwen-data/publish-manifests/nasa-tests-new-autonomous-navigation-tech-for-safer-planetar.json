@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-06T19:38:27.577Z",
+  "event_id": "evt-2026-11-04-space-astronomy-general-global-amazon",
+  "cluster_id": "evt-2026-11-04-space-astronomy-general-global-amazon",
+  "article_type": "report",
+  "title": "NASA Navigation Experiment Shows Promise for Planetary Landings",
+  "slug": "nasa-tests-new-autonomous-navigation-tech-for-safer-planetar",
+  "canonical_slug": "2026-11-06-nasa-tests-new-autonomous-navigation-tech-for-safer-planetar",
+  "expected_url": "/article/2026-11-06-nasa-tests-new-autonomous-navigation-tech-for-safer-planetar",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-06-nasa-tests-new-autonomous-navigation-tech-for-safer-planetar.mdx",
+  "published_at": "2026-11-06T19:38:27.574Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "NASA Navigation Experiment Shows Promise for Planetary Landings",
+  "topics": [
+    "NASA Navigation Experiment Shows Promise for Planetary Landings"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/rk1xqp3qz5g/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/rk1xqp3qz5g/cover.jpg",
+    "source_url": "https://unsplash.com/photos/water-droplets-on-glass-panel-RK1XQP3QZ5g",
+    "asset_key": "unsplash:RK1XQP3QZ5g",
+    "alt_text": "Illustration for NASA Tests New Autonomous Navigation Tech for Safer Planetary Landings",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Planetary Landings technology photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 65,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 75,
+    "image_fit_score": 0.9,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "tests",
+      "autonomous",
+      "navigation"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.9,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "NASA",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "NASA Navigation Experiment Shows Promise for Planetary Landings",
+        "url": "https://www.nasa.gov/centers-and-facilities/armstrong/nasa-navigation-experiment-shows-promise-for-planetary-landings/",
+        "domain": "nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "nasa",
+          "label": "NASA",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Planetary Landings technology photo",
+      "article_relevance_score": 65,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "planetary",
+        "landings",
+        "technology"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
