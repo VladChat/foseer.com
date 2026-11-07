@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-07T17:50:58.145Z",
+  "event_id": "evt-2026-11-07-space-astronomy-general-global-microsoft",
+  "cluster_id": "evt-2026-11-07-space-astronomy-general-global-microsoft",
+  "article_type": "report",
+  "title": "APOD: 2026 November 7",
+  "slug": "what-nasa-s-november-7-apod-says-about-how-we-see-space-now",
+  "canonical_slug": "2026-11-07-what-nasa-s-november-7-apod-says-about-how-we-see-space-now",
+  "expected_url": "/article/2026-11-07-what-nasa-s-november-7-apod-says-about-how-we-see-space-now",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-07-what-nasa-s-november-7-apod-says-about-how-we-see-space-now.mdx",
+  "published_at": "2026-11-07T17:50:58.142Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "APOD: 2026 November 7",
+  "topics": [
+    "APOD: 2026 November 7"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/yu2_ojob9am/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/yu2_ojob9am/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-large-cluster-of-stars-in-the-sky-yU2_oJOB9aM",
+    "asset_key": "unsplash:yU2_oJOB9aM",
+    "alt_text": "Illustration for What NASA’s November 7 APOD Says About How We See Space Now",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "November photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 98,
+    "image_fit_score": 0.99,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "nasa’s",
+      "november"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.99,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "APOD: 2026 November 7",
+        "url": "https://science.nasa.gov/image-article/apod-2026-november-7-de-gerlache-kocher-massif/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space",
+          "astronomy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "November photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "november"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
