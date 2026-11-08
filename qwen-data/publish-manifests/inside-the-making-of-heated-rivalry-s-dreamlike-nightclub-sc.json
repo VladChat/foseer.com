@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-08T18:03:01.155Z",
+  "event_id": "evt-2026-11-06-film-tv-general-global",
+  "cluster_id": "evt-2026-11-06-film-tv-general-global",
+  "article_type": "report",
+  "title": "How Heated Rivalry's famous nightclub scene came to life",
+  "slug": "inside-the-making-of-heated-rivalry-s-dreamlike-nightclub-sc",
+  "canonical_slug": "2026-11-08-inside-the-making-of-heated-rivalry-s-dreamlike-nightclub-sc",
+  "expected_url": "/article/2026-11-08-inside-the-making-of-heated-rivalry-s-dreamlike-nightclub-sc",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-08-inside-the-making-of-heated-rivalry-s-dreamlike-nightclub-sc.mdx",
+  "published_at": "2026-11-08T18:03:01.153Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "film-tv",
+  "topic_label": "Film & TV",
+  "subsection": "How Heated Rivalry's famous nightclub scene came to life",
+  "topics": [
+    "How Heated Rivalry's famous nightclub scene came to life"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/mzu1wuisugm/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/mzu1wuisugm/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-red-and-white-boxes-mZU1WuisuGM",
+    "asset_key": "unsplash:mZU1WuisuGM",
+    "alt_text": "Illustration for Inside the Making of Heated Rivalry’s Dreamlike Nightclub Scene",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Heated film photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 2,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "cinema",
+      "film set",
+      "movie theater",
+      "inside",
+      "making",
+      "heated"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Film & TV",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "How Heated Rivalry's famous nightclub scene came to life",
+        "url": "https://www.theglobeandmail.com/culture/film-and-tv/television/article-how-heated-rivalrys-famous-nightclub-scene-came-to-life/",
+        "domain": "theglobeandmail.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "film-tv",
+          "label": "Film & TV",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "film-tv",
+        "topic_label": "Film & TV",
+        "supported": true,
+        "matched_aliases": [
+          "film"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Heated film photo",
+      "article_relevance_score": 2,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "heated",
+        "film"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
