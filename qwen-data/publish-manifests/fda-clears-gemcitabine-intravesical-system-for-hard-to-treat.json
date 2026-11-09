@@ -1,0 +1,142 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-09T22:38:50.771Z",
+  "event_id": "evt-2026-11-08-pharma-fda-general-global-fda",
+  "cluster_id": "evt-2026-11-08-pharma-fda-general-global-fda",
+  "article_type": "report",
+  "title": "FDA approves gemcitabine intravesical system for non",
+  "slug": "fda-clears-gemcitabine-intravesical-system-for-hard-to-treat",
+  "canonical_slug": "2026-11-09-fda-clears-gemcitabine-intravesical-system-for-hard-to-treat",
+  "expected_url": "/article/2026-11-09-fda-clears-gemcitabine-intravesical-system-for-hard-to-treat",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-09-fda-clears-gemcitabine-intravesical-system-for-hard-to-treat.mdx",
+  "published_at": "2026-11-09T22:38:50.769Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "FDA approves gemcitabine intravesical system for non",
+  "topics": [
+    "FDA approves gemcitabine intravesical system for non"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "chloe_warren",
+    "author_name": "Chloe Warren",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/bvew0nchrio/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/bvew0nchrio/cover.jpg",
+    "source_url": "https://unsplash.com/photos/tennis-talk-althea-gibson-us-and-wimbledon-tennis-champion-gives-some-pointers-on-the-game-which-has-brought-her-international-fame-BvEw0NCHrIo",
+    "asset_key": "unsplash:BvEw0NCHrIo",
+    "alt_text": "Illustration for FDA clears gemcitabine intravesical system for hard‑to‑treat bladder cancer",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "FDA medical photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 20,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 41,
+    "image_fit_score": 0.76,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "clears",
+      "gemcitabine",
+      "intravesical"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.76,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "FDA",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "FDA approves gemcitabine intravesical system for non",
+        "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-gemcitabine-intravesical-system-non-muscle-invasive-bladder-cancer",
+        "domain": "fda.gov"
+      },
+      {
+        "title": "FDA approves niraparib and abiraterone acetate plus prednisone for BRCA2",
+        "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-niraparib-and-abiraterone-acetate-plus-prednisone-brca2-mutated-metastatic-castration",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "FDA approves niraparib and abiraterone acetate plus prednisone for BRCA2",
+          "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-niraparib-and-abiraterone-acetate-plus-prednisone-brca2-mutated-metastatic-castration",
+          "overlap_ratio": 0.11,
+          "shared_tokens": [
+            "fda"
+          ]
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "fda",
+          "label": "FDA",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "FDA medical photo",
+      "article_relevance_score": 20,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "fda"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
