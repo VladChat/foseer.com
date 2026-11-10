@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-10T21:20:22.962Z",
+  "event_id": "evt-2026-11-10-us-politics-general-washington-nvidia-white-house",
+  "cluster_id": "evt-2026-11-10-us-politics-general-washington-nvidia-white-house",
+  "article_type": "analysis",
+  "title": "Trump Says Nvidia’s Jensen Huang Denied Knowing ‘Alice’: What’s Actually Known",
+  "slug": "trump-says-nvidia-s-jensen-huang-denied-knowing-alice-what-s",
+  "canonical_slug": "2026-11-10-trump-says-nvidia-s-jensen-huang-denied-knowing-alice-what-s",
+  "expected_url": "/article/2026-11-10-trump-says-nvidia-s-jensen-huang-denied-knowing-alice-what-s",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-10-trump-says-nvidia-s-jensen-huang-denied-knowing-alice-what-s.mdx",
+  "published_at": "2026-11-10T21:20:22.960Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/vw78uegyw24/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/vw78uegyw24/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-couple-of-bottles-of-cleaning-products-next-to-a-towel-vw78UEgyw24",
+    "asset_key": "unsplash:vw78UEgyw24",
+    "alt_text": "Illustration for Trump Says Nvidia’s Jensen Huang Denied Knowing ‘Alice’: What’s Actually Known",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Jensen Huang Denied Knowing technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 26,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "trump",
+      "nvidia’s",
+      "jensen"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Nvidia",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Trump: Nvidia CEO Jensen Huang denied knowing Alice ...",
+        "url": "https://www.cnbc.com/2026/11/09/trump-jensen-huang-nvidia-chinese-spy.html",
+        "domain": "cnbc.com"
+      },
+      {
+        "title": "Why Nvidia CEO Jensen Huang Is Unique",
+        "url": "https://www.wsj.com/cio-journal/why-nvidia-ceo-jensen-huang-is-unique-586439c8",
+        "domain": "wsj.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "nvidia",
+          "label": "Nvidia",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "white house"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Jensen Huang Denied Knowing technology photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.8,
+      "shared_tokens": [
+        "jensen",
+        "huang",
+        "denied",
+        "knowing"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
