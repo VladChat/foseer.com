@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-11T19:48:02.934Z",
+  "event_id": "evt-2026-11-11-film-tv-general-global",
+  "cluster_id": "evt-2026-11-11-film-tv-general-global",
+  "article_type": "report",
+  "title": "Tyler Perry’s The Gospel of Christmas review – Netflix unloads more slapdash festive fare",
+  "slug": "tyler-perry-s-the-gospel-of-christmas-draws-early-season-cri",
+  "canonical_slug": "2026-11-11-tyler-perry-s-the-gospel-of-christmas-draws-early-season-cri",
+  "expected_url": "/article/2026-11-11-tyler-perry-s-the-gospel-of-christmas-draws-early-season-cri",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-11-tyler-perry-s-the-gospel-of-christmas-draws-early-season-cri.mdx",
+  "published_at": "2026-11-11T19:48:02.930Z",
+  "section_id": "culture",
+  "section_label": "Culture",
+  "topic_id": "creators-platforms",
+  "topic_label": "Creators & Platforms",
+  "subsection": "Tyler Perry’s The Gospel of Christmas review – Netflix unloads more slapdash festive fare",
+  "topics": [
+    "Tyler Perry’s The Gospel of Christmas review – Netflix unloads more slapdash festive fare"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/hapyxvuic7u/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/hapyxvuic7u/cover.jpg",
+    "source_url": "https://unsplash.com/photos/the-white-house-with-green-lawn-and-trees-HApYxVUiC7U",
+    "asset_key": "unsplash:HApYxVUiC7U",
+    "alt_text": "The white house with green lawn and trees",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "The Gospel of Christmas photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.18,
+    "visual_concepts": [
+      "content creator",
+      "streaming",
+      "social platform",
+      "tyler",
+      "perry’s",
+      "gospel"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.18,
+    "is_fallback": false
+  },
+  "tags": [
+    "Creators & Platforms",
+    "Netflix",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Tyler Perry’s The Gospel of Christmas review – Netflix unloads more slapdash festive fare",
+        "url": "https://www.theguardian.com/film/2026/nov/11/tyler-perry-gospel-of-christmas-review-netflix",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "creators-platforms",
+          "label": "Creators & Platforms",
+          "type": "topic"
+        },
+        {
+          "slug": "influencer-economy",
+          "label": "Influencer Economy",
+          "type": "theme"
+        },
+        {
+          "slug": "netflix",
+          "label": "Netflix",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "creators-platforms",
+        "topic_label": "Creators & Platforms",
+        "supported": true,
+        "matched_aliases": [
+          "creator economy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "The Gospel of Christmas photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "gospel",
+        "christmas"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
