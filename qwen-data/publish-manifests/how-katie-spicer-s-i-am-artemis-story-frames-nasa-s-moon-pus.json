@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-12T20:17:37.691Z",
+  "event_id": "evt-2026-11-12-space-astronomy-general-global",
+  "cluster_id": "evt-2026-11-12-space-astronomy-general-global",
+  "article_type": "report",
+  "title": "I Am Artemis Katie Spicer",
+  "slug": "how-katie-spicer-s-i-am-artemis-story-frames-nasa-s-moon-pus",
+  "canonical_slug": "2026-11-12-how-katie-spicer-s-i-am-artemis-story-frames-nasa-s-moon-pus",
+  "expected_url": "/article/2026-11-12-how-katie-spicer-s-i-am-artemis-story-frames-nasa-s-moon-pus",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-12-how-katie-spicer-s-i-am-artemis-story-frames-nasa-s-moon-pus.mdx",
+  "published_at": "2026-11-12T20:17:37.689Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "I Am Artemis Katie Spicer",
+  "topics": [
+    "I Am Artemis Katie Spicer"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "mia_turner",
+    "author_name": "Mia Turner",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/rczwhger4lm/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/rczwhger4lm/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-man-wearing-a-turban-and-a-moustache-rczwHger4lM",
+    "asset_key": "unsplash:rczwHger4lM",
+    "alt_text": "Illustration for How Katie Spicer’s ‘I Am Artemis’ Story Frames NASA’s Moon Push",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Katie photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 2,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "katie",
+      "spicer’s",
+      "artemis’"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "I Am Artemis Katie Spicer",
+        "url": "https://www.nasa.gov/missions/artemis/i-am-artemis-katie-spicer/",
+        "domain": "nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "space"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Katie photo",
+      "article_relevance_score": 2,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "katie"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
