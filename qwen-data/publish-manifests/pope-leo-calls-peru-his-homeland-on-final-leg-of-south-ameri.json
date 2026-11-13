@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-13T19:57:50.018Z",
+  "event_id": "evt-2026-11-12-world-geopolitics-general-us-senate",
+  "cluster_id": "evt-2026-11-12-world-geopolitics-general-us-senate",
+  "article_type": "report",
+  "title": "Pope declares Peru his \"homeland\" in final leg of South America trip",
+  "slug": "pope-leo-calls-peru-his-homeland-on-final-leg-of-south-ameri",
+  "canonical_slug": "2026-11-13-pope-leo-calls-peru-his-homeland-on-final-leg-of-south-ameri",
+  "expected_url": "/article/2026-11-13-pope-leo-calls-peru-his-homeland-on-final-leg-of-south-ameri",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-13-pope-leo-calls-peru-his-homeland-on-final-leg-of-south-ameri.mdx",
+  "published_at": "2026-11-13T19:57:50.016Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Pope declares Peru his \"homeland\" in final leg of South America trip",
+  "topics": [
+    "Pope declares Peru his \"homeland\" in final leg of South America trip"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "noah_bennett",
+    "author_name": "Noah Bennett",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/l4q6bc_zxsa/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/l4q6bc_zxsa/cover.jpg",
+    "source_url": "https://unsplash.com/photos/young-woman-in-traditional-ukrainian-clothing-holding-megaphone-L4q6Bc_ZXSA",
+    "asset_key": "unsplash:L4q6Bc_ZXSA",
+    "alt_text": "Illustration for Pope Leo Calls Peru His “Homeland” on Final Leg of South America Trip",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "His Homeland technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 28,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "calls",
+      "“homeland”",
+      "final"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Diplomacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Pope declares Peru his \"homeland\" in final leg of South America trip",
+        "url": "https://www.cbsnews.com/news/pope-leo-peru-homeland-south-america-trip/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "His Homeland technology photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "his",
+        "homeland"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
