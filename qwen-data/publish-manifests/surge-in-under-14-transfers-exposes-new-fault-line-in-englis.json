@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-14T18:25:11.003Z",
+  "event_id": "evt-2026-11-14-major-leagues-general-global-fifa-nba",
+  "cluster_id": "evt-2026-11-14-major-leagues-general-global-fifa-nba",
+  "article_type": "report",
+  "title": "Under-14s transfers in English football are surging: ‘Strip it back and it is disguised trafficking’",
+  "slug": "surge-in-under-14-transfers-exposes-new-fault-line-in-englis",
+  "canonical_slug": "2026-11-14-surge-in-under-14-transfers-exposes-new-fault-line-in-englis",
+  "expected_url": "/article/2026-11-14-surge-in-under-14-transfers-exposes-new-fault-line-in-englis",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-14-surge-in-under-14-transfers-exposes-new-fault-line-in-englis.mdx",
+  "published_at": "2026-11-14T18:25:11.001Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "transfers-business",
+  "topic_label": "Transfers & Business",
+  "subsection": "Under-14s transfers in English football are surging: ‘Strip it back and it is disguised trafficking’",
+  "topics": [
+    "Under-14s transfers in English football are surging: ‘Strip it back and it is disguised trafficking’"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "grace_holloway",
+    "author_name": "Grace Holloway",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/9102021/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/9102021/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/beautiful-stars-in-the-sky-9102021/",
+    "asset_key": "pexels:9102021",
+    "alt_text": "Illustration for Surge in Under-14 Transfers Exposes New Fault Line in English Football",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "English Football football photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 26,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "athlete signing",
+      "team logo",
+      "press conference",
+      "surge",
+      "exposes",
+      "fault"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Transfers & Business",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Under-14s transfers in English football are surging: ‘Strip it back and it is disguised trafficking’",
+        "url": "https://nytimes.com/athletic/7578094/2026/11/13/football-academy-transfers-premier-league",
+        "domain": "nytimes.com"
+      },
+      {
+        "title": "Under-14s transfers in English football are surging: 'Strip it back and ...",
+        "url": "https://www.nytimes.com/athletic/7578094/2026/11/13/football-academy-transfers-premier-league/",
+        "domain": "nytimes.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "transfers-business",
+          "label": "Transfers & Business",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "transfers-business",
+        "topic_label": "Transfers & Business",
+        "supported": true,
+        "matched_aliases": [
+          "transfers"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "English Football football photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "english",
+        "football"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
