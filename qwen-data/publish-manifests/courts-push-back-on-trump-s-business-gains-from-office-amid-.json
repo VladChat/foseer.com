@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-15T19:02:28.145Z",
+  "event_id": "evt-2026-11-15-world-geopolitics-general-global-nvidia",
+  "cluster_id": "evt-2026-11-15-world-geopolitics-general-global-nvidia",
+  "article_type": "report",
+  "title": "'Shameless venality': how a flurry of lawsuits has thwarted Trump's ...",
+  "slug": "courts-push-back-on-trump-s-business-gains-from-office-amid-",
+  "canonical_slug": "2026-11-15-courts-push-back-on-trump-s-business-gains-from-office-amid",
+  "expected_url": "/article/2026-11-15-courts-push-back-on-trump-s-business-gains-from-office-amid",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-15-courts-push-back-on-trump-s-business-gains-from-office-amid.mdx",
+  "published_at": "2026-11-15T19:02:28.144Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "law-crime",
+  "topic_label": "Law & Crime",
+  "subsection": "'Shameless venality': how a flurry of lawsuits has thwarted Trump's ...",
+  "topics": [
+    "'Shameless venality': how a flurry of lawsuits has thwarted Trump's ..."
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "maya_collins",
+    "author_name": "Maya Collins",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/xjv1kkmm6u8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/xjv1kkmm6u8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-group-of-men-in-suits-and-ties-posing-for-a-picture-xjv1KkMM6u8",
+    "asset_key": "unsplash:xjv1KkMM6u8",
+    "alt_text": "Illustration for Courts Push Back on Trump’s Business Gains From Office Amid Flurry of Suits",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Courts Push Back courtroom photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.78,
+    "visual_concepts": [
+      "courthouse",
+      "justice",
+      "legal",
+      "courts",
+      "trump’s",
+      "business"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.78,
+    "is_fallback": false
+  },
+  "tags": [
+    "Law & Crime",
+    "Diplomacy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "'Shameless venality': how a flurry of lawsuits has thwarted Trump's ...",
+        "url": "https://www.theguardian.com/us-news/2026/nov/15/trump-self-enrichment-lawsuits",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "law-crime",
+          "label": "Law & Crime",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "law-crime",
+        "topic_label": "Law & Crime",
+        "supported": true,
+        "matched_aliases": [
+          "courts",
+          "legal"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Courts Push Back courtroom photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 0.75,
+      "shared_tokens": [
+        "courts",
+        "push",
+        "back"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
