@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-17T22:55:11.451Z",
+  "event_id": "evt-2026-11-17-economy-markets-earnings-global-nvidia",
+  "cluster_id": "evt-2026-11-17-economy-markets-earnings-global-nvidia",
+  "article_type": "analysis",
+  "title": "Nvidia’s Revenue Surges as Board Rejects Return of Ousted CEO Jensen Huang",
+  "slug": "nvidia-s-revenue-surges-as-board-rejects-return-of-ousted-ce",
+  "canonical_slug": "2026-11-17-nvidia-s-revenue-surges-as-board-rejects-return-of-ousted-ce",
+  "expected_url": "/article/2026-11-17-nvidia-s-revenue-surges-as-board-rejects-return-of-ousted-ce",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-17-nvidia-s-revenue-surges-as-board-rejects-return-of-ousted-ce.mdx",
+  "published_at": "2026-11-17T22:55:11.449Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Economy & Markets",
+  "topics": [
+    "Economy & Markets"
+  ],
+  "writer": {
+    "writer_id": "analyst",
+    "author_id": "sophia_bennett",
+    "author_name": "Sophia Bennett",
+    "author_title": "Analysis Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/16581212/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/16581212/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/sunlight-over-open-sea-at-sunset-16581212/",
+    "asset_key": "pexels:16581212",
+    "alt_text": "Illustration for Nvidia’s Revenue Surges as Board Rejects Return of Ousted CEO Jensen Huang",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Jensen Huang photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 91,
+    "editorial_fit_score": 25,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "nvidia’s",
+      "revenue",
+      "surges"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Nvidia",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 2,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 2,
+    "publish_ready_sources": [
+      {
+        "title": "Nvidia doubles revenue as board says it does not intend to reinstate Jensen Huang",
+        "url": "https://www.theguardian.com/technology/2026/nov/17/nvidia-third-quarter-revenue-jensen-huang",
+        "domain": "theguardian.com"
+      },
+      {
+        "title": "Nvidia's Colette Kress key questions in Nvidia earnings after Huang",
+        "url": "https://www.cnbc.com/2026/11/16/nvidia-earnings-jensen-huang-resignation.html",
+        "domain": "cnbc.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "nvidia",
+          "label": "Nvidia",
+          "type": "entity"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "market"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Jensen Huang photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "jensen",
+        "huang"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
