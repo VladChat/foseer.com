@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-17T21:13:21.895Z",
+  "event_id": "evt-2026-11-17-us-politics-general-global-nvidia",
+  "cluster_id": "evt-2026-11-17-us-politics-general-global-nvidia",
+  "article_type": "report",
+  "title": "Cruz announces deal on stalled airline safety bill",
+  "slug": "cruz-says-deal-reached-to-revive-stalled-airline-safety-bill",
+  "canonical_slug": "2026-11-17-cruz-says-deal-reached-to-revive-stalled-airline-safety-bill",
+  "expected_url": "/article/2026-11-17-cruz-says-deal-reached-to-revive-stalled-airline-safety-bill",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-17-cruz-says-deal-reached-to-revive-stalled-airline-safety-bill.mdx",
+  "published_at": "2026-11-17T21:13:21.893Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "ai-big-tech",
+  "topic_label": "AI & Big Tech",
+  "subsection": "Cruz announces deal on stalled airline safety bill",
+  "topics": [
+    "Cruz announces deal on stalled airline safety bill"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "olivia_brooks",
+    "author_name": "Olivia Brooks",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/rie8z_-zo-q/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/rie8z_-zo-q/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-woman-standing-in-front-of-a-metal-structure-riE8z_-ZO-Q",
+    "asset_key": "unsplash:riE8z_-ZO-Q",
+    "alt_text": "Illustration for Cruz Says Deal Reached to Revive Stalled Airline Safety Bill",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Cruz technology photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 96,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "data center",
+      "ai visualization",
+      "server room",
+      "reached",
+      "revive",
+      "stalled"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "AI & Big Tech",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Cruz announces deal on stalled airline safety bill",
+        "url": "https://www.cbsnews.com/news/airline-safety-bill-deal-ted-cruz/",
+        "domain": "cbsnews.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: AI & Big Tech",
+      "Primary topic_id unsupported by article evidence: ai-big-tech"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "ai-big-tech",
+          "label": "AI & Big Tech",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "ai-big-tech",
+        "topic_label": "AI & Big Tech",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Cruz technology photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "cruz"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
