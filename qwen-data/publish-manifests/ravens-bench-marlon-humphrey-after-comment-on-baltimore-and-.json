@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-19T20:54:48.623Z",
+  "event_id": "evt-2026-11-19-major-leagues-general-global-nba-ukraine",
+  "cluster_id": "evt-2026-11-19-major-leagues-general-global-nba-ukraine",
+  "article_type": "report",
+  "title": "Ravens deactivate Marlon Humphrey after cornerback says Baltimore excels at ‘making criminals’",
+  "slug": "ravens-bench-marlon-humphrey-after-comment-on-baltimore-and-",
+  "canonical_slug": "2026-11-19-ravens-bench-marlon-humphrey-after-comment-on-baltimore-and",
+  "expected_url": "/article/2026-11-19-ravens-bench-marlon-humphrey-after-comment-on-baltimore-and",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-19-ravens-bench-marlon-humphrey-after-comment-on-baltimore-and.mdx",
+  "published_at": "2026-11-19T20:54:48.621Z",
+  "section_id": "business",
+  "section_label": "Business",
+  "topic_id": "economy-markets",
+  "topic_label": "Economy & Markets",
+  "subsection": "Ravens deactivate Marlon Humphrey after cornerback says Baltimore excels at ‘making criminals’",
+  "topics": [
+    "Ravens deactivate Marlon Humphrey after cornerback says Baltimore excels at ‘making criminals’"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/jgvtyz6ut_g/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/jgvtyz6ut_g/cover.jpg",
+    "source_url": "https://unsplash.com/photos/a-woman-is-holding-a-microscope-and-a-man-is-looking-at-it-jgvTYz6UT_g",
+    "asset_key": "unsplash:jgvTYz6UT_g",
+    "alt_text": "a woman is holding a microscope and a man is looking at it",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Marlon Humphrey photo",
+    "relevance_tier": "usable",
+    "article_relevance_score": 34,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 44,
+    "image_fit_score": 0.18,
+    "visual_concepts": [
+      "stock market",
+      "trading floor",
+      "economy",
+      "ravens",
+      "bench",
+      "marlon"
+    ],
+    "retry_attempted": true,
+    "initial_fit_score": 0.18,
+    "is_fallback": false
+  },
+  "tags": [
+    "Economy & Markets",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Ravens deactivate Marlon Humphrey after cornerback says Baltimore excels at ‘making criminals’",
+        "url": "https://www.theguardian.com/sport/2026/nov/19/marlon-humphrey-criminals-comment-baltimore-ravens",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "economy-markets",
+          "label": "Economy & Markets",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "economy-markets",
+        "topic_label": "Economy & Markets",
+        "supported": true,
+        "matched_aliases": [
+          "markets"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Marlon Humphrey photo",
+      "article_relevance_score": 34,
+      "relevance_tier": "usable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "marlon",
+        "humphrey"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
