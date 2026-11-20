@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-20T20:39:47.353Z",
+  "event_id": "evt-2026-11-18-film-tv-general-global-tiktok-nfl",
+  "cluster_id": "evt-2026-11-18-film-tv-general-global-tiktok-nfl",
+  "article_type": "report",
+  "title": "Madden review – Nicolas Cage is a cartoonish NFL legend in David O Russell’s stinker",
+  "slug": "madden-film-turns-nfl-icon-into-cartoon-critics-say",
+  "canonical_slug": "2026-11-20-madden-film-turns-nfl-icon-into-cartoon-critics-say",
+  "expected_url": "/article/2026-11-20-madden-film-turns-nfl-icon-into-cartoon-critics-say",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-20-madden-film-turns-nfl-icon-into-cartoon-critics-say.mdx",
+  "published_at": "2026-11-20T20:39:47.352Z",
+  "section_id": "sports",
+  "section_label": "Sports",
+  "topic_id": "major-leagues",
+  "topic_label": "Major Leagues",
+  "subsection": "Madden review – Nicolas Cage is a cartoonish NFL legend in David O Russell’s stinker",
+  "topics": [
+    "Madden review – Nicolas Cage is a cartoonish NFL legend in David O Russell’s stinker"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "lucas_morris",
+    "author_name": "Lucas Morris",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/2bbt3s_hlr0/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/2bbt3s_hlr0/cover.jpg",
+    "source_url": "https://unsplash.com/photos/young-football-player-sits-in-locker-room-2BBt3s_hLr0",
+    "asset_key": "unsplash:2BBt3s_hLr0",
+    "alt_text": "Illustration for ‘Madden’ film turns NFL icon into cartoon, critics say",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "NFL football photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 99,
+    "image_fit_score": 1,
+    "visual_concepts": [
+      "stadium",
+      "arena",
+      "game action",
+      "‘madden’",
+      "turns",
+      "cartoon"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 1,
+    "is_fallback": false
+  },
+  "tags": [
+    "Major Leagues",
+    "NFL",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Madden review – Nicolas Cage is a cartoonish NFL legend in David O Russell’s stinker",
+        "url": "https://www.theguardian.com/film/2026/nov/18/madden-review-nicolas-cage",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "major-leagues",
+          "label": "Major Leagues",
+          "type": "topic"
+        },
+        {
+          "slug": "nfl",
+          "label": "NFL",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "major-leagues",
+        "topic_label": "Major Leagues",
+        "supported": true,
+        "matched_aliases": [
+          "baseball"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "NFL football photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "nfl",
+        "football"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
