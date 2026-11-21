@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-21T19:39:56.923Z",
+  "event_id": "evt-2026-11-21-us-politics-general-global-white-house-congress",
+  "cluster_id": "evt-2026-11-21-us-politics-general-global-white-house-congress",
+  "article_type": "report",
+  "title": "Louisiana man charged with killing woman on hiking trail and murdering co",
+  "slug": "louisiana-man-charged-in-two-killings-days-apart-police-say",
+  "canonical_slug": "2026-11-21-louisiana-man-charged-in-two-killings-days-apart-police-say",
+  "expected_url": "/article/2026-11-21-louisiana-man-charged-in-two-killings-days-apart-police-say",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-21-louisiana-man-charged-in-two-killings-days-apart-police-say.mdx",
+  "published_at": "2026-11-21T19:39:56.921Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "Louisiana man charged with killing woman on hiking trail and murdering co",
+  "topics": [
+    "Louisiana man charged with killing woman on hiking trail and murdering co"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "emma_carter",
+    "author_name": "Emma Carter",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/v6azrm-rtr8/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/v6azrm-rtr8/cover.jpg",
+    "source_url": "https://unsplash.com/photos/green-and-white-labeled-bottles-V6AzrM-rtR8",
+    "asset_key": "unsplash:V6AzrM-rtR8",
+    "alt_text": "Illustration for Louisiana man charged in two killings days apart, police say",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Louisiana photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 12,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 37,
+    "image_fit_score": 0.75,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "louisiana",
+      "charged",
+      "killings"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.75,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Louisiana man charged with killing woman on hiking trail and murdering co",
+        "url": "https://www.theguardian.com/us-news/2026/nov/21/louisiana-mississippi-hiking-trail-crossbow-murder-charges",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": false,
+    "blocking_errors": [
+      "Primary topic tag unsupported by article evidence: U.S. Politics & Policy",
+      "Primary topic_id unsupported by article evidence: us-politics"
+    ],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "support": {
+            "supported": false,
+            "matchedAliases": []
+          }
+        }
+      ],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": false,
+        "matched_aliases": []
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "Louisiana photo",
+      "article_relevance_score": 12,
+      "relevance_tier": "weak",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "louisiana"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
