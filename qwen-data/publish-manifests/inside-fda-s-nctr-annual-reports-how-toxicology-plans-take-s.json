@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-23T12:38:25.682Z",
+  "event_id": "evt-2026-11-23-pharma-fda-research-global-fda",
+  "cluster_id": "evt-2026-11-23-pharma-fda-research-global-fda",
+  "article_type": "report",
+  "title": "National Center for Toxicological Research (NCTR) Annual Reports",
+  "slug": "inside-fda-s-nctr-annual-reports-how-toxicology-plans-take-s",
+  "canonical_slug": "2026-11-23-inside-fda-s-nctr-annual-reports-how-toxicology-plans-take-s",
+  "expected_url": "/article/2026-11-23-inside-fda-s-nctr-annual-reports-how-toxicology-plans-take-s",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-23-inside-fda-s-nctr-annual-reports-how-toxicology-plans-take-s.mdx",
+  "published_at": "2026-11-23T12:38:25.680Z",
+  "section_id": "health",
+  "section_label": "Health",
+  "topic_id": "pharma-fda",
+  "topic_label": "Pharma & FDA",
+  "subsection": "National Center for Toxicological Research (NCTR) Annual Reports",
+  "topics": [
+    "National Center for Toxicological Research (NCTR) Annual Reports"
+  ],
+  "writer": {
+    "writer_id": "features",
+    "author_id": "owen_foster",
+    "author_name": "Owen Foster",
+    "author_title": "Features Desk"
+  },
+  "image": {
+    "provider": "unsplash",
+    "image_path": "~/assets/images/library/unsplash/yg1zayn0few/cover.jpg",
+    "file_relative_path": "src/assets/images/library/unsplash/yg1zayn0few/cover.jpg",
+    "source_url": "https://unsplash.com/photos/child-sitting-on-bed-yg1Zayn0Few",
+    "asset_key": "unsplash:yg1Zayn0Few",
+    "alt_text": "Illustration for Inside FDA’s NCTR Annual Reports: How Toxicology Plans Take Shape",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "National Center medical photo",
+    "relevance_tier": "strong",
+    "article_relevance_score": 100,
+    "asset_quality_score": 94,
+    "editorial_fit_score": 98,
+    "image_fit_score": 0.99,
+    "visual_concepts": [
+      "pharmaceutical",
+      "pill bottle",
+      "fda building",
+      "inside",
+      "fda’s",
+      "annual"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.99,
+    "is_fallback": false
+  },
+  "tags": [
+    "Pharma & FDA",
+    "Therapy Access",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "National Center for Toxicological Research (NCTR) Annual Reports",
+        "url": "http://www.fda.gov/about-fda/national-center-toxicological-research/national-center-toxicological-research-nctr-annual-reports",
+        "domain": "fda.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "pharma-fda",
+          "label": "Pharma & FDA",
+          "type": "topic"
+        },
+        {
+          "slug": "therapy-access",
+          "label": "Therapy Access",
+          "type": "theme"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "pharma-fda",
+        "topic_label": "Pharma & FDA",
+        "supported": true,
+        "matched_aliases": [
+          "fda"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "unsplash",
+      "query_used": "National Center medical photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "strong",
+      "overlap_ratio": 0.67,
+      "shared_tokens": [
+        "national",
+        "center"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
