@@ -1,0 +1,118 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-24T23:55:35.484Z",
+  "event_id": "evt-2026-11-23-news-general-global-sec-congress",
+  "cluster_id": "evt-2026-11-23-news-general-global-sec-congress",
+  "article_type": "analysis",
+  "title": "Army Uses Emergency Powers to Detonate Toxic Lead Stockpile in Iowa",
+  "slug": "army-uses-emergency-powers-to-detonate-toxic-lead-stockpile-",
+  "canonical_slug": "2026-11-24-army-uses-emergency-powers-to-detonate-toxic-lead-stockpile",
+  "expected_url": "/article/2026-11-24-army-uses-emergency-powers-to-detonate-toxic-lead-stockpile",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-24-army-uses-emergency-powers-to-detonate-toxic-lead-stockpile.mdx",
+  "published_at": "2026-11-24T23:55:35.482Z",
+  "section_id": "news",
+  "section_label": "News",
+  "topic_id": "us-politics",
+  "topic_label": "U.S. Politics & Policy",
+  "subsection": "U.S. Politics & Policy",
+  "topics": [
+    "U.S. Politics & Policy"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "daniel_reed",
+    "author_name": "Daniel Reed",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/5022609/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/5022609/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/white-and-brown-boat-on-water-5022609/",
+    "asset_key": "pexels:5022609",
+    "alt_text": "Illustration for Army Uses Emergency Powers to Detonate Toxic Lead Stockpile in Iowa",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Iowa courtroom photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 91,
+    "editorial_fit_score": 25,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "white house",
+      "capitol",
+      "congress",
+      "emergency",
+      "powers",
+      "detonate"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "U.S. Politics & Policy",
+    "Analysis"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Army invokes emergency powers to detonate lead in Iowa ...",
+        "url": "https://www.reuters.com/legal/government/iowa-detonation-lead-will-proceed-under-emergency-powers-army-says-bypassing-2026-11-22/",
+        "domain": "reuters.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "us-politics",
+          "label": "U.S. Politics & Policy",
+          "type": "topic"
+        },
+        {
+          "slug": "analysis",
+          "label": "Analysis",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "us-politics",
+        "topic_label": "U.S. Politics & Policy",
+        "supported": true,
+        "matched_aliases": [
+          "congress"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Iowa courtroom photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "iowa"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
