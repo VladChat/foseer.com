@@ -1,0 +1,132 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-26T12:38:31.348Z",
+  "event_id": "evt-2026-11-26-space-astronomy-general-global-openai-china",
+  "cluster_id": "evt-2026-11-26-space-astronomy-general-global-openai-china",
+  "article_type": "report",
+  "title": "APOD: 2026 November 26 – Eye in the Sky: The Milky Way over Lençóis",
+  "slug": "nasa-s-astronomy-picture-of-the-day-highlights-milky-way-ove",
+  "canonical_slug": "2026-11-26-nasa-s-astronomy-picture-of-the-day-highlights-milky-way-ove",
+  "expected_url": "/article/2026-11-26-nasa-s-astronomy-picture-of-the-day-highlights-milky-way-ove",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-26-nasa-s-astronomy-picture-of-the-day-highlights-milky-way-ove.mdx",
+  "published_at": "2026-11-26T12:38:31.347Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "space-astronomy",
+  "topic_label": "Space & Astronomy",
+  "subsection": "APOD: 2026 November 26 – Eye in the Sky: The Milky Way over Lençóis",
+  "topics": [
+    "APOD: 2026 November 26 – Eye in the Sky: The Milky Way over Lençóis"
+  ],
+  "writer": {
+    "writer_id": "explainer",
+    "author_id": "ethan_hall",
+    "author_name": "Ethan Hall",
+    "author_title": "Explainers Desk"
+  },
+  "image": {
+    "provider": "pexels",
+    "image_path": "~/assets/images/library/pexels/31164073/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pexels/31164073/cover.jpg",
+    "source_url": "https://www.pexels.com/photo/nasa-kennedy-space-center-vehicle-assembly-building-31164073/",
+    "asset_key": "pexels:31164073",
+    "alt_text": "The iconic Vehicle Assembly Building at NASA's Kennedy Space Center, Florida.",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Astronomy Picture of the Day photo",
+    "relevance_tier": "acceptable",
+    "article_relevance_score": 100,
+    "asset_quality_score": 100,
+    "editorial_fit_score": 100,
+    "image_fit_score": 0.7,
+    "visual_concepts": [
+      "space",
+      "moon",
+      "mars",
+      "nasa’s",
+      "astronomy",
+      "picture"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.7,
+    "is_fallback": false
+  },
+  "tags": [
+    "Space & Astronomy",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 2,
+    "direct_event_source_count": 2,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "APOD: 2026 November 26 – Eye in the Sky: The Milky Way over Lençóis",
+        "url": "https://science.nasa.gov/image-article/apod-2026-november-26-eye-in-the-sky-the-milky-way-over-lencois/",
+        "domain": "science.nasa.gov"
+      },
+      {
+        "title": "APOD: 2026 November 25",
+        "url": "https://science.nasa.gov/image-article/apod-2026-november-25-spherex-seeing-through-dust/",
+        "domain": "science.nasa.gov"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [
+      "Canonical tag set is thinner than expected for publish review"
+    ],
+    "source_checks": {
+      "publish_ready_count": 2,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": [
+        {
+          "title": "APOD: 2026 November 25",
+          "url": "https://science.nasa.gov/image-article/apod-2026-november-25-spherex-seeing-through-dust/",
+          "overlap_ratio": 0,
+          "shared_tokens": []
+        }
+      ]
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "space-astronomy",
+          "label": "Space & Astronomy",
+          "type": "topic"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "space-astronomy",
+        "topic_label": "Space & Astronomy",
+        "supported": true,
+        "matched_aliases": [
+          "astronomy"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pexels",
+      "query_used": "Astronomy Picture of the Day photo",
+      "article_relevance_score": 100,
+      "relevance_tier": "acceptable",
+      "overlap_ratio": 1,
+      "shared_tokens": [
+        "astronomy",
+        "picture",
+        "day"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
