@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-28T12:35:01.622Z",
+  "event_id": "evt-2026-11-27-film-tv-general-global-apple",
+  "cluster_id": "evt-2026-11-27-film-tv-general-global-apple",
+  "article_type": "report",
+  "title": "Cozy escapism or festive trash? How Netflix holiday movies took over Christmas",
+  "slug": "how-netflix-s-holiday-movies-became-a-new-christmas-habit",
+  "canonical_slug": "2026-11-28-how-netflix-s-holiday-movies-became-a-new-christmas-habit",
+  "expected_url": "/article/2026-11-28-how-netflix-s-holiday-movies-became-a-new-christmas-habit",
+  "file_path": "/home/runner/work/foseer.com/foseer.com/src/data/post/2026-11-28-how-netflix-s-holiday-movies-became-a-new-christmas-habit.mdx",
+  "published_at": "2026-11-28T12:35:01.620Z",
+  "section_id": "tech",
+  "section_label": "Tech",
+  "topic_id": "cybersecurity",
+  "topic_label": "Cybersecurity",
+  "subsection": "Cozy escapism or festive trash? How Netflix holiday movies took over Christmas",
+  "topics": [
+    "Cozy escapism or festive trash? How Netflix holiday movies took over Christmas"
+  ],
+  "writer": {
+    "writer_id": "reporter",
+    "author_id": "john_smith",
+    "author_name": "John Smith",
+    "author_title": "News Desk"
+  },
+  "image": {
+    "provider": "pixabay",
+    "image_path": "~/assets/images/library/pixabay/4986048/cover.jpg",
+    "file_relative_path": "src/assets/images/library/pixabay/4986048/cover.jpg",
+    "source_url": "https://pixabay.com/photos/trump-donald-trump-president-speech-4986048/",
+    "asset_key": "pixabay:4986048",
+    "alt_text": "Illustration for How Netflix’s Holiday Movies Became a New Christmas Habit",
+    "selection_mode": "local_registry_reuse_precheck",
+    "query_used": "Netflix concert photo",
+    "relevance_tier": "weak",
+    "article_relevance_score": 0,
+    "asset_quality_score": 98,
+    "editorial_fit_score": 27,
+    "image_fit_score": 0.71,
+    "visual_concepts": [
+      "lock icon",
+      "cybersecurity",
+      "digital security",
+      "netflix’s",
+      "holiday",
+      "movies"
+    ],
+    "retry_attempted": false,
+    "initial_fit_score": 0.71,
+    "is_fallback": false
+  },
+  "tags": [
+    "Cybersecurity",
+    "Netflix",
+    "Report"
+  ],
+  "source_pack": {
+    "passes_gate": true,
+    "unique_domains": 1,
+    "total_sources": 1,
+    "direct_event_source_count": 1,
+    "independent_event_domains": 1,
+    "publish_ready_sources": [
+      {
+        "title": "Cozy escapism or festive trash? How Netflix holiday movies took over Christmas",
+        "url": "https://www.theguardian.com/film/2026/nov/27/netflix-christmas-holiday-movies",
+        "domain": "theguardian.com"
+      }
+    ]
+  },
+  "semantic_validation": {
+    "editorial_valid": true,
+    "blocking_errors": [],
+    "warnings": [],
+    "source_checks": {
+      "publish_ready_count": 1,
+      "mismatched_sources": [],
+      "generic_sources": [],
+      "weak_title_overlap_sources": []
+    },
+    "tag_checks": {
+      "selected_tags": [
+        {
+          "slug": "cybersecurity",
+          "label": "Cybersecurity",
+          "type": "topic"
+        },
+        {
+          "slug": "netflix",
+          "label": "Netflix",
+          "type": "entity"
+        },
+        {
+          "slug": "report",
+          "label": "Report",
+          "type": "format"
+        }
+      ],
+      "unsupported_tags": [],
+      "primary_topic": {
+        "topic_id": "cybersecurity",
+        "topic_label": "Cybersecurity",
+        "supported": true,
+        "matched_aliases": [
+          "security"
+        ]
+      }
+    },
+    "image_checks": {
+      "provider": "pixabay",
+      "query_used": "Netflix concert photo",
+      "article_relevance_score": 0,
+      "relevance_tier": "weak",
+      "overlap_ratio": 0.5,
+      "shared_tokens": [
+        "netflix"
+      ],
+      "placeholder_query": false
+    }
+  }
+}
